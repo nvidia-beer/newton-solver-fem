@@ -10,7 +10,7 @@ Stable Neo-Hookean elasticity, embedded cutting and STA-FEM streaming assembly.
 
 ## Elasticity and stepping
 
-For deformation gradient $F$, $I_C=\operatorname{tr}(F^T F)$, $J=\det F$, and
+For deformation gradient $F$, $I_C=\mathrm{tr}(F^T F)$, $J=\det F$, and
 Lamé coefficients $\mu,\lambda>0$, the smooth-branch energy is
 
 $$
@@ -19,7 +19,7 @@ $$
 \alpha=1+\frac{3\mu}{4\lambda}.
 $$
 
-Its stress is $P=\mu(1-1/(I_C+1))F+\lambda(J-\alpha)\operatorname{cof}F$.
+Its stress is $P=\mu(1-1/(I_C+1))F+\lambda(J-\alpha)\mathrm{cof}\,F$.
 The force evaluates clamped principal stretches (default $[0.05,20]$) and
 replaces $J$ by $\max(J,0.01)$ in the volumetric stress. Thus the displayed
 energy derivative applies on the unclamped branch. Viscous forces are explicit.
