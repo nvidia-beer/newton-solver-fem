@@ -16,11 +16,23 @@ From the repository root, after the normal Docker build:
 ```
 
 Install [NVIDIA Nsight Systems](https://developer.nvidia.com/nsight-systems) on
-the host. Docker discovers standard installation paths, or use
-`NSYS_ROOT=/path/to/nsight-systems` (the directory containing `bin/nsys`). The
-installation is mounted read-only for profiling. Use the host CPU architecture
-and a CUDA-capable NVIDIA GPU. Rebuild an older solver image to install the new
-optional profiling dependency.
+the host. Docker selects the newest usable installation from `PATH`,
+`${XDG_DATA_HOME:-$HOME/.local/share}/nsight-systems/`, and standard `/opt/nvidia`
+and CUDA locations. An explicit `NSYS_ROOT=/path/to/nsight-systems` (the directory
+containing `bin/nsys`) takes precedence. The installation is mounted read-only
+for profiling. Use the host CPU architecture and a CUDA-capable NVIDIA GPU.
+Rebuild an older solver image to install the new optional profiling dependency.
+
+For a user installation without administrator access, download NVIDIA's CLI
+`.deb` for the host architecture, then extract its version directory:
+
+```bash
+nsys_unpack=$(mktemp -d)
+dpkg-deb -x /path/to/nsight-systems-cli.deb "$nsys_unpack"
+mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/nsight-systems"
+cp -a "$nsys_unpack"/opt/nvidia/nsight-systems-cli/* "${XDG_DATA_HOME:-$HOME/.local/share}/nsight-systems/"
+rm -r "$nsys_unpack"
+```
 
 For local development, put `nsys` on `PATH` or set `NSYS_PATH` to its executable:
 
@@ -71,6 +83,10 @@ CUDA graphs replay without calling the Python methods again. Inspect graph nodes
 and kernel names inside the frame/step range for those paths. Whole-graph mode
 instead reports graph IDs, replay counts and GPU durations in `stats_cuda_graph_sum.csv`;
 its kernel table covers only work outside graphs. `summary.md` marks this limit.
+The collector selects software CUDA tracing (`cuda-sw` when supported) so
+conditional graph kernels are resolved on the tested GB10/driver stack. Captures
+with explicit CUPTI record loss or missing graph events fail validation; their
+raw diagnostics remain available for inspection.
 The optional `nsys/config.json` holds profiling overrides, not an example list;
 discovery still selects only README video workloads. Host phase timings
 measure asynchronous submission, including any synchronization already performed
@@ -87,7 +103,7 @@ Each run creates a unique timestamped directory under `nsys/results/`:
 | `summary.md` | Completed work, host timing summaries and largest reported costs. |
 | `capture.nsys-rep` | Full CPU/GPU timeline for the Nsight Systems GUI. |
 | `stats_*.csv`, `summary.json` | Full kernel, CUDA API, memory, NVTX and OS reports. |
-| `run.json` | Command, workload settings, Git revision/source digest, versions, GPU information and completion status. |
+| `run.json` | Command, workload settings, Git revision/source digest, versions, GPU information, graph coverage, collector directives and completion status. |
 | `workload.json` | Initialization/warmup durations, completed frames and individual host phase timings. |
 | `capture.log`, `stats.log` | Complete application/profiler output and errors. |
 
@@ -120,12 +136,29 @@ notes and the capture log if a required asset is unavailable.
 
 [NVIDIA analysis guide](https://docs.nvidia.com/nsight-systems/AnalysisGuide/index.html)
 
-## FEM bear on the tested Nsight stack
+## FEM bear graph tracing
 
-The `diffsim_bear` override selects whole-graph tracing because node tracing
-segfaulted at a conditional CUDA graph launch with Nsight Systems 2025.3.2,
-Warp 1.17.0, driver 580.126.09 and an NVIDIA GB10. The same full-resolution
-training workload completed with whole-graph tracing. Solver graphs, 80
-substeps and 300 training frames are unchanged. Use `--cuda-graph-trace node`
-to retest per-kernel collection with another profiler/driver version. Failed
-attempts remain recorded separately in local history.
+`diffsim_bear` requires Nsight Systems CLI 2026.5.1 or newer and defaults to
+individual graph-node tracing. Version 2025.3.2 crashed inside `cuGraphLaunch`
+on GB10 with driver 580.126.09; 2026.5.1 with explicit software CUDA tracing
+completes the same workload. Automatic hardware tracing on this stack omitted
+kernel events, so the runner selects software tracing explicitly.
+
+The full training/adjoint capture also needs larger CUPTI buffers. Its
+`nsys/config.json` sets process-local collector directives:
+
+```text
+CuptiDeviceBufferSizeMb=64;CuptiDeviceBufferSizeDeviceGraphsMb=256;CuptiDeviceBufferPoolLimit=1024
+```
+
+These are Nsight internal configuration keys, tested with CLI 2026.5.1; revalidate
+coverage after changing profiler versions. `NSYS_CONFIG_DIRECTIVES` can override
+them locally or through Docker (an explicitly empty value disables them).
+The effective value is saved in `run.json` and included in comparison checks.
+This changes profiling memory use only. The 1,986 particles, 5,354 tetrahedra,
+300 training frames, 80 substeps, backward solve and 240 inference frames remain
+unchanged. No solver code or CUDA graphs are disabled.
+
+Each capture reports actual graph-kernel counts and explicit dropped/incomplete
+record diagnostics. A generic end-of-capture warning is retained verbatim; it is
+not treated as a measured loss count.

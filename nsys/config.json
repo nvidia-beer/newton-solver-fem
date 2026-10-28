@@ -1,5 +1,6 @@
 {
   "diffsim_bear": {
-    "cuda_graph_trace": "graph"
+    "minimum_nsys_version": "2026.5.1",
+    "nsys_config_directives": "CuptiDeviceBufferSizeMb=64;CuptiDeviceBufferSizeDeviceGraphsMb=256;CuptiDeviceBufferPoolLimit=1024"
   }
 }
