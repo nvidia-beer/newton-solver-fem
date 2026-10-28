@@ -1,0 +1,5 @@
+{
+  "diffsim_bear": {
+    "cuda_graph_trace": "graph"
+  }
+}
