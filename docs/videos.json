@@ -1,0 +1,20 @@
+{
+  "linear_fem": {
+    "frames": 240,
+    "fps": 60,
+    "args": ["--test"],
+    "caption": "All six Tet4/Hex8 objects falling and deforming against the floor; default physics and resolution."
+  },
+  "linear_fem_baymax_cut": {
+    "frames": 540,
+    "fps": 60,
+    "args": ["--test"],
+    "caption": "Six finite slices produce ten disconnected material pieces; the clip then hides the skin and switches to an elevated, colored connectivity debug view."
+  },
+  "diffsim_bear": {
+    "frames": 240,
+    "fps": 60,
+    "args": ["--train-iters", "1", "--sim-steps", "300", "--test"],
+    "caption": "Fresh live inference after one Adam update, using all 1,986 vertices, 5,354 tetrahedra and 80 substeps per frame."
+  }
+}

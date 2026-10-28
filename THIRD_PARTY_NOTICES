@@ -1,0 +1,15 @@
+Third-party notices
+
+Adapted solver kernels, cutting geometry, examples, and bundled example meshes
+include work copyright (c) 2025-2026 The Newton Developers, licensed under the
+Apache License 2.0. Original copyright/SPDX headers are retained; see LICENSE.
+
+Modifications include package-local APIs, explicit Hex8 data, geometry-only USD
+metadata, sparse topology updates, and differentiable sparse time stepping.
+The bear controller uses sparse FEM integration and checkpointed adjoints.
+
+Research attribution: Breannan Smith, Fernando de Goes, Theodore Kim,
+Stable Neo-Hookean Flesh Simulation, ACM TOG 37(2), article 12 (2018).
+Cut topology uses the embedded affine-field construction of Eftychios Sifakis,
+Kevin G. Der and Ronald Fedkiw, Arbitrary Cutting of Deformable Tetrahedralized
+Objects, SCA (2007). See docs/method.md for implementation scope and paper links.

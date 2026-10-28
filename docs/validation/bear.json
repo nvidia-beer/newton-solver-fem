@@ -1,0 +1,68 @@
+{
+  "device": "cuda:0",
+  "configuration": {
+    "mesh_sha256": "a2b1dbe891e8ed0d8bb6cd12a3907b37b6abbab84f64a5c398e8ebf0ea31658d",
+    "particle_count": 1986,
+    "tet_count": 5354,
+    "frame_dt": 0.016666666666666666,
+    "substeps": 80,
+    "phase_count": 8,
+    "phase_frequency_radians_per_second": 5.0,
+    "activation_strength": 0.3,
+    "density": 1.0,
+    "lame_mu": 2000.0,
+    "lame_lambda": 2000.0,
+    "tet_damping": 2.0,
+    "edge_spring_stiffness": 1000.0,
+    "edge_spring_damping": 1.0,
+    "ground": {
+      "plane": [
+        0,
+        0,
+        1,
+        0
+      ],
+      "ke": 2000.0,
+      "kd": 0.1,
+      "kf": 10.0,
+      "mu": 0.7
+    },
+    "solver": "sparse-fem-frozen-rest-matrix-cg-block-diag",
+    "linear_solver_maxiter": 100,
+    "stretch_clamping": false,
+    "ground_friction": "weight-capped-coulomb"
+  },
+  "frames": 300,
+  "substeps_per_frame": 80,
+  "simulated_seconds": 5.0,
+  "optimizer": "Adam",
+  "learning_rate": 0.025,
+  "iterations": 1,
+  "initial_loss": 227.44422912597656,
+  "updated_loss": 197.6171417236328,
+  "improved": true,
+  "gradient_norm": 15.003850936889648,
+  "minimum_updated_trajectory_J": 0.7861575484275818,
+  "setup_seconds": 1.239292653015582,
+  "initial_forward_including_graph_setup_seconds": 8.22894704999635,
+  "backward_including_graph_setup_seconds": 18.207310546014924,
+  "updated_forward_seconds": 8.0438323559938,
+  "live_inference": {
+    "frames": 300,
+    "finite": true,
+    "frame_median_ms": 26.83591599634383,
+    "frame_p95_ms": 28.330222071963366,
+    "simulated_to_wall_ratio": 0.6192324180091229,
+    "mean_particle_displacement": [
+      0.06716048717498779,
+      0.0011651442619040608,
+      -0.44489216804504395
+    ],
+    "minimum_sampled_z": 0.07834349572658539
+  },
+  "retained_frame_checkpoint_bytes": 14346864,
+  "segment_states": 81,
+  "total_seconds": 44.04980656501721,
+  "linear_solve_execution": "CUDA conditional graph with unchanged maximum100 CG iterations and checked residuals",
+  "validation_command": "uv run --locked python -m newton_solver_fem.examples diffsim_bear --device cuda:0 --train-iters 1 --sim-steps 300 --viewer null --num-frames 300 --save-weights /tmp/bear-policy.npz --test"
+}

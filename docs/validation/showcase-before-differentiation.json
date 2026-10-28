@@ -1,0 +1,17 @@
+{
+  "cuda_graph": true,
+  "device": "cuda:0",
+  "frame_ms": 48.307530193317994,
+  "hexahedra": 385,
+  "iterations": 50,
+  "max_velocity": 0.18635961413383484,
+  "measured_frames": 300,
+  "particles": 10030,
+  "realtime_factor": 0.3450117735261911,
+  "simulated_seconds": 5.0,
+  "springs": 54392,
+  "substeps": 10,
+  "tetrahedra": 39800,
+  "wall_seconds": 14.492259057995398,
+  "warmup_frames": 30
+}
