@@ -16,5 +16,12 @@
     "fps": 60,
     "args": ["--train-iters", "1", "--sim-steps", "300", "--test"],
     "caption": "Fresh live inference after one Adam update, using all 1,986 vertices, 5,354 tetrahedra and 80 substeps per frame."
+  },
+  "fem_phantom_regions": {
+    "frames": 540,
+    "fps": 60,
+    "show_ui": true,
+    "args": ["--regions", "7", "--test"],
+    "caption": "Click the upright 2D pad map to select one FEM region on a pink phantom: right-drag region 7, switch to region 9, disable FEM, then return to region 7. The inactive pad stays fixed; only the selected region enters the solve."
   }
 }

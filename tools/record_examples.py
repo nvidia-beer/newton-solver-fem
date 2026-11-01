@@ -20,6 +20,7 @@ class Clip:
         self.process = None
         self.count = 0
         self.last_image = None
+        self.shape = None
 
     def write(self, pixels):
         import numpy as np
@@ -27,6 +28,9 @@ class Clip:
         pixels = np.ascontiguousarray(pixels, dtype=np.uint8)
         if pixels.ndim != 3 or pixels.shape[2] != 3:
             raise ValueError("Expected an RGB frame")
+        if self.shape is not None and pixels.shape != self.shape:
+            raise ValueError(f"Capture dimensions changed from {self.shape} to {pixels.shape}")
+        self.shape = pixels.shape
         if self.process is None:
             height, width, _ = pixels.shape
             self.process = subprocess.Popen(
@@ -93,6 +97,7 @@ def record(name, options):
     writer = Clip(temporary, fps)
     start = time.perf_counter()
     simulation_times = []
+    scenario_metadata = None
 
     def write_frame(pixels, label=""):
         picture = Image.fromarray(pixels)
@@ -122,15 +127,33 @@ def record(name, options):
         class CaptureViewer(original_gl):
             def __init__(self, **kwargs):
                 kwargs.update(width=options.width, height=options.height, vsync=False)
+                # Newton initializes ImGui only with a window. Interactive
+                # demonstrations need the same controls and grab markers as
+                # an ordinary viewer run; other captures remain headless.
+                if profile.get("show_ui", False):
+                    kwargs["headless"] = False
                 super().__init__(**kwargs)
+                if profile.get("show_ui", False):
+                    # Initialize the real UI, then keep capture independent of
+                    # desktop tiling and interactive window resizing.
+                    window = self.renderer.window
+                    window.set_visible(False)
+                    window.dispatch_events()
+                    window.set_size(options.width, options.height)
+                    window.dispatch_events()
 
         def capture_run(example, args):
+            nonlocal scenario_metadata
             configure = hooks.get("configure")
             if configure:
                 configure(name, example)
             before_frame = hooks.get("before_frame")
             label = profile.get("label", "simulation playback")
             viewer = example.viewer
+            if hasattr(viewer, "hide_loading_splash"):
+                viewer.hide_loading_splash()
+            if hasattr(example, "gui") and hasattr(viewer, "register_ui_callback"):
+                viewer.register_ui_callback(lambda ui: example.gui(ui), position="side")
             try:
                 for frame in range(frames):
                     if before_frame:
@@ -138,11 +161,17 @@ def record(name, options):
                     example.step()
                     example.render()
                     frame_label = hooks.get("frame_label")
-                    write_frame(viewer.get_frame().numpy(), frame_label(name, example) if frame_label else label)
+                    write_frame(
+                        viewer.get_frame(render_ui=profile.get("show_ui", False)).numpy(),
+                        frame_label(name, example) if frame_label else label,
+                    )
                     if frame % max(1, frames // 8) == 0:
                         print(f"{name}: frame {frame + 1}/{frames}", flush=True)
                 if args.test and hasattr(example, "test_final"):
                     example.test_final()
+                metadata_hook = hooks.get("recording_metadata")
+                if metadata_hook:
+                    scenario_metadata = metadata_hook(name, example)
                 for attribute in ("sim_time", "time", "t"):
                     value = getattr(example, attribute, None)
                     if isinstance(value, (int, float)):
@@ -202,11 +231,14 @@ def record(name, options):
         "fps": fps,
         "width": options.width,
         "height": options.height,
+        "show_ui": profile.get("show_ui", False),
         "recording_wall_seconds": time.perf_counter() - start,
         "playback_is_performance_benchmark": False,
         "simulation_time": simulation_times,
         "dependencies": {package: version(package), "newton": version("newton"), "warp-lang": version("warp-lang")},
     }
+    if scenario_metadata is not None:
+        metadata["scenario"] = scenario_metadata
     (output / f"{name}.json").write_text(json.dumps(metadata, indent=2) + "\n")
     print(f"Recorded {final}", flush=True)
 

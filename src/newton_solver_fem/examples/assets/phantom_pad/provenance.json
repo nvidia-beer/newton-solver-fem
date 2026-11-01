@@ -1,0 +1,62 @@
+{
+  "source_directory": "/home/beer/Dev/MSc/SutureBot-workbench/outputs/phantom_parametric/lowered_quality_groups_v3",
+  "original_obj_sha256": "98eba4e2877cb7dd01f8e602a032a721141e8b8d0b3401e1b854772f1dfc81c0",
+  "upstream": "https://github.com/surgical-robotics-ai/surgical_robotics_challenge",
+  "upstream_commit": "26bb2f6",
+  "license_note": "The SutureBot source README records no upstream LICENSE file; the mesh is not asserted to be Apache-2.0.",
+  "processing": "Source grouped USD copied with identical positions, connectivity and region ownership; derived rest data, quality arrays and suggested constraint node lists removed. Runtime computes cut nodes from selected geometry.",
+  "removed_attributes": [
+    "suturebot:boundaryVertexIndices",
+    "suturebot:cutInterfaceVertexIndices",
+    "suturebot:fixedVertexIndices",
+    "suturebot:inverseRestMatrices",
+    "suturebot:meanRatioQuality",
+    "suturebot:restVolumesM3"
+  ],
+  "files": {
+    "phantom_regions.usd": {
+      "source_sha256": "a9a2cda618dc1600235345cc225b27382f956f7fb2306756efb37dbcd76b9d54",
+      "bundled_sha256": "a9a2cda618dc1600235345cc225b27382f956f7fb2306756efb37dbcd76b9d54"
+    },
+    "phantom_regions_payloads/region_000_base_and_lettering.usdc": {
+      "source_sha256": "aedcae62e5adb7a81b99d1d68a9f415686c21d4e0ca998df9759597e7a2527de",
+      "bundled_sha256": "e1d67af37a3cb6d2c0dff2bb1b39d773f1197f7bc2db9fdd883d78267b5a48c7"
+    },
+    "phantom_regions_payloads/region_001_feature_01.usdc": {
+      "source_sha256": "20ea834fcca0ad99d655a9cbac1aae0fcc83aa070f968ed81fdc3e5942789ad1",
+      "bundled_sha256": "2a03bd3bab5134c3f9a749207dc5a186eabb8f197c6e551e3015d35d14c89fd3"
+    },
+    "phantom_regions_payloads/region_002_feature_02.usdc": {
+      "source_sha256": "07e4b1cf704d795179f6adc5b2b24106de24a27cc43b3e71869129be0c724221",
+      "bundled_sha256": "ffd338ba156b14d2391d8f48c8c903bd8084dde8ce675fa9b34a79fcecc3b013"
+    },
+    "phantom_regions_payloads/region_003_feature_03.usdc": {
+      "source_sha256": "1dad516f4beb3663ae6dd2eaa5916c7cccc09748bd5c81872784ac1494527515",
+      "bundled_sha256": "76c7cb1fbfeb72e61bb4402a27b5d1f10eaecb15b115efa100d1d7f0d3026ed4"
+    },
+    "phantom_regions_payloads/region_004_feature_04.usdc": {
+      "source_sha256": "c13c28dec276a37ecd58c0e03af49d37b5476b1fa83fd06761641813dbd38fd1",
+      "bundled_sha256": "638a2728bb203b7f7ccc2c10e5d2fc17ca662d3763bc16cf65f2f6de73b5fd7a"
+    },
+    "phantom_regions_payloads/region_005_feature_05.usdc": {
+      "source_sha256": "cfbd55877f34399695a99915df61cfe441ab2f78e2af9909f507ec0997c827d3",
+      "bundled_sha256": "38824c34a68a6788146982b08192ccaf556eef5ecd6f9791ed3632d7aedc19d3"
+    },
+    "phantom_regions_payloads/region_006_feature_06.usdc": {
+      "source_sha256": "93d72b467fbe1b4652cf413d998d5478b44a4297aac42012ef1cd9bba1cf7881",
+      "bundled_sha256": "b8ac9e3d67ca515e74a2e7495683716637911b650a7ba2c1c39918bb1de1cae3"
+    },
+    "phantom_regions_payloads/region_007_feature_07.usdc": {
+      "source_sha256": "6860d321807e2474a60ed65983ddce06446e410ea257a2f71b36b00e6897a738",
+      "bundled_sha256": "28763d6c606ac323169c395bfb7059e5d9d6f1f7c9c0da69dff35409bf888567"
+    },
+    "phantom_regions_payloads/region_008_feature_08.usdc": {
+      "source_sha256": "b8fc09891c3b212027c2200f936cb455e0f9bdf7f7458b6cf7b9f45fac182f13",
+      "bundled_sha256": "3f11004229357330d068099eefd0e457f3bd60c0b7cd543b555348a0fc1d5fe1"
+    },
+    "phantom_regions_payloads/region_009_upper_paired_strips.usdc": {
+      "source_sha256": "06d7153cdb4317c04468c6c9658abf7839b22d29acb96a3f86159f47f91e645e",
+      "bundled_sha256": "2356925ad8eed756a7a2181bc3891e8175149e8fcae05d99da97ed6013cb0040"
+    }
+  }
+}

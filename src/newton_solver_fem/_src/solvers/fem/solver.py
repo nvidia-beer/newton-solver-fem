@@ -70,6 +70,7 @@ from warp.optim.linear import LinearOperator, bicgstab, cg, cr, gmres, precondit
 from warp.sparse import bsr_set_from_triplets, bsr_zeros
 
 from . import differentiation
+from .fixed_particles import FixedParticles
 from .implicit_predictor import restore_spring_damping_predictor, subtract_elastic_predictor
 from .kernels import (
     block_jacobi_mv_kernel,
@@ -189,6 +190,12 @@ class SolverFEM(SolverBase):
             material fractions, shape ``(tet_count,)``, for volume telemetry.
             Clipped elements use their occupied fraction; unused slots use zero.
             Read in place; this option does not change forces or masses.
+        fixed_particle_indices: Optional one-dimensional sequence of stationary
+            Dirichlet node indices, anchored to construction-time model positions.
+            Input/output boundary positions are restored and velocities zeroed.
+            The symmetric solve eliminates these degrees of freedom while
+            retaining physical masses and the complete elastic predictor.
+            Not supported with differentiation, streaming or component scaling.
     """
 
     # ==================================================================
@@ -220,7 +227,16 @@ class SolverFEM(SolverBase):
         enable_tet_activations: bool = False,
         defer_differentiation_checks: bool = False,
         tet_volume_weights: wp.array | None = None,
+        fixed_particle_indices=None,
     ):
+        fixed_indices = np.asarray([] if fixed_particle_indices is None else fixed_particle_indices)
+        if fixed_indices.ndim != 1 or (fixed_indices.size and fixed_indices.dtype.kind not in "iu"):
+            raise ValueError("fixed_particle_indices must be a one-dimensional integer sequence")
+        if fixed_indices.size and (fixed_indices.min() < 0 or fixed_indices.max() >= model.particle_count):
+            raise ValueError("fixed_particle_indices contains an out-of-range node")
+        fixed_indices = np.unique(fixed_indices).astype(np.int32)
+        if fixed_indices.size and differentiable:
+            raise ValueError("fixed_particle_indices is not supported with differentiable=True")
         if tet_volume_weights is not None:
             if (
                 not isinstance(tet_volume_weights, wp.array)
@@ -309,6 +325,7 @@ class SolverFEM(SolverBase):
         )
         self._pc_inv_diag = None
         self._streaming = None
+        self._fixed_particles = FixedParticles(model, self.A_bsr, fixed_indices) if fixed_indices.size else None
         self.M_bsr = self._build_preconditioner()
         self.dv = wp.zeros(model.particle_count, dtype=wp.vec3, device=model.device)
         self._normalized_rhs = wp.empty_like(self.dv)
@@ -616,6 +633,8 @@ class SolverFEM(SolverBase):
         """
         self._invalidate_differentiation()
         # BVH refit for soft-surface contacts
+        if self._fixed_particles is not None:
+            self._fixed_particles.restore_positions(particle_q)
         if self._soft_surface_contacts is not None:
             self._soft_surface_contacts.update(particle_q)
 
@@ -655,6 +674,8 @@ class SolverFEM(SolverBase):
             original_node_count: Number of original nodes in each complete copy
                 of the particle pool. Must divide ``model.particle_count``.
         """
+        if self._fixed_particles is not None:
+            raise ValueError("Streaming topology is not supported with fixed_particle_indices")
         self._invalidate_differentiation()
         if self.model.device.is_capturing or self._lin_solver is not None:
             raise RuntimeError("Prepare tetrahedral updates before capturing or stepping the solver")
@@ -686,6 +707,8 @@ class SolverFEM(SolverBase):
                 ``[0, component_capacity)`` for active components.
             component_capacity: Reserved number of component labels.
         """
+        if self._fixed_particles is not None:
+            raise ValueError("Component scaling is not supported with fixed_particle_indices")
         self._invalidate_differentiation()
         if self.model.device.is_capturing or self._lin_solver is not None:
             raise RuntimeError("Prepare component scaling before capturing or stepping the solver")
@@ -738,6 +761,8 @@ class SolverFEM(SolverBase):
         model = self.model
         if particle_q.shape != model.particle_q.shape or particle_q.device != model.device:
             raise ValueError("particle_q must match the model's particle shape and device")
+        if self._fixed_particles is not None:
+            self._fixed_particles.restore_positions(particle_q)
         capturing = model.device.is_capturing
         if capturing and self.preconditioner_type != "block_diag":
             raise RuntimeError("Captured tangent refresh requires the block_diag preconditioner")
@@ -835,6 +860,8 @@ class SolverFEM(SolverBase):
             raise ValueError("Topology updates must preserve model capacities and array storage")
         if particle_q.shape != model.particle_q.shape or particle_q.device != model.device:
             raise ValueError("particle_q must match the model's particle shape and device")
+        if self._fixed_particles is not None:
+            self._fixed_particles.restore_positions(particle_q)
         if self._streaming is not None:
             self._streaming.update(particle_q, dt, sources=element_sources)
             self._refresh_preconditioner()
@@ -907,6 +934,8 @@ class SolverFEM(SolverBase):
         if control is None:
             control = model.control()
 
+        if self._fixed_particles is not None:
+            self._fixed_particles.restore(state_in)
         self._accumulate_forces(model, state_in, contacts, control, dt)
         if external_forces is not None:
             wp.launch(
@@ -1169,6 +1198,9 @@ class SolverFEM(SolverBase):
         rhs = state_in.particle_f
         operator = self.A_bsr if self._streaming is None else self._streaming.operator
         inverse = self.M_bsr
+        if self._fixed_particles is not None:
+            self._fixed_particles.project_rhs(rhs)
+            operator = self._fixed_particles.operator
         if self._component_scaling is not None:
             matrix = self.A_bsr if self._streaming is None else self._streaming.compact_matrix
             self._component_scaling.prepare(matrix, self._pc_inv_diag, rhs)
@@ -1232,6 +1264,8 @@ class SolverFEM(SolverBase):
             ],
             device=model.device,
         )
+        if self._fixed_particles is not None:
+            self._fixed_particles.restore(state_out)
 
     # ==================================================================
     # 4. Force evaluators

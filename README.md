@@ -39,6 +39,61 @@ The Docker image includes pinned NVIDIA Nsight Systems CLI 2026.5.1; rebuild old
 
 Reports, completion metadata and local history are saved under `nsys/results/` and ignored by Git. See [profiling instructions](nsys/README.md) for local setup, comparisons and reading bottlenecks. Ordinary runs have no profiling instrumentation; captured timings include profiler overhead.
 
+## Interactive phantom regions
+
+The `fem_phantom_regions` example loads the bundled, grouped phantom USD. It
+contains the final ten groups: the base includes the “3-D Med” lettering, and
+the paired upper strips share one group. No SutureBot checkout is needed
+to run the example. Install the `examples` extra for USD loading and the OpenGL
+viewer.
+
+```bash
+./docker/run.sh fem_phantom_regions
+# Local equivalent:
+uv run --locked --extra examples python -m newton_solver_fem.examples fem_phantom_regions
+```
+
+Click a region on the upright 2D pad map to activate FEM for that region.
+Selecting another region replaces the current selection, so only one region
+is active at a time. Clicking the current region leaves its deformation intact;
+use **None** to disable FEM. The map shows numbered regions from above with an
+active selection highlight. The 3D pad remains
+uniform pink, inspired by the [3-Dmed soft tissue suture pad](https://www.3-dmed.com/product/soft-tissue-suture-pad/),
+and inactive material stays fixed. The displayed active tetrahedron count is
+the actual FEM model size. Changing selection rebuilds the model from the
+reference shape and clears existing holds.
+
+Camera translation is scaled to the pad size (about 68 mm/s with WASD), and
+mouse orbit, pan and zoom use a pivot near the pad. Use **Frame pad** to restore
+this view.
+
+Right-drag an active region to pull it with the same mouse tool as the Baymax
+cutting example. Release to keep a spring hold, middle-click its marker to
+release it, or use **Clear holds**. The inactive reference cannot be grabbed.
+The selected region includes its local base. Nodes on interfaces with inactive
+regions are fixed, and the pad underside is supported as well.
+
+```bash
+# Start with region 7; click the 2D pad map to change selection.
+uv run --locked --extra examples python -m newton_solver_fem.examples fem_phantom_regions --regions 7
+```
+
+The material controls are demonstration parameters, not values fitted to the
+tissue videos. The example retains the source tetrahedral geometry and group
+membership. See the [asset provenance](src/newton_solver_fem/examples/assets/phantom_pad/README.md)
+for the bundled USD and its source.
+
+The [recorded demonstration](docs/media/fem_phantom_regions.mp4) clicks the 2D map,
+pulls region 7, switches to region 9, disables FEM, then returns to region 7. Its script
+sends mouse input through the map and attachment controls; deformation comes
+from the FEM solve. Regenerate its MP4, animated preview and capture metadata
+with:
+
+```bash
+uv run --locked --extra examples python tools/record_examples.py fem_phantom_regions --width 1280 --height 720
+python3 tools/build_readme.py --require-videos
+```
+
 ## Sparse FEM method
 
 `SolverFEM` advances position-only Tet4 and Q1 Hex8 solids in SI units.
@@ -91,6 +146,16 @@ Ground contact is an analytic penalty with inward normal damping and velocity
 friction capped by both Coulomb force and particle weight. Surface contact
 uses evolving boundary geometry. External forces enter through
 `step(..., external_forces=forces)`; incoming `particle_f` is workspace.
+
+Stationary boundaries use `SolverFEM(..., fixed_particle_indices=indices)`.
+With $P$ the projector onto free nodes, the solve is
+$(PAP+I-P)\Delta v=Pb$. Boundary positions remain at the model's construction
+positions and boundary velocities are zero. Physical masses and the original
+matrix remain intact, including the constrained columns needed by the elastic
+velocity predictor. Boundary state entries are restored before force evaluation
+and after integration; tangent/topology reassembly also restores fixed positions.
+This option currently excludes differentiable stepping,
+streaming topology and component scaling; no gradient support is claimed for it.
 
 ## Cuts and differentiation
 
@@ -157,8 +222,8 @@ One demonstration clip per example. Click a preview to open its MP4. Videos show
 
 | Example | Example |
 | --- | --- |
-| **[diffsim_bear](src/newton_solver_fem/examples/diffsim/example_diffsim_bear.py)**<br>Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller.<br><a href="docs/media/diffsim_bear.mp4"><img src="docs/media/diffsim_bear.gif" width="420" alt="Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller."></a><br>Fresh live inference after one Adam update, using all 1,986 vertices, 5,354 tetrahedra and 80 substeps per frame.<br>`./docker/run.sh diffsim_bear` | **[linear_fem](src/newton_solver_fem/examples/example_linear_fem.py)**<br>Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid.<br><a href="docs/media/linear_fem.mp4"><img src="docs/media/linear_fem.gif" width="420" alt="Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid."></a><br>All six Tet4/Hex8 objects falling and deforming against the floor; default physics and resolution.<br>`./docker/run.sh linear_fem` |
-| **[linear_fem_baymax_cut](src/newton_solver_fem/examples/example_linear_fem_baymax_cut.py)**<br>Drill holes, slice or carve a soft Baymax; use the mouse to lift, hold and release material.<br><a href="docs/media/linear_fem_baymax_cut.mp4"><img src="docs/media/linear_fem_baymax_cut.gif" width="420" alt="Drill holes, slice or carve a soft Baymax; use the mouse to lift, hold and release material."></a><br>Six finite slices produce ten disconnected material pieces; the clip then hides the skin and switches to an elevated, colored connectivity debug view.<br>`./docker/run.sh linear_fem_baymax_cut` |  |
+| **[diffsim_bear](src/newton_solver_fem/examples/diffsim/example_diffsim_bear.py)**<br>Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller.<br><a href="docs/media/diffsim_bear.mp4"><img src="docs/media/diffsim_bear.gif" width="420" alt="Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller."></a><br>Fresh live inference after one Adam update, using all 1,986 vertices, 5,354 tetrahedra and 80 substeps per frame.<br>`./docker/run.sh diffsim_bear` | **[fem_phantom_regions](src/newton_solver_fem/examples/example_fem_phantom_regions.py)**<br>Select one FEM region on a clickable map and right-drag the pink suture pad.<br><a href="docs/media/fem_phantom_regions.mp4"><img src="docs/media/fem_phantom_regions.gif" width="420" alt="Select one FEM region on a clickable map and right-drag the pink suture pad."></a><br>Click the upright 2D pad map to select one FEM region on a pink phantom: right-drag region 7, switch to region 9, disable FEM, then return to region 7. The inactive pad stays fixed; only the selected region enters the solve.<br>`./docker/run.sh fem_phantom_regions` |
+| **[linear_fem](src/newton_solver_fem/examples/example_linear_fem.py)**<br>Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid.<br><a href="docs/media/linear_fem.mp4"><img src="docs/media/linear_fem.gif" width="420" alt="Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid."></a><br>All six Tet4/Hex8 objects falling and deforming against the floor; default physics and resolution.<br>`./docker/run.sh linear_fem` | **[linear_fem_baymax_cut](src/newton_solver_fem/examples/example_linear_fem_baymax_cut.py)**<br>Drill holes, slice or carve a soft Baymax; use the mouse to lift, hold and release material.<br><a href="docs/media/linear_fem_baymax_cut.mp4"><img src="docs/media/linear_fem_baymax_cut.gif" width="420" alt="Drill holes, slice or carve a soft Baymax; use the mouse to lift, hold and release material."></a><br>Six finite slices produce ten disconnected material pieces; the clip then hides the skin and switches to an elevated, colored connectivity debug view.<br>`./docker/run.sh linear_fem_baymax_cut` |
 
 ## Regenerate documentation
 

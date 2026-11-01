@@ -13,3 +13,11 @@ Stable Neo-Hookean Flesh Simulation, ACM TOG 37(2), article 12 (2018).
 Cut topology uses the embedded affine-field construction of Eftychios Sifakis,
 Kevin G. Der and Ronald Fedkiw, Arbitrary Cutting of Deformable Tetrahedralized
 Objects, SCA (2007). See docs/method.md for implementation scope and paper links.
+
+The phantom pad asset under src/newton_solver_fem/examples/assets/phantom_pad/
+is reconstructed from
+the 3D-MED phantom in surgical-robotics-ai/surgical_robotics_challenge, commit
+26bb2f6, through the user's SutureBot-workbench project. The source SutureBot
+README records no upstream LICENSE file for this mesh. This asset is not
+represented as Apache-2.0 licensed. Its provenance and content hashes are in
+src/newton_solver_fem/examples/assets/phantom_pad/provenance.json.

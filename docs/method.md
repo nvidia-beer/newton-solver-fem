@@ -51,6 +51,16 @@ friction capped by both Coulomb force and particle weight. Surface contact
 uses evolving boundary geometry. External forces enter through
 `step(..., external_forces=forces)`; incoming `particle_f` is workspace.
 
+Stationary boundaries use `SolverFEM(..., fixed_particle_indices=indices)`.
+With $P$ the projector onto free nodes, the solve is
+$(PAP+I-P)\Delta v=Pb$. Boundary positions remain at the model's construction
+positions and boundary velocities are zero. Physical masses and the original
+matrix remain intact, including the constrained columns needed by the elastic
+velocity predictor. Boundary state entries are restored before force evaluation
+and after integration; tangent/topology reassembly also restores fixed positions.
+This option currently excludes differentiable stepping,
+streaming topology and component scaling; no gradient support is claimed for it.
+
 ## Cuts and differentiation
 
 Cuts clip material into convex fragments while preserving the parent affine

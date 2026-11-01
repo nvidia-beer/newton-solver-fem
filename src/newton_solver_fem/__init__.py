@@ -10,7 +10,17 @@ from ._src.cutting import (
     MaterialHolds,
     TetrahedralTunnelGuide,
 )
-from ._src.geometry import HexMesh, Mesh, boundary_faces, hex_quadrature, load_mesh
+from ._src.geometry import (
+    HexMesh,
+    Mesh,
+    MeshRegion,
+    RegionMesh,
+    boundary_faces,
+    hex_quadrature,
+    list_mesh_regions,
+    load_mesh,
+    load_mesh_regions,
+)
 from ._src.geometry.assets import detect_asset_type, load_asset, load_hex_assembly
 from ._src.solvers import (
     FEMBuilder,
@@ -23,6 +33,10 @@ __all__ = [
     "HexMesh",
     "Mesh",
     "load_mesh",
+    "MeshRegion",
+    "RegionMesh",
+    "list_mesh_regions",
+    "load_mesh_regions",
     "boundary_faces",
     "hex_quadrature",
     "SolverFEM",

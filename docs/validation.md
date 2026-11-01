@@ -83,3 +83,28 @@ and native USD loading in an isolated container with no network or host mounts.
 The Docker launcher also passed a two-frame CPU headless example with `--test`.
 These checks validate the cleanup and retained behavior; they do not establish
 a real-time guarantee.
+
+## Grouped phantom regions (2026-11-01)
+
+The retained [regional replay report](validation/phantom-regions.json) covers
+all 540 frames of the video workload on NVIDIA GB10: region 7, region 9,
+no active regions, then region 7 again. Their actual FEM sizes were
+11,795, 13,909, zero and 11,795 tetrahedra. The null viewer replays the same
+physical ray picks and spring targets as the visible mouse controls.
+
+Every replay frame had finite state, positive tetrahedron Jacobians and exactly
+stationary cut/underside anchors. The minimum Jacobian was 0.939770. The 3 mm
+grab-target motions produced maximum nodal displacements of approximately
+1.288 mm and 0.738 mm in regions 7 and 9. These are checks of this scripted
+demonstration, not fitted tissue parameters or guarantees for arbitrary pulls.
+
+The nine-second [actual GPU recording](media/fem_phantom_regions.mp4) has 540
+decoded frames at 1280 × 720 and 60 fps. It shows clicks on the 2D region map, active
+tetrahedron counts and mouse-grab markers; its [capture metadata](media/fem_phantom_regions.json)
+retains the selection and deformation measurements. The movie's playback rate
+is not a live performance result.
+
+```bash
+uv run --locked --extra examples python tools/validate_phantom_regions.py --output /tmp/phantom-regions.json
+uv run --locked --extra examples python tools/record_examples.py fem_phantom_regions --width 1280 --height 720
+```
