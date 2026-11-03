@@ -1,5 +1,7 @@
 """Script public example interactions for representative FEM recordings."""
 
+import json
+
 import numpy as np
 
 _CUT_STROKES = {
@@ -22,7 +24,11 @@ def configure(name, example):
     elif name == "fem_phantom_regions":
         example.recording_events = []
         example.recording_drag = None
-        if getattr(example.screen_pick, "window", None) is not None:
+    elif name == "fem_suturebot":
+        example.recording_seen_frames = set()
+        example.recording_view_changes = []
+    if name in ("fem_phantom_regions", "fem_suturebot"):
+        if name == "fem_suturebot" or getattr(example.screen_pick, "window", None) is not None:
             # Use the ordinary example panel, with unrelated viewer sections
             # collapsed so its clickable pad map remains visible in the clip.
             def collapse_viewer_sections(ui):
@@ -129,7 +135,7 @@ def _phantom_finish_drag(example, frame):
 def _phantom_frame(example, frame):
     if frame == 0:
         example.test_final()
-        example.select_regions((7,))
+        example.select_regions((4,))
         example.recording_events.append(
             {
                 "frame": frame,
@@ -143,7 +149,7 @@ def _phantom_frame(example, frame):
     # The null profiler replays the identical selection changes without a UI.
     gui = getattr(example.viewer, "gui", None)
     io = getattr(getattr(gui, "ui", None), "io", None)
-    clicks = ((170, 9, (9,)), (330, None, ()), (360, 7, (7,)))
+    clicks = ((170, 6, (6,)), (330, None, ()), (360, 4, (4,)))
     for clicked_frame, region_id, expected in clicks:
         if frame == clicked_frame - 2 and io is not None:
             pixel = (
@@ -180,7 +186,7 @@ def _phantom_frame(example, frame):
                     "tetrahedra": len(example.selection.indices),
                 }
             )
-    for start, region in ((20, 7), (190, 9), (390, 7)):
+    for start, region in ((20, 4), (190, 6), (390, 4)):
         if frame == start - 2:
             _phantom_pointer(example, region)
         elif frame == start:
@@ -204,6 +210,28 @@ def finite_incision(axis, coordinate, lower, upper):
 
 
 def before_frame(name, example, frame):
+    if name == "fem_suturebot":
+        example.recording_seen_frames.add(example.frame_index)
+        if frame == 120:
+            example.frame_phantom()
+            example.recording_view_changes.append({"capture_frame": frame, "view": "phantom"})
+        elif frame == 180 and "point_labels" in example.recording.manifest:
+            labels = example.recording.manifest["point_labels"]
+            report = json.loads(example.recording.asset(labels["report"]).read_text())
+            center = np.mean([point["position_world_m"] for point in report["points"]], axis=0)
+            # Keep the physical-size markers legible after video compression.
+            example.viewer.set_camera(pos=center + np.array([-0.06, 0.06, 0.08]))
+            example.viewer.camera.look_at(center)
+            example.recording_view_changes.append({"capture_frame": frame, "view": "surface point labels"})
+        elif frame == 850:
+            example.frame_phantom()
+            example.recording_view_changes.append({"capture_frame": frame, "view": "phantom"})
+        elif frame == 1000:
+            example.reset_camera()
+            example.recording_view_changes.append({"capture_frame": frame, "view": "complete rig"})
+        if frame % 60 == 0:
+            example.test_final()
+        return
     if name == "fem_phantom_regions":
         _phantom_frame(example, frame)
         return
@@ -228,6 +256,8 @@ def before_frame(name, example, frame):
 
 
 def frame_label(name, example):
+    if name == "fem_suturebot":
+        return f"{example.recording.manifest['sample_id']} | frame {example.frame_index} | {example.recording.time_s[example.frame_index]:.2f} s | four camera overlays"
     if name == "fem_phantom_regions":
         regions = ", ".join(str(value) for value in example.selected_region_ids) or "none"
         action = "Right-drag: physical spring grab" if example.recording_drag else "Click pad map | fixed inactive pad"
@@ -246,6 +276,34 @@ def frame_label(name, example):
 
 
 def recording_metadata(name, example):
+    if name == "fem_suturebot":
+        example.test_final()
+        example.recording_seen_frames.add(example.frame_index)
+        if example.overlay is None:
+            raise RuntimeError("The recording must include all four model/video overlays")
+        if not all(count > 0 for count in example.overlay.coverage.values()):
+            raise RuntimeError("The recording must render geometry in every camera view")
+        return {
+            "sample_id": example.recording.manifest["sample_id"],
+            "source_episode": example.recording.manifest["source_episode"],
+            "source_frame_count": example.recording.frame_count,
+            "observed_source_frames": len(example.recording_seen_frames),
+            "supported_source_frames": [example.recording.first_valid_frame, example.recording.last_valid_frame],
+            "alignment": example.recording.manifest["alignment"],
+            "final_overlay_coverage_pixels": example.overlay.coverage,
+            "motion": "measured Cartesian/joint kinematic replay",
+            "region_id": example.recording.manifest["region_id"],
+            "point_labels": example.recording.manifest.get("point_labels"),
+            "needle": {
+                "present": example.needle is not None,
+                "motion": "fresh recorded jaw closure translates the nearest needle centerline point to the grasp point without rotating it; fixed gripper-relative pose while held; MuJoCo dynamics after release",
+                "regrasp_policy": example.recording.manifest.get("needle", {}).get("grasp", {}).get("regrasp_policy"),
+                "recorded_needle_trajectory": False,
+                "events": example.needle.events if example.needle is not None else [],
+            },
+            "needle_tissue_interaction": False,
+            "view_changes": example.recording_view_changes,
+        }
     if name == "fem_phantom_regions":
         return {"drag_distance_m": 0.003, "events": example.recording_events}
     return None

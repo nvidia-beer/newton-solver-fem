@@ -83,7 +83,7 @@ class RegionMap:
     interior point after drawing, for real mouse interaction in demonstrations.
     """
 
-    def __init__(self, vertices, triangles, region_ids, regions, resolution=512):
+    def __init__(self, vertices, triangles, region_ids, regions, resolution=512, *, anchors=None):
         self.region_ids, heights = rasterize_regions(vertices, triangles, region_ids, resolution)
         # Present the authored pad with its 3-D Med lettering upright. Rotate
         # both ownership and relief before deriving labels and mouse targets.
@@ -101,6 +101,16 @@ class RegionMap:
             if not mask.any():
                 raise ValueError(f"Region {region_id} has no visible area in the top view")
             self.centers[region_id] = _interior_label(mask)
+            if anchors is not None and region_id in anchors:
+                # Project a dataset label location through the existing map
+                # orientation, then keep its click target on its original owner.
+                anchor = anchors[region_id]
+                scale = (resolution - 4) / np.ptp(np.asarray(vertices)[:, :2], axis=0).max()
+                target_x = mask.shape[1] - ((anchor[0] - np.min(vertices[:, 0])) * scale + 2)
+                target_y = mask.shape[0] - ((np.max(vertices[:, 1]) - anchor[1]) * scale + 2)
+                y, x = np.nonzero(mask)
+                nearest = np.argmin((x + 0.5 - target_x) ** 2 + (y + 0.5 - target_y) ** 2)
+                self.centers[region_id] = float(x[nearest]) + 0.5, float(y[nearest]) + 0.5
         self.boundary = np.zeros_like(self.region_ids, dtype=bool)
         self.boundary[1:] |= self.region_ids[1:] != self.region_ids[:-1]
         self.boundary[:, 1:] |= self.region_ids[:, 1:] != self.region_ids[:, :-1]
@@ -198,7 +208,7 @@ class RegionMap:
             draw.add_text(ui.ImVec2(px - extent.x / 2, py - extent.y / 2), 0xFFFFFFFF, text)
         if hovered is not None:
             region = self.regions[hovered]
-            name = "Base and lettering" if hovered == 0 else region.name.replace("_", " ").capitalize()
+            name = region.name.replace("_", " ").capitalize()
             status = "active FEM" if hovered in selected_ids else "fixed; click to simulate this region"
             ui.set_tooltip(f"{hovered}: {name}\n{region.tetrahedron_count:,} tetrahedra\n{status}")
         return clicked

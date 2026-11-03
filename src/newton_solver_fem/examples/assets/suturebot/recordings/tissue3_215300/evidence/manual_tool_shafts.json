@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "status": "reviewed_wrist_observations_stereo_unavailable",
+  "coordinate_convention": "original source pixels; x right, y down; no axial endpoint or material-point correspondence",
+  "episode": "tissue_3/2_needle_throw/20250428-215300-489212",
+  "annotation_method": "Independent manual inspection of original images, with enlarged and brightness-adjusted copies used only as display aids. No model projection used to place points.",
+  "fit_frames": [
+    4,
+    75,
+    150,
+    450,
+    600
+  ],
+  "reserved_frames": [
+    300,
+    525
+  ],
+  "observability_limits": [
+    "Repeated own-shaft silhouettes from a camera mounted on that instrument are correlated mount observations, not independent geometric views.",
+    "The long cylinder is reflective and defocused near the camera. Annotation uncertainty is conservative visual localization tolerance, not a statistical standard deviation.",
+    "Only observed tangent fragments should constrain the fit; do not extrapolate into vignette, across thread or the articulated/milled connector.",
+    "Shaft radius in the current CAD is a model assumption to verify for each actual tool; silhouette alignment does not independently establish physical radius.",
+    "The reserved frames check image agreement under changed background and lighting. They do not provide an independent camera-to-shaft pose because each camera moves rigidly with its own shaft.",
+    "No usable stereo shaft edge was identified. These observations alone cannot identify global phantom/tool height or all wrist-camera intrinsic and metric-mount parameters."
+  ],
+  "records": [
+    {
+      "camera": "psm1",
+      "frame": 4,
+      "arm": "psm1",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          260,
+          315
+        ],
+        [
+          250,
+          335
+        ],
+        [
+          240,
+          355
+        ]
+      ],
+      "uncertainty_px": 8,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm1",
+      "frame": 75,
+      "arm": "psm1",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          257,
+          320
+        ],
+        [
+          248,
+          340
+        ],
+        [
+          239,
+          360
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm1",
+      "frame": 75,
+      "arm": "psm1",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          365,
+          320
+        ],
+        [
+          381,
+          338
+        ],
+        [
+          398,
+          356
+        ]
+      ],
+      "uncertainty_px": 8,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm1",
+      "frame": 150,
+      "arm": "psm1",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          257,
+          320
+        ],
+        [
+          248,
+          340
+        ],
+        [
+          239,
+          360
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm1",
+      "frame": 150,
+      "arm": "psm1",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          362,
+          318
+        ],
+        [
+          379,
+          338
+        ],
+        [
+          398,
+          358
+        ]
+      ],
+      "uncertainty_px": 8,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm1",
+      "frame": 450,
+      "arm": "psm1",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          259,
+          317
+        ],
+        [
+          248,
+          337
+        ],
+        [
+          237,
+          357
+        ]
+      ],
+      "uncertainty_px": 9,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm1",
+      "frame": 525,
+      "arm": "psm1",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          260,
+          318
+        ],
+        [
+          247,
+          338
+        ],
+        [
+          235,
+          358
+        ]
+      ],
+      "uncertainty_px": 8,
+      "split": "reserved",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm1",
+      "frame": 600,
+      "arm": "psm1",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          258,
+          317
+        ],
+        [
+          248,
+          337
+        ],
+        [
+          238,
+          357
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 4,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          376,
+          318
+        ],
+        [
+          393,
+          337
+        ],
+        [
+          410,
+          356
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 75,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          264,
+          320
+        ],
+        [
+          250,
+          338
+        ],
+        [
+          237,
+          356
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 75,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          377,
+          320
+        ],
+        [
+          394,
+          338
+        ],
+        [
+          410,
+          356
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 150,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          263,
+          320
+        ],
+        [
+          250,
+          338
+        ],
+        [
+          238,
+          356
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 150,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          378,
+          320
+        ],
+        [
+          394,
+          338
+        ],
+        [
+          410,
+          356
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 300,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          267,
+          318
+        ],
+        [
+          252,
+          337
+        ],
+        [
+          240,
+          355
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "reserved",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 300,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          375,
+          318
+        ],
+        [
+          392,
+          337
+        ],
+        [
+          409,
+          355
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "reserved",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 450,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          266,
+          319
+        ],
+        [
+          252,
+          337
+        ],
+        [
+          239,
+          355
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 450,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          376,
+          319
+        ],
+        [
+          393,
+          337
+        ],
+        [
+          410,
+          355
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 525,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          267,
+          319
+        ],
+        [
+          253,
+          337
+        ],
+        [
+          240,
+          355
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "reserved",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 525,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          376,
+          319
+        ],
+        [
+          393,
+          337
+        ],
+        [
+          410,
+          355
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "reserved",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 600,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_left",
+      "points_px": [
+        [
+          265,
+          319
+        ],
+        [
+          251,
+          337
+        ],
+        [
+          238,
+          355
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    },
+    {
+      "camera": "psm2",
+      "frame": 600,
+      "arm": "psm2",
+      "feature": "shaft_cylinder_silhouette",
+      "edge": "image_right",
+      "points_px": [
+        [
+          376,
+          319
+        ],
+        [
+          393,
+          337
+        ],
+        [
+          410,
+          355
+        ]
+      ],
+      "uncertainty_px": 7,
+      "split": "fit",
+      "notes": "Outer tangent of the long reflective cylinder below its curved shoulder. The cylinder reflects the pink pad; the narrow dark central streak is not its silhouette. Segment endpoints are visibility limits, not physical shaft ends."
+    }
+  ],
+  "unavailable": [
+    {
+      "camera": "psm1",
+      "frame": 4,
+      "arm": "psm1",
+      "edge": "image_right",
+      "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+    },
+    {
+      "camera": "psm1",
+      "frame": 300,
+      "arm": "psm1",
+      "edge": "image_right",
+      "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+    },
+    {
+      "camera": "psm1",
+      "frame": 450,
+      "arm": "psm1",
+      "edge": "image_right",
+      "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+    },
+    {
+      "camera": "psm1",
+      "frame": 525,
+      "arm": "psm1",
+      "edge": "image_right",
+      "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+    },
+    {
+      "camera": "psm1",
+      "frame": 600,
+      "arm": "psm1",
+      "edge": "image_right",
+      "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+    },
+    {
+      "camera": "psm2",
+      "frame": 4,
+      "arm": "psm2",
+      "edge": "image_left",
+      "reason": "Thread crosses the short left cylinder boundary near the shoulder; the lower continuation is defocused."
+    },
+    {
+      "camera": "left",
+      "frame": 4,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 4,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 75,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 75,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 150,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 150,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 300,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 300,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 450,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 450,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 525,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 525,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 600,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "left",
+      "frame": 600,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 4,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 4,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 75,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 75,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 150,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 150,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 300,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 300,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 450,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 450,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 525,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 525,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 600,
+      "arm": "psm1",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "right",
+      "frame": 600,
+      "arm": "psm2",
+      "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+    },
+    {
+      "camera": "psm1",
+      "frame": 300,
+      "arm": "psm1",
+      "edge": "image_left",
+      "reason": "Independent source-only review found no reliably distinguishable cylinder tangent between the thread and defocused reflection. Omit instead of inferring from other frames."
+    }
+  ],
+  "feature_semantics": {
+    "shaft_cylinder_silhouette": "Outer occluding tangent of the long cylinder; image_left/image_right designate observed side in the source image, not a material generator line.",
+    "endpoints": "Visibility-limited samples, with no 3D axial coordinate assignment.",
+    "excluded": "Circular shoulder, milled head/connector, articulated jaw, borescope housing, inner reflection, stitch thread, tissue crease and optical vignette."
+  },
+  "correlation_groups": {
+    "psm1": "All own-shaft records share one camera mount and nearly the same underlying silhouette.",
+    "psm2": "All own-shaft records share one camera mount and nearly the same underlying silhouette."
+  },
+  "review_notes": [
+    "The broad pink fan below each articulated head is the actual polished shaft reflecting the pad, not transparent geometry or a tissue surface. Its narrow dark central streak is an interior reflection/connector continuation, not a long-shaft tangent.",
+    "PSM1 frame75/150 provide the strongest paired constraints. PSM1 frame300 supplies no reliable shaft boundary; frame525 has only a blurred left boundary.",
+    "PSM2 short tangents above y=356 are comparatively reproducible, but lower continuations are defocused. The frame4 left tangent is crossed by thread.",
+    "Apparent cylinder fan width constrains lens/mount geometry jointly with assumed shaft radius. It cannot alone prove a focal-length, camera-offset, or global table-height correction."
+  ],
+  "original_image_sources": {
+    "left_000004.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000004.png",
+      "sha256": "f5b69d881d8f5579994f461adb5560fc4b273c907cea0e9a79482532a29f8228",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000075.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000075.png",
+      "sha256": "686220471809bd9207f453b99b491a00afc99e4e5e4d49c404921b714f587ff9",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000150.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000150.png",
+      "sha256": "c52085d0549b3310d6084f1b081df6ee5414eeb4f7936777daefd2c013b925d3",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000300.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000300.png",
+      "sha256": "34af9c2b2d7bfcb492775c9568b1e0577587a6f66dad19a15e44e49bbb82dba9",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000450.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000450.png",
+      "sha256": "c21dc81710042a0cc947cd6a8c3e1244b67f05939a0ce481bfbcc170ee1eec0d",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000525.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000525.png",
+      "sha256": "2aa08cb53de0fe9744924b92a570969493b6165ec49c4a0437ed7a559000314c",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000600.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000600.png",
+      "sha256": "c65c571c4a44d35a378f81d3c4a0487aeb2f8c7c013d834ea80f149a4876a1ca",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000004.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000004.png",
+      "sha256": "2ce0e53c9ace099556ee4bf5af1b3bd014ed16d42563f3aee0dfb6788ea7eeee",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000075.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000075.png",
+      "sha256": "50a3f2ac1a9d4e2ab0519488465ec7315e4d7f74a5f9bb73345c36c6bec45cac",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000150.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000150.png",
+      "sha256": "1093eb9a7773245bc2ee7f0c491cb78d33624852eb502fbe72bca58b4af40a36",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000300.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000300.png",
+      "sha256": "533799422a7ca489f575fdfc408c844b1e0cfba6ebc721c18a2686ac98e5beec",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000450.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000450.png",
+      "sha256": "dff1e43d1e75272c3316ec01c550336e9ce945aceedece9d308faf15fd79720c",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000525.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000525.png",
+      "sha256": "f6ea5e0757e093963121f090e4dd7c0df065a77e792de4c6975b89a0d3f5ee1a",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000600.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000600.png",
+      "sha256": "f09d3c9ec0196642c0e60482605b551e7f7b2c25b2467212b3ed46d2d96b8145",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "psm1_000004.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000004.png",
+      "sha256": "1c787faa26e813613e639757dfb799ea2bf2e6568dadd11fa19f841d3c47f629",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000075.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000075.png",
+      "sha256": "ddc7870376e9b67f0e916a24409366a508321573f90c796402b4ad2467b57e9b",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000150.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000150.png",
+      "sha256": "de0a76cdc5e057b06c91d2b9d8d40212d2f73dc43c40686f6f52b05546bf7c50",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000300.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000300.png",
+      "sha256": "ce5829b85d57fa2010177a706f7ed0bdf7bed9d4e1f687620fb29d3bae94d685",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000450.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000450.png",
+      "sha256": "058a9bf37280f4835abd48f26b4d6a5fa6a7ad68015a8a84a0ecdb5fcd4a19dd",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000525.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000525.png",
+      "sha256": "0ac35ef3f947d54b68027c8213c32bb017270cc0cd1722a80a9e21cd9f93f828",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000600.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000600.png",
+      "sha256": "289eadfcb284e66066fc1547a59ae24f1f2c97cb0010de192fbbae2e97d8e983",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000004.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000004.png",
+      "sha256": "7b36e643afd3b03c24d34068da184c829b2648f2becd2f8d446e2ca3288ec271",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000075.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000075.png",
+      "sha256": "3f7ec6dd7579b0b3a1092e3ab5e912e20bde021643918b2a4389a4d2757d2a1f",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000150.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000150.png",
+      "sha256": "e53f13b5696e406ec0cbdd479925283c46432785b4a4a4c3f182d543f267c3c9",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000300.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000300.png",
+      "sha256": "0a4004a386a0da9ebb5f1767bfc52095fa6d09073582a118f5dbefac55aacc2c",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000450.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000450.png",
+      "sha256": "6212b5aeb83721afd473d8e9e659d37e767a1b989c60572685289248c2af6ba4",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000525.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000525.png",
+      "sha256": "acf9a0af9a95f0a513f849406e3c7b878159e8531aad8ec4513bea523460514f",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000600.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000600.png",
+      "sha256": "3a3011035e780e8619eff1b92bae6a1abc3d784626037656614ddca2f7a559e5",
+      "image_size": [
+        640,
+        480
+      ]
+    }
+  },
+  "original_image_sources_note": "Logical annotation sources; replay images are in images/."
+}

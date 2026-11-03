@@ -1,0 +1,43 @@
+{
+  "result": "passed",
+  "sample_id": "tissue3_222119_approach",
+  "device": "cpu",
+  "source_frame_range_inclusive": [
+    5,
+    141
+  ],
+  "simulated_supported_frames": 137,
+  "held_frames": 137,
+  "free_frames": 0,
+  "maximum_held_transform_absolute_error": 4.897382928636951e-07,
+  "maximum_recorded_tool_pose_error": 2.9799512413219986e-08,
+  "deterministic_seek_maximum_pose_difference": 0.0,
+  "free_translation_extent_m": [
+    0,
+    0,
+    0
+  ],
+  "events": [
+    {
+      "frame": 5,
+      "event": "initial_grasp",
+      "arm": "psm1"
+    }
+  ],
+  "regrasp_count": 0,
+  "translation_grasp_count": 0,
+  "translated_grasps": [],
+  "maximum_grasp_translation_m": 0,
+  "isolated_rigid_body_count": 1,
+  "runtime_needle_trajectory_input": false,
+  "validation_sources_sha256": {
+    "validate_recording_needle.py": "4a0951b6cb92d779226ded142b2965e8aad208388ac768a0631d6e0023f891b7",
+    "_suturebot_needle.py": "7e704c701dfe3bd3533d2385ff728e9f0523a29cd303d8fa996a4c98ac447131"
+  },
+  "limitations": [
+    "Initial needle pose is an uncertain image estimate.",
+    "Held poses impose a fixed grasp constraint; forces are not inferred.",
+    "Fresh jaw closure may translate the free needle to the tool; this is a replay placement rule, not contact-based grasp inference.",
+    "Free contacts use the single rectangular backing only; raised tissue and table are non-colliding."
+  ]
+}

@@ -146,7 +146,7 @@ else
         headless=0
         [[ $viewer == gl ]] || headless=1
         for argument in "${remaining[@]}"; do
-            [[ $argument != --help && $argument != -h && $argument != --list-assets ]] || headless=1
+            [[ $argument != --help && $argument != -h && $argument != --list-assets && $argument != --list-samples ]] || headless=1
         done
         command+=(--viewer "$viewer")
     fi

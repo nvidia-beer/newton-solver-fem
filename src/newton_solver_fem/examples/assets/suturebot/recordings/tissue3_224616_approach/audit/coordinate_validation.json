@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "sample_id": "tissue3_224616_approach",
+  "scope": "Coordinate implementation and source-clock preservation; not image or metric calibration accuracy",
+  "source_arrays_byte_exact": {
+    "timestamps_ns": true,
+    "time_s": true,
+    "numeric_column_names": true,
+    "numeric_values": true,
+    "psm1_pose": true,
+    "psm2_pose": true,
+    "psm1_js": true,
+    "psm2_js": true,
+    "psm1_jaw": true,
+    "psm2_jaw": true
+  },
+  "body_transform_max_abs_errors": {
+    "psm1_roll": 0.0,
+    "psm1_pitch": 0.0,
+    "psm1_yaw": 0.0,
+    "psm1_jaw1": 0.0,
+    "psm1_jaw2": 0.0,
+    "psm2_roll": 0.0,
+    "psm2_pitch": 0.0,
+    "psm2_yaw": 0.0,
+    "psm2_jaw1": 0.0,
+    "psm2_jaw2": 0.0
+  },
+  "camera_transform_max_abs_errors": {
+    "left": 0.0,
+    "right": 0.0,
+    "psm1": 0.0,
+    "psm2": 0.0
+  },
+  "fixture_port_max_error_m": 2.760290516665055e-13,
+  "pad_fixture_normal_error": 1.1102230246251565e-16,
+  "common_supported_interval": [
+    4,
+    460
+  ],
+  "source_shaft_to_recorded_pivot_distances": {
+    "psm1": {
+      "median_m": 8.800583241748475e-07,
+      "max_m": 0.0021198487844708938,
+      "max_frame": 367,
+      "frames_above_1mm": [
+        249,
+        252,
+        305,
+        308,
+        322,
+        323,
+        367
+      ]
+    },
+    "psm2": {
+      "median_m": 5.602646790627967e-07,
+      "max_m": 2.6657140437349442e-05,
+      "max_frame": 427,
+      "frames_above_1mm": []
+    }
+  },
+  "inputs_sha256": {
+    "calibration.json": "f8e50646bf6a16a64de069c2a683e0507220f23ec8d93ebc92bcdebf966b4398",
+    "source_motion.npz": "8c766a9c251bd9560ad5a91279059e41af8a2c047d59f9803e181c0786e593b6",
+    "motion.npz": "c2d51121053594d7e589d98147ac8e12432203934373c229fb4737df7a960314",
+    "camera_poses.npz": "5c6bcb83466b70837d8a7d6de621bd4ad9041b1c35a4b0d69f8490da30998adb"
+  },
+  "limitations": [
+    "Sparse source Cartesian/joint inconsistencies are preserved and can create nonzero shaft-to-RCM distances; fixed base registration cannot remove them.",
+    "Numerically consistent transforms do not show that the phantom, cameras, or tools align with the source videos."
+  ],
+  "passed": true
+}

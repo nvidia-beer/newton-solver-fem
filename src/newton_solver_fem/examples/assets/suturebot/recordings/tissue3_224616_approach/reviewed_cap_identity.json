@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "method": "source_only_wrong_feature_identity_review",
+  "source_episode": "data/tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery",
+  "source_video_sha256": {
+    "left": "33c5515631d9a8b2c28cc09971ff796dace12c5ab0982d495b251181121aef8d",
+    "right": "aeab2a61bc34e62277999c2a13109077f856aff9f47d7878670021405a2c0e71"
+  },
+  "automatic_observations_sha256": "b987aae606c5db5595a22bbe6ebbc14aa521a750e8144cce9d131f9dd63a4132",
+  "fit_frames": [
+    5,
+    16,
+    39,
+    50,
+    73,
+    84,
+    95,
+    107,
+    129,
+    141,
+    163,
+    175,
+    186,
+    197,
+    220,
+    232,
+    254,
+    266,
+    277,
+    288,
+    311,
+    322,
+    345,
+    356,
+    368,
+    379,
+    402,
+    413,
+    436,
+    447,
+    459
+  ],
+  "reserved_frames": [
+    27,
+    61,
+    118,
+    152,
+    209,
+    243,
+    300,
+    334,
+    390,
+    424
+  ],
+  "records": [
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "frame": 220,
+      "split": "fit",
+      "heldout": false,
+      "uncertainty_px": 2,
+      "action": "reject_wrong_feature",
+      "true_cap_visible": false,
+      "original_uv": [
+        449.0616455078125,
+        383.4554138183594
+      ],
+      "reason": "Native stereo source frame220 shows the detected bright point at the needle/tissue-entry patch beneath the jaws. The PSM1 round yaw-cap face is hidden on the instrument underside; neighboring visible cap frames311/334 confirm the anatomical distinction. No true cap coordinate can be assigned at220 from these views.",
+      "source_frame_bgr_sha256": "d77d757b3e6796762562881cb373251d174b2bcbed85a1c759d5e8031c77915f"
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "frame": 220,
+      "split": "fit",
+      "heldout": false,
+      "uncertainty_px": 2,
+      "action": "reject_wrong_feature",
+      "true_cap_visible": false,
+      "original_uv": [
+        450.7312316894531,
+        384.45257568359375
+      ],
+      "reason": "Native stereo source frame220 shows the detected bright point at the needle/tissue-entry patch beneath the jaws. The PSM1 round yaw-cap face is hidden on the instrument underside; neighboring visible cap frames311/334 confirm the anatomical distinction. No true cap coordinate can be assigned at220 from these views.",
+      "source_frame_bgr_sha256": "0d8350f30911fbec26eedaa3c8ff003c163ffcc0a657c2244b739b4f1ff1f936"
+    }
+  ],
+  "review_images": [
+    "audit/source_review/stereo_000220.jpg",
+    "audit/source_review/stereo_000311.jpg",
+    "audit/source_review/stereo_000334.jpg"
+  ]
+}

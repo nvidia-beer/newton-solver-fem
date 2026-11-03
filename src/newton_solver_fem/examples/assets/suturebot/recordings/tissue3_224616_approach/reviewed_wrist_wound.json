@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "source_episode": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery",
+  "source_only": true,
+  "status": "source_reviewed_manual_wrist_incision_fragments",
+  "source_video_sha256": {
+    "psm1": "ad939d76ac3bdbf24acd2b04bc5e30a41a644a7349c5566ed55689845626ef27",
+    "psm2": "3b5925b5c4eefd90c2d63765c4f4ef00c00f2884721574586b715a949ef8a574"
+  },
+  "source_images": {
+    "psm1/5": {
+      "decoded_bgr_sha256": "a5276cc70a14efb49ea51754d2f2eb5730b9ff58c33988b95e9db3f4faed1f49",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/5": {
+      "decoded_bgr_sha256": "f9345c66f57219e97a81449321e0c4b7245ecd7c7d7c7c2ef7d6c20c39432898",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/27": {
+      "decoded_bgr_sha256": "7e34ff735f8d64d19e5ecc0d49c058381dbb35fa4f4fb939a2fa9687772d3b86",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/27": {
+      "decoded_bgr_sha256": "eacd8d8f166f2376c2ce57daf1b75d1c215861ca0fe0c08d59afec6546a0d772",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/50": {
+      "decoded_bgr_sha256": "f3bfd4a5c5ccc4fc8fdda61261ff6225def2836b869c1f3b6578e6a23db6f5f5",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/50": {
+      "decoded_bgr_sha256": "2e19a7b5e06935749e9cb6adcd68ae5ecf149f4f055130ab555de79ebcd44ac3",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/61": {
+      "decoded_bgr_sha256": "9c6e1da8f7af7b025794894efb14f74af0ff7f5e2e8a233f0f79e7aec9791f91",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/61": {
+      "decoded_bgr_sha256": "9ee55e6ed89eb410688315d77cfd3237878b964eb9f3775d8ad3536bdec55cb3",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/95": {
+      "decoded_bgr_sha256": "470008882739022d7a331676b5a9c3dbf99217f4a3fad20aa8aebc19654a35de",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/95": {
+      "decoded_bgr_sha256": "e4c64e143bc5840d8f4f837196ee69361de960b90e605e266b7849400e086bde",
+      "image_size": [
+        640,
+        480
+      ]
+    }
+  },
+  "fit_frames": [
+    5,
+    50,
+    95
+  ],
+  "reserved_frames": [
+    27,
+    61
+  ],
+  "coordinate_convention": "Native640x480 zero-based x-right/y-down; decoded_bgr_sha256 hashes uint8 BGR bytes.",
+  "records": [
+    {
+      "camera": "psm1",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          309,
+          162
+        ],
+        [
+          303,
+          180
+        ],
+        [
+          293,
+          196
+        ],
+        [
+          284,
+          213
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/5",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm2",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          258,
+          160
+        ],
+        [
+          257,
+          184
+        ],
+        [
+          253,
+          208
+        ],
+        [
+          253,
+          226
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/5",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm1",
+      "frame": 27,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          313,
+          186
+        ],
+        [
+          303,
+          202
+        ],
+        [
+          291,
+          219
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/27",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm1",
+      "frame": 27,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          256,
+          286
+        ],
+        [
+          244,
+          320
+        ],
+        [
+          229,
+          355
+        ],
+        [
+          212,
+          390
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/27",
+      "fragment_index": 1,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm2",
+      "frame": 27,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          255,
+          158
+        ],
+        [
+          255,
+          183
+        ],
+        [
+          253,
+          208
+        ],
+        [
+          252,
+          225
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/27",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm1",
+      "frame": 50,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          316,
+          195
+        ],
+        [
+          306,
+          211
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/50",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm1",
+      "frame": 50,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          251,
+          285
+        ],
+        [
+          237,
+          320
+        ],
+        [
+          223,
+          356
+        ],
+        [
+          207,
+          390
+        ],
+        [
+          189,
+          423
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/50",
+      "fragment_index": 1,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm2",
+      "frame": 50,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          254,
+          158
+        ],
+        [
+          255,
+          183
+        ],
+        [
+          254,
+          207
+        ],
+        [
+          253,
+          225
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/50",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm1",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          316,
+          194
+        ],
+        [
+          307,
+          210
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/61",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm1",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          253,
+          285
+        ],
+        [
+          239,
+          320
+        ],
+        [
+          224,
+          355
+        ],
+        [
+          208,
+          390
+        ],
+        [
+          190,
+          424
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/61",
+      "fragment_index": 1,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm2",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          254,
+          158
+        ],
+        [
+          255,
+          183
+        ],
+        [
+          254,
+          207
+        ],
+        [
+          253,
+          225
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/61",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm1",
+      "frame": 95,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          329,
+          198
+        ],
+        [
+          317,
+          211
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/95",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm1",
+      "frame": 95,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          259,
+          285
+        ],
+        [
+          246,
+          320
+        ],
+        [
+          233,
+          355
+        ],
+        [
+          216,
+          390
+        ],
+        [
+          197,
+          425
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/95",
+      "fragment_index": 1,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    },
+    {
+      "camera": "psm2",
+      "frame": 95,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound3_incision_center",
+      "public_region": 3,
+      "points_px": [
+        [
+          254,
+          158
+        ],
+        [
+          255,
+          183
+        ],
+        [
+          254,
+          207
+        ],
+        [
+          253,
+          225
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/95",
+      "fragment_index": 0,
+      "notes": "Visible incision-center fragment. Endpoints are visibility limits; no interpolation across separate fragments."
+    }
+  ],
+  "limitations": [
+    "Manual dark incision-center fragments, not material-point correspondences. Rounded lips and shadows contribute10px uncertainty.",
+    "PSM1 upper and lower visible fragments are separate rows so gripper/thread occlusions are never joined.",
+    "Only source-defined pre-indentation frames are included; original reserved roles retained.",
+    "Source-only review without any model projection. These observations add depth evidence but do not themselves authorize publication."
+  ],
+  "region_identity_correction": {
+    "previous_public_region": 1,
+    "public_region": 3,
+    "basis": "Explicit user correction; pixels, frames and heldout roles unchanged",
+    "previous_evidence_sha256": "f43142ca3efd03093bda32a2c7910323ecc72fba394a2b20a2cdeda8a6936f84"
+  }
+}

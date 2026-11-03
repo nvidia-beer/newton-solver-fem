@@ -1,0 +1,3118 @@
+{
+  "schema_version": 2,
+  "method": "stereo-consistent temporally tracked caps and source-reviewed inner-slit fragments",
+  "frames": [
+    5,
+    11,
+    18,
+    25,
+    32,
+    39,
+    46,
+    53,
+    60,
+    66,
+    73,
+    80,
+    87,
+    94,
+    101,
+    108,
+    115,
+    121,
+    128,
+    135,
+    142,
+    149,
+    156,
+    163,
+    170,
+    176,
+    183,
+    190,
+    197,
+    204,
+    211,
+    218,
+    225,
+    231,
+    238,
+    245,
+    252,
+    259,
+    266,
+    273,
+    280
+  ],
+  "heldout_frames": [
+    18,
+    39,
+    73,
+    94,
+    128,
+    149,
+    183,
+    204,
+    238,
+    259
+  ],
+  "records": [
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        232.0,
+        308.0
+      ],
+      "correlation": 0.8222107291221619,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.0,
+      "stereo_vertical_disparity_px": 0.0,
+      "frame": 5,
+      "heldout": false,
+      "prefit_association_uv": [
+        235.17704561462716,
+        311.11233586937897
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        224.0,
+        308.0
+      ],
+      "correlation": 0.8393222689628601,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.0,
+      "stereo_vertical_disparity_px": 0.0,
+      "frame": 5,
+      "heldout": false,
+      "prefit_association_uv": [
+        226.71477461158133,
+        312.86843248242917
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        260.9654846191406,
+        323.86810302734375
+      ],
+      "correlation": 0.8248873949050903,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.00615033321082592,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.13633826649826258,
+      "stereo_vertical_disparity_px": 0.635223388671875,
+      "frame": 11,
+      "heldout": false,
+      "prefit_association_uv": [
+        264.45369168082067,
+        326.26847320465333
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        252.26318359375,
+        323.2328796386719
+      ],
+      "correlation": 0.8031613230705261,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0020199893042445183,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.7866113106771735,
+      "stereo_vertical_disparity_px": 0.635223388671875,
+      "frame": 11,
+      "heldout": false,
+      "prefit_association_uv": [
+        255.589905637849,
+        327.4817196624568
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        301.5369567871094,
+        341.3460693359375
+      ],
+      "correlation": 0.9054530262947083,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.014554549008607864,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.5780769864648608,
+      "stereo_vertical_disparity_px": 1.230194091796875,
+      "frame": 18,
+      "heldout": true,
+      "prefit_association_uv": [
+        304.8434856396058,
+        344.40230935311274
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        293.5821838378906,
+        340.1158752441406
+      ],
+      "correlation": 0.9189661741256714,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.016430195420980453,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.9720203134712397,
+      "stereo_vertical_disparity_px": 1.230194091796875,
+      "frame": 18,
+      "heldout": true,
+      "prefit_association_uv": [
+        296.73598142563384,
+        345.30932806844004
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        318.66229248046875,
+        340.8320617675781
+      ],
+      "correlation": 0.954504668712616,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.021204007789492607,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.8979828248987746,
+      "stereo_vertical_disparity_px": 1.23565673828125,
+      "frame": 25,
+      "heldout": false,
+      "prefit_association_uv": [
+        321.2696924460556,
+        344.58392378546483
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        312.6451110839844,
+        339.5964050292969
+      ],
+      "correlation": 0.9669121503829956,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.015328758396208286,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.4477655143336754,
+      "stereo_vertical_disparity_px": 1.23565673828125,
+      "frame": 25,
+      "heldout": false,
+      "prefit_association_uv": [
+        314.5438361707928,
+        345.84617047354703
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        324.7790832519531,
+        344.7339782714844
+      ],
+      "correlation": 0.947363555431366,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0026543275453150272,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.7665039547052561,
+      "stereo_vertical_disparity_px": 1.28363037109375,
+      "frame": 32,
+      "heldout": false,
+      "prefit_association_uv": [
+        326.78880695861625,
+        347.25422893390163
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        320.7962646484375,
+        343.4503479003906
+      ],
+      "correlation": 0.9481322169303894,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0014587913174182177,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.5629874354261584,
+      "stereo_vertical_disparity_px": 1.28363037109375,
+      "frame": 32,
+      "heldout": false,
+      "prefit_association_uv": [
+        321.59186343503956,
+        348.6550285038907
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        339.4851379394531,
+        351.907470703125
+      ],
+      "correlation": 0.8971441984176636,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0035405652597546577,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.9757346544186434,
+      "stereo_vertical_disparity_px": 1.604400634765625,
+      "frame": 39,
+      "heldout": true,
+      "prefit_association_uv": [
+        344.1427891478409,
+        355.83885016430617
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        337.3563232421875,
+        350.3030700683594
+      ],
+      "correlation": 0.8870152235031128,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0011870514135807753,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.733936978618562,
+      "stereo_vertical_disparity_px": 1.604400634765625,
+      "frame": 39,
+      "heldout": true,
+      "prefit_association_uv": [
+        340.63173256431253,
+        357.3359118154125
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        350.6029357910156,
+        356.1019287109375
+      ],
+      "correlation": 0.81516033411026,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0039702183566987514,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.2560965138380162,
+      "stereo_vertical_disparity_px": 1.8623046875,
+      "frame": 46,
+      "heldout": false,
+      "prefit_association_uv": [
+        356.46593486720855,
+        360.61324746080396
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        350.50128173828125,
+        354.2396240234375
+      ],
+      "correlation": 0.8218481540679932,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.006518557667732239,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.9093357632388309,
+      "stereo_vertical_disparity_px": 1.8623046875,
+      "frame": 46,
+      "heldout": false,
+      "prefit_association_uv": [
+        354.72571404167184,
+        362.3243131434623
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        355.86199951171875,
+        355.4307556152344
+      ],
+      "correlation": 0.7693299651145935,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.006306515075266361,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.4373954797795068,
+      "stereo_vertical_disparity_px": 1.855560302734375,
+      "frame": 53,
+      "heldout": false,
+      "prefit_association_uv": [
+        361.1715779902125,
+        359.99007979991353
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        357.0823059082031,
+        353.5751953125
+      ],
+      "correlation": 0.7736860513687134,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.004480371251702309,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.4271799676449757,
+      "stereo_vertical_disparity_px": 1.855560302734375,
+      "frame": 53,
+      "heldout": false,
+      "prefit_association_uv": [
+        360.4463479034424,
+        361.90786069115524
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        355.6748962402344,
+        356.0213317871094
+      ],
+      "correlation": 0.7833471298217773,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.012890742160379887,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 25.9656122604176,
+      "stereo_vertical_disparity_px": 2.03753662109375,
+      "frame": 60,
+      "heldout": false,
+      "prefit_association_uv": [
+        362.0346684560926,
+        360.99457711866773
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        358.1678161621094,
+        353.9837951660156
+      ],
+      "correlation": 0.7325286865234375,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.00757948774844408,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 23.456675375788624,
+      "stereo_vertical_disparity_px": 2.03753662109375,
+      "frame": 60,
+      "heldout": false,
+      "prefit_association_uv": [
+        362.3415347324733,
+        363.02215754791155
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        359.5202941894531,
+        356.8428039550781
+      ],
+      "correlation": 0.7786605954170227,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0012452518567442894,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 25.72959326096106,
+      "stereo_vertical_disparity_px": 2.005523681640625,
+      "frame": 66,
+      "heldout": false,
+      "prefit_association_uv": [
+        366.6375714198967,
+        362.0963967961372
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        362.6013488769531,
+        354.8372802734375
+      ],
+      "correlation": 0.7354370355606079,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0021329582668840885,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 22.943936693464906,
+      "stereo_vertical_disparity_px": 2.005523681640625,
+      "frame": 66,
+      "heldout": false,
+      "prefit_association_uv": [
+        367.4110969890466,
+        364.20699433179465
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        364.6145935058594,
+        356.4584655761719
+      ],
+      "correlation": 0.7721185088157654,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.002655730815604329,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 24.834646540501975,
+      "stereo_vertical_disparity_px": 1.8331298828125,
+      "frame": 73,
+      "heldout": true,
+      "prefit_association_uv": [
+        372.31092228344124,
+        361.4741628469377
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        368.63153076171875,
+        354.6253356933594
+      ],
+      "correlation": 0.73147052526474,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0018824670696631074,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 22.8201430978898,
+      "stereo_vertical_disparity_px": 1.8331298828125,
+      "frame": 73,
+      "heldout": true,
+      "prefit_association_uv": [
+        373.9557277526864,
+        363.7813960536948
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        374.3761901855469,
+        356.9156188964844
+      ],
+      "correlation": 0.7681843042373657,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0020558068063110113,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 24.272391835937178,
+      "stereo_vertical_disparity_px": 1.672210693359375,
+      "frame": 80,
+      "heldout": false,
+      "prefit_association_uv": [
+        382.9961379719116,
+        360.8747220297069
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        379.7029724121094,
+        355.243408203125
+      ],
+      "correlation": 0.7137535810470581,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0015942330937832594,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 21.88480834329071,
+      "stereo_vertical_disparity_px": 1.672210693359375,
+      "frame": 80,
+      "heldout": false,
+      "prefit_association_uv": [
+        385.85105863646265,
+        363.4740870290792
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        387.04522705078125,
+        360.5477600097656
+      ],
+      "correlation": 0.7388385534286499,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.003071530256420374,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 23.777577514781694,
+      "stereo_vertical_disparity_px": 1.75396728515625,
+      "frame": 87,
+      "heldout": false,
+      "prefit_association_uv": [
+        396.93419968906187,
+        363.89842383859883
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        393.3268737792969,
+        358.7937927246094
+      ],
+      "correlation": 0.7173376083374023,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.00335693359375,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 22.032319682316636,
+      "stereo_vertical_disparity_px": 1.75396728515625,
+      "frame": 87,
+      "heldout": false,
+      "prefit_association_uv": [
+        400.8711909794264,
+        366.7188345557362
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        397.77374267578125,
+        362.2037658691406
+      ],
+      "correlation": 0.7340936660766602,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0012645476963371038,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 23.340533800279086,
+      "stereo_vertical_disparity_px": 1.76031494140625,
+      "frame": 94,
+      "heldout": true,
+      "prefit_association_uv": [
+        409.54642391317213,
+        364.8077426968459
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        404.1377258300781,
+        360.4434509277344
+      ],
+      "correlation": 0.7225323915481567,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 5,
+      "tracking_forward_backward_px": 0.0012347368756309152,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 22.33665981126342,
+      "stereo_vertical_disparity_px": 1.76031494140625,
+      "frame": 94,
+      "heldout": true,
+      "prefit_association_uv": [
+        413.80238078198096,
+        367.78912135091554
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        386.0,
+        343.0
+      ],
+      "correlation": 0.7126492261886597,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 101,
+      "tracking_forward_backward_px": 0.0,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.0,
+      "stereo_vertical_disparity_px": 2.0,
+      "frame": 101,
+      "heldout": false,
+      "prefit_association_uv": [
+        410.11238750000524,
+        363.9124249946545
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        393.0,
+        345.0
+      ],
+      "correlation": 0.6977570056915283,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 101,
+      "tracking_forward_backward_px": 0.0,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.0,
+      "stereo_vertical_disparity_px": 2.0,
+      "frame": 101,
+      "heldout": false,
+      "prefit_association_uv": [
+        414.5846950628083,
+        366.9454469122786
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        353.0,
+        327.0
+      ],
+      "correlation": 0.7565562725067139,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.0,
+      "stereo_vertical_disparity_px": 0.0,
+      "frame": 121,
+      "heldout": false,
+      "prefit_association_uv": [
+        370.3918218229181,
+        334.3936158852792
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        360.0,
+        327.0
+      ],
+      "correlation": 0.7374875545501709,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.0,
+      "stereo_vertical_disparity_px": 0.0,
+      "frame": 121,
+      "heldout": false,
+      "prefit_association_uv": [
+        373.4137547725668,
+        337.5580961638195
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        356.7501525878906,
+        325.37432861328125
+      ],
+      "correlation": 0.7788244485855103,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.004447197541594505,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.45005070831942423,
+      "stereo_vertical_disparity_px": 0.037139892578125,
+      "frame": 128,
+      "heldout": true,
+      "prefit_association_uv": [
+        374.75789196288997,
+        332.967449372735
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        362.9119567871094,
+        325.4114685058594
+      ],
+      "correlation": 0.7541728019714355,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.002630891278386116,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.42078253130358256,
+      "stereo_vertical_disparity_px": 0.037139892578125,
+      "frame": 128,
+      "heldout": true,
+      "prefit_association_uv": [
+        377.03788739325535,
+        336.12591682617176
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        733.3555297851562,
+        361.0222473144531
+      ],
+      "correlation": 0.4911024272441864,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.0,
+      "stereo_vertical_disparity_px": 3.977752685546875,
+      "frame": 135,
+      "heldout": false,
+      "prefit_association_uv": [
+        726.3636734678327,
+        355.00655837787247
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        721.0,
+        365.0
+      ],
+      "correlation": 0.6961933970451355,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.0,
+      "stereo_vertical_disparity_px": 3.977752685546875,
+      "frame": 135,
+      "heldout": false,
+      "prefit_association_uv": [
+        713.7089935633824,
+        358.4866900239245
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        359.5952453613281,
+        326.1534118652344
+      ],
+      "correlation": 0.7739330530166626,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.009232311509549618,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.4328527670248743,
+      "stereo_vertical_disparity_px": 0.02105712890625,
+      "frame": 135,
+      "heldout": false,
+      "prefit_association_uv": [
+        378.008176488373,
+        333.5211066744221
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        364.47161865234375,
+        326.1323547363281
+      ],
+      "correlation": 0.7619197368621826,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0073486557230353355,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.4898386769815369,
+      "stereo_vertical_disparity_px": 0.02105712890625,
+      "frame": 135,
+      "heldout": false,
+      "prefit_association_uv": [
+        379.25334333611755,
+        336.5847137377986
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        717.3078002929688,
+        356.368408203125
+      ],
+      "correlation": 0.7942812442779541,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.006663742009550333,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.3587001915135435,
+      "stereo_vertical_disparity_px": 3.8939208984375,
+      "frame": 142,
+      "heldout": false,
+      "prefit_association_uv": [
+        709.6701469211166,
+        344.67938586956325
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        707.3278198242188,
+        360.2623291015625
+      ],
+      "correlation": 0.8860859274864197,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.01917458511888981,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.7215557817936882,
+      "stereo_vertical_disparity_px": 3.8939208984375,
+      "frame": 142,
+      "heldout": false,
+      "prefit_association_uv": [
+        699.3162261810476,
+        348.2735310691284
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        366.4317932128906,
+        328.3281555175781
+      ],
+      "correlation": 0.7823293209075928,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.007788203191012144,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.6561592768788121,
+      "stereo_vertical_disparity_px": 0.114166259765625,
+      "frame": 142,
+      "heldout": false,
+      "prefit_association_uv": [
+        386.7438095467686,
+        337.4613017825418
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        370.25384521484375,
+        328.2139892578125
+      ],
+      "correlation": 0.7561742067337036,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.009003151208162308,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.33200722214767286,
+      "stereo_vertical_disparity_px": 0.114166259765625,
+      "frame": 142,
+      "heldout": false,
+      "prefit_association_uv": [
+        387.0570056021936,
+        340.3983531581567
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        685.1844482421875,
+        362.878662109375
+      ],
+      "correlation": 0.8375326991081238,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.003052368061617017,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.1878155787217035,
+      "stereo_vertical_disparity_px": 3.443023681640625,
+      "frame": 149,
+      "heldout": true,
+      "prefit_association_uv": [
+        673.130202104434,
+        351.23507045516936
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        674.2115478515625,
+        366.3216857910156
+      ],
+      "correlation": 0.9180912971496582,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.005702787544578314,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.85155066702872,
+      "stereo_vertical_disparity_px": 3.443023681640625,
+      "frame": 149,
+      "heldout": true,
+      "prefit_association_uv": [
+        661.1571583933811,
+        354.5525641868771
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        373.7621154785156,
+        329.53704833984375
+      ],
+      "correlation": 0.8112215995788574,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.03425346314907074,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.5873754888406376,
+      "stereo_vertical_disparity_px": 0.143798828125,
+      "frame": 149,
+      "heldout": true,
+      "prefit_association_uv": [
+        395.0541639033812,
+        342.04067586887993
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        376.5259704589844,
+        329.39324951171875
+      ],
+      "correlation": 0.7638195157051086,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0181644968688488,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.615913292779527,
+      "stereo_vertical_disparity_px": 0.143798828125,
+      "frame": 149,
+      "heldout": true,
+      "prefit_association_uv": [
+        394.5916786543805,
+        344.8502833421835
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        667.075439453125,
+        359.9159851074219
+      ],
+      "correlation": 0.8196967840194702,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.002730428008362651,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.0771392408220284,
+      "stereo_vertical_disparity_px": 3.0794677734375,
+      "frame": 156,
+      "heldout": false,
+      "prefit_association_uv": [
+        653.6967600948857,
+        348.1005105101181
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        655.452392578125,
+        362.9954528808594
+      ],
+      "correlation": 0.8938897848129272,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.008024034090340137,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.1361339386286342,
+      "stereo_vertical_disparity_px": 3.0794677734375,
+      "frame": 156,
+      "heldout": false,
+      "prefit_association_uv": [
+        641.0256640840361,
+        351.27130912389913
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        378.10400390625,
+        331.2565002441406
+      ],
+      "correlation": 0.7815448641777039,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0047765616327524185,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.9319878621846204,
+      "stereo_vertical_disparity_px": 0.12017822265625,
+      "frame": 156,
+      "heldout": false,
+      "prefit_association_uv": [
+        399.6037623597863,
+        345.8716554005736
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        380.7003173828125,
+        331.1363220214844
+      ],
+      "correlation": 0.7521108984947205,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.013496534898877144,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.3292314756913987,
+      "stereo_vertical_disparity_px": 0.12017822265625,
+      "frame": 156,
+      "heldout": false,
+      "prefit_association_uv": [
+        398.9097961017046,
+        348.6009978101089
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        656.6281127929688,
+        356.4915771484375
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.00869295746088028,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.050872802734375,
+      "frame": 163,
+      "heldout": false,
+      "prefit_association_uv": [
+        643.2511285085029,
+        344.52616767859155
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        644.4215698242188,
+        359.5424499511719
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.007617666851729155,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.050872802734375,
+      "frame": 163,
+      "heldout": false,
+      "prefit_association_uv": [
+        630.0305567481577,
+        347.6132326591081
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        378.45416259765625,
+        330.5398254394531
+      ],
+      "correlation": 0.7806716561317444,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.018154136836528778,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.7676913278643522,
+      "stereo_vertical_disparity_px": 0.01873779296875,
+      "frame": 163,
+      "heldout": false,
+      "prefit_association_uv": [
+        400.26596299052346,
+        346.6921491715376
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        380.9524230957031,
+        330.5210876464844
+      ],
+      "correlation": 0.7456657290458679,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.011355040594935417,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.479368874983077,
+      "stereo_vertical_disparity_px": 0.01873779296875,
+      "frame": 163,
+      "heldout": false,
+      "prefit_association_uv": [
+        399.46268788439926,
+        349.39501062629887
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        653.8580322265625,
+        353.00360107421875
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.00732447300106287,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.051666259765625,
+      "frame": 170,
+      "heldout": false,
+      "prefit_association_uv": [
+        640.1763465437697,
+        340.9560292773615
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        641.675537109375,
+        356.0552673339844
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.004133301321417093,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.051666259765625,
+      "frame": 170,
+      "heldout": false,
+      "prefit_association_uv": [
+        626.9173804086329,
+        344.04343868698726
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        378.5692138671875,
+        334.0064697265625
+      ],
+      "correlation": 0.7859250903129578,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.010218285955488682,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.0947867384611225,
+      "stereo_vertical_disparity_px": 0.156890869140625,
+      "frame": 170,
+      "heldout": false,
+      "prefit_association_uv": [
+        399.5829251557221,
+        349.9469602275979
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        380.6973876953125,
+        333.8495788574219
+      ],
+      "correlation": 0.7507742643356323,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.012163695879280567,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.2606770419545312,
+      "stereo_vertical_disparity_px": 0.156890869140625,
+      "frame": 170,
+      "heldout": false,
+      "prefit_association_uv": [
+        398.36570205388415,
+        352.5144501752878
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        652.1549072265625,
+        350.2337646484375
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.002048318274319172,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.0059814453125,
+      "frame": 176,
+      "heldout": false,
+      "prefit_association_uv": [
+        638.7599107898897,
+        337.67939710477617
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        640.0833740234375,
+        353.23974609375
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0014903704868629575,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.0059814453125,
+      "frame": 176,
+      "heldout": false,
+      "prefit_association_uv": [
+        625.810147427362,
+        340.804332745281
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        381.7421569824219,
+        335.04217529296875
+      ],
+      "correlation": 0.7849313020706177,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0028052942361682653,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.2585498846716578,
+      "stereo_vertical_disparity_px": 0.242462158203125,
+      "frame": 176,
+      "heldout": false,
+      "prefit_association_uv": [
+        402.3694222013457,
+        351.15517343710593
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        382.25848388671875,
+        334.7997131347656
+      ],
+      "correlation": 0.7629293203353882,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0017397695919498801,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.215417840728052,
+      "stereo_vertical_disparity_px": 0.242462158203125,
+      "frame": 176,
+      "heldout": false,
+      "prefit_association_uv": [
+        399.9182373895476,
+        353.577597312891
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        653.081298828125,
+        348.06842041015625
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.007860513404011726,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.003509521484375,
+      "frame": 183,
+      "heldout": true,
+      "prefit_association_uv": [
+        640.2218029473038,
+        336.042979306432
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        641.4871215820312,
+        351.0719299316406
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.003446189919486642,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.003509521484375,
+      "frame": 183,
+      "heldout": true,
+      "prefit_association_uv": [
+        627.5997029741437,
+        339.20907071230243
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        382.4295959472656,
+        336.4696350097656
+      ],
+      "correlation": 0.8078247308731079,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.00877214502543211,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.7388625215649786,
+      "stereo_vertical_disparity_px": 0.20782470703125,
+      "frame": 183,
+      "heldout": true,
+      "prefit_association_uv": [
+        402.96229981151026,
+        352.2592405188768
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        381.9031982421875,
+        336.2618103027344
+      ],
+      "correlation": 0.7570040225982666,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0054047140292823315,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.7445096436344563,
+      "stereo_vertical_disparity_px": 0.20782470703125,
+      "frame": 183,
+      "heldout": true,
+      "prefit_association_uv": [
+        399.6853595360604,
+        354.56314802233896
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        653.6959838867188,
+        346.7148742675781
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.00546060036867857,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 2.94647216796875,
+      "frame": 190,
+      "heldout": false,
+      "prefit_association_uv": [
+        644.4077630055641,
+        338.10340586204046
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        642.0902709960938,
+        349.6613464355469
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.006181824952363968,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 2.94647216796875,
+      "frame": 190,
+      "heldout": false,
+      "prefit_association_uv": [
+        632.0067892698703,
+        341.2958910738866
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        382.87371826171875,
+        339.2214660644531
+      ],
+      "correlation": 0.7951637506484985,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.012127810157835484,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.1478491937925426,
+      "stereo_vertical_disparity_px": 0.3062744140625,
+      "frame": 190,
+      "heldout": false,
+      "prefit_association_uv": [
+        403.64828650216816,
+        352.79742245539813
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        381.90753173828125,
+        338.9151916503906
+      ],
+      "correlation": 0.761396586894989,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.005637085065245628,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.086857981278614,
+      "stereo_vertical_disparity_px": 0.3062744140625,
+      "frame": 190,
+      "heldout": false,
+      "prefit_association_uv": [
+        400.2733698646076,
+        355.0825354744726
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        656.1139526367188,
+        348.36724853515625
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.006362677086144686,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 2.917816162109375,
+      "frame": 197,
+      "heldout": false,
+      "prefit_association_uv": [
+        649.6892421576064,
+        340.6238602753101
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        644.2846069335938,
+        351.2850646972656
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0073812175542116165,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 2.917816162109375,
+      "frame": 197,
+      "heldout": false,
+      "prefit_association_uv": [
+        637.3887253679985,
+        343.83639474884427
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        384.8919677734375,
+        340.525634765625
+      ],
+      "correlation": 0.7973859310150146,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.013006648048758507,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.2263879165805165,
+      "stereo_vertical_disparity_px": 0.34698486328125,
+      "frame": 197,
+      "heldout": false,
+      "prefit_association_uv": [
+        403.35249657015544,
+        352.9861289608461
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        383.64794921875,
+        340.17864990234375
+      ],
+      "correlation": 0.7560344338417053,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.009984799660742283,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.8936194578782776,
+      "stereo_vertical_disparity_px": 0.34698486328125,
+      "frame": 197,
+      "heldout": false,
+      "prefit_association_uv": [
+        399.80829480545003,
+        355.24345641688075
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        677.6393432617188,
+        347.6523742675781
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.008910766802728176,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.17620849609375,
+      "frame": 204,
+      "heldout": true,
+      "prefit_association_uv": [
+        668.8905464989722,
+        332.29276088131564
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        665.8712158203125,
+        350.8285827636719
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.011984863318502903,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.17620849609375,
+      "frame": 204,
+      "heldout": true,
+      "prefit_association_uv": [
+        656.1270064095132,
+        335.54391987547604
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        384.54931640625,
+        333.2602844238281
+      ],
+      "correlation": 0.7910242676734924,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.018579892814159393,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.4738489985283276,
+      "stereo_vertical_disparity_px": 0.2701873779296875,
+      "frame": 204,
+      "heldout": true,
+      "prefit_association_uv": [
+        403.629492054332,
+        344.9903960580715
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        383.2819366455078,
+        332.99009704589844
+      ],
+      "correlation": 0.752101719379425,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.07179562002420425,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.0295807835576256,
+      "stereo_vertical_disparity_px": 0.2701873779296875,
+      "frame": 204,
+      "heldout": true,
+      "prefit_association_uv": [
+        399.7371929149717,
+        347.4262020152343
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        713.259521484375,
+        329.53729248046875
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.019289933145046234,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.287933349609375,
+      "frame": 211,
+      "heldout": false,
+      "prefit_association_uv": [
+        707.8376357538056,
+        316.2894966009039
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        700.6143798828125,
+        332.8252258300781
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.011928742751479149,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.287933349609375,
+      "frame": 211,
+      "heldout": false,
+      "prefit_association_uv": [
+        693.8617150487772,
+        319.4921802124392
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        374.6539611816406,
+        334.19732666015625
+      ],
+      "correlation": 0.8099006414413452,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0187880489975214,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.39834742953855334,
+      "stereo_vertical_disparity_px": 0.4272613525390625,
+      "frame": 211,
+      "heldout": false,
+      "prefit_association_uv": [
+        391.5922758448044,
+        343.69997085521436
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        373.2323455810547,
+        333.7700653076172
+      ],
+      "correlation": 0.7623377442359924,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.009703726507723331,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.8013509029678846,
+      "stereo_vertical_disparity_px": 0.4272613525390625,
+      "frame": 211,
+      "heldout": false,
+      "prefit_association_uv": [
+        387.6482238302073,
+        346.05382568826604
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        761.66650390625,
+        310.7110595703125
+      ],
+      "correlation": 0.7720916867256165,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.009951725602149963,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 3.7704363927076803,
+      "stereo_vertical_disparity_px": 3.38787841796875,
+      "frame": 218,
+      "heldout": false,
+      "prefit_association_uv": [
+        764.5146780105056,
+        301.750643176058
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        749.1151123046875,
+        314.09893798828125
+      ],
+      "correlation": 0.8708515763282776,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.008101827464997768,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 7.099871224476758,
+      "stereo_vertical_disparity_px": 3.38787841796875,
+      "frame": 218,
+      "heldout": false,
+      "prefit_association_uv": [
+        750.2445687355943,
+        304.81716003000685
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        337.0513610839844,
+        321.44384765625
+      ],
+      "correlation": 0.8138098120689392,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.01519088912755251,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.44680947047558,
+      "stereo_vertical_disparity_px": 0.0779876708984375,
+      "frame": 218,
+      "heldout": false,
+      "prefit_association_uv": [
+        353.08048874475634,
+        328.2674940184436
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        334.2119598388672,
+        321.52183532714844
+      ],
+      "correlation": 0.7707154154777527,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0034213729668408632,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.9451557565916561,
+      "stereo_vertical_disparity_px": 0.0779876708984375,
+      "frame": 218,
+      "heldout": false,
+      "prefit_association_uv": [
+        347.83904739585347,
+        330.62459336401383
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        800.5393676757812,
+        300.4627685546875
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.011087796650826931,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.614776611328125,
+      "frame": 225,
+      "heldout": false,
+      "prefit_association_uv": [
+        811.1348856826047,
+        290.01473699726574
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        788.1514282226562,
+        304.0775451660156
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.023367399349808693,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.614776611328125,
+      "frame": 225,
+      "heldout": false,
+      "prefit_association_uv": [
+        797.7059636960066,
+        292.88270378928684
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        265.30615234375,
+        312.78173828125
+      ],
+      "correlation": 0.8161873817443848,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.06585244089365005,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.8395498781819472,
+      "stereo_vertical_disparity_px": 0.0868377685546875,
+      "frame": 225,
+      "heldout": false,
+      "prefit_association_uv": [
+        280.05228348629305,
+        314.67793175013674
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        260.12147521972656,
+        312.6949005126953
+      ],
+      "correlation": 0.7822460532188416,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.1148105040192604,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 0.7054381273732125,
+      "stereo_vertical_disparity_px": 0.0868377685546875,
+      "frame": 225,
+      "heldout": false,
+      "prefit_association_uv": [
+        272.93565212387784,
+        316.780927151994
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        813.2421264648438,
+        307.98773193359375
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.01234755665063858,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.77789306640625,
+      "frame": 231,
+      "heldout": false,
+      "prefit_association_uv": [
+        824.998121250119,
+        298.0508071384384
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        799.9138793945312,
+        311.765625
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.023267926648259163,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 3.77789306640625,
+      "frame": 231,
+      "heldout": false,
+      "prefit_association_uv": [
+        811.3329228671599,
+        300.9839601256421
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        215.7075653076172,
+        305.36395263671875
+      ],
+      "correlation": 0.8376884460449219,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.04023035615682602,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 30.509322823222913,
+      "stereo_vertical_disparity_px": 0.2316131591796875,
+      "frame": 231,
+      "heldout": false,
+      "prefit_association_uv": [
+        232.89663199562997,
+        310.3735529045784
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        208.90386962890625,
+        305.59556579589844
+      ],
+      "correlation": 0.8674672842025757,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.041808146983385086,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 28.32907869443086,
+      "stereo_vertical_disparity_px": 0.2316131591796875,
+      "frame": 231,
+      "heldout": false,
+      "prefit_association_uv": [
+        224.83642024937902,
+        312.18718580305745
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        818.4700927734375,
+        327.1730041503906
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.00027295752079226077,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 6.500823974609375,
+      "frame": 238,
+      "heldout": true,
+      "prefit_association_uv": [
+        827.2230109815895,
+        323.9787165686246
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        801.1661987304688,
+        333.673828125
+      ],
+      "correlation": null,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.009522462263703346,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": null,
+      "stereo_vertical_disparity_px": 6.500823974609375,
+      "frame": 238,
+      "heldout": true,
+      "prefit_association_uv": [
+        809.7468715649275,
+        327.01100405498437
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        205.782470703125,
+        300.72998046875
+      ],
+      "correlation": 0.9227954149246216,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0003993607242591679,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 31.14028576476146,
+      "stereo_vertical_disparity_px": 2.8455657958984375,
+      "frame": 238,
+      "heldout": true,
+      "prefit_association_uv": [
+        226.38522602866385,
+        317.0677467437998
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        198.51023864746094,
+        303.57554626464844
+      ],
+      "correlation": 0.9573938846588135,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0012744514970108867,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 29.716977783936457,
+      "stereo_vertical_disparity_px": 2.8455657958984375,
+      "frame": 238,
+      "heldout": true,
+      "prefit_association_uv": [
+        216.5006556941229,
+        318.26040326988164
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        808.359130859375,
+        345.2646484375
+      ],
+      "correlation": 0.8095565438270569,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0037357553374022245,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.7756043715690275,
+      "stereo_vertical_disparity_px": 6.693603515625,
+      "frame": 245,
+      "heldout": false,
+      "prefit_association_uv": [
+        809.995329081684,
+        342.8466756244864
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        785.6290283203125,
+        351.958251953125
+      ],
+      "correlation": 0.9360247254371643,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.01467536948621273,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.9930807056032733,
+      "stereo_vertical_disparity_px": 6.693603515625,
+      "frame": 245,
+      "heldout": false,
+      "prefit_association_uv": [
+        788.0690217674786,
+        345.6893670637546
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        208.2975311279297,
+        297.03778076171875
+      ],
+      "correlation": 0.9610319137573242,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.029439862817525864,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 31.642086941686237,
+      "stereo_vertical_disparity_px": 1.4841156005859375,
+      "frame": 245,
+      "heldout": false,
+      "prefit_association_uv": [
+        225.29902898547036,
+        312.1878366063202
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        195.95982360839844,
+        295.5536651611328
+      ],
+      "correlation": 0.962195873260498,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.003895058063790202,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 30.043872929609396,
+      "stereo_vertical_disparity_px": 1.4841156005859375,
+      "frame": 245,
+      "heldout": false,
+      "prefit_association_uv": [
+        214.3066343388312,
+        313.54374637006595
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        797.2589111328125,
+        357.518310546875
+      ],
+      "correlation": 0.9605964422225952,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.001221084501594305,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.62509061168774,
+      "stereo_vertical_disparity_px": 4.210693359375,
+      "frame": 252,
+      "heldout": false,
+      "prefit_association_uv": [
+        797.9961057151518,
+        353.5291722828502
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        774.8963012695312,
+        361.72900390625
+      ],
+      "correlation": 0.9630148410797119,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.003612048923969269,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.7321108320568257,
+      "stereo_vertical_disparity_px": 4.210693359375,
+      "frame": 252,
+      "heldout": false,
+      "prefit_association_uv": [
+        773.7959583722808,
+        356.1944658620406
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        186.8141632080078,
+        281.4045104980469
+      ],
+      "correlation": 0.9785301089286804,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0444532074034214,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 31.68514154258848,
+      "stereo_vertical_disparity_px": 1.1184844970703125,
+      "frame": 252,
+      "heldout": false,
+      "prefit_association_uv": [
+        204.85077575857179,
+        300.7930637936314
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        177.2852783203125,
+        282.5229949951172
+      ],
+      "correlation": 0.9811289310455322,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.007924308069050312,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 31.979663876056968,
+      "stereo_vertical_disparity_px": 1.1184844970703125,
+      "frame": 252,
+      "heldout": false,
+      "prefit_association_uv": [
+        194.27070444890032,
+        302.6812641097566
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        796.1500854492188,
+        357.8624572753906
+      ],
+      "correlation": 0.9672450423240662,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0011680700117722154,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.9859699256801657,
+      "stereo_vertical_disparity_px": 3.945526123046875,
+      "frame": 259,
+      "heldout": true,
+      "prefit_association_uv": [
+        797.8073841835057,
+        353.7911305878514
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        773.655029296875,
+        361.8079833984375
+      ],
+      "correlation": 0.9760041832923889,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0030198527965694666,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.8406001073128755,
+      "stereo_vertical_disparity_px": 3.945526123046875,
+      "frame": 259,
+      "heldout": true,
+      "prefit_association_uv": [
+        773.3117140288374,
+        356.4300045562784
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        179.7127685546875,
+        279.8646240234375
+      ],
+      "correlation": 0.9894359707832336,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0016717951511964202,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 31.4117104774749,
+      "stereo_vertical_disparity_px": 2.2920684814453125,
+      "frame": 259,
+      "heldout": true,
+      "prefit_association_uv": [
+        197.11419004892213,
+        300.86594342200766
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        168.5977020263672,
+        282.1566925048828
+      ],
+      "correlation": 0.9781535267829895,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.00677332142367959,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 32.040001105787724,
+      "stereo_vertical_disparity_px": 2.2920684814453125,
+      "frame": 259,
+      "heldout": true,
+      "prefit_association_uv": [
+        186.28862471685548,
+        302.66044865469104
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        796.5479736328125,
+        356.98907470703125
+      ],
+      "correlation": 0.9760260581970215,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.007435525301843882,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 3.0230606081993594,
+      "stereo_vertical_disparity_px": 4.265838623046875,
+      "frame": 266,
+      "heldout": false,
+      "prefit_association_uv": [
+        798.3808171615967,
+        353.0330531920764
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        773.9813232421875,
+        361.2549133300781
+      ],
+      "correlation": 0.9704012274742126,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0014626168413087726,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.47433555991733,
+      "stereo_vertical_disparity_px": 4.265838623046875,
+      "frame": 266,
+      "heldout": false,
+      "prefit_association_uv": [
+        773.7789022440525,
+        355.66199336501677
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        178.84803771972656,
+        279.6203918457031
+      ],
+      "correlation": 0.9851810932159424,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.010084893554449081,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 32.207382854170596,
+      "stereo_vertical_disparity_px": 1.4203643798828125,
+      "frame": 266,
+      "heldout": false,
+      "prefit_association_uv": [
+        197.1863878031465,
+        299.7378779999485
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        168.614990234375,
+        281.04075622558594
+      ],
+      "correlation": 0.9814404845237732,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0010362503817304969,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 30.703020988782153,
+      "stereo_vertical_disparity_px": 1.4203643798828125,
+      "frame": 266,
+      "heldout": false,
+      "prefit_association_uv": [
+        186.371507942861,
+        301.6050109163827
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        796.4302978515625,
+        356.35345458984375
+      ],
+      "correlation": 0.851844847202301,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.0003774815995711833,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.774157723673205,
+      "stereo_vertical_disparity_px": 4.243988037109375,
+      "frame": 273,
+      "heldout": false,
+      "prefit_association_uv": [
+        798.3840732569018,
+        352.27103251408175
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        773.7596435546875,
+        360.5974426269531
+      ],
+      "correlation": 0.9656685590744019,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.00013647876039613038,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.6154238351622034,
+      "stereo_vertical_disparity_px": 4.243988037109375,
+      "frame": 273,
+      "heldout": false,
+      "prefit_association_uv": [
+        773.820235402051,
+        354.90108604433055
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        178.8958740234375,
+        279.6475830078125
+      ],
+      "correlation": 0.9866970181465149,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0019445829093456268,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 32.15474715442111,
+      "stereo_vertical_disparity_px": 1.1853790283203125,
+      "frame": 273,
+      "heldout": false,
+      "prefit_association_uv": [
+        197.25893497041622,
+        299.90192462043456
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        168.6033477783203,
+        280.8329620361328
+      ],
+      "correlation": 0.9842769503593445,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.000308589922497049,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 30.866406818277607,
+      "stereo_vertical_disparity_px": 1.1853790283203125,
+      "frame": 273,
+      "heldout": false,
+      "prefit_association_uv": [
+        186.4121294636858,
+        301.7565389764647
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm1",
+      "uv": [
+        796.9845581054688,
+        356.2328186035156
+      ],
+      "correlation": 0.8686791658401489,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.005462561268359423,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 1.8904003648270151,
+      "stereo_vertical_disparity_px": 4.2767333984375,
+      "frame": 280,
+      "heldout": false,
+      "prefit_association_uv": [
+        799.4882580885356,
+        352.1987615079286
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm1",
+      "uv": [
+        774.4918212890625,
+        360.5095520019531
+      ],
+      "correlation": 0.969664990901947,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 135,
+      "tracking_forward_backward_px": 0.004159468691796064,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 2.5604876201139963,
+      "stereo_vertical_disparity_px": 4.2767333984375,
+      "frame": 280,
+      "heldout": false,
+      "prefit_association_uv": [
+        775.0473634885659,
+        354.843002506828
+      ]
+    },
+    {
+      "camera": "left",
+      "arm": "psm2",
+      "uv": [
+        179.3388214111328,
+        279.6899108886719
+      ],
+      "correlation": 0.9792296290397644,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.006650101859122515,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 32.50983342643562,
+      "stereo_vertical_disparity_px": 1.3177337646484375,
+      "frame": 280,
+      "heldout": false,
+      "prefit_association_uv": [
+        197.69670480853964,
+        299.4135258969247
+      ]
+    },
+    {
+      "camera": "right",
+      "arm": "psm2",
+      "uv": [
+        168.88705444335938,
+        281.0076446533203
+      ],
+      "correlation": 0.9781004786491394,
+      "association": "source-video KLT cap track with stereo gate",
+      "seed_frame": 121,
+      "tracking_forward_backward_px": 0.0020199317950755358,
+      "tracked_points": 9,
+      "independent_proposal_disagreement_px": 31.959186240563454,
+      "stereo_vertical_disparity_px": 1.3177337646484375,
+      "frame": 280,
+      "heldout": false,
+      "prefit_association_uv": [
+        186.78198565529985,
+        301.2966585720023
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 5,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.53328719416976,
+        220.55787515231552
+      ],
+      "uv": [
+        329.5,
+        223.0
+      ],
+      "confidence": 0.8410640358924866,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 11,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.5488561518485,
+        220.43088661866477
+      ],
+      "uv": [
+        329.5,
+        223.0
+      ],
+      "confidence": 0.876048356294632,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 18,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.4762577069035,
+        221.02825094615716
+      ],
+      "uv": [
+        329.5,
+        223.0
+      ],
+      "confidence": 0.9140109717845917,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 25,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.4544216965834,
+        221.21249685198256
+      ],
+      "uv": [
+        329.5,
+        223.0
+      ],
+      "confidence": 0.9197896420955658,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 32,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.4867819854396,
+        220.9381570855407
+      ],
+      "uv": [
+        329.5,
+        223.0
+      ],
+      "confidence": 0.9198783338069916,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 39,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.34654244954163,
+        222.1554173837227
+      ],
+      "uv": [
+        329.5,
+        223.5
+      ],
+      "confidence": 0.886046826839447,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 46,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.26001522522216,
+        222.94384487250636
+      ],
+      "uv": [
+        329.5,
+        224.0
+      ],
+      "confidence": 0.8634375929832458,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 53,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.22099798520816,
+        223.30749515982774
+      ],
+      "uv": [
+        329.0,
+        224.0
+      ],
+      "confidence": 0.8381851017475128,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 60,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.1216474127434,
+        224.2547483390938
+      ],
+      "uv": [
+        329.0,
+        225.0
+      ],
+      "confidence": 0.7838766276836395,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 66,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.03464972601944,
+        225.1063440031755
+      ],
+      "uv": [
+        329.0,
+        225.5
+      ],
+      "confidence": 0.7472950220108032,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 73,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.0036030101412,
+        225.41464870580074
+      ],
+      "uv": [
+        329.0,
+        225.5
+      ],
+      "confidence": 0.7334653437137604,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 80,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        327.93187014892453,
+        226.1358358714906
+      ],
+      "uv": [
+        329.0,
+        226.0
+      ],
+      "confidence": 0.6862869262695312,
+      "consensus_count": 6,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 170,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.38766165756863,
+        221.79045702377934
+      ],
+      "uv": [
+        328.0,
+        224.0
+      ],
+      "confidence": 0.6537932753562927,
+      "consensus_count": 7,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 176,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3878627863461,
+        221.78890205615417
+      ],
+      "uv": [
+        328.0,
+        224.0
+      ],
+      "confidence": 0.6642768681049347,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 183,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.40373085669177,
+        221.64990506886375
+      ],
+      "uv": [
+        328.5,
+        224.0
+      ],
+      "confidence": 0.6682801842689514,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 190,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.40373123110794,
+        221.64990631039456
+      ],
+      "uv": [
+        328.5,
+        224.0
+      ],
+      "confidence": 0.6825549602508545,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 197,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.4130520020214,
+        221.56862707061958
+      ],
+      "uv": [
+        328.5,
+        224.0
+      ],
+      "confidence": 0.6745907068252563,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 204,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.4977321840531,
+        220.84668992809017
+      ],
+      "uv": [
+        328.5,
+        224.0
+      ],
+      "confidence": 0.666386753320694,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 225,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.6177078893506,
+        219.88220084742483
+      ],
+      "uv": [
+        328.5,
+        223.0
+      ],
+      "confidence": 0.7897471189498901,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 231,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.60383121319165,
+        219.9892545325849
+      ],
+      "uv": [
+        328.5,
+        223.0
+      ],
+      "confidence": 0.8739742934703827,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 238,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.5763697183533,
+        220.2050280534092
+      ],
+      "uv": [
+        329.0,
+        223.0
+      ],
+      "confidence": 0.9247497320175171,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 245,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.5657767872543,
+        220.289540965904
+      ],
+      "uv": [
+        329.0,
+        223.0
+      ],
+      "confidence": 0.9270826578140259,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 252,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.6618216068824,
+        219.55181796088195
+      ],
+      "uv": [
+        329.0,
+        222.5
+      ],
+      "confidence": 0.8946956694126129,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 259,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.67279074807874,
+        219.47168216708823
+      ],
+      "uv": [
+        329.0,
+        222.5
+      ],
+      "confidence": 0.8894738852977753,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 266,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.6727096897867,
+        219.47230808528585
+      ],
+      "uv": [
+        329.0,
+        222.0
+      ],
+      "confidence": 0.8856581449508667,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 273,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.6727096897867,
+        219.47230808528582
+      ],
+      "uv": [
+        329.0,
+        222.5
+      ],
+      "confidence": 0.8855934739112854,
+      "consensus_count": 8,
+      "accepted": true
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 280,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.6767691100393,
+        219.44278491594926
+      ],
+      "uv": [
+        329.0,
+        222.0
+      ],
+      "confidence": 0.8863824307918549,
+      "consensus_count": 8,
+      "accepted": true
+    }
+  ],
+  "fitted_wrist_lateral_offsets": [
+    "psm2"
+  ],
+  "notes": [
+    "All associations are frozen before optimization; no fitted geometry moves detection windows.",
+    "Stereo caps combine image templates, pin-rim evidence and cross-eye consistency; ambiguous pairs are rejected.",
+    "Frames5/36/38 were inspected during detector development; reservations are stage-wise, not pristine blind tests.",
+    "Reviewed native stereo seeds select the demonstrated cut independently of CAD projection."
+  ]
+}

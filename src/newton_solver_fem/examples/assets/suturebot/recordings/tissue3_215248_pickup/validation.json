@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "portable_export_passed",
+  "host_paths_present": false,
+  "runtime_assets_contained_in_bundle": true,
+  "numerical_payloads_byte_identical": true,
+  "additional_json_numerical_values_unchanged": true,
+  "source_preparation_outputs_modified": false,
+  "image_count": 1128,
+  "camera_ray_file_count": 8,
+  "usd_layers": [
+    "phantom.usdc",
+    "rig.usdc",
+    "scene.usda"
+  ],
+  "frame_count": 282,
+  "supported_frames": [
+    4,
+    281
+  ],
+  "additional_assets": [
+    "alignment_screening.json",
+    "audit/coordinate_validation.json",
+    "audit/pad_placement_preservation.json",
+    "audit/pickup_metadata_repair.json",
+    "audit/pickup_repeatability.json",
+    "audit/pickup_visual_review.json",
+    "audit/reserved_four_view_review",
+    "automatic_observations.json",
+    "automatic_slit_traces.json",
+    "automatic_wrist_caps.json",
+    "calibration_before_wrist.json",
+    "fit_cap_observations.json",
+    "frozen_pad_fit.json",
+    "frozen_wrist_fit.json",
+    "pad_placement.json",
+    "pad_placement_correction.json",
+    "pickup_readiness.json",
+    "preparation_validation.json",
+    "psm1_mount.json",
+    "psm2_mount.json",
+    "region_identification.json",
+    "region_review.json",
+    "reviewed_slit_seed.json",
+    "reviewed_slit_traces.json",
+    "reviewed_wrist_observations.json",
+    "reviewed_wrist_wound.json",
+    "slit_review_validation.json",
+    "source_phases.json",
+    "wrist_export_validation.json"
+  ],
+  "newton_import": {
+    "bodies": 14,
+    "shapes": 27,
+    "device": "cpu"
+  },
+  "alignment_precision_validated": false,
+  "playback_scope": {
+    "frames_inclusive": [
+      4,
+      281
+    ],
+    "source_phase_report": "source_phases.json",
+    "screening_report": "alignment_screening.json",
+    "visual_review_report": "audit/pickup_visual_review.json",
+    "source_alignment_accepted": false,
+    "full_source_arrays_retained": true,
+    "excluded_later_source_frames": null
+  }
+}

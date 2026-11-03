@@ -1,0 +1,880 @@
+{
+  "schema_version": 1,
+  "sample_id": "tissue3_222119_approach",
+  "region_id": 1,
+  "source_episode": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery",
+  "scene_usd": "scene.usda",
+  "motion_npz": "motion.npz",
+  "camera_poses_npz": "camera_poses.npz",
+  "body_paths": [
+    "/SutureBotReplay/PSM1/roll",
+    "/SutureBotReplay/PSM1/pitch",
+    "/SutureBotReplay/PSM1/yaw",
+    "/SutureBotReplay/PSM1/jaw1",
+    "/SutureBotReplay/PSM1/jaw2",
+    "/SutureBotReplay/PSM2/roll",
+    "/SutureBotReplay/PSM2/pitch",
+    "/SutureBotReplay/PSM2/yaw",
+    "/SutureBotReplay/PSM2/jaw1",
+    "/SutureBotReplay/PSM2/jaw2",
+    "/SutureBotReplay/Cameras/left",
+    "/SutureBotReplay/Cameras/right",
+    "/SutureBotReplay/Cameras/psm1",
+    "/SutureBotReplay/Cameras/psm2"
+  ],
+  "camera_order": [
+    "left",
+    "right",
+    "psm1",
+    "psm2"
+  ],
+  "cameras": {
+    "left": {
+      "K": [
+        [
+          1091.924931894018,
+          0.0,
+          361.3582534598752
+        ],
+        [
+          0.0,
+          1088.0859043011606,
+          110.61164417597004
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "image_size": [
+        960,
+        540
+      ],
+      "lens_model": "pinhole_radial",
+      "status": "inherited_lens_prior_with_conditional_constant_scene_and_lateral_mount_registration",
+      "name": "left",
+      "overlay_size": [
+        240,
+        135
+      ],
+      "frame_path_pattern": "images/left/{frame:06d}.jpg",
+      "ray_directions_cv_path": "cameras/left/ray_directions_cv.npy",
+      "ray_valid_path": "cameras/left/ray_valid.npy",
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.6077746776921858e-13,
+      "resize": "cv2.INTER_LINEAR; native=(resized+0.5)*native_size/resized_size-0.5",
+      "frame_clock": "frame index maps directly to same original CSV row; no resampling",
+      "T_world_from_camera_cv": [
+        [
+          0.9973721507226733,
+          0.05010325804391832,
+          -0.052330263674223276,
+          0.03584843437343403
+        ],
+        [
+          0.06895137673873811,
+          -0.8781633548390029,
+          0.4733654295190345,
+          -0.06188884655198553
+        ],
+        [
+          -0.022237369643503067,
+          -0.47572974024260034,
+          -0.8793103625228387,
+          0.05865393550972621
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "intrinsics_fit": "fx, fy, cx and cy optimized; distortion fixed to the prior estimate",
+      "frame_count": 575,
+      "fps": 30.0,
+      "source_video": {
+        "dataset_file": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/left.mp4",
+        "sha256": "39fd48d5cd1c8a48e347ae79b503f286e0050284845fe4504392d14bda88a46e",
+        "included": false
+      }
+    },
+    "right": {
+      "K": [
+        [
+          1158.7074770493016,
+          0.0,
+          290.8334165030721
+        ],
+        [
+          0.0,
+          1149.4771647270445,
+          133.3152778800706
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "image_size": [
+        960,
+        540
+      ],
+      "lens_model": "pinhole_radial",
+      "status": "inherited_lens_prior_with_conditional_constant_scene_and_lateral_mount_registration",
+      "name": "right",
+      "overlay_size": [
+        240,
+        135
+      ],
+      "frame_path_pattern": "images/right/{frame:06d}.jpg",
+      "ray_directions_cv_path": "cameras/right/ray_directions_cv.npy",
+      "ray_valid_path": "cameras/right/ray_valid.npy",
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.6077746776921858e-13,
+      "resize": "cv2.INTER_LINEAR; native=(resized+0.5)*native_size/resized_size-0.5",
+      "frame_clock": "frame index maps directly to same original CSV row; no resampling",
+      "T_world_from_camera_cv": [
+        [
+          0.9793215452974515,
+          0.031200276291197208,
+          -0.1998896037205682,
+          0.04212171780564425
+        ],
+        [
+          0.11875539810107402,
+          -0.8885582238635289,
+          0.4431268872753578,
+          -0.06333838516149992
+        ],
+        [
+          -0.16378786993568317,
+          -0.4577016774754548,
+          -0.8738894141126133,
+          0.06269512384698611
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "intrinsics_fit": "fx, fy, cx and cy optimized; distortion fixed to the prior estimate",
+      "frame_count": 575,
+      "fps": 30.0,
+      "source_video": {
+        "dataset_file": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/right.mp4",
+        "sha256": "557cd700c064e78bd9e6a909921ae1dcd071c9c636887b53f39f62c4767eecb4",
+        "included": false
+      }
+    },
+    "psm1": {
+      "camera": "psm1",
+      "lens_model": "pinhole_radial",
+      "K": [
+        [
+          673.6567072998877,
+          0.0,
+          327.5481043940019
+        ],
+        [
+          0.0,
+          709.6478245274408,
+          233.07022855222212
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.20837911967457187,
+        -0.01590559054133612,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "T_roll_camera_cv": [
+        [
+          0.20167463168577238,
+          0.979452573090912,
+          0.0,
+          -0.008585620441091546
+        ],
+        [
+          -0.979452573090912,
+          0.20167463168577238,
+          -0.0,
+          -0.0027847450373238787
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          -0.054593711624028464
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "image_size": [
+        640,
+        480
+      ],
+      "time_offset_seconds": -0.13244100898522693,
+      "name": "psm1",
+      "overlay_size": [
+        240,
+        180
+      ],
+      "frame_path_pattern": "images/psm1/{frame:06d}.jpg",
+      "ray_directions_cv_path": "cameras/psm1/ray_directions_cv.npy",
+      "ray_valid_path": "cameras/psm1/ray_valid.npy",
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.9498702569153643e-13,
+      "resize": "cv2.INTER_LINEAR; native=(resized+0.5)*native_size/resized_size-0.5",
+      "frame_clock": "frame index maps directly to same original CSV row; no resampling",
+      "status": "conditional_joint_head_shaft_needle_incision_estimate",
+      "intrinsics_fit": "Joint fit of fx, fy, cx, cy, radial k1/k2 and parallel-axis mount; fixed source motion and source reservation roles.",
+      "frame_count": 575,
+      "fps": 30.0,
+      "source_video": {
+        "dataset_file": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/psm1.mp4",
+        "sha256": "4936db40978b4f39e56039e27e86d519e4aa132d47370e7d2755d03cbb607528",
+        "included": false
+      }
+    },
+    "psm2": {
+      "camera": "psm2",
+      "lens_model": "pinhole_radial",
+      "K": [
+        [
+          729.1333457143642,
+          0.0,
+          316.6554055120377
+        ],
+        [
+          0.0,
+          742.5783509776517,
+          268.030032653222
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.26794140198188887,
+        0.08371372751094454,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "T_roll_camera_cv": [
+        [
+          -0.07385599185386121,
+          0.9972689168259895,
+          0.0,
+          -0.006656108544868168
+        ],
+        [
+          -0.9972689168259895,
+          -0.07385599185386121,
+          -0.0,
+          0.0006271255528391301
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          -0.0431730410107335
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "image_size": [
+        640,
+        480
+      ],
+      "time_offset_seconds": -0.13244100898522693,
+      "name": "psm2",
+      "overlay_size": [
+        240,
+        180
+      ],
+      "frame_path_pattern": "images/psm2/{frame:06d}.jpg",
+      "ray_directions_cv_path": "cameras/psm2/ray_directions_cv.npy",
+      "ray_valid_path": "cameras/psm2/ray_valid.npy",
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.0211149310470866e-10,
+      "resize": "cv2.INTER_LINEAR; native=(resized+0.5)*native_size/resized_size-0.5",
+      "frame_clock": "frame index maps directly to same original CSV row; no resampling",
+      "status": "inherited_lens_prior_with_conditional_constant_scene_and_lateral_mount_registration",
+      "intrinsics_fit": "fx, fy, cx and cy optimized; distortion fixed to the prior estimate",
+      "frame_count": 575,
+      "fps": 30.0,
+      "source_video": {
+        "dataset_file": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/psm2.mp4",
+        "sha256": "333b1634123eb907cf69bacfd7f394a556cc3bc3a3fd03f1f01d691963ca0514",
+        "included": false
+      }
+    }
+  },
+  "timing": {
+    "frame_count": 575,
+    "nominal_fps": 30.0,
+    "duration_s": 19.126664388000002,
+    "first_valid_frame": 5,
+    "last_valid_frame": 574,
+    "timestamps": "int64 source nanoseconds; interpolate using nonuniform time_s, not index/fps"
+  },
+  "alignment": {
+    "status": "partial_joint_image_reviewed_approach_estimate",
+    "reportpath": "calibration.json",
+    "tool_registration_report": "alignment.json",
+    "absolute_metric_accuracy_validated": false,
+    "automatic_fit_report": "automatic_fit_metrics.json",
+    "wrist_fit_report": "joint_wrist_alignment.json",
+    "validation_status": "partial_image_reviewed_approach_with_geometry_limits",
+    "pad_placement_report": "pad_placement.json",
+    "prior_metrics_scope": "Original frozen/automatic reports remain predecessor evidence; joint_pad_alignment.json and joint_wrist_alignment.json describe the current geometry.",
+    "accepted": false,
+    "numeric_screen_passed": true,
+    "screening_report": "alignment_screening.json",
+    "visual_review_report": "approach_visual_review.json",
+    "readiness_report": "approach_readiness.json",
+    "joint_refinement_report": "joint_refinement.json"
+  },
+  "conventions": {
+    "world": "fixed calibrated scene world, metres, Z up; phantom has a separate constant rigid placement",
+    "body_poses": "xyz, quaternion xyzw",
+    "transforms": "column vectors; world_from_local",
+    "camera": "CV: +X right, +Y down, +Z forward"
+  },
+  "motion": {
+    "mode": "measured kinematic poses; no physical solver or contacts",
+    "pin_offset_m": 0.0,
+    "tool_time_offset_seconds": -0.13244100898522693,
+    "clock_convention": "robot query time = image CSV time + offset",
+    "out_of_source_policy": "finite endpoint placeholders with body_valid=false; runtime only renders common valid interval",
+    "jaw_visual_policy": "clamp negative squeezing to closed; no inferred grasp gap",
+    "instrument_model": "retained Large Needle Driver CAD for both arms; exact second-tool CAD unavailable",
+    "wrist_chain": "retained dVRK 4670/0091/006 URDF visual and joint transforms"
+  },
+  "phantom": {
+    "regions": [
+      {
+        "id": 1,
+        "vertices": 7205,
+        "exterior_triangles": 7284,
+        "float32_max_error_m": 3.5865826142345014e-09
+      },
+      {
+        "id": 2,
+        "vertices": 10236,
+        "exterior_triangles": 10267,
+        "float32_max_error_m": 1.862638140948114e-09
+      },
+      {
+        "id": 3,
+        "vertices": 5742,
+        "exterior_triangles": 5763,
+        "float32_max_error_m": 1.8622690195480018e-09
+      },
+      {
+        "id": 4,
+        "vertices": 2982,
+        "exterior_triangles": 2994,
+        "float32_max_error_m": 9.312025942009861e-10
+      },
+      {
+        "id": 5,
+        "vertices": 4689,
+        "exterior_triangles": 4512,
+        "float32_max_error_m": 3.644944568392816e-09
+      },
+      {
+        "id": 6,
+        "vertices": 3534,
+        "exterior_triangles": 3503,
+        "float32_max_error_m": 1.862190297796662e-09
+      },
+      {
+        "id": 7,
+        "vertices": 35306,
+        "exterior_triangles": 42163,
+        "float32_max_error_m": 3.7244592826501943e-09
+      },
+      {
+        "id": 8,
+        "vertices": 14756,
+        "exterior_triangles": 14311,
+        "float32_max_error_m": 1.8625586142850814e-09
+      },
+      {
+        "id": 9,
+        "vertices": 7984,
+        "exterior_triangles": 8106,
+        "float32_max_error_m": 1.8623759409641671e-09
+      },
+      {
+        "id": 10,
+        "vertices": 6394,
+        "exterior_triangles": 6262,
+        "float32_max_error_m": 1.8610881794001166e-09
+      },
+      {
+        "id": 11,
+        "vertices": 3251,
+        "exterior_triangles": 3293,
+        "float32_max_error_m": 3.7202924352275346e-09
+      },
+      {
+        "id": 12,
+        "vertices": 2652,
+        "exterior_triangles": 2498,
+        "float32_max_error_m": 1.8616386626701953e-09
+      }
+    ],
+    "transform": "One constant rigid translation of unchanged authored native geometry; no rotation, deformation or repartition",
+    "asset": "phantom.usdc",
+    "T_world_from_native": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.0030879667820991165
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0031612083136471673
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        -0.007630057421869528
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "placement_report": "pad_placement.json",
+    "region_count": 12
+  },
+  "rig_geometry": {
+    "status": "calibration_coupled_geometry_estimate",
+    "table": {
+      "normal_world": [
+        0.00620604820924749,
+        -0.01267016149866078,
+        0.9999004710336037
+      ],
+      "surface_plane_dot_normal_m": -0.036117039697612756,
+      "size_m": [
+        0.4664932124039665,
+        0.35173251406617595,
+        0.025
+      ],
+      "height_source": "transformed source CAD feet plane",
+      "pad_bottom_above_fixture_feet_m": 0.020158859911227733,
+      "pad_fixture_normal_angle_deg": 0.0,
+      "extent_and_thickness": "visual context; not measured table dimensions"
+    },
+    "fixture": {
+      "source_asset": "assets/trocar_cage/trocart_cage.stl",
+      "scale_m_per_native_unit": 0.026790820417577382,
+      "scale_from_projected_pair_m_per_native_unit": 0.026790820417577382,
+      "T_world_from_scaled_native": [
+        [
+          0.00620604820924749,
+          0.3942222836601431,
+          -0.9189941653957365,
+          0.025601108084738176
+        ],
+        [
+          -0.01267016149866078,
+          0.9189690913244333,
+          0.3941259648867902,
+          -0.10570568315783518
+        ],
+        [
+          0.9999004710336037,
+          0.009197839753287355,
+          0.010698026483912668,
+          0.013020716658913455
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "native_up": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "native_feet_plane_x": -1.8899999856948853,
+      "ports": [
+        {
+          "arm": "psm1",
+          "center_native": [
+            6.263468583204642,
+            3.94001295,
+            -1.85600996
+          ],
+          "radius_native": 0.5,
+          "rim_vertices": 21,
+          "rim_x_interval_native": [
+            6.002199172973633,
+            6.446811676025391
+          ],
+          "mid_surface_fit_rms_native": 0.03159321652921137
+        },
+        {
+          "arm": "psm2",
+          "center_native": [
+            5.242260201510302,
+            1.45921122,
+            3.99158209
+          ],
+          "radius_native": 0.5,
+          "rim_vertices": 20,
+          "rim_x_interval_native": [
+            4.662571907043457,
+            5.660253524780273
+          ],
+          "mid_surface_fit_rms_native": 0.07456905327983149
+        }
+      ],
+      "measured_suj_pivots_world_m": [
+        [
+          0.11395119557125069,
+          -0.030426444984275068,
+          0.18124641719558088
+        ],
+        [
+          -0.05639094807528158,
+          -0.02941250291702862,
+          0.1549547884191736
+        ]
+      ],
+      "cad_port_centers_world_m": [
+        [
+          0.11395119557125147,
+          -0.030426444984276657,
+          0.18124641719570522
+        ],
+        [
+          -0.05639094807527986,
+          -0.029412502917032096,
+          0.15495478841944954
+        ]
+      ],
+      "port_center_residual_vectors_m": [
+        [
+          7.771561172376096e-16,
+          -1.5890067039947553e-15,
+          1.2434497875801753e-13
+        ],
+        [
+          1.7208456881689926e-15,
+          -3.4763858458575214e-15,
+          2.7594593277058266e-13
+        ]
+      ],
+      "port_center_residual_norms_m": [
+        1.243575597069504e-13,
+        2.759731950408566e-13
+      ],
+      "port_mid_surface_uncertainty_m": 0.003,
+      "feet_plane_max_error_m": 1.3877787807814457e-17,
+      "constraints": "authored constrained similarity from constant arm-base registered tool pivots; source CAD feet define the table plane; pad normal displacement remains independent"
+    },
+    "endoscope": {
+      "prim_path": "/SutureBotReplay/Cameras/left/EndoscopeVisual",
+      "opacity": 0.25,
+      "shape": "flat-ended cylinder",
+      "length_m": 0.16394607547480294,
+      "length_source": "recorded ECM tip-to-SUJ pivot distance",
+      "diameter_m": 0.012,
+      "axis_world": [
+        -0.052330263674223276,
+        0.4733654295190345,
+        -0.8793103625228387
+      ],
+      "front_center_world_m": [
+        0.0391870463274422,
+        -0.06444058407173639,
+        0.06406825465965875
+      ],
+      "rear_center_world_m": [
+        0.04776638768539275,
+        -0.1420469885068265,
+        0.2082277377196044
+      ],
+      "T_left_cv_from_visual": [
+        [
+          -0.9969316645299081,
+          0.07827679258647882,
+          1.4343442658191376e-18,
+          0.0030334925536298907
+        ],
+        [
+          -0.07827679258647878,
+          -0.9969316645299082,
+          3.354223652153243e-17,
+          -0.00016763492553479448
+        ],
+        [
+          -7.725612020917736e-17,
+          1.8785241392384117e-17,
+          1.0000000000000002,
+          -0.08811651944285888
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stereo_front_clearance_m": 0.0002,
+      "housing_max_signed_distance_to_left_right_optical_planes_m": [
+        -0.0061434815505999815,
+        -0.00020000000000000454
+      ],
+      "front_recession_from_stereo_midpoint_m": 0.0038595302932239004,
+      "source_tip_to_rcm_translation_m": [
+        -3.469446951953614e-18,
+        5.551115123125783e-17,
+        -0.16394607547480294
+      ],
+      "placement_assumptions": "housing axis follows the estimated left optical direction; this does not establish the physical endoscope shaft/optical angle; stereo optical midpoint approximates its front; 12mm diameter is illustrative; camera hand-eye not independently measured",
+      "ecm_convention_reference": "https://dvrk.readthedocs.io/2.3.0/_static/schemas/dvrk-ecm.html"
+    }
+  },
+  "omitted": {},
+  "visual_geometry": {
+    "wrist_camera": "5.5 mm diameter cylinder behind fitted optical center, 35 mm illustrative housing length, opacity 0.25"
+  },
+  "additional_assets": [
+    "alignment_screening.json",
+    "approach_readiness.json",
+    "approach_visual_review.json",
+    "audit/independent_render",
+    "audit/native_independent/left_needle_000139.png",
+    "audit/native_independent/psm1_full_000005.png",
+    "audit/native_independent/psm1_own_tool_000005.png",
+    "audit/native_independent/psm1_own_tool_000033.png",
+    "audit/native_independent/psm1_own_tool_000076.png",
+    "audit/native_independent/right_needle_000139.png",
+    "audit/needle_joint",
+    "automatic_observations.json",
+    "automatic_slit_traces.json",
+    "automatic_wrist_caps.json",
+    "calibration_before_wrist.json",
+    "fit_cap_observations.json",
+    "frozen_pad_fit.json",
+    "frozen_wrist_fit.json",
+    "joint_geometry_preservation.json",
+    "joint_pad_alignment.json",
+    "joint_refinement.json",
+    "joint_wrist_alignment.json",
+    "needle.usdc",
+    "needle_backing_collision.json",
+    "needle_initialization.jpg",
+    "needle_initialization.json",
+    "needle_inputs.npz",
+    "own_head_validation.json",
+    "pad_placement.json",
+    "pad_placement_before_joint.json",
+    "pad_placement_correction.json",
+    "point_labels.json",
+    "point_labels_source",
+    "preparation_validation.json",
+    "psm1_mount.json",
+    "psm1_mount_before_joint.json",
+    "psm2_mount.json",
+    "region_identification.json",
+    "region_review.json",
+    "reviewed_slit_traces.json",
+    "reviewed_wrist_observations.json",
+    "reviewed_wrist_wound.json",
+    "slit_review_validation.json",
+    "source_own_head_observations.json",
+    "source_phases.json",
+    "textures/point_labels.png",
+    "wrist_export_validation.json"
+  ],
+  "region_identification": "region_identification.json",
+  "playback": {
+    "first_frame": 5,
+    "last_frame": 141,
+    "description": "Approach before tissue deformation",
+    "source_phase_report": "source_phases.json",
+    "alignment_report": "joint_pad_alignment.json",
+    "source_arrays_and_frame_numbers_unchanged": true,
+    "scope": "Image alignment is evaluated for this source-defined static phase; later full-clip errors remain reported."
+  },
+  "point_labels": {
+    "report": "point_labels.json",
+    "texture": "textures/point_labels.png",
+    "count": 2,
+    "display_color_rgb": [
+      0,
+      255,
+      0
+    ]
+  },
+  "needle": {
+    "usd": "needle.usdc",
+    "inputs_npz": "needle_inputs.npz",
+    "initialization_report": "needle_initialization.json",
+    "accepted": true,
+    "validation_status": "needle_pixel_gates_and_runtime_passed_full_scene_alignment_unaccepted",
+    "body_path": "/SutureBotNeedle/Needle",
+    "initial_pose_world_xyz_xyzw": [
+      0.039088757246287076,
+      -0.03814584322600571,
+      0.0047600484852829625,
+      -0.4572521861035511,
+      0.7623787248331191,
+      0.25873043533902335,
+      0.3778328731789101
+    ],
+    "initial_held_arm": "psm1",
+    "geometry": {
+      "radius_mesh_units": 0.009370268958301524,
+      "arc_radians": 3.1054113227079587,
+      "arc_length_mesh_units": 0.029098539319928462,
+      "samples": 65,
+      "source_sha256": "2db5c6060c806498e3a18bde5fe4d7d7d53900dd1e167bcb61bc1c7873a8d7ca",
+      "mass_kg": 0.0003,
+      "collision_capsules": 32,
+      "capsule_radius_m": 0.00023,
+      "environment_collision_policy": "single_rectangular_backing_only",
+      "environment_collision_count": 1,
+      "environment_collision_path": "/SutureBotNeedle/PadSupportProxy/RectangularBacking",
+      "support": "One rectangular native flat backing; raised tissue, tools, fixture, endoscope and table have no environment collision shapes",
+      "backing_dimensions_m": [
+        0.13318735765534756,
+        0.1324805516189042,
+        0.004450611774539077
+      ],
+      "backing_world_transform": [
+        [
+          0.9998829781026586,
+          -0.013982670239650243,
+          0.006206048140917015,
+          -6.96605489358031e-06
+        ],
+        [
+          0.014060442527423143,
+          0.9998208694389858,
+          -0.01267016141189137,
+          0.0031945772790877335
+        ],
+        [
+          -0.0060277737591262325,
+          0.012755938508771113,
+          0.9999004710351272,
+          -0.013693717778756768
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "backing_top_plane_dot_normal_m": -0.011507568011372274,
+      "mesh_scale": 0.6548425042744467,
+      "sharp_tip_arc_endpoint": -1,
+      "blunt_arc_endpoint": 0,
+      "endpoint_evidence": "original CAD end cross sections: endpoint0 broad blunt end; endpoint-1 tapered tip",
+      "estimated_radius_m": 0.006136050390379281,
+      "estimated_arc_length_m": 0.01905496035899041,
+      "geometry_method": "Original tapered CAD cross-sections bent along one fitted circular centreline; topology and blunt-to-sharp ordering retained; not a verified needle SKU"
+    },
+    "grasp": {
+      "close_angle_rad": 0.05,
+      "open_angle_rad": 0.18,
+      "capture_distance_m": 0.0025,
+      "tool_body_paths": {
+        "psm1": "/SutureBotReplay/PSM1/yaw",
+        "psm2": "/SutureBotReplay/PSM2/yaw"
+      },
+      "tool_point_local_m": {
+        "psm1": [
+          0,
+          0.008187972317621707,
+          0
+        ],
+        "psm2": [
+          0,
+          0.006,
+          0
+        ]
+      },
+      "policy": "Recorded jaw hysteresis; a fresh jaw closure may translate a free needle to the grasp point, then preserve its constant tool-to-needle transform until release. No recorded needle trajectory is consumed."
+    },
+    "simulation": {
+      "environment_collision_policy": "single_rectangular_backing_only",
+      "maximum_step_s": 0.004166666666666667,
+      "gravity_m_s2": [
+        0,
+        0,
+        -9.81
+      ],
+      "contact_stiffness": 1000000.0,
+      "contact_damping": 2000.0,
+      "contact_parameter_status": "simulation choices for a small rigid needle; not measured tissue properties",
+      "backend": "Newton public SolverMuJoCo; CPU default",
+      "seek": "reset and deterministic source-clock replay"
+    },
+    "source": {
+      "needle_cad_sha256": "2db5c6060c806498e3a18bde5fe4d7d7d53900dd1e167bcb61bc1c7873a8d7ca",
+      "initial_frame": 5,
+      "motion_policy": "No recorded needle motion is stored or consumed.",
+      "jaw_clock": "same interpolation and constant robot/image offset as the recorded tool replay",
+      "estimated_geometry_fit_sha256": "fa31e76d9261380bea7c8a5b4e049ce39f9e9d7a05f79869f70e757fc0962f38"
+    },
+    "acceptance_scope": "Needle source-pixel numerical gates, supported initial jaw anchor, replay dynamics and rectangular-backing clearance for source frames 5\u2013141 only.",
+    "review_report": "audit/needle_joint/visual_review.json"
+  },
+  "provenance_file": "provenance.json"
+}

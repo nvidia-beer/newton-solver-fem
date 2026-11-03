@@ -1,0 +1,77 @@
+{
+  "validation_date": "2026-11-04",
+  "scope": "Final portable SutureBot examples before repository commit; calibration acceptance is separate from runtime tests.",
+  "full_camera_alignment_validated": false,
+  "lint": {
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "python_files": 124
+  },
+  "full_cpu_suite": {
+    "command": "uv run --locked --no-sync python -m unittest discover -s tests -v",
+    "status": "terminated",
+    "exit_code": 143,
+    "passed_before_termination": 156,
+    "skipped_before_termination": 5,
+    "terminated_test": "test_suturebot_press.SuturebotPressTests.test_runtime_demo_loads_free_tissue_recovers_and_resets_after_selection",
+    "failure_assertions_reported": 0,
+    "log_sha256": "38b2efc67e34dc97f69a5092ea80f7e13cb0975d22fc5c2ff134b0790c466b65"
+  },
+  "final_replay_suite": {
+    "command": "PYTHONPATH=tests uv run --locked --no-sync python -m unittest test_suturebot_recording test_suturebot_cameras test_suturebot_cli test_suturebot_needle test_suturebot_point_labels test_readme -v",
+    "status": "passed",
+    "tests": 33,
+    "seconds": 8.32,
+    "log_sha256": "04ddd0c105a4a94cb1d9725acf9ea3811605ef55772f73838bd5d78c606b2331"
+  },
+  "third_recording_uv_tests": {
+    "status": "passed",
+    "tests": 2,
+    "seconds": 0.348,
+    "scope": "Material triangle/UV bindings and green texture rendering; does not validate source annotation pixel alignment.",
+    "log_sha256": "b0491cc3a95fd4a907ba2a1e92a40e92c03b787af3dd4122393eaf2477d01c10"
+  },
+  "fourth_recording_uv_tests": {
+    "status": "passed",
+    "tests": 2,
+    "log_sha256": "d70a71847a16eb876b959f6e58de830ad8e6b731c9755aeb3e85a44364e8e8b5"
+  },
+  "cuda_preflight": {
+    "status": "unavailable",
+    "reason": "CUDA primary context allocation failed with out-of-memory while another workload occupied the GPU; no other process was altered."
+  },
+  "wheel": {
+    "wheel": "newton_solver_fem-0.1.0-py3-none-any.whl",
+    "sha256": "f99a7516794e4fea68e826174c5f97413b46441936b8c785bfac6a2075853740",
+    "bytes": 130468246,
+    "suturebot_files_verified": 7958,
+    "all_asset_bytes_match": true,
+    "isolated_import": "passed",
+    "samples": {
+      "tissue3_215248_pickup": {
+        "region": 1,
+        "needle_present": false,
+        "manifest_sha256": "b60345807f4c08106783c8d852c53909e9a77446839e0f7ace69c5bd305bc5c6"
+      },
+      "tissue3_215300": {
+        "region": 1,
+        "needle_present": true,
+        "manifest_sha256": "18f175bee433662586209da5e807f091a374f00e4dbbad9c672f51e1f616a724"
+      },
+      "tissue3_222119_approach": {
+        "region": 1,
+        "needle_present": true,
+        "manifest_sha256": "0b0245f7df4790d56ce26c42a3e68c18e2938bf2fcd180b2bc5b52095d3f0706"
+      },
+      "tissue3_224616_approach": {
+        "region": 3,
+        "needle_present": false,
+        "manifest_sha256": "2b64b956acf8eddaef4f4c4370d7ee6b2b2255a6b96382016a07fc5ea48ec7f1"
+      }
+    }
+  },
+  "isolated_contact_test": {
+    "status": "not_completed_at_commit_review",
+    "scope": "Separate CPU rerun of the legacy 540-frame active-tissue press test; excluded from passed-check totals."
+  }
+}

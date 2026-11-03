@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "image_alignment_accepted": false,
+  "unchanged_recorded_motion_and_arm_registration": true,
+  "unchanged_stereo_camera_poses_and_validity": true,
+  "unchanged_source_clock_and_body_support": true,
+  "source_annotation_availability_preserved": true,
+  "wrist_fit_report": "frozen_wrist_fit.json",
+  "scope": "Export invariants only; four-camera image alignment remains separately reviewed."
+}

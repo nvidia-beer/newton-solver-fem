@@ -201,7 +201,31 @@ def record(name, options):
             newton.viewer.ViewerGL = original_gl
     writer.close()
     temporary.replace(final)
-    Image.fromarray(writer.last_image).save(output / f"{name}.jpg", quality=88)
+    poster = output / f"{name}.jpg"
+    if "poster_frame" in profile:
+        # A released object can hide the interaction in the final frame.
+        # Extract the configured representative frame from the actual clip.
+        frame = min(max(0, int(profile["poster_frame"])), writer.count - 1)
+        subprocess.run(
+            [
+                "ffmpeg",
+                "-y",
+                "-loglevel",
+                "error",
+                "-ss",
+                str(frame / fps),
+                "-i",
+                str(final),
+                "-frames:v",
+                "1",
+                "-q:v",
+                "2",
+                str(poster),
+            ],
+            check=True,
+        )
+    else:
+        Image.fromarray(writer.last_image).save(poster, quality=88)
     # GitHub README supports animated images; the preview links to the full MP4.
     subprocess.run(
         [

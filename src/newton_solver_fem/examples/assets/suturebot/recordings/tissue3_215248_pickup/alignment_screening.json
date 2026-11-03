@@ -1,0 +1,606 @@
+{
+  "schema_version": 1,
+  "scope": "source_defined_static_shape_approach_only",
+  "source_phase_inclusive": [
+    4,
+    281
+  ],
+  "original_reserved_frames": [
+    18,
+    39,
+    73,
+    94,
+    128,
+    149,
+    183,
+    204,
+    238,
+    259
+  ],
+  "phase_reserved_incision_frames": {
+    "left": [
+      18,
+      39,
+      73,
+      94,
+      128,
+      149,
+      183,
+      204,
+      238,
+      259
+    ],
+    "right": [
+      18,
+      39,
+      73,
+      94,
+      128,
+      149,
+      183,
+      204,
+      238,
+      259
+    ],
+    "psm1": [
+      39,
+      94,
+      149,
+      204,
+      259
+    ],
+    "psm2": [
+      39,
+      94,
+      149,
+      204,
+      259
+    ]
+  },
+  "full_reserved_wrist_cap_frames": {
+    "psm1": [
+      39,
+      94,
+      149,
+      183,
+      204
+    ],
+    "psm2": [
+      39,
+      94,
+      149,
+      183,
+      204,
+      259
+    ]
+  },
+  "unavailable_wrist_cap_groups": [
+    {
+      "camera": "psm1",
+      "group": "own"
+    }
+  ],
+  "numeric_screen_passed": true,
+  "accepted": false,
+  "status": "requires_scoped_four_view_geometry_review",
+  "failed_checks": [],
+  "checks": [
+    {
+      "name": "psm1_fit_stereo_frames",
+      "value": 17,
+      "limit": 3,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "psm1_reserved_stereo_frames",
+      "value": 5,
+      "limit": 2,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "psm2_fit_stereo_frames",
+      "value": 29,
+      "limit": 3,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "psm2_reserved_stereo_frames",
+      "value": 10,
+      "limit": 2,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "left_reserved_cap_rms_px",
+      "value": 7.0886709341970064,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "left_reserved_cap_max_px",
+      "value": 13.636096134925472,
+      "limit": 30.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "right_reserved_cap_rms_px",
+      "value": 6.185783842120211,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "right_reserved_cap_max_px",
+      "value": 10.38313032032395,
+      "limit": 30.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "left_phase_reserved_incision_frames",
+      "value": 10,
+      "limit": 2,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "left_phase_reserved_incision_rms_px",
+      "value": 6.483530521909567,
+      "limit": 25.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "left_phase_reserved_incision_median_px",
+      "value": 3.6157844037426354,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "right_phase_reserved_incision_frames",
+      "value": 10,
+      "limit": 2,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "right_phase_reserved_incision_rms_px",
+      "value": 8.271223349393622,
+      "limit": 25.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "right_phase_reserved_incision_median_px",
+      "value": 3.941312852766333,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm1_phase_reserved_incision_frames",
+      "value": 5,
+      "limit": 2,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "psm1_phase_reserved_incision_rms_px",
+      "value": 10.040246351333549,
+      "limit": 25.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm1_phase_reserved_incision_median_px",
+      "value": 7.331095770071295,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm2_phase_reserved_incision_frames",
+      "value": 5,
+      "limit": 2,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "psm2_phase_reserved_incision_rms_px",
+      "value": 10.274384727526625,
+      "limit": 25.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm2_phase_reserved_incision_median_px",
+      "value": 8.116147751420772,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm1_full_reserved_cap_frames",
+      "value": 5,
+      "limit": 2,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "psm1_opposite_full_reserved_cap_rms_px",
+      "value": 5.558464628113994,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm1_opposite_full_reserved_cap_max_px",
+      "value": 7.651245531044205,
+      "limit": 30.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm2_full_reserved_cap_frames",
+      "value": 6,
+      "limit": 2,
+      "comparison": "minimum",
+      "passed": true
+    },
+    {
+      "name": "psm2_own_full_reserved_cap_rms_px",
+      "value": 2.481060072786184,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm2_own_full_reserved_cap_max_px",
+      "value": 5.569903452232941,
+      "limit": 30.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm2_opposite_full_reserved_cap_rms_px",
+      "value": 5.26284983255964,
+      "limit": 12.0,
+      "comparison": "maximum",
+      "passed": true
+    },
+    {
+      "name": "psm2_opposite_full_reserved_cap_max_px",
+      "value": 6.996586556361725,
+      "limit": 30.0,
+      "comparison": "maximum",
+      "passed": true
+    }
+  ],
+  "full_clip_screen": {
+    "schema_version": 1,
+    "numeric_screen_passed": true,
+    "accepted": false,
+    "status": "requires_four_view_geometry_review",
+    "failed_checks": [],
+    "checks": [
+      {
+        "name": "psm1_fit_stereo_frames",
+        "value": 17,
+        "limit": 3,
+        "comparison": "minimum",
+        "passed": true
+      },
+      {
+        "name": "psm1_reserved_stereo_frames",
+        "value": 5,
+        "limit": 2,
+        "comparison": "minimum",
+        "passed": true
+      },
+      {
+        "name": "psm2_fit_stereo_frames",
+        "value": 29,
+        "limit": 3,
+        "comparison": "minimum",
+        "passed": true
+      },
+      {
+        "name": "psm2_reserved_stereo_frames",
+        "value": 10,
+        "limit": 2,
+        "comparison": "minimum",
+        "passed": true
+      },
+      {
+        "name": "left_reserved_cap_rms_px",
+        "value": 7.0886709341970064,
+        "limit": 12.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "left_reserved_cap_max_px",
+        "value": 13.636096134925472,
+        "limit": 30.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "left_reserved_slit_rms_px",
+        "value": 6.483530521909567,
+        "limit": 25.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "left_reserved_slit_median_px",
+        "value": 3.6157844037426354,
+        "limit": 12.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "right_reserved_cap_rms_px",
+        "value": 6.185783842120211,
+        "limit": 12.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "right_reserved_cap_max_px",
+        "value": 10.38313032032395,
+        "limit": 30.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "right_reserved_slit_rms_px",
+        "value": 8.271223349393622,
+        "limit": 25.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "right_reserved_slit_median_px",
+        "value": 3.941312852766333,
+        "limit": 12.0,
+        "comparison": "maximum",
+        "passed": true
+      }
+    ],
+    "limitations": [
+      "These pixel limits are engineering review triggers, not an estimated camera covariance or physical error bound.",
+      "Source tracks are correlated and development-reviewed; reserved frames only exclude observations from the numerical fit.",
+      "Native four-camera mesh overlays, needle initialization, and pad-contact consistency still require their own evidence.",
+      "Successful file export, valid region raycasts, and successful rendering do not establish image alignment."
+    ]
+  },
+  "pre_pad_full_clip_screen": {
+    "schema_version": 1,
+    "numeric_screen_passed": true,
+    "accepted": false,
+    "status": "requires_four_view_geometry_review",
+    "failed_checks": [],
+    "checks": [
+      {
+        "name": "psm1_fit_stereo_frames",
+        "value": 17,
+        "limit": 3,
+        "comparison": "minimum",
+        "passed": true
+      },
+      {
+        "name": "psm1_reserved_stereo_frames",
+        "value": 5,
+        "limit": 2,
+        "comparison": "minimum",
+        "passed": true
+      },
+      {
+        "name": "psm2_fit_stereo_frames",
+        "value": 29,
+        "limit": 3,
+        "comparison": "minimum",
+        "passed": true
+      },
+      {
+        "name": "psm2_reserved_stereo_frames",
+        "value": 10,
+        "limit": 2,
+        "comparison": "minimum",
+        "passed": true
+      },
+      {
+        "name": "left_reserved_cap_rms_px",
+        "value": 7.0886709341970064,
+        "limit": 12.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "left_reserved_cap_max_px",
+        "value": 13.636096134925472,
+        "limit": 30.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "left_reserved_slit_rms_px",
+        "value": 6.446136072090113,
+        "limit": 25.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "left_reserved_slit_median_px",
+        "value": 3.4140362532343156,
+        "limit": 12.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "right_reserved_cap_rms_px",
+        "value": 6.185783842120211,
+        "limit": 12.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "right_reserved_cap_max_px",
+        "value": 10.38313032032395,
+        "limit": 30.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "right_reserved_slit_rms_px",
+        "value": 8.183586470819218,
+        "limit": 25.0,
+        "comparison": "maximum",
+        "passed": true
+      },
+      {
+        "name": "right_reserved_slit_median_px",
+        "value": 4.094294237087643,
+        "limit": 12.0,
+        "comparison": "maximum",
+        "passed": true
+      }
+    ],
+    "limitations": [
+      "These pixel limits are engineering review triggers, not an estimated camera covariance or physical error bound.",
+      "Source tracks are correlated and development-reviewed; reserved frames only exclude observations from the numerical fit.",
+      "Native four-camera mesh overlays, needle initialization, and pad-contact consistency still require their own evidence.",
+      "Successful file export, valid region raycasts, and successful rendering do not establish image alignment."
+    ]
+  },
+  "full_clip_incision_metrics": {
+    "left": {
+      "fit": {
+        "count": 1567,
+        "rms_px": 6.639358040150189,
+        "median_px": 3.5247553705954906,
+        "max_px": 21.562315251478843
+      },
+      "reserved": {
+        "count": 516,
+        "rms_px": 6.483530521909567,
+        "median_px": 3.6157844037426354,
+        "max_px": 19.598675911615025
+      }
+    },
+    "right": {
+      "fit": {
+        "count": 1561,
+        "rms_px": 7.9474421442243965,
+        "median_px": 3.7270277043603217,
+        "max_px": 20.674543616944707
+      },
+      "reserved": {
+        "count": 500,
+        "rms_px": 8.271223349393622,
+        "median_px": 3.941312852766333,
+        "max_px": 18.511212926606145
+      }
+    },
+    "psm1": {
+      "fit": {
+        "count": 37,
+        "rms_px": 9.06357013463664,
+        "median_px": 7.024318387016456,
+        "max_px": 21.965762837823586
+      },
+      "reserved": {
+        "count": 37,
+        "rms_px": 10.040246351333549,
+        "median_px": 7.331095770071295,
+        "max_px": 19.251291030574293
+      }
+    },
+    "psm2": {
+      "fit": {
+        "count": 42,
+        "rms_px": 14.08678095169595,
+        "median_px": 12.272536003718292,
+        "max_px": 34.67171525487372
+      },
+      "reserved": {
+        "count": 43,
+        "rms_px": 10.274384727526625,
+        "median_px": 8.116147751420772,
+        "max_px": 25.617899492032983
+      }
+    }
+  },
+  "phase_incision_metrics": {
+    "left": {
+      "fit": {
+        "count": 1567,
+        "rms_px": 6.639358040150189,
+        "median_px": 3.5247553705954906,
+        "max_px": 21.562315251478843
+      },
+      "reserved": {
+        "count": 516,
+        "rms_px": 6.483530521909567,
+        "median_px": 3.6157844037426354,
+        "max_px": 19.598675911615025
+      }
+    },
+    "right": {
+      "fit": {
+        "count": 1561,
+        "rms_px": 7.9474421442243965,
+        "median_px": 3.7270277043603217,
+        "max_px": 20.674543616944707
+      },
+      "reserved": {
+        "count": 500,
+        "rms_px": 8.271223349393622,
+        "median_px": 3.941312852766333,
+        "max_px": 18.511212926606145
+      }
+    },
+    "psm1": {
+      "fit": {
+        "count": 37,
+        "rms_px": 9.06357013463664,
+        "median_px": 7.024318387016456,
+        "max_px": 21.965762837823586
+      },
+      "reserved": {
+        "count": 37,
+        "rms_px": 10.040246351333549,
+        "median_px": 7.331095770071295,
+        "max_px": 19.251291030574293
+      }
+    },
+    "psm2": {
+      "fit": {
+        "count": 42,
+        "rms_px": 14.08678095169595,
+        "median_px": 12.272536003718292,
+        "max_px": 34.67171525487372
+      },
+      "reserved": {
+        "count": 43,
+        "rms_px": 10.274384727526625,
+        "median_px": 8.116147751420772,
+        "max_px": 25.617899492032983
+      }
+    }
+  },
+  "limitations": [
+    "A passing scoped screen does not accept the full clip; full-clip failures and original reservations remain attached.",
+    "Cap calibration is tested on its entire frozen split, including frames outside the playback phase; only incision validation is phase-limited.",
+    "Phase boundaries come from source-only deformation review, not residual selection; the rigid pad cannot reproduce later deformation.",
+    "Unavailable own-camera cap groups remain unobserved, not zero-error successes; observed own/opposite groups retain the original cap limits.",
+    "Native four-camera geometry review is still required. This screen does not authorize needle initialization, contact accuracy or metric ground truth."
+  ]
+}

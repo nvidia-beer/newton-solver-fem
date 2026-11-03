@@ -1,0 +1,5691 @@
+{
+  "schema_version": 5,
+  "sample": "src/newton_solver_fem/examples/assets/suturebot/recordings/tissue3_215300/recording.json",
+  "scope": "Portable replay with the translated original pad, green UV material labels and a rigid needle. Fresh jaw closure translates the free needle to its gripper while preserving orientation; held motion is fixed relative to the tool and released motion uses MuJoCo with the flat backing only. Image placement remains unaccepted; no tissue puncture or deformation physics.",
+  "source": {
+    "episode": "tissue_3/2_needle_throw/20250428-215300-489212",
+    "frames": 601,
+    "supported_frames": [
+      4,
+      600
+    ],
+    "common_image_to_robot_offset_s": -0.10696423776785942,
+    "original_inputs_unchanged": true
+  },
+  "assets": {
+    "schema_version": 1,
+    "status": "portable_export_passed",
+    "host_paths_present": false,
+    "runtime_assets_contained_in_bundle": true,
+    "numerical_payloads_byte_identical": true,
+    "additional_json_numerical_values_unchanged": true,
+    "source_preparation_outputs_modified": false,
+    "image_count": 2404,
+    "camera_ray_file_count": 8,
+    "usd_layers": [
+      "needle.usdc",
+      "phantom.usdc",
+      "rig.usdc",
+      "scene.usda"
+    ],
+    "frame_count": 601,
+    "supported_frames": [
+      4,
+      600
+    ],
+    "additional_assets": [
+      "audit/regrasp_policy/metadata_preservation.json",
+      "audit/regrasp_policy/needle_runtime_validation.json",
+      "needle.usdc",
+      "needle_backing_collision.json",
+      "needle_initialization.jpg",
+      "needle_initialization.json",
+      "needle_inputs.npz",
+      "pad_placement.json",
+      "pad_placement_correction.json",
+      "point_labels.json",
+      "point_labels_source",
+      "textures/point_labels.png"
+    ],
+    "newton_import": {
+      "bodies": 14,
+      "shapes": 27,
+      "device": "cpu"
+    },
+    "alignment_precision_validated": false,
+    "bundle_files": 2480,
+    "bundle_bytes": 34574302,
+    "texture_assets": [
+      "textures/point_labels.png"
+    ]
+  },
+  "publication": {
+    "status": "passed",
+    "current_bundle_tree_sha256": "096811bf403437717816c07d61fbacb4569a846ec33d5e1f0e10d45768536b58",
+    "bundle_tree_hash_algorithm": "sha256 of sorted relative POSIX path + NUL + file sha256 + newline",
+    "current_manifest_sha256": "18f175bee433662586209da5e807f091a374f00e4dbbad9c672f51e1f616a724",
+    "current_portable_validation_sha256": "46964159acbb19e76a6c55ffe9acaa8fd07e39702142b46d6958088302f444e0",
+    "current_bundle_files": 2480,
+    "current_bundle_bytes": 34574302,
+    "published_sample": "tissue3_215300",
+    "numerical_payloads_byte_identical": true,
+    "all_runtime_dependencies_resolve_inside_package": true,
+    "host_paths_present": false,
+    "report": "src/newton_solver_fem/examples/assets/suturebot/recordings/tissue3_215300/validation.json"
+  },
+  "phantom_geometry": {
+    "source_available": true,
+    "region_count": 12,
+    "reference_position_max_error_m": 0.0,
+    "exterior_triangle_indices_identical": true,
+    "source_hashes_unchanged": true,
+    "authored_root_translation_world_m": [
+      0.00025837375037222237,
+      7.752697257786307e-05,
+      0.0010083453530069064
+    ],
+    "reference_position_scope": "Authored local/reference arrays unchanged; a root USD translation moves the complete pad."
+  },
+  "rig_geometry": {
+    "status": "calibration_coupled_geometry_estimate",
+    "table": {
+      "normal_world": [
+        0.0062060481409170155,
+        -0.012670161411891367,
+        0.9999004710351272
+      ],
+      "surface_plane_dot_normal_m": -0.02619294102107381,
+      "size_m": [
+        0.4634393731387794,
+        0.3625299035835417,
+        0.025
+      ],
+      "height_source": "transformed source CAD feet plane",
+      "pad_bottom_above_fixture_feet_m": 0.01893214252952716,
+      "pad_fixture_normal_angle_deg": 0.0,
+      "extent_and_thickness": "visual context; not measured table dimensions"
+    },
+    "fixture": {
+      "source_asset": "assets/trocar_cage/trocart_cage.stl",
+      "scale_m_per_native_unit": 0.026790820417577382,
+      "scale_from_projected_pair_m_per_native_unit": 0.02679082041757739,
+      "T_world_from_scaled_native": [
+        [
+          0.0062060481409170155,
+          0.4373021138032145,
+          -0.8992932481842134,
+          0.024306768908404996
+        ],
+        [
+          -0.012670161411891367,
+          0.8992727637574942,
+          0.4372047156353126,
+          -0.10774072976752389
+        ],
+        [
+          0.9999004710351272,
+          0.008680877098449384,
+          0.01112161843134252,
+          0.02292804977517715
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "native_up": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "native_feet_plane_x": -1.8899999856948853,
+      "ports": [
+        {
+          "arm": "psm1",
+          "center_native": [
+            6.263468583204642,
+            3.94001295,
+            -1.85600996
+          ],
+          "radius_native": 0.5,
+          "rim_vertices": 21,
+          "rim_x_interval_native": [
+            6.002199172973633,
+            6.446811676025391
+          ],
+          "mid_surface_fit_rms_native": 0.03159321652921137
+        },
+        {
+          "arm": "psm2",
+          "center_native": [
+            5.242260201510302,
+            1.45921122,
+            3.99158209
+          ],
+          "radius_native": 0.5,
+          "rim_vertices": 20,
+          "rim_x_interval_native": [
+            4.662571907043457,
+            5.660253524780273
+          ],
+          "mid_surface_fit_rms_native": 0.07456905327983149
+        }
+      ],
+      "measured_suj_pivots_world_m": [
+        [
+          0.11622458967274293,
+          -0.03668260973971603,
+          0.19107811901086674
+        ],
+        [
+          -0.05389437546119298,
+          -0.027610802157960752,
+          0.16488720964738185
+        ]
+      ],
+      "cad_port_centers_world_m": [
+        [
+          0.11622458967274371,
+          -0.0366826097397176,
+          0.1910781190109911
+        ],
+        [
+          -0.05389437546119126,
+          -0.027610802157964243,
+          0.1648872096476578
+        ]
+      ],
+      "port_center_residual_vectors_m": [
+        [
+          7.771561172376096e-16,
+          -1.5681900222830336e-15,
+          1.2434497875801753e-13
+        ],
+        [
+          1.7208456881689926e-15,
+          -3.490263633665336e-15,
+          2.7594593277058266e-13
+        ]
+      ],
+      "port_center_residual_norms_m": [
+        1.2435729545912608e-13,
+        2.7597337020578977e-13
+      ],
+      "port_mid_surface_uncertainty_m": 0.003,
+      "feet_plane_max_error_m": 1.0408340855860843e-17,
+      "constraints": "authored constrained similarity from constant arm-base registered tool pivots; source CAD feet define the table plane; pad normal displacement remains independent"
+    },
+    "endoscope": {
+      "prim_path": "/SutureBotReplay/Cameras/left/EndoscopeVisual",
+      "opacity": 0.25,
+      "shape": "flat-ended cylinder",
+      "length_m": 0.15498082846268674,
+      "length_source": "recorded ECM tip-to-SUJ pivot distance",
+      "diameter_m": 0.012,
+      "axis_world": [
+        -0.04705453749605903,
+        0.46321867033606556,
+        -0.8849939739642972
+      ],
+      "front_center_world_m": [
+        0.03564312096387361,
+        -0.0701135420004009,
+        0.07171438771756741
+      ],
+      "rear_center_world_m": [
+        0.0429356721679414,
+        -0.1419035552884685,
+        0.2088714869870396
+      ],
+      "T_left_cv_from_visual": [
+        [
+          -0.9908132622861764,
+          0.13523712241032335,
+          -4.637948612954405e-19,
+          0.0030334925536298907
+        ],
+        [
+          -0.13523712241032326,
+          -0.9908132622861764,
+          -5.194711443664969e-17,
+          -0.00016763492553479448
+        ],
+        [
+          -6.385273416197169e-17,
+          4.78385339195603e-17,
+          1.0,
+          -0.08363389593680076
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "stereo_front_clearance_m": 0.0002,
+      "housing_max_signed_distance_to_left_right_optical_planes_m": [
+        -0.006143481579016828,
+        -0.0001999999999999962
+      ],
+      "front_recession_from_stereo_midpoint_m": 0.003859530293223895,
+      "source_tip_to_rcm_translation_m": [
+        0.0,
+        -1.1102230246251565e-16,
+        -0.15498082846268674
+      ],
+      "placement_assumptions": "housing axis follows the estimated left optical direction; this does not establish the physical endoscope shaft/optical angle; stereo optical midpoint approximates its front; 12mm diameter is illustrative; camera hand-eye not independently measured",
+      "ecm_convention_reference": "https://dvrk.readthedocs.io/2.3.0/_static/schemas/dvrk-ecm.html"
+    }
+  },
+  "constraints": {
+    "one_constant_calibration_per_arm": true,
+    "per_frame_corrections": false,
+    "clock_fixed": true,
+    "wrist_optical_axes_parallel_to_shafts": true,
+    "pad_normal_parallel_to_fixture_support": true,
+    "pad_displacement_free": true,
+    "rcm_ports_exact": true,
+    "source_geometry_changed": false
+  },
+  "physical_checks": {
+    "maximum_port_center_error_m": 1.3877787807814457e-17,
+    "pad_fixture_normal_error": 5.938140145767635e-19,
+    "maximum_wrist_axis_error": 0.0,
+    "maximum_measured_relative_motion_matrix_error": 4.440892098500626e-16
+  },
+  "optimizer": {
+    "success": true,
+    "evaluations": 30,
+    "message": "`xtol` termination condition is satisfied.",
+    "cost": 166.6591254217499,
+    "parameters": [
+      -3.6196959718714803,
+      -0.04583703183806096,
+      0.1185085298231116,
+      -0.23464210622715265,
+      -0.037263967947687805,
+      0.01424189881947894,
+      -0.3658300562267885,
+      -1.104207025231634,
+      86.05986682171334,
+      68.70867126387955,
+      17.92327633554968,
+      -1.3700495286521666,
+      3.3474106001665747,
+      -5.0064273897288345,
+      -47.58875274573811,
+      6.484724719762619,
+      6.556676109205054,
+      318.75157352012917,
+      251.25218981222648,
+      -1.6392520142881855,
+      -3.2428533454181503,
+      -5.103151883917605,
+      -50.24062653248906,
+      6.591856631213491,
+      6.610128388311898,
+      316.6554055120377,
+      268.030032653222,
+      -0.3907104006454308,
+      0.053139554931237974,
+      -0.007079037210003225,
+      -10.514478494081883,
+      53.97882200512052,
+      -14.590324125908039,
+      -0.06754386586244741,
+      -0.07106589565937614,
+      -153.0762802778804,
+      -119.38835582756255,
+      -0.3668164011267615,
+      0.09712933974428523,
+      0.027299516919623634,
+      -9.247534588281294,
+      54.150746360023106,
+      -6.780562395833032,
+      -0.003296778134405806,
+      0.005030035393276744,
+      -204.98795056137743,
+      -99.06968097469388
+    ],
+    "active_bounds": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "optimality": 357.0,
+    "optimality_precision": "Three significant digits preserved from the solver console; original full-precision value was not serialized.",
+    "termination_status": 3,
+    "termination_interpretation": "Local step-size stopping criterion; nonzero first-order optimality and nonsmooth silhouette visibility do not establish a stationary or global optimum."
+  },
+  "estimated_optics": {
+    "left": {
+      "K": [
+        [
+          1091.924931894018,
+          0.0,
+          361.3582534598752
+        ],
+        [
+          0.0,
+          1088.0859043011606,
+          110.61164417597004
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.6077746776921858e-13,
+      "horizontal_fov_deg": 46.440438673332196,
+      "vertical_fov_deg": 26.996869298287503,
+      "diagonal_fov_deg": 52.22305349188759,
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right": {
+      "K": [
+        [
+          1158.7074770493016,
+          0.0,
+          290.8334165030721
+        ],
+        [
+          0.0,
+          1149.4771647270445,
+          133.3152778800706
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.6077746776921858e-13,
+      "horizontal_fov_deg": 43.66850914035041,
+      "vertical_fov_deg": 25.590370307891863,
+      "diagonal_fov_deg": 49.27796189674668,
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "psm1": {
+      "K": [
+        [
+          655.0586147259303,
+          0.0,
+          318.75157352012917
+        ],
+        [
+          0.0,
+          703.9280218249336,
+          251.25218981222648
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.20167211488382664,
+        -0.019324374903608263,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.978406215476259e-13,
+      "horizontal_fov_deg": 54.46335790835728,
+      "vertical_fov_deg": 38.334314150423126,
+      "diagonal_fov_deg": 66.11253376542246,
+      "mount": {
+        "radial_offset_mm": 6.69477846685284,
+        "axial_offset_mm": -47.58875274573811,
+        "optical_axis_tilt_deg": 0.0
+      },
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2": {
+      "K": [
+        [
+          729.1333457143642,
+          0.0,
+          316.6554055120377
+        ],
+        [
+          0.0,
+          742.5783509776517,
+          268.030032653222
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.26794140198188887,
+        0.08371372751094454,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.0211149310470866e-10,
+      "horizontal_fov_deg": 49.54657436188527,
+      "vertical_fov_deg": 36.59734600555294,
+      "diagonal_fov_deg": 61.23436700401279,
+      "mount": {
+        "radial_offset_mm": 6.077560579949138,
+        "axial_offset_mm": -50.24062653248906,
+        "optical_axis_tilt_deg": 0.0
+      },
+      "image_size": [
+        640,
+        480
+      ]
+    }
+  },
+  "stereo_relation": {
+    "T_left_cv_from_right_cv": [
+      [
+        0.9885785954834788,
+        -0.019970944791752154,
+        -0.14937711309313184,
+        0.006066985107259785
+      ],
+      [
+        0.02269932210971783,
+        0.9996048064658423,
+        0.01658226963195059,
+        -0.000335269851069582
+      ],
+      [
+        0.14898691663254462,
+        -0.019783636028603155,
+        0.9886412425231992,
+        -0.0045679028244669725
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "baseline_m": 0.007601739957307247,
+    "relative_axis_rotation_deg": 8.730841435013934,
+    "status": "estimated from image constraints; no independent measured stereo calibration",
+    "relative_axis_rotation_definition": "Total relative frame rotation, including roll; optical_axis_angle_deg separately compares the two forward axes.",
+    "optical_axis_angle_deg": 8.644004605492498
+  },
+  "projection_metrics": {
+    "lip": {
+      "left": {
+        "fit": {
+          "samples": 115,
+          "rms_px": 5.781596368873369,
+          "median_px": 4.073497820195499,
+          "p90_px": 9.093520778481611,
+          "max_px": 16.255930328780316
+        },
+        "heldout": {
+          "samples": 13,
+          "rms_px": 9.035155758015966,
+          "median_px": 6.317804121512881,
+          "p90_px": 15.301358349645817,
+          "max_px": 17.562407603508866
+        }
+      },
+      "right": {
+        "fit": {
+          "samples": 102,
+          "rms_px": 5.984409819167581,
+          "median_px": 4.360083018358465,
+          "p90_px": 9.412461613189347,
+          "max_px": 16.22574222626275
+        },
+        "heldout": {
+          "samples": 9,
+          "rms_px": 8.336016585875038,
+          "median_px": 6.595104682826434,
+          "p90_px": 12.620988638183238,
+          "max_px": 13.345968860252292
+        }
+      },
+      "psm1": {
+        "fit": {
+          "samples": 35,
+          "rms_px": 4.577096509357193,
+          "median_px": 3.8779353446482014,
+          "p90_px": 7.224371533555042,
+          "max_px": 9.514859201100512
+        },
+        "heldout": {
+          "samples": 9,
+          "rms_px": 13.883483405040199,
+          "median_px": 7.757599918840068,
+          "p90_px": 22.186815574965273,
+          "max_px": 26.08265257946533
+        }
+      },
+      "psm2": {
+        "fit": {
+          "samples": 49,
+          "rms_px": 5.163522693747467,
+          "median_px": 3.063818000561956,
+          "p90_px": 6.867126267676403,
+          "max_px": 18.918375477508473
+        },
+        "heldout": {
+          "samples": 14,
+          "rms_px": 11.54964016655151,
+          "median_px": 5.421479953070844,
+          "p90_px": 21.874214166186132,
+          "max_px": 23.263447097000792
+        }
+      }
+    },
+    "boundary": {
+      "left": {
+        "fit": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        },
+        "heldout": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        }
+      },
+      "right": {
+        "fit": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        },
+        "heldout": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        }
+      },
+      "psm1": {
+        "fit": {
+          "samples": 157,
+          "rms_px": 1.309379425928807,
+          "median_px": 0.7535545925953849,
+          "p90_px": 1.7507290570919896,
+          "max_px": 7.140189362538225
+        },
+        "heldout": {
+          "samples": 63,
+          "rms_px": 9.085808189409649,
+          "median_px": 7.575703451324037,
+          "p90_px": 13.352087563873878,
+          "max_px": 21.934205189298655
+        }
+      },
+      "psm2": {
+        "fit": {
+          "samples": 140,
+          "rms_px": 1.7355803879499028,
+          "median_px": 1.3016516740839825,
+          "p90_px": 2.6780236343352577,
+          "max_px": 4.1739244463621965
+        },
+        "heldout": {
+          "samples": 54,
+          "rms_px": 1.9948219311123787,
+          "median_px": 1.4334303768825611,
+          "p90_px": 3.1854509501009836,
+          "max_px": 3.989872154179794
+        }
+      }
+    },
+    "shaft": {
+      "left": {
+        "fit": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        },
+        "heldout": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        }
+      },
+      "right": {
+        "fit": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        },
+        "heldout": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        }
+      },
+      "psm1": {
+        "fit": {
+          "samples": 30,
+          "rms_px": 5.229668370729945,
+          "median_px": 4.258115164446126,
+          "p90_px": 6.771372681999688,
+          "max_px": 13.311427254780586
+        },
+        "heldout": {
+          "samples": 4,
+          "rms_px": 2.386704121568513,
+          "median_px": 2.063282479410283,
+          "p90_px": 3.295019675647248,
+          "max_px": 3.7741631147209938
+        }
+      },
+      "psm2": {
+        "fit": {
+          "samples": 41,
+          "rms_px": 2.0879861038833734,
+          "median_px": 1.4945472924881915,
+          "p90_px": 3.432820773903504,
+          "max_px": 4.014798847778915
+        },
+        "heldout": {
+          "samples": 18,
+          "rms_px": 2.6145759811181657,
+          "median_px": 1.6872903963884576,
+          "p90_px": 4.474167175485283,
+          "max_px": 5.3396347927334284
+        }
+      }
+    },
+    "caps": {
+      "left": {
+        "fit": {
+          "samples": 12,
+          "rms_px": 2.2414934955082395,
+          "median_px": 1.9021603346577696,
+          "p90_px": 3.2669303414576025,
+          "max_px": 3.748193390218279
+        },
+        "heldout": {
+          "samples": 4,
+          "rms_px": 12.393315875296114,
+          "median_px": 9.847088323791478,
+          "p90_px": 17.56382643784311,
+          "max_px": 17.774974474885088
+        }
+      },
+      "right": {
+        "fit": {
+          "samples": 12,
+          "rms_px": 2.1076828135462704,
+          "median_px": 1.8164754235558576,
+          "p90_px": 3.0371578265349646,
+          "max_px": 3.513988158341106
+        },
+        "heldout": {
+          "samples": 4,
+          "rms_px": 12.349654210909062,
+          "median_px": 9.254468257845458,
+          "p90_px": 17.813875484404342,
+          "max_px": 18.6456077002413
+        }
+      }
+    },
+    "wrist_pins": {
+      "psm1": {
+        "fit": {
+          "samples": 3,
+          "rms_px": 4.9878869164168655,
+          "median_px": 5.684897314106424,
+          "p90_px": 6.218812710405117,
+          "max_px": 6.35229155947979
+        },
+        "heldout": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        }
+      },
+      "psm2": {
+        "fit": {
+          "samples": 2,
+          "rms_px": 1.9046901680130994,
+          "median_px": 1.8963199791739727,
+          "p90_px": 2.039014444852537,
+          "max_px": 2.074688061272178
+        },
+        "heldout": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        }
+      }
+    },
+    "tool_masks": {
+      "left": {
+        "fit": {
+          "samples": 46,
+          "rms_px": 5.271522860147049,
+          "median_px": 2.140793497145265,
+          "p90_px": 7.029893315319674,
+          "max_px": 18.627027074368726
+        },
+        "heldout": {
+          "samples": 39,
+          "rms_px": 8.00703889817645,
+          "median_px": 3.2020144040788963,
+          "p90_px": 14.145731918595963,
+          "max_px": 19.944579482078552
+        }
+      },
+      "right": {
+        "fit": {
+          "samples": 46,
+          "rms_px": 3.507535144637865,
+          "median_px": 0.9599071486329587,
+          "p90_px": 6.343626367516626,
+          "max_px": 9.84088502620107
+        },
+        "heldout": {
+          "samples": 39,
+          "rms_px": 5.965094334479356,
+          "median_px": 2.0835118363221463,
+          "p90_px": 10.121484722461444,
+          "max_px": 16.97722437977791
+        }
+      },
+      "psm1": {
+        "fit": {
+          "samples": 31,
+          "rms_px": 5.708333021517487,
+          "median_px": 0.9454749961476746,
+          "p90_px": 8.592609100043774,
+          "max_px": 17.25430442392826
+        },
+        "heldout": {
+          "samples": 20,
+          "rms_px": 3.7133907849493686,
+          "median_px": 1.9470892147583811,
+          "p90_px": 7.02897948808267,
+          "max_px": 7.9576677914736536
+        }
+      },
+      "psm2": {
+        "fit": {
+          "samples": 38,
+          "rms_px": 6.7695918733151235,
+          "median_px": 2.312098199016525,
+          "p90_px": 6.2835816424573,
+          "max_px": 27.930515572428703
+        },
+        "heldout": {
+          "samples": 36,
+          "rms_px": 3.8534223145969873,
+          "median_px": 1.4856948416882236,
+          "p90_px": 6.193216904451237,
+          "max_px": 12.955674968659878
+        }
+      }
+    },
+    "jaw_masks_diagnostic": {
+      "left": {
+        "fit": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        },
+        "heldout": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        }
+      },
+      "right": {
+        "fit": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        },
+        "heldout": {
+          "samples": 0,
+          "rms_px": null,
+          "median_px": null,
+          "p90_px": null,
+          "max_px": null
+        }
+      },
+      "psm1": {
+        "fit": {
+          "samples": 6,
+          "rms_px": 0.1711276064210268,
+          "median_px": 0.0,
+          "p90_px": 0.20958765831767096,
+          "max_px": 0.4191753166353419
+        },
+        "heldout": {
+          "samples": 6,
+          "rms_px": 4.290882718404026,
+          "median_px": 0.0,
+          "p90_px": 7.432003429509406,
+          "max_px": 7.450672469533455
+        }
+      },
+      "psm2": {
+        "fit": {
+          "samples": 18,
+          "rms_px": 7.12023985202161,
+          "median_px": 1.8286729438548446,
+          "p90_px": 13.687418836871878,
+          "max_px": 16.9800970313216
+        },
+        "heldout": {
+          "samples": 18,
+          "rms_px": 6.8672926037896245,
+          "median_px": 1.8602901746457232,
+          "p90_px": 13.65783179072418,
+          "max_px": 15.344862684307136
+        }
+      }
+    }
+  },
+  "projection_metric_reference": "Retained constrained fit at original resolution before pad-only translation; current pad metrics are reported separately under pad_placement.",
+  "actual_render": {
+    "sample": "preparation-source/simulation/recording_tissue3_215300_constrained/joint_masks/recording.json",
+    "device": "cpu",
+    "frames": [
+      {
+        "frame": 150,
+        "requested_frame": 150,
+        "source_timestamp_ns": 1745891585487218818,
+        "source_time_s": 5.000527635,
+        "rendered_pixels": {
+          "left": 32400,
+          "right": 32400,
+          "psm1": 43200,
+          "psm2": 43200
+        },
+        "visible_shapes": {
+          "left": 15,
+          "right": 15,
+          "psm1": 18,
+          "psm2": 13
+        }
+      },
+      {
+        "frame": 300,
+        "requested_frame": 300,
+        "source_timestamp_ns": 1745891590480901060,
+        "source_time_s": 9.994209877000001,
+        "rendered_pixels": {
+          "left": 32400,
+          "right": 32400,
+          "psm1": 43200,
+          "psm2": 43200
+        },
+        "visible_shapes": {
+          "left": 15,
+          "right": 15,
+          "psm1": 14,
+          "psm2": 15
+        }
+      },
+      {
+        "frame": 525,
+        "requested_frame": 525,
+        "source_timestamp_ns": 1745891597986441223,
+        "source_time_s": 17.499750040000002,
+        "rendered_pixels": {
+          "left": 32400,
+          "right": 32400,
+          "psm1": 43200,
+          "psm2": 43200
+        },
+        "visible_shapes": {
+          "left": 15,
+          "right": 15,
+          "psm1": 12,
+          "psm2": 12
+        }
+      }
+    ],
+    "scope": "Actual mesh rendering and source-clock consistency, not a calibration accuracy metric",
+    "supported_interval": [
+      4,
+      600
+    ],
+    "body_count": 14,
+    "shape_count": 27,
+    "particle_count": 0,
+    "result": "passed",
+    "placement_scope": "Historical predecessor pad placement; retained for comparison, not current translated-pad clearance."
+  },
+  "actual_tool_shafts": {
+    "status": "actual_usd_long_shaft_triangle_render_comparison",
+    "native_image_resolution": true,
+    "geometry": "64 original long-shaft side triangles per arm; no analytic-cylinder silhouette, connector or internal-facet edges",
+    "edge_selection": "isolated shaft mask boundary on actual CAD silhouette-edge planes, visible in full-scene depth, at least1mm from axial ends and2px from image limits; open-tube cut-end contours excluded",
+    "occlusion_limit": "Modeled surfaces determine visibility; original videos provide no measured depth or needle occluder",
+    "pixel_quantization": "Nearest visible boundary pixel; approximately1px raster quantization, no claim of subpixel geometric precision",
+    "finite_mesh_limit": "The retained32-sided tube has polygonal silhouette generators. Their finite end points can project several pixels away from smooth-cylinder tangent endpoints near a wrist camera, despite a radial sagitta of only21micrometres. Compare actual CAD results separately from analytic ideal-cylinder metrics.",
+    "matching": "Primary distances preserve image-left/right edge identity. Two actual polygonal CAD silhouette edges are identified by adjacent facet facing signs; raster samples within1.5px of their ray planes are assigned once and sorted by mean image x. Unpaired distances are separate diagnostics only.",
+    "sampling": "Original63 manually reviewed points; no arc-length resampling. Repeated rigid own-camera shaft observations are correlated, not63 independent calibrations.",
+    "source_uncertainty_px": "Per-observation6-9px working uncertainty from reviewed source annotation",
+    "unavailable_source_observations": [
+      {
+        "camera": "psm1",
+        "frame": 4,
+        "arm": "psm1",
+        "edge": "image_right",
+        "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+      },
+      {
+        "camera": "psm1",
+        "frame": 300,
+        "arm": "psm1",
+        "edge": "image_right",
+        "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+      },
+      {
+        "camera": "psm1",
+        "frame": 450,
+        "arm": "psm1",
+        "edge": "image_right",
+        "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+      },
+      {
+        "camera": "psm1",
+        "frame": 525,
+        "arm": "psm1",
+        "edge": "image_right",
+        "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+      },
+      {
+        "camera": "psm1",
+        "frame": 600,
+        "arm": "psm1",
+        "edge": "image_right",
+        "reason": "Edge is insufficiently distinguishable from defocused reflected tissue, crease or thread; no extrapolated cylinder tangent is provided."
+      },
+      {
+        "camera": "psm2",
+        "frame": 4,
+        "arm": "psm2",
+        "edge": "image_left",
+        "reason": "Thread crosses the short left cylinder boundary near the shoulder; the lower continuation is defocused."
+      },
+      {
+        "camera": "left",
+        "frame": 4,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 4,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 75,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 75,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 150,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 150,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 300,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 300,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 450,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 450,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 525,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 525,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 600,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "left",
+        "frame": 600,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 4,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 4,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 75,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 75,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 150,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 150,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 300,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 300,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 450,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 450,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 525,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 525,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 600,
+        "arm": "psm1",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "right",
+        "frame": 600,
+        "arm": "psm2",
+        "reason": "The bright visible head and milled connector are not the long shaft. True cylinder edges lie in the dark lens periphery or outside the image; no unambiguous long-cylinder tangent with distinct background was identified. Vignette arcs and thin thread are excluded."
+      },
+      {
+        "camera": "psm1",
+        "frame": 300,
+        "arm": "psm1",
+        "edge": "image_left",
+        "reason": "Independent source-only review found no reliably distinguishable cylinder tangent between the thread and defocused reflection. Omit instead of inferring from other frames."
+      }
+    ],
+    "inputs": {
+      "baseline": {
+        "recording.json": "b6432022e05d5467800a73b1fcdb3b3c150c59a16e09e2f312953d188a0ebb78",
+        "motion.npz": "1df468fcaf713583ba0472c79e6e1c99716077f6d4c5c2adfe617c101084c4d9",
+        "camera_poses.npz": "e1e38b1d525c1222e7e6525d0660809e830dba6241699e828e8d1167cc2284c2",
+        "rig.usdc": "db2fac281e36cc380e914ece5adcb982a13fc34d0b7ca4a674ff4beb6da8566f"
+      },
+      "candidate": {
+        "recording.json": "1150c48f2233522b6f90e90fdf3f88c642137e4c93c8267ffc9dc9489447bdb4",
+        "motion.npz": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+        "camera_poses.npz": "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+        "rig.usdc": "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53"
+      }
+    },
+    "summary": [
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "fit",
+        "count": 21,
+        "rms_px": 29.045120891796053,
+        "median_px": 24.331050121192877,
+        "p90_px": 38.8329756778952,
+        "max_px": 53.36665625650534
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "fit",
+        "count": 21,
+        "rms_px": 4.5303211281110665,
+        "median_px": 4.242640687119285,
+        "p90_px": 6.4031242374328485,
+        "max_px": 8.06225774829855
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "reserved",
+        "count": 3,
+        "rms_px": 24.392621835300936,
+        "median_px": 26.1725046566048,
+        "p90_px": 26.581163433923095,
+        "max_px": 26.68332812825267
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "reserved",
+        "count": 3,
+        "rms_px": 2.70801280154532,
+        "median_px": 1.4142135623730951,
+        "p90_px": 3.676955262170047,
+        "max_px": 4.242640687119285
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "fit",
+        "count": 27,
+        "rms_px": 39.35169063147803,
+        "median_px": 23.323807579381203,
+        "p90_px": 72.40252425715633,
+        "max_px": 74.02702209328699
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "fit",
+        "count": 27,
+        "rms_px": 2.3570226039551585,
+        "median_px": 1.4142135623730951,
+        "p90_px": 3.605551275463989,
+        "max_px": 4.242640687119285
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "reserved",
+        "count": 12,
+        "rms_px": 38.123702163702134,
+        "median_px": 19.526420996107078,
+        "p90_px": 70.84191011808498,
+        "max_px": 74.65252842335616
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "reserved",
+        "count": 12,
+        "rms_px": 2.309401076758503,
+        "median_px": 1.4142135623730951,
+        "p90_px": 3.605551275463989,
+        "max_px": 3.605551275463989
+      }
+    ]
+  },
+  "actual_tool_masks": {
+    "method": "native-resolution public SensorCamera render of complete USD scene; visible per-arm union of all five actual CAD links",
+    "independent_of_fitter": "No fit-time silhouette projection, containment helper, or generated hull is used",
+    "scope": "Only annotated partial contours and point disks contribute. No contour is inferred across occluded source fragments. Jaws remain diagnostic because tool geometry/opening is not independently verified.",
+    "limits": [
+      "Rendered visibility is model depth ordering; source videos have no measured depth.",
+      "A visible arm mask boundary can include occlusion by other model geometry; manual fragments exclude source occlusions, but model/recorded occlusion may differ.",
+      "Nearest visible raster boundary has about1px discretization. Distances preserve arm identity, not a correspondence along each contour.",
+      "Full-arm union differs intentionally from fit-time wrist-head-only geometry at jaw attachments."
+    ],
+    "observations_sha256": "0d766c18573cb9a0a2482332f36b9f1c91e924b5a636afa9ea3f269b3e5bc9dd",
+    "inputs": {
+      "baseline": {
+        "recording.json": "b6432022e05d5467800a73b1fcdb3b3c150c59a16e09e2f312953d188a0ebb78",
+        "motion.npz": "1df468fcaf713583ba0472c79e6e1c99716077f6d4c5c2adfe617c101084c4d9",
+        "camera_poses.npz": "e1e38b1d525c1222e7e6525d0660809e830dba6241699e828e8d1167cc2284c2",
+        "rig.usdc": "db2fac281e36cc380e914ece5adcb982a13fc34d0b7ca4a674ff4beb6da8566f"
+      },
+      "candidate": {
+        "recording.json": "1150c48f2233522b6f90e90fdf3f88c642137e4c93c8267ffc9dc9489447bdb4",
+        "motion.npz": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+        "camera_poses.npz": "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+        "rig.usdc": "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53"
+      }
+    },
+    "summary": [
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 19,
+        "rms_px": 10.417596449732235,
+        "median_px": 6.708203932499369,
+        "p90_px": 16.106040558903494,
+        "max_px": 26.832815729997478
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 6,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 6,
+        "rms_px": 5.732456982178602,
+        "median_px": 0.0,
+        "p90_px": 7.020797289396148,
+        "max_px": 14.041594578792296
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "background",
+        "count": 2,
+        "rms_px": 3.25661653798294,
+        "median_px": 2.302775637731995,
+        "p90_px": 4.144996147917591,
+        "max_px": 4.60555127546399
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 19,
+        "rms_px": 7.553319242488521,
+        "median_px": 3.1622776601683795,
+        "p90_px": 14.510977830948466,
+        "max_px": 16.97056274847714
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 6,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 6,
+        "rms_px": 0.408248290463863,
+        "median_px": 0.0,
+        "p90_px": 0.5,
+        "max_px": 1.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "background",
+        "count": 2,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 12,
+        "rms_px": 11.445523142259598,
+        "median_px": 9.743416490252569,
+        "p90_px": 17.748135360760735,
+        "max_px": 19.4164878389476
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 8.60498315512335,
+        "median_px": 6.524937810560445,
+        "p90_px": 12.444078891490875,
+        "max_px": 13.041594578792296
+      },
+      {
+        "version": "baseline",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "background",
+        "count": 2,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 12,
+        "rms_px": 8.27143679578504,
+        "median_px": 6.576915171081847,
+        "p90_px": 11.919100503552263,
+        "max_px": 16.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 5.682036070453331,
+        "median_px": 4.0,
+        "p90_px": 8.049747468305833,
+        "max_px": 8.071067811865476
+      },
+      {
+        "version": "candidate",
+        "camera": "psm1",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "background",
+        "count": 2,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 26,
+        "rms_px": 13.050198937475717,
+        "median_px": 10.169900722761108,
+        "p90_px": 21.29538088101419,
+        "max_px": 24.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 6,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 6,
+        "rms_px": 4.411956408607982,
+        "median_px": 2.0,
+        "p90_px": 7.0990195135927845,
+        "max_px": 7.0990195135927845
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "boundary",
+        "count": 12,
+        "rms_px": 8.524474568362947,
+        "median_px": 7.905124837953327,
+        "p90_px": 13.304338039135367,
+        "max_px": 15.231546211727817
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "background",
+        "count": 2,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 26,
+        "rms_px": 9.681465241933642,
+        "median_px": 4.0,
+        "p90_px": 19.05590176613185,
+        "max_px": 26.076809620810597
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 6,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 6,
+        "rms_px": 0.408248290463863,
+        "median_px": 0.0,
+        "p90_px": 0.5,
+        "max_px": 1.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "boundary",
+        "count": 12,
+        "rms_px": 8.741662694628904,
+        "median_px": 2.5,
+        "p90_px": 15.534089951798238,
+        "max_px": 17.029386365926403
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "fit",
+        "part": "jaw",
+        "kind": "background",
+        "count": 2,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 24,
+        "rms_px": 12.583057392117917,
+        "median_px": 12.509213758763249,
+        "p90_px": 18.384776310850235,
+        "max_px": 24.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 6,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 6,
+        "rms_px": 4.098620827155201,
+        "median_px": 0.0,
+        "p90_px": 7.0990195135927845,
+        "max_px": 7.0990195135927845
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "boundary",
+        "count": 12,
+        "rms_px": 8.431093246627826,
+        "median_px": 6.10555127546399,
+        "p90_px": 13.372694307760376,
+        "max_px": 13.92838827718412
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "background",
+        "count": 2,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 24,
+        "rms_px": 5.66421515598881,
+        "median_px": 4.061552812808831,
+        "p90_px": 10.584032966784152,
+        "max_px": 12.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 6,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 6,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "boundary",
+        "count": 12,
+        "rms_px": 8.587782018658833,
+        "median_px": 3.414213562373095,
+        "p90_px": 15.400090203131851,
+        "max_px": 15.620499351813308
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "foreground",
+        "count": 4,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "psm2",
+        "split": "reserved",
+        "part": "jaw",
+        "kind": "background",
+        "count": 2,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "left",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 30,
+        "rms_px": 8.687155268939692,
+        "median_px": 3.605551275463989,
+        "p90_px": 13.822462287946092,
+        "max_px": 24.0
+      },
+      {
+        "version": "baseline",
+        "camera": "left",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 8,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "left",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 8,
+        "rms_px": 4.050991718818089,
+        "median_px": 0.0,
+        "p90_px": 7.621320343559642,
+        "max_px": 9.071067811865476
+      },
+      {
+        "version": "candidate",
+        "camera": "left",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 30,
+        "rms_px": 6.836178269569434,
+        "median_px": 4.0,
+        "p90_px": 11.100000000000001,
+        "max_px": 18.0
+      },
+      {
+        "version": "candidate",
+        "camera": "left",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 8,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "left",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 8,
+        "rms_px": 4.773415640649559,
+        "median_px": 0.0,
+        "p90_px": 8.085152509038537,
+        "max_px": 11.848857801796104
+      },
+      {
+        "version": "baseline",
+        "camera": "right",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 30,
+        "rms_px": 7.859177225808479,
+        "median_px": 4.192582403567252,
+        "p90_px": 14.00356688476182,
+        "max_px": 18.0
+      },
+      {
+        "version": "baseline",
+        "camera": "right",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 8,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "right",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 8,
+        "rms_px": 2.730096541286808,
+        "median_px": 0.0,
+        "p90_px": 2.997056274847713,
+        "max_px": 7.656854249492381
+      },
+      {
+        "version": "candidate",
+        "camera": "right",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 30,
+        "rms_px": 5.57075698027955,
+        "median_px": 3.58113883008419,
+        "p90_px": 8.156031973468696,
+        "max_px": 13.038404810405298
+      },
+      {
+        "version": "candidate",
+        "camera": "right",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 8,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "right",
+        "split": "fit",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 8,
+        "rms_px": 2.791142409018689,
+        "median_px": 0.0,
+        "p90_px": 3.049285568453589,
+        "max_px": 7.830951894845301
+      },
+      {
+        "version": "baseline",
+        "camera": "left",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 24,
+        "rms_px": 11.204537771218707,
+        "median_px": 7.636680149613264,
+        "p90_px": 20.25756931811348,
+        "max_px": 24.331050121192877
+      },
+      {
+        "version": "baseline",
+        "camera": "left",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 8,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "left",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 7,
+        "rms_px": 4.537003355566966,
+        "median_px": 0.0,
+        "p90_px": 7.27476503884738,
+        "max_px": 10.94427190999916
+      },
+      {
+        "version": "candidate",
+        "camera": "left",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 24,
+        "rms_px": 10.307764064044152,
+        "median_px": 7.245606220104248,
+        "p90_px": 17.82075266641679,
+        "max_px": 19.235384061671343
+      },
+      {
+        "version": "candidate",
+        "camera": "left",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 8,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "left",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 7,
+        "rms_px": 4.795831523312719,
+        "median_px": 0.0,
+        "p90_px": 8.000000000000002,
+        "max_px": 11.0
+      },
+      {
+        "version": "baseline",
+        "camera": "right",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 24,
+        "rms_px": 9.506576670915772,
+        "median_px": 6.0777536075910294,
+        "p90_px": 17.34341649025257,
+        "max_px": 20.615528128088304
+      },
+      {
+        "version": "baseline",
+        "camera": "right",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 8,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "baseline",
+        "camera": "right",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 7,
+        "rms_px": 2.390457218668787,
+        "median_px": 0.0,
+        "p90_px": 3.6000000000000014,
+        "max_px": 6.0
+      },
+      {
+        "version": "candidate",
+        "camera": "right",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "boundary",
+        "count": 24,
+        "rms_px": 7.530493565054905,
+        "median_px": 5.192582403567252,
+        "p90_px": 14.307940978544845,
+        "max_px": 16.1245154965971
+      },
+      {
+        "version": "candidate",
+        "camera": "right",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "foreground",
+        "count": 8,
+        "rms_px": 0.0,
+        "median_px": 0.0,
+        "p90_px": 0.0,
+        "max_px": 0.0
+      },
+      {
+        "version": "candidate",
+        "camera": "right",
+        "split": "reserved",
+        "part": "wrist_head",
+        "kind": "background",
+        "count": 7,
+        "rms_px": 2.4346434911346626,
+        "median_px": 0.0,
+        "p90_px": 3.649242250247066,
+        "max_px": 6.123105625617661
+      }
+    ]
+  },
+  "actual_pad_silhouette": {
+    "method": "Nearest actual rendered phantom/background silhouette to independently observed physical perimeter. The same phantom USD is rendered alone, without tool occlusion; internal region transitions are excluded. Distances are in original native pixels. No geometry or camera parameters are changed.",
+    "legend": "cyan observed perimeter; red model silhouette; yellow nearest-distance segments",
+    "sample": "preparation-source/simulation/recording_tissue3_215300/recording.json",
+    "sample_sha256": "1150c48f2233522b6f90e90fdf3f88c642137e4c93c8267ffc9dc9489447bdb4",
+    "calibration_sha256": "98ae416102a2dcecbd51a0a236e6d54ec6ee3319ced707c7577b285f3b7d69e7",
+    "phantom_sha256": "3f2b658dc08d347a67bbc997ab0017cf1332bbe9865c0c271f4357498a088535",
+    "annotations": "annotation-source/recording_tissue3_215300/manual_pad_boundary.json",
+    "annotation_sha256": "eb4ceafe081ec1b16fa34432be514d59f44360c3507e2dac7a683c8ecabadd9d",
+    "raster_note": "240-wide ray grids imply about 2.7 native pixels per wrist pixel; raster quantization limits subpixel claims.",
+    "observability_note": "These observations constrain one physical outer pad side, not the complete rectangle or unobserved corners.",
+    "rows": [
+      {
+        "camera": "psm1",
+        "frame": 4,
+        "split": "fit",
+        "available": true,
+        "rms_px": 2.2838671990104893,
+        "median_px": 1.900292375165224,
+        "maximum_px": 4.006938426723752,
+        "sample_count": 9
+      },
+      {
+        "camera": "psm2",
+        "frame": 4,
+        "split": "fit",
+        "available": true,
+        "rms_px": 2.28521820013368,
+        "median_px": 2.1952016298304584,
+        "maximum_px": 3.5355339059327378,
+        "sample_count": 8
+      },
+      {
+        "camera": "psm1",
+        "frame": 75,
+        "split": "fit",
+        "available": true,
+        "rms_px": 1.9334154333963662,
+        "median_px": 1.7159383568311712,
+        "maximum_px": 2.877112750272021,
+        "sample_count": 7
+      },
+      {
+        "camera": "psm2",
+        "frame": 75,
+        "split": "fit",
+        "available": true,
+        "rms_px": 2.006932429798718,
+        "median_px": 1.637307190352483,
+        "maximum_px": 3.2058973436119094,
+        "sample_count": 8
+      },
+      {
+        "camera": "psm1",
+        "frame": 150,
+        "split": "fit",
+        "available": true,
+        "rms_px": 1.377252844188527,
+        "median_px": 1.269295517643976,
+        "maximum_px": 2.013840995599105,
+        "sample_count": 7
+      },
+      {
+        "camera": "psm2",
+        "frame": 150,
+        "split": "fit",
+        "available": true,
+        "rms_px": 1.7716909687891078,
+        "median_px": 1.343871079166918,
+        "maximum_px": 3.5039660069381067,
+        "sample_count": 8
+      },
+      {
+        "camera": "psm1",
+        "frame": 300,
+        "split": "heldout",
+        "available": true,
+        "rms_px": 8.210577339439268,
+        "median_px": 8.75912222898061,
+        "maximum_px": 12.509996003196804,
+        "sample_count": 9
+      },
+      {
+        "camera": "psm2",
+        "frame": 300,
+        "split": "heldout",
+        "available": true,
+        "rms_px": 3.476108935769043,
+        "median_px": 4.003476739403024,
+        "maximum_px": 4.576510072581995,
+        "sample_count": 8
+      },
+      {
+        "camera": "psm1",
+        "frame": 450,
+        "split": "fit",
+        "available": true,
+        "rms_px": 2.8625940062196116,
+        "median_px": 2.6541669915021044,
+        "maximum_px": 3.836954811073778,
+        "sample_count": 8
+      },
+      {
+        "camera": "psm2",
+        "frame": 450,
+        "split": "fit",
+        "available": true,
+        "rms_px": 1.6583123951777015,
+        "median_px": 1.3515081977422156,
+        "maximum_px": 2.9533408577782096,
+        "sample_count": 8
+      },
+      {
+        "camera": "psm1",
+        "frame": 525,
+        "split": "heldout",
+        "available": true,
+        "rms_px": 11.778039829369837,
+        "median_px": 7.781828811265028,
+        "maximum_px": 22.8971128699183,
+        "sample_count": 8
+      },
+      {
+        "camera": "psm2",
+        "frame": 525,
+        "split": "heldout",
+        "available": true,
+        "rms_px": 2.2449237269186946,
+        "median_px": 1.9002923751652117,
+        "maximum_px": 3.2744804507314376,
+        "sample_count": 7
+      },
+      {
+        "camera": "psm1",
+        "frame": 600,
+        "split": "fit",
+        "available": true,
+        "rms_px": 3.1710495984067473,
+        "median_px": 1.9570666853821597,
+        "maximum_px": 6.6374359172466395,
+        "sample_count": 6
+      },
+      {
+        "camera": "psm2",
+        "frame": 600,
+        "split": "fit",
+        "available": true,
+        "rms_px": 3.617089069035116,
+        "median_px": 3.3020726066139123,
+        "maximum_px": 5.296749527356921,
+        "sample_count": 8
+      }
+    ],
+    "placement_scope": "Historical predecessor pad placement; retained for comparison, not current translated-pad clearance."
+  },
+  "distal_clearance": {
+    "sample": "preparation-source/simulation/recording_tissue3_215300/recording.json",
+    "sample_sha256": "1150c48f2233522b6f90e90fdf3f88c642137e4c93c8267ffc9dc9489447bdb4",
+    "motion_sha256": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+    "calibration_sha256": "98ae416102a2dcecbd51a0a236e6d54ec6ee3319ced707c7577b285f3b7d69e7",
+    "geometry_sha256": {
+      "phantom.usdc": "3f2b658dc08d347a67bbc997ab0017cf1332bbe9865c0c271f4357498a088535",
+      "rig.usdc": "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53"
+    },
+    "device": "cpu",
+    "frame_count": 601,
+    "supported_frames": [
+      4,
+      600
+    ],
+    "excluded_unsupported_frames": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "table_plane": {
+      "normal": [
+        0.006206048123943883,
+        -0.012670161377755661,
+        0.999900471035665
+      ],
+      "offset_m": -0.02619294083769942,
+      "equation": "normal dot world_point = offset_m",
+      "evidence": "Actual USD table top, checked against the fixture-derived support plane."
+    },
+    "phantom_bottom_plane": {
+      "normal": [
+        0.006206048123943883,
+        -0.012670161377755661,
+        0.999900471035665
+      ],
+      "offset_m": -0.0082696646820395,
+      "evidence": {
+        "unique_vertices": 19737,
+        "rms_error_m": 2.475744403834551e-10,
+        "maximum_error_m": 5.071722920108046e-10
+      }
+    },
+    "actual_table_geometry": {
+      "authored_table_present": true,
+      "surface_plane_offset_m": -0.02619294083769942,
+      "cubes": [
+        {
+          "path": "/SutureBotReplay/Table/Visual",
+          "top_plane_offset_m": -0.02619294083769942,
+          "phantom_bottom_gap_m": 0.01792327615565992,
+          "top_corner_spread_m": 4.145041619541684e-06
+        }
+      ],
+      "declared": {
+        "normal_world": [
+          0.0062060481409170155,
+          -0.012670161411891367,
+          0.9999004710351272
+        ],
+        "surface_plane_dot_normal_m": -0.02619294102107381,
+        "size_m": [
+          0.4634393731387794,
+          0.3625299035835417,
+          0.025
+        ],
+        "height_source": "transformed source CAD feet plane",
+        "pad_bottom_above_fixture_feet_m": 0.01792327633541265,
+        "pad_fixture_normal_angle_deg": 0.0,
+        "extent_and_thickness": "visual context; not measured table dimensions"
+      }
+    },
+    "query_validation": "Tilted-plane analytic distances and both positive/negative signed clearances passed within0.2micrometres on the selected device.",
+    "phantom_meshes": [
+      {
+        "path": "/PhantomSurface/Region07",
+        "vertices": 35306,
+        "triangles": 42163
+      },
+      {
+        "path": "/PhantomSurface/Region08",
+        "vertices": 14756,
+        "triangles": 14311
+      },
+      {
+        "path": "/PhantomSurface/Region02",
+        "vertices": 10236,
+        "triangles": 10267
+      },
+      {
+        "path": "/PhantomSurface/Region09",
+        "vertices": 7984,
+        "triangles": 8106
+      },
+      {
+        "path": "/PhantomSurface/Region10",
+        "vertices": 6394,
+        "triangles": 6262
+      },
+      {
+        "path": "/PhantomSurface/Region03",
+        "vertices": 5742,
+        "triangles": 5763
+      },
+      {
+        "path": "/PhantomSurface/Region01",
+        "vertices": 7205,
+        "triangles": 7284
+      },
+      {
+        "path": "/PhantomSurface/Region04",
+        "vertices": 2982,
+        "triangles": 2994
+      },
+      {
+        "path": "/PhantomSurface/Region11",
+        "vertices": 3251,
+        "triangles": 3293
+      },
+      {
+        "path": "/PhantomSurface/Region06",
+        "vertices": 3534,
+        "triangles": 3503
+      },
+      {
+        "path": "/PhantomSurface/Region05",
+        "vertices": 4689,
+        "triangles": 4512
+      },
+      {
+        "path": "/PhantomSurface/Region12",
+        "vertices": 2652,
+        "triangles": 2498
+      }
+    ],
+    "jaws": [
+      {
+        "path": "/SutureBotReplay/PSM1/jaw1",
+        "meshes": [
+          {
+            "path": "/SutureBotReplay/PSM1/jaw1/CAD",
+            "vertices": 10188,
+            "triangles": 20376
+          }
+        ],
+        "local_bounds_m": [
+          [
+            -0.002411999972537163,
+            -0.0024129999801516533,
+            -0.0010310000507160987
+          ],
+          [
+            0.0024129999801516494,
+            0.009651999920606613,
+            0.0019690000917762553
+          ]
+        ],
+        "distal_band_axis": "body-local +Y",
+        "distal_band_length_m": 0.001,
+        "distal_surface_samples": 1890,
+        "tip_center_local_m": [
+          -0.00047699010365880197,
+          0.009614574271115926,
+          1.882178160729103e-05
+        ],
+        "metrics": {
+          "distal_min_closest_distance": {
+            "valid_samples": 597,
+            "minimum_mm": 0.7242468595504761,
+            "median_mm": 10.960193634033203,
+            "p05_mm": 1.9595537185668945,
+            "p95_mm": 18.13643455505371,
+            "maximum_mm": 22.899742126464844,
+            "minimum_frame": 384,
+            "negative_frames": 0,
+            "within_one_mm_frames": 4
+          },
+          "tip_center_closest_distance": {
+            "valid_samples": 597,
+            "minimum_mm": 1.1669009923934937,
+            "median_mm": 11.689984321594238,
+            "p05_mm": 2.5778567790985107,
+            "p95_mm": 18.945556640625,
+            "maximum_mm": 23.815746307373047,
+            "minimum_frame": 384,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_closest_face_normal_projection": {
+            "valid_samples": 597,
+            "minimum_mm": 0.7242468595504761,
+            "median_mm": 10.629752159118652,
+            "p05_mm": 1.9215316772460938,
+            "p95_mm": 17.790973663330078,
+            "maximum_mm": 22.89851188659668,
+            "minimum_frame": 384,
+            "negative_frames": 0,
+            "within_one_mm_frames": 5
+          },
+          "tip_center_closest_face_normal_projection": {
+            "valid_samples": 597,
+            "minimum_mm": 1.166900873184204,
+            "median_mm": 11.667547225952148,
+            "p05_mm": 2.5757315158843994,
+            "p95_mm": 18.651790618896484,
+            "maximum_mm": 23.800134658813477,
+            "minimum_frame": 384,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_vertical_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 1.0727941989898682,
+            "median_mm": 12.441590309143066,
+            "p05_mm": 2.8320014476776123,
+            "p95_mm": 21.277509689331055,
+            "maximum_mm": 27.838871002197266,
+            "minimum_frame": 446,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_vertical_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 1.677587628364563,
+            "median_mm": 13.392194747924805,
+            "p05_mm": 3.768512725830078,
+            "p95_mm": 22.654359817504883,
+            "maximum_mm": 28.83578872680664,
+            "minimum_frame": 447,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_base_normal_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 1.0681301355361938,
+            "median_mm": 12.443214416503906,
+            "p05_mm": 2.8123645782470703,
+            "p95_mm": 21.04530906677246,
+            "maximum_mm": 27.694494247436523,
+            "minimum_frame": 446,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_base_normal_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 1.675337553024292,
+            "median_mm": 13.37398624420166,
+            "p05_mm": 3.7563114166259766,
+            "p95_mm": 22.420089721679688,
+            "maximum_mm": 28.67397689819336,
+            "minimum_frame": 447,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_table_height": {
+            "valid_samples": 597,
+            "minimum_mm": 27.5846507103528,
+            "median_mm": 39.676576776496546,
+            "p05_mm": 29.91789501508934,
+            "p95_mm": 45.69076414140131,
+            "maximum_mm": 50.96099224364768,
+            "minimum_frame": 387,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_table_height": {
+            "valid_samples": 597,
+            "minimum_mm": 28.04923430955933,
+            "median_mm": 40.407141400702194,
+            "p05_mm": 30.483098320024517,
+            "p95_mm": 46.56546296961681,
+            "maximum_mm": 51.94674739607589,
+            "minimum_frame": 387,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          }
+        }
+      },
+      {
+        "path": "/SutureBotReplay/PSM1/jaw2",
+        "meshes": [
+          {
+            "path": "/SutureBotReplay/PSM1/jaw2/CAD",
+            "vertices": 10188,
+            "triangles": 20376
+          }
+        ],
+        "local_bounds_m": [
+          [
+            -0.0024129999801516563,
+            -0.0024129999801516533,
+            -0.001994000049307939
+          ],
+          [
+            0.002411999972537156,
+            0.009651999920606613,
+            0.0010049999691545998
+          ]
+        ],
+        "distal_band_axis": "body-local +Y",
+        "distal_band_length_m": 0.001,
+        "distal_surface_samples": 1888,
+        "tip_center_local_m": [
+          0.00047699010365879796,
+          0.009614574271115926,
+          -4.4277228070229386e-05
+        ],
+        "metrics": {
+          "distal_min_closest_distance": {
+            "valid_samples": 597,
+            "minimum_mm": 0.8907631039619446,
+            "median_mm": 10.600069999694824,
+            "p05_mm": 2.617910861968994,
+            "p95_mm": 18.17978858947754,
+            "maximum_mm": 22.72320556640625,
+            "minimum_frame": 446,
+            "negative_frames": 0,
+            "within_one_mm_frames": 4
+          },
+          "tip_center_closest_distance": {
+            "valid_samples": 597,
+            "minimum_mm": 1.4409992694854736,
+            "median_mm": 11.240979194641113,
+            "p05_mm": 3.5571305751800537,
+            "p95_mm": 19.091644287109375,
+            "maximum_mm": 23.60694122314453,
+            "minimum_frame": 446,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_closest_face_normal_projection": {
+            "valid_samples": 597,
+            "minimum_mm": 0.8497239351272583,
+            "median_mm": 10.386642456054688,
+            "p05_mm": 2.616520404815674,
+            "p95_mm": 17.975004196166992,
+            "maximum_mm": 22.696760177612305,
+            "minimum_frame": 446,
+            "negative_frames": 0,
+            "within_one_mm_frames": 4
+          },
+          "tip_center_closest_face_normal_projection": {
+            "valid_samples": 597,
+            "minimum_mm": 1.4409993886947632,
+            "median_mm": 11.212076187133789,
+            "p05_mm": 3.540390968322754,
+            "p95_mm": 18.912199020385742,
+            "maximum_mm": 23.569181442260742,
+            "minimum_frame": 446,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_vertical_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 0.9839832782745361,
+            "median_mm": 11.436327934265137,
+            "p05_mm": 4.475214958190918,
+            "p95_mm": 21.65884017944336,
+            "maximum_mm": 27.776718139648438,
+            "minimum_frame": 446,
+            "negative_frames": 0,
+            "within_one_mm_frames": 1
+          },
+          "tip_center_vertical_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 1.675233244895935,
+            "median_mm": 12.753457069396973,
+            "p05_mm": 5.675038814544678,
+            "p95_mm": 23.00788688659668,
+            "maximum_mm": 28.748153686523438,
+            "minimum_frame": 447,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_base_normal_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 0.9786635637283325,
+            "median_mm": 11.45206356048584,
+            "p05_mm": 4.426109790802002,
+            "p95_mm": 21.49854278564453,
+            "maximum_mm": 27.629703521728516,
+            "minimum_frame": 446,
+            "negative_frames": 0,
+            "within_one_mm_frames": 1
+          },
+          "tip_center_base_normal_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 1.6560554504394531,
+            "median_mm": 12.68436050415039,
+            "p05_mm": 5.614176273345947,
+            "p95_mm": 22.89727020263672,
+            "maximum_mm": 28.623491287231445,
+            "minimum_frame": 447,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_table_height": {
+            "valid_samples": 597,
+            "minimum_mm": 27.422588734524293,
+            "median_mm": 39.13831743394933,
+            "p05_mm": 29.4715048375845,
+            "p95_mm": 45.36104244929177,
+            "maximum_mm": 50.636316860158054,
+            "minimum_frame": 386,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_table_height": {
+            "valid_samples": 597,
+            "minimum_mm": 27.88855612216114,
+            "median_mm": 39.7487830480142,
+            "p05_mm": 30.11425321990839,
+            "p95_mm": 46.18753017899569,
+            "maximum_mm": 51.543880629758384,
+            "minimum_frame": 386,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          }
+        }
+      },
+      {
+        "path": "/SutureBotReplay/PSM2/jaw1",
+        "meshes": [
+          {
+            "path": "/SutureBotReplay/PSM2/jaw1/CAD",
+            "vertices": 10188,
+            "triangles": 20376
+          }
+        ],
+        "local_bounds_m": [
+          [
+            -0.002411999972537153,
+            -0.0024129999801516602,
+            -0.0010310000507161013
+          ],
+          [
+            0.0024129999801516602,
+            0.009651999920606606,
+            0.0019690000917762527
+          ]
+        ],
+        "distal_band_axis": "body-local +Y",
+        "distal_band_length_m": 0.001,
+        "distal_surface_samples": 1890,
+        "tip_center_local_m": [
+          -0.00047699010365879357,
+          0.009614574271115926,
+          1.882178160728857e-05
+        ],
+        "metrics": {
+          "distal_min_closest_distance": {
+            "valid_samples": 597,
+            "minimum_mm": 9.364272117614746,
+            "median_mm": 10.140055656433105,
+            "p05_mm": 9.431795120239258,
+            "p95_mm": 12.109678268432617,
+            "maximum_mm": 13.48613166809082,
+            "minimum_frame": 85,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_closest_distance": {
+            "valid_samples": 597,
+            "minimum_mm": 10.258841514587402,
+            "median_mm": 11.05087661743164,
+            "p05_mm": 10.333054542541504,
+            "p95_mm": 13.120590209960938,
+            "maximum_mm": 14.514376640319824,
+            "minimum_frame": 85,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_closest_face_normal_projection": {
+            "valid_samples": 597,
+            "minimum_mm": 9.057282447814941,
+            "median_mm": 9.725666046142578,
+            "p05_mm": 9.214627265930176,
+            "p95_mm": 11.277349472045898,
+            "maximum_mm": 12.47752857208252,
+            "minimum_frame": 253,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_closest_face_normal_projection": {
+            "valid_samples": 597,
+            "minimum_mm": 9.964491844177246,
+            "median_mm": 10.831246376037598,
+            "p05_mm": 10.136463165283203,
+            "p95_mm": 12.507859230041504,
+            "maximum_mm": 13.498739242553711,
+            "minimum_frame": 59,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_vertical_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 12.351304054260254,
+            "median_mm": 14.824316024780273,
+            "p05_mm": 12.378457069396973,
+            "p95_mm": 17.47797966003418,
+            "maximum_mm": 18.932209014892578,
+            "minimum_frame": 87,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_vertical_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 13.118818283081055,
+            "median_mm": 15.580669403076172,
+            "p05_mm": 13.147929191589355,
+            "p95_mm": 18.29998016357422,
+            "maximum_mm": 19.762292861938477,
+            "minimum_frame": 87,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_base_normal_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 12.350052833557129,
+            "median_mm": 14.822065353393555,
+            "p05_mm": 12.377220153808594,
+            "p95_mm": 17.404830932617188,
+            "maximum_mm": 18.91621971130371,
+            "minimum_frame": 87,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_base_normal_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 13.11749267578125,
+            "median_mm": 15.57910442352295,
+            "p05_mm": 13.14663314819336,
+            "p95_mm": 18.29817008972168,
+            "maximum_mm": 19.760339736938477,
+            "minimum_frame": 87,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_table_height": {
+            "valid_samples": 597,
+            "minimum_mm": 34.723948361345165,
+            "median_mm": 37.19766332005558,
+            "p05_mm": 34.751114777901854,
+            "p95_mm": 39.86056122809124,
+            "maximum_mm": 41.31064681034853,
+            "minimum_frame": 87,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_table_height": {
+            "valid_samples": 597,
+            "minimum_mm": 35.49138862930853,
+            "median_mm": 37.952988139941375,
+            "p05_mm": 35.52049199565141,
+            "p95_mm": 40.67205507382557,
+            "maximum_mm": 42.13421982895039,
+            "minimum_frame": 87,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          }
+        }
+      },
+      {
+        "path": "/SutureBotReplay/PSM2/jaw2",
+        "meshes": [
+          {
+            "path": "/SutureBotReplay/PSM2/jaw2/CAD",
+            "vertices": 10188,
+            "triangles": 20376
+          }
+        ],
+        "local_bounds_m": [
+          [
+            -0.0024129999801516464,
+            -0.0024129999801516433,
+            -0.001994000049307942
+          ],
+          [
+            0.002411999972537167,
+            0.009651999920606624,
+            0.0010049999691545974
+          ]
+        ],
+        "distal_band_axis": "body-local +Y",
+        "distal_band_length_m": 0.001,
+        "distal_surface_samples": 1888,
+        "tip_center_local_m": [
+          0.00047699010365880745,
+          0.009614574271115929,
+          -4.4277228070231954e-05
+        ],
+        "metrics": {
+          "distal_min_closest_distance": {
+            "valid_samples": 597,
+            "minimum_mm": 6.227777481079102,
+            "median_mm": 7.940611839294434,
+            "p05_mm": 6.382262706756592,
+            "p95_mm": 10.22516918182373,
+            "maximum_mm": 11.507967948913574,
+            "minimum_frame": 69,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_closest_distance": {
+            "valid_samples": 597,
+            "minimum_mm": 6.924375534057617,
+            "median_mm": 8.684422492980957,
+            "p05_mm": 7.080888271331787,
+            "p95_mm": 11.006569862365723,
+            "maximum_mm": 12.283232688903809,
+            "minimum_frame": 69,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_closest_face_normal_projection": {
+            "valid_samples": 597,
+            "minimum_mm": 6.141692161560059,
+            "median_mm": 7.346083164215088,
+            "p05_mm": 6.300854206085205,
+            "p95_mm": 10.013548851013184,
+            "maximum_mm": 11.1715669631958,
+            "minimum_frame": 68,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_closest_face_normal_projection": {
+            "valid_samples": 597,
+            "minimum_mm": 6.781627655029297,
+            "median_mm": 8.292903900146484,
+            "p05_mm": 7.011576175689697,
+            "p95_mm": 10.903489112854004,
+            "maximum_mm": 12.249839782714844,
+            "minimum_frame": 69,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_vertical_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 10.395869255065918,
+            "median_mm": 11.997446060180664,
+            "p05_mm": 10.601326942443848,
+            "p95_mm": 12.84901237487793,
+            "maximum_mm": 12.892410278320312,
+            "minimum_frame": 68,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_vertical_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 11.238664627075195,
+            "median_mm": 13.005629539489746,
+            "p05_mm": 11.446794509887695,
+            "p95_mm": 13.86992073059082,
+            "maximum_mm": 14.037653923034668,
+            "minimum_frame": 68,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_base_normal_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 10.286956787109375,
+            "median_mm": 11.808008193969727,
+            "p05_mm": 10.488215446472168,
+            "p95_mm": 12.543874740600586,
+            "maximum_mm": 12.591690063476562,
+            "minimum_frame": 69,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_base_normal_clearance": {
+            "valid_samples": 597,
+            "minimum_mm": 11.118680000305176,
+            "median_mm": 12.80805492401123,
+            "p05_mm": 11.339509963989258,
+            "p95_mm": 13.63782024383545,
+            "maximum_mm": 13.680219650268555,
+            "minimum_frame": 68,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "distal_min_table_height": {
+            "valid_samples": 597,
+            "minimum_mm": 34.12778939181947,
+            "median_mm": 36.656081899817906,
+            "p05_mm": 34.158866312720875,
+            "p95_mm": 39.32674590231638,
+            "maximum_mm": 40.64784408446177,
+            "minimum_frame": 70,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          },
+          "tip_center_table_height": {
+            "valid_samples": 597,
+            "minimum_mm": 34.87605654420307,
+            "median_mm": 37.39966555393935,
+            "p05_mm": 34.9100289492696,
+            "p95_mm": 40.12146752618584,
+            "maximum_mm": 41.4409216527036,
+            "minimum_frame": 70,
+            "negative_frames": 0,
+            "within_one_mm_frames": 0
+          }
+        }
+      }
+    ],
+    "tip_center_gap": {
+      "PSM1": {
+        "valid_samples": 597,
+        "minimum_mm": 0.956064705433687,
+        "median_mm": 0.9560647054336947,
+        "p05_mm": 0.9560647054336893,
+        "p95_mm": 8.628553162560237,
+        "maximum_mm": 10.747654880994379,
+        "minimum_frame": 23,
+        "negative_frames": 0,
+        "within_one_mm_frames": 454
+      },
+      "PSM2": {
+        "valid_samples": 597,
+        "minimum_mm": 3.204278827920215,
+        "median_mm": 4.016428208815861,
+        "p05_mm": 3.6315862444648244,
+        "p95_mm": 4.965351028179398,
+        "maximum_mm": 5.430195730573653,
+        "minimum_frame": 578,
+        "negative_frames": 0,
+        "within_one_mm_frames": 0
+      }
+    },
+    "definitions": {
+      "tip_center": "Mean of unique actual CAD vertices in the final0.1mm along body-local+Y; representative distal center, not an asserted material surface point.",
+      "distal_surface": "All unique actual jaw mesh vertices plus actual triangle centroids in the final1mm along CAD+Y. Minimum sampled distance is not an exact mesh-mesh collision distance.",
+      "closest_distance": "Euclidean distance to the closest point on the complete actual phantom triangle surface, including groove walls and bottom.",
+      "closest_face_normal_projection": "Dot(sample-minus-closest-point, oriented nearest triangle normal); a local sign diagnostic, not a certified global inside/outside classification.",
+      "vertical_clearance": "Signed world-Z height above the first actual phantom surface hit by a downward ray from0.2m above the sample; NaN where no surface lies below that XY.",
+      "base_normal_clearance": "Same topmost-surface comparison along the unchanged native phantom base normal instead of worldZ.",
+      "table_height": "Signed distance from the actual USD table top; phantom displacement relative to that plane is independently fitted."
+    },
+    "limitations": [
+      "Position-only recorded replay: no forces, contact solver, tissue deformation, grasp success or suturing are inferred.",
+      "The needle is omitted; a tool-to-pad or jaw-to-jaw gap can be legitimate while the real instrument holds a needle.",
+      "Static scanned phantom geometry differs from tissue deformed in the video. Negative local clearance is geometry overlap, not proof of physical contact.",
+      "Metrics summarize supported frames only; unsupported endpoint placeholders remain explicitly flagged in the NPZ arrays.",
+      "Distal sampling can miss inter-triangle penetration or a smaller distance between unsampled surface points."
+    ],
+    "placement_scope": "Historical predecessor pad placement; retained for comparison, not current translated-pad clearance."
+  },
+  "mount_consistency": {
+    "supported_frames": [
+      4,
+      600
+    ],
+    "frame_count": 597,
+    "fixture_port_to_registered_pivot_error_m": [
+      1.2435729545912608e-13,
+      2.7597337020578977e-13
+    ],
+    "table": {
+      "normal_world": [
+        0.0062060481409170155,
+        -0.012670161411891367,
+        0.9999004710351272
+      ],
+      "surface_plane_dot_normal_m": -0.02619294102107381,
+      "size_m": [
+        0.4634393731387794,
+        0.3625299035835417,
+        0.025
+      ],
+      "height_source": "transformed source CAD feet plane",
+      "pad_bottom_above_fixture_feet_m": 0.01792327633541265,
+      "pad_fixture_normal_angle_deg": 0.0,
+      "extent_and_thickness": "visual context; not measured table dimensions"
+    },
+    "arms": {
+      "psm1": {
+        "maximum_camera_shaft_angle_deg": 8.537736462515939e-07,
+        "mount_translation_max_drift_m": 5.1577036902917074e-17,
+        "mount_rotation_max_matrix_drift": 6.817448332140158e-16,
+        "roll_from_camera_cv": [
+          [
+            0.19940118722743091,
+            0.9799179386725659,
+            3.640729241912108e-17,
+            -0.006553479476498408
+          ],
+          [
+            -0.9799179386725662,
+            0.19940118722743078,
+            7.674357773226741e-17,
+            -0.0013681978918822085
+          ],
+          [
+            4.9783536149223065e-17,
+            5.1286216517422646e-17,
+            1.0,
+            -0.04758875274573812
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "shaft_to_registered_rcm_median_m": 1.5891476608321928e-06,
+        "shaft_to_registered_rcm_max_m": 0.0009141433009575395,
+        "shaft_to_registered_rcm_max_frame": 332
+      },
+      "psm2": {
+        "maximum_camera_shaft_angle_deg": 2.561320938754782e-06,
+        "mount_translation_max_drift_m": 3.622208959480119e-17,
+        "mount_rotation_max_matrix_drift": 7.052865878899256e-16,
+        "roll_from_camera_cv": [
+          [
+            -0.06840223406072389,
+            0.9976578242942327,
+            -2.5115798620156632e-17,
+            -0.00604642836969772
+          ],
+          [
+            -0.9976578242942326,
+            -0.06840223406072396,
+            -2.025024791323718e-17,
+            0.0006143668066116437
+          ],
+          [
+            -7.199968298002814e-17,
+            -8.370095658880647e-18,
+            1.0,
+            -0.050240626532489056
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "shaft_to_registered_rcm_median_m": 6.998824442721853e-07,
+        "shaft_to_registered_rcm_max_m": 0.00033848900518781375,
+        "shaft_to_registered_rcm_max_frame": 42
+      }
+    },
+    "interpretation": "Port closure is the calibration constraint. Shaft-line residual retains original measurement and interpolation inconsistency; asynchronous source-topic sampling is a possible cause, not an established diagnosis. Motion is not corrected frame by frame.",
+    "placement_scope": "Historical predecessor pad placement; retained for comparison, not current translated-pad clearance."
+  },
+  "checks": {
+    "preparation": {
+      "tests": 20,
+      "result": "passed",
+      "seconds": 7.657,
+      "coverage": {
+        "camera_and_source_motion": 7,
+        "shaft_and_physical_constraints": 6,
+        "actual_mesh_masks": 5,
+        "input_preservation": 2
+      }
+    },
+    "ruff_check": "passed; complete repository",
+    "ruff_format_check": "passed; 116 Python files",
+    "wheel": {
+      "result": "passed_on_cpu",
+      "wheel_sha256": "0832189164641f07babdbce0840d19f338af941731ba9b8333567a0466b4a782",
+      "wheel_bytes": 126693990,
+      "readme_sha256": "635f668467899cf2044bb1f6901e98976ab320443486924f6243ca5868dce16a",
+      "isolated_runtime_and_assets_verified": true,
+      "catalog": [
+        "tissue3_215248_pickup",
+        "tissue3_215300",
+        "tissue3_222119_approach",
+        "tissue3_224616_approach"
+      ],
+      "recordings_render_device": "cpu",
+      "needle_test_device": "cpu",
+      "needle_tests_passed": 8,
+      "all_four_bundle_files_byte_exact": 7928,
+      "new_recording_render_frames": 20,
+      "baseline_regrasp_frame": 446,
+      "baseline_regrasp_point_error_m": 1.3109602733267094e-09,
+      "backward_seek_deterministic": true,
+      "final_wheel_cuda_attempt": {
+        "completed": false,
+        "reason": "CUDA primary-context allocation was out of memory while other user GPU workloads remained active. No user process was modified.",
+        "log": "wheel_audit/cuda_environment_failure.log"
+      },
+      "separate_repository_cuda_validation": {
+        "tests_passed": 167,
+        "elapsed_s": 240.473,
+        "scope": "Parent reported full repository CUDA suite; this is distinct from the final extracted-wheel CPU checks."
+      },
+      "evidence_sha256": {
+        "regrasp_wheel_build.json": "adb119e0481c44f13d728f8730bfdc3ec212e9eb350aec67245fa3b784aa5401",
+        "regrasp_wheel_recordings_validation.json": "0e358afa9b42ea43f13226e9f7693365f870675a2634c8106c38c32bc1b7bc60",
+        "regrasp_wheel_needle_validation.json": "9c2e955cfb108a00e6b6e82f68a2a68dc651f3297a23fded52e2d7c1ca233343"
+      },
+      "source_checkout_required_for_runtime": false,
+      "physical_image_calibration_accepted": false,
+      "report": "MSc/SutureBot-workbench/outputs/simulation/regrasp_wheel_validation.json",
+      "report_sha256": "d54999715a20806822e5d6c95a13cf703a935c5ecd032d435d5067d42aa27b45",
+      "baseline_packaged_files_byte_exact": 2480,
+      "current_needle_runtime_sha256": "7e704c701dfe3bd3533d2385ff728e9f0523a29cd303d8fa996a4c98ac447131",
+      "new_fixed_grip_transform_error": 4.280187191341156e-07
+    },
+    "source_usd_and_trajectory": {
+      "status": "asset_and_trajectory_contract_passed",
+      "optical_accuracy_validated": false,
+      "alignment_status": "sample_specific_constrained_alignment_estimate",
+      "frame_count": 601,
+      "body_count": 14,
+      "duration_s": 19.994849358,
+      "mesh_count": 23,
+      "quaternion_matrix_max_error": 2.1094237467877974e-15,
+      "initial_usd_transform_max_error": 5.683833569081198e-08,
+      "camera_body_transform_max_error": 0.0,
+      "collision_prim_count": 0,
+      "phantom_geometry": {
+        "source_available": true,
+        "region_count": 12,
+        "reference_position_max_error_m": 0.0,
+        "exterior_triangle_indices_identical": true,
+        "source_hashes_unchanged": true
+      },
+      "invalid_common_samples": 4,
+      "invalid_body_samples": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "scene_sha256": "e30ce457207a0ea76579d2e357be8d9f6ee79cfac5fdfd834c604d5581d98f71",
+      "motion_sha256": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+      "newton_import": {
+        "body_count": 14,
+        "shape_count": 27,
+        "all_bodies_kinematic": true
+      },
+      "scope": "Checks prepared asset consistency and import, not measured metric calibration or visual registration accuracy."
+    },
+    "exact_camera_body_arrays": "passed; all 601 matrices equal, including explicitly invalid endpoint placeholders",
+    "historical_broader_checks": {
+      "full_cuda": {
+        "tests": 154,
+        "passed": 152,
+        "errors": 2,
+        "error_cause": "CUDA primary context could not be created while GPU memory was occupied. Both failed tests passed on immediate isolated retry.",
+        "isolated_retry_tests": 2,
+        "isolated_retry_result": "passed"
+      },
+      "full_cpu": {
+        "result": "incomplete_interrupted",
+        "exit_code": 130,
+        "stopped_during": "test_runtime_demo_loads_free_tissue_recovers_and_resets_after_selection",
+        "reason": "Additional CPU rerun stopped during the expensive retained contact experiment, already covered by the completed GPU run. Earlier CPU checks passed. This is not a passing full CPU suite."
+      }
+    },
+    "historical_check_scope": "The historical solver runs and 20 preparation checks above precede the latest UV/needle package. Fresh wheel and current runtime checks are recorded separately.",
+    "git_diff_check": "passed",
+    "readme_with_all_videos": "passed",
+    "historical_targeted_before_features": {
+      "cpu": {
+        "tests": 13,
+        "result": "passed",
+        "seconds": 1.262
+      },
+      "cuda": {
+        "tests": 13,
+        "result": "passed",
+        "seconds": 1.387
+      }
+    },
+    "targeted_cpu": {
+      "tests": 21,
+      "result": "passed",
+      "seconds": 6.313,
+      "module_source": "fresh extracted wheel outside repository",
+      "coverage": {
+        "recording": 10,
+        "cameras": 4,
+        "point_labels": 2,
+        "rigid_needle": 5
+      },
+      "command": "PYTHONPATH=<extracted-wheel>:tests NEWTON_TEST_DEVICE=cpu python -m unittest test_suturebot_recording test_suturebot_cameras test_suturebot_point_labels test_suturebot_needle -v",
+      "device": "cpu",
+      "tested_wheel_sha256": "2c30b9d87426224b149c6a7378a8a259289ccca941b124c05837210a0c5daeb7",
+      "scope": "Current translated pad and one-backing collider; includes actual drop through raised tissue and contact on backing."
+    },
+    "coordinate_implementation": {
+      "status": "coordinate_implementation_checks_passed_not_optical_calibration",
+      "frames": [
+        100,
+        150
+      ],
+      "camera_views": 4,
+      "actual_sensor_vs_independent_original_cad_samples": 299,
+      "maximum_ray_distance_error_m": 1.7081980360073024e-07,
+      "serialized_body_quaternion_roundtrip_error": 2.1094237467877974e-15,
+      "calibration_sha256": "98ae416102a2dcecbd51a0a236e6d54ec6ee3319ced707c7577b285f3b7d69e7",
+      "checker_sha256": "38e4fd7520635eac17c5358c080993f4f1590b54e462b0ad2f859065f50060ba",
+      "limitations": [
+        "No recording, calibration, geometry or replay archive was changed.",
+        "URDF agreement checks implementation conventions, not the physical identity of both instruments.",
+        "PSM2 uses the documented surrogate geometry; source jaw/body discrepancies remain visible.",
+        "Source orientation semantics and fitted intrinsics, distortion, mount and scene depth remain estimated.",
+        "Camera ray and CAD intersection agreement validates the actual rendering path, not agreement with physical source pixels."
+      ],
+      "scope": "Core rig/camera audit before safe needle-end correction; core rig and camera arrays are unchanged. Not a needle-placement or physical-calibration acceptance check."
+    },
+    "additional_candidates": {
+      "source_report": "MSc workbench outputs/simulation/recording_four_holdouts_validation.json",
+      "samples": [
+        {
+          "sample_id": "tissue3_212958",
+          "region_id": 1,
+          "cached": true,
+          "status": "requires_image_alignment_review",
+          "accepted": false,
+          "numeric_alignment_screen_passed": false,
+          "failed_alignment_checks": [
+            "left_reserved_cap_rms_px",
+            "left_reserved_cap_max_px",
+            "right_reserved_cap_rms_px",
+            "right_reserved_cap_max_px"
+          ],
+          "output": "recording_tissue3_212958",
+          "heldout_cap_metrics": {
+            "left": {
+              "count": 19,
+              "rms_px": 31.141900278695655,
+              "median_px": 1.910308988775906
+            },
+            "right": {
+              "count": 19,
+              "rms_px": 32.435076415673464,
+              "median_px": 1.635981753997447
+            }
+          },
+          "heldout_slit_metrics": {
+            "left": {
+              "count": 197,
+              "rms_px": 14.594901149885478,
+              "median_px": 7.219425874631539
+            },
+            "right": {
+              "count": 277,
+              "rms_px": 18.435881133134263,
+              "median_px": 7.127982062321734
+            }
+          },
+          "actual_render_passed": true,
+          "published": false,
+          "needle_image_accepted": null,
+          "source_csv_sha256": "8ec18422d9998eb1087d0e0649c7fae64a66645ca03f19619c41afe8c9ac5012",
+          "uv_render_scope": "Prepared labels render on unchanged surface triangles; image registration remains unaccepted.",
+          "coordinate_check": {
+            "scope": "Coordinate implementation and source-clock preservation; not image or metric calibration accuracy",
+            "source_arrays_byte_exact": {
+              "timestamps_ns": true,
+              "time_s": true,
+              "numeric_column_names": true,
+              "numeric_values": true,
+              "psm1_pose": true,
+              "psm2_pose": true,
+              "psm1_js": true,
+              "psm2_js": true,
+              "psm1_jaw": true,
+              "psm2_jaw": true
+            },
+            "body_transform_max_abs_errors": {
+              "psm1_roll": 0.0,
+              "psm1_pitch": 0.0,
+              "psm1_yaw": 0.0,
+              "psm1_jaw1": 0.0,
+              "psm1_jaw2": 0.0,
+              "psm2_roll": 0.0,
+              "psm2_pitch": 0.0,
+              "psm2_yaw": 0.0,
+              "psm2_jaw1": 0.0,
+              "psm2_jaw2": 0.0
+            },
+            "camera_transform_max_abs_errors": {
+              "left": 0.0,
+              "right": 0.0,
+              "psm1": 0.0,
+              "psm2": 0.0
+            },
+            "fixture_port_max_error_m": 2.7600121085749954e-13,
+            "pad_fixture_normal_error": 0.0,
+            "passed": true
+          },
+          "green_uv_render": {
+            "method": "Public Newton SensorCamera renders actual imported scene USD materials and face-varying UVs; no painted image overlays",
+            "frame": 667,
+            "device": "cpu",
+            "display_color_rgb": [
+              0,
+              255,
+              0
+            ],
+            "views": {
+              "left": {
+                "native_size": [
+                  960,
+                  540
+                ],
+                "display_label_pixels": 162,
+                "visible_phantom_pixels": 418887,
+                "expected_label_pixels": 162,
+                "overlap_pixels": 162,
+                "union_pixels": 162,
+                "source_pixel_iou": 1.0
+              },
+              "right": {
+                "native_size": [
+                  960,
+                  540
+                ],
+                "display_label_pixels": 146,
+                "visible_phantom_pixels": 414249
+              },
+              "psm1": {
+                "native_size": [
+                  640,
+                  480
+                ],
+                "display_label_pixels": 13,
+                "visible_phantom_pixels": 166669
+              },
+              "psm2": {
+                "native_size": [
+                  640,
+                  480
+                ],
+                "display_label_pixels": 20,
+                "visible_phantom_pixels": 168883
+              }
+            }
+          }
+        },
+        {
+          "sample_id": "tissue4_211216",
+          "region_id": 1,
+          "cached": true,
+          "status": "requires_image_alignment_review",
+          "accepted": false,
+          "numeric_alignment_screen_passed": false,
+          "failed_alignment_checks": [
+            "left_reserved_cap_rms_px",
+            "left_reserved_cap_max_px",
+            "right_reserved_cap_rms_px",
+            "right_reserved_cap_max_px",
+            "right_reserved_slit_rms_px"
+          ],
+          "output": "recording_tissue4_211216",
+          "heldout_cap_metrics": {
+            "left": {
+              "count": 6,
+              "rms_px": 30.624285923491662,
+              "median_px": 10.020621520907763
+            },
+            "right": {
+              "count": 6,
+              "rms_px": 29.533981967206802,
+              "median_px": 8.394529879191108
+            }
+          },
+          "heldout_slit_metrics": {
+            "left": {
+              "count": 456,
+              "rms_px": 24.259997709136478,
+              "median_px": 9.266621765960902
+            },
+            "right": {
+              "count": 424,
+              "rms_px": 27.979671911485184,
+              "median_px": 9.309042245885433
+            }
+          },
+          "actual_render_passed": true,
+          "published": false,
+          "needle_image_accepted": null,
+          "source_csv_sha256": "2a6170b9e8da3302f74b57029f387ecefdc378f56e19084242efbfea00e4b95e",
+          "uv_render_scope": "Prepared labels render on unchanged surface triangles; image registration remains unaccepted.",
+          "coordinate_check": {
+            "scope": "Coordinate implementation and source-clock preservation; not image or metric calibration accuracy",
+            "source_arrays_byte_exact": {
+              "timestamps_ns": true,
+              "time_s": true,
+              "numeric_column_names": true,
+              "numeric_values": true,
+              "psm1_pose": true,
+              "psm2_pose": true,
+              "psm1_js": true,
+              "psm2_js": true,
+              "psm1_jaw": true,
+              "psm2_jaw": true
+            },
+            "body_transform_max_abs_errors": {
+              "psm1_roll": 0.0,
+              "psm1_pitch": 0.0,
+              "psm1_yaw": 0.0,
+              "psm1_jaw1": 0.0,
+              "psm1_jaw2": 0.0,
+              "psm2_roll": 0.0,
+              "psm2_pitch": 0.0,
+              "psm2_yaw": 0.0,
+              "psm2_jaw1": 0.0,
+              "psm2_jaw2": 0.0
+            },
+            "camera_transform_max_abs_errors": {
+              "left": 0.0,
+              "right": 0.0,
+              "psm1": 0.0,
+              "psm2": 0.0
+            },
+            "fixture_port_max_error_m": 2.7597319634936e-13,
+            "pad_fixture_normal_error": 0.0,
+            "passed": true
+          },
+          "green_uv_render": {
+            "method": "Public Newton SensorCamera renders actual imported scene USD materials and face-varying UVs; no painted image overlays",
+            "frame": 639,
+            "device": "cpu",
+            "display_color_rgb": [
+              0,
+              255,
+              0
+            ],
+            "views": {
+              "left": {
+                "native_size": [
+                  960,
+                  540
+                ],
+                "display_label_pixels": 162,
+                "visible_phantom_pixels": 439774,
+                "expected_label_pixels": 162,
+                "overlap_pixels": 162,
+                "union_pixels": 162,
+                "source_pixel_iou": 1.0
+              },
+              "right": {
+                "native_size": [
+                  960,
+                  540
+                ],
+                "display_label_pixels": 140,
+                "visible_phantom_pixels": 439925
+              },
+              "psm1": {
+                "native_size": [
+                  640,
+                  480
+                ],
+                "display_label_pixels": 33,
+                "visible_phantom_pixels": 158903
+              },
+              "psm2": {
+                "native_size": [
+                  640,
+                  480
+                ],
+                "display_label_pixels": 38,
+                "visible_phantom_pixels": 126342
+              }
+            }
+          }
+        },
+        {
+          "sample_id": "tissue5_102359",
+          "region_id": 1,
+          "cached": true,
+          "status": "requires_image_alignment_review",
+          "accepted": false,
+          "numeric_alignment_screen_passed": false,
+          "failed_alignment_checks": [
+            "left_reserved_cap_rms_px",
+            "left_reserved_cap_max_px",
+            "left_reserved_slit_rms_px",
+            "left_reserved_slit_median_px",
+            "right_reserved_cap_rms_px",
+            "right_reserved_cap_max_px",
+            "right_reserved_slit_rms_px",
+            "right_reserved_slit_median_px"
+          ],
+          "output": "recording_tissue5_102359",
+          "heldout_cap_metrics": {
+            "left": {
+              "count": 12,
+              "rms_px": 16.499590309312772,
+              "median_px": 4.5283966378313085
+            },
+            "right": {
+              "count": 12,
+              "rms_px": 16.459753949089173,
+              "median_px": 3.8301843847210977
+            }
+          },
+          "heldout_slit_metrics": {
+            "left": {
+              "count": 600,
+              "rms_px": 26.617211404335002,
+              "median_px": 16.086540644621515
+            },
+            "right": {
+              "count": 518,
+              "rms_px": 27.30338665663747,
+              "median_px": 12.638935882804553
+            }
+          },
+          "actual_render_passed": true,
+          "published": false,
+          "needle_image_accepted": null,
+          "source_csv_sha256": "0bbcea858218be941a9efabebf69851edafeced1b4eccf35cf86b4bfed45b86d",
+          "uv_render_scope": "Prepared labels render on unchanged surface triangles; image registration remains unaccepted.",
+          "coordinate_check": {
+            "scope": "Coordinate implementation and source-clock preservation; not image or metric calibration accuracy",
+            "source_arrays_byte_exact": {
+              "timestamps_ns": true,
+              "time_s": true,
+              "numeric_column_names": true,
+              "numeric_values": true,
+              "psm1_pose": true,
+              "psm2_pose": true,
+              "psm1_js": true,
+              "psm2_js": true,
+              "psm1_jaw": true,
+              "psm2_jaw": true
+            },
+            "body_transform_max_abs_errors": {
+              "psm1_roll": 0.0,
+              "psm1_pitch": 0.0,
+              "psm1_yaw": 0.0,
+              "psm1_jaw1": 0.0,
+              "psm1_jaw2": 0.0,
+              "psm2_roll": 0.0,
+              "psm2_pitch": 0.0,
+              "psm2_yaw": 0.0,
+              "psm2_jaw1": 0.0,
+              "psm2_jaw2": 0.0
+            },
+            "camera_transform_max_abs_errors": {
+              "left": 0.0,
+              "right": 0.0,
+              "psm1": 0.0,
+              "psm2": 0.0
+            },
+            "fixture_port_max_error_m": 2.7602870070946963e-13,
+            "pad_fixture_normal_error": 0.0,
+            "passed": true
+          },
+          "green_uv_render": {
+            "method": "Public Newton SensorCamera renders actual imported scene USD materials and face-varying UVs; no painted image overlays",
+            "frame": 597,
+            "device": "cpu",
+            "display_color_rgb": [
+              0,
+              255,
+              0
+            ],
+            "views": {
+              "left": {
+                "native_size": [
+                  960,
+                  540
+                ],
+                "display_label_pixels": 162,
+                "visible_phantom_pixels": 417240,
+                "expected_label_pixels": 162,
+                "overlap_pixels": 162,
+                "union_pixels": 162,
+                "source_pixel_iou": 1.0
+              },
+              "right": {
+                "native_size": [
+                  960,
+                  540
+                ],
+                "display_label_pixels": 147,
+                "visible_phantom_pixels": 429276
+              },
+              "psm1": {
+                "native_size": [
+                  640,
+                  480
+                ],
+                "display_label_pixels": 39,
+                "visible_phantom_pixels": 136641
+              },
+              "psm2": {
+                "native_size": [
+                  640,
+                  480
+                ],
+                "display_label_pixels": 43,
+                "visible_phantom_pixels": 168338
+              }
+            }
+          }
+        },
+        {
+          "sample_id": "tissue7_200743",
+          "region_id": 1,
+          "cached": true,
+          "status": "requires_image_alignment_review",
+          "accepted": false,
+          "numeric_alignment_screen_passed": false,
+          "failed_alignment_checks": [
+            "psm1_reserved_stereo_frames",
+            "left_reserved_cap_rms_px",
+            "left_reserved_cap_max_px",
+            "right_reserved_cap_rms_px",
+            "right_reserved_cap_max_px",
+            "right_reserved_slit_median_px"
+          ],
+          "output": "recording_tissue7_200743",
+          "heldout_cap_metrics": {
+            "left": {
+              "count": 4,
+              "rms_px": 27.469147150546778,
+              "median_px": 9.984118649379118
+            },
+            "right": {
+              "count": 4,
+              "rms_px": 24.364426876152386,
+              "median_px": 12.458085989417583
+            }
+          },
+          "heldout_slit_metrics": {
+            "left": {
+              "count": 511,
+              "rms_px": 20.095600651635117,
+              "median_px": 7.349050981247739
+            },
+            "right": {
+              "count": 420,
+              "rms_px": 23.466668107364775,
+              "median_px": 13.920304280482659
+            }
+          },
+          "actual_render_passed": true,
+          "published": false,
+          "needle_image_accepted": null,
+          "source_csv_sha256": "813757984731f17f2384fa1ef67a74c2efbbdd3f62da3bf089aa6438c678401d",
+          "uv_render_scope": "Prepared labels render on unchanged surface triangles; image registration remains unaccepted.",
+          "coordinate_check": {
+            "scope": "Coordinate implementation and source-clock preservation; not image or metric calibration accuracy",
+            "source_arrays_byte_exact": {
+              "timestamps_ns": true,
+              "time_s": true,
+              "numeric_column_names": true,
+              "numeric_values": true,
+              "psm1_pose": true,
+              "psm2_pose": true,
+              "psm1_js": true,
+              "psm2_js": true,
+              "psm1_jaw": true,
+              "psm2_jaw": true
+            },
+            "body_transform_max_abs_errors": {
+              "psm1_roll": 0.0,
+              "psm1_pitch": 0.0,
+              "psm1_yaw": 0.0,
+              "psm1_jaw1": 0.0,
+              "psm1_jaw2": 0.0,
+              "psm2_roll": 0.0,
+              "psm2_pitch": 0.0,
+              "psm2_yaw": 0.0,
+              "psm2_jaw1": 0.0,
+              "psm2_jaw2": 0.0
+            },
+            "camera_transform_max_abs_errors": {
+              "left": 0.0,
+              "right": 0.0,
+              "psm1": 0.0,
+              "psm2": 0.0
+            },
+            "fixture_port_max_error_m": 2.7600112467947713e-13,
+            "pad_fixture_normal_error": 0.0,
+            "passed": true
+          },
+          "green_uv_render": {
+            "method": "Public Newton SensorCamera renders actual imported scene USD materials and face-varying UVs; no painted image overlays",
+            "frame": 602,
+            "device": "cpu",
+            "display_color_rgb": [
+              0,
+              255,
+              0
+            ],
+            "views": {
+              "left": {
+                "native_size": [
+                  960,
+                  540
+                ],
+                "display_label_pixels": 162,
+                "visible_phantom_pixels": 347970,
+                "expected_label_pixels": 162,
+                "overlap_pixels": 162,
+                "union_pixels": 162,
+                "source_pixel_iou": 1.0
+              },
+              "right": {
+                "native_size": [
+                  960,
+                  540
+                ],
+                "display_label_pixels": 169,
+                "visible_phantom_pixels": 384966
+              },
+              "psm1": {
+                "native_size": [
+                  640,
+                  480
+                ],
+                "display_label_pixels": 44,
+                "visible_phantom_pixels": 124084
+              },
+              "psm2": {
+                "native_size": [
+                  640,
+                  480
+                ],
+                "display_label_pixels": 59,
+                "visible_phantom_pixels": 202364
+              }
+            }
+          }
+        }
+      ],
+      "limitations": [
+        "A successful export or render does not certify calibration accuracy.",
+        "Region labels in this batch were reviewed from source imagery before fitting; no six-class classifier is claimed."
+      ]
+    },
+    "full_cuda": {
+      "status": "passed",
+      "tests": 167,
+      "elapsed_seconds": 240.473,
+      "device": "cuda:0",
+      "scope": "Complete FEM suite after fresh-closure assistance, all four bundled recordings and actual frame446 regression.",
+      "log_sha256": "f2457739a70223fbfb7d382b4473b9c5b7b854e8a3b78e67f7b282943aa437c4"
+    },
+    "targeted_cuda": {
+      "tests": 21,
+      "result": "passed",
+      "seconds": 7.007,
+      "module_source": "fresh extracted wheel outside repository",
+      "coverage": {
+        "recording": 10,
+        "cameras": 4,
+        "point_labels": 2,
+        "rigid_needle": 5
+      },
+      "command": "PYTHONPATH=<extracted-wheel>:tests NEWTON_TEST_DEVICE=cuda:0 python -m unittest test_suturebot_recording test_suturebot_cameras test_suturebot_point_labels test_suturebot_needle -v",
+      "device": "cuda:0",
+      "tested_wheel_sha256": "2c30b9d87426224b149c6a7378a8a259289ccca941b124c05837210a0c5daeb7",
+      "scope": "Current translated pad and one-backing collider; includes actual drop through raised tissue and contact on backing."
+    },
+    "focused_uv": {
+      "tests_per_device": 2,
+      "cpu": "passed",
+      "cuda:0": "passed",
+      "module_source": "fresh extracted wheel",
+      "included_in_targeted_counts": true,
+      "tested_wheel_sha256": "2c30b9d87426224b149c6a7378a8a259289ccca941b124c05837210a0c5daeb7",
+      "coverage": [
+        "USD local-to-world material binding",
+        "actual green texture at moved material points; no rebinding"
+      ]
+    },
+    "logs_sha256": {
+      "suturebot-final-full-cuda.log": "27a53ba9e1c9e16350bdc84bda5dbdca8f07f442fea5b4878c1bff024454ec35",
+      "suturebot-final-wheel-replay-cpu.log": "ee85bbbf390dc0bd874aacaf4c085ebc2b186917550a448317d23403320e1a77",
+      "suturebot-final-wheel-replay-cuda.log": "af5f0b4f15f5767ed4fbd865f90d8480ad7ef5231ad3a8b14fb2b86aa2a02134",
+      "suturebot-final-wheel-portability.log": "3f2e7f23d5c359e11bf7fbcf115620d6a123fded3942ed1be788a71ab63ffe7a",
+      "suturebot-final-wheel-build.log": "eb331fb56a24386bba042fe026b49e515beb9618fd5f45bde0f5d27fc6163db4",
+      "suturebot-readme-republication.log": "26774291a3bbe6c503f0f3ef3747acee94ecfdd6562d798bdcafa6606cec649c",
+      "suturebot-readme-publication-audit.log": "9de7a332e4cfefbe1252ecba6746e774114395306caaa39b2418d1b7ce5426e1",
+      "suturebot-readme-wheel-build.log": "976c335b31311487b524c5a773a6c719b51413b8852c19c8309c62e26f8caf3d",
+      "suturebot-readme-wheel-portability.log": "172aae3801fbca7b47bdc19c5f07e66bde51bc0e940c7e95afbf2f66481a22af",
+      "suturebot-green-preparation-tests.log": "292b02b1232cbba432e07ea4d5b7dc52006105273bf233a9c1f1973e26a8ecd3",
+      "suturebot-green-wheel-uv-cpu.log": "98073e255ad098d25a9890163e215293fda44ad3bc716926222b30f53eade1ed",
+      "suturebot-green-wheel-uv-cuda.log": "f1dcc115c86c742b44065f5201e04e4fc283fa9f95289c5005ff892035a363fb",
+      "suturebot-green-wheel-build.log": "313910ecc0c54cce906da9d0b1b10e23178dbfa1c791003bc57136b932838090",
+      "suturebot-green-wheel-portability.log": "b7422233b112087590aaa0f330bd2378d10921859d4df783d0c299a5c1aea2c2",
+      "suturebot-green-native-render.log": "4f087641f28e5e1162e1a53a3b473e9dd656e800c37d59604c4419169b612774",
+      "suturebot-green-all-renders.log": "154e59aa75b25c603619870aa822c03c355826760859281f6934d9f8d4005cbf",
+      "suturebot-green-close-video.log": "fb4a1d1de8203ae6ad8881ef322427d66e2c260a251d213509ef5108573ad809",
+      "suturebot-green-ui.log": "d1d8303ff17f6c87bbd0afcfdd9ec96a498d84572c75f88601d32eaf4c75413d",
+      "suturebot-backing-publish-final.log": "06f37403257fb9a897a820638371b55db4be64f6a2d39067001127cacdc5de20",
+      "suturebot-backing-wheel-build.log": "8fa7f60e8b1fbc19c4e6302f01e102f3ef4b31b7f5dd9ae317331f305d3150e9",
+      "suturebot-backing-wheel-validation.log": "b376333f8cf791f81a6506a68acc8c0eb09889ddeed42168d26b4d953da395fa",
+      "suturebot-backing-wheel-tests-cpu.log": "10d9172e752b62c10134d4322325c23527a7f8a64bec1ef319c870546d8a9399",
+      "suturebot-backing-wheel-tests-cuda.log": "dc76302243f4d560aefcd5e90e89c900a40de02085a787bce78ee583156f5261",
+      "suturebot-backing-runtime.log": "2281bad3f8eff2310bc7acbe088dd02f7bcc7605ef8f780e290573378bb81cfc",
+      "suturebot-final-pad-full-cuda-tests.log": "a8f3319eceec95a4bc9608fdef93e756a77720f4b2291a097a47d3512184cd5a",
+      "suturebot-final-backing-video.log": "28ff9011ddf3202e08d28aa597a3e408e4e1d71502ca4bea5a5636ecb22da446"
+    },
+    "documentation_only_republication": {
+      "files": 2475,
+      "changed_files": [
+        "README.md",
+        "provenance.json"
+      ],
+      "all_numerical_and_image_bytes_identical": true,
+      "recording_manifest_byte_identical": true,
+      "source_preparation_modified": false,
+      "wheel_delta": {
+        "added": [],
+        "removed": [],
+        "changed": [
+          "newton_solver_fem-0.1.0.dist-info/METADATA",
+          "newton_solver_fem-0.1.0.dist-info/RECORD",
+          "newton_solver_fem/examples/assets/suturebot/recordings/tissue3_215300/README.md",
+          "newton_solver_fem/examples/assets/suturebot/recordings/tissue3_215300/provenance.json"
+        ],
+        "runtime_python_files_unchanged": true
+      },
+      "previous_wheel_sha256": "e713fdbf5e240b9bb7871b65647be45ccd8b8cd886fcec4a15d1c97c3d166ec6",
+      "full_suite_or_video_repeated": false,
+      "reason": "Only the standalone README validation caveat and publisher provenance changed. Fresh wheel byte/dependency checks and all597CPUreplayframes passed."
+    },
+    "green_marker_update": {
+      "status": "passed",
+      "display_color_rgb": [
+        0,
+        255,
+        0
+      ],
+      "source_mask_preserved": true,
+      "original_geometry_uv_motion_cameras_byte_identical": true,
+      "source_bundle_deltas": {
+        "recording_tissue3_215300": {
+          "changed_files": [
+            "recording.json",
+            "point_labels.json",
+            "textures/point_labels.png"
+          ],
+          "original_source_geometry_uv_motion_cameras_byte_identical": true,
+          "binding_rows_unchanged": true,
+          "atlas_coverage_unchanged": true,
+          "marked_texels": 13142,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        "recording_tissue3_212958": {
+          "changed_files": [
+            "recording.json",
+            "point_labels.json",
+            "textures/point_labels.png"
+          ],
+          "original_source_geometry_uv_motion_cameras_byte_identical": true,
+          "binding_rows_unchanged": true,
+          "atlas_coverage_unchanged": true,
+          "marked_texels": 4307,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        "recording_tissue4_211216": {
+          "changed_files": [
+            "recording.json",
+            "point_labels.json",
+            "textures/point_labels.png"
+          ],
+          "original_source_geometry_uv_motion_cameras_byte_identical": true,
+          "binding_rows_unchanged": true,
+          "atlas_coverage_unchanged": true,
+          "marked_texels": 5053,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        "recording_tissue5_102359": {
+          "changed_files": [
+            "recording.json",
+            "point_labels.json",
+            "textures/point_labels.png"
+          ],
+          "original_source_geometry_uv_motion_cameras_byte_identical": true,
+          "binding_rows_unchanged": true,
+          "atlas_coverage_unchanged": true,
+          "marked_texels": 9223,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        "recording_tissue7_200743": {
+          "changed_files": [
+            "recording.json",
+            "point_labels.json",
+            "textures/point_labels.png"
+          ],
+          "original_source_geometry_uv_motion_cameras_byte_identical": true,
+          "binding_rows_unchanged": true,
+          "atlas_coverage_unchanged": true,
+          "marked_texels": 8143,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        "review_joint_tissue3_215300_v3": {
+          "changed_files": [
+            "recording.json",
+            "point_labels.json",
+            "textures/point_labels.png"
+          ],
+          "original_source_geometry_uv_motion_cameras_byte_identical": true,
+          "binding_rows_unchanged": true,
+          "atlas_coverage_unchanged": true,
+          "marked_texels": 13890,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        "review_joint_tissue3_215300_continuous": {
+          "changed_files": [
+            "recording.json",
+            "point_labels.json",
+            "textures/point_labels.png"
+          ],
+          "original_source_geometry_uv_motion_cameras_byte_identical": true,
+          "binding_rows_unchanged": true,
+          "atlas_coverage_unchanged": true,
+          "marked_texels": 12033,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        "review_joint_tissue3_215300_continuous_tilt": {
+          "changed_files": [
+            "recording.json",
+            "point_labels.json",
+            "textures/point_labels.png"
+          ],
+          "original_source_geometry_uv_motion_cameras_byte_identical": true,
+          "binding_rows_unchanged": true,
+          "atlas_coverage_unchanged": true,
+          "marked_texels": 12215,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        }
+      },
+      "preparation_tests": {
+        "passed": 5,
+        "elapsed_s": 0.305
+      },
+      "actual_rendered_views": 32,
+      "baseline_left_source_pixel_iou": 1.0,
+      "other_view_count_note": "Strict RGB tolerance counts differ slightly from historical white-threshold counts at filtered edges; exact atlas coverage and material bindings are unchanged.",
+      "wheel_changed_bundle_files": [
+        "README.md",
+        "point_labels.json",
+        "provenance.json",
+        "recording.json",
+        "textures/point_labels.png"
+      ],
+      "runtime_python_unchanged": true,
+      "video_note": "Final main-viewer recording includes a close-up from capture frame480 through849; both actual green UV marks remain visible in the encoded10-second frame beside all four camera overlays.",
+      "encoded_video_review": {
+        "status": "passed",
+        "capture_time_s": 10.0,
+        "source_frame_shown": 304,
+        "method": "Extracted a frame from the final MP4 and visually inspected the two green surface marks in the main OpenGL viewport, outside camera-overlay panels.",
+        "main_view_marker_rois_xyxy": [
+          [
+            614,
+            360,
+            632,
+            378
+          ],
+          [
+            646,
+            344,
+            666,
+            362
+          ]
+        ],
+        "strong_green_pixels_per_roi": [
+          24,
+          12
+        ],
+        "criterion": "G exceeds R and B by40 byte values; G>100",
+        "extracted_frame_sha256": "095461f5387ec68b64928622cea80060f28d53f9dc4a1ae8fbc087ed6c0f4c7a",
+        "video_artifacts_sha256": {
+          "docs/media/fem_suturebot.mp4": "fe5c22f0455811423d3c564e9505f83195442d9c47c0a196c35290a8a90b3601",
+          "docs/media/fem_suturebot.gif": "3f70c03be6b0aa7bc58109a30a76a839906123180d43428e4eaf169cf6140101",
+          "docs/media/fem_suturebot.jpg": "01d941556b51fff96efe53117682adf34e5694f533fe2e0dc8148e91c44c4925",
+          "docs/media/fem_suturebot.json": "a1fecffaacf905c18b7733d99e77df1ec80e1f3804fc96b6865767fb4df824ff"
+        },
+        "viewer_texture_verified": true,
+        "geometry_and_marker_size_unchanged": true
+      },
+      "scope": "Historical appearance-only change before later pad translation; its original source-mask roundtrip and old video hashes are retained as history."
+    },
+    "latest_partial_cpu_full_suite": {
+      "result": "interrupted",
+      "reason": "Switched to available CUDA after sandbox GPU visibility was identified. Not counted as a completed CPU suite."
+    },
+    "pad_translation_preservation": {
+      "status": "passed",
+      "changed_existing_files": [
+        "calibration.json",
+        "needle.usdc",
+        "phantom.usdc",
+        "point_labels.json",
+        "recording.json"
+      ],
+      "all_other_original_files_byte_identical": true,
+      "source_files_modified": false,
+      "authored_geometry_uv_and_needle_body_attributes_unchanged": true,
+      "pad_and_collision_proxy_world_translation_m": [
+        0.00025837375037222237,
+        7.752697257786307e-05,
+        0.0010083453530069064
+      ]
+    },
+    "current_needle_runtime": {
+      "result": "passed",
+      "sample_id": "tissue3_215300",
+      "device": "cpu",
+      "simulated_supported_frames": 597,
+      "held_frames": 455,
+      "free_frames": 142,
+      "maximum_held_transform_absolute_error": 5.430069340839339e-07,
+      "maximum_recorded_tool_pose_error": 2.9801562217990352e-08,
+      "deterministic_seek_maximum_pose_difference": 0.0,
+      "free_translation_extent_m": [
+        0.0038871169090270996,
+        0.004141207784414291,
+        0.007947687990963459
+      ],
+      "events": [
+        {
+          "frame": 4,
+          "event": "initial_grasp",
+          "arm": "psm1"
+        },
+        {
+          "frame": 304,
+          "event": "release",
+          "arm": "psm1"
+        },
+        {
+          "frame": 446,
+          "event": "grasp",
+          "arm": "psm1",
+          "distance_m": 0.008436046036480608,
+          "trigger": "jaw_close",
+          "translation_world_m": [
+            0.0030881838864019323,
+            -0.0015317810541887258,
+            0.007699586989924595
+          ]
+        }
+      ],
+      "regrasp_count": 1,
+      "translation_grasp_count": 1,
+      "translated_grasps": [
+        {
+          "frame": 446,
+          "arm": "psm1",
+          "translation_world_m": [
+            0.0030881838864019323,
+            -0.0015317810541887258,
+            0.007699586989924595
+          ],
+          "translation_distance_m": 0.008436046036480608,
+          "grasp_point_error_m": 1.3109602733267094e-09
+        }
+      ],
+      "maximum_grasp_translation_m": 0.008436046036480608,
+      "isolated_rigid_body_count": 1,
+      "runtime_needle_trajectory_input": false,
+      "validation_sources_sha256": {
+        "validate_recording_needle.py": "6e04db2213d38752e6f91d876017f379a8238210e473085361cd72e3e3f1c74d",
+        "_suturebot_needle.py": "7e704c701dfe3bd3533d2385ff728e9f0523a29cd303d8fa996a4c98ac447131"
+      },
+      "limitations": [
+        "Initial needle pose is an uncertain image estimate.",
+        "Held poses impose a fixed grasp constraint; forces are not inferred.",
+        "Fresh jaw closure may translate the free needle to the tool; this is a replay placement rule, not contact-based grasp inference.",
+        "Free contacts use the single rectangular backing only; raised tissue and table are non-colliding."
+      ]
+    },
+    "current_actual_render": {
+      "result": "passed",
+      "source": "Regenerated actual main-viewer video with four camera overlays",
+      "source_frames_observed": 597,
+      "encoded_frames": 1202,
+      "source_regrasp_frame": 446,
+      "report": "MSc/SutureBot-workbench/outputs/simulation/recording_tissue3_215300_pad127_backing/audit/regrasp_policy/demo_validation.json",
+      "report_sha256": "3fd4306fe16d7451bfb6b2267f30f8402ef90bc5de128e22b25525330b2824e8",
+      "scope": "Runtime visualization and repeated capture only, not independent image alignment."
+    },
+    "single_backing_regression": {
+      "test": "TestBundledNeedleBacking.test_one_rectangular_backing_allows_tissue_penetration_and_stops_freefall",
+      "included_in_targeted_counts": true,
+      "result": "passed",
+      "static_collision_shapes": 1,
+      "shape": "UsdGeom.Cube",
+      "raised_tissue_collision_shapes": 0,
+      "table_collision_shapes": 0,
+      "actual_mujoco_drop_duration_s": 0.4,
+      "ballistic_first_10ms_drop_bounds_mm": [
+        0.4,
+        0.7
+      ],
+      "final_backing_clearance_bounds_mm": [
+        -0.5,
+        0.8
+      ],
+      "scope": "Actual imported needle capsules and backing; no tissue force or puncture model."
+    },
+    "current_encoded_video_review": {
+      "status": "passed",
+      "capture_times_s": [
+        4.1,
+        10.0
+      ],
+      "source_frames_shown": [
+        127,
+        304
+      ],
+      "regrasp_source_frames_shown": [
+        444,
+        448,
+        464,
+        494
+      ],
+      "method": "Decoded final MP4; actual main OpenGL green labels inspected at4.1/10s and free-to-held status/tool following inspected around closure446.",
+      "main_view_marker_rois_xyxy": [
+        [
+          614,
+          360,
+          632,
+          378
+        ],
+        [
+          646,
+          344,
+          666,
+          362
+        ]
+      ],
+      "strong_green_pixels_per_roi": [
+        28,
+        16
+      ],
+      "frame127_png_sha256": "0ea0420f7e157f232eae737a0889bc99823341d87bc8f0cb617ba6915deaee99",
+      "frame304_png_sha256": "d2acda62d28ee362c1794d02db0ba9e8df002c746e898e487b815fd8816ff4d0",
+      "regrasp_review_sheet_sha256": "7b68b03f5c7d413eb918e5663b7743ec6dbed92e4af3039516fbd21cb1ec5028",
+      "video_artifacts_sha256": {
+        "docs/media/fem_suturebot.mp4": "b1001502ab5ae6715e1bf21c327ad509617d823c267520bf261318df0a735ecb",
+        "docs/media/fem_suturebot.json": "f159aab639dff64fd52fc331cea6b537f560d4dbe9be9423c937cac18f9d5d3a",
+        "docs/media/fem_suturebot.jpg": "9383eb2b340c81d063369ff3b073d866e64e0eb2804451dab8b599c442347971",
+        "docs/media/fem_suturebot.gif": "5aeb83620bfbfc455d98be9f0bb79abadfd1e3d11d6c44740e8263e8a69f3e9b"
+      },
+      "render_device": "cuda:0",
+      "needle_dynamics_backend": "MuJoCo CPU",
+      "report_sha256": "3fd4306fe16d7451bfb6b2267f30f8402ef90bc5de128e22b25525330b2824e8"
+    },
+    "current_preparation_tests": {
+      "status": "passed",
+      "tests": 113,
+      "elapsed_seconds": 11.701,
+      "scope": "Recording preparation tests including strict four-camera gate and the narrowed original-reference exception.",
+      "log_sha256": "ecb55b34e7d53a1418b94b361a40a207a8af0ed0505732557d139f3b327aa539"
+    },
+    "fresh_closure_preservation": {
+      "status": "passed",
+      "geometry_motion_camera_and_initialization_byte_identical": true,
+      "unchanged_asset_count": 12,
+      "unchanged_source_assets_sha256": {
+        "needle.usdc": "fd109c648c830000f2501df243bada6c0b3bca70ec57c95d093afc17985703fa",
+        "needle_inputs.npz": "06e32186ae3378ff8194ae310d3fe436cf744331961d27abb77c9bbeae0ca1f2",
+        "needle_initialization.json": "66a6a68a179e45fa9be6bddd4530f1ea6ad1d7ca789ed0d5cb52521b9c091920",
+        "needle_initialization.jpg": "f8500bdcf40aa98ad8b510a0725fc150b9ee23c604b207607a7230c4d4f38118",
+        "phantom.usdc": "ea046d474aab6f0be7917e22bb5cf78de9b1e4b03b48073a5100945ebee6a0f7",
+        "rig.usdc": "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53",
+        "motion.npz": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+        "camera_poses.npz": "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+        "scene.usda": "e30ce457207a0ea76579d2e357be8d9f6ee79cfac5fdfd834c604d5581d98f71",
+        "calibration.json": "7a834a931570367c014314939229dce9f61b495c1991fe1c5ce2b0554ec14571",
+        "point_labels.json": "8be2dbd353a2ee8ad3b6d843bba38bb8c57d75f4b9a74feb79398b282589f2bf",
+        "textures/point_labels.png": "358d0c01cfe97f91ad847e5be2e6334ae118ce891340aaa694071e7947e2ce0e"
+      },
+      "report_sha256": "5136b2dfe4e199ee6a637c5aaae99ffe724d6d1d7915c4336b6afbd0be9c1153"
+    }
+  },
+  "viewer_capture": {
+    "example": "fem_suturebot",
+    "module": "newton_solver_fem.examples.example_fem_suturebot",
+    "caption": "Replay the tissue3 needle-throw recording with prepared USD tools, cameras and the original phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Each fresh jaw closure can translate the free rigid needle to the gripper again, preserving its orientation, then hold it until release into MuJoCo dynamics. This is replay assistance; camera and needle placement remain estimates, and tissue puncture is not simulated.",
+    "arguments": [
+      "--test",
+      "--test"
+    ],
+    "device": "cuda:0",
+    "frames": 1202,
+    "fps": 60,
+    "width": 1280,
+    "height": 720,
+    "show_ui": true,
+    "recording_wall_seconds": 50.879709665998234,
+    "playback_is_performance_benchmark": false,
+    "simulation_time": [
+      {
+        "attribute": "sim_time",
+        "end": 20.033333333333477
+      }
+    ],
+    "dependencies": {
+      "newton_solver_fem": "0.1.0",
+      "newton": "1.7.0",
+      "warp-lang": "1.17.0+cu13"
+    },
+    "scenario": {
+      "sample_id": "tissue3_215300",
+      "source_episode": "tissue_3/2_needle_throw/20250428-215300-489212",
+      "source_frame_count": 601,
+      "observed_source_frames": 597,
+      "supported_source_frames": [
+        4,
+        600
+      ],
+      "alignment": {
+        "status": "pad_only_translation_with_fixed_camera_calibration_estimate",
+        "reportpath": "calibration.json",
+        "tool_registration_report": "alignment.json",
+        "absolute_metric_accuracy_validated": false,
+        "pad_placement_report": "pad_placement.json",
+        "prior_metrics_scope": "Previous calibration fit metrics predate the separately reported pad translation",
+        "accepted": false
+      },
+      "final_overlay_coverage_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "motion": "measured Cartesian/joint kinematic replay",
+      "region_id": 1,
+      "point_labels": {
+        "report": "point_labels.json",
+        "texture": "textures/point_labels.png",
+        "count": 2,
+        "display_color_rgb": [
+          0,
+          255,
+          0
+        ]
+      },
+      "needle": {
+        "present": true,
+        "motion": "fresh recorded jaw closure translates the nearest needle centerline point to the grasp point without rotating it; fixed gripper-relative pose while held; MuJoCo dynamics after release",
+        "regrasp_policy": "fresh_closure_translation",
+        "recorded_needle_trajectory": false,
+        "events": [
+          {
+            "frame": 4,
+            "event": "initial_grasp",
+            "arm": "psm1"
+          },
+          {
+            "frame": 304,
+            "event": "release",
+            "arm": "psm1"
+          },
+          {
+            "frame": 446,
+            "event": "grasp",
+            "arm": "psm1",
+            "distance_m": 0.008436046036480608,
+            "trigger": "jaw_close",
+            "translation_world_m": [
+              0.0030881838864019323,
+              -0.0015317810541887258,
+              0.007699586989924595
+            ]
+          }
+        ]
+      },
+      "needle_tissue_interaction": false,
+      "view_changes": [
+        {
+          "capture_frame": 120,
+          "view": "phantom"
+        },
+        {
+          "capture_frame": 180,
+          "view": "surface point labels"
+        },
+        {
+          "capture_frame": 850,
+          "view": "phantom"
+        },
+        {
+          "capture_frame": 1000,
+          "view": "complete rig"
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Camera intrinsics, lens distortion and arm-base calibration are estimated, not measured hand-eye calibration.",
+    "Fixed distortion is inherited from prior fits; catalog FOV and the 35 mm unspecified mount datum are not hard measurements.",
+    "Repeated own-shaft observations share one mount and are correlated.",
+    "The physical PSM2 instrument CAD is unavailable; retained needle-driver mesh is a surrogate.",
+    "Only one pad perimeter side is visible. Third fixture opening and endoscope optical-to-shaft angle are unmeasured.",
+    "Exact RCM port placement is a modeling constraint; CAD rim-depth ambiguity is approximately 3 mm.",
+    "The local optimizer stopped on parameter-step tolerance with first-order optimality approximately357; this is not a stationary/global optimum or an uncertainty estimate.",
+    "Distortion coefficients are inherited conditional priors; current fitting estimates focal lengths, principal points, poses and constant arm-base registrations.",
+    "Reserved frames300/525 were excluded from this final image objective but exposed during earlier stages, so this is not blind whole-pipeline validation.",
+    "Only one physical pad perimeter side is observed; remaining pad-lip and tool-head differences are visible in the overlays.",
+    "PSM1 reserved shaft evidence is one short3point fragment; PSM2 has12points. Repeated own-shaft observations share a fixed mount.",
+    "Rigid-body grasp/release and support are software behaviors. They do not infer recorded grasp success, physical needle-pad contact, tissue force, puncture, deformation or suturing success.",
+    "The original dataset point labels are final-frame material goals, not contact timestamps or a recorded needle trajectory.",
+    "UVs bind to actual tetrahedral boundary triangles, but this replay keeps those vertices static.",
+    "The catalog includes the original default and three new scoped pose replays; four earlier transfers remain failed diagnostics. The extras contain no needle.",
+    "The current pad translation retains original material bindings and leaves 9.21/8.63 px source-click errors; held needle motion bypasses contact response and free dynamics collide only with the flat backing.",
+    "Fresh jaw closure can translate a separated needle to the grasp point. This is explicit replay assistance, not contact-based grasp or source-image placement validation."
+  ],
+  "audit_reexport_note": "After the image review, a rig-authoring helper was changed to copy its axis input before normalization. All597 supported body matrices remain byte-identical, exact camera/body equality is restored at unsupported frame0, final native-mesh/pad/clearance audits were refreshed, and the final video covers every supported frame.",
+  "provenance_paths_are_runtime_dependencies": false,
+  "current_recording_sha256": "18f175bee433662586209da5e807f091a374f00e4dbbad9c672f51e1f616a724",
+  "alignment_acceptance": {
+    "accepted": false,
+    "status": "pad_only_translation_with_fixed_camera_calibration_estimate",
+    "optical_parameters_measured": false,
+    "needle_image_placement_accepted": false,
+    "published_additional_samples": []
+  },
+  "point_labels": {
+    "annotation_frame": 600,
+    "annotation_semantics": "final-frame insertion and exit pixels; static material labels, not contact events",
+    "source_color_policy": "Original source mask RGB bytes are retained; nonzero pixels define label coverage",
+    "source_nonzero_pixels": 162,
+    "visible_source_pixels": 162,
+    "painted_triangles": 9,
+    "atlas_size": [
+      256,
+      256
+    ],
+    "uv_interpolation": "faceVarying; disjoint triangle tiles with filtering gutters",
+    "geometry_arrays_unchanged": true,
+    "geometry_role": "Original tetrahedral exterior boundary triangles and reference vertex indices; replay surface is static",
+    "material_transport": "With updated triangle vertices X_i(t), the label is sum_i barycentric_i*X_i(t); fixed face-varying UVs travel with that face. This replay does not evolve FEM vertices.",
+    "geometry_arrays_sha256": "d552069e45b13e0aecf359f2eda6900820f5f90f14b0c9a039962fc44c689e83",
+    "label_count": 2,
+    "actual_sensor_render": {
+      "method": "Public Newton SensorCamera renders actual imported scene USD materials and face-varying UVs; no painted image overlays",
+      "frame": 600,
+      "device": "cpu",
+      "display_color_rgb": [
+        0,
+        255,
+        0
+      ],
+      "source_pixel_alignment_expected": false,
+      "source_pixel_alignment_status": "mismatch",
+      "material_binding_policy": "Original triangle and barycentric bindings are retained, including after rigid pad placement",
+      "views": {
+        "left": {
+          "native_size": [
+            960,
+            540
+          ],
+          "display_label_pixels": 159,
+          "visible_phantom_pixels": 414120,
+          "expected_label_pixels": 162,
+          "overlap_pixels": 11,
+          "union_pixels": 310,
+          "source_pixel_iou": 0.035483870967741936
+        },
+        "right": {
+          "native_size": [
+            960,
+            540
+          ],
+          "display_label_pixels": 157,
+          "visible_phantom_pixels": 414908
+        },
+        "psm1": {
+          "native_size": [
+            640,
+            480
+          ],
+          "display_label_pixels": 64,
+          "visible_phantom_pixels": 163884
+        },
+        "psm2": {
+          "native_size": [
+            640,
+            480
+          ],
+          "display_label_pixels": 67,
+          "visible_phantom_pixels": 150906
+        }
+      },
+      "applicability": "Same phantom USD, texture, marker bindings and camera inputs as current backing bundle; hidden collider changes do not affect the visual scene."
+    },
+    "validation_scope": "Material binding and rendering pass. Original source pixels differ after rigid pad translation; image alignment remains unaccepted.",
+    "display_color_rgb": [
+      0,
+      255,
+      0
+    ],
+    "display_color_policy": "All labelled texels use display_color_rgb for visibility; source pixels and material bindings are unchanged",
+    "binding_creation_geometry_arrays_sha256": "470355fe5ca1e7eb6b49e7d207c93acee3ed3dd77183db85c9a93f45c87d6649",
+    "geometry_hash_scope": "World-transformed vertices and triangle indices; authored local geometry arrays remain unchanged",
+    "rigid_pad_translation_world_m": [
+      0.00025837375037222237,
+      7.752697257786307e-05,
+      0.0010083453530069064
+    ],
+    "source_pixel_alignment_expected": false,
+    "source_pixel_errors_px": [
+      9.211476222227164,
+      8.62888468650119
+    ]
+  },
+  "needle": {
+    "accepted": false,
+    "validation_status": "physical_CAD_end_fixed_original_image_placement_unaccepted",
+    "motion_policy": "No recorded needle motion is stored or consumed.",
+    "grasp_policy": "Recorded jaw hysteresis: a fresh open-to-close edge translates the nearest needle centerline point to the tool grasp point while preserving world orientation; nearby closed-jaw handoff remains allowed; one constant tool-to-needle transform is used while held.",
+    "sharp_tip_arc_endpoint": -1,
+    "blunt_arc_endpoint": 0,
+    "support": "One rectangular native flat backing; raised tissue, tools, fixture, endoscope and table have no environment collision shapes",
+    "tissue_puncture": false,
+    "grasp_or_contact_accuracy_inferred": false,
+    "rigid_solver_default_backend": "MuJoCo CPU; CUDA replay tests also verify transport to the CUDA rendering state, not a claim that every rigid-needle test uses MuJoCo Warp.",
+    "environment_collision_policy": "single_rectangular_backing_only",
+    "environment_collision_count": 1,
+    "initial_grasp_unchanged_by_pad_and_support_edits": true,
+    "regrasp_policy": "fresh_closure_translation",
+    "historical_events_in_pre_regrasp_wheel": [
+      {
+        "frame": 4,
+        "event": "initial_grasp",
+        "arm": "psm1"
+      },
+      {
+        "frame": 304,
+        "event": "release",
+        "arm": "psm1"
+      }
+    ],
+    "events_in_current_replay": [
+      {
+        "frame": 4,
+        "event": "initial_grasp",
+        "arm": "psm1"
+      },
+      {
+        "frame": 304,
+        "event": "release",
+        "arm": "psm1"
+      },
+      {
+        "frame": 446,
+        "event": "grasp",
+        "arm": "psm1",
+        "distance_m": 0.008436046036480608,
+        "trigger": "jaw_close",
+        "translation_world_m": [
+          0.0030881838864019323,
+          -0.0015317810541887258,
+          0.007699586989924595
+        ]
+      }
+    ],
+    "translated_grasps": [
+      {
+        "frame": 446,
+        "arm": "psm1",
+        "translation_world_m": [
+          0.0030881838864019323,
+          -0.0015317810541887258,
+          0.007699586989924595
+        ],
+        "translation_distance_m": 0.008436046036480608,
+        "grasp_point_error_m": 1.3109602733267094e-09
+      }
+    ],
+    "repeated_closure_translation_is_replay_assistance": true,
+    "events_in_extracted_wheel_replay": [
+      {
+        "frame": 4,
+        "event": "initial_grasp",
+        "arm": "psm1"
+      },
+      {
+        "frame": 304,
+        "event": "release",
+        "arm": "psm1"
+      },
+      {
+        "frame": 446,
+        "event": "grasp",
+        "arm": "psm1",
+        "distance_m": 0.008436046036480608,
+        "trigger": "jaw_close",
+        "translation_world_m": [
+          0.0030881838864019323,
+          -0.0015317810541887258,
+          0.007699586989924595
+        ]
+      }
+    ],
+    "extracted_wheel_event_scope": "Current extracted-wheel CPU replay, including actual frame446 fresh-closure capture."
+  },
+  "predecessor_pad_metrics_scope": {
+    "description": "The listed retained image/clearance records precede the separate pad translation. Current translation metrics are in pad_placement. Tool motion, optics and needle initial grasp remain unchanged.",
+    "sections": [
+      "optimizer",
+      "projection_metrics",
+      "actual_tool_shafts",
+      "actual_tool_masks",
+      "actual_pad_silhouette",
+      "distal_clearance",
+      "mount_consistency"
+    ],
+    "phantom_original_source_sha256": "6149f884e98b200d15bc884a494f965176c405a2081eabb3692e07029aabb3e9"
+  },
+  "pad_placement": {
+    "schema_version": 1,
+    "status": "constant_pad_translation",
+    "accepted": false,
+    "translation_world_m": [
+      0.00025837375037222237,
+      7.752697257786307e-05,
+      0.0010083453530069064
+    ],
+    "normal_displacement_m": 0.0010088661941145098,
+    "in_plane_displacement_m": [
+      0.00025211267820380396,
+      9.030947010029445e-05,
+      -4.2042969960803464e-07
+    ],
+    "pad_bottom_above_fixed_table_m": 0.01893214252952716,
+    "reference_frame": 127,
+    "source_sha256": {
+      "recording.json": "1911013ec8851817b23098d103ca4dd5ffbe6002fd13b3c97d028a860ea169d9",
+      "phantom.usdc": "6149f884e98b200d15bc884a494f965176c405a2081eabb3692e07029aabb3e9",
+      "needle.usdc": "4b94b9fb1c11c9be394919e0225f0cc5f5ea44d39b22dc7650a3d9d9daf18a33",
+      "needle_inputs.npz": "06e32186ae3378ff8194ae310d3fe436cf744331961d27abb77c9bbeae0ca1f2",
+      "needle_initialization.json": "66a6a68a179e45fa9be6bddd4530f1ea6ad1d7ca789ed0d5cb52521b9c091920",
+      "motion.npz": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+      "camera_poses.npz": "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+      "point_labels.json": "219492f5478d4ca6818e353bd96ae33e8dec9cd46de158d93e12387dd36e49da",
+      "rig.usdc": "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53",
+      "calibration.json": "98ae416102a2dcecbd51a0a236e6d54ec6ee3319ced707c7577b285f3b7d69e7",
+      "audit/manual_lip_traces.json": "fba5ea2e8322c3e4187e66a6fa0080ee67c7dff6729b4e59137de8a59a40ea49",
+      "audit/manual_pad_boundary.json": "eb4ceafe081ec1b16fa34432be514d59f44360c3507e2dac7a683c8ecabadd9d",
+      "audit/native_wound1_fit_curves.npz": "207c88aef29710af1930d658650c91a8d819ecb9c094e392445c3a018e91cb1c",
+      "point_labels_source/clicked_point.csv": "7e37ef35c2f4ca6b58b2deac8ac77a1eb5a9b65a27d5b237622134221e9e5ed6"
+    },
+    "correction_sha256": "157442bf92b91eea0a26ddbbba10e2b354d891c5fef5ce87040a11441a62ff03",
+    "metrics": {
+      "before": {
+        "name": "baseline",
+        "pad_translation_world_m": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "normal_lift_m": 0.0,
+        "geometry": {
+          "actual_tip_surface_gap_m": 0.0009751182950490437,
+          "actual_tip_local_normal_gap_m": 0.0009748837091528757,
+          "tip_to_translated_insertion_marker_m": 0.0009814706508857235,
+          "translated_insertion_marker_m": [
+            0.0392524814117971,
+            -0.040277534191721726,
+            0.001628741927882803
+          ],
+          "nearest_original_pad_point_m": [
+            0.03934730875326377,
+            -0.0403133707648034,
+            0.0016495630361404163
+          ]
+        },
+        "image_metrics": {
+          "all": {
+            "all": {
+              "points": 689,
+              "rms_px": 5.0479605733624755,
+              "median_px": 1.7745627744704437
+            },
+            "left": {
+              "points": 90,
+              "rms_px": 5.883602112155814,
+              "median_px": 3.6940515595748233
+            },
+            "right": {
+              "points": 78,
+              "rms_px": 5.8758804959944175,
+              "median_px": 4.0803203770148135
+            },
+            "psm1": {
+              "points": 264,
+              "rms_px": 5.483427611992629,
+              "median_px": 1.1455077530769997
+            },
+            "psm2": {
+              "points": 257,
+              "rms_px": 3.850590676869277,
+              "median_px": 1.6126478595282603
+            }
+          },
+          "fit": {
+            "all": {
+              "points": 527,
+              "rms_px": 3.6059344282536516,
+              "median_px": 1.44185201187949
+            },
+            "left": {
+              "points": 77,
+              "rms_px": 5.165151873961668,
+              "median_px": 3.4628634595052183
+            },
+            "right": {
+              "points": 69,
+              "rms_px": 5.474080205141643,
+              "median_px": 3.780935719851521
+            },
+            "psm1": {
+              "points": 192,
+              "rms_px": 2.284932449634155,
+              "median_px": 0.8827863477597968
+            },
+            "psm2": {
+              "points": 189,
+              "rms_px": 3.023846899432753,
+              "median_px": 1.658024465568308
+            }
+          },
+          "reserved": {
+            "all": {
+              "points": 162,
+              "rms_px": 8.128815170959674,
+              "median_px": 3.6457577819734803
+            },
+            "left": {
+              "points": 13,
+              "rms_px": 9.035155758015817,
+              "median_px": 6.317804121512637
+            },
+            "right": {
+              "points": 9,
+              "rms_px": 8.336016585875122,
+              "median_px": 6.595104682826468
+            },
+            "psm1": {
+              "points": 72,
+              "rms_px": 9.814622284130719,
+              "median_px": 7.7039104148087265
+            },
+            "psm2": {
+              "points": 68,
+              "rms_px": 5.533855182985247,
+              "median_px": 1.5578566898789437
+            }
+          }
+        },
+        "optimizer": null
+      },
+      "after": {
+        "name": "source_with_contact_and_original_clicks",
+        "pad_translation_world_m": [
+          0.00025837375037222237,
+          7.752697257786307e-05,
+          0.0010083453530069064
+        ],
+        "normal_lift_m": 0.001008866194113313,
+        "geometry": {
+          "actual_tip_surface_gap_m": 7.500002495704615e-05,
+          "actual_tip_local_normal_gap_m": 7.320318840227212e-05,
+          "tip_to_translated_insertion_marker_m": 0.0004610316735245817,
+          "translated_insertion_marker_m": [
+            0.039510855162169324,
+            -0.040200007219143866,
+            0.0026370872808897097
+          ],
+          "nearest_original_pad_point_m": [
+            0.03911269066686644,
+            -0.03991169265348674,
+            0.0014028607459292857
+          ]
+        },
+        "image_metrics": {
+          "all": {
+            "all": {
+              "points": 689,
+              "rms_px": 7.027359559836284,
+              "median_px": 3.051209561112891
+            },
+            "left": {
+              "points": 90,
+              "rms_px": 11.297968722292818,
+              "median_px": 10.139675606925538
+            },
+            "right": {
+              "points": 78,
+              "rms_px": 11.431847823913508,
+              "median_px": 10.774212533175401
+            },
+            "psm1": {
+              "points": 264,
+              "rms_px": 5.410577471199893,
+              "median_px": 2.029519427480584
+            },
+            "psm2": {
+              "points": 257,
+              "rms_px": 4.237791805495206,
+              "median_px": 2.003754323061251
+            }
+          },
+          "fit": {
+            "all": {
+              "points": 527,
+              "rms_px": 6.384476345473664,
+              "median_px": 2.975758614083456
+            },
+            "left": {
+              "points": 77,
+              "rms_px": 10.620614514773944,
+              "median_px": 9.854670036044219
+            },
+            "right": {
+              "points": 69,
+              "rms_px": 11.00750788058856,
+              "median_px": 10.283809724225927
+            },
+            "psm1": {
+              "points": 192,
+              "rms_px": 2.8584246108186395,
+              "median_px": 1.6506201178751665
+            },
+            "psm2": {
+              "points": 189,
+              "rms_px": 3.8946255232030826,
+              "median_px": 2.2653787184066125
+            }
+          },
+          "reserved": {
+            "all": {
+              "points": 162,
+              "rms_px": 8.799584525659354,
+              "median_px": 3.6547225921002893
+            },
+            "left": {
+              "points": 13,
+              "rms_px": 14.682708031484715,
+              "median_px": 12.378498213950493
+            },
+            "right": {
+              "points": 9,
+              "rms_px": 14.271947745478101,
+              "median_px": 12.89652722857226
+            },
+            "psm1": {
+              "points": 72,
+              "rms_px": 9.249380235895892,
+              "median_px": 5.759946314988263
+            },
+            "psm2": {
+              "points": 68,
+              "rms_px": 5.071053372438994,
+              "median_px": 1.408094525368889
+            }
+          }
+        },
+        "optimizer": {
+          "success": false,
+          "message": "Iteration limit reached",
+          "evaluations": 714,
+          "cost": 182.34629981303402
+        },
+        "source_click_metrics": {
+          "frame": 600,
+          "camera": "left",
+          "role": "fit constraints, not independent validation",
+          "source_pixels": [
+            [
+              510.47,
+              214.79
+            ],
+            [
+              485.69,
+              290.15
+            ]
+          ],
+          "translated_material_marker_pixels": [
+            [
+              516.7425571300328,
+              208.04416267294178
+            ],
+            [
+              491.8774581875526,
+              284.1355996050958
+            ]
+          ],
+          "error_vectors_px": [
+            [
+              6.272557130032737,
+              -6.7458373270582115
+            ],
+            [
+              6.187458187552579,
+              -6.014400394904158
+            ]
+          ],
+          "error_norms_px": [
+            9.211476222227164,
+            8.62888468650119
+          ],
+          "rms_px": 8.92493543745811
+        }
+      }
+    },
+    "marker_source_pixel_errors_px": [
+      9.211476222227164,
+      8.62888468650119
+    ],
+    "preserved": [
+      "recorded tool motion",
+      "camera poses and optics",
+      "fixture and table",
+      "needle body, initial pose and grasp",
+      "pad and needle local geometry",
+      "marker material triangles, barycentrics, UVs and texture"
+    ],
+    "limitations": [
+      "Pad translation is conditional on unchanged estimated optics; it does not establish measured calibration.",
+      "Original marker material bindings move with the pad and may differ from source clicked pixels.",
+      "Static support translation does not simulate tissue deformation or puncture."
+    ],
+    "independent_geometry_audit": {
+      "status": "pad_only_transform_contract_verified",
+      "delta_world_m": [
+        0.00025837375037222237,
+        7.752697257786307e-05,
+        0.0010083453530069064
+      ],
+      "normal_lift_m": 0.001008866194113313,
+      "in_plane_shift_m": [
+        0.000252112678220935,
+        9.030947006584091e-05,
+        -4.204296989540439e-07
+      ],
+      "unchanged_file_hashes": {
+        "motion.npz": [
+          "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+          "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7"
+        ],
+        "camera_poses.npz": [
+          "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+          "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265"
+        ],
+        "rig.usdc": [
+          "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53",
+          "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53"
+        ],
+        "needle_inputs.npz": [
+          "06e32186ae3378ff8194ae310d3fe436cf744331961d27abb77c9bbeae0ca1f2",
+          "06e32186ae3378ff8194ae310d3fe436cf744331961d27abb77c9bbeae0ca1f2"
+        ],
+        "textures/point_labels.png": [
+          "358d0c01cfe97f91ad847e5be2e6334ae118ce891340aaa694071e7947e2ce0e",
+          "358d0c01cfe97f91ad847e5be2e6334ae118ce891340aaa694071e7947e2ce0e"
+        ]
+      },
+      "needle_pose_geometry_grip_unchanged": true,
+      "pad_region_local_geometry_uv_unchanged": true,
+      "marker_material_bindings_unchanged": true,
+      "marker_projections": [
+        {
+          "label": "insertion",
+          "before_uv": [
+            510.46998685341504,
+            214.78994827871944
+          ],
+          "after_uv": [
+            516.7425571300328,
+            208.04416267294178
+          ],
+          "after_source_pixel_error": 9.211476222227164
+        },
+        {
+          "label": "exit",
+          "before_uv": [
+            485.6900029811762,
+            290.1500273285934
+          ],
+          "after_uv": [
+            491.8774581875526,
+            284.1355996050958
+          ],
+          "after_source_pixel_error": 8.62888468650119
+        }
+      ],
+      "held_interval": {
+        "before": {
+          "actual_tip_127_gap_mm": 0.9751153411343694,
+          "mesh_127_gap_mm": 0.9616597671993077,
+          "raised_4_100_min_mesh_gap_mm": 1.9649022724479437,
+          "first_mesh_within_0p1mm_frame": 148,
+          "minimum_vertical_clearance_mm": -0.22040307521820068,
+          "minimum_height_above_pad_bottom_mm": 6.481409188352143
+        },
+        "after": {
+          "actual_tip_127_gap_mm": 0.07499894127249718,
+          "mesh_127_gap_mm": 0.060113685321994126,
+          "raised_4_100_min_mesh_gap_mm": 1.0141045786440372,
+          "first_mesh_within_0p1mm_frame": 127,
+          "minimum_vertical_clearance_mm": -1.2030303478240967,
+          "minimum_height_above_pad_bottom_mm": 5.472542994242338
+        }
+      },
+      "limitation": "Mesh vertices and triangle centers sample surface; this does not validate video registration or exact triangle-triangle intersection."
+    }
+  },
+  "needle_backing_collision": {
+    "schema_version": 1,
+    "status": "user_selected_single_flat_backing_collision",
+    "environment_collision_policy": "single_rectangular_backing_only",
+    "source_sha256": {
+      "motion.npz": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+      "camera_poses.npz": "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+      "phantom.usdc": "ea046d474aab6f0be7917e22bb5cf78de9b1e4b03b48073a5100945ebee6a0f7",
+      "needle_inputs.npz": "06e32186ae3378ff8194ae310d3fe436cf744331961d27abb77c9bbeae0ca1f2",
+      "needle_initialization.json": "66a6a68a179e45fa9be6bddd4530f1ea6ad1d7ca789ed0d5cb52521b9c091920",
+      "rig.usdc": "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53",
+      "point_labels.json": "8be2dbd353a2ee8ad3b6d843bba38bb8c57d75f4b9a74feb79398b282589f2bf",
+      "recording.json": "c67f2d86506d8c11aa0d45cf62e8bc1b5f4ec01b2ae9158311546559cdeff610",
+      "calibration.json": "7a834a931570367c014314939229dce9f61b495c1991fe1c5ce2b0554ec14571",
+      "needle.usdc": "c99f09752fa6b7d794052d4427ed48c8c10de971ede9a3bf863c59ca0836d545"
+    },
+    "geometry": {
+      "environment_collision_policy": "single_rectangular_backing_only",
+      "environment_collision_count": 1,
+      "environment_collision_path": "/SutureBotNeedle/PadSupportProxy/RectangularBacking",
+      "support": "One rectangular native flat backing; raised tissue, tools, fixture, endoscope and table have no environment collision shapes",
+      "backing_dimensions_m": [
+        0.13318735765534756,
+        0.1324805516189042,
+        0.004450611774539077
+      ],
+      "backing_world_transform": [
+        [
+          0.9998829781026586,
+          -0.013982670239650243,
+          0.006206048140917015,
+          0.0033393744775777586
+        ],
+        [
+          0.014060442527423143,
+          0.9998208694389858,
+          -0.01267016141189137,
+          0.00011089593801842941
+        ],
+        [
+          -0.0060277737591262325,
+          0.012755938508771113,
+          0.9999004710351272,
+          -0.005055315003880334
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "backing_top_plane_dot_normal_m": -0.002810186717007573
+    },
+    "needle_body_attributes_unchanged": true,
+    "preserved_file_sha256": {
+      "motion.npz": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+      "camera_poses.npz": "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+      "phantom.usdc": "ea046d474aab6f0be7917e22bb5cf78de9b1e4b03b48073a5100945ebee6a0f7",
+      "needle_inputs.npz": "06e32186ae3378ff8194ae310d3fe436cf744331961d27abb77c9bbeae0ca1f2",
+      "needle_initialization.json": "66a6a68a179e45fa9be6bddd4530f1ea6ad1d7ca789ed0d5cb52521b9c091920",
+      "rig.usdc": "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53",
+      "point_labels.json": "8be2dbd353a2ee8ad3b6d843bba38bb8c57d75f4b9a74feb79398b282589f2bf"
+    },
+    "limitations": [
+      "Raised tissue is non-colliding; this enables passage without tissue deformation or puncture forces.",
+      "The sole static collision object is the original rectangular backing, below the raised tissue.",
+      "Visual table, fixture, endoscope and tool bodies are absent from the isolated needle collision model.",
+      "Needle capsule collision geometry remains unchanged so the free needle can land on the backing."
+    ]
+  },
+  "pre_regrasp_validation": {
+    "current_needle_runtime": {
+      "result": "passed",
+      "sample_id": "tissue3_215300",
+      "device": "cpu",
+      "simulated_supported_frames": 597,
+      "held_frames": 300,
+      "free_frames": 297,
+      "maximum_held_transform_absolute_error": 4.040782618508487e-07,
+      "maximum_recorded_tool_pose_error": 2.9801562217990352e-08,
+      "deterministic_seek_maximum_pose_difference": 0.0,
+      "free_translation_extent_m": [
+        0.0038871169090270996,
+        0.004141207784414291,
+        0.007947687990963459
+      ],
+      "events": [
+        {
+          "frame": 4,
+          "event": "initial_grasp",
+          "arm": "psm1"
+        },
+        {
+          "frame": 304,
+          "event": "release",
+          "arm": "psm1"
+        }
+      ],
+      "isolated_rigid_body_count": 1,
+      "runtime_needle_trajectory_input": false,
+      "limitations": [
+        "Initial needle pose is an uncertain image estimate.",
+        "Held poses impose a fixed grasp constraint; forces are not inferred.",
+        "Free contacts use the single rectangular backing only; raised tissue and table are non-colliding."
+      ],
+      "scope": "Historical proximity-only needle runtime before fresh-closure translation assistance."
+    },
+    "current_encoded_video_review": {
+      "status": "passed",
+      "capture_times_s": [
+        4.1,
+        10.0
+      ],
+      "source_frames_shown": [
+        127,
+        304
+      ],
+      "method": "Decoded final MP4; inspected needle approach and both green material labels in actual main OpenGL viewport outside the overlays.",
+      "main_view_marker_rois_xyxy": [
+        [
+          614,
+          360,
+          632,
+          378
+        ],
+        [
+          646,
+          344,
+          666,
+          362
+        ]
+      ],
+      "strong_green_pixels_per_roi": [
+        24,
+        8
+      ],
+      "frame127_png_sha256": "ae3fa874294cee523ed2ca0b0e418ea053ebed5e34f5ba773b476e0141712382",
+      "frame304_png_sha256": "77df17c3d560af974ab61af6c790f7d71948a5d3de6328ed38470a5907161f9d",
+      "video_artifacts_sha256": {
+        "docs/media/fem_suturebot.mp4": "2f29c41e2756b916252fc4df88fb89fcb81157b4460d6a64bc2d9e9f08f8a5ae",
+        "docs/media/fem_suturebot.json": "44581dee747ac0b3ecfd5adfa2f39e7108553b1e840914a0237ec9534d1210e1",
+        "docs/media/fem_suturebot.jpg": "b443c5e36ff73672e6d962900557a261301b88847c030f1d805728f3e4a65d24",
+        "docs/media/fem_suturebot.gif": "c4897db7c16e135b39fc1a7405ff86afe24564aa62cb7f647ab931a1aadd555d"
+      },
+      "render_device": "cuda:0",
+      "needle_dynamics_backend": "MuJoCo CPU"
+    },
+    "current_actual_render": {
+      "sample": "/home/beer/Dev/MSc/SutureBot-workbench/outputs/simulation/recording_tissue3_215300_pad127_backing/recording.json",
+      "device": "cpu",
+      "frames": [
+        {
+          "frame": 4,
+          "requested_frame": 4,
+          "source_timestamp_ns": 1745891580617266585,
+          "source_time_s": 0.130575402,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 16,
+            "right": 15,
+            "psm1": 16,
+            "psm2": 13
+          }
+        },
+        {
+          "frame": 50,
+          "requested_frame": 50,
+          "source_timestamp_ns": 1745891582147195324,
+          "source_time_s": 1.660504141,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 16,
+            "right": 15,
+            "psm1": 19,
+            "psm2": 13
+          }
+        },
+        {
+          "frame": 100,
+          "requested_frame": 100,
+          "source_timestamp_ns": 1745891583816979560,
+          "source_time_s": 3.330288377,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 16,
+            "right": 15,
+            "psm1": 19,
+            "psm2": 13
+          }
+        },
+        {
+          "frame": 125,
+          "requested_frame": 125,
+          "source_timestamp_ns": 1745891584652884776,
+          "source_time_s": 4.166193593,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 16,
+            "right": 15,
+            "psm1": 19,
+            "psm2": 13
+          }
+        },
+        {
+          "frame": 127,
+          "requested_frame": 127,
+          "source_timestamp_ns": 1745891584713135969,
+          "source_time_s": 4.226444786,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 16,
+            "right": 15,
+            "psm1": 19,
+            "psm2": 13
+          }
+        },
+        {
+          "frame": 150,
+          "requested_frame": 150,
+          "source_timestamp_ns": 1745891585487218818,
+          "source_time_s": 5.000527635,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 16,
+            "right": 15,
+            "psm1": 19,
+            "psm2": 14
+          }
+        },
+        {
+          "frame": 300,
+          "requested_frame": 300,
+          "source_timestamp_ns": 1745891590480901060,
+          "source_time_s": 9.994209877000001,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 16,
+            "right": 15,
+            "psm1": 15,
+            "psm2": 16
+          }
+        },
+        {
+          "frame": 450,
+          "requested_frame": 450,
+          "source_timestamp_ns": 1745891595480731522,
+          "source_time_s": 14.994040339000001,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 15,
+            "right": 14,
+            "psm1": 16,
+            "psm2": 14
+          }
+        },
+        {
+          "frame": 600,
+          "requested_frame": 600,
+          "source_timestamp_ns": 1745891600481540541,
+          "source_time_s": 19.994849358,
+          "rendered_pixels": {
+            "left": 32400,
+            "right": 32400,
+            "psm1": 43200,
+            "psm2": 43200
+          },
+          "visible_shapes": {
+            "left": 15,
+            "right": 14,
+            "psm1": 17,
+            "psm2": 12
+          }
+        }
+      ],
+      "scope": "Actual mesh rendering and source-clock consistency, not a calibration accuracy metric",
+      "supported_interval": [
+        4,
+        600
+      ],
+      "body_count": 15,
+      "shape_count": 61,
+      "particle_count": 0,
+      "result": "passed"
+    },
+    "full_cuda": {
+      "tests": 162,
+      "passed": 162,
+      "errors": 0,
+      "failures": 0,
+      "result": "passed",
+      "seconds": 286.227,
+      "device": "cuda:0",
+      "isolated_retries": 0,
+      "command": "NEWTON_TEST_DEVICE=cuda:0 WARP_CACHE_PATH=/tmp/suturebot-uv-warp .venv/bin/python -m unittest discover -s tests -v",
+      "scope": "Complete 162-test suite after pad translation and before single-backing collider change and added regression. Final asset behavior is separately checked by the 21 focused tests.",
+      "sandbox": "GPU access required escalated execution"
+    },
+    "viewer_capture": {
+      "example": "fem_suturebot",
+      "module": "newton_solver_fem.examples.example_fem_suturebot",
+      "caption": "Replay the tissue3 needle-throw recording with prepared USD tools, camera mounts and the original phantom. Four views overlay the same model on synchronized source-video frames using fitted camera rays and poses. Dataset point labels are UV-textured onto the preserved phantom; the rigid needle follows recorded jaw grasp/release with MuJoCo free dynamics. Camera placement remains an estimate; tissue puncture is not simulated.",
+      "arguments": [
+        "--test"
+      ],
+      "device": "cuda:0",
+      "frames": 1202,
+      "fps": 60,
+      "width": 1280,
+      "height": 720,
+      "show_ui": true,
+      "recording_wall_seconds": 36.98490322798898,
+      "playback_is_performance_benchmark": false,
+      "simulation_time": [
+        {
+          "attribute": "sim_time",
+          "end": 20.033333333333477
+        }
+      ],
+      "dependencies": {
+        "newton_solver_fem": "0.1.0",
+        "newton": "1.7.0",
+        "warp-lang": "1.17.0+cu13"
+      },
+      "scenario": {
+        "sample_id": "tissue3_215300",
+        "source_episode": "tissue_3/2_needle_throw/20250428-215300-489212",
+        "source_frame_count": 601,
+        "observed_source_frames": 597,
+        "supported_source_frames": [
+          4,
+          600
+        ],
+        "alignment": {
+          "status": "pad_only_translation_with_fixed_camera_calibration_estimate",
+          "reportpath": "calibration.json",
+          "tool_registration_report": "alignment.json",
+          "absolute_metric_accuracy_validated": false,
+          "pad_placement_report": "pad_placement.json",
+          "prior_metrics_scope": "Previous calibration fit metrics predate the separately reported pad translation",
+          "accepted": false
+        },
+        "final_overlay_coverage_pixels": {
+          "left": 32400,
+          "right": 32400,
+          "psm1": 43200,
+          "psm2": 43200
+        },
+        "motion": "measured Cartesian/joint kinematic replay",
+        "region_id": 1,
+        "point_labels": {
+          "report": "point_labels.json",
+          "texture": "textures/point_labels.png",
+          "count": 2,
+          "display_color_rgb": [
+            0,
+            255,
+            0
+          ]
+        },
+        "needle": {
+          "present": true,
+          "motion": "fixed gripper-relative pose while held; MuJoCo dynamics after release",
+          "recorded_needle_trajectory": false,
+          "events": [
+            {
+              "frame": 4,
+              "event": "initial_grasp",
+              "arm": "psm1"
+            },
+            {
+              "frame": 304,
+              "event": "release",
+              "arm": "psm1"
+            }
+          ]
+        },
+        "needle_tissue_interaction": false,
+        "view_changes": [
+          {
+            "capture_frame": 120,
+            "view": "phantom"
+          },
+          {
+            "capture_frame": 180,
+            "view": "surface point labels"
+          },
+          {
+            "capture_frame": 850,
+            "view": "phantom"
+          },
+          {
+            "capture_frame": 1000,
+            "view": "complete rig"
+          }
+        ]
+      }
+    },
+    "assets": {
+      "schema_version": 1,
+      "status": "portable_export_passed",
+      "host_paths_present": false,
+      "runtime_assets_contained_in_bundle": true,
+      "numerical_payloads_byte_identical": true,
+      "source_preparation_outputs_modified": false,
+      "image_count": 2404,
+      "camera_ray_file_count": 8,
+      "usd_layers": [
+        "needle.usdc",
+        "phantom.usdc",
+        "rig.usdc",
+        "scene.usda"
+      ],
+      "frame_count": 601,
+      "supported_frames": [
+        4,
+        600
+      ],
+      "additional_assets": [
+        "needle.usdc",
+        "needle_backing_collision.json",
+        "needle_initialization.jpg",
+        "needle_initialization.json",
+        "needle_inputs.npz",
+        "pad_placement.json",
+        "pad_placement_correction.json",
+        "point_labels.json",
+        "point_labels_source",
+        "textures/point_labels.png"
+      ],
+      "newton_import": {
+        "bodies": 14,
+        "shapes": 27,
+        "device": "cpu",
+        "scope": "Core replay only; complete replay including needle is 15 bodies/61 shapes."
+      },
+      "alignment_precision_validated": false,
+      "bundle_files": 2478,
+      "bundle_bytes": 34568022,
+      "texture_assets": [
+        "textures/point_labels.png"
+      ]
+    },
+    "publication": {
+      "status": "passed",
+      "published_sample": "tissue3_215300",
+      "inspected_json_files": 17,
+      "runtime_dependencies_checked": 2417,
+      "jpeg_frames_byte_identical": 2404,
+      "ray_files_byte_identical": 8,
+      "reviewed_tool_mask_rasters_verified": 35,
+      "usd_and_trajectory_payloads_byte_identical": true,
+      "all_runtime_dependencies_resolve_inside_package": true,
+      "problems": [],
+      "current_bundle_tree_sha256": "096811bf403437717816c07d61fbacb4569a846ec33d5e1f0e10d45768536b58",
+      "metadata_roundtrip_verified": true,
+      "bundle_tree_hash_algorithm": "sha256 of sorted relative POSIX path + NUL + file sha256 + newline",
+      "current_manifest_sha256": "18f175bee433662586209da5e807f091a374f00e4dbbad9c672f51e1f616a724",
+      "current_portable_validation_sha256": "46964159acbb19e76a6c55ffe9acaa8fd07e39702142b46d6958088302f444e0",
+      "current_bundle_files": 2480,
+      "current_bundle_bytes": 34574302
+    },
+    "wheel": {
+      "status": "wheel_bytes_dependencies_and_cpu_replay_passed",
+      "wheel_file": "newton_solver_fem-0.1.0-py3-none-any.whl",
+      "sample_id": "tissue3_215300",
+      "wheel_sha256": "2c30b9d87426224b149c6a7378a8a259289ccca941b124c05837210a0c5daeb7",
+      "bundle_files": 2478,
+      "bundle_bytes": 34568022,
+      "bundle_tree_sha256": "bee2cf3fda4b8d5d21055a160a81f9c1fd27fcd0dc6eb2d776722aef1a04261b",
+      "every_bundle_file_byte_identical": true,
+      "module_loaded_from_extracted_wheel": true,
+      "usd_dependencies_local": [
+        "needle.usdc",
+        "phantom.usdc",
+        "rig.usdc",
+        "scene.usda",
+        "textures/point_labels.png"
+      ],
+      "unresolved_usd_dependencies": [],
+      "prepared_images_verified": 2404,
+      "partial_mask_pngs_verified": 35,
+      "workstation_paths_in_published_json": false,
+      "source_frames": 601,
+      "supported_frames_replayed": 597,
+      "first_valid_frame": 4,
+      "last_valid_frame": 600,
+      "body_count": 15,
+      "shape_count": 61,
+      "needle_events": [
+        {
+          "frame": 4,
+          "event": "initial_grasp",
+          "arm": "psm1"
+        },
+        {
+          "frame": 304,
+          "event": "release",
+          "arm": "psm1"
+        }
+      ],
+      "point_labels_present": true,
+      "device": "cpu",
+      "scope": "Historical wheel before repeated fresh-closure needle assistance; retained package evidence."
+    }
+  }
+}

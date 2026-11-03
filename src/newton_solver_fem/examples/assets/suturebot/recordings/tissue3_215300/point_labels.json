@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "camera": "left",
+  "annotation_frame": 600,
+  "annotation_semantics": "final-frame insertion and exit pixels; static material labels, not contact events",
+  "texture": "textures/point_labels.png",
+  "source_csv": "point_labels_source/clicked_point.csv",
+  "source_mask": "point_labels_source/clicked_point_mask.png",
+  "source_csv_sha256": "7e37ef35c2f4ca6b58b2deac8ac77a1eb5a9b65a27d5b237622134221e9e5ed6",
+  "source_mask_sha256": "910dbb106f2c4edfa2fefd13a51236a0fadfb707d604807622321556baa14f83",
+  "source_color_policy": "Original source mask RGB bytes are retained; nonzero pixels define label coverage",
+  "source_nonzero_pixels": 162,
+  "visible_source_pixels": 162,
+  "painted_triangles": 9,
+  "atlas_size": [
+    256,
+    256
+  ],
+  "tile_size": 64,
+  "uv_interpolation": "faceVarying; disjoint triangle tiles with filtering gutters",
+  "geometry_arrays_unchanged": true,
+  "geometry_role": "Original tetrahedral exterior boundary triangles and reference vertex indices; replay surface is static",
+  "material_transport": "With updated triangle vertices X_i(t), the label is sum_i barycentric_i*X_i(t); fixed face-varying UVs travel with that face. This replay does not evolve FEM vertices.",
+  "camera_poses_sha256": "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+  "motion_sha256": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+  "geometry_arrays_sha256": "d552069e45b13e0aecf359f2eda6900820f5f90f14b0c9a039962fc44c689e83",
+  "points": [
+    {
+      "label": "insertion",
+      "pixel_original": [
+        510.47,
+        214.79
+      ],
+      "region_id": 1,
+      "prim_path": "/PhantomSurface/Region01",
+      "triangle_index": 2935,
+      "reference_vertex_indices": [
+        1429,
+        845,
+        831
+      ],
+      "barycentric": [
+        0.04130629450082779,
+        0.6975621581077576,
+        0.26113152503967285
+      ],
+      "position_world_m": [
+        0.039510855162169324,
+        -0.040200007219143866,
+        0.0026370872808897097
+      ],
+      "uv": [
+        0.16898844896059018,
+        0.6781855424196692
+      ],
+      "ray_reconstruction_error_m": 1.1679658889569975e-08,
+      "translated_projection_px": [
+        516.7425571300328,
+        208.04416267294178
+      ],
+      "translated_source_pixel_error_px": 9.211476222227164
+    },
+    {
+      "label": "exit",
+      "pixel_original": [
+        485.69,
+        290.15
+      ],
+      "region_id": 1,
+      "prim_path": "/PhantomSurface/Region01",
+      "triangle_index": 2900,
+      "reference_vertex_indices": [
+        1430,
+        3626,
+        821
+      ],
+      "barycentric": [
+        0.07691791653633118,
+        0.6614896655082703,
+        0.26159244775772095
+      ],
+      "position_world_m": [
+        0.03826385063576435,
+        -0.04545917001101245,
+        0.0028141768283981615
+      ],
+      "uv": [
+        0.6609566986444406,
+        0.9280829609488137
+      ],
+      "ray_reconstruction_error_m": 8.909721154475947e-09,
+      "translated_projection_px": [
+        491.8774581875526,
+        284.1355996050958
+      ],
+      "translated_source_pixel_error_px": 8.62888468650119
+    }
+  ],
+  "limitations": [
+    "Bindings are conditional on fitted camera/phantom alignment, not independently measured 3D points.",
+    "Static reference tetrahedron exterior is used; recorded tissue deformation is not reconstructed.",
+    "Labels remain on their material triangles throughout replay; annotation timing is not grasp/contact timing.",
+    "Pad-only rigid placement carries the original material labels; original source-pixel overlap is reported, not forced by rebinding."
+  ],
+  "display_color_rgb": [
+    0,
+    255,
+    0
+  ],
+  "display_color_policy": "All labelled texels use display_color_rgb for visibility; source pixels and material bindings are unchanged",
+  "binding_creation_geometry_arrays_sha256": "470355fe5ca1e7eb6b49e7d207c93acee3ed3dd77183db85c9a93f45c87d6649",
+  "geometry_hash_scope": "World-transformed vertices and triangle indices; authored local geometry arrays remain unchanged",
+  "binding_creation_metrics_scope": "Source-ray reconstruction and visible-source counts describe binding creation before the rigid pad translation",
+  "rigid_pad_translation_world_m": [
+    0.00025837375037222237,
+    7.752697257786307e-05,
+    0.0010083453530069064
+  ],
+  "source_pixel_alignment_expected": false
+}

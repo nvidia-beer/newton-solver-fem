@@ -1,5 +1,6 @@
 """Region payload selection changes volume connectivity, not just visibility."""
 
+import hashlib
 import importlib.util
 import json
 import tempfile
@@ -169,7 +170,10 @@ class MeshRegionTests(unittest.TestCase):
     def test_bundled_phantom_has_complete_volume_and_smaller_selected_payload(self):
         path = Path(__file__).parents[1] / "src/newton_solver_fem/examples/assets/phantom_pad/phantom_regions.usd"
         catalog = list_mesh_regions(path)
-        self.assertEqual(len(catalog), 10)
+        self.assertEqual([region.id for region in catalog], list(range(12)))
+        self.assertEqual(catalog[0].name, "base_and_lettering")
+        self.assertEqual(catalog[1].name, "feature_01")
+        self.assertEqual(catalog[10].name, "wound_5_slit_patch")
         self.assertEqual(sum(region.tetrahedron_count for region in catalog), 413405)
         whole = load_mesh_regions(path)
         self.assertEqual(whole.vertices.shape, (97489, 3))
@@ -187,8 +191,73 @@ class MeshRegionTests(unittest.TestCase):
         for region in catalog:
             with self.subTest(region=region.id):
                 self.assertEqual(len(load_mesh_regions(path, [region.id]).indices), region.tetrahedron_count)
-        with self.assertRaisesRegex(ValueError, "nonmanifold boundary"):
+        # This original pair still touches at pinched vertices; preserving
+        # original ownership preserves the selector's existing rejection.
+        with self.assertRaisesRegex(ValueError, "nonmanifold"):
             load_mesh_regions(path, [0, 9])
+        restored_one = load_mesh_regions(path, [1, 10, 11])
+        self.assertEqual(restored_one.vertices.shape, (21439, 3))
+        self.assertEqual(restored_one.indices.shape, (88914, 4))
+        np.testing.assert_array_equal(restored_one.vertices, whole.vertices[restored_one.global_vertex_indices])
+        np.testing.assert_array_equal(
+            restored_one.global_vertex_indices[restored_one.indices],
+            whole.indices[restored_one.global_tetrahedron_indices],
+        )
+        wound_five = load_mesh_regions(path, [10])
+        self.assertEqual(wound_five.indices.shape, (18790, 4))
+        self.assertEqual(wound_five.vertices.shape, (4689, 3))
+        self.assertGreater(wound_five.vertices[wound_five.indices].mean(axis=1)[:, 1].min(), 0.0)
+        surface = whole.vertices[whole.exterior_surface_triangles]
+        normals = np.cross(surface[:, 1] - surface[:, 0], surface[:, 2] - surface[:, 0])
+        upward = normals[:, 2] > 0.1 * np.linalg.norm(normals, axis=1)
+        centers = surface.mean(axis=1)[upward, :2]
+        owners = whole.exterior_surface_region_ids[upward]
+        # Source-surface landmarks: keep the slit and return the neighboring
+        # long groove to original region one. The earlier straight cut included that groove.
+        for x, y, expected in (
+            (0.0423, 0.0174, 10),
+            (0.0477, 0.0245, 10),
+            (0.0530, 0.0315, 10),
+            (0.0250, 0.0210, 1),
+            (0.0300, 0.0280, 1),
+            (0.0340, 0.0340, 1),
+            (0.051050, 0.007972, 10),
+            (0.045608, 0.008837, 10),
+            (0.0520, 0.0470, 1),
+            (0.0490, 0.0480, 1),
+            (0.0100, -0.0300, 11),
+            (0.0130, -0.0270, 11),
+            (0.0180, -0.0100, 1),
+        ):
+            with self.subTest(surface_landmark=(x, y)):
+                closest = np.argmin(np.linalg.norm(centers - (x, y), axis=1))
+                self.assertEqual(owners[closest], expected)
+
+    def test_dataset_labels_preserve_original_payloads_except_allowed_wound_five_split(self):
+        folder = Path(__file__).parents[1] / "src/newton_solver_fem/examples/assets/phantom_pad"
+        mapping = json.loads((folder / "suturebot_region_map.json").read_text())
+        self.assertEqual([region["id"] for region in mapping["regions"]], list(range(1, 13)))
+        self.assertEqual(
+            [region["source_region_id"] for region in mapping["regions"]], [6, 2, 5, 7, 10, 9, 0, 1, 3, 4, 8, 11]
+        )
+        # Hashes from the original committed geometry-only payloads before
+        # this task. Labels cannot silently repartition any other volume.
+        original_hashes = {
+            "region_000_base_and_lettering.usdc": "e1d67af37a3cb6d2c0dff2bb1b39d773f1197f7bc2db9fdd883d78267b5a48c7",
+            "region_002_feature_02.usdc": "ffd338ba156b14d2391d8f48c8c903bd8084dde8ce675fa9b34a79fcecc3b013",
+            "region_003_feature_03.usdc": "76c7cb1fbfeb72e61bb4402a27b5d1f10eaecb15b115efa100d1d7f0d3026ed4",
+            "region_004_feature_04.usdc": "638a2728bb203b7f7ccc2c10e5d2fc17ca662d3763bc16cf65f2f6de73b5fd7a",
+            "region_005_feature_05.usdc": "38824c34a68a6788146982b08192ccaf556eef5ecd6f9791ed3632d7aedc19d3",
+            "region_006_feature_06.usdc": "b8ac9e3d67ca515e74a2e7495683716637911b650a7ba2c1c39918bb1de1cae3",
+            "region_007_feature_07.usdc": "28763d6c606ac323169c395bfb7059e5d9d6f1f7c9c0da69dff35409bf888567",
+            "region_008_feature_08.usdc": "3f11004229357330d068099eefd0e457f3bd60c0b7cd543b555348a0fc1d5fe1",
+            "region_009_upper_paired_strips.usdc": "2356925ad8eed756a7a2181bc3891e8175149e8fcae05d99da97ed6013cb0040",
+        }
+        for name, expected in original_hashes.items():
+            with self.subTest(payload=name):
+                self.assertEqual(
+                    hashlib.sha256((folder / "phantom_regions_payloads" / name).read_bytes()).hexdigest(), expected
+                )
 
 
 if __name__ == "__main__":

@@ -1,0 +1,54 @@
+{
+  "selected_region_ids": [
+    1
+  ],
+  "face": 3447,
+  "surface_point_m": [
+    0.02836189605295658,
+    -0.046496231108903885,
+    0.0022481908090412617
+  ],
+  "target_order": [
+    "rcm_yaw",
+    "rcm_pitch",
+    "insertion"
+  ],
+  "hover_targets": [
+    0.009197296610209914,
+    -0.027905204618017047,
+    0.018123888363506573
+  ],
+  "press_targets": [
+    0.017705663077970116,
+    -0.016618232895837175,
+    0.02312542359008964
+  ],
+  "retract_targets": [
+    0.005969642390439627,
+    -0.032184793434510514,
+    0.016313301518129656
+  ],
+  "maximum_jaw_active_tissue_force_N": 0.0270112082362175,
+  "maximum_jaw_active_contact_samples": 8,
+  "frames_with_jaw_active_contact": 147,
+  "force_sampling": "PSM1 jaws, force delivered to free FEM nodes, final substep per frame",
+  "maximum_incremental_displacement_m": 0.0005633644759654999,
+  "remaining_displacement_m": 8.067563612712547e-05,
+  "maximum_rcm_error_m": 1.1500985053203294e-08,
+  "active_tetrahedra": 29160,
+  "active_nodes": 7205,
+  "frames": 540,
+  "device": "cuda:0",
+  "performance_benchmark": false,
+  "runtime_path": "fem_suturebot --demo --regions 1",
+  "duration_seconds": 9.0,
+  "every_frame_finite_positive_and_fixed_anchors_exact": true,
+  "arguments": [
+    "--demo",
+    "--regions",
+    "1",
+    "--viewer",
+    "null"
+  ],
+  "validation": "540 calls to Example.step(), each followed by Example.test_final(); TissuePress.validate() after recovery"
+}

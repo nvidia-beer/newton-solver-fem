@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "changed_existing_files": [
+    "calibration.json",
+    "pad_placement.json",
+    "pad_placement_correction.json",
+    "phantom.usdc",
+    "recording.json"
+  ],
+  "all_other_original_files_byte_identical": true,
+  "source_files_modified": false,
+  "authored_geometry_uv_and_needle_body_attributes_unchanged": true,
+  "pad_and_collision_proxy_world_translation_m": [
+    0.00037107286109803935,
+    0.0007499315944905785,
+    -0.0017019898345740027
+  ]
+}

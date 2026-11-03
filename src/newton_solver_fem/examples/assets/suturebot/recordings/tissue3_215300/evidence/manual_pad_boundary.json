@@ -1,0 +1,933 @@
+{
+  "schema_version": 1,
+  "coordinate_convention": "original source pixels; x right, y down; polyline samples have no exact material vertex or cross-camera point correspondence",
+  "episode": "tissue_3/2_needle_throw/20250428-215300-489212",
+  "annotation_method": "Independent visual review of all four original video views at seven times. Physical pink-silicone/gray-support perimeter corridors were manually selected and cross-checked against a local smoothed colour transition. No projected model, fitted camera overlay, or generated CAD edge was used to place observations.",
+  "boundary_convention": {
+    "negative_y_outer_perimeter": "The outer pad side adjacent to the negative-Y/exterior bank of wound1; appears left or upper-left in PSM1, right in PSM2. Fit against the actual preserved mesh silhouette of that side, not an assumed z=0 rectangle."
+  },
+  "fit_frames": [
+    4,
+    75,
+    150,
+    450,
+    600
+  ],
+  "reserved_frames": [
+    300,
+    525
+  ],
+  "uncertainty_note": "Conservative annotation scales in native pixels; not estimated statistical standard deviations. Rounded edge height, slight tissue deformation, optical blur and imperfect lens calibration may add systematic disagreement.",
+  "observability_limits": [
+    "Only one physical pad side is reliably visible in these close-up videos. The opposite edge, total pad rectangle and all corners are unobserved.",
+    "Both endoscope views show pad interior through a vignette. Their dark image arcs are not pad-boundary observations.",
+    "Do not extrapolate across tools, lens vignette or crop boundaries, or turn shadows into silhouette constraints.",
+    "This side supports global alignment/scale checks jointly with wound shape, but cannot by itself validate every pad corner or independent metric scale.",
+    "Original native mesh geometry and region membership must remain unchanged."
+  ],
+  "records": [
+    {
+      "camera": "psm1",
+      "frame": 4,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          314,
+          25
+        ],
+        [
+          286,
+          70
+        ],
+        [
+          259,
+          115
+        ],
+        [
+          230,
+          160
+        ],
+        [
+          204,
+          205
+        ],
+        [
+          178,
+          250
+        ],
+        [
+          153,
+          295
+        ],
+        [
+          128,
+          340
+        ],
+        [
+          114,
+          370
+        ]
+      ],
+      "uncertainty_px": 5,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm1",
+      "frame": 75,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          307,
+          25
+        ],
+        [
+          255,
+          50
+        ],
+        [
+          206,
+          75
+        ],
+        [
+          167,
+          100
+        ],
+        [
+          117,
+          125
+        ],
+        [
+          73,
+          150
+        ],
+        [
+          29,
+          175
+        ]
+      ],
+      "uncertainty_px": 5,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm1",
+      "frame": 150,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          303,
+          25
+        ],
+        [
+          256,
+          50
+        ],
+        [
+          213,
+          75
+        ],
+        [
+          171,
+          100
+        ],
+        [
+          130,
+          125
+        ],
+        [
+          88,
+          150
+        ],
+        [
+          48,
+          175
+        ]
+      ],
+      "uncertainty_px": 5,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm1",
+      "frame": 300,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          75,
+          60
+        ],
+        [
+          79,
+          100
+        ],
+        [
+          86,
+          140
+        ],
+        [
+          94,
+          180
+        ],
+        [
+          100,
+          220
+        ],
+        [
+          118,
+          300
+        ],
+        [
+          126,
+          340
+        ],
+        [
+          136,
+          380
+        ],
+        [
+          144,
+          420
+        ]
+      ],
+      "uncertainty_px": 5,
+      "split": "heldout",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm1",
+      "frame": 450,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          262,
+          25
+        ],
+        [
+          228,
+          75
+        ],
+        [
+          199,
+          125
+        ],
+        [
+          168,
+          175
+        ],
+        [
+          139,
+          225
+        ],
+        [
+          110,
+          275
+        ],
+        [
+          81,
+          325
+        ],
+        [
+          51,
+          375
+        ]
+      ],
+      "uncertainty_px": 5,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm1",
+      "frame": 525,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          316,
+          25
+        ],
+        [
+          296,
+          75
+        ],
+        [
+          276,
+          125
+        ],
+        [
+          256,
+          175
+        ],
+        [
+          235,
+          225
+        ],
+        [
+          214,
+          275
+        ],
+        [
+          191,
+          325
+        ],
+        [
+          172,
+          370
+        ]
+      ],
+      "uncertainty_px": 5,
+      "split": "heldout",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm1",
+      "frame": 600,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          381,
+          25
+        ],
+        [
+          319,
+          75
+        ],
+        [
+          200,
+          175
+        ],
+        [
+          143,
+          225
+        ],
+        [
+          89,
+          275
+        ],
+        [
+          61,
+          310
+        ]
+      ],
+      "uncertainty_px": 5,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm2",
+      "frame": 4,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          384,
+          25
+        ],
+        [
+          391,
+          75
+        ],
+        [
+          398,
+          125
+        ],
+        [
+          402,
+          175
+        ],
+        [
+          409,
+          225
+        ],
+        [
+          414,
+          275
+        ],
+        [
+          417,
+          325
+        ],
+        [
+          419,
+          350
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm2",
+      "frame": 75,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          397,
+          25
+        ],
+        [
+          401,
+          75
+        ],
+        [
+          406,
+          125
+        ],
+        [
+          411,
+          175
+        ],
+        [
+          416,
+          225
+        ],
+        [
+          420,
+          275
+        ],
+        [
+          423,
+          325
+        ],
+        [
+          425,
+          350
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm2",
+      "frame": 150,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          392,
+          25
+        ],
+        [
+          398,
+          75
+        ],
+        [
+          402,
+          125
+        ],
+        [
+          407,
+          175
+        ],
+        [
+          413,
+          225
+        ],
+        [
+          416,
+          275
+        ],
+        [
+          417,
+          325
+        ],
+        [
+          420,
+          350
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm2",
+      "frame": 300,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          404,
+          25
+        ],
+        [
+          407,
+          75
+        ],
+        [
+          411,
+          125
+        ],
+        [
+          416,
+          175
+        ],
+        [
+          418,
+          225
+        ],
+        [
+          421,
+          275
+        ],
+        [
+          421,
+          325
+        ],
+        [
+          421,
+          350
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "heldout",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm2",
+      "frame": 450,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          397,
+          25
+        ],
+        [
+          400,
+          75
+        ],
+        [
+          404,
+          125
+        ],
+        [
+          409,
+          175
+        ],
+        [
+          411,
+          225
+        ],
+        [
+          413,
+          275
+        ],
+        [
+          415,
+          325
+        ],
+        [
+          414,
+          350
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm2",
+      "frame": 525,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          398,
+          50
+        ],
+        [
+          404,
+          100
+        ],
+        [
+          408,
+          150
+        ],
+        [
+          412,
+          200
+        ],
+        [
+          414,
+          250
+        ],
+        [
+          416,
+          300
+        ],
+        [
+          417,
+          350
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "heldout",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    },
+    {
+      "camera": "psm2",
+      "frame": 600,
+      "boundary": "negative_y_outer_perimeter",
+      "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+      "feature": "physical silicone-to-gray-support silhouette",
+      "points_px": [
+        [
+          393,
+          25
+        ],
+        [
+          399,
+          75
+        ],
+        [
+          406,
+          125
+        ],
+        [
+          411,
+          175
+        ],
+        [
+          416,
+          225
+        ],
+        [
+          421,
+          275
+        ],
+        [
+          425,
+          325
+        ],
+        [
+          424,
+          350
+        ]
+      ],
+      "uncertainty_px": 6,
+      "split": "fit",
+      "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip."
+    }
+  ],
+  "unavailable": [
+    {
+      "camera": "left",
+      "frame": 4,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "left",
+      "frame": 75,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "left",
+      "frame": 150,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "left",
+      "frame": 300,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "left",
+      "frame": 450,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "left",
+      "frame": 525,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "left",
+      "frame": 600,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "right",
+      "frame": 4,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "right",
+      "frame": 75,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "right",
+      "frame": 150,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "right",
+      "frame": 300,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "right",
+      "frame": 450,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "right",
+      "frame": 525,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    },
+    {
+      "camera": "right",
+      "frame": 600,
+      "reason": "No identifiable physical pad perimeter or corner; only interior silicone, tools and optical vignette are visible."
+    }
+  ],
+  "original_image_sources": {
+    "left_000004.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000004.png",
+      "sha256": "f5b69d881d8f5579994f461adb5560fc4b273c907cea0e9a79482532a29f8228",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000075.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000075.png",
+      "sha256": "686220471809bd9207f453b99b491a00afc99e4e5e4d49c404921b714f587ff9",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000150.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000150.png",
+      "sha256": "c52085d0549b3310d6084f1b081df6ee5414eeb4f7936777daefd2c013b925d3",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000300.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000300.png",
+      "sha256": "34af9c2b2d7bfcb492775c9568b1e0577587a6f66dad19a15e44e49bbb82dba9",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000450.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000450.png",
+      "sha256": "c21dc81710042a0cc947cd6a8c3e1244b67f05939a0ce481bfbcc170ee1eec0d",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000525.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000525.png",
+      "sha256": "2aa08cb53de0fe9744924b92a570969493b6165ec49c4a0437ed7a559000314c",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "left_000600.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/left_000600.png",
+      "sha256": "c65c571c4a44d35a378f81d3c4a0487aeb2f8c7c013d834ea80f149a4876a1ca",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000004.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000004.png",
+      "sha256": "2ce0e53c9ace099556ee4bf5af1b3bd014ed16d42563f3aee0dfb6788ea7eeee",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000075.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000075.png",
+      "sha256": "50a3f2ac1a9d4e2ab0519488465ec7315e4d7f74a5f9bb73345c36c6bec45cac",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000150.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000150.png",
+      "sha256": "1093eb9a7773245bc2ee7f0c491cb78d33624852eb502fbe72bca58b4af40a36",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000300.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000300.png",
+      "sha256": "533799422a7ca489f575fdfc408c844b1e0cfba6ebc721c18a2686ac98e5beec",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000450.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000450.png",
+      "sha256": "dff1e43d1e75272c3316ec01c550336e9ce945aceedece9d308faf15fd79720c",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000525.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000525.png",
+      "sha256": "f6ea5e0757e093963121f090e4dd7c0df065a77e792de4c6975b89a0d3f5ee1a",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "right_000600.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/right_000600.png",
+      "sha256": "f09d3c9ec0196642c0e60482605b551e7f7b2c25b2467212b3ed46d2d96b8145",
+      "image_size": [
+        960,
+        540
+      ]
+    },
+    "psm1_000004.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000004.png",
+      "sha256": "1c787faa26e813613e639757dfb799ea2bf2e6568dadd11fa19f841d3c47f629",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000075.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000075.png",
+      "sha256": "ddc7870376e9b67f0e916a24409366a508321573f90c796402b4ad2467b57e9b",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000150.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000150.png",
+      "sha256": "de0a76cdc5e057b06c91d2b9d8d40212d2f73dc43c40686f6f52b05546bf7c50",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000300.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000300.png",
+      "sha256": "ce5829b85d57fa2010177a706f7ed0bdf7bed9d4e1f687620fb29d3bae94d685",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000450.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000450.png",
+      "sha256": "058a9bf37280f4835abd48f26b4d6a5fa6a7ad68015a8a84a0ecdb5fcd4a19dd",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000525.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000525.png",
+      "sha256": "0ac35ef3f947d54b68027c8213c32bb017270cc0cd1722a80a9e21cd9f93f828",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000600.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm1_000600.png",
+      "sha256": "289eadfcb284e66066fc1547a59ae24f1f2c97cb0010de192fbbae2e97d8e983",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000004.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000004.png",
+      "sha256": "7b36e643afd3b03c24d34068da184c829b2648f2becd2f8d446e2ca3288ec271",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000075.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000075.png",
+      "sha256": "3f7ec6dd7579b0b3a1092e3ab5e912e20bde021643918b2a4389a4d2757d2a1f",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000150.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000150.png",
+      "sha256": "e53f13b5696e406ec0cbdd479925283c46432785b4a4a4c3f182d543f267c3c9",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000300.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000300.png",
+      "sha256": "0a4004a386a0da9ebb5f1767bfc52095fa6d09073582a118f5dbefac55aacc2c",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000450.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000450.png",
+      "sha256": "6212b5aeb83721afd473d8e9e659d37e767a1b989c60572685289248c2af6ba4",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000525.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000525.png",
+      "sha256": "acf9a0af9a95f0a513f849406e3c7b878159e8531aad8ec4513bea523460514f",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000600.png": {
+      "path": "preparation-source/simulation/recording_tissue3_215300/audit/psm2_000600.png",
+      "sha256": "3a3011035e780e8619eff1b92bae6a1abc3d784626037656614ddca2f7a559e5",
+      "image_size": [
+        640,
+        480
+      ]
+    }
+  },
+  "original_image_sources_note": "Logical annotation sources; replay images are in images/."
+}

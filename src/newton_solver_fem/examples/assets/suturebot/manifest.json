@@ -1,0 +1,1602 @@
+{
+  "schema_version": 1,
+  "asset": "suturebot_rig.usda",
+  "units": "meters, kilograms, seconds; manifest joint angles radians",
+  "root": "/SutureBot",
+  "frame": "unchanged phantom native frame, Z up",
+  "source_to_simulation_transform": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "pad_bottom_m": -0.009535113349556923,
+  "wound1_anchor_m": [
+    0.0299741773,
+    -0.0464978421,
+    0.0
+  ],
+  "joints": {
+    "/SutureBot/FixtureFixed": {
+      "kind": "fixed",
+      "parent": null,
+      "child": "/SutureBot/RCMFixture",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -1.0,
+        1.0
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 4.0,
+      "damping_si": 0.2
+    },
+    "/SutureBot/PSM1/Joints/rcm_yaw": {
+      "kind": "revolute",
+      "parent": null,
+      "child": "/SutureBot/PSM1/yaw",
+      "axis": "Y",
+      "anchor_parent_frame": [
+        [
+          -0.9122860179214397,
+          0.029602419282014247,
+          0.4084824577355732,
+          -0.0365863657
+        ],
+        [
+          0.0,
+          0.997384401498641,
+          -0.07227970425505104,
+          -0.0368435232
+        ],
+        [
+          -0.40955368574222656,
+          -0.06593976357137984,
+          -0.9098998439801538,
+          0.1535343
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -0.6,
+        0.6
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 12.0,
+      "damping_si": 1.0
+    },
+    "/SutureBot/PSM1/Joints/rcm_pitch": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM1/yaw",
+      "child": "/SutureBot/PSM1/pitch",
+      "axis": "X",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -0.6,
+        0.6
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 12.0,
+      "damping_si": 1.0
+    },
+    "/SutureBot/PSM1/Joints/insertion": {
+      "kind": "prismatic",
+      "parent": "/SutureBot/PSM1/pitch",
+      "child": "/SutureBot/PSM1/insertion",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.12446887662314057
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -0.04,
+        0.045
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 800.0,
+      "damping_si": 20.0
+    },
+    "/SutureBot/PSM1/Joints/roll": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM1/insertion",
+      "child": "/SutureBot/PSM1/roll",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 2.0,
+      "damping_si": 0.1
+    },
+    "/SutureBot/PSM1/Joints/wrist_pitch": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM1/roll",
+      "child": "/SutureBot/PSM1/wrist_pitch",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          6.123233995736766e-17,
+          1.0,
+          -6.123233995736766e-17,
+          0.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -6.123233995736766e-17,
+          3.749399456654644e-33,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -1.1,
+        1.1
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 0.4,
+      "damping_si": 0.02
+    },
+    "/SutureBot/PSM1/Joints/wrist_yaw": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM1/wrist_pitch",
+      "child": "/SutureBot/PSM1/wrist_yaw",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          6.123233995736766e-17,
+          1.0,
+          -6.123233995736766e-17,
+          0.0091
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -6.123233995736766e-17,
+          3.749399456654644e-33,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -1.1,
+        1.1
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 0.4,
+      "damping_si": 0.02
+    },
+    "/SutureBot/PSM1/Joints/jaw_left": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM1/wrist_yaw",
+      "child": "/SutureBot/PSM1/jaw_left",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        0,
+        0.65
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 0.08,
+      "damping_si": 0.004
+    },
+    "/SutureBot/PSM1/Joints/jaw_right": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM1/wrist_yaw",
+      "child": "/SutureBot/PSM1/jaw_right",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -0.65,
+        0
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 0.08,
+      "damping_si": 0.004
+    },
+    "/SutureBot/PSM2/Joints/rcm_yaw": {
+      "kind": "revolute",
+      "parent": null,
+      "child": "/SutureBot/PSM2/yaw",
+      "axis": "Y",
+      "anchor_parent_frame": [
+        [
+          -0.9348773114424564,
+          -0.17059413281650115,
+          -0.3112909481477262,
+          0.0803654754
+        ],
+        [
+          0.0,
+          0.8769475422965547,
+          -0.4805861088920824,
+          0.0127725115
+        ],
+        [
+          0.3549710024074141,
+          -0.4492890493976216,
+          -0.8198383606182729,
+          0.1331101
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -0.6,
+        0.6
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 12.0,
+      "damping_si": 1.0
+    },
+    "/SutureBot/PSM2/Joints/rcm_pitch": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM2/yaw",
+      "child": "/SutureBot/PSM2/pitch",
+      "axis": "X",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -0.6,
+        0.6
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 12.0,
+      "damping_si": 1.0
+    },
+    "/SutureBot/PSM2/Joints/insertion": {
+      "kind": "prismatic",
+      "parent": "/SutureBot/PSM2/pitch",
+      "child": "/SutureBot/PSM2/insertion",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.11422931082140246
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -0.04,
+        0.045
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 800.0,
+      "damping_si": 20.0
+    },
+    "/SutureBot/PSM2/Joints/roll": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM2/insertion",
+      "child": "/SutureBot/PSM2/roll",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -3.141592653589793,
+        3.141592653589793
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 2.0,
+      "damping_si": 0.1
+    },
+    "/SutureBot/PSM2/Joints/wrist_pitch": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM2/roll",
+      "child": "/SutureBot/PSM2/wrist_pitch",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          6.123233995736766e-17,
+          1.0,
+          -6.123233995736766e-17,
+          0.0
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -6.123233995736766e-17,
+          3.749399456654644e-33,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -1.1,
+        1.1
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 0.4,
+      "damping_si": 0.02
+    },
+    "/SutureBot/PSM2/Joints/wrist_yaw": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM2/wrist_pitch",
+      "child": "/SutureBot/PSM2/wrist_yaw",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          6.123233995736766e-17,
+          1.0,
+          -6.123233995736766e-17,
+          0.0091
+        ],
+        [
+          0.0,
+          6.123233995736766e-17,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -6.123233995736766e-17,
+          3.749399456654644e-33,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -1.1,
+        1.1
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 0.4,
+      "damping_si": 0.02
+    },
+    "/SutureBot/PSM2/Joints/jaw_left": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM2/wrist_yaw",
+      "child": "/SutureBot/PSM2/jaw_left",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        0,
+        0.65
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 0.08,
+      "damping_si": 0.004
+    },
+    "/SutureBot/PSM2/Joints/jaw_right": {
+      "kind": "revolute",
+      "parent": "/SutureBot/PSM2/wrist_yaw",
+      "child": "/SutureBot/PSM2/jaw_right",
+      "axis": "Z",
+      "anchor_parent_frame": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "limits": [
+        -0.65,
+        0
+      ],
+      "initial_coordinate": 0.0,
+      "stiffness_si": 0.08,
+      "damping_si": 0.004
+    }
+  },
+  "bodies": {
+    "/SutureBot/RCMFixture": {
+      "mass_kg": 2.0,
+      "diagonal_inertia_kg_m2": [
+        0.02,
+        0.02,
+        0.02
+      ],
+      "world_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM1/yaw": {
+      "mass_kg": 0.08,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.9122860179214397,
+          0.029602419282014247,
+          0.4084824577355732,
+          -0.0365863657
+        ],
+        [
+          0.0,
+          0.997384401498641,
+          -0.07227970425505104,
+          -0.0368435232
+        ],
+        [
+          -0.40955368574222656,
+          -0.06593976357137984,
+          -0.9098998439801538,
+          0.1535343
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM1/pitch": {
+      "mass_kg": 0.08,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.9122860179214397,
+          0.029602419282014247,
+          0.4084824577355732,
+          -0.0365863657
+        ],
+        [
+          0.0,
+          0.997384401498641,
+          -0.07227970425505104,
+          -0.0368435232
+        ],
+        [
+          -0.40955368574222656,
+          -0.06593976357137984,
+          -0.9098998439801538,
+          0.1535343
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM1/insertion": {
+      "mass_kg": 0.08,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.9122860179214397,
+          0.029602419282014247,
+          0.4084824577355732,
+          0.014256986934606286
+        ],
+        [
+          0.0,
+          0.997384401498641,
+          -0.07227970425505104,
+          -0.04584009679127903
+        ],
+        [
+          -0.40955368574222656,
+          -0.06593976357137984,
+          -0.9098998439801538,
+          0.0402800885802194
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM1/roll": {
+      "mass_kg": 0.1,
+      "diagonal_inertia_kg_m2": [
+        0.0025,
+        0.0025,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.9122860179214397,
+          0.029602419282014247,
+          0.4084824577355732,
+          0.014256986934606286
+        ],
+        [
+          0.0,
+          0.997384401498641,
+          -0.07227970425505104,
+          -0.04584009679127903
+        ],
+        [
+          -0.40955368574222656,
+          -0.06593976357137984,
+          -0.9098998439801538,
+          0.0402800885802194
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM1/wrist_pitch": {
+      "mass_kg": 0.006,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          0.4084824577355731,
+          -0.9122860179214397,
+          0.029602419282014302,
+          0.014256986934606286
+        ],
+        [
+          -0.07227970425505104,
+          6.549803616370374e-17,
+          0.997384401498641,
+          -0.04584009679127903
+        ],
+        [
+          -0.9098998439801538,
+          -0.4095536857422265,
+          -0.06593976357137982,
+          0.0402800885802194
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM1/wrist_yaw": {
+      "mass_kg": 0.006,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          0.029602419282014326,
+          0.40848245773557307,
+          -0.9122860179214397,
+          0.0179741773
+        ],
+        [
+          0.997384401498641,
+          -0.07227970425505109,
+          6.992389158666702e-17,
+          -0.0464978421
+        ],
+        [
+          -0.06593976357137987,
+          -0.9098998439801538,
+          -0.40955368574222645,
+          0.032
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM1/jaw_left": {
+      "mass_kg": 0.006,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          0.029602419282014326,
+          0.40848245773557307,
+          -0.9122860179214397,
+          0.0179741773
+        ],
+        [
+          0.997384401498641,
+          -0.07227970425505109,
+          6.992389158666702e-17,
+          -0.0464978421
+        ],
+        [
+          -0.06593976357137987,
+          -0.9098998439801538,
+          -0.40955368574222645,
+          0.032
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM1/jaw_right": {
+      "mass_kg": 0.006,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          0.029602419282014326,
+          0.40848245773557307,
+          -0.9122860179214397,
+          0.0179741773
+        ],
+        [
+          0.997384401498641,
+          -0.07227970425505109,
+          6.992389158666702e-17,
+          -0.0464978421
+        ],
+        [
+          -0.06593976357137987,
+          -0.9098998439801538,
+          -0.40955368574222645,
+          0.032
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM2/yaw": {
+      "mass_kg": 0.08,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.9348773114424564,
+          -0.17059413281650115,
+          -0.3112909481477262,
+          0.0803654754
+        ],
+        [
+          0.0,
+          0.8769475422965547,
+          -0.4805861088920824,
+          0.0127725115
+        ],
+        [
+          0.3549710024074141,
+          -0.4492890493976216,
+          -0.8198383606182729,
+          0.1331101
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM2/pitch": {
+      "mass_kg": 0.08,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.9348773114424564,
+          -0.17059413281650115,
+          -0.3112909481477262,
+          0.0803654754
+        ],
+        [
+          0.0,
+          0.8769475422965547,
+          -0.4805861088920824,
+          0.0127725115
+        ],
+        [
+          0.3549710024074141,
+          -0.4492890493976216,
+          -0.8198383606182729,
+          0.1331101
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM2/insertion": {
+      "mass_kg": 0.08,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.9348773114424564,
+          -0.17059413281650115,
+          -0.3112909481477262,
+          0.04480692492814431
+        ],
+        [
+          0.0,
+          0.8769475422965547,
+          -0.4805861088920824,
+          -0.042124508509082045
+        ],
+        [
+          0.3549710024074141,
+          -0.4492890493976216,
+          -0.8198383606182729,
+          0.03946052908162628
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM2/roll": {
+      "mass_kg": 0.1,
+      "diagonal_inertia_kg_m2": [
+        0.0025,
+        0.0025,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.9348773114424564,
+          -0.17059413281650115,
+          -0.3112909481477262,
+          0.04480692492814431
+        ],
+        [
+          0.0,
+          0.8769475422965547,
+          -0.4805861088920824,
+          -0.042124508509082045
+        ],
+        [
+          0.3549710024074141,
+          -0.4492890493976216,
+          -0.8198383606182729,
+          0.03946052908162628
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM2/wrist_pitch": {
+      "mass_kg": 0.006,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.31129094814772623,
+          -0.9348773114424564,
+          -0.1705941328165011,
+          0.04480692492814431
+        ],
+        [
+          -0.4805861088920824,
+          8.31249620331492e-17,
+          0.8769475422965547,
+          -0.042124508509082045
+        ],
+        [
+          -0.8198383606182729,
+          0.35497100240741414,
+          -0.4492890493976216,
+          0.03946052908162628
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM2/wrist_yaw": {
+      "mass_kg": 0.006,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.17059413281650113,
+          -0.3112909481477263,
+          -0.9348773114424564,
+          0.0419741773
+        ],
+        [
+          0.8769475422965547,
+          -0.4805861088920825,
+          1.1255237403161771e-16,
+          -0.04649784209999999
+        ],
+        [
+          -0.44928904939762165,
+          -0.8198383606182729,
+          0.3549710024074142,
+          0.032
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM2/jaw_left": {
+      "mass_kg": 0.006,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.17059413281650113,
+          -0.3112909481477263,
+          -0.9348773114424564,
+          0.0419741773
+        ],
+        [
+          0.8769475422965547,
+          -0.4805861088920825,
+          1.1255237403161771e-16,
+          -0.04649784209999999
+        ],
+        [
+          -0.44928904939762165,
+          -0.8198383606182729,
+          0.3549710024074142,
+          0.032
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/PSM2/jaw_right": {
+      "mass_kg": 0.006,
+      "diagonal_inertia_kg_m2": [
+        2e-06,
+        2e-06,
+        2e-06
+      ],
+      "world_transform": [
+        [
+          -0.17059413281650113,
+          -0.3112909481477263,
+          -0.9348773114424564,
+          0.0419741773
+        ],
+        [
+          0.8769475422965547,
+          -0.4805861088920825,
+          1.1255237403161771e-16,
+          -0.04649784209999999
+        ],
+        [
+          -0.44928904939762165,
+          -0.8198383606182729,
+          0.3549710024074142,
+          0.032
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "/SutureBot/Needle": {
+      "mass_kg": 0.0003,
+      "diagonal_inertia_kg_m2": [
+        1e-08,
+        1e-08,
+        2e-08
+      ],
+      "world_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0299741773
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          -0.0464978421
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.016
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "arms": {
+    "PSM1": {
+      "pivot_m": [
+        -0.0365863657,
+        -0.0368435232,
+        0.1535343
+      ],
+      "shaft_body": "/SutureBot/PSM1/roll",
+      "shaft_axis_local": [
+        0,
+        0,
+        1
+      ],
+      "initial_insertion_m": 0.12446887662314057,
+      "jaw_pin_world_m": [
+        0.0179741773,
+        -0.0464978421,
+        0.032
+      ],
+      "jaw_pin_body": "/SutureBot/PSM1/wrist_yaw",
+      "jaw_pin_local_m": [
+        0,
+        0,
+        0
+      ],
+      "tip_local_m": [
+        0,
+        0.00965,
+        0
+      ],
+      "instrument": "Large Needle Driver CAD",
+      "camera_mount": "approximate shaft-mounted 5.5mm borescope, 35mm axial offset; not calibrated"
+    },
+    "PSM2": {
+      "pivot_m": [
+        0.0803654754,
+        0.0127725115,
+        0.1331101
+      ],
+      "shaft_body": "/SutureBot/PSM2/roll",
+      "shaft_axis_local": [
+        0,
+        0,
+        1
+      ],
+      "initial_insertion_m": 0.11422931082140246,
+      "jaw_pin_world_m": [
+        0.0419741773,
+        -0.0464978421,
+        0.032
+      ],
+      "jaw_pin_body": "/SutureBot/PSM2/wrist_yaw",
+      "jaw_pin_local_m": [
+        0,
+        0,
+        0
+      ],
+      "tip_local_m": [
+        0,
+        0.0145,
+        0
+      ],
+      "instrument": "DeBakey forceps SURROGATE: elongated LND jaws",
+      "camera_mount": "approximate shaft-mounted 5.5mm borescope, 35mm axial offset; not calibrated"
+    }
+  },
+  "cameras": {
+    "/SutureBot/EndoscopeLeft": {
+      "world_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.0025
+        ],
+        [
+          0.0,
+          0.9823384920746605,
+          0.18711249821559797,
+          0.025
+        ],
+        [
+          0.0,
+          -0.18711249821559797,
+          0.9823384920746605,
+          0.055
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "optical_axis_local": [
+        0,
+        0,
+        -1
+      ],
+      "calibrated": false
+    },
+    "/SutureBot/EndoscopeRight": {
+      "world_transform": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0025
+        ],
+        [
+          0.0,
+          0.9823384920746605,
+          0.18711249821559797,
+          0.025
+        ],
+        [
+          0.0,
+          -0.18711249821559797,
+          0.9823384920746605,
+          0.055
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "optical_axis_local": [
+        0,
+        0,
+        -1
+      ],
+      "calibrated": false
+    },
+    "/SutureBot/PSM1/roll/WristCamera": {
+      "world_transform": [
+        [
+          -0.9122860204085701,
+          -0.029602420779331732,
+          -0.4084824520724208,
+          -0.00747502995425829
+        ],
+        [
+          -5.0158824044497616e-11,
+          -0.9973844011547633,
+          0.07227970900020385,
+          -0.04331030697668069
+        ],
+        [
+          -0.4095536802021124,
+          0.06593976810057448,
+          0.909899846145579,
+          0.06878872070166744
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "optical_axis_local": [
+        0,
+        0,
+        -1
+      ],
+      "calibrated": false
+    },
+    "/SutureBot/PSM2/roll/WristCamera": {
+      "world_transform": [
+        [
+          -0.934877315854808,
+          0.17059412677891167,
+          0.311290938205164,
+          0.04808285764110837
+        ],
+        [
+          2.4169604675953274e-09,
+          -0.8769475399365222,
+          0.48058611319854205,
+          -0.02530399452743484
+        ],
+        [
+          0.35497099078672706,
+          0.44928905629652555,
+          0.8198383618690137,
+          0.0710478853219536
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "optical_axis_local": [
+        0,
+        0,
+        -1
+      ],
+      "calibrated": false
+    }
+  },
+  "visual_opacity": {
+    "/SutureBot/Endoscope": 0.25,
+    "/SutureBot/PSM1/roll/WristBorescope": 0.25,
+    "/SutureBot/PSM1/roll/WristCameraHolder": 0.25,
+    "/SutureBot/PSM2/roll/WristBorescope": 0.25,
+    "/SutureBot/PSM2/roll/WristCameraHolder": 0.25
+  },
+  "fixture": {
+    "source_native_bounds": [
+      [
+        -1.8899999856948853,
+        -0.999876856803894,
+        -7.064265251159668
+      ],
+      [
+        6.675498008728027,
+        5.195550441741943,
+        7.0108819007873535
+      ]
+    ],
+    "assumed_meters_per_native_unit": 0.02,
+    "world_bounds_m": [
+      [
+        -0.1407514715194702,
+        -0.06195427298545837,
+        -0.009535113349556923
+      ],
+      [
+        0.1407514715194702,
+        0.06195427298545837,
+        0.16177484653890134
+      ]
+    ],
+    "scale_evidence": "No units declared by STL; fixture_prior.audit_assets explicitly leaves scale unresolved. 0.02 is a simulation assumption.",
+    "transform": "world=(native_z,-native_y,native_x)*0.02; center XY; feet at pad underside",
+    "registration": "illustrative scale; RCM XY at fitted CAD hole centers, Z at local inner-rim plane",
+    "pivot_evidence": "Projected inner-rim circles have radius10mm at assumed scale; exact hardware RCM height remains unmeasured",
+    "collision": "1.2mm-radius capsules along original CAD triangle edges on four support paths; CAD mesh is visual only",
+    "collision_capsules": 80,
+    "collision_radius_m": 0.0012,
+    "collision_centerline_max_distance_to_cad_m": 0.0
+  },
+  "needle": {
+    "body": "/SutureBot/Needle",
+    "original_center_m": [
+      -0.006208041322314064,
+      0.003517338842975205,
+      0.00011175442739079111
+    ],
+    "arc_radius_m": 0.009449042716420122,
+    "arc_span_rad": 2.3748037767486117,
+    "collision_capsules": 32,
+    "collision_radius_m": 0.00028,
+    "mass_kg": 0.0003,
+    "grasp": "free dynamic body; no weld or scripted attachment"
+  },
+  "source_sha256": {
+    "assets/trocar_cage/trocart_cage.stl": "b58a7341a1ff2d7f45b268be23e49e64c3f2c0a964bd218c2c99a9ace7572d23",
+    "assets/psm_lnd/dvrk_model/meshes/instruments/roll/4670/roll_4670.obj": "e7f3ea661d2e4f2de73cdea59d56c14e62b60dcc5e75664c0d89723013e6e8eb",
+    "assets/psm_lnd/dvrk_model/meshes/instruments/wrist_pitch/0091/wrist_pitch_0091.obj": "a0fbe4dffaa3561b42f1b50019b9fcecab9308298a5592df917bea38b5ac8390",
+    "assets/psm_lnd/dvrk_model/meshes/instruments/wrist_yaw/0091/wrist_yaw_0091.obj": "9a6b64b0ce58833b0bbfa8be57e577dcece4425781bb0962ce242f8f3105bf8f",
+    "assets/psm_lnd/dvrk_model/meshes/instruments/tip/006/tip_006_1.obj": "96e08f64608fadb0da4864bd38cd06a56345095ca8316f9e27d514c3031fb44a",
+    "assets/psm_lnd/dvrk_model/meshes/instruments/tip/006/tip_006_2.obj": "d59c9fdd11131597e42b8fec22f0b297b9f7d4ac2872e374c28984deb3097a2b",
+    "assets/needle/Needle.OBJ": "2db5c6060c806498e3a18bde5fe4d7d7d53900dd1e167bcb61bc1c7873a8d7ca",
+    "assets/camera/camera_setup.json": "e4ed234461f6997d55c144a038066e02a39d395df19fc5b855b2c96c566924a4",
+    "suturebot/simulation/prepare_rig.py": "fe76b4c0cfb2cebbf319cbbe377e47b9829835f1cd4c70aeb30f4f28cd775624"
+  },
+  "assumptions": [
+    "Approximate rig arrangement, not an episode-replayed or calibrated digital twin.",
+    "PSM2 is an explicitly labeled LND-based DeBakey surrogate; exact DeBakey CAD unavailable.",
+    "Masses, inertias, drive gains, friction and collision proxies are demonstration parameters.",
+    "Cameras are visual/pose markers; intrinsics and extrinsics are illustrative.",
+    "No suture thread, needle puncture, cutting, or tissue topology changes are modeled."
+  ],
+  "source_urls": [
+    "https://suturebot.github.io/",
+    "https://github.com/jhu-dvrk/dvrk_model",
+    "https://huggingface.co/datasets/jchen396/SutureBot"
+  ],
+  "asset_sha256": "816518d98273b31a0779078560a43c3d13078a97e7f8b4601609816c9937bcd5"
+}

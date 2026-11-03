@@ -1,0 +1,1690 @@
+{
+  "schema_version": 1,
+  "status": "source_reviewed_wrist_evidence_not_calibration_acceptance",
+  "source_episode": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery",
+  "source_video_sha256": {
+    "psm1": "ad939d76ac3bdbf24acd2b04bc5e30a41a644a7349c5566ed55689845626ef27",
+    "psm2": "3b5925b5c4eefd90c2d63765c4f4ef00c00f2884721574586b715a949ef8a574"
+  },
+  "source_frames": [
+    {
+      "camera": "psm1",
+      "frame": 5,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "5db2e0d2ecec10df48f700aa975befe7034e8db69c76b5542a86b2df8bfeadd6",
+      "png_sha256": "57c862cb71747df7e5bb21e06cb9fea34f993f7c8548e3ec07e563d9a3edd67c",
+      "prepared_review_image": "audit/wrist_source/psm1_000005.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 61,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "edd41a593ef7da5dc247fff9ebb1ebc24d071c172815cbd937dea0a9a91d32b2",
+      "png_sha256": "8369dcd0a7b40a8db65e4044b615f76735cf1a8b5cd68af6c60fc4c465cbd9f5",
+      "prepared_review_image": "audit/wrist_source/psm1_000061.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 175,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "c8cfca049407a9614ec3f3659f205881b65e19c20a2a0f236c5adbd8a63ea1cd",
+      "png_sha256": "da2f6081bc32babb3f73e2b5da24fee57f654164e52983068298ad2ee2acdd94",
+      "prepared_review_image": "audit/wrist_source/psm1_000175.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 197,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "e1d51489e05b40c4fd8b3e34f0af4a4dd8a358ddde8d10d799a0cdf3e519b25a",
+      "png_sha256": "74d2d00cd81c2d7931f32ea876f40386617d081dec01f3dc034aef7b4a503f8f",
+      "prepared_review_image": "audit/wrist_source/psm1_000197.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 209,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "0581a8f2e9868729c59e20f92b80f803fb4d067d7c95bb00c8b469f21b63fd3c",
+      "png_sha256": "34dd693758c57651afde7e5f679877fe64213428836014d79a032d7857e39cb0",
+      "prepared_review_image": "audit/wrist_source/psm1_000209.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 220,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "d198ed1974adba22350c9c0b9c081181360d12bc667376e2326635f8edf840e8",
+      "png_sha256": "f00682d0d40f91ce18207ff0119036e70d6769f517e7ee5c64afedcdc14f5fac",
+      "prepared_review_image": "audit/wrist_source/psm1_000220.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 243,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "9ec3533af5dc562b0f66d0d51d3e6e55b88ef095b5e3cbf51307746f648fa421",
+      "png_sha256": "b5776bfcecf831df3f300c73ab4c0d8c976db0dd85ff03afe15470a590dc856f",
+      "prepared_review_image": "audit/wrist_source/psm1_000243.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 277,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "51dce1e27a6a4b9d24c1b480fd6df8a84cfa45658470060d50c689c8ad5a6286",
+      "png_sha256": "65b021e6065853096ca5e68a3f33c3d191377bb21083340e07c3de2e2601df1c",
+      "prepared_review_image": "audit/wrist_source/psm1_000277.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 300,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "d6e85ae65f95d95f697d952b1cd4a57147ea0cfaaf9a0c3b7ac7a2f64f3de821",
+      "png_sha256": "3fd038dc537da545d98a4fb47470f6f5889596fe9f3bd25a856016196917abdb",
+      "prepared_review_image": "audit/wrist_source/psm1_000300.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 311,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "6df7383a39a372e3b495cdedeec24dba6eb2c21385e57f84342bea4e6b5dcc0e",
+      "png_sha256": "63076fbda39b5e75cd9c174a37975b1a00b01addbbe9be1b84238a22ddc981f2",
+      "prepared_review_image": "audit/wrist_source/psm1_000311.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 334,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "7547427b7fd4fded592e8ba69c509751e140f40d690208a1a3f86b30dd656056",
+      "png_sha256": "0a64d10819d577c807c1cd5b3a6ea9e06ac9f11c07c43761a1e7021be44ed1fb",
+      "prepared_review_image": "audit/wrist_source/psm1_000334.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 413,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "1c69816e67bb3dc05af29ad46b4cd53d8e2210bc4a2eb351cd72edd113993252",
+      "png_sha256": "d94b0e8b90698b55a53e37ffd858b0c4a45662c6baf6adddfc241e0742a62edc",
+      "prepared_review_image": "audit/wrist_source/psm1_000413.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 424,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "3c32b6eff9406c122edeffd87723e2e5ff32498ffc5121a20881dbf4d29e99df",
+      "png_sha256": "018f364879f2fa589f7295e7b7fb4a8c5d41843e4538fd2227d5e56cc98382a6",
+      "prepared_review_image": "audit/wrist_source/psm1_000424.png"
+    },
+    {
+      "camera": "psm1",
+      "frame": 459,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "3f1d59d3f79b69123a0713303398a3c37049396010556212cd33eb73640d9ccb",
+      "png_sha256": "bb89ae4b450f70d0e36abb60af3a1cc238fea5b0e444ab30458eff4c233f8d53",
+      "prepared_review_image": "audit/wrist_source/psm1_000459.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 5,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "4dbe1e7362e41ac39026e99615ffc3b0ffea6a5aa4f1be0b190f9080421c9ccc",
+      "png_sha256": "6d2471e8c03d7044f15bcfb554bfdfbf34ac83073ecf5558d00f49c583e03a1e",
+      "prepared_review_image": "audit/wrist_source/psm2_000005.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 61,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "d9ba0523f812536fb5eb1c664060fc2a9a000874853da106a0eab630209fb2a5",
+      "png_sha256": "8f9eb3b2b73a6058ca9b38c4cf21e34054ef3fe2d37032e4af7e07e035eed072",
+      "prepared_review_image": "audit/wrist_source/psm2_000061.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 175,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "4c9a1baa556866eb3047b4f514bdbc658010c9a7a98e57649d6158172eab5650",
+      "png_sha256": "de00bfefcff0ca3a02f54ce33216752216e1255ca6dc14df7681c031d93cd4a5",
+      "prepared_review_image": "audit/wrist_source/psm2_000175.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 197,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "b7a7297afeaed2ea370a8fbcf4429c5129e539b8da49a90feeee1da9aeb8a08a",
+      "png_sha256": "2c5f49ce9ec8cd38b1a769694855662f7534e419fc028155be2dc237c44b152f",
+      "prepared_review_image": "audit/wrist_source/psm2_000197.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 209,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "56ecbec64d5d1e3b68ea784a41889916fec2c8cc6f77d482091bc4243b975b69",
+      "png_sha256": "5545d945e9a688bee8abb5cebe3007c19a1eee4dada59530ede785690231ad5d",
+      "prepared_review_image": "audit/wrist_source/psm2_000209.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 220,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "e644a59366e3a5d51648defb8df8d0a8bdac8a45a0cfa2a3fe2a9da072faf7e4",
+      "png_sha256": "5f8f3ac19565375e5e3ac82d0703d6e9685f6a5903affa66edfd8897ae313f36",
+      "prepared_review_image": "audit/wrist_source/psm2_000220.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 243,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "25761889cbb3a86d2a765977a3f972e0c526344c8f3a6399946cecc25d853fd9",
+      "png_sha256": "07f9fd8405cc61dc0fe17a97e3d464019e872828b3836fb41e2c4dae84468f34",
+      "prepared_review_image": "audit/wrist_source/psm2_000243.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 277,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "c282eb9ec12b2c00052104414312a923816868145812d49e931705f2c8389ca0",
+      "png_sha256": "142d8b702d66b43cf9053bd29b2700ed61f2f01244982397d411ae02772c80ad",
+      "prepared_review_image": "audit/wrist_source/psm2_000277.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 300,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "61934fe4275a61285467b3ad523ffefe02004c4181db273e0e449481215f1537",
+      "png_sha256": "a35c2bc3b99b2881714c579ba1c78c1d11b6e9286d102b7216db7a7a70b37fb9",
+      "prepared_review_image": "audit/wrist_source/psm2_000300.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 311,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "9f55d7d16706deb55bb831fc60cbf6a94aed8e536db8ee3db13191fb0bcfd083",
+      "png_sha256": "b50bad6439df1eefd8855f552bdab7b7c89c09613f62971c8076b74e9b3f4128",
+      "prepared_review_image": "audit/wrist_source/psm2_000311.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 334,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "8e4426d8eb6e77e343f34b24652f5e7177749c6483b8a1325e164dbaa3f93fdc",
+      "png_sha256": "698fe8c36a0b31132c294a2035e9ced7e49f20ea9b1f355208a0ceccc45324af",
+      "prepared_review_image": "audit/wrist_source/psm2_000334.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 413,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "7f0d37ca198a87a070d5cc699e2977b8a79152b0008964ba38856fa57a71460e",
+      "png_sha256": "431e496b6a97f59c0d298a150bef12c36ce9c810e6ebbe1df5015904a899b079",
+      "prepared_review_image": "audit/wrist_source/psm2_000413.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 424,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "10dcd6e09e5a1c8ce437dbfa8c8433bb584cb37b78088b3468ade9df7f192b35",
+      "png_sha256": "230da7e4bee82d0ca7cbe6d127613d983efb0a92f567a3ef47d737ce6d61ada8",
+      "prepared_review_image": "audit/wrist_source/psm2_000424.png"
+    },
+    {
+      "camera": "psm2",
+      "frame": 459,
+      "image_size": [
+        640,
+        480
+      ],
+      "decoded_rgb_sha256": "68ffaeef72b6591973cf5355d7e81ab72cd0c281d4fb94b17985b7f9e3e98943",
+      "png_sha256": "37bffaa60b20f98c79cfeb43310aafdef2f5ff25ae73a09dc32246cef8621ad1",
+      "prepared_review_image": "audit/wrist_source/psm2_000459.png"
+    }
+  ],
+  "automatic_observations_sha256": "b987aae606c5db5595a22bbe6ebbc14aa521a750e8144cce9d131f9dd63a4132",
+  "fit_frames": [
+    5,
+    175,
+    197,
+    220,
+    277,
+    311,
+    413,
+    459
+  ],
+  "reserved_frames": [
+    61,
+    209,
+    243,
+    300,
+    334,
+    424
+  ],
+  "frozen_automatic_reserved_frames": [
+    27,
+    61,
+    118,
+    152,
+    209,
+    243,
+    300,
+    334,
+    390,
+    424
+  ],
+  "records": [
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "4dbe1e7362e41ac39026e99615ffc3b0ffea6a5aa4f1be0b190f9080421c9ccc",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "5db2e0d2ecec10df48f700aa975befe7034e8db69c76b5542a86b2df8bfeadd6",
+      "feature": "cap_center",
+      "uv": [
+        294,
+        34
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "4dbe1e7362e41ac39026e99615ffc3b0ffea6a5aa4f1be0b190f9080421c9ccc",
+      "feature": "cap_center",
+      "uv": [
+        230,
+        9
+      ],
+      "uncertainty_px": 5.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Near image boundary or thread; larger uncertainty retains the partial/specular observation."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "d9ba0523f812536fb5eb1c664060fc2a9a000874853da106a0eab630209fb2a5",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "edd41a593ef7da5dc247fff9ebb1ebc24d071c172815cbd937dea0a9a91d32b2",
+      "feature": "cap_center",
+      "uv": [
+        345,
+        78
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 175,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "4c9a1baa556866eb3047b4f514bdbc658010c9a7a98e57649d6158172eab5650",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 175,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "c8cfca049407a9614ec3f3659f205881b65e19c20a2a0f236c5adbd8a63ea1cd",
+      "feature": "cap_center",
+      "uv": [
+        198,
+        46
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 197,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "b7a7297afeaed2ea370a8fbcf4429c5129e539b8da49a90feeee1da9aeb8a08a",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 197,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "e1d51489e05b40c4fd8b3e34f0af4a4dd8a358ddde8d10d799a0cdf3e519b25a",
+      "feature": "cap_center",
+      "uv": [
+        158,
+        61
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 197,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "b7a7297afeaed2ea370a8fbcf4429c5129e539b8da49a90feeee1da9aeb8a08a",
+      "feature": "cap_center",
+      "uv": [
+        242,
+        28
+      ],
+      "uncertainty_px": 5.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Near image boundary or thread; larger uncertainty retains the partial/specular observation."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 209,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "56ecbec64d5d1e3b68ea784a41889916fec2c8cc6f77d482091bc4243b975b69",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 209,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "0581a8f2e9868729c59e20f92b80f803fb4d067d7c95bb00c8b469f21b63fd3c",
+      "feature": "cap_center",
+      "uv": [
+        156,
+        59
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 209,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "56ecbec64d5d1e3b68ea784a41889916fec2c8cc6f77d482091bc4243b975b69",
+      "feature": "cap_center",
+      "uv": [
+        249,
+        35
+      ],
+      "uncertainty_px": 5.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Near image boundary or thread; larger uncertainty retains the partial/specular observation."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 220,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "e644a59366e3a5d51648defb8df8d0a8bdac8a45a0cfa2a3fe2a9da072faf7e4",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 220,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "d198ed1974adba22350c9c0b9c081181360d12bc667376e2326635f8edf840e8",
+      "feature": "cap_center",
+      "uv": [
+        156,
+        59
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 220,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "e644a59366e3a5d51648defb8df8d0a8bdac8a45a0cfa2a3fe2a9da072faf7e4",
+      "feature": "cap_center",
+      "uv": [
+        250,
+        36
+      ],
+      "uncertainty_px": 5.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Near image boundary or thread; larger uncertainty retains the partial/specular observation."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 243,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "25761889cbb3a86d2a765977a3f972e0c526344c8f3a6399946cecc25d853fd9",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 243,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "9ec3533af5dc562b0f66d0d51d3e6e55b88ef095b5e3cbf51307746f648fa421",
+      "feature": "cap_center",
+      "uv": [
+        163,
+        13
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 243,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "25761889cbb3a86d2a765977a3f972e0c526344c8f3a6399946cecc25d853fd9",
+      "feature": "cap_center",
+      "uv": [
+        231,
+        15
+      ],
+      "uncertainty_px": 5.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Near image boundary or thread; larger uncertainty retains the partial/specular observation."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 277,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "c282eb9ec12b2c00052104414312a923816868145812d49e931705f2c8389ca0",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 277,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "c282eb9ec12b2c00052104414312a923816868145812d49e931705f2c8389ca0",
+      "feature": "cap_center",
+      "uv": [
+        311,
+        27
+      ],
+      "uncertainty_px": 5.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Near image boundary or thread; larger uncertainty retains the partial/specular observation."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 300,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "61934fe4275a61285467b3ad523ffefe02004c4181db273e0e449481215f1537",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 300,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "61934fe4275a61285467b3ad523ffefe02004c4181db273e0e449481215f1537",
+      "feature": "cap_center",
+      "uv": [
+        314,
+        15
+      ],
+      "uncertainty_px": 5.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Near image boundary or thread; larger uncertainty retains the partial/specular observation."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 311,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "9f55d7d16706deb55bb831fc60cbf6a94aed8e536db8ee3db13191fb0bcfd083",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 334,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "8e4426d8eb6e77e343f34b24652f5e7177749c6483b8a1325e164dbaa3f93fdc",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 413,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "7f0d37ca198a87a070d5cc699e2977b8a79152b0008964ba38856fa57a71460e",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 413,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "1c69816e67bb3dc05af29ad46b4cd53d8e2210bc4a2eb351cd72edd113993252",
+      "feature": "cap_center",
+      "uv": [
+        429,
+        64
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 424,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "10dcd6e09e5a1c8ce437dbfa8c8433bb584cb37b78088b3468ade9df7f192b35",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 424,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "3c32b6eff9406c122edeffd87723e2e5ff32498ffc5121a20881dbf4d29e99df",
+      "feature": "cap_center",
+      "uv": [
+        420,
+        34
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible small front yaw-pin disk; source-only center. Opposite-arm pin reviewed independently of its model location."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 459,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "68ffaeef72b6591973cf5355d7e81ab72cd0c281d4fb94b17985b7f9e3e98943",
+      "feature": "cap_center",
+      "uv": [
+        329,
+        225
+      ],
+      "uncertainty_px": 3.0,
+      "review": "Visible circular front yaw-pin recess immediately above the IS marking; repeated own-camera samples are correlated."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 311,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "6df7383a39a372e3b495cdedeec24dba6eb2c21385e57f84342bea4e6b5dcc0e",
+      "feature": "head_exterior",
+      "part": "wrist_head",
+      "boundary_polylines_px": [
+        [
+          [
+            294,
+            215
+          ],
+          [
+            283,
+            220
+          ],
+          [
+            275,
+            232
+          ],
+          [
+            269,
+            247
+          ],
+          [
+            267,
+            258
+          ]
+        ],
+        [
+          [
+            310,
+            217
+          ],
+          [
+            321,
+            229
+          ],
+          [
+            333,
+            250
+          ],
+          [
+            341,
+            271
+          ],
+          [
+            347,
+            287
+          ]
+        ]
+      ],
+      "foreground_points_px": [],
+      "background_points_px": [],
+      "uncertainty_px": 4.0,
+      "review": "Visible exterior of IS-marked head only; jaw, thread and defocused shaft continuations excluded."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 334,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "7547427b7fd4fded592e8ba69c509751e140f40d690208a1a3f86b30dd656056",
+      "feature": "head_exterior",
+      "part": "wrist_head",
+      "boundary_polylines_px": [
+        [
+          [
+            292,
+            214
+          ],
+          [
+            280,
+            220
+          ],
+          [
+            273,
+            230
+          ],
+          [
+            269,
+            246
+          ],
+          [
+            267,
+            259
+          ]
+        ],
+        [
+          [
+            313,
+            218
+          ],
+          [
+            326,
+            236
+          ],
+          [
+            338,
+            263
+          ],
+          [
+            347,
+            284
+          ]
+        ]
+      ],
+      "foreground_points_px": [],
+      "background_points_px": [],
+      "uncertainty_px": 4.0,
+      "review": "Visible exterior of IS-marked head only; jaw, thread and defocused shaft continuations excluded."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 413,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "1c69816e67bb3dc05af29ad46b4cd53d8e2210bc4a2eb351cd72edd113993252",
+      "feature": "head_exterior",
+      "part": "wrist_head",
+      "boundary_polylines_px": [
+        [
+          [
+            294,
+            208
+          ],
+          [
+            283,
+            214
+          ],
+          [
+            274,
+            225
+          ],
+          [
+            268,
+            241
+          ],
+          [
+            266,
+            255
+          ]
+        ],
+        [
+          [
+            316,
+            220
+          ],
+          [
+            329,
+            239
+          ],
+          [
+            339,
+            264
+          ],
+          [
+            346,
+            286
+          ]
+        ]
+      ],
+      "foreground_points_px": [],
+      "background_points_px": [],
+      "uncertainty_px": 4.0,
+      "review": "Visible exterior of IS-marked head only; jaw, thread and defocused shaft continuations excluded."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 424,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "3c32b6eff9406c122edeffd87723e2e5ff32498ffc5121a20881dbf4d29e99df",
+      "feature": "head_exterior",
+      "part": "wrist_head",
+      "boundary_polylines_px": [
+        [
+          [
+            294,
+            210
+          ],
+          [
+            282,
+            217
+          ],
+          [
+            272,
+            229
+          ],
+          [
+            267,
+            245
+          ],
+          [
+            266,
+            257
+          ]
+        ],
+        [
+          [
+            314,
+            218
+          ],
+          [
+            329,
+            239
+          ],
+          [
+            340,
+            265
+          ],
+          [
+            346,
+            286
+          ]
+        ]
+      ],
+      "foreground_points_px": [],
+      "background_points_px": [],
+      "uncertainty_px": 4.0,
+      "review": "Visible exterior of IS-marked head only; jaw, thread and defocused shaft continuations excluded."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 459,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "3f1d59d3f79b69123a0713303398a3c37049396010556212cd33eb73640d9ccb",
+      "feature": "head_exterior",
+      "part": "wrist_head",
+      "boundary_polylines_px": [
+        [
+          [
+            295,
+            210
+          ],
+          [
+            282,
+            217
+          ],
+          [
+            273,
+            229
+          ],
+          [
+            267,
+            244
+          ],
+          [
+            267,
+            257
+          ]
+        ],
+        [
+          [
+            316,
+            222
+          ],
+          [
+            331,
+            243
+          ],
+          [
+            341,
+            268
+          ],
+          [
+            348,
+            289
+          ]
+        ]
+      ],
+      "foreground_points_px": [],
+      "background_points_px": [],
+      "uncertainty_px": 4.0,
+      "review": "Visible exterior of IS-marked head only; jaw, thread and defocused shaft continuations excluded."
+    }
+  ],
+  "unavailable": [
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "5db2e0d2ecec10df48f700aa975befe7034e8db69c76b5542a86b2df8bfeadd6",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "5db2e0d2ecec10df48f700aa975befe7034e8db69c76b5542a86b2df8bfeadd6",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "4dbe1e7362e41ac39026e99615ffc3b0ffea6a5aa4f1be0b190f9080421c9ccc",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "d9ba0523f812536fb5eb1c664060fc2a9a000874853da106a0eab630209fb2a5",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "edd41a593ef7da5dc247fff9ebb1ebc24d071c172815cbd937dea0a9a91d32b2",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "edd41a593ef7da5dc247fff9ebb1ebc24d071c172815cbd937dea0a9a91d32b2",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 61,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "d9ba0523f812536fb5eb1c664060fc2a9a000874853da106a0eab630209fb2a5",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 175,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "4c9a1baa556866eb3047b4f514bdbc658010c9a7a98e57649d6158172eab5650",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 175,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "c8cfca049407a9614ec3f3659f205881b65e19c20a2a0f236c5adbd8a63ea1cd",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 175,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "c8cfca049407a9614ec3f3659f205881b65e19c20a2a0f236c5adbd8a63ea1cd",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 175,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "4c9a1baa556866eb3047b4f514bdbc658010c9a7a98e57649d6158172eab5650",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 197,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "e1d51489e05b40c4fd8b3e34f0af4a4dd8a358ddde8d10d799a0cdf3e519b25a",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 197,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "e1d51489e05b40c4fd8b3e34f0af4a4dd8a358ddde8d10d799a0cdf3e519b25a",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 197,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "b7a7297afeaed2ea370a8fbcf4429c5129e539b8da49a90feeee1da9aeb8a08a",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 209,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "0581a8f2e9868729c59e20f92b80f803fb4d067d7c95bb00c8b469f21b63fd3c",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 209,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "0581a8f2e9868729c59e20f92b80f803fb4d067d7c95bb00c8b469f21b63fd3c",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 209,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "56ecbec64d5d1e3b68ea784a41889916fec2c8cc6f77d482091bc4243b975b69",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 220,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "d198ed1974adba22350c9c0b9c081181360d12bc667376e2326635f8edf840e8",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 220,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "d198ed1974adba22350c9c0b9c081181360d12bc667376e2326635f8edf840e8",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 220,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "e644a59366e3a5d51648defb8df8d0a8bdac8a45a0cfa2a3fe2a9da072faf7e4",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 243,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "9ec3533af5dc562b0f66d0d51d3e6e55b88ef095b5e3cbf51307746f648fa421",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 243,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "9ec3533af5dc562b0f66d0d51d3e6e55b88ef095b5e3cbf51307746f648fa421",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 243,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "25761889cbb3a86d2a765977a3f972e0c526344c8f3a6399946cecc25d853fd9",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 277,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "51dce1e27a6a4b9d24c1b480fd6df8a84cfa45658470060d50c689c8ad5a6286",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 277,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "51dce1e27a6a4b9d24c1b480fd6df8a84cfa45658470060d50c689c8ad5a6286",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 277,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "51dce1e27a6a4b9d24c1b480fd6df8a84cfa45658470060d50c689c8ad5a6286",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 277,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "c282eb9ec12b2c00052104414312a923816868145812d49e931705f2c8389ca0",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 300,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "d6e85ae65f95d95f697d952b1cd4a57147ea0cfaaf9a0c3b7ac7a2f64f3de821",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 300,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "d6e85ae65f95d95f697d952b1cd4a57147ea0cfaaf9a0c3b7ac7a2f64f3de821",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 300,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "d6e85ae65f95d95f697d952b1cd4a57147ea0cfaaf9a0c3b7ac7a2f64f3de821",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 300,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "61934fe4275a61285467b3ad523ffefe02004c4181db273e0e449481215f1537",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 311,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "6df7383a39a372e3b495cdedeec24dba6eb2c21385e57f84342bea4e6b5dcc0e",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 311,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "9f55d7d16706deb55bb831fc60cbf6a94aed8e536db8ee3db13191fb0bcfd083",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 311,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "6df7383a39a372e3b495cdedeec24dba6eb2c21385e57f84342bea4e6b5dcc0e",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 311,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "6df7383a39a372e3b495cdedeec24dba6eb2c21385e57f84342bea4e6b5dcc0e",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 311,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "9f55d7d16706deb55bb831fc60cbf6a94aed8e536db8ee3db13191fb0bcfd083",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 334,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "7547427b7fd4fded592e8ba69c509751e140f40d690208a1a3f86b30dd656056",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 334,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "8e4426d8eb6e77e343f34b24652f5e7177749c6483b8a1325e164dbaa3f93fdc",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 334,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "7547427b7fd4fded592e8ba69c509751e140f40d690208a1a3f86b30dd656056",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 334,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "7547427b7fd4fded592e8ba69c509751e140f40d690208a1a3f86b30dd656056",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 334,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "8e4426d8eb6e77e343f34b24652f5e7177749c6483b8a1325e164dbaa3f93fdc",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 413,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "7f0d37ca198a87a070d5cc699e2977b8a79152b0008964ba38856fa57a71460e",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 413,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "1c69816e67bb3dc05af29ad46b4cd53d8e2210bc4a2eb351cd72edd113993252",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 413,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "1c69816e67bb3dc05af29ad46b4cd53d8e2210bc4a2eb351cd72edd113993252",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 413,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "7f0d37ca198a87a070d5cc699e2977b8a79152b0008964ba38856fa57a71460e",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 424,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "10dcd6e09e5a1c8ce437dbfa8c8433bb584cb37b78088b3468ade9df7f192b35",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 424,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "3c32b6eff9406c122edeffd87723e2e5ff32498ffc5121a20881dbf4d29e99df",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 424,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "3c32b6eff9406c122edeffd87723e2e5ff32498ffc5121a20881dbf4d29e99df",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 424,
+      "split": "reserved",
+      "heldout": true,
+      "source_frame_rgb_sha256": "10dcd6e09e5a1c8ce437dbfa8c8433bb584cb37b78088b3468ade9df7f192b35",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm2",
+      "frame": 459,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "3f1d59d3f79b69123a0713303398a3c37049396010556212cd33eb73640d9ccb",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm1",
+      "frame": 459,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "68ffaeef72b6591973cf5355d7e81ab72cd0c281d4fb94b17985b7f9e3e98943",
+      "feature": "cap_center",
+      "status": "unobservable",
+      "reason": "Front pin is cropped, out of view or occluded; visible jaws/thread are not substituted for its center."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 459,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "3f1d59d3f79b69123a0713303398a3c37049396010556212cd33eb73640d9ccb",
+      "feature": "cap_center",
+      "status": "ambiguous_feature_identity",
+      "reason": "Leading-edge disk is strongly foreshortened or thread-obscured; source pixels do not establish the same front yaw-pin identity. Own-head exterior fragments are used where clear instead."
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 459,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "3f1d59d3f79b69123a0713303398a3c37049396010556212cd33eb73640d9ccb",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 459,
+      "split": "fit",
+      "heldout": false,
+      "source_frame_rgb_sha256": "68ffaeef72b6591973cf5355d7e81ab72cd0c281d4fb94b17985b7f9e3e98943",
+      "feature": "shaft_boundary",
+      "status": "not_reliably_observable",
+      "reason": "Near-field cylinder limits are defocused or hidden by the head/mount; reflections and tissue edges are not labeled as cylinder tangents."
+    }
+  ],
+  "method": "Manual native640x480 source-only review; no model projections used to select pixels. Source images and original automatic frame roles frozen before wrist refinement.",
+  "limitations": [
+    "Own PSM1 front-pin identity is unresolved and no cap coordinates are fitted for that camera/arm pair.",
+    "Head contours are sparse exterior fragments, not dense masks.",
+    "Repeated own-camera pin observations share the same mount and are correlated.",
+    "Some opposite PSM1 pins are near the top boundary, reflective or close to thread;5px uncertainty is retained.",
+    "Reserved frames are excluded from the fit but source-reviewed during development; they are not blind whole-pipeline validation."
+  ]
+}

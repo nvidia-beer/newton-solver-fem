@@ -1,0 +1,55 @@
+{
+  "source_frame_range_inclusive": [
+    5,
+    141
+  ],
+  "reviewed_by": [
+    "needle_preparation_agent",
+    "independent_camera_alignment_agent"
+  ],
+  "acceptance_scope": "Needle source-pixel numerical gates, supported initial jaw anchor, replay dynamics and rectangular-backing clearance for source frames 5\u2013141 only.",
+  "needle_numerical_fit_passed": true,
+  "full_geometry_alignment_accepted": false,
+  "native_stereo_detail_frames": [
+    138,
+    139,
+    140
+  ],
+  "source_and_render_comparisons": [
+    "audit/native_independent/left_needle_000139.png",
+    "audit/native_independent/right_needle_000139.png"
+  ],
+  "observations": [
+    "Actual rendered estimated needle is present in the source needle neighborhood in stereo near the end of the bounded phase.",
+    "Tapered endpoint and width do not exactly reproduce the source needle; the visible endpoint discrepancy is approximately 10 native pixels at frame 139.",
+    "The native pad and all measured tool motion are retained. Small pad placement and PSM1 camera calibration adjustments are reported separately.",
+    "A thin raised-surface occlusion at frames 138\u2013140 does not violate the backing-only collision policy, but remains a source-visibility limitation."
+  ],
+  "limitations": [
+    "This is a conditional estimated needle pose and circular curvature, not a measured needle SKU or accepted full scene calibration.",
+    "The optimization reached its 180-evaluation budget; numerical image checks passed, but metric calibration convergence was not established.",
+    "Frames 33 and 76 are development holdouts: their source needle observations were excluded from optimization, but they were reviewed during development.",
+    "Native stereo review at frames 138\u2013140 shows the needle near the source needle, with visibly thicker CAD geometry and an endpoint mismatch of approximately 10 pixels; this is not exact silhouette agreement.",
+    "The actual sharp CAD endpoint lies behind the raised pad surface at frames 138\u2013140 by up to 0.077 mm along the stereo rays. This is retained as a visibility limitation, not described as subpixel merely from its depth.",
+    "Raised region 1 permits penetration. Only the flat rectangular backing has an environment collider; the needle remains at least 5.602 mm clear of that backing over the declared replay.",
+    "The source-defined phase holds the needle continuously with PSM1; this clip does not test later releases or repeated regrasp events.",
+    "Full scene alignment remains unaccepted: camera/tool silhouettes and pad boundaries retain visible differences, including worsened PSM2 incision and PSM1 opposite-cap residuals."
+  ],
+  "runtime_summary": {
+    "result": "passed",
+    "simulated_supported_frames": 137,
+    "held_frames": 137,
+    "free_frames": 0,
+    "maximum_held_transform_absolute_error": 4.897382928636951e-07,
+    "maximum_recorded_tool_pose_error": 2.9799512413219986e-08,
+    "deterministic_seek_maximum_pose_difference": 0.0
+  },
+  "minimum_capsule_backing_gap_mm": 5.601809439962885,
+  "artifact_sha256": {
+    "needle.usdc": "41b218a80a88770d5aec89c401bab0a18a9593d9d093a207e149284335d8b80f",
+    "needle_inputs.npz": "499dce404a3985f3ccfa506167e0759b477cb04b1c5a13c2a6204e387a984d71",
+    "motion.npz": "f09a6a6b7f00e12441a7385b4976b2beba39f9348627be7fee8c69be2e75750b",
+    "phantom.usdc": "a496a3435d339da0e7904c65ec553945ca32a13e18397614d0d936016ca80e19",
+    "camera_poses.npz": "9696a79c554178c474860b1713d50f2882d1745923d80a1afe20886ef6b6209d"
+  }
+}

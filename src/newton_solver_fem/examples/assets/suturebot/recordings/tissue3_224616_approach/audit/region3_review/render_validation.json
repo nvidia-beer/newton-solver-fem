@@ -1,0 +1,91 @@
+{
+  "sample": "preparation-source/simulation/review_224616_region3_fix/candidate/recording.json",
+  "device": "cuda:0",
+  "frames": [
+    {
+      "frame": 4,
+      "requested_frame": 4,
+      "source_timestamp_ns": 1745894776664618163,
+      "source_time_s": 0.13001241200000002,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 16,
+        "right": 17,
+        "psm1": 19,
+        "psm2": 16
+      }
+    },
+    {
+      "frame": 27,
+      "requested_frame": 27,
+      "source_timestamp_ns": 1745894777429863074,
+      "source_time_s": 0.895257323,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 16,
+        "right": 17,
+        "psm1": 19,
+        "psm2": 15
+      }
+    },
+    {
+      "frame": 61,
+      "requested_frame": 61,
+      "source_timestamp_ns": 1745894778566117856,
+      "source_time_s": 2.031512105,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 16,
+        "right": 17,
+        "psm1": 20,
+        "psm2": 15
+      }
+    },
+    {
+      "frame": 106,
+      "requested_frame": 106,
+      "source_timestamp_ns": 1745894780065704595,
+      "source_time_s": 3.531098844,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 16,
+        "right": 16,
+        "psm1": 19,
+        "psm2": 17
+      }
+    }
+  ],
+  "scope": "Actual mesh rendering and source-clock consistency, not a calibration accuracy metric",
+  "supported_interval": [
+    4,
+    460
+  ],
+  "playback_interval": [
+    4,
+    106
+  ],
+  "body_count": 14,
+  "shape_count": 27,
+  "particle_count": 0,
+  "result": "passed"
+}

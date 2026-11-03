@@ -1,0 +1,176 @@
+{
+  "accepted": true,
+  "method": "Native jaw CAD triangle intersections along tool-local X, at canonical grasp-axis Y and Z=0",
+  "arm": "psm1",
+  "distance_m": 0.008187972317621707,
+  "axial_margin_m": 0.0001,
+  "interval_sampling_step_m": 5e-05,
+  "conservative_interval_m": [
+    0.0034500000000000004,
+    0.0094
+  ],
+  "frames": [
+    {
+      "frame": 5,
+      "accepted": true,
+      "candidate_sections": [
+        {
+          "accepted": true,
+          "axial_distance_m": 0.008087972317621707,
+          "cross_section_z_m": 0.0,
+          "jaw_intersections_x_m": [
+            [
+              -0.00119177055,
+              -0.000635,
+              -0.00011104381
+            ],
+            [
+              0.00011588578,
+              0.000635,
+              0.00119178366
+            ]
+          ],
+          "opposing_inner_faces_x_m": [
+            -0.00011104381,
+            0.00011588578
+          ],
+          "opposing_gap_m": 0.00022692959
+        },
+        {
+          "accepted": true,
+          "axial_distance_m": 0.008187972317621707,
+          "cross_section_z_m": 0.0,
+          "jaw_intersections_x_m": [
+            [
+              -0.00118232235,
+              -0.000635,
+              -0.00010238283
+            ],
+            [
+              8.722568e-05,
+              0.000635,
+              0.00118233548
+            ]
+          ],
+          "opposing_inner_faces_x_m": [
+            -0.00010238283,
+            8.722568e-05
+          ],
+          "opposing_gap_m": 0.00018960850999999999
+        },
+        {
+          "accepted": true,
+          "axial_distance_m": 0.008287972317621706,
+          "cross_section_z_m": 0.0,
+          "jaw_intersections_x_m": [
+            [
+              -0.00117287416,
+              -0.000635,
+              -7.372504e-05
+            ],
+            [
+              5.601204e-05,
+              0.000635,
+              0.0011728873
+            ]
+          ],
+          "opposing_inner_faces_x_m": [
+            -7.372504e-05,
+            5.601204e-05
+          ],
+          "opposing_gap_m": 0.00012973708
+        }
+      ],
+      "sampled_conservative_interval_m": [
+        0.0034500000000000004,
+        0.0094
+      ],
+      "jaw_distal_extent_m": 0.009651999920606603
+    },
+    {
+      "frame": 141,
+      "accepted": true,
+      "candidate_sections": [
+        {
+          "accepted": true,
+          "axial_distance_m": 0.008087972317621707,
+          "cross_section_z_m": 0.0,
+          "jaw_intersections_x_m": [
+            [
+              -0.00119177055,
+              -0.000635,
+              -0.00011104381
+            ],
+            [
+              0.00011588578,
+              0.000635,
+              0.00119178366
+            ]
+          ],
+          "opposing_inner_faces_x_m": [
+            -0.00011104381,
+            0.00011588578
+          ],
+          "opposing_gap_m": 0.00022692959
+        },
+        {
+          "accepted": true,
+          "axial_distance_m": 0.008187972317621707,
+          "cross_section_z_m": 0.0,
+          "jaw_intersections_x_m": [
+            [
+              -0.00118232235,
+              -0.000635,
+              -0.00010238283
+            ],
+            [
+              8.722568e-05,
+              0.000635,
+              0.00118233548
+            ]
+          ],
+          "opposing_inner_faces_x_m": [
+            -0.00010238283,
+            8.722568e-05
+          ],
+          "opposing_gap_m": 0.00018960850999999999
+        },
+        {
+          "accepted": true,
+          "axial_distance_m": 0.008287972317621706,
+          "cross_section_z_m": 0.0,
+          "jaw_intersections_x_m": [
+            [
+              -0.00117287416,
+              -0.000635,
+              -7.372504e-05
+            ],
+            [
+              5.601204e-05,
+              0.000635,
+              0.0011728873
+            ]
+          ],
+          "opposing_inner_faces_x_m": [
+            -7.372504e-05,
+            5.601204e-05
+          ],
+          "opposing_gap_m": 0.00012973708
+        }
+      ],
+      "sampled_conservative_interval_m": [
+        0.0034500000000000004,
+        0.0094
+      ],
+      "jaw_distal_extent_m": 0.009651999920606611
+    }
+  ],
+  "source_sha256": {
+    "rig.usdc": "5efa5348a918a66cdbc8f0c4abfbd4c432bb56762b425537e99f4ba7b96a6384",
+    "motion.npz": "f09a6a6b7f00e12441a7385b4976b2beba39f9348627be7fee8c69be2e75750b"
+  },
+  "limitations": [
+    "The reported interval is sampled; candidate and both margin sections are intersected exactly.",
+    "Checks the anchor lies between opposed jaw faces, not a collision-free clamp or contact-force model."
+  ]
+}

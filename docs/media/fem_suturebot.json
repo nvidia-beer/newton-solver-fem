@@ -1,0 +1,114 @@
+{
+  "example": "fem_suturebot",
+  "module": "newton_solver_fem.examples.example_fem_suturebot",
+  "caption": "Replay the tissue3 needle-throw recording with prepared USD tools, cameras and the original phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Each fresh jaw closure can translate the free rigid needle to the gripper again, preserving its orientation, then hold it until release into MuJoCo dynamics. This is replay assistance; camera and needle placement remain estimates, and tissue puncture is not simulated.",
+  "arguments": [
+    "--test",
+    "--test"
+  ],
+  "device": "cuda:0",
+  "frames": 1202,
+  "fps": 60,
+  "width": 1280,
+  "height": 720,
+  "show_ui": true,
+  "recording_wall_seconds": 50.879709665998234,
+  "playback_is_performance_benchmark": false,
+  "simulation_time": [
+    {
+      "attribute": "sim_time",
+      "end": 20.033333333333477
+    }
+  ],
+  "dependencies": {
+    "newton_solver_fem": "0.1.0",
+    "newton": "1.7.0",
+    "warp-lang": "1.17.0+cu13"
+  },
+  "scenario": {
+    "sample_id": "tissue3_215300",
+    "source_episode": "tissue_3/2_needle_throw/20250428-215300-489212",
+    "source_frame_count": 601,
+    "observed_source_frames": 597,
+    "supported_source_frames": [
+      4,
+      600
+    ],
+    "alignment": {
+      "status": "pad_only_translation_with_fixed_camera_calibration_estimate",
+      "reportpath": "calibration.json",
+      "tool_registration_report": "alignment.json",
+      "absolute_metric_accuracy_validated": false,
+      "pad_placement_report": "pad_placement.json",
+      "prior_metrics_scope": "Previous calibration fit metrics predate the separately reported pad translation",
+      "accepted": false
+    },
+    "final_overlay_coverage_pixels": {
+      "left": 32400,
+      "right": 32400,
+      "psm1": 43200,
+      "psm2": 43200
+    },
+    "motion": "measured Cartesian/joint kinematic replay",
+    "region_id": 1,
+    "point_labels": {
+      "report": "point_labels.json",
+      "texture": "textures/point_labels.png",
+      "count": 2,
+      "display_color_rgb": [
+        0,
+        255,
+        0
+      ]
+    },
+    "needle": {
+      "present": true,
+      "motion": "fresh recorded jaw closure translates the nearest needle centerline point to the grasp point without rotating it; fixed gripper-relative pose while held; MuJoCo dynamics after release",
+      "regrasp_policy": "fresh_closure_translation",
+      "recorded_needle_trajectory": false,
+      "events": [
+        {
+          "frame": 4,
+          "event": "initial_grasp",
+          "arm": "psm1"
+        },
+        {
+          "frame": 304,
+          "event": "release",
+          "arm": "psm1"
+        },
+        {
+          "frame": 446,
+          "event": "grasp",
+          "arm": "psm1",
+          "distance_m": 0.008436046036480608,
+          "trigger": "jaw_close",
+          "translation_world_m": [
+            0.0030881838864019323,
+            -0.0015317810541887258,
+            0.007699586989924595
+          ]
+        }
+      ]
+    },
+    "needle_tissue_interaction": false,
+    "view_changes": [
+      {
+        "capture_frame": 120,
+        "view": "phantom"
+      },
+      {
+        "capture_frame": 180,
+        "view": "surface point labels"
+      },
+      {
+        "capture_frame": 850,
+        "view": "phantom"
+      },
+      {
+        "capture_frame": 1000,
+        "view": "complete rig"
+      }
+    ]
+  }
+}

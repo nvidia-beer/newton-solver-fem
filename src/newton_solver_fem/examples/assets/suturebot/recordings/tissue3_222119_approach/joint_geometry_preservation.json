@@ -1,0 +1,34 @@
+{
+  "source_files_unchanged": true,
+  "recorded_tool_motion_and_source_clocks_unchanged": true,
+  "stereo_and_psm2_camera_arrays_unchanged": true,
+  "pad_authored_mesh_and_uv_arrays_unchanged": true,
+  "pad_world_delta_m": [
+    0.001006410826633172,
+    0.0007017648453162948,
+    -0.0022146510854319456
+  ],
+  "pad_translation_total_m": [
+    -0.0030879667820991165,
+    0.0031612083136471673,
+    -0.007630057421869528
+  ],
+  "rig_authored_mesh_arrays_unchanged": true,
+  "original_uv_texture_unchanged": true,
+  "camera_housing_and_optical_frame_move_together": true,
+  "psm1_exact_inverse_ray_max_error_px": 1.9498702569153643e-13,
+  "source_sha256": {
+    "recording.json": "6590a8bbd2774c0c9f0e9efc057d454f8fe8312c799ad912b8654120e4f48350",
+    "calibration.json": "fec9d9e96a9b370bbfe2d518f25daecfe08e6643210114127aa5b9d408824894",
+    "motion.npz": "9d79a7da0489f38022e067c7ec4bba13ac9fe2cfe9c28929bed496cef598c4e4",
+    "camera_poses.npz": "ff88ea83f8979c0c74d5a840ab597379860716065fbda9b13a729ed380a5b507",
+    "rig.usdc": "4a0fe9565be8afa37b5b44bc6d772126ca7be3d10d2460717435af5ee69dfe76",
+    "phantom.usdc": "ec53a73bfb5970b6e3fe8e87bf04c20536446b6aeb766fd0140fb0a7757e5b91",
+    "point_labels.json": "d8dc4d8720345ab55fb987e048b4936ef418eaa0770b3457c2cad5f45f9f795a",
+    "textures/point_labels.png": "595849ce843e9976278c3bc810ccffffa1b00842e314d5c1dbdd4df1b3e4db73",
+    "source_motion.npz": "2153e1ff701316df1eb308d6483a8f6e0aae36d757f3e77d6abe8a530b100425",
+    "registered_motion.npz": "da4dd5731d77eb161e7ba55aad4b0f2ea465c787ce9c251056a61fdecde33e91"
+  },
+  "accepted": false,
+  "scope": "Export preservation only; image acceptance requires separate source overlay review."
+}

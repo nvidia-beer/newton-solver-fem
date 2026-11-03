@@ -1,7 +1,12 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 The Newton Developers
 # SPDX-License-Identifier: Apache-2.0
 
-"""Select one FEM region on a clickable map and right-drag the pink suture pad.
+"""Select one SutureBot wound on a clickable map and right-drag the suture pad.
+
+Regions 1–6 match the published dataset setup; wound 1 is the training
+wound. The remaining regions are numbered from 7 onward. The original connected
+volume around wound 5 is split into wound 5, the spiral/groove region 8, and
+the upper slit region 12 to reduce the active FEM size.
 
 Only the selected region contributes particles, tetrahedra and sparse FEM
 blocks. Other regions remain visible at rest. Cut interfaces against inactive
@@ -14,6 +19,8 @@ its marker to release it. Use Clear holds to watch elastic recovery.
 Run: python -m newton_solver_fem.examples fem_phantom_regions
 """
 
+import json
+from dataclasses import replace
 from pathlib import Path
 
 import newton
@@ -67,13 +74,40 @@ class Example:
             raise ValueError("Poisson ratio must lie in (0, 0.5) and damping must be nonnegative")
         self.viewer, self.device = viewer, wp.get_device()
         self.asset_path = Path(args.asset).expanduser().resolve()
-        self.regions = list_mesh_regions(self.asset_path)
-        self.reference = load_mesh_regions(self.asset_path, [region.id for region in self.regions])
+        source_regions = list_mesh_regions(self.asset_path)
+        mapping_path = self.asset_path.with_name("suturebot_region_map.json")
+        numbering = json.loads(mapping_path.read_text())["regions"] if mapping_path.is_file() else []
+        entries = {entry["source_region_id"]: entry for entry in numbering}
+        if numbering and (
+            set(entries) != {region.id for region in source_regions}
+            or len({entry["id"] for entry in numbering}) != len(source_regions)
+        ):
+            raise ValueError("Region numbering must identify every source region exactly once")
+        self.regions = tuple(
+            sorted(
+                (
+                    replace(region, id=entries[region.id]["id"], name=entries[region.id]["name"])
+                    if numbering
+                    else region
+                    for region in source_regions
+                ),
+                key=lambda region: region.id,
+            )
+        )
+        self._source_region_ids = {
+            entries[region.id]["id"] if numbering else region.id: region.id for region in source_regions
+        }
+        self._region_numbers = np.zeros(max(region.id for region in source_regions) + 1, dtype=np.int32)
+        for number, source_id in self._source_region_ids.items():
+            self._region_numbers[source_id] = number
+        anchors = {entry["id"]: entry["label_anchor_m"] for entry in numbering if entry.get("label_anchor_m")}
+        self.reference = self.load_regions([region.id for region in self.regions])
         self.region_map = RegionMap(
             self.reference.vertices,
             self.reference.exterior_surface_triangles,
             self.reference.exterior_surface_region_ids,
             self.regions,
+            anchors=anchors,
         )
         self.full_tet_count = len(self.reference.indices)
         self.frame_dt, self.sim_time = 1 / 60, 0.0
@@ -110,7 +144,9 @@ class Example:
     def reset_camera(self):
         center = (self.reference.vertices.min(axis=0) + self.reference.vertices.max(axis=0)) / 2
         span = np.ptp(self.reference.vertices, axis=0).max()
-        offset = span * np.array((0.95, -1.10, 1.20))
+        # View from the native +Y lettering edge; the established 2D map
+        # already presents the same upright pad and needs no change.
+        offset = span * np.array((-0.95, 1.10, 1.20))
         self.view_direction = -offset / np.linalg.norm(offset)
         right = np.cross(self.view_direction, (0.0, 0.0, 1.0))
         right /= np.linalg.norm(right)
@@ -128,6 +164,17 @@ class Example:
         if camera is not None and hasattr(camera, "set_pivot"):
             camera.set_pivot(target)
 
+    def load_regions(self, region_ids):
+        """Load prepared geometry with the same region numbers used by the UI."""
+        mesh = load_mesh_regions(self.asset_path, [self._source_region_ids[value] for value in region_ids])
+        return replace(
+            mesh,
+            tetrahedron_region_ids=self._region_numbers[mesh.tetrahedron_region_ids],
+            surface_region_ids=self._region_numbers[mesh.surface_region_ids],
+            exterior_surface_region_ids=self._region_numbers[mesh.exterior_surface_region_ids],
+            regions=tuple(region for region in self.regions if region.id in region_ids),
+        )
+
     def select_regions(self, region_ids):
         """Activate at most one region as a compact FEM body, resetting to rest."""
         ids = tuple(sorted(set(int(value) for value in region_ids)))
@@ -136,11 +183,12 @@ class Example:
         unknown = set(ids) - {region.id for region in self.regions}
         if unknown:
             raise ValueError(f"Unknown pad regions: {sorted(unknown)}")
-        selection = load_mesh_regions(self.asset_path, ids)
+        selection = self.load_regions(ids)
         if self.screen_pick is not None:
             self.screen_pick.reset()
         self.selection_error = ""
         builder = newton.ModelBuilder()
+        self.configure_builder(builder)
         self.holds, self.solver, self.control, self.graph = None, None, None, None
         self.selection = selection
         self.selected_region_ids = ids
@@ -233,6 +281,9 @@ class Example:
             f"{len(selection.vertices):,} nodes, {len(self.fixed_vertex_indices):,} fixed",
             flush=True,
         )
+
+    def configure_builder(self, builder):
+        """Allow derived examples to import a scene before adding FEM particles."""
 
     def begin_grab(self, origin, direction):
         if self.holds is None:
@@ -359,7 +410,7 @@ class Example:
         changed = clicked is not None and self.selected_region_ids != (clicked,)
         if changed:
             chosen = {clicked}
-        ui.text("Top view (+Z) | 0 = base and lettering")
+        ui.text("Top view (+Z) | 1-6: SutureBot")
         if ui.button("None"):
             chosen, changed = set(), bool(self.selected_region_ids)
         button_min, button_max = ui.get_item_rect_min(), ui.get_item_rect_max()
@@ -374,6 +425,8 @@ class Example:
                 self.selection_error = str(error)
         if self.selection_error:
             ui.text_wrapped(f"Selection unavailable: {self.selection_error}")
+        labels = ", ".join(str(value) for value in self.selected_region_ids) or "none"
+        ui.text(f"Selected: {labels}")
         ui.text(f"Active: {len(self.selection.indices):,} / {self.full_tet_count:,} tetrahedra")
         ui.text(f"Fixed cut / underside nodes: {len(self.fixed_vertex_indices):,}")
         ui.separator()
@@ -411,8 +464,8 @@ class Example:
             "--regions",
             type=int,
             nargs="*",
-            default=[9],
-            help="Zero or one initially active region ID; empty disables FEM",
+            default=[1],
+            help="One map region number (1–6 SutureBot, 7–12 remaining), or empty to disable FEM; default: 1",
         )
         parser.add_argument("--substeps", type=int, default=4)
         parser.add_argument("--solver-iterations", type=int, default=80)

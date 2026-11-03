@@ -1,0 +1,3338 @@
+{
+  "method": "Actual tapered CAD endpoint and all centreline capsules, native pad triangles with constant placement, all 137 supported frames; backing checked independently.",
+  "frame_scope": [
+    5,
+    141
+  ],
+  "minimum_capsule_backing_gap_mm": 5.601809439962885,
+  "minimum_actual_sharp_backing_gap_mm": 5.856256820752632,
+  "backing_penetrated": false,
+  "stereo_actual_sharp_occluded_frames": {
+    "left": [
+      138,
+      139,
+      140
+    ],
+    "right": [
+      138,
+      139,
+      140
+    ]
+  },
+  "selected_frames": [
+    {
+      "frame": 5,
+      "minimum_arc_backing_gap_mm": 7.526603881042537,
+      "actual_sharp_vertex_backing_gap_mm": 7.817444765726614,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 33,
+      "minimum_arc_backing_gap_mm": 10.958691028949312,
+      "actual_sharp_vertex_backing_gap_mm": 11.220822777306173,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 47,
+      "minimum_arc_backing_gap_mm": 11.606005212961216,
+      "actual_sharp_vertex_backing_gap_mm": 11.86035844855162,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 76,
+      "minimum_arc_backing_gap_mm": 10.250608922188613,
+      "actual_sharp_vertex_backing_gap_mm": 10.507465551410592,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 104,
+      "minimum_arc_backing_gap_mm": 8.654810214329634,
+      "actual_sharp_vertex_backing_gap_mm": 8.91130900028474,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 127,
+      "minimum_arc_backing_gap_mm": 7.165985340390989,
+      "actual_sharp_vertex_backing_gap_mm": 7.422192919702821,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 141,
+      "minimum_arc_backing_gap_mm": 5.606523511992177,
+      "actual_sharp_vertex_backing_gap_mm": 5.860606482665354,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    }
+  ],
+  "frames": [
+    {
+      "frame": 5,
+      "minimum_arc_backing_gap_mm": 7.526603881042537,
+      "actual_sharp_vertex_backing_gap_mm": 7.817444765726614,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 6,
+      "minimum_arc_backing_gap_mm": 7.52474311393732,
+      "actual_sharp_vertex_backing_gap_mm": 7.815641337794534,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 7,
+      "minimum_arc_backing_gap_mm": 7.522422601542081,
+      "actual_sharp_vertex_backing_gap_mm": 7.8133302465035195,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 8,
+      "minimum_arc_backing_gap_mm": 7.522730840207909,
+      "actual_sharp_vertex_backing_gap_mm": 7.814357396699691,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 9,
+      "minimum_arc_backing_gap_mm": 7.548037227743736,
+      "actual_sharp_vertex_backing_gap_mm": 7.842237318547492,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 10,
+      "minimum_arc_backing_gap_mm": 7.54027866293132,
+      "actual_sharp_vertex_backing_gap_mm": 7.834892440994209,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 11,
+      "minimum_arc_backing_gap_mm": 7.536921030110634,
+      "actual_sharp_vertex_backing_gap_mm": 7.832193438050469,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 12,
+      "minimum_arc_backing_gap_mm": 7.565117473411164,
+      "actual_sharp_vertex_backing_gap_mm": 7.862517776149505,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 13,
+      "minimum_arc_backing_gap_mm": 7.572509890623799,
+      "actual_sharp_vertex_backing_gap_mm": 7.870683733861235,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 14,
+      "minimum_arc_backing_gap_mm": 7.580503194911917,
+      "actual_sharp_vertex_backing_gap_mm": 7.879168824417752,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 15,
+      "minimum_arc_backing_gap_mm": 7.60516829374652,
+      "actual_sharp_vertex_backing_gap_mm": 7.904217591143892,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 16,
+      "minimum_arc_backing_gap_mm": 7.650128112120129,
+      "actual_sharp_vertex_backing_gap_mm": 7.9497213360801355,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 17,
+      "minimum_arc_backing_gap_mm": 7.7144118673219175,
+      "actual_sharp_vertex_backing_gap_mm": 8.014742488009839,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 18,
+      "minimum_arc_backing_gap_mm": 7.870910718024081,
+      "actual_sharp_vertex_backing_gap_mm": 8.172665330065518,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 19,
+      "minimum_arc_backing_gap_mm": 7.959142330439391,
+      "actual_sharp_vertex_backing_gap_mm": 8.262176527699586,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 20,
+      "minimum_arc_backing_gap_mm": 8.146669446440132,
+      "actual_sharp_vertex_backing_gap_mm": 8.450461638626273,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 21,
+      "minimum_arc_backing_gap_mm": 8.60385572782454,
+      "actual_sharp_vertex_backing_gap_mm": 8.907723917982224,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 22,
+      "minimum_arc_backing_gap_mm": 8.837918577750262,
+      "actual_sharp_vertex_backing_gap_mm": 9.142676092660674,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 23,
+      "minimum_arc_backing_gap_mm": 9.16223181541734,
+      "actual_sharp_vertex_backing_gap_mm": 9.46621875493734,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 24,
+      "minimum_arc_backing_gap_mm": 9.57343874942808,
+      "actual_sharp_vertex_backing_gap_mm": 9.873035293408126,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 25,
+      "minimum_arc_backing_gap_mm": 9.790135703813585,
+      "actual_sharp_vertex_backing_gap_mm": 10.087090961810853,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 26,
+      "minimum_arc_backing_gap_mm": 10.044400814201065,
+      "actual_sharp_vertex_backing_gap_mm": 10.338855936429976,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 27,
+      "minimum_arc_backing_gap_mm": 10.357076056634126,
+      "actual_sharp_vertex_backing_gap_mm": 10.645153358047722,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 28,
+      "minimum_arc_backing_gap_mm": 10.581967249485679,
+      "actual_sharp_vertex_backing_gap_mm": 10.864930052562181,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 29,
+      "minimum_arc_backing_gap_mm": 10.73804776129339,
+      "actual_sharp_vertex_backing_gap_mm": 11.016352184034583,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 30,
+      "minimum_arc_backing_gap_mm": 10.88906991395324,
+      "actual_sharp_vertex_backing_gap_mm": 11.159644369318166,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 31,
+      "minimum_arc_backing_gap_mm": 10.92751918738777,
+      "actual_sharp_vertex_backing_gap_mm": 11.194057360657531,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 32,
+      "minimum_arc_backing_gap_mm": 10.939337828684856,
+      "actual_sharp_vertex_backing_gap_mm": 11.202948402339365,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 33,
+      "minimum_arc_backing_gap_mm": 10.958691028949312,
+      "actual_sharp_vertex_backing_gap_mm": 11.220822777306173,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 34,
+      "minimum_arc_backing_gap_mm": 10.963394147321887,
+      "actual_sharp_vertex_backing_gap_mm": 11.224386544415644,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 35,
+      "minimum_arc_backing_gap_mm": 10.995545074471634,
+      "actual_sharp_vertex_backing_gap_mm": 11.256097854859824,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 36,
+      "minimum_arc_backing_gap_mm": 11.029943331762235,
+      "actual_sharp_vertex_backing_gap_mm": 11.290119916411282,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 37,
+      "minimum_arc_backing_gap_mm": 11.117615837740317,
+      "actual_sharp_vertex_backing_gap_mm": 11.376380526066658,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 38,
+      "minimum_arc_backing_gap_mm": 11.198096726661289,
+      "actual_sharp_vertex_backing_gap_mm": 11.456515273076024,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 39,
+      "minimum_arc_backing_gap_mm": 11.318021427476522,
+      "actual_sharp_vertex_backing_gap_mm": 11.575343512900991,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 40,
+      "minimum_arc_backing_gap_mm": 11.49008541274628,
+      "actual_sharp_vertex_backing_gap_mm": 11.745301137982885,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 41,
+      "minimum_arc_backing_gap_mm": 11.556267966002087,
+      "actual_sharp_vertex_backing_gap_mm": 11.810505077019833,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 42,
+      "minimum_arc_backing_gap_mm": 11.65594691969621,
+      "actual_sharp_vertex_backing_gap_mm": 11.908640621459574,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 43,
+      "minimum_arc_backing_gap_mm": 11.77472084711396,
+      "actual_sharp_vertex_backing_gap_mm": 12.026715303944318,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 44,
+      "minimum_arc_backing_gap_mm": 11.769559578255576,
+      "actual_sharp_vertex_backing_gap_mm": 12.02195216268942,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 45,
+      "minimum_arc_backing_gap_mm": 11.74368167064277,
+      "actual_sharp_vertex_backing_gap_mm": 11.996463903402605,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 46,
+      "minimum_arc_backing_gap_mm": 11.64685553453281,
+      "actual_sharp_vertex_backing_gap_mm": 11.900705475464076,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 47,
+      "minimum_arc_backing_gap_mm": 11.606005212961216,
+      "actual_sharp_vertex_backing_gap_mm": 11.86035844855162,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 48,
+      "minimum_arc_backing_gap_mm": 11.567858723364596,
+      "actual_sharp_vertex_backing_gap_mm": 11.82282179365848,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 49,
+      "minimum_arc_backing_gap_mm": 11.55840083992053,
+      "actual_sharp_vertex_backing_gap_mm": 11.813653490286715,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 50,
+      "minimum_arc_backing_gap_mm": 11.508630953729915,
+      "actual_sharp_vertex_backing_gap_mm": 11.764070712837515,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 51,
+      "minimum_arc_backing_gap_mm": 11.471155138971024,
+      "actual_sharp_vertex_backing_gap_mm": 11.726735443629211,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 52,
+      "minimum_arc_backing_gap_mm": 11.413340141228671,
+      "actual_sharp_vertex_backing_gap_mm": 11.669117308887794,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 53,
+      "minimum_arc_backing_gap_mm": 11.372706118047386,
+      "actual_sharp_vertex_backing_gap_mm": 11.628597551067335,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 54,
+      "minimum_arc_backing_gap_mm": 11.288466588684184,
+      "actual_sharp_vertex_backing_gap_mm": 11.544462250580798,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 55,
+      "minimum_arc_backing_gap_mm": 11.205864949121327,
+      "actual_sharp_vertex_backing_gap_mm": 11.461972209845108,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 56,
+      "minimum_arc_backing_gap_mm": 11.055456531003287,
+      "actual_sharp_vertex_backing_gap_mm": 11.311592182974225,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 57,
+      "minimum_arc_backing_gap_mm": 10.905134513403388,
+      "actual_sharp_vertex_backing_gap_mm": 11.161268231588972,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 58,
+      "minimum_arc_backing_gap_mm": 10.778340938540584,
+      "actual_sharp_vertex_backing_gap_mm": 11.034466728521572,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 59,
+      "minimum_arc_backing_gap_mm": 10.607499335370381,
+      "actual_sharp_vertex_backing_gap_mm": 10.863697823371574,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 60,
+      "minimum_arc_backing_gap_mm": 10.531941419796716,
+      "actual_sharp_vertex_backing_gap_mm": 10.788123841397255,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 61,
+      "minimum_arc_backing_gap_mm": 10.48200178986934,
+      "actual_sharp_vertex_backing_gap_mm": 10.738183710456255,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 62,
+      "minimum_arc_backing_gap_mm": 10.465221621819762,
+      "actual_sharp_vertex_backing_gap_mm": 10.721411623831983,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 63,
+      "minimum_arc_backing_gap_mm": 10.46079133681249,
+      "actual_sharp_vertex_backing_gap_mm": 10.716968077721264,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 64,
+      "minimum_arc_backing_gap_mm": 10.458890371107884,
+      "actual_sharp_vertex_backing_gap_mm": 10.715065549588115,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 65,
+      "minimum_arc_backing_gap_mm": 10.458773841473928,
+      "actual_sharp_vertex_backing_gap_mm": 10.714942438902003,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 66,
+      "minimum_arc_backing_gap_mm": 10.455649973567413,
+      "actual_sharp_vertex_backing_gap_mm": 10.711814677051002,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 67,
+      "minimum_arc_backing_gap_mm": 10.449798817557028,
+      "actual_sharp_vertex_backing_gap_mm": 10.705969217800117,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 68,
+      "minimum_arc_backing_gap_mm": 10.423529462391347,
+      "actual_sharp_vertex_backing_gap_mm": 10.679659702307436,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 69,
+      "minimum_arc_backing_gap_mm": 10.381315189314616,
+      "actual_sharp_vertex_backing_gap_mm": 10.637650633312942,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 70,
+      "minimum_arc_backing_gap_mm": 10.365288975879226,
+      "actual_sharp_vertex_backing_gap_mm": 10.62166726868995,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 71,
+      "minimum_arc_backing_gap_mm": 10.348737527165108,
+      "actual_sharp_vertex_backing_gap_mm": 10.605146034090376,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 72,
+      "minimum_arc_backing_gap_mm": 10.324414785582514,
+      "actual_sharp_vertex_backing_gap_mm": 10.580889463125006,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 73,
+      "minimum_arc_backing_gap_mm": 10.305545266852077,
+      "actual_sharp_vertex_backing_gap_mm": 10.562146013181541,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 74,
+      "minimum_arc_backing_gap_mm": 10.277205068697038,
+      "actual_sharp_vertex_backing_gap_mm": 10.534000093176184,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 75,
+      "minimum_arc_backing_gap_mm": 10.263417017889932,
+      "actual_sharp_vertex_backing_gap_mm": 10.520260173805575,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 76,
+      "minimum_arc_backing_gap_mm": 10.250608922188613,
+      "actual_sharp_vertex_backing_gap_mm": 10.507465551410592,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 77,
+      "minimum_arc_backing_gap_mm": 10.230077229711384,
+      "actual_sharp_vertex_backing_gap_mm": 10.486952452255098,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 78,
+      "minimum_arc_backing_gap_mm": 10.169578867509328,
+      "actual_sharp_vertex_backing_gap_mm": 10.42685608674546,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 79,
+      "minimum_arc_backing_gap_mm": 10.147111289901348,
+      "actual_sharp_vertex_backing_gap_mm": 10.404389427476236,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 80,
+      "minimum_arc_backing_gap_mm": 10.123652791145277,
+      "actual_sharp_vertex_backing_gap_mm": 10.38093708692928,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 81,
+      "minimum_arc_backing_gap_mm": 10.077630645666245,
+      "actual_sharp_vertex_backing_gap_mm": 10.33491519075409,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 82,
+      "minimum_arc_backing_gap_mm": 10.027377216118996,
+      "actual_sharp_vertex_backing_gap_mm": 10.284611307141374,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 83,
+      "minimum_arc_backing_gap_mm": 9.97780823675914,
+      "actual_sharp_vertex_backing_gap_mm": 10.235026725595391,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 84,
+      "minimum_arc_backing_gap_mm": 9.916692397186877,
+      "actual_sharp_vertex_backing_gap_mm": 10.173834532035617,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 85,
+      "minimum_arc_backing_gap_mm": 9.825628278779563,
+      "actual_sharp_vertex_backing_gap_mm": 10.082775648520794,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 86,
+      "minimum_arc_backing_gap_mm": 9.741329059532843,
+      "actual_sharp_vertex_backing_gap_mm": 9.998410933351705,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 87,
+      "minimum_arc_backing_gap_mm": 9.663973606668096,
+      "actual_sharp_vertex_backing_gap_mm": 9.921036045499637,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 88,
+      "minimum_arc_backing_gap_mm": 9.55418788756047,
+      "actual_sharp_vertex_backing_gap_mm": 9.811256096906842,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 89,
+      "minimum_arc_backing_gap_mm": 9.498911580205027,
+      "actual_sharp_vertex_backing_gap_mm": 9.755966600775874,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 90,
+      "minimum_arc_backing_gap_mm": 9.437358647185174,
+      "actual_sharp_vertex_backing_gap_mm": 9.694326185031109,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 91,
+      "minimum_arc_backing_gap_mm": 9.393614298448242,
+      "actual_sharp_vertex_backing_gap_mm": 9.650542483288485,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 92,
+      "minimum_arc_backing_gap_mm": 9.369135740179503,
+      "actual_sharp_vertex_backing_gap_mm": 9.625997984417513,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 93,
+      "minimum_arc_backing_gap_mm": 9.339850874238818,
+      "actual_sharp_vertex_backing_gap_mm": 9.596665780799926,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 94,
+      "minimum_arc_backing_gap_mm": 9.295049123856794,
+      "actual_sharp_vertex_backing_gap_mm": 9.551852935488933,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 95,
+      "minimum_arc_backing_gap_mm": 9.277413977446932,
+      "actual_sharp_vertex_backing_gap_mm": 9.534218783896053,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 96,
+      "minimum_arc_backing_gap_mm": 9.25275167135481,
+      "actual_sharp_vertex_backing_gap_mm": 9.509519278871782,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 97,
+      "minimum_arc_backing_gap_mm": 9.210374948665796,
+      "actual_sharp_vertex_backing_gap_mm": 9.467126176668138,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 98,
+      "minimum_arc_backing_gap_mm": 9.163170413312665,
+      "actual_sharp_vertex_backing_gap_mm": 9.419872989650843,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 99,
+      "minimum_arc_backing_gap_mm": 9.108091710869083,
+      "actual_sharp_vertex_backing_gap_mm": 9.364768895921603,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 100,
+      "minimum_arc_backing_gap_mm": 9.023701275660102,
+      "actual_sharp_vertex_backing_gap_mm": 9.280381154220422,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 101,
+      "minimum_arc_backing_gap_mm": 8.956832794228568,
+      "actual_sharp_vertex_backing_gap_mm": 9.21346956588958,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 102,
+      "minimum_arc_backing_gap_mm": 8.876729187860635,
+      "actual_sharp_vertex_backing_gap_mm": 9.133312532709228,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 103,
+      "minimum_arc_backing_gap_mm": 8.79700255353282,
+      "actual_sharp_vertex_backing_gap_mm": 9.05358571650122,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 104,
+      "minimum_arc_backing_gap_mm": 8.654810214329634,
+      "actual_sharp_vertex_backing_gap_mm": 8.91130900028474,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 105,
+      "minimum_arc_backing_gap_mm": 8.595266646948396,
+      "actual_sharp_vertex_backing_gap_mm": 8.851697616739044,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 106,
+      "minimum_arc_backing_gap_mm": 8.512623600690278,
+      "actual_sharp_vertex_backing_gap_mm": 8.76904289048365,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 107,
+      "minimum_arc_backing_gap_mm": 8.453996303290966,
+      "actual_sharp_vertex_backing_gap_mm": 8.710351476591914,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 108,
+      "minimum_arc_backing_gap_mm": 8.415259546215735,
+      "actual_sharp_vertex_backing_gap_mm": 8.671562110633028,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 109,
+      "minimum_arc_backing_gap_mm": 8.383499237799697,
+      "actual_sharp_vertex_backing_gap_mm": 8.639802933964866,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 110,
+      "minimum_arc_backing_gap_mm": 8.36091483594211,
+      "actual_sharp_vertex_backing_gap_mm": 8.617206261127441,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 111,
+      "minimum_arc_backing_gap_mm": 8.33156963528908,
+      "actual_sharp_vertex_backing_gap_mm": 8.587820478293148,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 112,
+      "minimum_arc_backing_gap_mm": 8.291036280855197,
+      "actual_sharp_vertex_backing_gap_mm": 8.547218233694913,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 113,
+      "minimum_arc_backing_gap_mm": 8.213882360394472,
+      "actual_sharp_vertex_backing_gap_mm": 8.470099807009174,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 114,
+      "minimum_arc_backing_gap_mm": 8.124048979233184,
+      "actual_sharp_vertex_backing_gap_mm": 8.380442912317285,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 115,
+      "minimum_arc_backing_gap_mm": 8.067588006350093,
+      "actual_sharp_vertex_backing_gap_mm": 8.323972994073417,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 116,
+      "minimum_arc_backing_gap_mm": 7.994194089696928,
+      "actual_sharp_vertex_backing_gap_mm": 8.250553490609859,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 117,
+      "minimum_arc_backing_gap_mm": 7.933820473154543,
+      "actual_sharp_vertex_backing_gap_mm": 8.190331886646252,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 118,
+      "minimum_arc_backing_gap_mm": 7.919449461503697,
+      "actual_sharp_vertex_backing_gap_mm": 8.175986428417243,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 119,
+      "minimum_arc_backing_gap_mm": 7.914744155362972,
+      "actual_sharp_vertex_backing_gap_mm": 8.171300112343516,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 120,
+      "minimum_arc_backing_gap_mm": 7.888548028062188,
+      "actual_sharp_vertex_backing_gap_mm": 8.145112047774367,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 121,
+      "minimum_arc_backing_gap_mm": 7.847374643780781,
+      "actual_sharp_vertex_backing_gap_mm": 8.10393333323502,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 122,
+      "minimum_arc_backing_gap_mm": 7.774030840446322,
+      "actual_sharp_vertex_backing_gap_mm": 8.030557219122624,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 123,
+      "minimum_arc_backing_gap_mm": 7.647116142892302,
+      "actual_sharp_vertex_backing_gap_mm": 7.903531112891212,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 124,
+      "minimum_arc_backing_gap_mm": 7.540413815366076,
+      "actual_sharp_vertex_backing_gap_mm": 7.796819033854425,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 125,
+      "minimum_arc_backing_gap_mm": 7.418883387790041,
+      "actual_sharp_vertex_backing_gap_mm": 7.6751644403024235,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 126,
+      "minimum_arc_backing_gap_mm": 7.241028514913431,
+      "actual_sharp_vertex_backing_gap_mm": 7.497279945511388,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 127,
+      "minimum_arc_backing_gap_mm": 7.165985340390989,
+      "actual_sharp_vertex_backing_gap_mm": 7.422192919702821,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 128,
+      "minimum_arc_backing_gap_mm": 7.110235511818349,
+      "actual_sharp_vertex_backing_gap_mm": 7.366371480231425,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 129,
+      "minimum_arc_backing_gap_mm": 6.985212686281019,
+      "actual_sharp_vertex_backing_gap_mm": 7.241188403922461,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 130,
+      "minimum_arc_backing_gap_mm": 6.869233545994967,
+      "actual_sharp_vertex_backing_gap_mm": 7.125042715524438,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 131,
+      "minimum_arc_backing_gap_mm": 6.7329977924651985,
+      "actual_sharp_vertex_backing_gap_mm": 6.988668842909436,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 132,
+      "minimum_arc_backing_gap_mm": 6.526363675525191,
+      "actual_sharp_vertex_backing_gap_mm": 6.781846469445068,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 133,
+      "minimum_arc_backing_gap_mm": 6.384700892107895,
+      "actual_sharp_vertex_backing_gap_mm": 6.640076270977977,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 134,
+      "minimum_arc_backing_gap_mm": 6.226825555404198,
+      "actual_sharp_vertex_backing_gap_mm": 6.482159939558815,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 135,
+      "minimum_arc_backing_gap_mm": 6.077410074782887,
+      "actual_sharp_vertex_backing_gap_mm": 6.3327030224396275,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 136,
+      "minimum_arc_backing_gap_mm": 5.894621991410439,
+      "actual_sharp_vertex_backing_gap_mm": 6.1497843498903935,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 137,
+      "minimum_arc_backing_gap_mm": 5.786721146312536,
+      "actual_sharp_vertex_backing_gap_mm": 6.041770706457704,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    },
+    {
+      "frame": 138,
+      "minimum_arc_backing_gap_mm": 5.697471798496676,
+      "actual_sharp_vertex_backing_gap_mm": 5.952489219211365,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.025175511837005615
+        },
+        "right": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.025130808353424072
+        },
+        "psm1": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.027976930141448975
+        },
+        "psm2": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.03183633089065552
+        }
+      }
+    },
+    {
+      "frame": 139,
+      "minimum_arc_backing_gap_mm": 5.609336736213014,
+      "actual_sharp_vertex_backing_gap_mm": 5.864130822387218,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.07677823305130005
+        },
+        "right": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.0763237476348877
+        },
+        "psm1": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.09232014417648315
+        },
+        "psm2": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.10924786329269409
+        }
+      }
+    },
+    {
+      "frame": 140,
+      "minimum_arc_backing_gap_mm": 5.601809439962885,
+      "actual_sharp_vertex_backing_gap_mm": 5.856256820752632,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.03597140312194824
+        },
+        "right": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.035762786865234375
+        },
+        "psm1": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.04328787326812744
+        },
+        "psm2": {
+          "pad_occluded": true,
+          "occlusion_depth_mm": 0.05120038986206055
+        }
+      }
+    },
+    {
+      "frame": 141,
+      "minimum_arc_backing_gap_mm": 5.606523511992177,
+      "actual_sharp_vertex_backing_gap_mm": 5.860606482665354,
+      "actual_sharp_visibility": {
+        "left": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "right": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm1": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        },
+        "psm2": {
+          "pad_occluded": false,
+          "occlusion_depth_mm": null
+        }
+      }
+    }
+  ]
+}

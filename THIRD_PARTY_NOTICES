@@ -21,3 +21,11 @@ the 3D-MED phantom in surgical-robotics-ai/surgical_robotics_challenge, commit
 README records no upstream LICENSE file for this mesh. This asset is not
 represented as Apache-2.0 licensed. Its provenance and content hashes are in
 src/newton_solver_fem/examples/assets/phantom_pad/provenance.json.
+
+SutureBot rig and recording assets have separate source attributions in
+src/newton_solver_fem/examples/assets/suturebot/THIRD_PARTY.md and each
+recording's THIRD_PARTY.md. The dVRK MIT notice is retained in
+src/newton_solver_fem/examples/assets/suturebot/DVRK_MODEL_LICENSE.txt.
+The source inventory identifies the SutureBot dataset as CC-BY-4.0. No
+standalone license was supplied for the needle and trocar-cage CAD; these
+assets are not represented as covered by this package's Apache-2.0 license.

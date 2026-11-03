@@ -1,0 +1,31 @@
+{
+  "region_id": 1,
+  "method": "source_only_visual_review",
+  "review_frame": 0,
+  "source_left_video_sha256": "fa7d9ad384dd45142fea3da05ce808b8c9f5535dc49b897f9ee32ea951c6ff19",
+  "anatomy": "Stereo views show the single long upper-edge incision between two elongated lips. Both moving wrist views expose the same long feature adjacent to the pad edge and curved interior relief, matching public region1.",
+  "source_only": true,
+  "reviewed_frames": [
+    0,
+    15,
+    30,
+    45,
+    60,
+    75,
+    90,
+    105,
+    120,
+    135,
+    150,
+    165,
+    180,
+    195,
+    210,
+    225,
+    240,
+    255,
+    270,
+    281
+  ],
+  "limitations": "Source-only visual identity; tissue_3 is the recording session rather than wound class. No pickup point labels exist in the source dataset."
+}

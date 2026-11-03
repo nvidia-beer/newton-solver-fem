@@ -1,0 +1,163 @@
+{
+  "sample": "preparation-source/simulation/review_222119_alignment_fix/candidate_head_joint/recording.json",
+  "device": "cpu",
+  "frames": [
+    {
+      "frame": 5,
+      "requested_frame": 5,
+      "source_timestamp_ns": 1745893279612410392,
+      "source_time_s": 0.160945004,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 17,
+        "right": 18,
+        "psm1": 19,
+        "psm2": 15
+      }
+    },
+    {
+      "frame": 33,
+      "requested_frame": 33,
+      "source_timestamp_ns": 1745893280537288686,
+      "source_time_s": 1.085823298,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 17,
+        "right": 18,
+        "psm1": 19,
+        "psm2": 13
+      }
+    },
+    {
+      "frame": 76,
+      "requested_frame": 76,
+      "source_timestamp_ns": 1745893281976052165,
+      "source_time_s": 2.524586777,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 17,
+        "right": 18,
+        "psm1": 19,
+        "psm2": 15
+      }
+    },
+    {
+      "frame": 127,
+      "requested_frame": 127,
+      "source_timestamp_ns": 1745893283676480352,
+      "source_time_s": 4.2250149640000005,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 17,
+        "right": 18,
+        "psm1": 19,
+        "psm2": 15
+      }
+    },
+    {
+      "frame": 138,
+      "requested_frame": 138,
+      "source_timestamp_ns": 1745893284038321459,
+      "source_time_s": 4.586856071000001,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 17,
+        "right": 18,
+        "psm1": 19,
+        "psm2": 15
+      }
+    },
+    {
+      "frame": 139,
+      "requested_frame": 139,
+      "source_timestamp_ns": 1745893284078964979,
+      "source_time_s": 4.627499591,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 17,
+        "right": 18,
+        "psm1": 19,
+        "psm2": 15
+      }
+    },
+    {
+      "frame": 140,
+      "requested_frame": 140,
+      "source_timestamp_ns": 1745893284108960118,
+      "source_time_s": 4.657494730000001,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 17,
+        "right": 18,
+        "psm1": 19,
+        "psm2": 15
+      }
+    },
+    {
+      "frame": 141,
+      "requested_frame": 141,
+      "source_timestamp_ns": 1745893284139020002,
+      "source_time_s": 4.687554614000001,
+      "rendered_pixels": {
+        "left": 32400,
+        "right": 32400,
+        "psm1": 43200,
+        "psm2": 43200
+      },
+      "visible_shapes": {
+        "left": 17,
+        "right": 18,
+        "psm1": 19,
+        "psm2": 15
+      }
+    }
+  ],
+  "scope": "Actual mesh rendering and source-clock consistency, not a calibration accuracy metric",
+  "supported_interval": [
+    5,
+    574
+  ],
+  "playback_interval": [
+    5,
+    141
+  ],
+  "body_count": 15,
+  "shape_count": 61,
+  "particle_count": 0,
+  "result": "passed"
+}

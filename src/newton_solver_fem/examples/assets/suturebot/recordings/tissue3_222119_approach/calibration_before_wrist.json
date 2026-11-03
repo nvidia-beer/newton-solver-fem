@@ -1,0 +1,6646 @@
+{
+  "schema_version": 1,
+  "status": "automatic_reference_transfer_estimate_not_independent_calibration",
+  "absolute_metric_accuracy_validated": false,
+  "tool_time_offset_seconds": -0.13244100898522693,
+  "cameras": {
+    "left": {
+      "K": [
+        [
+          1091.924931894018,
+          0.0,
+          361.3582534598752
+        ],
+        [
+          0.0,
+          1088.0859043011606,
+          110.61164417597004
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "image_size": [
+        960,
+        540
+      ],
+      "lens_model": "pinhole_radial",
+      "status": "inherited_lens_prior_with_conditional_constant_scene_and_lateral_mount_registration",
+      "name": "left",
+      "overlay_size": [
+        240,
+        135
+      ],
+      "frame_path_pattern": "images/left/{frame:06d}.jpg",
+      "ray_directions_cv_path": "cameras/left/ray_directions_cv.npy",
+      "ray_valid_path": "cameras/left/ray_valid.npy",
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.6077746776921858e-13,
+      "resize": "cv2.INTER_LINEAR; native=(resized+0.5)*native_size/resized_size-0.5",
+      "frame_clock": "frame index maps directly to same original CSV row; no resampling",
+      "T_world_from_camera_cv": [
+        [
+          0.9973721507226733,
+          0.05010325804391832,
+          -0.052330263674223276,
+          0.03584843437343403
+        ],
+        [
+          0.06895137673873811,
+          -0.8781633548390029,
+          0.4733654295190345,
+          -0.06188884655198553
+        ],
+        [
+          -0.022237369643503067,
+          -0.47572974024260034,
+          -0.8793103625228387,
+          0.05865393550972621
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "intrinsics_fit": "fx, fy, cx and cy optimized; distortion fixed to the prior estimate",
+      "video_path": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/left.mp4",
+      "frame_count": 575,
+      "fps": 30.0,
+      "video_sha256": "39fd48d5cd1c8a48e347ae79b503f286e0050284845fe4504392d14bda88a46e"
+    },
+    "right": {
+      "K": [
+        [
+          1158.7074770493016,
+          0.0,
+          290.8334165030721
+        ],
+        [
+          0.0,
+          1149.4771647270445,
+          133.3152778800706
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "image_size": [
+        960,
+        540
+      ],
+      "lens_model": "pinhole_radial",
+      "status": "inherited_lens_prior_with_conditional_constant_scene_and_lateral_mount_registration",
+      "name": "right",
+      "overlay_size": [
+        240,
+        135
+      ],
+      "frame_path_pattern": "images/right/{frame:06d}.jpg",
+      "ray_directions_cv_path": "cameras/right/ray_directions_cv.npy",
+      "ray_valid_path": "cameras/right/ray_valid.npy",
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.6077746776921858e-13,
+      "resize": "cv2.INTER_LINEAR; native=(resized+0.5)*native_size/resized_size-0.5",
+      "frame_clock": "frame index maps directly to same original CSV row; no resampling",
+      "T_world_from_camera_cv": [
+        [
+          0.9793215452974515,
+          0.031200276291197208,
+          -0.1998896037205682,
+          0.04212171780564425
+        ],
+        [
+          0.11875539810107402,
+          -0.8885582238635289,
+          0.4431268872753578,
+          -0.06333838516149992
+        ],
+        [
+          -0.16378786993568317,
+          -0.4577016774754548,
+          -0.8738894141126133,
+          0.06269512384698611
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "intrinsics_fit": "fx, fy, cx and cy optimized; distortion fixed to the prior estimate",
+      "video_path": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/right.mp4",
+      "frame_count": 575,
+      "fps": 30.0,
+      "video_sha256": "557cd700c064e78bd9e6a909921ae1dcd071c9c636887b53f39f62c4767eecb4"
+    },
+    "psm1": {
+      "camera": "psm1",
+      "lens_model": "pinhole_radial",
+      "K": [
+        [
+          655.0586147259303,
+          0.0,
+          318.75157352012917
+        ],
+        [
+          0.0,
+          703.9280218249336,
+          251.25218981222648
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.20167211488382664,
+        -0.019324374903608263,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "T_roll_camera_cv": [
+        [
+          0.19940118722743083,
+          0.979917938672566,
+          0.0,
+          -0.006553479476498388
+        ],
+        [
+          -0.979917938672566,
+          0.19940118722743083,
+          -0.0,
+          -0.001368197891882198
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          -0.047588752745738115
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "image_size": [
+        640,
+        480
+      ],
+      "time_offset_seconds": -0.13244100898522693,
+      "name": "psm1",
+      "overlay_size": [
+        240,
+        180
+      ],
+      "frame_path_pattern": "images/psm1/{frame:06d}.jpg",
+      "ray_directions_cv_path": "cameras/psm1/ray_directions_cv.npy",
+      "ray_valid_path": "cameras/psm1/ray_valid.npy",
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.978406215476259e-13,
+      "resize": "cv2.INTER_LINEAR; native=(resized+0.5)*native_size/resized_size-0.5",
+      "frame_clock": "frame index maps directly to same original CSV row; no resampling",
+      "status": "inherited_lens_prior_with_conditional_constant_scene_and_lateral_mount_registration",
+      "intrinsics_fit": "fx, fy, cx and cy optimized; distortion fixed to the prior estimate",
+      "video_path": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/psm1.mp4",
+      "frame_count": 575,
+      "fps": 30.0,
+      "video_sha256": "4936db40978b4f39e56039e27e86d519e4aa132d47370e7d2755d03cbb607528"
+    },
+    "psm2": {
+      "camera": "psm2",
+      "lens_model": "pinhole_radial",
+      "K": [
+        [
+          729.1333457143642,
+          0.0,
+          316.6554055120377
+        ],
+        [
+          0.0,
+          742.5783509776517,
+          268.030032653222
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "D": [
+        -0.26794140198188887,
+        0.08371372751094454,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "T_roll_camera_cv": [
+        [
+          -0.06840223406072393,
+          0.9976578242942327,
+          0.0,
+          -0.006254086539687231
+        ],
+        [
+          -0.9976578242942327,
+          -0.06840223406072393,
+          -0.0,
+          0.0007448197268443867
+        ],
+        [
+          -0.0,
+          0.0,
+          1.0,
+          -0.05024062653248906
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "image_size": [
+        640,
+        480
+      ],
+      "time_offset_seconds": -0.13244100898522693,
+      "name": "psm2",
+      "overlay_size": [
+        240,
+        180
+      ],
+      "frame_path_pattern": "images/psm2/{frame:06d}.jpg",
+      "ray_directions_cv_path": "cameras/psm2/ray_directions_cv.npy",
+      "ray_valid_path": "cameras/psm2/ray_valid.npy",
+      "ray_valid_fraction": 1.0,
+      "ray_roundtrip_max_px": 1.0211149310470866e-10,
+      "resize": "cv2.INTER_LINEAR; native=(resized+0.5)*native_size/resized_size-0.5",
+      "frame_clock": "frame index maps directly to same original CSV row; no resampling",
+      "status": "inherited_lens_prior_with_conditional_constant_scene_and_lateral_mount_registration",
+      "intrinsics_fit": "fx, fy, cx and cy optimized; distortion fixed to the prior estimate",
+      "video_path": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery/psm2.mp4",
+      "frame_count": 575,
+      "fps": 30.0,
+      "video_sha256": "333b1634123eb907cf69bacfd7f394a556cc3bc3a3fd03f1f01d691963ca0514"
+    }
+  },
+  "source_phantom_mesh": "preparation-source/phantom_parametric/lowered_quality_groups_v3/regions/region_006.npz",
+  "scene_fit": {
+    "base": {
+      "world_to_local_row_matrix": [
+        [
+          0.9998829781026586,
+          -0.013982670239650243,
+          0.006206048140917015
+        ],
+        [
+          0.014060442527423143,
+          0.9998208694389858,
+          -0.01267016141189137
+        ],
+        [
+          -0.0060277737591262325,
+          0.012755938508771113,
+          0.9999004710351272
+        ]
+      ],
+      "rectangle_min_m": [
+        -0.06347601908981478,
+        -0.0663273411172402
+      ],
+      "rectangle_max_m": [
+        0.06971133856553278,
+        0.066153210501664
+      ],
+      "top_m": -0.003819052911122082,
+      "bottom_m": -0.00826966468566116,
+      "geometry_changed": false
+    },
+    "fixture": {
+      "port_a_psm1_native": [
+        6.2634685832,
+        3.94001295,
+        -1.85600996
+      ],
+      "port_b_psm2_native": [
+        5.2422602015,
+        1.45921122,
+        3.99158209
+      ],
+      "feet_plane_x_native": -1.8899999857,
+      "up_native": [
+        1,
+        0,
+        0
+      ],
+      "scale_m_per_native_unit": 0.026790820417577382,
+      "estimated_port_midpoint_uncertainty_m": 0.003,
+      "T_reference_from_scaled_native": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "T_world_from_scaled_native": [
+        [
+          0.00620604820924749,
+          0.3942222836601431,
+          -0.9189941653957365,
+          0.025601108084738176
+        ],
+        [
+          -0.01267016149866078,
+          0.9189690913244333,
+          0.3941259648867902,
+          -0.10570568315783518
+        ],
+        [
+          0.9999004710336037,
+          0.009197839753287355,
+          0.010698026483912668,
+          0.013020716658913455
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "pad_bottom_above_fixture_feet_m": 0.027847375012088626,
+      "support_plane_height_world_m": -0.036117039697749785,
+      "constraint_meaning": "Exact inherited fixture CAD ports; new constant arm-base calibration, pad parallel with freely fitted displacement"
+    }
+  },
+  "camera_order": [
+    "left",
+    "right",
+    "psm1",
+    "psm2"
+  ],
+  "camera_poses_npz": "camera_poses.npz",
+  "frame_count": 575,
+  "frame_convention": "world = unchanged native FEM phantom metres; camera CV +X right +Y down +Z forward",
+  "T_world_from_reference": [
+    [
+      0.00620604820924749,
+      0.3942222836601431,
+      -0.9189941653957365,
+      0.025601108084738176
+    ],
+    [
+      -0.01267016149866078,
+      0.9189690913244333,
+      0.3941259648867902,
+      -0.10570568315783518
+    ],
+    [
+      0.9999004710336037,
+      0.009197839753287355,
+      0.010698026483912668,
+      0.013020716658913455
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "T_reference_from_recorded": {
+    "psm1": [
+      [
+        -0.06886855705441233,
+        0.4304588833088365,
+        -0.8999790395502294,
+        0.030770956840398656
+      ],
+      [
+        -0.45992717493432433,
+        0.78683246287535,
+        0.41153574464734277,
+        0.07150767334177092
+      ],
+      [
+        0.8852819413080643,
+        0.442266690070619,
+        0.14379172176382235,
+        -0.025167558221085726
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "psm2": [
+      [
+        -0.09164628981250499,
+        0.37710292265151124,
+        -0.9216259237300621,
+        0.030589207454096476
+      ],
+      [
+        -0.4444652316850099,
+        0.8127222664163823,
+        0.37674019628148075,
+        0.03088887935061929
+      ],
+      [
+        0.8910957386200384,
+        0.44415752093002603,
+        0.09312615752032666,
+        0.013455799093843507
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ]
+  },
+  "reference_frame": "scaled fixture-native coordinates in metres; CAD +X is support normal",
+  "sample_id": "tissue3_222119",
+  "region_id": 1,
+  "automatic_fit": {
+    "schema_version": 1,
+    "status": "automatic_reference_transfer_estimate_not_independent_calibration",
+    "validation_status": "requires_image_alignment_review",
+    "accepted": false,
+    "reference_sample_id": "tissue3_215300",
+    "reference_calibration_sha256": "98ae416102a2dcecbd51a0a236e6d54ec6ee3319ced707c7577b285f3b7d69e7",
+    "source_csv_sha256": "26bd61ba01885db620a750be9064f75769cfda9887403d227ff8db18655d51fb",
+    "evidence": {
+      "cap_observations": "fit_cap_observations.json",
+      "original_cap_observations": "automatic_observations.json",
+      "cap_identity_review": null,
+      "slit_traces": "reviewed_slit_traces.json",
+      "original_automatic_slit_traces": "automatic_slit_traces.json",
+      "wrist_caps": "automatic_wrist_caps.json"
+    },
+    "observations_sha256": "7107d39544e43cb913b652fff7a47514d03a4f6956dfd827fa4ed748699403b6",
+    "region_identification": {
+      "method": "source_only_visual_review_before_fitting",
+      "region_id": 1,
+      "evidence": "region_review.json"
+    },
+    "source_script_sha256": "f21ca3808a4e98ecde4b3d780d39afabbb5e9f895be759ae468dee468f69717a",
+    "fit_frames": [
+      5,
+      19,
+      47,
+      61,
+      90,
+      104,
+      118,
+      132,
+      161,
+      175,
+      203,
+      218,
+      232,
+      246,
+      274,
+      289,
+      317,
+      331,
+      345,
+      360,
+      388,
+      402,
+      431,
+      445,
+      459,
+      473,
+      502,
+      516,
+      544,
+      558,
+      573
+    ],
+    "heldout_frames": [
+      33,
+      76,
+      147,
+      189,
+      260,
+      303,
+      374,
+      416,
+      487,
+      530
+    ],
+    "optimizer": {
+      "success": true,
+      "message": "`ftol` termination condition is satisfied.",
+      "nfev": 29,
+      "cost": 703.1468996723066,
+      "parameters": [
+        0.04737619782465284,
+        -3.7667291144351336,
+        0.7702262154582814,
+        -9.891947818865289,
+        -0.13212876822334554,
+        0.005125808864941552,
+        0.00374881899926639,
+        -0.02291803086441035,
+        -0.01076294617015767,
+        -0.0062228318337330425,
+        0.012064752368976443,
+        0.01743421426184022,
+        0.10234026749613141,
+        4.676045151695958,
+        -3.5569338403449917,
+        -0.7572802313711817,
+        6.202646493265451e-18,
+        3.45721870992392e-17,
+        -0.2076581699895047,
+        0.13045292023273958,
+        -0.025476771217367494
+      ]
+    },
+    "constraints": {
+      "constant_arm_base_transform": true,
+      "exact_fixture_ports": true,
+      "pad_parallel_to_fixture": true,
+      "parallel_wrist_optical_axes": true,
+      "unchanged_recorded_relative_motion": true,
+      "rigid_wrist_heads_above_native_slit_plane": true,
+      "inherited_pad_height_prior_sigma_m": 0.005,
+      "inherited_lens_intrinsics": true,
+      "inherited_wrist_mounts": false,
+      "wrist_mount_fit": "lateral XY only where >=3 source training detections; axial/roll retained",
+      "inherited_stereo_baseline_and_relative_pose": true,
+      "shared_clip_clock_offset_seconds": -0.13244100898522693,
+      "clock_offset_reference_seconds": -0.10696423776785942,
+      "clock_offset_adjustment_bounds_seconds": [
+        -0.053980766232140584,
+        0.14760419576785927
+      ],
+      "all_fitted_source_queries_supported": true
+    },
+    "metrics": {
+      "before": {
+        "cap": {
+          "left": {
+            "fit": {
+              "count": 57,
+              "rms_px": 191.44808829653223,
+              "median_px": 165.6956685159203
+            },
+            "heldout": {
+              "count": 19,
+              "rms_px": 196.92735836827345,
+              "median_px": 164.9636801697246
+            }
+          },
+          "right": {
+            "fit": {
+              "count": 57,
+              "rms_px": 188.08428917006103,
+              "median_px": 154.1906433954816
+            },
+            "heldout": {
+              "count": 19,
+              "rms_px": 194.24168760611596,
+              "median_px": 153.64836670635137
+            }
+          },
+          "psm1": {
+            "fit": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            },
+            "heldout": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            }
+          },
+          "psm2": {
+            "fit": {
+              "count": 31,
+              "rms_px": 3.4814031483911347,
+              "median_px": 3.492986836917851
+            },
+            "heldout": {
+              "count": 10,
+              "rms_px": 3.4556998240646077,
+              "median_px": 3.486516834836131
+            }
+          }
+        },
+        "groove": {
+          "left": {
+            "fit": {
+              "count": 1763,
+              "rms_px": 59.61801387569035,
+              "median_px": 50.61233644297615
+            },
+            "heldout": {
+              "count": 650,
+              "rms_px": 64.01655999853838,
+              "median_px": 50.412215048911975
+            }
+          },
+          "right": {
+            "fit": {
+              "count": 1590,
+              "rms_px": 58.38090576223808,
+              "median_px": 49.62004439333206
+            },
+            "heldout": {
+              "count": 568,
+              "rms_px": 60.10613900836641,
+              "median_px": 48.090184406124735
+            }
+          },
+          "psm1": {
+            "fit": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            },
+            "heldout": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            }
+          },
+          "psm2": {
+            "fit": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            },
+            "heldout": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            }
+          }
+        },
+        "cap_residuals": [
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              599.0,
+              257.0
+            ],
+            "residual_px": [
+              171.30940619662113,
+              123.36826312199167
+            ],
+            "norm_px": 211.10812631724033
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              582.0,
+              258.0
+            ],
+            "residual_px": [
+              172.6525106250948,
+              125.86001882387012
+            ],
+            "norm_px": 213.6577491304573
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              150.0,
+              335.0
+            ],
+            "residual_px": [
+              80.63289289947951,
+              -140.42676770915224
+            ],
+            "norm_px": 161.93004818926948
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              143.0,
+              334.0
+            ],
+            "residual_px": [
+              72.97546281622311,
+              -131.64949813243337
+            ],
+            "norm_px": 150.52245191918558
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              600.3214721679688,
+              261.4675750732422
+            ],
+            "residual_px": [
+              173.55448087946775,
+              126.54605886449951
+            ],
+            "norm_px": 214.79074199666732
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              580.6060180664062,
+              263.0642852783203
+            ],
+            "residual_px": [
+              175.51286130536107,
+              128.2605631716521
+            ],
+            "norm_px": 217.38338609172567
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              149.74090576171875,
+              335.27606201171875
+            ],
+            "residual_px": [
+              80.09155515451027,
+              -140.84857902490253
+            ],
+            "norm_px": 162.027711890288
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              142.6978759765625,
+              334.33026123046875
+            ],
+            "residual_px": [
+              72.42292171702127,
+              -132.10853454709277
+            ],
+            "norm_px": 150.65770637511443
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              619.70458984375,
+              243.10757446289062
+            ],
+            "residual_px": [
+              183.35434775756482,
+              134.93512673696432
+            ],
+            "norm_px": 227.65391555851318
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              595.1848754882812,
+              243.78102111816406
+            ],
+            "residual_px": [
+              183.4658127018712,
+              136.99613838976614
+            ],
+            "norm_px": 228.9708417333221
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              149.70700073242188,
+              335.6333923339844
+            ],
+            "residual_px": [
+              80.47511504208592,
+              -141.20455756933862
+            ],
+            "norm_px": 162.5268323058984
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              142.46795654296875,
+              334.5095520019531
+            ],
+            "residual_px": [
+              72.93220812864814,
+              -132.28980637630502
+            ],
+            "norm_px": 151.0619073545701
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              616.4815673828125,
+              219.2030792236328
+            ],
+            "residual_px": [
+              182.21767199376984,
+              134.19744731270526
+            ],
+            "norm_px": 226.3012038237433
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              593.6593627929688,
+              219.91639709472656
+            ],
+            "residual_px": [
+              180.00225482362225,
+              136.0760633225778
+            ],
+            "norm_px": 225.64907877267845
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              153.60601806640625,
+              337.4161376953125
+            ],
+            "residual_px": [
+              81.54332173230196,
+              -140.33448548827218
+            ],
+            "norm_px": 162.3055178864717
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              146.35009765625,
+              336.0569152832031
+            ],
+            "residual_px": [
+              73.88338955328038,
+              -131.37771203441804
+            ],
+            "norm_px": 150.72776277540993
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              577.6597900390625,
+              223.5097198486328
+            ],
+            "residual_px": [
+              175.22539028748315,
+              133.58610589762048
+            ],
+            "norm_px": 220.33879615331264
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              553.2155151367188,
+              224.59307861328125
+            ],
+            "residual_px": [
+              175.6276930165144,
+              135.01546407383267
+            ],
+            "norm_px": 221.52711367544927
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              153.99346923828125,
+              337.6092834472656
+            ],
+            "residual_px": [
+              80.95668471647281,
+              -140.28716412588952
+            ],
+            "norm_px": 161.97059368529415
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              146.69125366210938,
+              336.4582824707031
+            ],
+            "residual_px": [
+              73.39575654649116,
+              -131.54953706982462
+            ],
+            "norm_px": 150.63936332286113
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              580.1184692382812,
+              218.5540008544922
+            ],
+            "residual_px": [
+              174.44848843396153,
+              129.77049961622686
+            ],
+            "norm_px": 217.42276257912636
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              556.6251831054688,
+              219.68321228027344
+            ],
+            "residual_px": [
+              175.1822412501599,
+              131.28265571843332
+            ],
+            "norm_px": 218.91540224916545
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              153.1071014404297,
+              337.48614501953125
+            ],
+            "residual_px": [
+              80.96161496699168,
+              -139.95096936852022
+            ],
+            "norm_px": 161.68196227548668
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              145.9892578125,
+              336.4993591308594
+            ],
+            "residual_px": [
+              73.3152981509161,
+              -131.38017399760435
+            ],
+            "norm_px": 150.45226173972432
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              583.5411987304688,
+              215.79478454589844
+            ],
+            "residual_px": [
+              171.9154781353143,
+              126.35977112031821
+            ],
+            "norm_px": 213.35820438894055
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              562.6921997070312,
+              217.13507080078125
+            ],
+            "residual_px": [
+              172.9479030310912,
+              127.91137706625216
+            ],
+            "norm_px": 215.109966170414
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              152.6230926513672,
+              337.9478759765625
+            ],
+            "residual_px": [
+              80.39921105092503,
+              -139.74693244864432
+            ],
+            "norm_px": 161.2241863568154
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              145.4167022705078,
+              336.98760986328125
+            ],
+            "residual_px": [
+              72.8782043189712,
+              -131.22732607137516
+            ],
+            "norm_px": 150.106108378709
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              583.7129516601562,
+              219.55409240722656
+            ],
+            "residual_px": [
+              169.3980994695495,
+              123.40600230248106
+            ],
+            "norm_px": 209.58234064008195
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              564.468505859375,
+              221.14186096191406
+            ],
+            "residual_px": [
+              170.9405640839998,
+              124.88695363802572
+            ],
+            "norm_px": 211.70126980805387
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              151.03309631347656,
+              339.6977233886719
+            ],
+            "residual_px": [
+              79.96077202971833,
+              -140.49453857669994
+            ],
+            "norm_px": 161.65531365676915
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              143.87295532226562,
+              338.5994873046875
+            ],
+            "residual_px": [
+              72.37388170339054,
+              -131.86966777360405
+            ],
+            "norm_px": 150.4246922268318
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              581.8380737304688,
+              226.35414123535156
+            ],
+            "residual_px": [
+              168.48827655319087,
+              119.97925363338908
+            ],
+            "norm_px": 206.84129335867544
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              563.5989990234375,
+              227.9687042236328
+            ],
+            "residual_px": [
+              170.48369160905156,
+              121.56519029664554
+            ],
+            "norm_px": 209.3866867699803
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              148.60581970214844,
+              341.7406921386719
+            ],
+            "residual_px": [
+              79.98789465590008,
+              -141.2336239345328
+            ],
+            "norm_px": 162.3114284983174
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              141.42250061035156,
+              340.58465576171875
+            ],
+            "residual_px": [
+              72.4510005286744,
+              -132.59724608894683
+            ],
+            "norm_px": 151.09989129042648
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              576.5946044921875,
+              245.0567626953125
+            ],
+            "residual_px": [
+              165.15371537873511,
+              119.61907021279
+            ],
+            "norm_px": 203.9227100201756
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              560.115478515625,
+              246.60000610351562
+            ],
+            "residual_px": [
+              167.94639960874792,
+              121.55772812468803
+            ],
+            "norm_px": 207.32166893110045
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              147.70285034179688,
+              342.65838623046875
+            ],
+            "residual_px": [
+              79.98929978642829,
+              -141.31256896419634
+            ],
+            "norm_px": 162.38081853342115
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              140.570068359375,
+              341.37579345703125
+            ],
+            "residual_px": [
+              72.40952738618358,
+              -132.58626357306318
+            ],
+            "norm_px": 151.07037083609828
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              581.6145629882812,
+              258.3840026855469
+            ],
+            "residual_px": [
+              166.75060458300402,
+              117.96740777789529
+            ],
+            "norm_px": 204.25981843386035
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              567.551513671875,
+              260.0700988769531
+            ],
+            "residual_px": [
+              169.06314370533732,
+              120.0509673297039
+            ],
+            "norm_px": 207.35134751510338
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              147.4951171875,
+              343.9026184082031
+            ],
+            "residual_px": [
+              80.5174347873764,
+              -142.24940156111157
+            ],
+            "norm_px": 163.4562618844374
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              139.98892211914062,
+              342.53472900390625
+            ],
+            "residual_px": [
+              73.02681559663026,
+              -133.4571222659495
+            ],
+            "norm_px": 152.13059941935688
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              604.112060546875,
+              242.892578125
+            ],
+            "residual_px": [
+              170.70314101830013,
+              120.50527292921959
+            ],
+            "norm_px": 208.95234661821667
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              588.1697998046875,
+              244.33001708984375
+            ],
+            "residual_px": [
+              172.0446852901166,
+              122.59574954824359
+            ],
+            "norm_px": 211.25598581784834
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              147.23805236816406,
+              344.0775451660156
+            ],
+            "residual_px": [
+              80.71320208435955,
+              -142.29209824296032
+            ],
+            "norm_px": 163.58992087868657
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              139.7766571044922,
+              342.6588134765625
+            ],
+            "residual_px": [
+              73.17787776393703,
+              -133.4555935636479
+            ],
+            "norm_px": 152.2018306311041
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              608.1268920898438,
+              241.22047424316406
+            ],
+            "residual_px": [
+              170.24879479773426,
+              121.98118278701446
+            ],
+            "norm_px": 209.43748729441933
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              592.1390991210938,
+              242.1850128173828
+            ],
+            "residual_px": [
+              171.43619062239134,
+              124.53800320776872
+            ],
+            "norm_px": 211.89639378265764
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              147.0384521484375,
+              344.81427001953125
+            ],
+            "residual_px": [
+              80.37858307503299,
+              -142.2897967273658
+            ],
+            "norm_px": 163.42307936722113
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              139.47344970703125,
+              343.36572265625
+            ],
+            "residual_px": [
+              72.95569377557706,
+              -133.45871690889297
+            ],
+            "norm_px": 152.09787103455395
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              615.6871337890625,
+              234.0073699951172
+            ],
+            "residual_px": [
+              168.74739474927662,
+              119.81137576750615
+            ],
+            "norm_px": 206.95518596539384
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              598.6849365234375,
+              236.16253662109375
+            ],
+            "residual_px": [
+              170.92283031566092,
+              121.12809404402583
+            ],
+            "norm_px": 209.4913580314343
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              144.3771209716797,
+              344.5519104003906
+            ],
+            "residual_px": [
+              80.26196908785991,
+              -142.64207756153579
+            ],
+            "norm_px": 163.67267937237347
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              136.79403686523438,
+              342.9744567871094
+            ],
+            "residual_px": [
+              72.95317089373478,
+              -133.62192781472558
+            ],
+            "norm_px": 152.23989206635102
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              630.5200805664062,
+              209.43260192871094
+            ],
+            "residual_px": [
+              166.81203677339226,
+              113.01606645042062
+            ],
+            "norm_px": 201.4916546371424
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              615.363525390625,
+              208.04794311523438
+            ],
+            "residual_px": [
+              167.72851301076025,
+              117.64715013371512
+            ],
+            "norm_px": 204.87485451217694
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              144.41978454589844,
+              344.1895446777344
+            ],
+            "residual_px": [
+              80.43134644454102,
+              -142.5515597689377
+            ],
+            "norm_px": 163.67696442517132
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              137.0614776611328,
+              343.0396728515625
+            ],
+            "residual_px": [
+              72.88122735486175,
+              -133.9460555837316
+            ],
+            "norm_px": 152.49006232273356
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              655.171875,
+              188.2232208251953
+            ],
+            "residual_px": [
+              169.40351901036752,
+              109.4632808094662
+            ],
+            "norm_px": 201.69224600531373
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              639.8214111328125,
+              187.74905395507812
+            ],
+            "residual_px": [
+              171.20415300909144,
+              112.87254201364198
+            ],
+            "norm_px": 205.06358220849884
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              146.66407775878906,
+              344.457275390625
+            ],
+            "residual_px": [
+              81.71023240955901,
+              -142.3105700225904
+            ],
+            "norm_px": 164.1001536275294
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              138.97093200683594,
+              342.924560546875
+            ],
+            "residual_px": [
+              74.27740746319546,
+              -133.3836818314356
+            ],
+            "norm_px": 152.67069082952108
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              658.6544189453125,
+              182.81201171875
+            ],
+            "residual_px": [
+              166.650259760754,
+              110.8805604821506
+            ],
+            "norm_px": 200.16694974736126
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              644.7097778320312,
+              182.29441833496094
+            ],
+            "residual_px": [
+              168.69053356221195,
+              114.3566363050391
+            ],
+            "norm_px": 203.79876442340554
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              147.19996643066406,
+              344.8377685546875
+            ],
+            "residual_px": [
+              81.52141318143879,
+              -142.1784205316782
+            ],
+            "norm_px": 163.89156193038613
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              139.56236267089844,
+              343.5229797363281
+            ],
+            "residual_px": [
+              74.06610622384486,
+              -133.5007701228328
+            ],
+            "norm_px": 152.67037602151674
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              660.596923828125,
+              182.5173797607422
+            ],
+            "residual_px": [
+              163.8642304540616,
+              109.41141905261219
+            ],
+            "norm_px": 197.03386673718842
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              646.4710693359375,
+              181.79837036132812
+            ],
+            "residual_px": [
+              167.78904091453887,
+              113.14947988685401
+            ],
+            "norm_px": 202.37580648310308
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              147.28463745117188,
+              345.0462646484375
+            ],
+            "residual_px": [
+              81.3799412744047,
+              -142.30974469302154
+            ],
+            "norm_px": 163.93522585588042
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              139.49642944335938,
+              343.53253173828125
+            ],
+            "residual_px": [
+              74.07614426195659,
+              -133.4368211506048
+            ],
+            "norm_px": 152.6193316310116
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              652.3806762695312,
+              200.818603515625
+            ],
+            "residual_px": [
+              159.72230552097415,
+              115.23485540628008
+            ],
+            "norm_px": 196.9524987946121
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              640.9004516601562,
+              199.78759765625
+            ],
+            "residual_px": [
+              162.7322403073423,
+              119.81271733026392
+            ],
+            "norm_px": 202.08134319998055
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              147.2870635986328,
+              344.94879150390625
+            ],
+            "residual_px": [
+              80.90713762287629,
+              -142.25451505996165
+            ],
+            "norm_px": 163.6530231107018
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              139.60841369628906,
+              343.4912109375
+            ],
+            "residual_px": [
+              73.5266346374419,
+              -133.43100267562235
+            ],
+            "norm_px": 152.34828018763392
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              624.1859130859375,
+              231.79052734375
+            ],
+            "residual_px": [
+              154.40739890474208,
+              127.19813631990354
+            ],
+            "norm_px": 200.0525199036116
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              611.5228881835938,
+              230.84803771972656
+            ],
+            "residual_px": [
+              156.39418665412495,
+              132.02330274367517
+            ],
+            "norm_px": 204.6687423290459
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              146.6251983642578,
+              344.7125549316406
+            ],
+            "residual_px": [
+              80.78323886968036,
+              -142.59231422083724
+            ],
+            "norm_px": 163.88563011176365
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              139.11070251464844,
+              343.2765197753906
+            ],
+            "residual_px": [
+              73.26171325537516,
+              -133.75151483891113
+            ],
+            "norm_px": 152.50162737104242
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              575.7952270507812,
+              284.8144989013672
+            ],
+            "residual_px": [
+              151.97925314928523,
+              133.2083593087827
+            ],
+            "norm_px": 202.094434306223
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              566.4202880859375,
+              284.2471618652344
+            ],
+            "residual_px": [
+              153.75499490925665,
+              138.08046875263852
+            ],
+            "norm_px": 206.65627091983907
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              146.5755615234375,
+              344.822509765625
+            ],
+            "residual_px": [
+              80.51253771663835,
+              -142.79666002000278
+            ],
+            "norm_px": 163.93033533315722
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              139.0233612060547,
+              343.2901611328125
+            ],
+            "residual_px": [
+              73.00857953246108,
+              -133.85128528584536
+            ],
+            "norm_px": 152.46776465214035
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              568.5202026367188,
+              302.0410919189453
+            ],
+            "residual_px": [
+              153.37608663537173,
+              129.61513559345246
+            ],
+            "norm_px": 200.8091315814351
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              559.731201171875,
+              301.31976318359375
+            ],
+            "residual_px": [
+              154.87700077638453,
+              134.66842197154506
+            ],
+            "norm_px": 205.2375921847514
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              146.8495635986328,
+              344.9833679199219
+            ],
+            "residual_px": [
+              80.95396788319931,
+              -142.8848278745325
+            ],
+            "norm_px": 164.22429464841323
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              139.15443420410156,
+              343.5164794921875
+            ],
+            "residual_px": [
+              73.50315488665822,
+              -134.01563984295177
+            ],
+            "norm_px": 152.84929015473978
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              571.3444213867188,
+              301.8910675048828
+            ],
+            "residual_px": [
+              154.35140674523439,
+              125.01605649328269
+            ],
+            "norm_px": 198.6287268885456
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              562.8955688476562,
+              301.2291564941406
+            ],
+            "residual_px": [
+              155.48301788570882,
+              130.0323589237999
+            ],
+            "norm_px": 202.6903629138188
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              147.18173217773438,
+              345.29644775390625
+            ],
+            "residual_px": [
+              80.86490673864219,
+              -142.82922798379857
+            ],
+            "norm_px": 164.13202462742368
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              139.36097717285156,
+              343.78631591796875
+            ],
+            "residual_px": [
+              73.49099610126376,
+              -133.93924032709648
+            ],
+            "norm_px": 152.77645959818443
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              633.489013671875,
+              293.9120330810547
+            ],
+            "residual_px": [
+              164.55789307236637,
+              108.2833515303866
+            ],
+            "norm_px": 196.98879255193592
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              625.2500610351562,
+              292.8883056640625
+            ],
+            "residual_px": [
+              169.00967253829162,
+              114.52104170622192
+            ],
+            "norm_px": 204.15518216537828
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              146.388916015625,
+              345.5935974121094
+            ],
+            "residual_px": [
+              80.56905163041222,
+              -142.69475894715913
+            ],
+            "norm_px": 163.86935745163547
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              138.62396240234375,
+              344.18328857421875
+            ],
+            "residual_px": [
+              73.17550213299847,
+              -133.9179629446462
+            ],
+            "norm_px": 152.6062741556195
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              689.6009521484375,
+              334.4001007080078
+            ],
+            "residual_px": [
+              177.03666814524752,
+              121.9482475110629
+            ],
+            "norm_px": 214.97292140869732
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              678.45947265625,
+              333.85430908203125
+            ],
+            "residual_px": [
+              181.00507971020647,
+              128.57423516237452
+            ],
+            "norm_px": 222.02291059367676
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              144.56527709960938,
+              344.8271789550781
+            ],
+            "residual_px": [
+              80.12576552909837,
+              -143.05619989156307
+            ],
+            "norm_px": 163.96711447433262
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              136.9722137451172,
+              343.3992919921875
+            ],
+            "residual_px": [
+              72.76424204349951,
+              -134.17838205872928
+            ],
+            "norm_px": 152.63837372057955
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              608.633544921875,
+              393.17454528808594
+            ],
+            "residual_px": [
+              168.34933492878622,
+              135.2506030500423
+            ],
+            "norm_px": 215.9495871641452
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              594.4866943359375,
+              392.35357666015625
+            ],
+            "residual_px": [
+              168.41126604200304,
+              140.14638228102126
+            ],
+            "norm_px": 219.09669782159767
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              142.71359252929688,
+              344.2411804199219
+            ],
+            "residual_px": [
+              80.5355057441794,
+              -143.40487152466122
+            ],
+            "norm_px": 164.47165367465405
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              135.30682373046875,
+              342.8456115722656
+            ],
+            "residual_px": [
+              73.13000849561735,
+              -134.4941281165334
+            ],
+            "norm_px": 153.090393690772
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              562.590087890625,
+              404.72410583496094
+            ],
+            "residual_px": [
+              164.73634875954667,
+              132.79253617991674
+            ],
+            "norm_px": 211.59376708145606
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              550.9231567382812,
+              403.665771484375
+            ],
+            "residual_px": [
+              164.50132926914455,
+              137.32403271867054
+            ],
+            "norm_px": 214.28620416030986
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              142.32388305664062,
+              344.50946044921875
+            ],
+            "residual_px": [
+              80.18287691532532,
+              -143.59193816547358
+            ],
+            "norm_px": 164.46257463792605
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              134.89004516601562,
+              343.0113220214844
+            ],
+            "residual_px": [
+              72.76767669653157,
+              -134.57575614893585
+            ],
+            "norm_px": 152.98944053387734
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              576.329833984375,
+              407.2499237060547
+            ],
+            "residual_px": [
+              173.970003022024,
+              133.80738855941217
+            ],
+            "norm_px": 219.47660281809664
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              563.8026123046875,
+              406.3135070800781
+            ],
+            "residual_px": [
+              174.95175376147643,
+              138.77367126086335
+            ],
+            "norm_px": 223.30751886005643
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              141.01507568359375,
+              345.04425048828125
+            ],
+            "residual_px": [
+              80.41683365941381,
+              -143.69789382785865
+            ],
+            "norm_px": 164.6692194260007
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              133.513671875,
+              343.5888977050781
+            ],
+            "residual_px": [
+              72.96659715501346,
+              -134.7375988136675
+            ],
+            "norm_px": 153.22644952636222
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              619.6690673828125,
+              405.40638732910156
+            ],
+            "residual_px": [
+              174.442315760592,
+              137.4935892408555
+            ],
+            "norm_px": 222.11395410971184
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              602.6844482421875,
+              404.0143737792969
+            ],
+            "residual_px": [
+              175.78054899459346,
+              142.96710532564794
+            ],
+            "norm_px": 226.57977537731733
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              140.35470581054688,
+              345.0115661621094
+            ],
+            "residual_px": [
+              80.770073077424,
+              -144.0087216609186
+            ],
+            "norm_px": 165.11304194201117
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              132.55045318603516,
+              343.4822692871094
+            ],
+            "residual_px": [
+              73.42613966435556,
+              -134.95195280841793
+            ],
+            "norm_px": 153.63407028655755
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              652.3819580078125,
+              435.8350067138672
+            ],
+            "residual_px": [
+              181.83055673464207,
+              157.05007483425118
+            ],
+            "norm_px": 240.26459865713423
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              634.440673828125,
+              434.5486755371094
+            ],
+            "residual_px": [
+              184.58621026053106,
+              163.3862186645697
+            ],
+            "norm_px": 246.5098891887536
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              140.55148315429688,
+              344.7497253417969
+            ],
+            "residual_px": [
+              80.50644577965338,
+              -143.9620010874907
+            ],
+            "norm_px": 164.94346173518653
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              132.66038513183594,
+              343.30950927734375
+            ],
+            "residual_px": [
+              73.26372380133574,
+              -134.98168255954215
+            ],
+            "norm_px": 153.58264176606485
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              658.1646728515625,
+              491.6484832763672
+            ],
+            "residual_px": [
+              186.93076001550492,
+              170.39776201978452
+            ],
+            "norm_px": 252.93972867330552
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              640.3319091796875,
+              490.1578674316406
+            ],
+            "residual_px": [
+              188.61488372323572,
+              176.91649621353702
+            ],
+            "norm_px": 258.602051411825
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              139.94284057617188,
+              345.1713562011719
+            ],
+            "residual_px": [
+              81.16656743271886,
+              -144.45429344996168
+            ],
+            "norm_px": 165.6956685159203
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              132.24134063720703,
+              343.65087890625
+            ],
+            "residual_px": [
+              73.73610975667503,
+              -135.39027943162543
+            ],
+            "norm_px": 154.16725218613078
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              691.545166015625,
+              508.4176788330078
+            ],
+            "residual_px": [
+              201.41981149852927,
+              173.5610521662445
+            ],
+            "norm_px": 265.8822658492982
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              671.2387084960938,
+              507.30419921875
+            ],
+            "residual_px": [
+              202.52834398908715,
+              180.2595846586504
+            ],
+            "norm_px": 271.12957784105953
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              140.78382873535156,
+              345.3768005371094
+            ],
+            "residual_px": [
+              81.49901062290093,
+              -144.02431471682428
+            ],
+            "norm_px": 165.48441607040394
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              132.99609375,
+              343.8880310058594
+            ],
+            "residual_px": [
+              74.12868872481624,
+              -135.03881504951875
+            ],
+            "norm_px": 154.047213743186
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              723.239013671875,
+              484.31285095214844
+            ],
+            "residual_px": [
+              217.0521553889157,
+              162.58141989845615
+            ],
+            "norm_px": 271.19062715214204
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              700.0214233398438,
+              483.8124084472656
+            ],
+            "residual_px": [
+              214.3548705206357,
+              168.20741072595956
+            ],
+            "norm_px": 272.47338134036164
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              141.26419067382812,
+              345.25848388671875
+            ],
+            "residual_px": [
+              81.4615833882041,
+              -143.6734437562006
+            ],
+            "norm_px": 165.16067331201901
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              133.48355102539062,
+              343.7752380371094
+            ],
+            "residual_px": [
+              74.0918782347066,
+              -134.71070513559056
+            ],
+            "norm_px": 153.7419282384432
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              757.9447021484375,
+              400.3060760498047
+            ],
+            "residual_px": [
+              244.897250650552,
+              162.51191952113766
+            ],
+            "norm_px": 293.9128907731745
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              723.8366088867188,
+              399.0503845214844
+            ],
+            "residual_px": [
+              243.20219682913955,
+              167.80853532289757
+            ],
+            "norm_px": 295.4776016379849
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              141.3551483154297,
+              345.2762756347656
+            ],
+            "residual_px": [
+              81.41967083183201,
+              -143.57408198094626
+            ],
+            "norm_px": 165.0535665020158
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              133.56085205078125,
+              343.79608154296875
+            ],
+            "residual_px": [
+              74.0685310796504,
+              -134.62138814599084
+            ],
+            "norm_px": 153.6524176270932
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              832.771728515625,
+              336.2666778564453
+            ],
+            "residual_px": [
+              268.0021159923381,
+              176.8699714803513
+            ],
+            "norm_px": 321.10453280486547
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              789.2776489257812,
+              335.8637390136719
+            ],
+            "residual_px": [
+              272.7699740908499,
+              181.80354669228132
+            ],
+            "norm_px": 327.80480221530536
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              141.33465576171875,
+              345.8507995605469
+            ],
+            "residual_px": [
+              81.10979627627682,
+              -143.6461510906577
+            ],
+            "norm_px": 164.9636801697246
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              133.52053833007812,
+              344.419677734375
+            ],
+            "residual_px": [
+              73.7942291757521,
+              -134.7673266481383
+            ],
+            "norm_px": 153.64836670635137
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 502,
+            "heldout": false,
+            "observed_px": [
+              142.29080200195312,
+              345.8642578125
+            ],
+            "residual_px": [
+              81.50114760697102,
+              -143.41968624187137
+            ],
+            "norm_px": 164.9595206799841
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 502,
+            "heldout": false,
+            "observed_px": [
+              134.48406982421875,
+              344.4512939453125
+            ],
+            "residual_px": [
+              74.1290344030939,
+              -134.58514526194858
+            ],
+            "norm_px": 153.64984564494324
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 516,
+            "heldout": false,
+            "observed_px": [
+              145.87588500976562,
+              346.8204650878906
+            ],
+            "residual_px": [
+              81.76565747773364,
+              -143.28473787846502
+            ],
+            "norm_px": 164.973145850064
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 516,
+            "heldout": false,
+            "observed_px": [
+              138.0697021484375,
+              345.3927001953125
+            ],
+            "residual_px": [
+              74.29574760504502,
+              -134.53186038910619
+            ],
+            "norm_px": 153.68369976008032
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 530,
+            "heldout": true,
+            "observed_px": [
+              145.51316833496094,
+              347.0186767578125
+            ],
+            "residual_px": [
+              81.44281670132793,
+              -143.31510075927858
+            ],
+            "norm_px": 164.8397721967859
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 530,
+            "heldout": true,
+            "observed_px": [
+              137.6629638671875,
+              345.55914306640625
+            ],
+            "residual_px": [
+              74.04981145250372,
+              -134.53329807004224
+            ],
+            "norm_px": 153.56621655088784
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 544,
+            "heldout": false,
+            "observed_px": [
+              144.41043090820312,
+              345.5284729003906
+            ],
+            "residual_px": [
+              80.84061458033429,
+              -144.4630649810174
+            ],
+            "norm_px": 165.54389783207296
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 544,
+            "heldout": false,
+            "observed_px": [
+              136.5812530517578,
+              344.1578369140625
+            ],
+            "residual_px": [
+              73.38332562652604,
+              -135.608414306428
+            ],
+            "norm_px": 154.1906433954816
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 558,
+            "heldout": false,
+            "observed_px": [
+              143.80853271484375,
+              344.7547302246094
+            ],
+            "residual_px": [
+              80.91059864323236,
+              -145.22632900734348
+            ],
+            "norm_px": 166.24443331960143
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 558,
+            "heldout": false,
+            "observed_px": [
+              135.788818359375,
+              343.3829040527344
+            ],
+            "residual_px": [
+              73.57146731542304,
+              -136.28009944943628
+            ],
+            "norm_px": 154.87099892779347
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 573,
+            "heldout": false,
+            "observed_px": [
+              143.8428192138672,
+              344.3064270019531
+            ],
+            "residual_px": [
+              81.42412555968173,
+              -145.0113900452725
+            ],
+            "norm_px": 166.30752077407976
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 573,
+            "heldout": false,
+            "observed_px": [
+              135.8816375732422,
+              343.1695861816406
+            ],
+            "residual_px": [
+              73.9422636974754,
+              -136.29245418027892
+            ],
+            "norm_px": 155.0583484601536
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6251456943840594,
+              -3.0919322388379555
+            ],
+            "norm_px": 3.4930135266758615
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              224.5
+            ],
+            "residual_px": [
+              -1.6242677729625825,
+              -2.599717573608501
+            ],
+            "norm_px": 3.0654163274853383
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6260236887523547,
+              -3.0841399002966625
+            ],
+            "norm_px": 3.4865272064026294
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.630855793996659,
+              -3.0411606753270632
+            ],
+            "norm_px": 3.450847558784397
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6290943973638718,
+              -3.056805955853463
+            ],
+            "norm_px": 3.4638145457376264
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              224.5
+            ],
+            "residual_px": [
+              -1.6290942007325384,
+              -2.5568055650922474
+            ],
+            "norm_px": 3.031699624393399
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6282143271102996,
+              -3.064619137578319
+            ],
+            "norm_px": 3.4702985971553693
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6282775304441657,
+              -3.0640353689021254
+            ],
+            "norm_px": 3.469812741061473
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6269779994709666,
+              -3.075539928127739
+            ],
+            "norm_px": 3.4793682271743713
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.626512465848009,
+              -3.0796443433055174
+            ],
+            "norm_px": 3.4827793617759712
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6281146525211057,
+              -3.065430714117838
+            ],
+            "norm_px": 3.470968565805648
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6282082628486023,
+              -3.0646071118576685
+            ],
+            "norm_px": 3.4702851319822505
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6283058704193536,
+              -3.0637304130780763
+            ],
+            "norm_px": 3.4695567514686494
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6255726080703994,
+              -3.0880128375426636
+            ],
+            "norm_px": 3.489743484690113
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6251337460630566,
+              -3.091908367058835
+            ],
+            "norm_px": 3.492986836917851
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6287489129340997,
+              -3.0598111248235966
+            ],
+            "norm_px": 3.466304536675659
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.627769775105378,
+              -3.068514085765969
+            ],
+            "norm_px": 3.473530356178102
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6268915051941804,
+              -3.0763201246417395
+            ],
+            "norm_px": 3.480017453828178
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.626014401892519,
+              -3.0841213470385753
+            ],
+            "norm_px": 3.4865064632696328
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6251366947505517,
+              -3.091914233333796
+            ],
+            "norm_px": 3.492993401499187
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.625136891084594,
+              -3.0919146245078934
+            ],
+            "norm_px": 3.492993839102767
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6264545229909118,
+              -3.08022474730339
+            ],
+            "norm_px": 3.4832655381491993
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.626892686452436,
+              -3.0763224696902967
+            ],
+            "norm_px": 3.4800200790733706
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6260836176249995,
+              -3.083502908234692
+            ],
+            "norm_px": 3.485991697723936
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6230446244924792,
+              -3.110480864666499
+            ],
+            "norm_px": 3.5084704733758816
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6204174714261512,
+              -3.133763282577803
+            ],
+            "norm_px": 3.5279207889259543
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6190034093204417,
+              -3.1462856468579616
+            ],
+            "norm_px": 3.538401533322022
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6203171852803848,
+              -3.1346631358355523
+            ],
+            "norm_px": 3.528674079038942
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6195403066399763,
+              -3.141578580405934
+            ],
+            "norm_px": 3.5344627288594896
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.619007645373415,
+              -3.146294197183863
+            ],
+            "norm_px": 3.538411074339783
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6190061323405303,
+              -3.1462911391961086
+            ],
+            "norm_px": 3.538407662938259
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6207564061247695,
+              -3.130787991686134
+            ],
+            "norm_px": 3.5254339841898292
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.621632647099318,
+              -3.1230279050575405
+            ],
+            "norm_px": 3.5189481010532724
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6216322119150277,
+              -3.1230270302997667
+            ],
+            "norm_px": 3.518947124169871
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6216316267233992,
+              -3.1230258545864444
+            ],
+            "norm_px": 3.5189458110640137
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 502,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.622505857896499,
+              -3.1152545891699503
+            ],
+            "norm_px": 3.5124544714847037
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 516,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6277003067851297,
+              -3.0691348932289486
+            ],
+            "norm_px": 3.4740462405592525
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 530,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6264534195531724,
+              -3.0802225530365206
+            ],
+            "norm_px": 3.4832630825435835
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 544,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6238265771724514,
+              -3.103603066160332
+            ],
+            "norm_px": 3.5027367507438254
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 558,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.6225156818859432,
+              -3.115274345584396
+            ],
+            "norm_px": 3.512476531768162
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 573,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -1.622516299778681,
+              -3.11527559440043
+            ],
+            "norm_px": 3.5124779247867814
+          }
+        ]
+      },
+      "after": {
+        "cap": {
+          "left": {
+            "fit": {
+              "count": 57,
+              "rms_px": 4.803477724765091,
+              "median_px": 1.199311509153514
+            },
+            "heldout": {
+              "count": 19,
+              "rms_px": 3.9014979635947853,
+              "median_px": 1.2589575562975786
+            }
+          },
+          "right": {
+            "fit": {
+              "count": 57,
+              "rms_px": 5.008915662701411,
+              "median_px": 1.379599174183686
+            },
+            "heldout": {
+              "count": 19,
+              "rms_px": 5.073031838829112,
+              "median_px": 1.0793501413051998
+            }
+          },
+          "psm1": {
+            "fit": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            },
+            "heldout": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            }
+          },
+          "psm2": {
+            "fit": {
+              "count": 31,
+              "rms_px": 0.09147688990942017,
+              "median_px": 0.01903740476194502
+            },
+            "heldout": {
+              "count": 10,
+              "rms_px": 0.16772230960152126,
+              "median_px": 0.010372506975310052
+            }
+          }
+        },
+        "groove": {
+          "left": {
+            "fit": {
+              "count": 1763,
+              "rms_px": 17.628701637202674,
+              "median_px": 9.9813045678391
+            },
+            "heldout": {
+              "count": 650,
+              "rms_px": 20.99828606369995,
+              "median_px": 11.799218099383573
+            }
+          },
+          "right": {
+            "fit": {
+              "count": 1590,
+              "rms_px": 18.0632266219768,
+              "median_px": 11.264718577098098
+            },
+            "heldout": {
+              "count": 568,
+              "rms_px": 18.597691482801462,
+              "median_px": 12.809968054071824
+            }
+          },
+          "psm1": {
+            "fit": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            },
+            "heldout": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            }
+          },
+          "psm2": {
+            "fit": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            },
+            "heldout": {
+              "count": 0,
+              "rms_px": null,
+              "median_px": null
+            }
+          }
+        },
+        "cap_residuals": [
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              599.0,
+              257.0
+            ],
+            "residual_px": [
+              0.9125313938245654,
+              -2.5251158787498866
+            ],
+            "norm_px": 2.6849438999409685
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              582.0,
+              258.0
+            ],
+            "residual_px": [
+              5.035476525712738,
+              -0.013039835757126639
+            ],
+            "norm_px": 5.035493409619419
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              150.0,
+              335.0
+            ],
+            "residual_px": [
+              0.06990182102921949,
+              0.8584359074324652
+            ],
+            "norm_px": 0.8612772328075328
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              143.0,
+              334.0
+            ],
+            "residual_px": [
+              -0.33430003145784326,
+              1.0631975241424811
+            ],
+            "norm_px": 1.114515808041957
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              600.3214721679688,
+              261.4675750732422
+            ],
+            "residual_px": [
+              -1.1568535690493036,
+              -1.718698910631531
+            ],
+            "norm_px": 2.0717712532101906
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              580.6060180664062,
+              263.0642852783203
+            ],
+            "residual_px": [
+              4.3270407227721535,
+              0.12714237720462052
+            ],
+            "norm_px": 4.328908245806303
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              149.74090576171875,
+              335.27606201171875
+            ],
+            "residual_px": [
+              -0.5737892533725244,
+              0.5624562503358561
+            ],
+            "norm_px": 0.8034868641288856
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              142.6978759765625,
+              334.33026123046875
+            ],
+            "residual_px": [
+              -0.9499412704617498,
+              0.6970570663877425
+            ],
+            "norm_px": 1.178251658656829
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              619.70458984375,
+              243.10757446289062
+            ],
+            "residual_px": [
+              -1.8939717999044205,
+              1.657671329430059
+            ],
+            "norm_px": 2.516943268182183
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              595.1848754882812,
+              243.78102111816406
+            ],
+            "residual_px": [
+              2.07558600946993,
+              4.231478446575778
+            ],
+            "norm_px": 4.713116498299471
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              149.70700073242188,
+              335.6333923339844
+            ],
+            "residual_px": [
+              -0.4334784786355499,
+              0.34097656645235475
+            ],
+            "norm_px": 0.5515148323570528
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              142.46795654296875,
+              334.5095520019531
+            ],
+            "residual_px": [
+              -0.6671026960827362,
+              0.6389665476569348
+            ],
+            "norm_px": 0.9237446920797312
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              616.4815673828125,
+              219.2030792236328
+            ],
+            "residual_px": [
+              -0.2000443402447445,
+              2.1972803924457764
+            ],
+            "norm_px": 2.206367798235512
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              593.6593627929688,
+              219.91639709472656
+            ],
+            "residual_px": [
+              1.6665685199263862,
+              4.8897550591687775
+            ],
+            "norm_px": 5.165961204875263
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              153.60601806640625,
+              337.4161376953125
+            ],
+            "residual_px": [
+              1.1626974611342575,
+              0.5597048162918554
+            ],
+            "norm_px": 1.2904010490961126
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              146.35009765625,
+              336.0569152832031
+            ],
+            "residual_px": [
+              0.620399332226242,
+              1.0041428114033124
+            ],
+            "norm_px": 1.1803381367725585
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              577.6597900390625,
+              223.5097198486328
+            ],
+            "residual_px": [
+              -1.7135448905200974,
+              3.2842298317092684
+            ],
+            "norm_px": 3.7043760175388005
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              553.2155151367188,
+              224.59307861328125
+            ],
+            "residual_px": [
+              3.7734489018238264,
+              5.907135272997209
+            ],
+            "norm_px": 7.009505242751677
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              153.99346923828125,
+              337.6092834472656
+            ],
+            "residual_px": [
+              0.7845033515677642,
+              0.601596370400955
+            ],
+            "norm_px": 0.9886170651473998
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              146.69125366210938,
+              336.4582824707031
+            ],
+            "residual_px": [
+              0.3307878978004908,
+              0.8266968681091953
+            ],
+            "norm_px": 0.8904203193283609
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              580.1184692382812,
+              218.5540008544922
+            ],
+            "residual_px": [
+              -1.0576864109052622,
+              2.120853530814088
+            ],
+            "norm_px": 2.36996207627469
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              556.6251831054688,
+              219.68321228027344
+            ],
+            "residual_px": [
+              4.336613800163832,
+              4.738434582245475
+            ],
+            "norm_px": 6.423315463371797
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              153.1071014404297,
+              337.48614501953125
+            ],
+            "residual_px": [
+              0.7470347305683731,
+              1.0133672778827076
+            ],
+            "norm_px": 1.2589575562975786
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              145.9892578125,
+              336.4993591308594
+            ],
+            "residual_px": [
+              0.23417039808978757,
+              1.0536417570474441
+            ],
+            "norm_px": 1.0793501413051998
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              583.5411987304688,
+              215.79478454589844
+            ],
+            "residual_px": [
+              -0.052181278482407834,
+              1.0898027810612518
+            ],
+            "norm_px": 1.0910513220893403
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              562.6921997070312,
+              217.13507080078125
+            ],
+            "residual_px": [
+              4.918337669602579,
+              3.50445980487504
+            ],
+            "norm_px": 6.039145962486462
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              152.6230926513672,
+              337.9478759765625
+            ],
+            "residual_px": [
+              0.37411252335073186,
+              1.206767545964908
+            ],
+            "norm_px": 1.2634271210172823
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              145.4167022705078,
+              336.98760986328125
+            ],
+            "residual_px": [
+              0.003597689802319337,
+              1.1657621854751028
+            ],
+            "norm_px": 1.165767736925157
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              583.7129516601562,
+              219.55409240722656
+            ],
+            "residual_px": [
+              0.5705343860425955,
+              -0.27221120898059326
+            ],
+            "norm_px": 0.6321458913507844
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              564.468505859375,
+              221.14186096191406
+            ],
+            "residual_px": [
+              5.611491279429401,
+              1.8880539999405812
+            ],
+            "norm_px": 5.92060658090063
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              151.03309631347656,
+              339.6977233886719
+            ],
+            "residual_px": [
+              -0.30308026135031696,
+              1.029760617840111
+            ],
+            "norm_px": 1.073435873666715
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              143.87295532226562,
+              338.5994873046875
+            ],
+            "residual_px": [
+              -0.6540280133685883,
+              0.98231641772594
+            ],
+            "norm_px": 1.1801263435771552
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              581.8380737304688,
+              226.35414123535156
+            ],
+            "residual_px": [
+              1.5682597900866995,
+              -2.5712501103087106
+            ],
+            "norm_px": 3.011771222879543
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              563.5989990234375,
+              227.9687042236328
+            ],
+            "residual_px": [
+              6.899812211858148,
+              -0.4381449642551729
+            ],
+            "norm_px": 6.913709537477619
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              148.60581970214844,
+              341.7406921386719
+            ],
+            "residual_px": [
+              -0.26380127222807914,
+              0.6800568683829056
+            ],
+            "norm_px": 0.7294302265905339
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              141.42250061035156,
+              340.58465576171875
+            ],
+            "residual_px": [
+              -0.5006045529449068,
+              0.5367781042338038
+            ],
+            "norm_px": 0.7339861385707541
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              576.5946044921875,
+              245.0567626953125
+            ],
+            "residual_px": [
+              1.874170370646766,
+              -4.0538942791645525
+            ],
+            "norm_px": 4.466158685588021
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              560.115478515625,
+              246.60000610351562
+            ],
+            "residual_px": [
+              7.541499553145513,
+              -1.8521324463437452
+            ],
+            "norm_px": 7.765604297728107
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              147.70285034179688,
+              342.65838623046875
+            ],
+            "residual_px": [
+              -0.40879673064702615,
+              0.7559444014223686
+            ],
+            "norm_px": 0.8593990371355558
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              140.570068359375,
+              341.37579345703125
+            ],
+            "residual_px": [
+              -0.6460428699504348,
+              0.6544542740679162
+            ],
+            "norm_px": 0.9196095838232426
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              581.6145629882812,
+              258.3840026855469
+            ],
+            "residual_px": [
+              3.3462998202429617,
+              -2.779356238776842
+            ],
+            "norm_px": 4.350005010225371
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              567.551513671875,
+              260.0700988769531
+            ],
+            "residual_px": [
+              8.091410217702219,
+              -0.7684020005067964
+            ],
+            "norm_px": 8.127814032414786
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              147.4951171875,
+              343.9026184082031
+            ],
+            "residual_px": [
+              -0.16688817867137118,
+              0.21589381114216621
+            ],
+            "norm_px": 0.27287689874692
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              139.98892211914062,
+              342.53472900390625
+            ],
+            "residual_px": [
+              -0.2875381666361818,
+              0.1148493543182667
+            ],
+            "norm_px": 0.30962650316117873
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              604.112060546875,
+              242.892578125
+            ],
+            "residual_px": [
+              1.5338749042431346,
+              -3.3423564069250062
+            ],
+            "norm_px": 3.6775152715902517
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              588.1697998046875,
+              244.33001708984375
+            ],
+            "residual_px": [
+              5.497348155354871,
+              -1.22742691206696
+            ],
+            "norm_px": 5.6327092562682335
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              147.23805236816406,
+              344.0775451660156
+            ],
+            "residual_px": [
+              0.04463757259355816,
+              0.19312559650506955
+            ],
+            "norm_px": 0.19821707522936594
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              139.7766571044922,
+              342.6588134765625
+            ],
+            "residual_px": [
+              -0.1190498279775909,
+              0.13122815373907315
+            ],
+            "norm_px": 0.17718264552506208
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              608.1268920898438,
+              241.22047424316406
+            ],
+            "residual_px": [
+              0.44413747966405026,
+              -2.1181311801135507
+            ],
+            "norm_px": 2.164194491493673
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              592.1390991210938,
+              242.1850128173828
+            ],
+            "residual_px": [
+              3.9548410270903105,
+              0.44070130271148855
+            ],
+            "norm_px": 3.979319689063489
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              147.0384521484375,
+              344.81427001953125
+            ],
+            "residual_px": [
+              -0.14329943651566168,
+              0.32481985884015785
+            ],
+            "norm_px": 0.3550248853286854
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              139.47344970703125,
+              343.36572265625
+            ],
+            "residual_px": [
+              -0.18253923263827687,
+              0.22492163006370447
+            ],
+            "norm_px": 0.28967276558676497
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              615.6871337890625,
+              234.0073699951172
+            ],
+            "residual_px": [
+              -2.377972785214183,
+              -2.0331304482411667
+            ],
+            "norm_px": 3.12863772060375
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              598.6849365234375,
+              236.16253662109375
+            ],
+            "residual_px": [
+              2.120734834201585,
+              -0.6857583452699885
+            ],
+            "norm_px": 2.228851889449691
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              144.3771209716797,
+              344.5519104003906
+            ],
+            "residual_px": [
+              -0.5816186340616412,
+              0.2978376778868892
+            ],
+            "norm_px": 0.6534428191179268
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              136.79403686523438,
+              342.9744567871094
+            ],
+            "residual_px": [
+              -0.414132698452363,
+              0.31390356055271695
+            ],
+            "norm_px": 0.5196550175405882
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              630.5200805664062,
+              209.43260192871094
+            ],
+            "residual_px": [
+              -5.075805436043424,
+              -6.241995233322257
+            ],
+            "norm_px": 8.045266019056532
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              615.363525390625,
+              208.04794311523438
+            ],
+            "residual_px": [
+              -2.5706036151805165,
+              -1.4654375311032481
+            ],
+            "norm_px": 2.9589711225263966
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              144.41978454589844,
+              344.1895446777344
+            ],
+            "residual_px": [
+              -0.4571922948227325,
+              0.3785791683470734
+            ],
+            "norm_px": 0.5935882252467936
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              137.0614776611328,
+              343.0396728515625
+            ],
+            "residual_px": [
+              -0.5314587912612296,
+              -0.01138109331054693
+            ],
+            "norm_px": 0.5315806393142912
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              655.171875,
+              188.2232208251953
+            ],
+            "residual_px": [
+              -4.6240996587147265,
+              -7.823429263315319
+            ],
+            "norm_px": 9.087812888248973
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              639.8214111328125,
+              187.74905395507812
+            ],
+            "residual_px": [
+              -2.2139656364677194,
+              -4.317956075602922
+            ],
+            "norm_px": 4.85246210807422
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              146.66407775878906,
+              344.457275390625
+            ],
+            "residual_px": [
+              0.8505513099214284,
+              0.1988396296077326
+            ],
+            "norm_px": 0.873484246630469
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              138.97093200683594,
+              342.924560546875
+            ],
+            "residual_px": [
+              0.7893134703881799,
+              0.2098881500543257
+            ],
+            "norm_px": 0.8167427930930639
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              658.6544189453125,
+              182.81201171875
+            ],
+            "residual_px": [
+              -5.038570050229055,
+              -6.294216558699674
+            ],
+            "norm_px": 8.062527534146744
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              644.7097778320312,
+              182.29441833496094
+            ],
+            "residual_px": [
+              -2.67382449672607,
+              -2.8342031053811354
+            ],
+            "norm_px": 3.896414336520757
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              147.19996643066406,
+              344.8377685546875
+            ],
+            "residual_px": [
+              0.879393407738803,
+              0.334536733302798
+            ],
+            "norm_px": 0.9408759703081869
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              139.56236267089844,
+              343.5229797363281
+            ],
+            "residual_px": [
+              0.7781742065670585,
+              0.10297730548296613
+            ],
+            "norm_px": 0.7849582289592251
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              660.596923828125,
+              182.5173797607422
+            ],
+            "residual_px": [
+              -7.044578902899957,
+              -5.925318412460882
+            ],
+            "norm_px": 9.205188222314149
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              646.4710693359375,
+              181.79837036132812
+            ],
+            "residual_px": [
+              -3.2081184942762775,
+              -2.289762912006637
+            ],
+            "norm_px": 3.9414513147467143
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              147.28463745117188,
+              345.0462646484375
+            ],
+            "residual_px": [
+              0.7522583658033568,
+              0.21180832297631014
+            ],
+            "norm_px": 0.7815084226053958
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              139.49642944335938,
+              343.53253173828125
+            ],
+            "residual_px": [
+              0.8032278026654467,
+              0.17235277896043044
+            ],
+            "norm_px": 0.8215110366818846
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              652.3806762695312,
+              200.818603515625
+            ],
+            "residual_px": [
+              -5.88602745290973,
+              -2.19502568294115
+            ],
+            "norm_px": 6.28199466134589
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              640.9004516601562,
+              199.78759765625
+            ],
+            "residual_px": [
+              -2.71690967919551,
+              1.9663313233635904
+            ],
+            "norm_px": 3.3538123200541583
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              147.2870635986328,
+              344.94879150390625
+            ],
+            "residual_px": [
+              0.305475616567378,
+              0.3509660595486821
+            ],
+            "norm_px": 0.46528757480976085
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              139.60841369628906,
+              343.4912109375
+            ],
+            "residual_px": [
+              0.2885413289663745,
+              0.24943074544501087
+            ],
+            "norm_px": 0.3814076497593295
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              624.1859130859375,
+              231.79052734375
+            ],
+            "residual_px": [
+              -7.83114971688542,
+              4.1917701702146815
+            ],
+            "norm_px": 8.882445780761975
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              611.5228881835938,
+              230.84803771972656
+            ],
+            "residual_px": [
+              -4.4567783301603185,
+              8.674080906395972
+            ],
+            "norm_px": 9.752053765996667
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              146.6251983642578,
+              344.7125549316406
+            ],
+            "residual_px": [
+              0.06860454131034999,
+              0.09367726506735607
+            ],
+            "norm_px": 0.11611207120236555
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              139.11070251464844,
+              343.2765197753906
+            ],
+            "residual_px": [
+              -0.05723653432337983,
+              -0.003206147486878308
+            ],
+            "norm_px": 0.05732626137346699
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              575.7952270507812,
+              284.8144989013672
+            ],
+            "residual_px": [
+              -2.7712762768226185,
+              9.216230019647355
+            ],
+            "norm_px": 9.623869698698591
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              566.4202880859375,
+              284.2471618652344
+            ],
+            "residual_px": [
+              1.1389525902699233,
+              13.549993458154347
+            ],
+            "norm_px": 13.597776866786283
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              146.5755615234375,
+              344.822509765625
+            ],
+            "residual_px": [
+              -0.2517246175138723,
+              -0.10204104293694627
+            ],
+            "norm_px": 0.2716204291031237
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              139.0233612060547,
+              343.2901611328125
+            ],
+            "residual_px": [
+              -0.3445397374647996,
+              -0.10406697073221949
+            ],
+            "norm_px": 0.35991327440050563
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              568.5202026367188,
+              302.0410919189453
+            ],
+            "residual_px": [
+              -1.9385427406862163,
+              7.61603207870786
+            ],
+            "norm_px": 7.858873493152463
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              559.731201171875,
+              301.31976318359375
+            ],
+            "residual_px": [
+              1.9149131872121643,
+              12.062038727708625
+            ],
+            "norm_px": 12.213094234603357
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              146.8495635986328,
+              344.9833679199219
+            ],
+            "residual_px": [
+              0.07271340939573179,
+              -0.15756708115077345
+            ],
+            "norm_px": 0.1735356590684627
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              139.15443420410156,
+              343.5164794921875
+            ],
+            "residual_px": [
+              0.03133884560989486,
+              -0.23362714468430568
+            ],
+            "norm_px": 0.23571967668716653
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              571.3444213867188,
+              301.8910675048828
+            ],
+            "residual_px": [
+              -2.044066119704894,
+              3.172976011160415
+            ],
+            "norm_px": 3.7743851246428046
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              562.8955688476562,
+              301.2291564941406
+            ],
+            "residual_px": [
+              1.377823608863423,
+              7.579582813440368
+            ],
+            "norm_px": 7.7037960462970485
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              147.18173217773438,
+              345.29644775390625
+            ],
+            "residual_px": [
+              0.061686907380192224,
+              -0.09072075906118471
+            ],
+            "norm_px": 0.10970656619715131
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              139.36097717285156,
+              343.78631591796875
+            ],
+            "residual_px": [
+              0.08300285400235907,
+              -0.15360426160566476
+            ],
+            "norm_px": 0.1745959419802145
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              633.489013671875,
+              293.9120330810547
+            ],
+            "residual_px": [
+              -0.5788543824362478,
+              -10.460605178367018
+            ],
+            "norm_px": 10.476608854669745
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              625.2500610351562,
+              292.8883056640625
+            ],
+            "residual_px": [
+              3.5251692873617912,
+              -5.673763314859627
+            ],
+            "norm_px": 6.679701240145831
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              146.388916015625,
+              345.5935974121094
+            ],
+            "residual_px": [
+              -0.04631955456977721,
+              0.2817289390973201
+            ],
+            "norm_px": 0.2855112891996463
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              138.62396240234375,
+              344.18328857421875
+            ],
+            "residual_px": [
+              -0.019078881303897788,
+              0.06108243980276029
+            ],
+            "norm_px": 0.06399271961767257
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              689.6009521484375,
+              334.4001007080078
+            ],
+            "residual_px": [
+              -1.8032443322191511,
+              -11.412477679381311
+            ],
+            "norm_px": 11.554061489539388
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              678.45947265625,
+              333.85430908203125
+            ],
+            "residual_px": [
+              1.3629056261245296,
+              -7.215167687538951
+            ],
+            "norm_px": 7.342762184970181
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              144.56527709960938,
+              344.8271789550781
+            ],
+            "residual_px": [
+              -0.4923596916900692,
+              0.1360161509856539
+            ],
+            "norm_px": 0.5108017808603375
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              136.9722137451172,
+              343.3992919921875
+            ],
+            "residual_px": [
+              -0.4174197023750139,
+              -0.014332312010765236
+            ],
+            "norm_px": 0.41766568341009186
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              608.633544921875,
+              393.17454528808594
+            ],
+            "residual_px": [
+              -0.053539016503464154,
+              -5.010482945100421
+            ],
+            "norm_px": 5.010768979850333
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              594.4866943359375,
+              392.35357666015625
+            ],
+            "residual_px": [
+              2.458900445700806,
+              -1.4838311535093567
+            ],
+            "norm_px": 2.8719237966896913
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              142.71359252929688,
+              344.2411804199219
+            ],
+            "residual_px": [
+              -0.4204267412835918,
+              -0.3661194210151848
+            ],
+            "norm_px": 0.5574962557998344
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              135.30682373046875,
+              342.8456115722656
+            ],
+            "residual_px": [
+              -0.304308006278859,
+              -0.4724192257991717
+            ],
+            "norm_px": 0.5619459828044888
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              562.590087890625,
+              404.72410583496094
+            ],
+            "residual_px": [
+              -0.5539766970625806,
+              -3.4138417319265386
+            ],
+            "norm_px": 3.458497585879099
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              550.9231567382812,
+              403.665771484375
+            ],
+            "residual_px": [
+              2.641296329644888,
+              0.10482085402406938
+            ],
+            "norm_px": 2.643375439175051
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              142.32388305664062,
+              344.50946044921875
+            ],
+            "residual_px": [
+              -0.8707966386469081,
+              -0.3710999328208118
+            ],
+            "norm_px": 0.9465737932239435
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              134.89004516601562,
+              343.0113220214844
+            ],
+            "residual_px": [
+              -0.7323254253414007,
+              -0.41093079184031467
+            ],
+            "norm_px": 0.8397408197080641
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              576.329833984375,
+              407.2499237060547
+            ],
+            "residual_px": [
+              3.3668126807289127,
+              -1.8360328618508674
+            ],
+            "norm_px": 3.8348982120668205
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              563.8026123046875,
+              406.3135070800781
+            ],
+            "residual_px": [
+              7.286488384260792,
+              1.7058018664598649
+            ],
+            "norm_px": 7.4834933675112865
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              141.01507568359375,
+              345.04425048828125
+            ],
+            "residual_px": [
+              -0.6194537780769167,
+              -0.16652595192800845
+            ],
+            "norm_px": 0.641446705377224
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              133.513671875,
+              343.5888977050781
+            ],
+            "residual_px": [
+              -0.44458274049830493,
+              -0.3283327740369373
+            ],
+            "norm_px": 0.5526809420052167
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              619.6690673828125,
+              405.40638732910156
+            ],
+            "residual_px": [
+              -4.540736655369869,
+              -6.60489891834402
+            ],
+            "norm_px": 8.01517180695221
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              602.6844482421875,
+              404.0143737792969
+            ],
+            "residual_px": [
+              -0.4622245628983137,
+              -2.7094683670373456
+            ],
+            "norm_px": 2.7486124460393753
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              140.35470581054688,
+              345.0115661621094
+            ],
+            "residual_px": [
+              -0.6718306313705398,
+              -0.19260722352828452
+            ],
+            "norm_px": 0.6988947988095294
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              132.55045318603516,
+              343.4822692871094
+            ],
+            "residual_px": [
+              -0.36459486247369455,
+              -0.3131295519349919
+            ],
+            "norm_px": 0.48060329798829
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              652.3819580078125,
+              435.8350067138672
+            ],
+            "residual_px": [
+              -6.703098072522494,
+              4.002265909578739
+            ],
+            "norm_px": 7.807026077888487
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              634.440673828125,
+              434.5486755371094
+            ],
+            "residual_px": [
+              -2.627220301932198,
+              7.628163040941956
+            ],
+            "norm_px": 8.06790914017241
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              140.55148315429688,
+              344.7497253417969
+            ],
+            "residual_px": [
+              -0.9807656814870143,
+              -0.10996609415798275
+            ],
+            "norm_px": 0.9869112745566594
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              132.66038513183594,
+              343.30950927734375
+            ],
+            "residual_px": [
+              -0.5702804381521105,
+              -0.306227743623424
+            ],
+            "norm_px": 0.6472983926317573
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              658.1646728515625,
+              491.6484832763672
+            ],
+            "residual_px": [
+              -5.788441985805662,
+              11.813232173875633
+            ],
+            "norm_px": 13.155170657081124
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              640.3319091796875,
+              490.1578674316406
+            ],
+            "residual_px": [
+              -2.3650820612530197,
+              14.946337867421903
+            ],
+            "norm_px": 15.132304147207416
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              139.94284057617188,
+              345.1713562011719
+            ],
+            "residual_px": [
+              -0.28954668519895677,
+              -0.712216217138689
+            ],
+            "norm_px": 0.7688232715423279
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              132.24134063720703,
+              343.65087890625
+            ],
+            "residual_px": [
+              -0.0699617540696238,
+              -0.8133890023484014
+            ],
+            "norm_px": 0.8163922563166717
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              691.545166015625,
+              508.4176788330078
+            ],
+            "residual_px": [
+              -5.963791534331335,
+              11.200437946693796
+            ],
+            "norm_px": 12.689232430005388
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              671.2387084960938,
+              507.30419921875
+            ],
+            "residual_px": [
+              -3.6626454288863215,
+              13.749409392782695
+            ],
+            "norm_px": 14.228887173215018
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              140.78382873535156,
+              345.3768005371094
+            ],
+            "residual_px": [
+              0.029494185650861482,
+              -0.422875528990744
+            ],
+            "norm_px": 0.42390284264959704
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              132.99609375,
+              343.8880310058594
+            ],
+            "residual_px": [
+              0.2788855510919461,
+              -0.5775370747131205
+            ],
+            "norm_px": 0.6413471940190018
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              723.239013671875,
+              484.31285095214844
+            ],
+            "residual_px": [
+              -3.4538330378126147,
+              2.356290881768814
+            ],
+            "norm_px": 4.181036877688688
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              700.0214233398438,
+              483.8124084472656
+            ],
+            "residual_px": [
+              -4.277319287742898,
+              4.207770922619488
+            ],
+            "norm_px": 6.0000663685112245
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              141.26419067382812,
+              345.25848388671875
+            ],
+            "residual_px": [
+              0.17718942741922206,
+              -0.14077119309274622
+            ],
+            "norm_px": 0.22630205919060262
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              133.48355102539062,
+              343.7752380371094
+            ],
+            "residual_px": [
+              0.3965093073029493,
+              -0.30397562049552107
+            ],
+            "norm_px": 0.49962066473826094
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              757.9447021484375,
+              400.3060760498047
+            ],
+            "residual_px": [
+              4.365710946058243,
+              -3.719609993114659
+            ],
+            "norm_px": 5.735410235145451
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              723.8366088867188,
+              399.0503845214844
+            ],
+            "residual_px": [
+              4.09666081801663,
+              -1.192365062833744
+            ],
+            "norm_px": 4.26665727483931
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              141.3551483154297,
+              345.2762756347656
+            ],
+            "residual_px": [
+              0.15384478452776307,
+              -0.02576445781039638
+            ],
+            "norm_px": 0.1559872591356664
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              133.56085205078125,
+              343.79608154296875
+            ],
+            "residual_px": [
+              0.38905638841612245,
+              -0.20021816110414647
+            ],
+            "norm_px": 0.43755249445446276
+          },
+          {
+            "camera": "left",
+            "arm": "psm1",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              832.771728515625,
+              336.2666778564453
+            ],
+            "residual_px": [
+              0.9904534314479179,
+              8.272911981441666
+            ],
+            "norm_px": 8.331990797675429
+          },
+          {
+            "camera": "right",
+            "arm": "psm1",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              789.2776489257812,
+              335.8637390136719
+            ],
+            "residual_px": [
+              4.063010435586079,
+              10.04811112376467
+            ],
+            "norm_px": 10.838477335641048
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              141.33465576171875,
+              345.8507995605469
+            ],
+            "residual_px": [
+              -0.13698048047464795,
+              -0.024462844288848373
+            ],
+            "norm_px": 0.13914770131685916
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              133.52053833007812,
+              344.419677734375
+            ],
+            "residual_px": [
+              0.14102724031209846,
+              -0.2935344267852429
+            ],
+            "norm_px": 0.32565494348802304
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 502,
+            "heldout": false,
+            "observed_px": [
+              142.29080200195312,
+              345.8642578125
+            ],
+            "residual_px": [
+              0.27212348421377897,
+              -0.008524810926417103
+            ],
+            "norm_px": 0.2722569798223325
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 502,
+            "heldout": false,
+            "observed_px": [
+              134.48406982421875,
+              344.4512939453125
+            ],
+            "residual_px": [
+              0.45796896299401624,
+              -0.2827608823958485
+            ],
+            "norm_px": 0.5382279142511037
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 516,
+            "heldout": false,
+            "observed_px": [
+              145.87588500976562,
+              346.8204650878906
+            ],
+            "residual_px": [
+              0.909294156308647,
+              -0.3294307073549021
+            ],
+            "norm_px": 0.967130008657267
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 516,
+            "heldout": false,
+            "observed_px": [
+              138.0697021484375,
+              345.3927001953125
+            ],
+            "residual_px": [
+              0.8565010868538536,
+              -0.5855993617693684
+            ],
+            "norm_px": 1.0375551668641645
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 530,
+            "heldout": true,
+            "observed_px": [
+              145.51316833496094,
+              347.0186767578125
+            ],
+            "residual_px": [
+              0.6408859796844695,
+              -0.2320038164564835
+            ],
+            "norm_px": 0.6815868321839088
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 530,
+            "heldout": true,
+            "observed_px": [
+              137.6629638671875,
+              345.55914306640625
+            ],
+            "residual_px": [
+              0.6839897127492804,
+              -0.483310002960593
+            ],
+            "norm_px": 0.8375144691935845
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 544,
+            "heldout": false,
+            "observed_px": [
+              144.41043090820312,
+              345.5284729003906
+            ],
+            "residual_px": [
+              -0.2859375177627328,
+              -1.1647265052035891
+            ],
+            "norm_px": 1.199311509153514
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 544,
+            "heldout": false,
+            "observed_px": [
+              136.5812530517578,
+              344.1578369140625
+            ],
+            "residual_px": [
+              -0.2250742877718892,
+              -1.3611155154476364
+            ],
+            "norm_px": 1.379599174183686
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 558,
+            "heldout": false,
+            "observed_px": [
+              143.80853271484375,
+              344.7547302246094
+            ],
+            "residual_px": [
+              -0.56070678017565,
+              -1.687218674446342
+            ],
+            "norm_px": 1.7779479600751582
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 558,
+            "heldout": false,
+            "observed_px": [
+              135.788818359375,
+              343.3829040527344
+            ],
+            "residual_px": [
+              -0.34072231402262787,
+              -1.807979250415201
+            ],
+            "norm_px": 1.8398045182042702
+          },
+          {
+            "camera": "left",
+            "arm": "psm2",
+            "frame": 573,
+            "heldout": false,
+            "observed_px": [
+              143.8428192138672,
+              344.3064270019531
+            ],
+            "residual_px": [
+              -0.12518007302091405,
+              -1.657294060179538
+            ],
+            "norm_px": 1.6620149375345277
+          },
+          {
+            "camera": "right",
+            "arm": "psm2",
+            "frame": 573,
+            "heldout": false,
+            "observed_px": [
+              135.8816375732422,
+              343.1695861816406
+            ],
+            "residual_px": [
+              -0.047642303213166315,
+              -1.9845454377957026
+            ],
+            "norm_px": 1.9851172216600188
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 5,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0005488602726018144,
+              -0.015900684582646818
+            ],
+            "norm_px": 0.015910154549710155
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 19,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              224.5
+            ],
+            "residual_px": [
+              0.00039637563116912133,
+              0.4764388854459298
+            ],
+            "norm_px": 0.4764390503292114
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 33,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0014569654971978707,
+              -0.008536012720469444
+            ],
+            "norm_px": 0.008659460816011651
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 47,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.006696285514010469,
+              0.03405944905145475
+            ],
+            "norm_px": 0.03471147230201837
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 61,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.00482978604912887,
+              0.018902707863816204
+            ],
+            "norm_px": 0.019509976880179504
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 76,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              224.5
+            ],
+            "residual_px": [
+              -0.004800157336319444,
+              0.5186641747924341
+            ],
+            "norm_px": 0.5186863866765447
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 90,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0038528540624724883,
+              0.010975733461350501
+            ],
+            "norm_px": 0.011632334651363836
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 104,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.004222210804528004,
+              0.01399144345998593
+            ],
+            "norm_px": 0.014614634931186482
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 118,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.002901405360262288,
+              0.0033026635717305908
+            ],
+            "norm_px": 0.004396105063871313
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 132,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0023190235903030043,
+              -0.0013976890910498696
+            ],
+            "norm_px": 0.002707656774338588
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 147,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.003372428622071766,
+              0.007147621739989063
+            ],
+            "norm_px": 0.007903275988407158
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 161,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.003846929077212735,
+              0.010987484001248049
+            ],
+            "norm_px": 0.011641463310202315
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 175,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.00434565205847548,
+              0.015042771723642545
+            ],
+            "norm_px": 0.01565789490777582
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 189,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0010092339980474208,
+              -0.012043340122517066
+            ],
+            "norm_px": 0.012085553134608452
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 203,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0005368831065766244,
+              -0.015876751810509404
+            ],
+            "norm_px": 0.015885826749736414
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 218,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.004764362883008744,
+              0.01843159315927778
+            ],
+            "norm_px": 0.01903740476194502
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 232,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0033748032782341397,
+              0.007142922827966913
+            ],
+            "norm_px": 0.007900040739962722
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 246,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0024292375690606605,
+              -0.0005382505331965604
+            ],
+            "norm_px": 0.0024881536936897865
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 260,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0014848503691382575,
+              -0.008214630621210972
+            ],
+            "norm_px": 0.008347750407245474
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 274,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0005398388822754896,
+              -0.01588263307232296
+            ],
+            "norm_px": 0.01589180478513575
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 289,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0005400356889140312,
+              -0.015883025245983617
+            ],
+            "norm_px": 0.01589220341896786
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 303,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0019587866937058607,
+              -0.004380797402376402
+            ],
+            "norm_px": 0.004798773925921805
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 317,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.002430431028813018,
+              -0.0005406201609048367
+            ],
+            "norm_px": 0.0024898323526281597
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 331,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.0018567902585573393,
+              -0.005194080681633295
+            ],
+            "norm_px": 0.005515989865073143
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 345,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.0013160117994743814,
+              -0.03093752252581794
+            ],
+            "norm_px": 0.030965499949005316
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 360,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.00417925691289156,
+              -0.05412737031224424
+            ],
+            "norm_px": 0.054288473963289584
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 374,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.006064820904327917,
+              -0.06937935712196008
+            ],
+            "norm_px": 0.0696439318767834
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 388,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.004649997635169711,
+              -0.05794435907500883
+            ],
+            "norm_px": 0.05813063931026943
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 402,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.005117733896042864,
+              -0.061765623107532974
+            ],
+            "norm_px": 0.06197728130607632
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 416,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.006060728709996965,
+              -0.06938761743421651
+            ],
+            "norm_px": 0.06965180461189335
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 431,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.006062091270223391,
+              -0.06938486345515571
+            ],
+            "norm_px": 0.06964917965962787
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 445,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.004177096028058713,
+              -0.05413171594611299
+            ],
+            "norm_px": 0.05429264040823845
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 459,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.003233347098841932,
+              -0.046496924857450495
+            ],
+            "norm_px": 0.04660921104954457
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 473,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.0032339423312350846,
+              -0.04649572814781777
+            ],
+            "norm_px": 0.04660805851993331
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 487,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.003234528940765813,
+              -0.0464945494351241
+            ],
+            "norm_px": 0.04660692335526826
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 502,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.0023157367301678278,
+              -0.03903268309528585
+            ],
+            "norm_px": 0.03910131693716289
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 516,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.002997720781593216,
+              0.004080084556306929
+            ],
+            "norm_px": 0.005062945770103621
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 530,
+            "heldout": true,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              -0.001970925413900204,
+              -0.004266248578886689
+            ],
+            "norm_px": 0.0046995131581910035
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 544,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.0008432970838612164,
+              -0.02715598236594019
+            ],
+            "norm_px": 0.027169073010150778
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 558,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.0022835988082761105,
+              -0.03886706003345353
+            ],
+            "norm_px": 0.03893408762461553
+          },
+          {
+            "camera": "psm2",
+            "arm": "psm2",
+            "frame": 573,
+            "heldout": false,
+            "observed_px": [
+              330.0,
+              225.0
+            ],
+            "residual_px": [
+              0.0022826118836292153,
+              -0.038869054350840315
+            ],
+            "norm_px": 0.03893602063821961
+          }
+        ]
+      }
+    },
+    "limitations": [
+      "Conditional transfer of reference intrinsics, distortion, wrist roll/axial placement, fixture scale.",
+      "Color/scale grooves and template cap centers are heuristic image evidence, not ground truth.",
+      "A static CAD pad cannot reproduce tissue deformation; PSM2 uses retained LND surrogate CAD.",
+      "Wrist XY offsets are conditional on inherited optical roll and axial placement; a static cap cannot distinguish those freedoms.",
+      "A 5mm pad-height prior and a conservative wrist-head-above-slit-plane barrier prevent buried-tool depth degeneracy; neither is measured contact evidence.",
+      "Depth and metric accuracy remain unvalidated; inspect all four actual mesh overlays."
+    ]
+  },
+  "limitations": [
+    "Conditional transfer of reference intrinsics, distortion, wrist roll/axial placement, fixture scale.",
+    "Color/scale grooves and template cap centers are heuristic image evidence, not ground truth.",
+    "A static CAD pad cannot reproduce tissue deformation; PSM2 uses retained LND surrogate CAD.",
+    "Wrist XY offsets are conditional on inherited optical roll and axial placement; a static cap cannot distinguish those freedoms.",
+    "A 5mm pad-height prior and a conservative wrist-head-above-slit-plane barrier prevent buried-tool depth degeneracy; neither is measured contact evidence.",
+    "Depth and metric accuracy remain unvalidated; inspect all four actual mesh overlays."
+  ]
+}

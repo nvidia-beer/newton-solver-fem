@@ -3,10 +3,13 @@
 
 """Physical selected-region interaction checks on two adjoining small boxes."""
 
+import json
 import os
 import unittest
 from contextlib import contextmanager
 from itertools import permutations
+from pathlib import Path
+from tempfile import TemporaryDirectory
 from types import SimpleNamespace
 from unittest.mock import patch
 
@@ -64,13 +67,19 @@ def _selection(_path, region_ids):
 
 
 @contextmanager
-def _example(substeps=2, viewer_cls=ViewerNull):
-    args = phantom.Example.create_parser().parse_args(["--regions", "1", "--substeps", str(substeps)])
+def _example(substeps=2, viewer_cls=ViewerNull, numbering=None):
     with (
+        TemporaryDirectory() as directory,
         wp.ScopedDevice(os.environ.get("NEWTON_TEST_DEVICE", "cpu")),
         patch.object(phantom, "list_mesh_regions", return_value=_CATALOG),
         patch.object(phantom, "load_mesh_regions", side_effect=_selection),
     ):
+        asset = Path(directory) / "phantom_regions.usd"
+        if numbering is not None:
+            asset.with_name("suturebot_region_map.json").write_text(json.dumps({"regions": numbering}))
+        args = phantom.Example.create_parser().parse_args(
+            ["--asset", str(asset), "--regions", "1", "--substeps", str(substeps)]
+        )
         viewer = viewer_cls()
         try:
             yield phantom.Example(viewer, args)
@@ -79,6 +88,25 @@ def _example(substeps=2, viewer_cls=ViewerNull):
 
 
 class PhantomRegionsExampleTests(unittest.TestCase):
+    def test_one_numbering_selects_original_geometry_without_changing_membership(self):
+        numbering = [
+            {"id": 1, "source_region_id": 2, "name": "first_wound"},
+            {"id": 2, "source_region_id": 1, "name": "remaining_pad"},
+        ]
+        with _example(numbering=numbering) as example:
+            self.assertEqual(example.selected_region_ids, (1,))
+            self.assertEqual(example.selection.regions[0].name, "first_wound")
+            np.testing.assert_array_equal(example.reference.vertices, _POINTS)
+            np.testing.assert_array_equal(example.reference.indices, _TETS)
+            np.testing.assert_array_equal(example.selection.global_tetrahedron_indices, np.arange(6, 12))
+            self.assertTrue(np.all(example.selection.tetrahedron_region_ids == 1))
+            self.assertTrue(np.all(example.selection.vertices[:, 0] >= 0.01))
+            example.select_regions([2])
+            np.testing.assert_array_equal(example.selection.global_tetrahedron_indices, np.arange(6))
+            self.assertTrue(np.all(example.selection.tetrahedron_region_ids == 2))
+            for region in example.regions:
+                self.assertEqual(example.region_map.region_at(*example.region_map.centers[region.id]), region.id)
+
     def test_selection_compacts_physics_and_rejects_multiple_active_regions(self):
         with _example() as example:
             self.assertEqual(example.model.tet_count, 6)

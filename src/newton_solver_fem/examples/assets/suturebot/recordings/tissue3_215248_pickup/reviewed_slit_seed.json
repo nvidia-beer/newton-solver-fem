@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "source_episode": "tissue_3/1_needle_pickup/20250428-215248-974340",
+  "source_only": true,
+  "public_region": 1,
+  "source_video_sha256": {
+    "left": "fa7d9ad384dd45142fea3da05ce808b8c9f5535dc49b897f9ee32ea951c6ff19",
+    "right": "fabbe31ea94c3bdcfb9e4e1867bfe0f65a7b85d4b1d34f717b7c3ce230b13064"
+  },
+  "seeds": {
+    "left": {
+      "frame": 5,
+      "uv": [
+        480,
+        257
+      ],
+      "initial_radius_px": 13,
+      "source_frame_bgr_sha256": "d814887d6209406e7dcc853d519394016c6bae752026543e7d3d712e9daf67bd",
+      "reason": "Visible dark incision between the long upper lip and lower bank, below the outer upper pad ridge; chosen from the native source image before any fit."
+    },
+    "right": {
+      "frame": 5,
+      "uv": [
+        480,
+        262
+      ],
+      "initial_radius_px": 13,
+      "source_frame_bgr_sha256": "b80c24bfb2bf21c4bd0a0632a9ed85f91ad44f404adadeb8fc93bee9df8f9251",
+      "reason": "Visible dark incision between the long upper lip and lower bank, below the outer upper pad ridge; chosen from the native source image before any fit."
+    }
+  },
+  "limitations": [
+    "These independent image seeds identify the incision only; they are not insertion/exit labels or measured material points.",
+    "The source pickup task has no clicked-point labels or mask. No labels are copied from another recording."
+  ]
+}

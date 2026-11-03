@@ -1,0 +1,46 @@
+{
+  "environment_collision_policy": "single_rectangular_backing_only",
+  "environment_collision_count": 1,
+  "environment_collision_path": "/SutureBotNeedle/PadSupportProxy/RectangularBacking",
+  "backing_dimensions_m": [
+    0.13318735765534756,
+    0.1324805516189042,
+    0.004450611774539077
+  ],
+  "backing_world_transform": [
+    [
+      0.9998829781026586,
+      -0.013982670239650243,
+      0.006206048140917015,
+      -6.96605489358031e-06
+    ],
+    [
+      0.014060442527423143,
+      0.9998208694389858,
+      -0.01267016141189137,
+      0.0031945772790877335
+    ],
+    [
+      -0.0060277737591262325,
+      0.012755938508771113,
+      0.9999004710351272,
+      -0.013693717778756768
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "minimum_capsule_backing_gap_mm": 5.601809439962885,
+  "source_frame_range_inclusive": [
+    5,
+    141
+  ],
+  "validation_report": "audit/needle_joint/actual_geometry_validation.json",
+  "limitations": [
+    "Only the flat backing collides with the rigid needle; raised tissue permits penetration.",
+    "This clearance check does not validate needle insertion or exact scene alignment."
+  ]
+}

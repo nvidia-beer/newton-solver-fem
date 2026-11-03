@@ -3,13 +3,13 @@
   "device": "cuda:0",
   "arguments": [
     "--regions",
-    "7",
+    "4",
     "--test"
   ],
-  "minimum_jacobian": 0.939770415864271,
+  "minimum_jacobian": 0.924976833546312,
   "minimum_jacobian_by_selection": {
-    "7": 0.939770415864271,
-    "9": 0.9709095160532191
+    "4": 0.9647494965213059,
+    "6": 0.924976833546312
   },
   "every_frame_finite_positive_and_fixed_anchors_exact": true,
   "scenario": {
@@ -19,19 +19,19 @@
         "frame": 0,
         "action": "select_regions",
         "regions": [
-          7
+          4
         ],
         "tetrahedra": 11795
       },
       {
         "frame": 20,
         "action": "begin_right_drag",
-        "region": 7
+        "region": 4
       },
       {
         "frame": 91,
         "action": "release_to_hold",
-        "maximum_displacement_m": 0.0012883603661268804
+        "maximum_displacement_m": 0.0008109300102365479
       },
       {
         "frame": 130,
@@ -40,21 +40,21 @@
       {
         "frame": 170,
         "action": "select_regions",
-        "clicked_region": 9,
+        "clicked_region": 6,
         "regions": [
-          9
+          6
         ],
         "tetrahedra": 13909
       },
       {
         "frame": 190,
         "action": "begin_right_drag",
-        "region": 9
+        "region": 6
       },
       {
         "frame": 261,
         "action": "release_to_hold",
-        "maximum_displacement_m": 0.0007376400275382881
+        "maximum_displacement_m": 0.0012582298436615293
       },
       {
         "frame": 300,
@@ -70,21 +70,21 @@
       {
         "frame": 360,
         "action": "select_regions",
-        "clicked_region": 7,
+        "clicked_region": 4,
         "regions": [
-          7
+          4
         ],
         "tetrahedra": 11795
       },
       {
         "frame": 390,
         "action": "begin_right_drag",
-        "region": 7
+        "region": 4
       },
       {
         "frame": 461,
         "action": "release_to_hold",
-        "maximum_displacement_m": 0.0012883603661268804
+        "maximum_displacement_m": 0.0008109292694448865
       },
       {
         "frame": 500,

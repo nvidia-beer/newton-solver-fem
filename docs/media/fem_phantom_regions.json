@@ -1,10 +1,10 @@
 {
   "example": "fem_phantom_regions",
   "module": "newton_solver_fem.examples.example_fem_phantom_regions",
-  "caption": "Click the upright 2D pad map to select one FEM region on a pink phantom: right-drag region 7, switch to region 9, disable FEM, then return to region 7. The inactive pad stays fixed; only the selected region enters the solve.",
+  "caption": "Click the 2D pad map to select a SutureBot wound: right-drag wound 4, switch to wound 6, disable FEM, then return to wound 4. Wound numbers follow the dataset; inactive material stays fixed.",
   "arguments": [
     "--regions",
-    "7",
+    "4",
     "--test"
   ],
   "device": "cuda:0",
@@ -13,7 +13,7 @@
   "width": 1280,
   "height": 720,
   "show_ui": true,
-  "recording_wall_seconds": 21.990418198001862,
+  "recording_wall_seconds": 27.278495639002358,
   "playback_is_performance_benchmark": false,
   "simulation_time": [
     {
@@ -33,19 +33,19 @@
         "frame": 0,
         "action": "select_regions",
         "regions": [
-          7
+          4
         ],
         "tetrahedra": 11795
       },
       {
         "frame": 20,
         "action": "begin_right_drag",
-        "region": 7
+        "region": 4
       },
       {
         "frame": 91,
         "action": "release_to_hold",
-        "maximum_displacement_m": 0.0012883599676110178
+        "maximum_displacement_m": 0.0008109309315861061
       },
       {
         "frame": 130,
@@ -54,21 +54,21 @@
       {
         "frame": 170,
         "action": "click_region_map",
-        "clicked_region": 9,
+        "clicked_region": 6,
         "regions": [
-          9
+          6
         ],
         "tetrahedra": 13909
       },
       {
         "frame": 190,
         "action": "begin_right_drag",
-        "region": 9
+        "region": 6
       },
       {
         "frame": 261,
         "action": "release_to_hold",
-        "maximum_displacement_m": 0.0007376400275382881
+        "maximum_displacement_m": 0.0012582303161248333
       },
       {
         "frame": 300,
@@ -84,21 +84,21 @@
       {
         "frame": 360,
         "action": "click_region_map",
-        "clicked_region": 7,
+        "clicked_region": 4,
         "regions": [
-          7
+          4
         ],
         "tetrahedra": 11795
       },
       {
         "frame": 390,
         "action": "begin_right_drag",
-        "region": 7
+        "region": 4
       },
       {
         "frame": 461,
         "action": "release_to_hold",
-        "maximum_displacement_m": 0.0012883595686050268
+        "maximum_displacement_m": 0.0008109390407761253
       },
       {
         "frame": 500,

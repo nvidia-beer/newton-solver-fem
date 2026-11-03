@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "camera": "left",
+  "annotation_frame": 574,
+  "annotation_semantics": "final-frame insertion and exit pixels; static material labels, not contact events",
+  "texture": "textures/point_labels.png",
+  "source_csv": "point_labels_source/clicked_point.csv",
+  "source_mask": "point_labels_source/clicked_point_mask.png",
+  "source_csv_sha256": "2055ee6cb6e427d20606a90d900756951823b6afe6453c79ad0f59a035003c7b",
+  "source_mask_sha256": "0f81578f14ec216110e741687404d4d15b5904b6a9ad3ae4ef652cb32a9efebe",
+  "source_color_policy": "Original source mask RGB bytes are retained; nonzero pixels define label coverage",
+  "display_color_rgb": [
+    0,
+    255,
+    0
+  ],
+  "display_color_policy": "All labelled texels use display_color_rgb for visibility; source pixels and material bindings are unchanged",
+  "source_nonzero_pixels": 162,
+  "visible_source_pixels": 162,
+  "painted_triangles": 9,
+  "atlas_size": [
+    256,
+    256
+  ],
+  "tile_size": 64,
+  "uv_interpolation": "faceVarying; disjoint triangle tiles with filtering gutters",
+  "geometry_arrays_unchanged": true,
+  "geometry_role": "Original tetrahedral exterior boundary triangles and reference vertex indices; replay surface is static",
+  "material_transport": "With updated triangle vertices X_i(t), the label is sum_i barycentric_i*X_i(t); fixed face-varying UVs travel with that face. This replay does not evolve FEM vertices.",
+  "camera_poses_sha256": "9696a79c554178c474860b1713d50f2882d1745923d80a1afe20886ef6b6209d",
+  "motion_sha256": "f09a6a6b7f00e12441a7385b4976b2beba39f9348627be7fee8c69be2e75750b",
+  "geometry_arrays_sha256": "83f19c60e99bc20f4ea33569365180d719f27e28c661ae9950cd2f0b2a9e883a",
+  "points": [
+    {
+      "label": "insertion",
+      "pixel_original": [
+        456.79,
+        270.53
+      ],
+      "region_id": 1,
+      "prim_path": "/PhantomSurface/Region01",
+      "triangle_index": 3209,
+      "reference_vertex_indices": [
+        908,
+        1510,
+        1517
+      ],
+      "barycentric": [
+        0.8880107402801514,
+        0.012002131901681423,
+        0.09998712688684464
+      ],
+      "position_world_m": [
+        0.039630873214588615,
+        -0.03814256546691876,
+        -0.0061290569508556225
+      ],
+      "uv": [
+        0.2663442244356702,
+        0.714065365593342
+      ],
+      "ray_reconstruction_error_m": 1.661074289248109e-09,
+      "translated_projection_px": [
+        471.34925192395025,
+        273.0970515128558
+      ],
+      "translated_source_pixel_error_px": 14.783827990568064
+    },
+    {
+      "label": "exit",
+      "pixel_original": [
+        456.79,
+        368.6
+      ],
+      "region_id": 1,
+      "prim_path": "/PhantomSurface/Region01",
+      "triangle_index": 4749,
+      "reference_vertex_indices": [
+        3590,
+        1516,
+        3594
+      ],
+      "barycentric": [
+        0.17878800630569458,
+        0.39416927099227905,
+        0.42704272270202637
+      ],
+      "position_world_m": [
+        0.03980098074150028,
+        -0.04408590778025758,
+        -0.0062484304473112845
+      ],
+      "uv": [
+        0.35143612674437463,
+        0.39124439377337694
+      ],
+      "ray_reconstruction_error_m": 3.343447813388853e-09,
+      "translated_projection_px": [
+        471.9551956535609,
+        367.9289537257267
+      ],
+      "translated_source_pixel_error_px": 15.180034990506382
+    }
+  ],
+  "limitations": [
+    "Bindings are conditional on fitted camera/phantom alignment, not independently measured 3D points.",
+    "Static reference tetrahedron exterior is used; recorded tissue deformation is not reconstructed.",
+    "Labels remain on their material triangles throughout replay; annotation timing is not grasp/contact timing.",
+    "Joint scene refinement carries the original material label bindings; source annotation pixels were not rebound."
+  ],
+  "binding_creation_camera_poses_sha256": "ff88ea83f8979c0c74d5a840ab597379860716065fbda9b13a729ed380a5b507",
+  "binding_creation_motion_sha256": "9d79a7da0489f38022e067c7ec4bba13ac9fe2cfe9c28929bed496cef598c4e4",
+  "binding_creation_geometry_arrays_sha256": "f8409422e0d618d83ce1c9ce88235b39f79c130d9c2efc0a6ca338e094f62396",
+  "rigid_pad_translation_world_m": [
+    -0.0030879667820991165,
+    0.0031612083136471673,
+    -0.007630057421869528
+  ],
+  "source_pixel_alignment_expected": false
+}

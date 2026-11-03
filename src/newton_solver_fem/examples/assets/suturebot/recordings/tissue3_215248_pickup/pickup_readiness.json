@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "ready_for_scoped_pose_replay_with_geometry_limits",
+  "ready_for_scoped_pose_replay": true,
+  "accepted": false,
+  "absolute_metric_accuracy_validated": false,
+  "source_phase_inclusive": [
+    4,
+    281
+  ],
+  "source_support_inclusive": [
+    4,
+    281
+  ],
+  "full_source_frame_count": 282,
+  "excluded_later_source_frames": null,
+  "numeric_screen_passed": true,
+  "coordinate_preservation_passed": true,
+  "unchanged_command_repeatability_passed": true,
+  "actual_four_view_geometry_review_available": true,
+  "independent_reviewed_reserved_frames": [
+    39,
+    94,
+    149,
+    204,
+    259
+  ],
+  "independent_visual_findings": "The independently inspected five reserved four-view overlays agree with the stored review: tool pivot neighborhoods and incision direction follow the images; surrogate jaw outlines/opening and groove-bank widths remain imperfect. This is conditional posed replay, not accepted metric calibration or needle-pickup validation.",
+  "needle_included": false,
+  "source_labels_available": false,
+  "point_labels_included": false,
+  "full_clip_alignment_accepted": false,
+  "full_clip_failed_numeric_checks": [],
+  "screening_report": "alignment_screening.json",
+  "visual_review_report": "audit/pickup_visual_review.json",
+  "coordinate_report": "audit/coordinate_validation.json",
+  "repeatability_report": "audit/pickup_repeatability.json",
+  "source_metadata_repair_report": "audit/pickup_metadata_repair.json",
+  "candidate_manifest_before_review_sha256": "a17576673bbfd106215d5a670b31f6c3d40c3bedbc8eb7f8fdfe81ac72849e43",
+  "reviewed_predecessor_manifest_sha256": "9836d88cbcd970c993fa14d8c8382f7a1c025c5f68cbc12031b638ba998499ee",
+  "reviewed_numerical_and_render_evidence_unchanged": true,
+  "limitations": [
+    "This is an estimated tool/camera/pad replay under declared engineering image thresholds, not absolute optical or metric calibration.",
+    "PSM2 surrogate geometry and unmodeled jaw loading/specular surfaces remain limitations; no pixel-exact silhouette claim.",
+    "No needle is included, so source needle/thread motions and grasp success are not reproduced or validated.",
+    "The source pickup has no clicked-point mask or CSV; no green points or substitute labels were generated.",
+    "No source-image observation or reserved frame was removed based on model residual."
+  ],
+  "finalization_script_sha256": "a00f9b9520ebbb092ecac4d725bb4bbf500becea3ada04da2fdbcf300aa28041"
+}

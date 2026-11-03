@@ -1,0 +1,156 @@
+{
+  "status": "diagnostic_pixel_extent_not_acceptance",
+  "method": "Actual tapered mesh vertices within1mm Euclidean distance ofsharpvertex; exact nativepad rayocclusion. Pixel bounds applyvertices, not finalanti-aliasedtriangles; actualrenderreview remainsrequired.",
+  "rows": [
+    {
+      "frame": 138,
+      "camera": "left",
+      "sharp_pixel": [
+        478.51740555477215,
+        280.1320463273697
+      ],
+      "sharp_occlusion_depth_mm": 0.025175511837005615,
+      "near_tip_definition_mm": 1,
+      "occluded_near_tip_vertex_count": 87,
+      "occluded_near_tip_bounds_px": [
+        [
+          473.1464299827889,
+          264.53691239014734
+        ],
+        [
+          480.39109797794356,
+          280.1320463273697
+        ]
+      ],
+      "occluded_near_tip_size_px": [
+        7.244667995154657,
+        15.595133937222386
+      ]
+    },
+    {
+      "frame": 138,
+      "camera": "right",
+      "sharp_pixel": [
+        489.0114617050464,
+        284.9633753053769
+      ],
+      "sharp_occlusion_depth_mm": 0.025138258934020996,
+      "near_tip_definition_mm": 1,
+      "occluded_near_tip_vertex_count": 87,
+      "occluded_near_tip_bounds_px": [
+        [
+          483.7125006277884,
+          269.4097092764102
+        ],
+        [
+          490.99527125751257,
+          284.9633753053769
+        ]
+      ],
+      "occluded_near_tip_size_px": [
+        7.282770629724155,
+        15.553666028966745
+      ]
+    },
+    {
+      "frame": 139,
+      "camera": "left",
+      "sharp_pixel": [
+        480.3979217486839,
+        281.4445813627156
+      ],
+      "sharp_occlusion_depth_mm": 0.07677823305130005,
+      "near_tip_definition_mm": 1,
+      "occluded_near_tip_vertex_count": 101,
+      "occluded_near_tip_bounds_px": [
+        [
+          475.05240372224847,
+          265.6354196925035
+        ],
+        [
+          482.56438231614334,
+          281.4445813627156
+        ]
+      ],
+      "occluded_near_tip_size_px": [
+        7.511978593894867,
+        15.80916167021212
+      ]
+    },
+    {
+      "frame": 139,
+      "camera": "right",
+      "sharp_pixel": [
+        491.03103392079413,
+        286.27821572205323
+      ],
+      "sharp_occlusion_depth_mm": 0.0763237476348877,
+      "near_tip_definition_mm": 1,
+      "occluded_near_tip_vertex_count": 101,
+      "occluded_near_tip_bounds_px": [
+        [
+          485.7610714619747,
+          270.4990172121461
+        ],
+        [
+          493.31610626628856,
+          286.27821572205323
+        ]
+      ],
+      "occluded_near_tip_size_px": [
+        7.555034804313834,
+        15.779198509907133
+      ]
+    },
+    {
+      "frame": 140,
+      "camera": "left",
+      "sharp_pixel": [
+        480.6485192881323,
+        282.63227881818864
+      ],
+      "sharp_occlusion_depth_mm": 0.03597140312194824,
+      "near_tip_definition_mm": 1,
+      "occluded_near_tip_vertex_count": 101,
+      "occluded_near_tip_bounds_px": [
+        [
+          475.3187709608029,
+          266.8217995048308
+        ],
+        [
+          482.83432757741804,
+          282.63227881818864
+        ]
+      ],
+      "occluded_near_tip_size_px": [
+        7.515556616615129,
+        15.81047931335786
+      ]
+    },
+    {
+      "frame": 140,
+      "camera": "right",
+      "sharp_pixel": [
+        491.2690614535217,
+        287.4622741673843
+      ],
+      "sharp_occlusion_depth_mm": 0.035762786865234375,
+      "near_tip_definition_mm": 1,
+      "occluded_near_tip_vertex_count": 101,
+      "occluded_near_tip_bounds_px": [
+        [
+          486.02122003587215,
+          271.68290330871366
+        ],
+        [
+          493.5798206411241,
+          287.4622741673843
+        ]
+      ],
+      "occluded_near_tip_size_px": [
+        7.558600605251968,
+        15.779370858670632
+      ]
+    }
+  ]
+}

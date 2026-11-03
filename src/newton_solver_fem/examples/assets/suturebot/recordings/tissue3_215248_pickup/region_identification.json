@@ -1,0 +1,10 @@
+{
+  "method": "source_only_visual_review_before_fitting",
+  "identified_region_id": 1,
+  "source_review": "region_review.json",
+  "click_ray_check_status": "not_available_no_dataset_point_labels",
+  "valid": null,
+  "limitations": [
+    "No source clicks exist for an independent ray-to-region consistency check."
+  ]
+}

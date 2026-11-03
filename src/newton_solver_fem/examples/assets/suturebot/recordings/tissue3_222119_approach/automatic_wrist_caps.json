@@ -1,0 +1,7608 @@
+{
+  "schema_version": 1,
+  "method": "Reference own-cap patches at four sizes; >=3 centers agree within4px and median correlation>0.65",
+  "template_annotation_sha256": "05496ce5793ff70340c6667ad734b8a19e8500692a98894b3b65195e6dc9eabf",
+  "reference_calibration_sha256": "98ae416102a2dcecbd51a0a236e6d54ec6ee3319ced707c7577b285f3b7d69e7",
+  "source_csv_sha256": "26bd61ba01885db620a750be9064f75769cfda9887403d227ff8db18655d51fb",
+  "source_script_sha256": "90e04ba10f65f141c69647026febf1cce5561fb3b6e0a23351b282055c56c278",
+  "fit_frames": [
+    5,
+    19,
+    47,
+    61,
+    90,
+    104,
+    118,
+    132,
+    161,
+    175,
+    203,
+    218,
+    232,
+    246,
+    274,
+    289,
+    317,
+    331,
+    345,
+    360,
+    388,
+    402,
+    431,
+    445,
+    459,
+    473,
+    502,
+    516,
+    544,
+    558,
+    573
+  ],
+  "heldout_frames": [
+    33,
+    76,
+    147,
+    189,
+    260,
+    303,
+    374,
+    416,
+    487,
+    530
+  ],
+  "records": [
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 5,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        303.6986655721876,
+        259.8433449057421
+      ],
+      "uv": [
+        304.0,
+        253.0
+      ],
+      "confidence": 0.5940317213535309,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            304.0,
+            253.0
+          ],
+          "correlation": 0.6898437738418579,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            304.0,
+            253.0
+          ],
+          "correlation": 0.5996102094650269,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            304.0,
+            253.0
+          ],
+          "correlation": 0.5884532332420349,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            304.0,
+            251.0
+          ],
+          "correlation": 0.5856701135635376,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            270.0,
+            212.0
+          ],
+          "correlation": 0.5410274267196655,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            309.0,
+            256.0
+          ],
+          "correlation": 0.5273680090904236,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            301.0,
+            319.0
+          ],
+          "correlation": 0.5141258239746094,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            307.0,
+            262.0
+          ],
+          "correlation": 0.5883151292800903,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 5,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.374854305616,
+        221.90806776116165
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8899060189723969,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8991349339485168,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8943888545036316,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8972337245941162,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8203698396682739,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8913426995277405,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8884693384170532,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8775931596755981,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8140829205513,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 19,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        303.4042300972922,
+        258.4447378282346
+      ],
+      "uv": [
+        304.0,
+        252.0
+      ],
+      "confidence": 0.5914528369903564,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            304.0,
+            253.0
+          ],
+          "correlation": 0.6790170669555664,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            304.0,
+            252.0
+          ],
+          "correlation": 0.5912219285964966,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            304.0,
+            252.0
+          ],
+          "correlation": 0.5916837453842163,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            304.0,
+            251.0
+          ],
+          "correlation": 0.5826734900474548,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            312.0,
+            247.0
+          ],
+          "correlation": 0.5317080020904541,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            314.0,
+            250.0
+          ],
+          "correlation": 0.521376371383667,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            272.0,
+            228.0
+          ],
+          "correlation": 0.5303478240966797,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            304.0,
+            318.0
+          ],
+          "correlation": 0.5923871397972107,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 19,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3757322270373,
+        221.90028242639136
+      ],
+      "uv": [
+        330.0,
+        224.5
+      ],
+      "confidence": 0.8821276426315308,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8863407969474792,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8879217505455017,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8942530751228333,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.819768488407135,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8837485313415527,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8805067539215088,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            224.0
+          ],
+          "correlation": 0.8692647218704224,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8086433410644531,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 33,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        304.09291362800326,
+        261.72107626022984
+      ],
+      "uv": [
+        304.0,
+        252.5
+      ],
+      "confidence": 0.5674021542072296,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            295.0,
+            259.0
+          ],
+          "correlation": 0.6942529678344727,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            325.0,
+            255.0
+          ],
+          "correlation": 0.5521785616874695,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            304.0,
+            253.0
+          ],
+          "correlation": 0.5615270733833313,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            304.0,
+            252.0
+          ],
+          "correlation": 0.5732772350311279,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            325.0,
+            298.0
+          ],
+          "correlation": 0.5306127667427063,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            315.0,
+            251.0
+          ],
+          "correlation": 0.5373191237449646,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            316.0,
+            320.0
+          ],
+          "correlation": 0.5372588634490967,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            305.0,
+            321.0
+          ],
+          "correlation": 0.6330152153968811,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 33,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3739763112476,
+        221.91586009970302
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8856712281703949,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8907992839813232,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8904194831848145,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8939593434333801,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8203868865966797,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8861917853355408,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.885150671005249,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8767581582069397,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8162590265274048,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 47,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        305.4914517570002,
+        268.4452983158934
+      ],
+      "uv": [
+        300.0,
+        263.0
+      ],
+      "confidence": 0.5592092275619507,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            294.0,
+            266.0
+          ],
+          "correlation": 0.6626878380775452,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            299.0,
+            262.0
+          ],
+          "correlation": 0.5592092275619507,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            300.0,
+            263.0
+          ],
+          "correlation": 0.5295377373695374,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            300.0,
+            263.0
+          ],
+          "correlation": 0.5602575540542603,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            322.0,
+            298.0
+          ],
+          "correlation": 0.536453902721405,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            308.0,
+            266.0
+          ],
+          "correlation": 0.5860940217971802,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            307.0,
+            266.0
+          ],
+          "correlation": 0.5839271545410156,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            306.0,
+            324.0
+          ],
+          "correlation": 0.632798433303833,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 47,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3691442060033,
+        221.9588393246725
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8862065672874451,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8939160108566284,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8966807723045349,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8999739289283752,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8179259300231934,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8870945572853088,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8853185772895813,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.877180814743042,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.807048499584198,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 61,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        305.8456228966973,
+        270.1623739389122
+      ],
+      "uv": [
+        300.0,
+        263.0
+      ],
+      "confidence": 0.5410274863243103,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            294.0,
+            267.0
+          ],
+          "correlation": 0.6597160696983337,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            299.0,
+            262.0
+          ],
+          "correlation": 0.5410274863243103,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            300.0,
+            264.0
+          ],
+          "correlation": 0.512163519859314,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            300.0,
+            263.0
+          ],
+          "correlation": 0.5462529063224792,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            342.0,
+            312.0
+          ],
+          "correlation": 0.5380436182022095,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            310.0,
+            259.0
+          ],
+          "correlation": 0.5494635105133057,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            307.0,
+            266.0
+          ],
+          "correlation": 0.5522741079330444,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            306.0,
+            324.0
+          ],
+          "correlation": 0.615633487701416,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 61,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37090560263573,
+        221.9431940441463
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8848769962787628,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8935931921005249,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8919379711151123,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8957087993621826,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8159940242767334,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8875309228897095,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8822230696678162,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8722520470619202,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8030470609664917,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 76,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        306.05287413097716,
+        271.16946375301814
+      ],
+      "uv": [
+        300.0,
+        263.0
+      ],
+      "confidence": 0.5455408096313477,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            295.0,
+            267.0
+          ],
+          "correlation": 0.6565828919410706,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            300.0,
+            262.0
+          ],
+          "correlation": 0.5455408096313477,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            301.0,
+            265.0
+          ],
+          "correlation": 0.5202836394309998,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            300.0,
+            263.0
+          ],
+          "correlation": 0.5475395917892456,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            318.0,
+            299.0
+          ],
+          "correlation": 0.5280278921127319,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            310.0,
+            259.0
+          ],
+          "correlation": 0.5579257607460022,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            307.0,
+            267.0
+          ],
+          "correlation": 0.554803192615509,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            307.0,
+            267.0
+          ],
+          "correlation": 0.62498939037323,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 76,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3709057992676,
+        221.94319443490775
+      ],
+      "uv": [
+        330.0,
+        224.5
+      ],
+      "confidence": 0.8768884539604187,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8921425342559814,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8938684463500977,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8976432085037231,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8171889781951904,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8774978518486023,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8762790560722351,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            224.0
+          ],
+          "correlation": 0.8681082725524902,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7996605038642883,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 90,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        306.21083843139104,
+        271.93849239316876
+      ],
+      "uv": [
+        295.0,
+        267.0
+      ],
+      "confidence": 0.5935947597026825,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            295.0,
+            267.0
+          ],
+          "correlation": 0.6624319553375244,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            300.0,
+            262.0
+          ],
+          "correlation": 0.537523627281189,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            300.0,
+            266.0
+          ],
+          "correlation": 0.5150564908981323,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            295.0,
+            267.0
+          ],
+          "correlation": 0.5247575640678406,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            316.0,
+            299.0
+          ],
+          "correlation": 0.5636692047119141,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            316.0,
+            299.0
+          ],
+          "correlation": 0.5395224690437317,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            307.0,
+            267.0
+          ],
+          "correlation": 0.5516844987869263,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            307.0,
+            267.0
+          ],
+          "correlation": 0.6272672414779663,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 90,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37178567288964,
+        221.9353808624215
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8808659911155701,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8901793956756592,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8873469233512878,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8934826254844666,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8129022121429443,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8813660740852356,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8803659081459045,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8674309253692627,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7994893193244934,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 104,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        306.3562156604181,
+        272.6473374021225
+      ],
+      "uv": [
+        295.0,
+        267.0
+      ],
+      "confidence": 0.5334421396255493,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            295.0,
+            267.0
+          ],
+          "correlation": 0.6635767221450806,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            295.0,
+            267.0
+          ],
+          "correlation": 0.5334421396255493,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            300.0,
+            266.0
+          ],
+          "correlation": 0.5114927291870117,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            295.0,
+            267.0
+          ],
+          "correlation": 0.5248860120773315,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            360.0,
+            260.0
+          ],
+          "correlation": 0.5307892560958862,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            339.0,
+            314.0
+          ],
+          "correlation": 0.5123552083969116,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            307.0,
+            267.0
+          ],
+          "correlation": 0.5425351858139038,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            293.0,
+            319.0
+          ],
+          "correlation": 0.6465343832969666,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 104,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3717224695558,
+        221.9359646310978
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8841906189918518,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8948000073432922,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8853971362113953,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8912162184715271,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8097256422042847,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.886197030544281,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8829841017723083,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.874443769454956,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7989619970321655,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 118,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        306.7257252449512,
+        274.4521459964114
+      ],
+      "uv": [
+        300.0,
+        263.0
+      ],
+      "confidence": 0.5364812016487122,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            295.0,
+            267.0
+          ],
+          "correlation": 0.6555004715919495,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            300.0,
+            263.0
+          ],
+          "correlation": 0.5421404242515564,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            300.0,
+            266.0
+          ],
+          "correlation": 0.5155239105224609,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            299.0,
+            263.0
+          ],
+          "correlation": 0.5364812016487122,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            360.0,
+            260.0
+          ],
+          "correlation": 0.5209949612617493,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            308.0,
+            266.0
+          ],
+          "correlation": 0.5252410173416138,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            307.0,
+            267.0
+          ],
+          "correlation": 0.5511519908905029,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            293.0,
+            319.0
+          ],
+          "correlation": 0.6284962296485901,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 118,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37302200052886,
+        221.92446007187178
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8790862560272217,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8919475674629211,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8906264901161194,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8952539563179016,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8114825487136841,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8799964189529419,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8781760931015015,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.871851921081543,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8002530932426453,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 132,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        307.1403996941678,
+        276.4844142557989
+      ],
+      "uv": [
+        300.0,
+        263.0
+      ],
+      "confidence": 0.5455252528190613,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            295.0,
+            267.0
+          ],
+          "correlation": 0.660905659198761,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            300.0,
+            263.0
+          ],
+          "correlation": 0.5455252528190613,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            301.0,
+            265.0
+          ],
+          "correlation": 0.5279439091682434,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            300.0,
+            263.0
+          ],
+          "correlation": 0.5636048316955566,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            322.0,
+            299.0
+          ],
+          "correlation": 0.5325034856796265,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            311.0,
+            259.0
+          ],
+          "correlation": 0.5443180203437805,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            307.0,
+            267.0
+          ],
+          "correlation": 0.5560431480407715,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            305.0,
+            322.0
+          ],
+          "correlation": 0.6380562782287598,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 132,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3734875341521,
+        221.92035565669443
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8809459507465363,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8882742524147034,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8873229026794434,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8919233679771423,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8120265603065491,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8828951716423035,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.878996729850769,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8661195635795593,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7990854978561401,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 147,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        305.84947149393514,
+        270.1853339592018
+      ],
+      "uv": [
+        299.0,
+        260.0
+      ],
+      "confidence": 0.568539023399353,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            299.0,
+            260.0
+          ],
+          "correlation": 0.6865386962890625,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            299.0,
+            260.0
+          ],
+          "correlation": 0.5778890252113342,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            299.0,
+            260.0
+          ],
+          "correlation": 0.5267192721366882,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            299.0,
+            261.0
+          ],
+          "correlation": 0.5591890215873718,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            314.0,
+            254.0
+          ],
+          "correlation": 0.522830605506897,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            308.0,
+            264.0
+          ],
+          "correlation": 0.552019476890564,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            254.0,
+            241.0
+          ],
+          "correlation": 0.5526251792907715,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            307.0,
+            264.0
+          ],
+          "correlation": 0.6179800033569336,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 147,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3718853474791,
+        221.93456928588208
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8756409287452698,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8923382759094238,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8825849294662476,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8854649066925049,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8072230815887451,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.879054605960846,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8722272515296936,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8603869676589966,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7928115725517273,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 161,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        303.8211732304255,
+        260.42866423059615
+      ],
+      "uv": [
+        303.0,
+        252.0
+      ],
+      "confidence": 0.6216876804828644,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            303.0,
+            252.0
+          ],
+          "correlation": 0.6815492510795593,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            303.0,
+            252.0
+          ],
+          "correlation": 0.6353611350059509,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            303.0,
+            252.0
+          ],
+          "correlation": 0.6080142259597778,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            303.0,
+            251.0
+          ],
+          "correlation": 0.580619215965271,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            308.0,
+            262.0
+          ],
+          "correlation": 0.5100879073143005,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            309.0,
+            255.0
+          ],
+          "correlation": 0.5613453984260559,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            309.0,
+            254.0
+          ],
+          "correlation": 0.5378732681274414,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            309.0,
+            254.0
+          ],
+          "correlation": 0.6338515877723694,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 161,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37179173715106,
+        221.93539288814202
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8790429830551147,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.890491247177124,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8860222101211548,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8911920785903931,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8092697262763977,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8802074790000916,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8778784871101379,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8656738996505737,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7970076203346252,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 175,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        301.8874231692595,
+        251.31580205952713
+      ],
+      "uv": [
+        303.0,
+        249.0
+      ],
+      "confidence": 0.6419287323951721,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            303.0,
+            249.0
+          ],
+          "correlation": 0.7336592674255371,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            303.0,
+            249.0
+          ],
+          "correlation": 0.6678624153137207,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            303.0,
+            249.0
+          ],
+          "correlation": 0.6159950494766235,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            303.0,
+            249.0
+          ],
+          "correlation": 0.5910505056381226,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            299.0,
+            240.0
+          ],
+          "correlation": 0.5235369801521301,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            285.0,
+            265.0
+          ],
+          "correlation": 0.5170555710792542,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            300.0,
+            240.0
+          ],
+          "correlation": 0.5291168093681335,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            300.0,
+            241.0
+          ],
+          "correlation": 0.5849517583847046,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 175,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37169412958053,
+        221.93626958692178
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8831389248371124,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8931261897087097,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8852667808532715,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.89078289270401,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8119232654571533,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8846572041511536,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8816206455230713,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8690961599349976,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8013337254524231,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 189,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        300.81870021764763,
+        246.37321577938744
+      ],
+      "uv": [
+        299.0,
+        237.0
+      ],
+      "confidence": 0.5896235108375549,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            289.0,
+            242.0
+          ],
+          "correlation": 0.6278393268585205,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            285.0,
+            252.0
+          ],
+          "correlation": 0.5339764356613159,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            284.0,
+            252.0
+          ],
+          "correlation": 0.510736882686615,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            307.0,
+            232.0
+          ],
+          "correlation": 0.5126006603240967,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            311.0,
+            239.0
+          ],
+          "correlation": 0.597680389881134,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            298.0,
+            237.0
+          ],
+          "correlation": 0.5388785004615784,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            299.0,
+            237.0
+          ],
+          "correlation": 0.5896235108375549,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            299.0,
+            237.0
+          ],
+          "correlation": 0.6545572280883789,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 189,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37442739192943,
+        221.91198716245685
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8817219734191895,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8928982615470886,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8846309781074524,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8890549540519714,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8064059615135193,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8830904960632324,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8803534507751465,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8703608512878418,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7995308041572571,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 203,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        298.01188568176696,
+        233.79782097895506
+      ],
+      "uv": [
+        297.0,
+        229.0
+      ],
+      "confidence": 0.6135815680027008,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            287.0,
+            231.0
+          ],
+          "correlation": 0.5825713872909546,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            345.0,
+            197.0
+          ],
+          "correlation": 0.533111572265625,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            287.0,
+            231.0
+          ],
+          "correlation": 0.5099215507507324,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            345.0,
+            197.0
+          ],
+          "correlation": 0.4639962911605835,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            297.0,
+            230.0
+          ],
+          "correlation": 0.6932000517845154,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            297.0,
+            229.0
+          ],
+          "correlation": 0.6005864143371582,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            297.0,
+            229.0
+          ],
+          "correlation": 0.5913580656051636,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.6265767216682434,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 203,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3748662539366,
+        221.90809163294102
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.883628636598587,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8965510129928589,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8878815174102783,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8933037519454956,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8074211478233337,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8855050802230835,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8817521929740906,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8746188879013062,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8010898232460022,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 218,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        297.74505894619324,
+        232.64232631016648
+      ],
+      "uv": [
+        298.0,
+        229.0
+      ],
+      "confidence": 0.6475259065628052,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            316.0,
+            212.0
+          ],
+          "correlation": 0.5480366945266724,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            336.0,
+            192.0
+          ],
+          "correlation": 0.4607457220554352,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            337.0,
+            192.0
+          ],
+          "correlation": 0.4262060821056366,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            306.0,
+            217.0
+          ],
+          "correlation": 0.4299503266811371,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.7683188319206238,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.6854610443115234,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.6095907688140869,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.6059975028038025,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 218,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3712510870658,
+        221.94018887517623
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.872943639755249,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8908483982086182,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8805696964263916,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8883843421936035,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8050583600997925,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8743372559547424,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8715500235557556,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8643040060997009,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7926856875419617,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 232,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        298.17941088544956,
+        234.53419000649708
+      ],
+      "uv": [
+        298.0,
+        229.0
+      ],
+      "confidence": 0.7063169479370117,
+      "consensus_count": 4,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            334.0,
+            243.0
+          ],
+          "correlation": 0.5754114389419556,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            253.0,
+            239.0
+          ],
+          "correlation": 0.4645850360393524,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            187.0
+          ],
+          "correlation": 0.4277416169643402,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            294.0,
+            216.0
+          ],
+          "correlation": 0.4276532828807831,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.7534905672073364,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.7013511657714844,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.6902525424957275,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            298.0,
+            228.0
+          ],
+          "correlation": 0.7112827301025391,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 232,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3722302248947,
+        221.93148591423395
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8766569197177887,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.889626681804657,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8844728469848633,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8913891911506653,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8086814880371094,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8781496286392212,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8751642107963562,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8660197854042053,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7971011400222778,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 246,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        298.3159532417213,
+        235.13396286074996
+      ],
+      "uv": [
+        298.0,
+        229.0
+      ],
+      "confidence": 0.625065416097641,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            332.0,
+            240.0
+          ],
+          "correlation": 0.6199642419815063,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            248.0,
+            240.0
+          ],
+          "correlation": 0.4899114966392517,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            288.0,
+            231.0
+          ],
+          "correlation": 0.4533943831920624,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            294.0,
+            226.0
+          ],
+          "correlation": 0.44059693813323975,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.7323160767555237,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.6179218292236328,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.5894295573234558,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            298.0,
+            228.0
+          ],
+          "correlation": 0.6322090029716492,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 246,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37310849480605,
+        221.9236798753581
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8788370490074158,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.885777473449707,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.881772518157959,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8889071345329285,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8038625717163086,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8805463910102844,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8771277070045471,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8612440228462219,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7917325496673584,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 260,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        298.59196986850844,
+        236.34987934214885
+      ],
+      "uv": [
+        333.0,
+        242.0
+      ],
+      "confidence": 0.5477324426174164,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            333.0,
+            242.0
+          ],
+          "correlation": 0.5660715103149414,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            333.0,
+            242.0
+          ],
+          "correlation": 0.5706201195716858,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            333.0,
+            243.0
+          ],
+          "correlation": 0.5061245560646057,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            348.0,
+            205.0
+          ],
+          "correlation": 0.5345647931098938,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            299.0,
+            229.0
+          ],
+          "correlation": 0.7346470952033997,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            353.0,
+            242.0
+          ],
+          "correlation": 0.5638879537582397,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            331.0,
+            241.0
+          ],
+          "correlation": 0.5293933749198914,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            352.0,
+            242.0
+          ],
+          "correlation": 0.5621487498283386,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 260,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37398559810725,
+        221.91587865296103
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8806110620498657,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8909490704536438,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8803111910820007,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8864917159080505,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8041133284568787,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8843640089035034,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8809109330177307,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8659765124320984,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7965304255485535,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 274,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        298.9926119765994,
+        238.12595611700618
+      ],
+      "uv": [
+        334.0,
+        246.0
+      ],
+      "confidence": 0.5233994126319885,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            327.0,
+            209.0
+          ],
+          "correlation": 0.6150463223457336,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            334.0,
+            249.0
+          ],
+          "correlation": 0.5233994126319885,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            333.0,
+            205.0
+          ],
+          "correlation": 0.5100144147872925,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            337.0,
+            202.0
+          ],
+          "correlation": 0.5605158805847168,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            299.0,
+            230.0
+          ],
+          "correlation": 0.6586725115776062,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            302.0,
+            184.0
+          ],
+          "correlation": 0.5457218885421753,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            331.0,
+            245.0
+          ],
+          "correlation": 0.47460442781448364,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            334.0,
+            246.0
+          ],
+          "correlation": 0.5365844964981079,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 274,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3748633052494,
+        221.908085766666
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8745168447494507,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8916036486625671,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.878443717956543,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8844859600067139,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8121834397315979,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.875946581363678,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8730871081352234,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8675585985183716,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8054745197296143,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 289,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        300.74049870482594,
+        246.02939590630677
+      ],
+      "uv": [
+        355.0,
+        247.0
+      ],
+      "confidence": 0.5444302260875702,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            358.0,
+            262.0
+          ],
+          "correlation": 0.6019519567489624,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            285.0,
+            246.0
+          ],
+          "correlation": 0.530066967010498,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            356.0,
+            247.0
+          ],
+          "correlation": 0.5194536447525024,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            354.0,
+            247.0
+          ],
+          "correlation": 0.5694068074226379,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            353.0,
+            220.0
+          ],
+          "correlation": 0.540848433971405,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            340.0,
+            250.0
+          ],
+          "correlation": 0.5133726000785828,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            353.0,
+            254.0
+          ],
+          "correlation": 0.48537907004356384,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            352.0,
+            255.0
+          ],
+          "correlation": 0.5599489212036133,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 289,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3748631089153,
+        221.908085375492
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8797934055328369,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8874795436859131,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8810697793960571,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8844862580299377,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.826587438583374,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8814955353736877,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8785170316696167,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8608470559120178,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8159735798835754,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 303,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        301.0198672627767,
+        247.31344387965402
+      ],
+      "uv": [
+        357.0,
+        256.0
+      ],
+      "confidence": 0.5228243172168732,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            358.0,
+            264.0
+          ],
+          "correlation": 0.6375620365142822,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            359.0,
+            258.0
+          ],
+          "correlation": 0.5184674859046936,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            358.0,
+            256.0
+          ],
+          "correlation": 0.5126011967658997,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            349.0,
+            251.0
+          ],
+          "correlation": 0.5743516087532043,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            350.0,
+            219.0
+          ],
+          "correlation": 0.5428056120872498,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            287.0,
+            209.0
+          ],
+          "correlation": 0.5290485620498657,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            356.0,
+            256.0
+          ],
+          "correlation": 0.5271811485290527,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            355.0,
+            256.0
+          ],
+          "correlation": 0.574236273765564,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 303,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37354547700915,
+        221.9197752526963
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8790053725242615,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8895344138145447,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8837197422981262,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8881466388702393,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8263334035873413,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8804705142974854,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8775402307510376,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8638641834259033,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.817327618598938,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 317,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        300.5145166306295,
+        244.99454273543614
+      ],
+      "uv": [
+        357.5,
+        257.0
+      ],
+      "confidence": 0.5669264197349548,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            357.0,
+            257.0
+          ],
+          "correlation": 0.6014415621757507,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            358.0,
+            257.0
+          ],
+          "correlation": 0.5324112772941589,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            360.0,
+            252.0
+          ],
+          "correlation": 0.5227845311164856,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            338.0,
+            245.0
+          ],
+          "correlation": 0.5552115440368652,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            255.0,
+            206.0
+          ],
+          "correlation": 0.5046465396881104,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            288.0,
+            204.0
+          ],
+          "correlation": 0.5028126239776611,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            288.0,
+            205.0
+          ],
+          "correlation": 0.47591766715049744,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            343.0,
+            249.0
+          ],
+          "correlation": 0.5359928011894226,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 317,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37310731354705,
+        221.9236775303093
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8783160746097565,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8926346898078918,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8833589553833008,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8881078958511353,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8255525827407837,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8800795078277588,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8765526413917542,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8666871190071106,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8190929889678955,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 331,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        301.0776478409999,
+        247.5797635332872
+      ],
+      "uv": [
+        300.0,
+        237.0
+      ],
+      "confidence": 0.5398197770118713,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            291.0,
+            247.0
+          ],
+          "correlation": 0.5967184901237488,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            310.0,
+            236.0
+          ],
+          "correlation": 0.48407265543937683,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            307.0,
+            235.0
+          ],
+          "correlation": 0.49804139137268066,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            302.0,
+            239.0
+          ],
+          "correlation": 0.5398197770118713,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            289.0,
+            232.0
+          ],
+          "correlation": 0.5476225018501282,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            288.0,
+            232.0
+          ],
+          "correlation": 0.5417701005935669,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            300.0,
+            237.0
+          ],
+          "correlation": 0.5237958431243896,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            300.0,
+            237.0
+          ],
+          "correlation": 0.6227096319198608,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 331,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37391638237466,
+        221.91649709176502
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8785334825515747,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8939016461372375,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.883147120475769,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8888254165649414,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8183507323265076,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8797044157981873,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8773625493049622,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8689472675323486,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8124536871910095,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 345,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        299.15477767958146,
+        238.84889103825722
+      ],
+      "uv": [
+        302.0,
+        238.5
+      ],
+      "confidence": 0.5807117819786072,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            303.0,
+            239.0
+          ],
+          "correlation": 0.6245561242103577,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            310.0,
+            232.0
+          ],
+          "correlation": 0.522521436214447,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            295.0,
+            229.0
+          ],
+          "correlation": 0.4763845205307007,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            301.0,
+            238.0
+          ],
+          "correlation": 0.5368674397468567,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            289.0,
+            226.0
+          ],
+          "correlation": 0.5787792205810547,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            288.0,
+            226.0
+          ],
+          "correlation": 0.5462251901626587,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            333.0,
+            199.0
+          ],
+          "correlation": 0.4883061647415161,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            333.0,
+            199.0
+          ],
+          "correlation": 0.5955459475517273,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 345,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3769553755076,
+        221.88951913533327
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8802022933959961,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8916338682174683,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8811637759208679,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8870654106140137,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8104555010795593,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8811687231063843,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8792408108711243,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8694065809249878,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8021820783615112,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 360,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        297.2384308601431,
+        230.473252354667
+      ],
+      "uv": [
+        298.0,
+        230.0
+      ],
+      "confidence": 0.6109029054641724,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            318.0,
+            227.0
+          ],
+          "correlation": 0.544056236743927,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            321.0,
+            228.0
+          ],
+          "correlation": 0.4931804835796356,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            317.0,
+            225.0
+          ],
+          "correlation": 0.46817153692245483,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            303.0,
+            217.0
+          ],
+          "correlation": 0.4911792278289795,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            297.0,
+            230.0
+          ],
+          "correlation": 0.7858551144599915,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            298.0,
+            230.0
+          ],
+          "correlation": 0.6109029054641724,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.5426527857780457,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            318.0,
+            218.0
+          ],
+          "correlation": 0.4867219626903534,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 360,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3795825285735,
+        221.86623671742214
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8837380111217499,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8970388770103455,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8853463530540466,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.889438271522522,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8218782544136047,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8853238821029663,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8821521401405334,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8737188577651978,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8184205293655396,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 374,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        297.68333625835584,
+        232.37984324336827
+      ],
+      "uv": [
+        297.0,
+        230.0
+      ],
+      "confidence": 0.472056120634079,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            282.0,
+            236.0
+          ],
+          "correlation": 0.5437362194061279,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            323.0,
+            229.0
+          ],
+          "correlation": 0.4633103907108307,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            286.0,
+            235.0
+          ],
+          "correlation": 0.43747860193252563,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            312.0,
+            184.0
+          ],
+          "correlation": 0.41310834884643555,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            297.0,
+            231.0
+          ],
+          "correlation": 0.7866972088813782,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            298.0,
+            230.0
+          ],
+          "correlation": 0.4748232662677765,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            297.0,
+            230.0
+          ],
+          "correlation": 0.46928897500038147,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            297.0,
+            229.0
+          ],
+          "correlation": 0.46096071600914,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 374,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.38099659067933,
+        221.8537143531417
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8795439600944519,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8939858078956604,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8801805377006531,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8827941417694092,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8147230744361877,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8821530938148499,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8789073824882507,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.870255708694458,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8149374127388,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 388,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        298.69855364610123,
+        236.81647666501414
+      ],
+      "uv": [
+        298.0,
+        231.5
+      ],
+      "confidence": 0.6428665220737457,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            288.0,
+            234.0
+          ],
+          "correlation": 0.6104287505149841,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            285.0,
+            246.0
+          ],
+          "correlation": 0.5007010698318481,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            289.0,
+            238.0
+          ],
+          "correlation": 0.4772960841655731,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            331.0,
+            195.0
+          ],
+          "correlation": 0.482552707195282,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            298.0,
+            232.0
+          ],
+          "correlation": 0.7402951717376709,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            298.0,
+            232.0
+          ],
+          "correlation": 0.6331962943077087,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            298.0,
+            231.0
+          ],
+          "correlation": 0.6395553350448608,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            298.0,
+            231.0
+          ],
+          "correlation": 0.6461777091026306,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 388,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3796828147195,
+        221.86533686416422
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8776438236236572,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8931770920753479,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.878757894039154,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8844041228294373,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8226398825645447,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8815097212791443,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8765297532081604,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8677448034286499,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8188269734382629,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 402,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        296.46038510451376,
+        227.19966350486015
+      ],
+      "uv": [
+        296.5,
+        224.0
+      ],
+      "confidence": 0.5425466895103455,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            281.0,
+            285.0
+          ],
+          "correlation": 0.563720703125,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            307.0,
+            173.0
+          ],
+          "correlation": 0.43229106068611145,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            302.0,
+            171.0
+          ],
+          "correlation": 0.4418480098247528,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            306.0,
+            171.0
+          ],
+          "correlation": 0.4694526493549347,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            296.0,
+            224.0
+          ],
+          "correlation": 0.5920610427856445,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            297.0,
+            224.0
+          ],
+          "correlation": 0.5600873827934265,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            297.0,
+            224.0
+          ],
+          "correlation": 0.5250059962272644,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            296.0,
+            225.0
+          ],
+          "correlation": 0.45589661598205566,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 402,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3804596933601,
+        221.8584214195938
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8813725411891937,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8944197297096252,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8820479512214661,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8880043625831604,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8080582022666931,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8858749270439148,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8806971311569214,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8750327229499817,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8035504221916199,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 416,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        298.09138492466246,
+        234.15388533971463
+      ],
+      "uv": [
+        297.0,
+        226.0
+      ],
+      "confidence": 0.6240998804569244,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            323.0,
+            216.0
+          ],
+          "correlation": 0.6007474660873413,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            322.0,
+            216.0
+          ],
+          "correlation": 0.49620765447616577,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            323.0,
+            217.0
+          ],
+          "correlation": 0.4670944809913635,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            324.0,
+            218.0
+          ],
+          "correlation": 0.4944548010826111,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            298.0,
+            226.0
+          ],
+          "correlation": 0.755168616771698,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            297.0,
+            226.0
+          ],
+          "correlation": 0.6764085292816162,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            297.0,
+            226.0
+          ],
+          "correlation": 0.5717912316322327,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            297.0,
+            226.0
+          ],
+          "correlation": 0.5129159688949585,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 416,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3809923546266,
+        221.85370580281588
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8787858188152313,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8923993110656738,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8801127672195435,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8847274780273438,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8035812973976135,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8792298436164856,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.878341794013977,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8724702000617981,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7980129718780518,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 431,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        299.3523884585603,
+        239.7309194913273
+      ],
+      "uv": [
+        298.0,
+        229.0
+      ],
+      "confidence": 0.6950336396694183,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            301.0,
+            236.0
+          ],
+          "correlation": 0.5687567591667175,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            266.0,
+            203.0
+          ],
+          "correlation": 0.44455447793006897,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            326.0,
+            229.0
+          ],
+          "correlation": 0.42840155959129333,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            268.0,
+            190.0
+          ],
+          "correlation": 0.48703858256340027,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.7647819519042969,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.6252853274345398,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            264.0,
+            198.0
+          ],
+          "correlation": 0.4841519892215729,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            264.0,
+            197.0
+          ],
+          "correlation": 0.45688512921333313,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 431,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3809938676596,
+        221.85370886080375
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.884398877620697,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.895733118057251,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8841155171394348,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.888243556022644,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8008142709732056,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8888322710990906,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8846822381019592,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8743557333946228,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7961274981498718,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 445,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        299.09162402910437,
+        238.56441163778385
+      ],
+      "uv": [
+        297.5,
+        229.0
+      ],
+      "confidence": 0.6048394739627838,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            302.0,
+            236.0
+          ],
+          "correlation": 0.607507586479187,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            259.0,
+            208.0
+          ],
+          "correlation": 0.5010665059089661,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            260.0,
+            198.0
+          ],
+          "correlation": 0.43888458609580994,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            263.0,
+            198.0
+          ],
+          "correlation": 0.4960709810256958,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            298.0,
+            229.0
+          ],
+          "correlation": 0.6922918558120728,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            297.0,
+            229.0
+          ],
+          "correlation": 0.5173870921134949,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            256.0,
+            201.0
+          ],
+          "correlation": 0.44928422570228577,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            263.0,
+            204.0
+          ],
+          "correlation": 0.44622907042503357,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 445,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.379243593875,
+        221.8692120083135
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8762293756008148,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8867651224136353,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8782438635826111,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8843490481376648,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8019961714744568,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8768563270568848,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8756024241447449,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8703655004501343,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7977113127708435,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 459,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        295.7873226102638,
+        224.44407956728892
+      ],
+      "uv": [
+        315.5,
+        199.5
+      ],
+      "confidence": 0.5022753179073334,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            254.0,
+            253.0
+          ],
+          "correlation": 0.5902603268623352,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            316.0,
+            200.0
+          ],
+          "correlation": 0.5452570915222168,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            315.0,
+            199.0
+          ],
+          "correlation": 0.45929354429244995,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            260.0,
+            180.0
+          ],
+          "correlation": 0.48857542872428894,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            297.0,
+            224.0
+          ],
+          "correlation": 0.6479400396347046,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            331.0,
+            177.0
+          ],
+          "correlation": 0.5492283701896667,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            320.0,
+            195.0
+          ],
+          "correlation": 0.45594289898872375,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            300.0,
+            212.0
+          ],
+          "correlation": 0.39942461252212524,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 459,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37836735290057,
+        221.87697209494215
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8817227482795715,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8940219283103943,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8810049295425415,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8855732083320618,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8045444488525391,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8854846954345703,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8824405670166016,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8699485063552856,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7985149025917053,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 473,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        293.8312836308086,
+        217.04435626114636
+      ],
+      "uv": [
+        343.0,
+        215.0
+      ],
+      "confidence": 0.477903813123703,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            343.0,
+            218.0
+          ],
+          "correlation": 0.5824906229972839,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            343.0,
+            215.0
+          ],
+          "correlation": 0.477903813123703,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            344.0,
+            214.0
+          ],
+          "correlation": 0.4685331881046295,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            290.0,
+            210.0
+          ],
+          "correlation": 0.4577822983264923,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            295.0,
+            221.0
+          ],
+          "correlation": 0.5029308795928955,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            295.0,
+            204.0
+          ],
+          "correlation": 0.48464834690093994,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            353.0,
+            214.0
+          ],
+          "correlation": 0.5248032212257385,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            295.0,
+            205.0
+          ],
+          "correlation": 0.489540159702301,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 473,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37836778808503,
+        221.87697296969995
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8806074857711792,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8953782320022583,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8794265389442444,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.883277952671051,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8101317882537842,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8858357071876526,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.881788432598114,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8701480031013489,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8026217222213745,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 487,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        294.68390208501995,
+        220.11753750076724
+      ],
+      "uv": [
+        285.5,
+        214.0
+      ],
+      "confidence": 0.5226736217737198,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            284.0,
+            215.0
+          ],
+          "correlation": 0.5815844535827637,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            287.0,
+            213.0
+          ],
+          "correlation": 0.4637627899646759,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            294.0,
+            211.0
+          ],
+          "correlation": 0.4909094274044037,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            294.0,
+            211.0
+          ],
+          "correlation": 0.5269080996513367,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            332.0,
+            228.0
+          ],
+          "correlation": 0.6029554009437561,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            314.0,
+            194.0
+          ],
+          "correlation": 0.49845632910728455,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            292.0,
+            219.0
+          ],
+          "correlation": 0.512395441532135,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            292.0,
+            219.0
+          ],
+          "correlation": 0.5718615055084229,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 487,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3783683732765,
+        221.87697414541336
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8772582411766052,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8919134736061096,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8803865909576416,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8857733011245728,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8046753406524658,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8786873817443848,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8758291006088257,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8697126507759094,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7995831370353699,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 502,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        295.21362653145457,
+        222.14998383285942
+      ],
+      "uv": [
+        293.0,
+        221.0
+      ],
+      "confidence": 0.5606253147125244,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            286.0,
+            218.0
+          ],
+          "correlation": 0.5958287715911865,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            288.0,
+            215.0
+          ],
+          "correlation": 0.515761137008667,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            312.0,
+            206.0
+          ],
+          "correlation": 0.49885427951812744,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            295.0,
+            212.0
+          ],
+          "correlation": 0.550408124923706,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            318.0,
+            199.0
+          ],
+          "correlation": 0.5684549808502197,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            293.0,
+            221.0
+          ],
+          "correlation": 0.5461283922195435,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            293.0,
+            221.0
+          ],
+          "correlation": 0.5606253147125244,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            293.0,
+            222.0
+          ],
+          "correlation": 0.635805606842041,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 502,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3774941421034,
+        221.88474541083002
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8817692697048187,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8958300948143005,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8813430666923523,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8865596652030945,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.808901309967041,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8872885704040527,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8821954727172852,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8703542947769165,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8007961511611938,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 516,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        295.5182807676727,
+        223.34574884229113
+      ],
+      "uv": [
+        317.0,
+        209.5
+      ],
+      "confidence": 0.5632912218570709,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            314.0,
+            211.0
+          ],
+          "correlation": 0.638174295425415,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            317.0,
+            210.0
+          ],
+          "correlation": 0.5570465326309204,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            317.0,
+            209.0
+          ],
+          "correlation": 0.5466563701629639,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            317.0,
+            209.0
+          ],
+          "correlation": 0.5695359110832214,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            334.0,
+            213.0
+          ],
+          "correlation": 0.5577554702758789,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            301.0,
+            210.0
+          ],
+          "correlation": 0.5032718777656555,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            288.0,
+            227.0
+          ],
+          "correlation": 0.550115704536438,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            289.0,
+            228.0
+          ],
+          "correlation": 0.6311792731285095,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 516,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3722996932146,
+        221.9308651067707
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8813221454620361,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.894762396812439,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8806334137916565,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8893179893493652,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8078169226646423,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8857651948928833,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8820108771324158,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8717545866966248,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7996675968170166,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 530,
+      "heldout": true,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        295.6386374568547,
+        223.82589795736854
+      ],
+      "uv": [
+        317.0,
+        210.0
+      ],
+      "confidence": 0.5661592483520508,
+      "consensus_count": 4,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            314.0,
+            212.0
+          ],
+          "correlation": 0.6468300819396973,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            317.0,
+            210.0
+          ],
+          "correlation": 0.5589848160743713,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            317.0,
+            210.0
+          ],
+          "correlation": 0.5477615594863892,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            317.0,
+            209.0
+          ],
+          "correlation": 0.5733336806297302,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            327.0,
+            204.0
+          ],
+          "correlation": 0.5331607460975647,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            301.0,
+            210.0
+          ],
+          "correlation": 0.5058324337005615,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            288.0,
+            227.0
+          ],
+          "correlation": 0.5490272045135498,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            288.0,
+            228.0
+          ],
+          "correlation": 0.6281636953353882,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 530,
+      "heldout": true,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37354658044666,
+        221.91977744696317
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8774031102657318,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8933418989181519,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8806305527687073,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8863728642463684,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8050537109375,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8797417283058167,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.875064492225647,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8663968443870544,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.795189619064331,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 544,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        295.1800881702118,
+        222.02150874998205
+      ],
+      "uv": [
+        291.0,
+        220.0
+      ],
+      "confidence": 0.5391810834407806,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            283.0,
+            216.0
+          ],
+          "correlation": 0.5837786793708801,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            287.0,
+            213.0
+          ],
+          "correlation": 0.4736083447933197,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            294.0,
+            211.0
+          ],
+          "correlation": 0.5043161511421204,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            294.0,
+            211.0
+          ],
+          "correlation": 0.5389578342437744,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            332.0,
+            228.0
+          ],
+          "correlation": 0.596581757068634,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            313.0,
+            195.0
+          ],
+          "correlation": 0.5194647312164307,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            291.0,
+            220.0
+          ],
+          "correlation": 0.505896806716919,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            291.0,
+            220.0
+          ],
+          "correlation": 0.5724653601646423,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 544,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37617342282755,
+        221.89639693383947
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8774109780788422,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8921554088592529,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8854109048843384,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8905102014541626,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8093770146369934,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8786746263504028,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8761473298072815,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8707702159881592,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8027117252349854,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 558,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        295.0403741680777,
+        221.48131118700036
+      ],
+      "uv": [
+        294.0,
+        211.0
+      ],
+      "confidence": 0.4911707639694214,
+      "consensus_count": 3,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            283.0,
+            216.0
+          ],
+          "correlation": 0.5693550109863281,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            294.0,
+            211.0
+          ],
+          "correlation": 0.4436541199684143,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            294.0,
+            211.0
+          ],
+          "correlation": 0.4911707639694214,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            293.0,
+            210.0
+          ],
+          "correlation": 0.5312042832374573,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            331.0,
+            226.0
+          ],
+          "correlation": 0.6142004132270813,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            311.0,
+            194.0
+          ],
+          "correlation": 0.48920938372612,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            292.0,
+            219.0
+          ],
+          "correlation": 0.4848257601261139,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            297.0,
+            216.0
+          ],
+          "correlation": 0.5364479422569275,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 558,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.3774843181141,
+        221.88472565441518
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8815922141075134,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8921114206314087,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8840859532356262,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8868671655654907,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8050245046615601,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8826534152030945,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8805310130119324,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8720781803131104,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8019762635231018,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm1",
+      "arm": "psm1",
+      "frame": 573,
+      "heldout": false,
+      "uncertainty_px": 5.0,
+      "prefit_association_uv": [
+        295.00826115382057,
+        221.35733659831496
+      ],
+      "uv": [
+        293.5,
+        210.5
+      ],
+      "confidence": 0.5063866227865219,
+      "consensus_count": 2,
+      "accepted": false,
+      "candidates": [
+        {
+          "uv": [
+            283.0,
+            215.0
+          ],
+          "correlation": 0.5700964331626892,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            287.0,
+            213.0
+          ],
+          "correlation": 0.4415189027786255,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            294.0,
+            211.0
+          ],
+          "correlation": 0.482789546251297,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            293.0,
+            210.0
+          ],
+          "correlation": 0.5299836993217468,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            331.0,
+            226.0
+          ],
+          "correlation": 0.6063817739486694,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            311.0,
+            194.0
+          ],
+          "correlation": 0.48686063289642334,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            292.0,
+            219.0
+          ],
+          "correlation": 0.4789365530014038,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            297.0,
+            216.0
+          ],
+          "correlation": 0.5363227128982544,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    },
+    {
+      "camera": "psm2",
+      "arm": "psm2",
+      "frame": 573,
+      "heldout": false,
+      "uncertainty_px": 3.0,
+      "prefit_association_uv": [
+        328.37748370022143,
+        221.88472440559943
+      ],
+      "uv": [
+        330.0,
+        225.0
+      ],
+      "confidence": 0.8780559301376343,
+      "consensus_count": 8,
+      "accepted": true,
+      "candidates": [
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.890869140625,
+          "template_frame": 150,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8759825825691223,
+          "template_frame": 150,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8826807141304016,
+          "template_frame": 150,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            330.0,
+            224.0
+          ],
+          "correlation": 0.8027487993240356,
+          "template_frame": 150,
+          "patch_radius": 18
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.883694589138031,
+          "template_frame": 450,
+          "patch_radius": 8
+        },
+        {
+          "uv": [
+            330.0,
+            225.0
+          ],
+          "correlation": 0.8801292777061462,
+          "template_frame": 450,
+          "patch_radius": 11
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.8642812371253967,
+          "template_frame": 450,
+          "patch_radius": 14
+        },
+        {
+          "uv": [
+            329.0,
+            225.0
+          ],
+          "correlation": 0.7954636812210083,
+          "template_frame": 450,
+          "patch_radius": 18
+        }
+      ]
+    }
+  ],
+  "accepted_counts": {
+    "psm1": 1,
+    "psm2": 41
+  },
+  "limitations": [
+    "Nested patch sizes are correlated; agreement is a feature-rejection rule, not statistical confidence.",
+    "A nearly static own-cap supplies two image constraints; mount roll and axial displacement require independent evidence.",
+    "Do not fit a camera from fewer than three accepted fitting frames; retain its reference prior instead."
+  ]
+}

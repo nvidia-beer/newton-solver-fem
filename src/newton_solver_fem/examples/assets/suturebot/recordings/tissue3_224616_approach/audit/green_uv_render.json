@@ -1,0 +1,51 @@
+{
+  "method": "Public Newton SensorCamera renders actual imported scene USD materials and face-varying UVs; no painted image overlays",
+  "frame": 460,
+  "device": "cuda:0",
+  "display_color_rgb": [
+    0,
+    255,
+    0
+  ],
+  "source_pixel_alignment_expected": true,
+  "source_pixel_alignment_status": "aligned",
+  "material_binding_policy": "Original triangle and barycentric bindings are retained, including after rigid pad placement",
+  "views": {
+    "left": {
+      "native_size": [
+        960,
+        540
+      ],
+      "display_label_pixels": 162,
+      "visible_phantom_pixels": 426543,
+      "expected_label_pixels": 162,
+      "overlap_pixels": 162,
+      "union_pixels": 162,
+      "source_pixel_iou": 1.0
+    },
+    "right": {
+      "native_size": [
+        960,
+        540
+      ],
+      "display_label_pixels": 151,
+      "visible_phantom_pixels": 424153
+    },
+    "psm1": {
+      "native_size": [
+        640,
+        480
+      ],
+      "display_label_pixels": 62,
+      "visible_phantom_pixels": 208093
+    },
+    "psm2": {
+      "native_size": [
+        640,
+        480
+      ],
+      "display_label_pixels": 87,
+      "visible_phantom_pixels": 236821
+    }
+  }
+}

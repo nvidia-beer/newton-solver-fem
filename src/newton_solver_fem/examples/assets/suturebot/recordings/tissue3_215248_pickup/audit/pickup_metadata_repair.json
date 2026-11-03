@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "reviewed_predecessor_manifest_sha256": "9836d88cbcd970c993fa14d8c8382f7a1c025c5f68cbc12031b638ba998499ee",
+  "regenerated_manifest_sha256": "a17576673bbfd106215d5a670b31f6c3d40c3bedbc8eb7f8fdfe81ac72849e43",
+  "historical_manifest_body_available": false,
+  "manifest_comparison_scope": "The prior manifest SHA was frozen, but its body was not archived before regeneration. No exact manifest-body equality is claimed. All scene, motion, camera, complete calibration, numerical and source evidence files are checked byte-for-byte against that frozen review.",
+  "intended_metadata_changes": {
+    "source_labels": {
+      "available": false,
+      "status": "unavailable_in_source_dataset",
+      "files_sha256": {
+        "clicked_point.csv": null,
+        "clicked_point_mask.png": null
+      },
+      "slit_seed_review": "reviewed_slit_seed.json",
+      "click_ray_check_available": false
+    },
+    "provenance.source_file_inventory_sha256": {
+      "ee_csv.csv": "585ae315f748fd6f1b5739c859e1ba7b2cea8079a2d7eca3502a926c92a89014",
+      "left.mp4": "fa7d9ad384dd45142fea3da05ce808b8c9f5535dc49b897f9ee32ea951c6ff19",
+      "right.mp4": "fabbe31ea94c3bdcfb9e4e1867bfe0f65a7b85d4b1d34f717b7c3ce230b13064",
+      "psm1.mp4": "18cc8eeb21779ad8c7003e8ded99efa5af94f44fbb2d520c4193b4c530fe033a",
+      "psm2.mp4": "64d9733bd9cb978f82771448a7a0d57c59089c1d9937ed6d1e5018efe7a36519",
+      "clicked_point.csv": null,
+      "clicked_point_mask.png": null
+    },
+    "preparation_helper": "Source hash updated for the regression-tested own-report preservation guard."
+  },
+  "changed_tracked_reports": [
+    "pad_placement.json",
+    "pad_placement_correction.json",
+    "recording.json",
+    "wrist_export_validation.json"
+  ],
+  "report_changes_scope": "recording.json retains previously dropped source-label availability and source inventory; wrist_export_validation.json records that invariant. pad_placement.json/correction hash the revised predecessor manifest. No numerical fit or geometry changes.",
+  "reviewed_geometry_and_optics_assets_byte_identical": true,
+  "reviewed_reserved_overlays_byte_identical": true,
+  "source_clock_and_support_preserved": true,
+  "geometry_sha256": {
+    "scene.usda": "e30ce457207a0ea76579d2e357be8d9f6ee79cfac5fdfd834c604d5581d98f71",
+    "rig.usdc": "1a86bdb028c2f02d39e7e8a87c62f5cf9bde36a5f18a3850caff28526a9f7c64",
+    "phantom.usdc": "0fe79ce3014e9e476c0c8ab3cff897a0b65c57f24a8da3f353341635618debbc",
+    "motion.npz": "b1afe117db515ca4ddc10d03a4c8adb2a847842e65af6c45cc99a3f8c44c1eef",
+    "camera_poses.npz": "8453debe80cd521b507008a5684a4984914e27dd4980a3b314646e0cbe911574",
+    "calibration.json": "9b042f9ee501538ea734ea7a5683b159cca3d0d94518871472cc80234f1c6f9f",
+    "source_motion.npz": "34a3d618d4327589554698553f44a7971a646bba8d5cd2ac8408aea56c507bb2",
+    "registered_motion.npz": "a9bf40ae22399451f133a30258a9ebe7782ec72678d42223ab03144f6e51d517"
+  },
+  "regenerated_reserved_render_byte_identical": true,
+  "regenerated_reserved_render_report": "audit/regenerated_reserved_verification/render_validation.json",
+  "regenerated_reserved_overlay_comparison": {
+    "39": {
+      "reviewed_sha256": "9a81a96a000667dc1a9935ea8cb0ae4a6caa2ea39f057b37f7cfc6dfd792b0f9",
+      "regenerated_sha256": "9a81a96a000667dc1a9935ea8cb0ae4a6caa2ea39f057b37f7cfc6dfd792b0f9",
+      "identical": true
+    },
+    "94": {
+      "reviewed_sha256": "8e7dccb1fec5a50b02567898eb27bb867439e560867bfc5cd0a64295ea86fbd1",
+      "regenerated_sha256": "8e7dccb1fec5a50b02567898eb27bb867439e560867bfc5cd0a64295ea86fbd1",
+      "identical": true
+    },
+    "149": {
+      "reviewed_sha256": "0ead22e9c417a7ce995d974af0ea48164b40123579a4728955c0e22e91c0c2ec",
+      "regenerated_sha256": "0ead22e9c417a7ce995d974af0ea48164b40123579a4728955c0e22e91c0c2ec",
+      "identical": true
+    },
+    "204": {
+      "reviewed_sha256": "d2e8f41ba361bed31c4189560523c4fdff610c9b98b309093e478507a4461e50",
+      "regenerated_sha256": "d2e8f41ba361bed31c4189560523c4fdff610c9b98b309093e478507a4461e50",
+      "identical": true
+    },
+    "259": {
+      "reviewed_sha256": "e81591cbc8f0fabeb12084df470076c1223e43e2ce98b8efe4a542171310c799",
+      "regenerated_sha256": "e81591cbc8f0fabeb12084df470076c1223e43e2ce98b8efe4a542171310c799",
+      "identical": true
+    }
+  },
+  "render_semantics_unchanged": "The regenerated manifest renders byte-identical four-view overlays at all five independently reviewed reserved frames, confirming identical camera projection/ray behavior and scene appearance."
+}

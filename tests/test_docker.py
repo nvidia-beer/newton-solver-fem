@@ -116,7 +116,12 @@ class TestDocker(unittest.TestCase):
         )
 
     def test_terminal_and_explicit_viewer_run_without_display(self):
-        for arguments in (("terminal",), ("visual", "--viewer", "null"), ("visual", "--help")):
+        for arguments in (
+            ("terminal",),
+            ("visual", "--viewer", "null"),
+            ("visual", "--help"),
+            ("visual", "--list-samples"),
+        ):
             with self.subTest(arguments=arguments):
                 argv = json.loads(self.invoke("run.sh", *arguments).stdout)
                 self.assertIn("--gpus", argv)

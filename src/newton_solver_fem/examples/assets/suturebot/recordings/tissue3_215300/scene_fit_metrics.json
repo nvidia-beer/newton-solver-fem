@@ -1,0 +1,3789 @@
+{
+  "status": "hard_parallel_with_unknown_pad_displacement",
+  "observations": "evidence/manual_lip_traces.json",
+  "boundary_observations": "evidence/manual_pad_boundary.json",
+  "metrics": {
+    "lip": {
+      "endoscope": {
+        "before": {
+          "fit": {
+            "samples": 217,
+            "rms_px": 6.298256498257699,
+            "rows": [
+              {
+                "camera": "left",
+                "frame": 0,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    300,
+                    214
+                  ],
+                  [
+                    350,
+                    209
+                  ],
+                  [
+                    400,
+                    205
+                  ],
+                  [
+                    450,
+                    213
+                  ],
+                  [
+                    500,
+                    217
+                  ],
+                  [
+                    550,
+                    223
+                  ],
+                  [
+                    600,
+                    230
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Upper/interior bank. Left thread crossing and right gripper excluded; broad highlight creates several-pixel crest ambiguity.",
+                "role": "zero_clock_diagnostic",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 26,
+                "rms_px": 3.8581195693009396,
+                "median_px": 2.458344642174457,
+                "p90_px": 6.556150759949017,
+                "max_px": 8.438683665452771
+              },
+              {
+                "camera": "left",
+                "frame": 0,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    450,
+                    281
+                  ],
+                  [
+                    475,
+                    291
+                  ],
+                  [
+                    500,
+                    302
+                  ],
+                  [
+                    550,
+                    310
+                  ],
+                  [
+                    580,
+                    315
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Lower/exterior bank, short visible segment between tools. Deliberately avoids diagonal bright thread below this trace; broad illumination peak gives higher uncertainty.",
+                "role": "zero_clock_diagnostic",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 12,
+                "rms_px": 11.30589094877861,
+                "median_px": 7.912280510623209,
+                "p90_px": 17.793253241271525,
+                "max_px": 19.64179627261701
+              },
+              {
+                "camera": "left",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    200,
+                    242
+                  ],
+                  [
+                    250,
+                    227
+                  ],
+                  [
+                    300,
+                    216
+                  ],
+                  [
+                    350,
+                    212
+                  ],
+                  [
+                    400,
+                    212
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Upper/interior crest left of needle/thread puncture; thread crosses below these points. Ends before visibly disturbed central needle area.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 17,
+                "rms_px": 2.665218658950555,
+                "median_px": 1.9214760565264986,
+                "p90_px": 4.220466884618583,
+                "max_px": 4.7797236823837554
+              },
+              {
+                "camera": "left",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    550,
+                    237
+                  ],
+                  [
+                    600,
+                    240
+                  ],
+                  [
+                    650,
+                    246
+                  ],
+                  [
+                    700,
+                    256
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Separate upper/interior right segment; excludes needle/thread around x460..530. Faint far-right endpoint not used.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 10.516283666673214,
+                "median_px": 10.746752212486902,
+                "p90_px": 11.88905376110839,
+                "max_px": 12.999601897139835
+              },
+              {
+                "camera": "left",
+                "frame": 150,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    350,
+                    304
+                  ],
+                  [
+                    400,
+                    303
+                  ],
+                  [
+                    450,
+                    300
+                  ],
+                  [
+                    500,
+                    306
+                  ],
+                  [
+                    550,
+                    310
+                  ],
+                  [
+                    600,
+                    316
+                  ],
+                  [
+                    650,
+                    322
+                  ],
+                  [
+                    700,
+                    327
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Lower/exterior bright crest; left gripper and jaw below trace are excluded. This is a broad surface highlight rather than the dark cavity boundary.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 30,
+                "rms_px": 3.456369189155956,
+                "median_px": 2.302945095402208,
+                "p90_px": 5.4764333200810436,
+                "max_px": 6.853327427963022
+              },
+              {
+                "camera": "left",
+                "frame": 450,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    200,
+                    245
+                  ],
+                  [
+                    250,
+                    231
+                  ],
+                  [
+                    300,
+                    221
+                  ],
+                  [
+                    350,
+                    218
+                  ],
+                  [
+                    400,
+                    224
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Only left upper bank segment away from central needle/pinch. Lower bank fully excluded due tool/thread occlusion. Even these pixels may retain mild deformation.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 17,
+                "rms_px": 6.113492834910102,
+                "median_px": 6.421282947780849,
+                "p90_px": 8.809352921843276,
+                "max_px": 10.070722443702918
+              },
+              {
+                "camera": "right",
+                "frame": 0,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    300,
+                    221
+                  ],
+                  [
+                    350,
+                    217
+                  ],
+                  [
+                    400,
+                    212
+                  ],
+                  [
+                    450,
+                    216
+                  ],
+                  [
+                    500,
+                    222
+                  ],
+                  [
+                    550,
+                    227
+                  ],
+                  [
+                    580,
+                    230
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Upper/interior bank, away from diagonal thread and right gripper.",
+                "role": "zero_clock_diagnostic",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 24,
+                "rms_px": 3.7484477489655648,
+                "median_px": 2.3418615922672457,
+                "p90_px": 6.560982081214653,
+                "max_px": 7.035029486601755
+              },
+              {
+                "camera": "right",
+                "frame": 0,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    450,
+                    284
+                  ],
+                  [
+                    475,
+                    294
+                  ],
+                  [
+                    500,
+                    303
+                  ],
+                  [
+                    550,
+                    312
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Short lower/exterior bank segment; diagonal thread at approximately y320..360 is excluded. No exact stereo point pairing is asserted.",
+                "role": "zero_clock_diagnostic",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 9,
+                "rms_px": 12.224727139043576,
+                "median_px": 10.9683652445103,
+                "p90_px": 16.892032379118476,
+                "max_px": 18.705731169257465
+              },
+              {
+                "camera": "right",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    250,
+                    240
+                  ],
+                  [
+                    300,
+                    227
+                  ],
+                  [
+                    350,
+                    219
+                  ],
+                  [
+                    400,
+                    219
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Upper/interior crest before the needle-induced local distortion and thread.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 1.6673977793923642,
+                "median_px": 1.2242615947673774,
+                "p90_px": 2.2480393092258506,
+                "max_px": 4.239338010371655
+              },
+              {
+                "camera": "right",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    550,
+                    242
+                  ],
+                  [
+                    600,
+                    243
+                  ],
+                  [
+                    650,
+                    248
+                  ],
+                  [
+                    700,
+                    257
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Separate right upper/interior bank. Needle and crossing thread at x430..530 excluded.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 10.617075843815787,
+                "median_px": 10.234390077241097,
+                "p90_px": 13.02357205750046,
+                "max_px": 14.3064071789746
+              },
+              {
+                "camera": "right",
+                "frame": 150,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    350,
+                    309
+                  ],
+                  [
+                    400,
+                    307
+                  ],
+                  [
+                    450,
+                    308
+                  ],
+                  [
+                    500,
+                    306
+                  ],
+                  [
+                    550,
+                    313
+                  ],
+                  [
+                    600,
+                    319
+                  ],
+                  [
+                    650,
+                    324
+                  ],
+                  [
+                    700,
+                    327
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Lower/exterior bank, visible above left tool jaw. Broad highlight; points have no explicit material correspondence across cameras.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 30,
+                "rms_px": 4.145216876909933,
+                "median_px": 3.19556317497239,
+                "p90_px": 6.756458214449003,
+                "max_px": 7.427684840162452
+              },
+              {
+                "camera": "right",
+                "frame": 450,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    250,
+                    242
+                  ],
+                  [
+                    300,
+                    231
+                  ],
+                  [
+                    350,
+                    224
+                  ],
+                  [
+                    400,
+                    227
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Only upper-left bank away from obvious needle pinch at x480..550. Lower bank excluded rather than tracing through tools.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 5.788695828861677,
+                "median_px": 5.969999865655874,
+                "p90_px": 7.810592265057383,
+                "max_px": 8.137547893754501
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 22,
+            "rms_px": 9.22661014441051,
+            "rows": [
+              {
+                "camera": "left",
+                "frame": 300,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    200,
+                    244
+                  ],
+                  [
+                    250,
+                    232
+                  ],
+                  [
+                    300,
+                    225
+                  ],
+                  [
+                    350,
+                    231
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Reserved validation only. Upper-left crest; central/lower banks visibly pulled by tool and omitted.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 13,
+                "rms_px": 9.49825094869239,
+                "median_px": 6.473908012938945,
+                "p90_px": 16.4022030327052,
+                "max_px": 19.518988120306652
+              },
+              {
+                "camera": "right",
+                "frame": 300,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    250,
+                    243
+                  ],
+                  [
+                    300,
+                    233
+                  ],
+                  [
+                    350,
+                    233
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Reserved validation only. Upper-left crest before grasp deformation; lower bank occluded.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 9,
+                "rms_px": 8.81948184769434,
+                "median_px": 7.204596628899963,
+                "p90_px": 13.466928790174821,
+                "max_px": 14.991260546546648
+              }
+            ]
+          }
+        },
+        "after": {
+          "fit": {
+            "samples": 217,
+            "rms_px": 5.8777997215594855,
+            "rows": [
+              {
+                "camera": "left",
+                "frame": 0,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    300,
+                    214
+                  ],
+                  [
+                    350,
+                    209
+                  ],
+                  [
+                    400,
+                    205
+                  ],
+                  [
+                    450,
+                    213
+                  ],
+                  [
+                    500,
+                    217
+                  ],
+                  [
+                    550,
+                    223
+                  ],
+                  [
+                    600,
+                    230
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Upper/interior bank. Left thread crossing and right gripper excluded; broad highlight creates several-pixel crest ambiguity.",
+                "role": "zero_clock_diagnostic",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 26,
+                "rms_px": 6.320398750935739,
+                "median_px": 5.8556742530683685,
+                "p90_px": 8.920169563246946,
+                "max_px": 10.757866172649765
+              },
+              {
+                "camera": "left",
+                "frame": 0,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    450,
+                    281
+                  ],
+                  [
+                    475,
+                    291
+                  ],
+                  [
+                    500,
+                    302
+                  ],
+                  [
+                    550,
+                    310
+                  ],
+                  [
+                    580,
+                    315
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Lower/exterior bank, short visible segment between tools. Deliberately avoids diagonal bright thread below this trace; broad illumination peak gives higher uncertainty.",
+                "role": "zero_clock_diagnostic",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 12,
+                "rms_px": 7.911952600127142,
+                "median_px": 3.592305825075244,
+                "p90_px": 13.86153342781079,
+                "max_px": 16.255930328780316
+              },
+              {
+                "camera": "left",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    200,
+                    242
+                  ],
+                  [
+                    250,
+                    227
+                  ],
+                  [
+                    300,
+                    216
+                  ],
+                  [
+                    350,
+                    212
+                  ],
+                  [
+                    400,
+                    212
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Upper/interior crest left of needle/thread puncture; thread crosses below these points. Ends before visibly disturbed central needle area.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 17,
+                "rms_px": 2.9809736125402324,
+                "median_px": 3.1071394082415873,
+                "p90_px": 4.187644311216052,
+                "max_px": 4.80718247921016
+              },
+              {
+                "camera": "left",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    550,
+                    237
+                  ],
+                  [
+                    600,
+                    240
+                  ],
+                  [
+                    650,
+                    246
+                  ],
+                  [
+                    700,
+                    256
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Separate upper/interior right segment; excludes needle/thread around x460..530. Faint far-right endpoint not used.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 5.243887927760224,
+                "median_px": 3.7829136772962038,
+                "p90_px": 8.400195774410086,
+                "max_px": 8.746239699685491
+              },
+              {
+                "camera": "left",
+                "frame": 150,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    350,
+                    304
+                  ],
+                  [
+                    400,
+                    303
+                  ],
+                  [
+                    450,
+                    300
+                  ],
+                  [
+                    500,
+                    306
+                  ],
+                  [
+                    550,
+                    310
+                  ],
+                  [
+                    600,
+                    316
+                  ],
+                  [
+                    650,
+                    322
+                  ],
+                  [
+                    700,
+                    327
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Lower/exterior bright crest; left gripper and jaw below trace are excluded. This is a broad surface highlight rather than the dark cavity boundary.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 30,
+                "rms_px": 6.084861142900059,
+                "median_px": 2.73154325251546,
+                "p90_px": 11.076212645658961,
+                "max_px": 13.814909778884644
+              },
+              {
+                "camera": "left",
+                "frame": 450,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    200,
+                    245
+                  ],
+                  [
+                    250,
+                    231
+                  ],
+                  [
+                    300,
+                    221
+                  ],
+                  [
+                    350,
+                    218
+                  ],
+                  [
+                    400,
+                    224
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Only left upper bank segment away from central needle/pinch. Lower bank fully excluded due tool/thread occlusion. Even these pixels may retain mild deformation.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 17,
+                "rms_px": 5.058231059487104,
+                "median_px": 4.844135149076583,
+                "p90_px": 7.4827924015933105,
+                "max_px": 7.78133810397741
+              },
+              {
+                "camera": "right",
+                "frame": 0,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    300,
+                    221
+                  ],
+                  [
+                    350,
+                    217
+                  ],
+                  [
+                    400,
+                    212
+                  ],
+                  [
+                    450,
+                    216
+                  ],
+                  [
+                    500,
+                    222
+                  ],
+                  [
+                    550,
+                    227
+                  ],
+                  [
+                    580,
+                    230
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Upper/interior bank, away from diagonal thread and right gripper.",
+                "role": "zero_clock_diagnostic",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 24,
+                "rms_px": 5.891304831839383,
+                "median_px": 5.404946058376495,
+                "p90_px": 7.996838737092366,
+                "max_px": 9.09365621732473
+              },
+              {
+                "camera": "right",
+                "frame": 0,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    450,
+                    284
+                  ],
+                  [
+                    475,
+                    294
+                  ],
+                  [
+                    500,
+                    303
+                  ],
+                  [
+                    550,
+                    312
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Short lower/exterior bank segment; diagonal thread at approximately y320..360 is excluded. No exact stereo point pairing is asserted.",
+                "role": "zero_clock_diagnostic",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 9,
+                "rms_px": 9.142937984236875,
+                "median_px": 5.419110937202437,
+                "p90_px": 14.290451970581216,
+                "max_px": 16.22574222626275
+              },
+              {
+                "camera": "right",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    250,
+                    240
+                  ],
+                  [
+                    300,
+                    227
+                  ],
+                  [
+                    350,
+                    219
+                  ],
+                  [
+                    400,
+                    219
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Upper/interior crest before the needle-induced local distortion and thread.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 1.533607300785613,
+                "median_px": 0.8222033248605021,
+                "p90_px": 2.3501751013007097,
+                "max_px": 3.6151277271378395
+              },
+              {
+                "camera": "right",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    550,
+                    242
+                  ],
+                  [
+                    600,
+                    243
+                  ],
+                  [
+                    650,
+                    248
+                  ],
+                  [
+                    700,
+                    257
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Separate right upper/interior bank. Needle and crossing thread at x430..530 excluded.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 6.528933287358353,
+                "median_px": 5.247268647706575,
+                "p90_px": 9.381736381325474,
+                "max_px": 10.099220021935658
+              },
+              {
+                "camera": "right",
+                "frame": 150,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    350,
+                    309
+                  ],
+                  [
+                    400,
+                    307
+                  ],
+                  [
+                    450,
+                    308
+                  ],
+                  [
+                    500,
+                    306
+                  ],
+                  [
+                    550,
+                    313
+                  ],
+                  [
+                    600,
+                    319
+                  ],
+                  [
+                    650,
+                    324
+                  ],
+                  [
+                    700,
+                    327
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Lower/exterior bank, visible above left tool jaw. Broad highlight; points have no explicit material correspondence across cameras.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 30,
+                "rms_px": 6.364298769761015,
+                "median_px": 3.1927206953566154,
+                "p90_px": 11.170156430692199,
+                "max_px": 13.518297393282937
+              },
+              {
+                "camera": "right",
+                "frame": 450,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    250,
+                    242
+                  ],
+                  [
+                    300,
+                    231
+                  ],
+                  [
+                    350,
+                    224
+                  ],
+                  [
+                    400,
+                    227
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Only upper-left bank away from obvious needle pinch at x480..550. Lower bank excluded rather than tracing through tools.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 4.5384535788635505,
+                "median_px": 4.994307333784285,
+                "p90_px": 5.496959264394673,
+                "max_px": 5.601779030930227
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 22,
+            "rms_px": 8.755894292913284,
+            "rows": [
+              {
+                "camera": "left",
+                "frame": 300,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    200,
+                    244
+                  ],
+                  [
+                    250,
+                    232
+                  ],
+                  [
+                    300,
+                    225
+                  ],
+                  [
+                    350,
+                    231
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Reserved validation only. Upper-left crest; central/lower banks visibly pulled by tool and omitted.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 13,
+                "rms_px": 9.035155758015966,
+                "median_px": 6.317804121512881,
+                "p90_px": 15.301358349645817,
+                "max_px": 17.562407603508866
+              },
+              {
+                "camera": "right",
+                "frame": 300,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    250,
+                    243
+                  ],
+                  [
+                    300,
+                    233
+                  ],
+                  [
+                    350,
+                    233
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Reserved validation only. Upper-left crest before grasp deformation; lower bank occluded.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 9,
+                "rms_px": 8.336016585875038,
+                "median_px": 6.595104682826434,
+                "p90_px": 12.620988638183238,
+                "max_px": 13.345968860252292
+              }
+            ]
+          }
+        }
+      },
+      "psm1": {
+        "before": {
+          "fit": {
+            "samples": 35,
+            "rms_px": 16.95750813113435,
+            "rows": [
+              {
+                "camera": "psm1",
+                "frame": 150,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    253,
+                    250
+                  ],
+                  [
+                    238,
+                    262
+                  ],
+                  [
+                    221,
+                    275
+                  ],
+                  [
+                    207,
+                    288
+                  ],
+                  [
+                    193,
+                    300
+                  ],
+                  [
+                    182,
+                    312
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Visible lower-left exterior crest, after diagonal needle/thread crossing. The dark slit border lies to its right/down; do not interpret the last sample as a CAD endpoint.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 8,
+                "rms_px": 27.343179871278405,
+                "median_px": 25.740062043973452,
+                "p90_px": 36.22012858271254,
+                "max_px": 40.169251040426865
+              },
+              {
+                "camera": "psm1",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    423,
+                    150
+                  ],
+                  [
+                    409,
+                    175
+                  ],
+                  [
+                    390,
+                    200
+                  ],
+                  [
+                    377,
+                    225
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Visible upper-right interior crest. Top tool shadow and lower jaw/holder occlusion prevent extending this segment. Upper thread loop lies left of this bank.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 8,
+                "rms_px": 6.768941951446096,
+                "median_px": 3.5132082538816416,
+                "p90_px": 10.865064277900176,
+                "max_px": 14.324082866767295
+              },
+              {
+                "camera": "psm1",
+                "frame": 450,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    385,
+                    125
+                  ],
+                  [
+                    382,
+                    150
+                  ],
+                  [
+                    377,
+                    175
+                  ],
+                  [
+                    377,
+                    200
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Exterior/left bank above instrument tip. Lower y220..310 incision is visibly pulled/pinched and excluded.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 7,
+                "rms_px": 5.366159095055321,
+                "median_px": 2.6184468286048226,
+                "p90_px": 9.02281974966519,
+                "max_px": 11.429308921442063
+              },
+              {
+                "camera": "psm1",
+                "frame": 450,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    451,
+                    100
+                  ],
+                  [
+                    450,
+                    125
+                  ],
+                  [
+                    446,
+                    150
+                  ],
+                  [
+                    438,
+                    175
+                  ],
+                  [
+                    425,
+                    200
+                  ],
+                  [
+                    410,
+                    225
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Interior/right bank. Stop before obvious lower local pinch and crossing thread; bright crest, not cavity border.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 12,
+                "rms_px": 17.115255723225655,
+                "median_px": 17.540213469223268,
+                "p90_px": 19.851167563973345,
+                "max_px": 20.078021305418886
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 9,
+            "rms_px": 15.613874665897466,
+            "rows": [
+              {
+                "camera": "psm1",
+                "frame": 300,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    250,
+                    80
+                  ],
+                  [
+                    254,
+                    100
+                  ],
+                  [
+                    260,
+                    120
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Reserved validation only. Very short exterior crest beside thread loop; strong motion/partial occlusion and lower local deformation limit precision. No fit use.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 4,
+                "rms_px": 15.041443276511004,
+                "median_px": 14.52190348343515,
+                "p90_px": 18.33396305786868,
+                "max_px": 19.338068105824537
+              },
+              {
+                "camera": "psm1",
+                "frame": 300,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    304,
+                    75
+                  ],
+                  [
+                    305,
+                    100
+                  ],
+                  [
+                    305,
+                    125
+                  ]
+                ],
+                "uncertainty_px": 9,
+                "notes": "Reserved validation only; upper interior crest before locally deformed grasping zone. Do not extend through foreground tool or loop.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 5,
+                "rms_px": 16.057133463848395,
+                "median_px": 14.684807118555643,
+                "p90_px": 22.370810805235802,
+                "max_px": 23.494754415836383
+              }
+            ]
+          }
+        },
+        "after": {
+          "fit": {
+            "samples": 35,
+            "rms_px": 4.577096509357193,
+            "rows": [
+              {
+                "camera": "psm1",
+                "frame": 150,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    253,
+                    250
+                  ],
+                  [
+                    238,
+                    262
+                  ],
+                  [
+                    221,
+                    275
+                  ],
+                  [
+                    207,
+                    288
+                  ],
+                  [
+                    193,
+                    300
+                  ],
+                  [
+                    182,
+                    312
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Visible lower-left exterior crest, after diagonal needle/thread crossing. The dark slit border lies to its right/down; do not interpret the last sample as a CAD endpoint.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 8,
+                "rms_px": 4.755479883526216,
+                "median_px": 2.372911348658475,
+                "p90_px": 7.721617742233428,
+                "max_px": 9.514859201100512
+              },
+              {
+                "camera": "psm1",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    423,
+                    150
+                  ],
+                  [
+                    409,
+                    175
+                  ],
+                  [
+                    390,
+                    200
+                  ],
+                  [
+                    377,
+                    225
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Visible upper-right interior crest. Top tool shadow and lower jaw/holder occlusion prevent extending this segment. Upper thread loop lies left of this bank.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 8,
+                "rms_px": 3.539465814624772,
+                "median_px": 1.0934024972487975,
+                "p90_px": 5.497297216159171,
+                "max_px": 8.765035116180117
+              },
+              {
+                "camera": "psm1",
+                "frame": 450,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    385,
+                    125
+                  ],
+                  [
+                    382,
+                    150
+                  ],
+                  [
+                    377,
+                    175
+                  ],
+                  [
+                    377,
+                    200
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Exterior/left bank above instrument tip. Lower y220..310 incision is visibly pulled/pinched and excluded.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 7,
+                "rms_px": 4.470522505948695,
+                "median_px": 4.2600953829152495,
+                "p90_px": 5.931991770947354,
+                "max_px": 6.1146533170504425
+              },
+              {
+                "camera": "psm1",
+                "frame": 450,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    451,
+                    100
+                  ],
+                  [
+                    450,
+                    125
+                  ],
+                  [
+                    446,
+                    150
+                  ],
+                  [
+                    438,
+                    175
+                  ],
+                  [
+                    425,
+                    200
+                  ],
+                  [
+                    410,
+                    225
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Interior/right bank. Stop before obvious lower local pinch and crossing thread; bright crest, not cavity border.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 12,
+                "rms_px": 5.100695853030146,
+                "median_px": 4.399671419671398,
+                "p90_px": 7.350222117242548,
+                "max_px": 9.138619800361386
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 9,
+            "rms_px": 13.883483405040195,
+            "rows": [
+              {
+                "camera": "psm1",
+                "frame": 300,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    250,
+                    80
+                  ],
+                  [
+                    254,
+                    100
+                  ],
+                  [
+                    260,
+                    120
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Reserved validation only. Very short exterior crest beside thread loop; strong motion/partial occlusion and lower local deformation limit precision. No fit use.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 4,
+                "rms_px": 5.054023560357403,
+                "median_px": 4.2389838440441565,
+                "p90_px": 6.868864158093959,
+                "max_px": 7.757599918840068
+              },
+              {
+                "camera": "psm1",
+                "frame": 300,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    304,
+                    75
+                  ],
+                  [
+                    305,
+                    100
+                  ],
+                  [
+                    305,
+                    125
+                  ]
+                ],
+                "uncertainty_px": 9,
+                "notes": "Reserved validation only; upper interior crest before locally deformed grasping zone. Do not extend through foreground tool or loop.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 5,
+                "rms_px": 18.069794611603353,
+                "median_px": 16.623411075145764,
+                "p90_px": 24.1347340772153,
+                "max_px": 26.08265257946533
+              }
+            ]
+          }
+        }
+      },
+      "psm2": {
+        "before": {
+          "fit": {
+            "samples": 49,
+            "rms_px": 46.22943675268029,
+            "rows": [
+              {
+                "camera": "psm2",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    173,
+                    100
+                  ],
+                  [
+                    173,
+                    125
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Short upper interior crest below the top instrument. Separate segment avoids intervening local indentation/shadow at y140..160.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 3,
+                "rms_px": 53.21506848419671,
+                "median_px": 53.185425130219436,
+                "p90_px": 55.27361531982633,
+                "max_px": 55.79566286722805
+              },
+              {
+                "camera": "psm2",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    160,
+                    175
+                  ],
+                  [
+                    162,
+                    200
+                  ],
+                  [
+                    157,
+                    225
+                  ],
+                  [
+                    158,
+                    250
+                  ],
+                  [
+                    160,
+                    275
+                  ],
+                  [
+                    165,
+                    300
+                  ],
+                  [
+                    172,
+                    325
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Lower interior bank; trace follows bright silicone crest left of cavity and thread, not the white thread descending on its right edge.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 52.738868525950934,
+                "median_px": 52.985922421327494,
+                "p90_px": 55.24501212217304,
+                "max_px": 55.64333759765068
+              },
+              {
+                "camera": "psm2",
+                "frame": 150,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    225,
+                    100
+                  ],
+                  [
+                    224,
+                    125
+                  ],
+                  [
+                    221,
+                    150
+                  ],
+                  [
+                    215,
+                    175
+                  ],
+                  [
+                    223,
+                    200
+                  ],
+                  [
+                    224,
+                    225
+                  ],
+                  [
+                    226,
+                    250
+                  ],
+                  [
+                    221,
+                    275
+                  ],
+                  [
+                    221,
+                    300
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Exterior/right bank. Stop before the bank merges with dark foreground shaft; instrument and nearby longitudinal shadow are excluded.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 17,
+                "rms_px": 42.36658538231056,
+                "median_px": 43.25963600695278,
+                "p90_px": 47.367868779488134,
+                "max_px": 49.24450108582515
+              },
+              {
+                "camera": "psm2",
+                "frame": 450,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    174,
+                    200
+                  ],
+                  [
+                    173,
+                    225
+                  ],
+                  [
+                    176,
+                    250
+                  ],
+                  [
+                    181,
+                    275
+                  ],
+                  [
+                    188,
+                    300
+                  ],
+                  [
+                    194,
+                    325
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Only lower interior crest away from strong pinch at y100..170 and thread crossing. Remaining image is visibly deforming, so keep uncertainty conservative.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 11,
+                "rms_px": 48.00021104079614,
+                "median_px": 48.7389898991019,
+                "p90_px": 51.658021410302595,
+                "max_px": 52.686046123263196
+              },
+              {
+                "camera": "psm2",
+                "frame": 450,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    237,
+                    200
+                  ],
+                  [
+                    242,
+                    225
+                  ],
+                  [
+                    245,
+                    250
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Short exterior crest beside foreground instrument; upper needle/tool and pinched region omitted. Shadow and limited extent make this weaker than other traces.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 5,
+                "rms_px": 29.014862183712093,
+                "median_px": 29.152468489844605,
+                "p90_px": 29.87167647505454,
+                "max_px": 30.20658131795484
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 14,
+            "rms_px": 36.050870616368606,
+            "rows": [
+              {
+                "camera": "psm2",
+                "frame": 300,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    187,
+                    200
+                  ],
+                  [
+                    184,
+                    225
+                  ],
+                  [
+                    185,
+                    250
+                  ],
+                  [
+                    188,
+                    275
+                  ],
+                  [
+                    194,
+                    300
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Reserved validation only. Lower interior crest away from top tool/pinch. Thread follows cavity and is excluded from this crest.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 9,
+                "rms_px": 42.884760144465204,
+                "median_px": 43.733373270132304,
+                "p90_px": 44.505822897866594,
+                "max_px": 44.921861773458915
+              },
+              {
+                "camera": "psm2",
+                "frame": 300,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    259,
+                    200
+                  ],
+                  [
+                    261,
+                    225
+                  ],
+                  [
+                    250,
+                    250
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Reserved validation only. Short exterior bank adjacent instrument, shadowed and potentially mildly deformed; weak independent check.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 5,
+                "rms_px": 18.12947840915061,
+                "median_px": 13.730495347217738,
+                "p90_px": 24.95202903469436,
+                "max_px": 27.72877114133166
+              }
+            ]
+          }
+        },
+        "after": {
+          "fit": {
+            "samples": 49,
+            "rms_px": 5.163522693747467,
+            "rows": [
+              {
+                "camera": "psm2",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    173,
+                    100
+                  ],
+                  [
+                    173,
+                    125
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Short upper interior crest below the top instrument. Separate segment avoids intervening local indentation/shadow at y140..160.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 3,
+                "rms_px": 6.246604066304382,
+                "median_px": 6.788717398222664,
+                "p90_px": 7.102352876037616,
+                "max_px": 7.1807617454913535
+              },
+              {
+                "camera": "psm2",
+                "frame": 150,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    160,
+                    175
+                  ],
+                  [
+                    162,
+                    200
+                  ],
+                  [
+                    157,
+                    225
+                  ],
+                  [
+                    158,
+                    250
+                  ],
+                  [
+                    160,
+                    275
+                  ],
+                  [
+                    165,
+                    300
+                  ],
+                  [
+                    172,
+                    325
+                  ]
+                ],
+                "uncertainty_px": 7,
+                "notes": "Lower interior bank; trace follows bright silicone crest left of cavity and thread, not the white thread descending on its right edge.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 13,
+                "rms_px": 3.3654271616740017,
+                "median_px": 2.3495246132548315,
+                "p90_px": 5.327919688302348,
+                "max_px": 6.195016742147456
+              },
+              {
+                "camera": "psm2",
+                "frame": 150,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    225,
+                    100
+                  ],
+                  [
+                    224,
+                    125
+                  ],
+                  [
+                    221,
+                    150
+                  ],
+                  [
+                    215,
+                    175
+                  ],
+                  [
+                    223,
+                    200
+                  ],
+                  [
+                    224,
+                    225
+                  ],
+                  [
+                    226,
+                    250
+                  ],
+                  [
+                    221,
+                    275
+                  ],
+                  [
+                    221,
+                    300
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Exterior/right bank. Stop before the bank merges with dark foreground shaft; instrument and nearby longitudinal shadow are excluded.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 17,
+                "rms_px": 6.908642453010082,
+                "median_px": 3.063818000561956,
+                "p90_px": 10.981700718872407,
+                "max_px": 18.918375477508473
+              },
+              {
+                "camera": "psm2",
+                "frame": 450,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    174,
+                    200
+                  ],
+                  [
+                    173,
+                    225
+                  ],
+                  [
+                    176,
+                    250
+                  ],
+                  [
+                    181,
+                    275
+                  ],
+                  [
+                    188,
+                    300
+                  ],
+                  [
+                    194,
+                    325
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Only lower interior crest away from strong pinch at y100..170 and thread crossing. Remaining image is visibly deforming, so keep uncertainty conservative.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 11,
+                "rms_px": 2.4291438653098094,
+                "median_px": 2.025985819572827,
+                "p90_px": 4.190460780721132,
+                "max_px": 4.362873357327857
+              },
+              {
+                "camera": "psm2",
+                "frame": 450,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    237,
+                    200
+                  ],
+                  [
+                    242,
+                    225
+                  ],
+                  [
+                    245,
+                    250
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Short exterior crest beside foreground instrument; upper needle/tool and pinched region omitted. Shadow and limited extent make this weaker than other traces.",
+                "role": "fit",
+                "kind": "lip",
+                "split": "fit",
+                "samples": 5,
+                "rms_px": 5.758992076063465,
+                "median_px": 5.954081981479209,
+                "p90_px": 7.018224480551756,
+                "max_px": 7.518616942291189
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 14,
+            "rms_px": 11.549640166551512,
+            "rows": [
+              {
+                "camera": "psm2",
+                "frame": 300,
+                "lip": "B_positive_y",
+                "points_px": [
+                  [
+                    187,
+                    200
+                  ],
+                  [
+                    184,
+                    225
+                  ],
+                  [
+                    185,
+                    250
+                  ],
+                  [
+                    188,
+                    275
+                  ],
+                  [
+                    194,
+                    300
+                  ]
+                ],
+                "uncertainty_px": 8,
+                "notes": "Reserved validation only. Lower interior crest away from top tool/pinch. Thread follows cavity and is excluded from this crest.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 9,
+                "rms_px": 5.334103927167295,
+                "median_px": 1.4188395898268824,
+                "p90_px": 9.47059559310401,
+                "max_px": 10.181862634249638
+              },
+              {
+                "camera": "psm2",
+                "frame": 300,
+                "lip": "A_negative_y",
+                "points_px": [
+                  [
+                    259,
+                    200
+                  ],
+                  [
+                    261,
+                    225
+                  ],
+                  [
+                    250,
+                    250
+                  ]
+                ],
+                "uncertainty_px": 10,
+                "notes": "Reserved validation only. Short exterior bank adjacent instrument, shadowed and potentially mildly deformed; weak independent check.",
+                "role": "reserved_validation",
+                "kind": "lip",
+                "split": "heldout",
+                "samples": 5,
+                "rms_px": 17.95240735568958,
+                "median_px": 20.92700593654262,
+                "p90_px": 22.870132478328102,
+                "max_px": 23.263447097000792
+              }
+            ]
+          }
+        }
+      }
+    },
+    "boundary": {
+      "endoscope": {
+        "before": {
+          "fit": {
+            "samples": 0,
+            "rms_px": null,
+            "rows": []
+          },
+          "heldout": {
+            "samples": 0,
+            "rms_px": null,
+            "rows": []
+          }
+        },
+        "after": {
+          "fit": {
+            "samples": 0,
+            "rms_px": null,
+            "rows": []
+          },
+          "heldout": {
+            "samples": 0,
+            "rms_px": null,
+            "rows": []
+          }
+        }
+      },
+      "psm1": {
+        "before": {
+          "fit": {
+            "samples": 157,
+            "rms_px": 48.515198242422386,
+            "rows": [
+              {
+                "camera": "psm1",
+                "frame": 4,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    314,
+                    25
+                  ],
+                  [
+                    286,
+                    70
+                  ],
+                  [
+                    259,
+                    115
+                  ],
+                  [
+                    230,
+                    160
+                  ],
+                  [
+                    204,
+                    205
+                  ],
+                  [
+                    178,
+                    250
+                  ],
+                  [
+                    153,
+                    295
+                  ],
+                  [
+                    128,
+                    340
+                  ],
+                  [
+                    114,
+                    370
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 34,
+                "rms_px": 40.716346520813666,
+                "median_px": 36.087314269654215,
+                "p90_px": 61.61632688203699,
+                "max_px": 68.76913274397371
+              },
+              {
+                "camera": "psm1",
+                "frame": 75,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    307,
+                    25
+                  ],
+                  [
+                    255,
+                    50
+                  ],
+                  [
+                    206,
+                    75
+                  ],
+                  [
+                    167,
+                    100
+                  ],
+                  [
+                    117,
+                    125
+                  ],
+                  [
+                    73,
+                    150
+                  ],
+                  [
+                    29,
+                    175
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 27,
+                "rms_px": 53.24248719571975,
+                "median_px": 48.18641035434062,
+                "p90_px": 72.55978324016144,
+                "max_px": 77.60514076942272
+              },
+              {
+                "camera": "psm1",
+                "frame": 150,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    303,
+                    25
+                  ],
+                  [
+                    256,
+                    50
+                  ],
+                  [
+                    213,
+                    75
+                  ],
+                  [
+                    171,
+                    100
+                  ],
+                  [
+                    130,
+                    125
+                  ],
+                  [
+                    88,
+                    150
+                  ],
+                  [
+                    48,
+                    175
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 25,
+                "rms_px": 54.14268017981078,
+                "median_px": 51.43710814901332,
+                "p90_px": 72.8576125961635,
+                "max_px": 77.75817055505934
+              },
+              {
+                "camera": "psm1",
+                "frame": 450,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    262,
+                    25
+                  ],
+                  [
+                    228,
+                    75
+                  ],
+                  [
+                    199,
+                    125
+                  ],
+                  [
+                    168,
+                    175
+                  ],
+                  [
+                    139,
+                    225
+                  ],
+                  [
+                    110,
+                    275
+                  ],
+                  [
+                    81,
+                    325
+                  ],
+                  [
+                    51,
+                    375
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 35,
+                "rms_px": 50.81473815178943,
+                "median_px": 45.85866199349359,
+                "p90_px": 74.31768427718062,
+                "max_px": 80.06820672756699
+              },
+              {
+                "camera": "psm1",
+                "frame": 600,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    381,
+                    25
+                  ],
+                  [
+                    319,
+                    75
+                  ],
+                  [
+                    200,
+                    175
+                  ],
+                  [
+                    143,
+                    225
+                  ],
+                  [
+                    89,
+                    275
+                  ],
+                  [
+                    61,
+                    310
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 36,
+                "rms_px": 45.021501878687154,
+                "median_px": 39.825596672123865,
+                "p90_px": 66.30626314132374,
+                "max_px": 74.04362591179733
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 63,
+            "rms_px": 63.412416172573934,
+            "rows": [
+              {
+                "camera": "psm1",
+                "frame": 300,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    75,
+                    60
+                  ],
+                  [
+                    79,
+                    100
+                  ],
+                  [
+                    86,
+                    140
+                  ],
+                  [
+                    94,
+                    180
+                  ],
+                  [
+                    100,
+                    220
+                  ],
+                  [
+                    118,
+                    300
+                  ],
+                  [
+                    126,
+                    340
+                  ],
+                  [
+                    136,
+                    380
+                  ],
+                  [
+                    144,
+                    420
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "heldout",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 31,
+                "rms_px": 83.55654337591497,
+                "median_px": 81.61299147308465,
+                "p90_px": 108.75186802042938,
+                "max_px": 113.53679171853744
+              },
+              {
+                "camera": "psm1",
+                "frame": 525,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    316,
+                    25
+                  ],
+                  [
+                    296,
+                    75
+                  ],
+                  [
+                    276,
+                    125
+                  ],
+                  [
+                    256,
+                    175
+                  ],
+                  [
+                    235,
+                    225
+                  ],
+                  [
+                    214,
+                    275
+                  ],
+                  [
+                    191,
+                    325
+                  ],
+                  [
+                    172,
+                    370
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "heldout",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 32,
+                "rms_px": 33.957188532165105,
+                "median_px": 31.095124886707325,
+                "p90_px": 46.03857200344089,
+                "max_px": 50.164159674566605
+              }
+            ]
+          }
+        },
+        "after": {
+          "fit": {
+            "samples": 157,
+            "rms_px": 1.309379425928807,
+            "rows": [
+              {
+                "camera": "psm1",
+                "frame": 4,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    314,
+                    25
+                  ],
+                  [
+                    286,
+                    70
+                  ],
+                  [
+                    259,
+                    115
+                  ],
+                  [
+                    230,
+                    160
+                  ],
+                  [
+                    204,
+                    205
+                  ],
+                  [
+                    178,
+                    250
+                  ],
+                  [
+                    153,
+                    295
+                  ],
+                  [
+                    128,
+                    340
+                  ],
+                  [
+                    114,
+                    370
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 34,
+                "rms_px": 1.2082611532389058,
+                "median_px": 0.5434262189299162,
+                "p90_px": 1.45051422400614,
+                "max_px": 4.09340035378734
+              },
+              {
+                "camera": "psm1",
+                "frame": 75,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    307,
+                    25
+                  ],
+                  [
+                    255,
+                    50
+                  ],
+                  [
+                    206,
+                    75
+                  ],
+                  [
+                    167,
+                    100
+                  ],
+                  [
+                    117,
+                    125
+                  ],
+                  [
+                    73,
+                    150
+                  ],
+                  [
+                    29,
+                    175
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 27,
+                "rms_px": 1.055671336999433,
+                "median_px": 0.7313023039592788,
+                "p90_px": 1.7507290570919893,
+                "max_px": 2.165524514063299
+              },
+              {
+                "camera": "psm1",
+                "frame": 150,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    303,
+                    25
+                  ],
+                  [
+                    256,
+                    50
+                  ],
+                  [
+                    213,
+                    75
+                  ],
+                  [
+                    171,
+                    100
+                  ],
+                  [
+                    130,
+                    125
+                  ],
+                  [
+                    88,
+                    150
+                  ],
+                  [
+                    48,
+                    175
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 25,
+                "rms_px": 0.8812855780007723,
+                "median_px": 0.8154107916568986,
+                "p90_px": 1.192202665302198,
+                "max_px": 1.7461675169627153
+              },
+              {
+                "camera": "psm1",
+                "frame": 450,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    262,
+                    25
+                  ],
+                  [
+                    228,
+                    75
+                  ],
+                  [
+                    199,
+                    125
+                  ],
+                  [
+                    168,
+                    175
+                  ],
+                  [
+                    139,
+                    225
+                  ],
+                  [
+                    110,
+                    275
+                  ],
+                  [
+                    81,
+                    325
+                  ],
+                  [
+                    51,
+                    375
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 35,
+                "rms_px": 1.3382152973514885,
+                "median_px": 0.9455245999390749,
+                "p90_px": 2.0840771008623866,
+                "max_px": 3.216038164265205
+              },
+              {
+                "camera": "psm1",
+                "frame": 600,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    381,
+                    25
+                  ],
+                  [
+                    319,
+                    75
+                  ],
+                  [
+                    200,
+                    175
+                  ],
+                  [
+                    143,
+                    225
+                  ],
+                  [
+                    89,
+                    275
+                  ],
+                  [
+                    61,
+                    310
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 36,
+                "rms_px": 1.72683732002564,
+                "median_px": 0.5123468203374582,
+                "p90_px": 1.3058843615545694,
+                "max_px": 7.140189362538225
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 63,
+            "rms_px": 9.085808189409649,
+            "rows": [
+              {
+                "camera": "psm1",
+                "frame": 300,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    75,
+                    60
+                  ],
+                  [
+                    79,
+                    100
+                  ],
+                  [
+                    86,
+                    140
+                  ],
+                  [
+                    94,
+                    180
+                  ],
+                  [
+                    100,
+                    220
+                  ],
+                  [
+                    118,
+                    300
+                  ],
+                  [
+                    126,
+                    340
+                  ],
+                  [
+                    136,
+                    380
+                  ],
+                  [
+                    144,
+                    420
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "heldout",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 31,
+                "rms_px": 7.335461317663831,
+                "median_px": 6.907880254678614,
+                "p90_px": 11.107790859689112,
+                "max_px": 11.77779909340756
+              },
+              {
+                "camera": "psm1",
+                "frame": 525,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    316,
+                    25
+                  ],
+                  [
+                    296,
+                    75
+                  ],
+                  [
+                    276,
+                    125
+                  ],
+                  [
+                    256,
+                    175
+                  ],
+                  [
+                    235,
+                    225
+                  ],
+                  [
+                    214,
+                    275
+                  ],
+                  [
+                    191,
+                    325
+                  ],
+                  [
+                    172,
+                    370
+                  ]
+                ],
+                "uncertainty_px": 5,
+                "split": "heldout",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 32,
+                "rms_px": 10.506979203750749,
+                "median_px": 7.7424862118559785,
+                "p90_px": 17.997270604816606,
+                "max_px": 21.934205189298655
+              }
+            ]
+          }
+        }
+      },
+      "psm2": {
+        "before": {
+          "fit": {
+            "samples": 140,
+            "rms_px": 43.239023635303404,
+            "rows": [
+              {
+                "camera": "psm2",
+                "frame": 4,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    384,
+                    25
+                  ],
+                  [
+                    391,
+                    75
+                  ],
+                  [
+                    398,
+                    125
+                  ],
+                  [
+                    402,
+                    175
+                  ],
+                  [
+                    409,
+                    225
+                  ],
+                  [
+                    414,
+                    275
+                  ],
+                  [
+                    417,
+                    325
+                  ],
+                  [
+                    419,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 42.22920964428215,
+                "median_px": 38.54329846492779,
+                "p90_px": 57.93924340281929,
+                "max_px": 62.41508688231615
+              },
+              {
+                "camera": "psm2",
+                "frame": 75,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    397,
+                    25
+                  ],
+                  [
+                    401,
+                    75
+                  ],
+                  [
+                    406,
+                    125
+                  ],
+                  [
+                    411,
+                    175
+                  ],
+                  [
+                    416,
+                    225
+                  ],
+                  [
+                    420,
+                    275
+                  ],
+                  [
+                    423,
+                    325
+                  ],
+                  [
+                    425,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 42.96774427426524,
+                "median_px": 39.05799661105087,
+                "p90_px": 61.36821204985424,
+                "max_px": 67.22633440174835
+              },
+              {
+                "camera": "psm2",
+                "frame": 150,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    392,
+                    25
+                  ],
+                  [
+                    398,
+                    75
+                  ],
+                  [
+                    402,
+                    125
+                  ],
+                  [
+                    407,
+                    175
+                  ],
+                  [
+                    413,
+                    225
+                  ],
+                  [
+                    416,
+                    275
+                  ],
+                  [
+                    417,
+                    325
+                  ],
+                  [
+                    420,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 41.44215157151858,
+                "median_px": 37.55708163890195,
+                "p90_px": 58.57620414855319,
+                "max_px": 65.2260093555848
+              },
+              {
+                "camera": "psm2",
+                "frame": 450,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    397,
+                    25
+                  ],
+                  [
+                    400,
+                    75
+                  ],
+                  [
+                    404,
+                    125
+                  ],
+                  [
+                    409,
+                    175
+                  ],
+                  [
+                    411,
+                    225
+                  ],
+                  [
+                    413,
+                    275
+                  ],
+                  [
+                    415,
+                    325
+                  ],
+                  [
+                    414,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 42.762741557465496,
+                "median_px": 40.22363806000877,
+                "p90_px": 61.25798890594267,
+                "max_px": 64.92494071109392
+              },
+              {
+                "camera": "psm2",
+                "frame": 600,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    393,
+                    25
+                  ],
+                  [
+                    399,
+                    75
+                  ],
+                  [
+                    406,
+                    125
+                  ],
+                  [
+                    411,
+                    175
+                  ],
+                  [
+                    416,
+                    225
+                  ],
+                  [
+                    421,
+                    275
+                  ],
+                  [
+                    425,
+                    325
+                  ],
+                  [
+                    424,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 46.60931920855463,
+                "median_px": 44.32584271072632,
+                "p90_px": 63.96192196788539,
+                "max_px": 65.884813639784
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 54,
+            "rms_px": 45.875986198071764,
+            "rows": [
+              {
+                "camera": "psm2",
+                "frame": 300,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    404,
+                    25
+                  ],
+                  [
+                    407,
+                    75
+                  ],
+                  [
+                    411,
+                    125
+                  ],
+                  [
+                    416,
+                    175
+                  ],
+                  [
+                    418,
+                    225
+                  ],
+                  [
+                    421,
+                    275
+                  ],
+                  [
+                    421,
+                    325
+                  ],
+                  [
+                    421,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "heldout",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 46.532353016490994,
+                "median_px": 44.22112226969908,
+                "p90_px": 64.86236859740127,
+                "max_px": 69.29530553159108
+              },
+              {
+                "camera": "psm2",
+                "frame": 525,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    398,
+                    50
+                  ],
+                  [
+                    404,
+                    100
+                  ],
+                  [
+                    408,
+                    150
+                  ],
+                  [
+                    412,
+                    200
+                  ],
+                  [
+                    414,
+                    250
+                  ],
+                  [
+                    416,
+                    300
+                  ],
+                  [
+                    417,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "heldout",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 26,
+                "rms_px": 45.15846174980718,
+                "median_px": 43.63669489156139,
+                "p90_px": 62.13863175587688,
+                "max_px": 66.55323431863553
+              }
+            ]
+          }
+        },
+        "after": {
+          "fit": {
+            "samples": 140,
+            "rms_px": 1.7355803879499028,
+            "rows": [
+              {
+                "camera": "psm2",
+                "frame": 4,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    384,
+                    25
+                  ],
+                  [
+                    391,
+                    75
+                  ],
+                  [
+                    398,
+                    125
+                  ],
+                  [
+                    402,
+                    175
+                  ],
+                  [
+                    409,
+                    225
+                  ],
+                  [
+                    414,
+                    275
+                  ],
+                  [
+                    417,
+                    325
+                  ],
+                  [
+                    419,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 1.3499936500009697,
+                "median_px": 1.213674659569626,
+                "p90_px": 1.953243294322553,
+                "max_px": 2.2041614760777564
+              },
+              {
+                "camera": "psm2",
+                "frame": 75,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    397,
+                    25
+                  ],
+                  [
+                    401,
+                    75
+                  ],
+                  [
+                    406,
+                    125
+                  ],
+                  [
+                    411,
+                    175
+                  ],
+                  [
+                    416,
+                    225
+                  ],
+                  [
+                    420,
+                    275
+                  ],
+                  [
+                    423,
+                    325
+                  ],
+                  [
+                    425,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 1.4964193662742586,
+                "median_px": 0.8604753717903876,
+                "p90_px": 2.4287020654372347,
+                "max_px": 2.6341875744468104
+              },
+              {
+                "camera": "psm2",
+                "frame": 150,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    392,
+                    25
+                  ],
+                  [
+                    398,
+                    75
+                  ],
+                  [
+                    402,
+                    125
+                  ],
+                  [
+                    407,
+                    175
+                  ],
+                  [
+                    413,
+                    225
+                  ],
+                  [
+                    416,
+                    275
+                  ],
+                  [
+                    417,
+                    325
+                  ],
+                  [
+                    420,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 1.9523380596228788,
+                "median_px": 1.1325096706496773,
+                "p90_px": 3.0938498059453585,
+                "max_px": 4.1739244463621965
+              },
+              {
+                "camera": "psm2",
+                "frame": 450,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    397,
+                    25
+                  ],
+                  [
+                    400,
+                    75
+                  ],
+                  [
+                    404,
+                    125
+                  ],
+                  [
+                    409,
+                    175
+                  ],
+                  [
+                    411,
+                    225
+                  ],
+                  [
+                    413,
+                    275
+                  ],
+                  [
+                    415,
+                    325
+                  ],
+                  [
+                    414,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 1.580365259157423,
+                "median_px": 0.630256727151518,
+                "p90_px": 2.8960304640992174,
+                "max_px": 2.910999732268226
+              },
+              {
+                "camera": "psm2",
+                "frame": 600,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    393,
+                    25
+                  ],
+                  [
+                    399,
+                    75
+                  ],
+                  [
+                    406,
+                    125
+                  ],
+                  [
+                    411,
+                    175
+                  ],
+                  [
+                    416,
+                    225
+                  ],
+                  [
+                    421,
+                    275
+                  ],
+                  [
+                    425,
+                    325
+                  ],
+                  [
+                    424,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "fit",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 2.165701823653096,
+                "median_px": 2.235709467520137,
+                "p90_px": 2.8260489290119,
+                "max_px": 3.062245377907744
+              }
+            ]
+          },
+          "heldout": {
+            "samples": 54,
+            "rms_px": 1.994821931112379,
+            "rows": [
+              {
+                "camera": "psm2",
+                "frame": 300,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    404,
+                    25
+                  ],
+                  [
+                    407,
+                    75
+                  ],
+                  [
+                    411,
+                    125
+                  ],
+                  [
+                    416,
+                    175
+                  ],
+                  [
+                    418,
+                    225
+                  ],
+                  [
+                    421,
+                    275
+                  ],
+                  [
+                    421,
+                    325
+                  ],
+                  [
+                    421,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "heldout",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 28,
+                "rms_px": 2.4393184362324933,
+                "median_px": 2.329091137136513,
+                "p90_px": 3.5730247322379376,
+                "max_px": 3.989872154179794
+              },
+              {
+                "camera": "psm2",
+                "frame": 525,
+                "boundary": "negative_y_outer_perimeter",
+                "side_identity_confidence": "high relative to the exterior bank of wound1; camera-independent native side identity",
+                "feature": "physical silicone-to-gray-support silhouette",
+                "points_px": [
+                  [
+                    398,
+                    50
+                  ],
+                  [
+                    404,
+                    100
+                  ],
+                  [
+                    408,
+                    150
+                  ],
+                  [
+                    412,
+                    200
+                  ],
+                  [
+                    414,
+                    250
+                  ],
+                  [
+                    416,
+                    300
+                  ],
+                  [
+                    417,
+                    350
+                  ]
+                ],
+                "uncertainty_px": 6,
+                "split": "heldout",
+                "notes": "Visible physical exterior silhouette on the wound1 exterior side. Samples avoid image crop, lens vignette, tools and the small gray-support blemish. No corner or exact 3D material-point identity is assigned. This is the outer silhouette, not an invented coplanar region boundary or inner wound lip.",
+                "kind": "boundary",
+                "samples": 26,
+                "rms_px": 1.3626233304253894,
+                "median_px": 1.1792008591469902,
+                "p90_px": 1.8248872381220722,
+                "max_px": 3.0551867845208385
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "optimization": {
+    "success": true,
+    "evaluations": 30,
+    "message": "`xtol` termination condition is satisfied.",
+    "cost": 166.6591254217499,
+    "parameters": [
+      -3.6196959718714803,
+      -0.04583703183806096,
+      0.1185085298231116,
+      -0.23464210622715265,
+      -0.037263967947687805,
+      0.01424189881947894,
+      -0.3658300562267885,
+      -1.104207025231634,
+      86.05986682171334,
+      68.70867126387955,
+      17.92327633554968,
+      -1.3700495286521666,
+      3.3474106001665747,
+      -5.0064273897288345,
+      -47.58875274573811,
+      6.484724719762619,
+      6.556676109205054,
+      318.75157352012917,
+      251.25218981222648,
+      -1.6392520142881855,
+      -3.2428533454181503,
+      -5.103151883917605,
+      -50.24062653248906,
+      6.591856631213491,
+      6.610128388311898,
+      316.6554055120377,
+      268.030032653222,
+      -0.3907104006454308,
+      0.053139554931237974,
+      -0.007079037210003225,
+      -10.514478494081883,
+      53.97882200512052,
+      -14.590324125908039,
+      -0.06754386586244741,
+      -0.07106589565937614,
+      -153.0762802778804,
+      -119.38835582756255,
+      -0.3668164011267615,
+      0.09712933974428523,
+      0.027299516919623634,
+      -9.247534588281294,
+      54.150746360023106,
+      -6.780562395833032,
+      -0.003296778134405806,
+      0.005030035393276744,
+      -204.98795056137743,
+      -99.06968097469388
+    ],
+    "active_bounds": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "optimality": 357.0,
+    "optimality_precision": "Three significant digits preserved from the solver console; original full-precision value was not serialized.",
+    "termination_status": 3,
+    "termination_interpretation": "Local step-size stopping criterion; nonzero first-order optimality and nonsmooth silhouette visibility do not establish a stationary or global optimum."
+  },
+  "base": {
+    "world_to_local_row_matrix": [
+      [
+        0.9998829781026586,
+        -0.013982670239650243,
+        0.006206048140917015
+      ],
+      [
+        0.014060442527423143,
+        0.9998208694389858,
+        -0.01267016141189137
+      ],
+      [
+        -0.0060277737591262325,
+        0.012755938508771113,
+        0.9999004710351272
+      ]
+    ],
+    "rectangle_min_m": [
+      -0.06347601908981478,
+      -0.0663273411172402
+    ],
+    "rectangle_max_m": [
+      0.06971133856553278,
+      0.066153210501664
+    ],
+    "top_m": -0.003819052911122082,
+    "bottom_m": -0.00826966468566116,
+    "geometry_changed": false
+  },
+  "fixture": {
+    "port_a_psm1_native": [
+      6.2634685832,
+      3.94001295,
+      -1.85600996
+    ],
+    "port_b_psm2_native": [
+      5.2422602015,
+      1.45921122,
+      3.99158209
+    ],
+    "feet_plane_x_native": -1.8899999857,
+    "up_native": [
+      1,
+      0,
+      0
+    ],
+    "scale_m_per_native_unit": 0.026790820417577382,
+    "height_difference_target_m": 0.02735901036304952,
+    "error_before_m": 0.0,
+    "error_after_m": 0.0,
+    "port_height_errors_before_m": [
+      0.0,
+      0.0
+    ],
+    "port_height_errors_after_m": [
+      0.0,
+      0.0
+    ],
+    "estimated_port_midpoint_uncertainty_m": 0.003,
+    "T_reference_from_scaled_native": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "T_world_from_scaled_native": [
+      [
+        0.0062060481409170155,
+        0.4373021138032145,
+        -0.8992932481842134,
+        0.024306768908404996
+      ],
+      [
+        -0.012670161411891367,
+        0.8992727637574942,
+        0.4372047156353126,
+        -0.10774072976752389
+      ],
+      [
+        0.9999004710351272,
+        0.008680877098449384,
+        0.01112161843134252,
+        0.02292804977517715
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "pad_bottom_above_fixture_feet_m": 0.01893214252966419,
+    "support_plane_height_world_m": -0.02619294102121084,
+    "constraint_meaning": "Each constant arm-base transform maps the measured SUJ pivot exactly onto a scaled CAD port; pad normal is parallel but displacement relative to feet is free. Scale and displacement are fitted, not measured."
+  },
+  "holders": {
+    "psm1": {
+      "radial_offset_mm": 6.69477846685284,
+      "axial_offset_mm": -47.58875274573811,
+      "optical_axis_tilt_deg": 0.0
+    },
+    "psm2": {
+      "radial_offset_mm": 6.077560579949138,
+      "axial_offset_mm": -50.24062653248906,
+      "optical_axis_tilt_deg": 0.0
+    }
+  },
+  "limitations": [
+    "Camera intrinsics, lens distortion and arm-base calibration are estimated, not measured hand-eye calibration.",
+    "Fixed distortion is inherited from prior fits; catalog FOV and the 35 mm unspecified mount datum are not hard measurements.",
+    "Repeated own-shaft observations share one mount and are correlated.",
+    "The physical PSM2 instrument CAD is unavailable; retained needle-driver mesh is a surrogate.",
+    "Only one pad perimeter side is visible. Third fixture opening and endoscope optical-to-shaft angle are unmeasured.",
+    "Exact RCM port placement is a modeling constraint; CAD rim-depth ambiguity is approximately 3 mm."
+  ]
+}

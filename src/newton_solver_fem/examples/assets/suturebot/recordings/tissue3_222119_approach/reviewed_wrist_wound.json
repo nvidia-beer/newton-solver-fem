@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "source_episode": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery",
+  "source_only": true,
+  "status": "source_reviewed_manual_wrist_incision_fragments",
+  "source_video_sha256": {
+    "psm1": "4936db40978b4f39e56039e27e86d519e4aa132d47370e7d2755d03cbb607528",
+    "psm2": "333b1634123eb907cf69bacfd7f394a556cc3bc3a3fd03f1f01d691963ca0514"
+  },
+  "source_images": {
+    "psm1/5": {
+      "decoded_bgr_sha256": "7af9bd173acbd871cbc44cbe58dfe96a4a8b6b69f3f6488a91b1abd2cd759f63",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/5": {
+      "decoded_bgr_sha256": "8cf545c01412e339658475330d21907afbfceb4916e5fef25dc110d7f535f04b",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/33": {
+      "decoded_bgr_sha256": "9a318f4dc5b29c49b66aec5da787abfa21e8e129b6defaf46ef3738d0ade70e4",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/33": {
+      "decoded_bgr_sha256": "557547ea678e20e185d9baa0a52a13f5b840d66fd357c42b2b8109bd0e19ba07",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/47": {
+      "decoded_bgr_sha256": "b80e55663c9bf3eaa89c0bd57ea1fe259970ccc6e8b43911139ff5807ff3e151",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/47": {
+      "decoded_bgr_sha256": "886f05add9615bc0ac4ac0a8382e1d068bd9d909dec4059d5d130cbfebe7b6bf",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/76": {
+      "decoded_bgr_sha256": "d4ac3f72155478df939b8641939427d64f6fb6238e7db4f22607c6d6f04d1da6",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/76": {
+      "decoded_bgr_sha256": "c0ba1b057720b580e7f1d8445ed286dbbf58902720d2eb36559d084a75013e9f",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/104": {
+      "decoded_bgr_sha256": "b1b0b208631e3ed102fee03abca5560798dfb7c2f2d28cd2301de46a4aa54aa3",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/104": {
+      "decoded_bgr_sha256": "a6a43407cc29c18048e43ae88199ce407b9c0019e9dca4694522de2a71dfa691",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1/147": {
+      "decoded_bgr_sha256": "f471bb0f24e8a0c7303ac609a312a015559874c9ae65ced3a941b140988864d2",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2/147": {
+      "decoded_bgr_sha256": "ac6d65df4d223f4ffd464b44fb807e2e8810a77c326c3ce39cf64cf81c30f4a4",
+      "image_size": [
+        640,
+        480
+      ]
+    }
+  },
+  "fit_frames": [
+    5,
+    47,
+    104
+  ],
+  "reserved_frames": [
+    33,
+    76,
+    147
+  ],
+  "coordinate_convention": "Native640x480 zero-based x-right/y-down pixels; decoded_bgr_sha256 hashes uint8 BGR bytes.",
+  "records": [
+    {
+      "camera": "psm1",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          420,
+          127
+        ],
+        [
+          410,
+          155
+        ],
+        [
+          395,
+          184
+        ],
+        [
+          378,
+          207
+        ],
+        [
+          365,
+          221
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/5",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm2",
+      "frame": 5,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          219,
+          170
+        ],
+        [
+          222,
+          210
+        ],
+        [
+          231,
+          253
+        ],
+        [
+          241,
+          285
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/5",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm1",
+      "frame": 33,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          420,
+          143
+        ],
+        [
+          410,
+          171
+        ],
+        [
+          396,
+          196
+        ],
+        [
+          380,
+          218
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/33",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm2",
+      "frame": 33,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          218,
+          170
+        ],
+        [
+          223,
+          210
+        ],
+        [
+          230,
+          250
+        ],
+        [
+          240,
+          285
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/33",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm1",
+      "frame": 47,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          414,
+          153
+        ],
+        [
+          401,
+          180
+        ],
+        [
+          384,
+          207
+        ],
+        [
+          367,
+          227
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/47",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm2",
+      "frame": 47,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          217,
+          170
+        ],
+        [
+          221,
+          210
+        ],
+        [
+          231,
+          255
+        ],
+        [
+          240,
+          285
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/47",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm1",
+      "frame": 76,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          408,
+          162
+        ],
+        [
+          394,
+          187
+        ],
+        [
+          377,
+          213
+        ],
+        [
+          359,
+          234
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/76",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm2",
+      "frame": 76,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          219,
+          170
+        ],
+        [
+          222,
+          210
+        ],
+        [
+          230,
+          250
+        ],
+        [
+          240,
+          285
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/76",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm1",
+      "frame": 104,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          414,
+          130
+        ],
+        [
+          405,
+          160
+        ],
+        [
+          390,
+          188
+        ],
+        [
+          372,
+          215
+        ],
+        [
+          356,
+          232
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/104",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm2",
+      "frame": 104,
+      "split": "fit",
+      "heldout": false,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          217,
+          170
+        ],
+        [
+          221,
+          210
+        ],
+        [
+          230,
+          250
+        ],
+        [
+          239,
+          285
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/104",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm1",
+      "frame": 147,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          418,
+          116
+        ],
+        [
+          409,
+          145
+        ],
+        [
+          397,
+          175
+        ],
+        [
+          380,
+          204
+        ],
+        [
+          365,
+          222
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm1/147",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    },
+    {
+      "camera": "psm2",
+      "frame": 147,
+      "split": "reserved",
+      "heldout": true,
+      "feature": "visible_wound1_incision_center",
+      "public_region": 1,
+      "points_px": [
+        [
+          216,
+          170
+        ],
+        [
+          220,
+          210
+        ],
+        [
+          230,
+          250
+        ],
+        [
+          240,
+          285
+        ]
+      ],
+      "uncertainty_px": 10.0,
+      "source_image": "psm2/147",
+      "notes": "Center of dark incision fragment; endpoints are visibility limits. Original frame split is preserved."
+    }
+  ],
+  "limitations": [
+    "Manual dark incision-center fragments, not exact material correspondences or lip crest segmentation.",
+    "10px source-only uncertainty; retain source videos and inspect feature identity before interpreting metric depth.",
+    "Frame147 is outside the conservative5\u2013141 approach phase and remains reserved; it must not enter fitting.",
+    "Own gripper occlusion excludes lower PSM1 slit; PSM2 fragment starts below needle/thread crossing. No model projection guided coordinates."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "before_manifest_sha256": "b02f757f0f9d578d6bcb4677829e9123c9357c20153b25a8d884530dc40068e3",
+  "after_manifest_sha256": "21bf6a1c0a58cc0d243ecebf82497a2994c9568c23fd91baf658b3a09a3142bd",
+  "updated_fields": [
+    "needle.grasp.policy",
+    "needle.grasp.regrasp_policy",
+    "provenance.preparation_sources_sha256.prepare_recording_needle.py",
+    "additional_assets",
+    "needle.runtime_validation_report"
+  ],
+  "previous_grasp_metadata": {
+    "close_angle_rad": 0.05,
+    "open_angle_rad": 0.18,
+    "capture_distance_m": 0.0025,
+    "tool_body_paths": {
+      "psm1": "/SutureBotReplay/PSM1/yaw",
+      "psm2": "/SutureBotReplay/PSM2/yaw"
+    },
+    "tool_point_local_m": {
+      "psm1": [
+        0,
+        0.006,
+        0
+      ],
+      "psm2": [
+        0,
+        0.006,
+        0
+      ]
+    },
+    "policy": "recorded jaw hysteresis and nearest local needle surface; constant tool-to-needle transform while held"
+  },
+  "new_grasp_metadata": {
+    "close_angle_rad": 0.05,
+    "open_angle_rad": 0.18,
+    "capture_distance_m": 0.0025,
+    "tool_body_paths": {
+      "psm1": "/SutureBotReplay/PSM1/yaw",
+      "psm2": "/SutureBotReplay/PSM2/yaw"
+    },
+    "tool_point_local_m": {
+      "psm1": [
+        0,
+        0.006,
+        0
+      ],
+      "psm2": [
+        0,
+        0.006,
+        0
+      ]
+    },
+    "policy": "Recorded jaw hysteresis: a fresh open-to-close edge translates the nearest needle centerline point to the tool grasp point while preserving world orientation; nearby closed-jaw handoff remains allowed; one constant tool-to-needle transform is used while held.",
+    "regrasp_policy": "fresh_closure_translation"
+  },
+  "geometry_motion_camera_and_initialization_byte_identical": true,
+  "unchanged_assets_sha256": {
+    "needle.usdc": "fd109c648c830000f2501df243bada6c0b3bca70ec57c95d093afc17985703fa",
+    "needle_inputs.npz": "06e32186ae3378ff8194ae310d3fe436cf744331961d27abb77c9bbeae0ca1f2",
+    "needle_initialization.json": "66a6a68a179e45fa9be6bddd4530f1ea6ad1d7ca789ed0d5cb52521b9c091920",
+    "needle_initialization.jpg": "f8500bdcf40aa98ad8b510a0725fc150b9ee23c604b207607a7230c4d4f38118",
+    "phantom.usdc": "ea046d474aab6f0be7917e22bb5cf78de9b1e4b03b48073a5100945ebee6a0f7",
+    "rig.usdc": "3ae0095c517ea66c337e02c8aa51c0f13bdb3513221d6d4b746be7c05f260a53",
+    "motion.npz": "efa2609e32d0a66219097c0f4a89d5b500f74f9b64f28fc1a9e8d796b0ac5ff7",
+    "camera_poses.npz": "f20da4d85cac773a2618dda4e3a2fe7c87ac71af4ce1a54ef9027d20e48b3265",
+    "scene.usda": "e30ce457207a0ea76579d2e357be8d9f6ee79cfac5fdfd834c604d5581d98f71",
+    "calibration.json": "7a834a931570367c014314939229dce9f61b495c1991fe1c5ce2b0554ec14571",
+    "point_labels.json": "8be2dbd353a2ee8ad3b6d843bba38bb8c57d75f4b9a74feb79398b282589f2bf",
+    "textures/point_labels.png": "358d0c01cfe97f91ad847e5be2e6334ae118ce891340aaa694071e7947e2ce0e"
+  },
+  "source_episode_modified": false,
+  "scope": "Descriptive runtime-policy metadata update only; no fit, USD, source data, initial grasp or geometry regeneration."
+}

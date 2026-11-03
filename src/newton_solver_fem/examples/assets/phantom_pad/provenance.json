@@ -1,10 +1,10 @@
 {
-  "source_directory": "/home/beer/Dev/MSc/SutureBot-workbench/outputs/phantom_parametric/lowered_quality_groups_v3",
+  "source_directory": "/home/beer/Dev/MSc/SutureBot-workbench/outputs/simulation/suturebot_regions_upper_rim",
   "original_obj_sha256": "98eba4e2877cb7dd01f8e602a032a721141e8b8d0b3401e1b854772f1dfc81c0",
   "upstream": "https://github.com/surgical-robotics-ai/surgical_robotics_challenge",
   "upstream_commit": "26bb2f6",
   "license_note": "The SutureBot source README records no upstream LICENSE file; the mesh is not asserted to be Apache-2.0.",
-  "processing": "Source grouped USD copied with identical positions, connectivity and region ownership; derived rest data, quality arrays and suggested constraint node lists removed. Runtime computes cut nodes from selected geometry.",
+  "processing": "Original region IDs and all geometry retained. Only original region 1 is split into remainder 1, wound-five region 10, and upper-slit region 11. Public IDs are provided separately as 1\u201312. Payloads 0 and 2\u20139 copied byte-for-byte from the original runtime bundle. No rotations. Runtime computes its own constraints.",
   "removed_attributes": [
     "suturebot:boundaryVertexIndices",
     "suturebot:cutInterfaceVertexIndices",
@@ -13,21 +13,271 @@
     "suturebot:meanRatioQuality",
     "suturebot:restVolumesM3"
   ],
+  "original_runtime_baseline": {
+    "repository": "/home/beer/Dev/Robotics/NewtonSolvers/newton-solver-fem",
+    "revision": "7aa0ab9a2032d38e38b8a10ce72bd89d75e00cc1",
+    "path": "src/newton_solver_fem/examples/assets/phantom_pad/"
+  },
+  "unchanged_original_payloads": {
+    "phantom_regions_payloads/region_000_base_and_lettering.usdc": "e1d67af37a3cb6d2c0dff2bb1b39d773f1197f7bc2db9fdd883d78267b5a48c7",
+    "phantom_regions_payloads/region_002_feature_02.usdc": "ffd338ba156b14d2391d8f48c8c903bd8084dde8ce675fa9b34a79fcecc3b013",
+    "phantom_regions_payloads/region_003_feature_03.usdc": "76c7cb1fbfeb72e61bb4402a27b5d1f10eaecb15b115efa100d1d7f0d3026ed4",
+    "phantom_regions_payloads/region_004_feature_04.usdc": "638a2728bb203b7f7ccc2c10e5d2fc17ca662d3763bc16cf65f2f6de73b5fd7a",
+    "phantom_regions_payloads/region_005_feature_05.usdc": "38824c34a68a6788146982b08192ccaf556eef5ecd6f9791ed3632d7aedc19d3",
+    "phantom_regions_payloads/region_006_feature_06.usdc": "b8ac9e3d67ca515e74a2e7495683716637911b650a7ba2c1c39918bb1de1cae3",
+    "phantom_regions_payloads/region_007_feature_07.usdc": "28763d6c606ac323169c395bfb7059e5d9d6f1f7c9c0da69dff35409bf888567",
+    "phantom_regions_payloads/region_008_feature_08.usdc": "3f11004229357330d068099eefd0e457f3bd60c0b7cd543b555348a0fc1d5fe1",
+    "phantom_regions_payloads/region_009_upper_paired_strips.usdc": "2356925ad8eed756a7a2181bc3891e8175149e8fcae05d99da97ed6013cb0040"
+  },
+  "dataset_wounds": {
+    "schema_version": 5,
+    "reference_url": "https://suturebot.github.io/",
+    "reference_figure_url": "https://suturebot.github.io/static/images/scene_setup.jpg",
+    "semantics": "Public labels 1\u20136 identify dataset wounds; labels 7\u201312 identify remaining practice domains. Only original region 1 is split: lower-left wound 5 with its upper rim, upper narrow slit 12, and remainder 8. The lower-left wrap stays in region 8. Nine other original regions remain byte-identical.",
+    "source_catalog": "outputs/phantom_parametric/lowered_quality_groups_v3",
+    "wound_5_split": {
+      "source_region_id": 1,
+      "method": "surface_landmark_polygon",
+      "polygon_pad_local_xy_m": [
+        [
+          0.064,
+          0.024
+        ],
+        [
+          0.065,
+          0.015
+        ],
+        [
+          0.063,
+          0.007
+        ],
+        [
+          0.058,
+          0.003
+        ],
+        [
+          0.051,
+          0.0035
+        ],
+        [
+          0.045,
+          0.005
+        ],
+        [
+          0.039,
+          0.007
+        ],
+        [
+          0.034,
+          0.0095
+        ],
+        [
+          0.03,
+          0.014
+        ],
+        [
+          0.03,
+          0.018
+        ],
+        [
+          0.032,
+          0.023
+        ],
+        [
+          0.035,
+          0.028
+        ],
+        [
+          0.038,
+          0.033
+        ],
+        [
+          0.042,
+          0.038
+        ],
+        [
+          0.047,
+          0.042
+        ],
+        [
+          0.052,
+          0.045
+        ],
+        [
+          0.057,
+          0.044
+        ],
+        [
+          0.061,
+          0.039
+        ],
+        [
+          0.063,
+          0.032
+        ]
+      ],
+      "slit_centerline_landmarks_pad_local_xy_m": [
+        [
+          0.0423,
+          0.0174
+        ],
+        [
+          0.0477,
+          0.0245
+        ],
+        [
+          0.053,
+          0.0315
+        ]
+      ],
+      "excluded_groove_landmarks_pad_local_xy_m": [
+        [
+          0.025,
+          0.021
+        ],
+        [
+          0.03,
+          0.028
+        ],
+        [
+          0.034,
+          0.034
+        ],
+        [
+          0.041,
+          0.041
+        ]
+      ],
+      "repair_band_half_width_m": 0.003,
+      "description": "Trace the lower-left slit patch as in the preserved eleven-region catalog, adding only the thin upper shoulder rim. Preserve the previously accepted lower boundary exactly: the bottom-left wrap and broad neighboring groove remain in public region 8. No dataset-provided segmentation mask is claimed.",
+      "evidence": "outputs/simulation/suturebot_regions_review/wound5_diagnostic.png and wound5_polygon_proposal.png; original protected surface label 8 is a single connected feature and does not supply an internal wound-five boundary.",
+      "destination_region_id": 10,
+      "name": "wound_5_slit_patch",
+      "remainder_region_id": 1,
+      "included_upper_rim_landmarks_pad_local_xy_m": [
+        [
+          0.051,
+          0.007
+        ],
+        [
+          0.045,
+          0.008
+        ],
+        [
+          0.039,
+          0.01
+        ],
+        [
+          0.034,
+          0.012
+        ]
+      ],
+      "preserved_lower_boundary_catalog": "outputs/simulation/suturebot_regions_wound5_split",
+      "preserve_reference_ownership_at_or_above_local_y_m": 0.015
+    },
+    "dataset_roles": {
+      "training_wound_ids": [
+        1
+      ],
+      "generalization_wound_ids": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "display_orientation": "Keep the original native USD geometry and root frame. The 2D map rotates its presentation 180 degrees for upright lettering; the 3D camera views from the +Y lettering side.",
+    "wound_to_region": {
+      "1": 6,
+      "2": 2,
+      "3": 5,
+      "4": 7,
+      "5": 10,
+      "6": 9
+    },
+    "original_runtime_bundle": "outputs/simulation/suturebot_original_runtime",
+    "upper_slit_split": {
+      "source_region_id": 1,
+      "destination_region_id": 11,
+      "display_region_id": 12,
+      "name": "upper_narrow_slit",
+      "method": "surface_shoulder_polygon",
+      "polygon_pad_local_xy_m": [
+        [
+          0.05,
+          -0.07
+        ],
+        [
+          -0.03,
+          -0.07
+        ],
+        [
+          -0.03,
+          -0.012
+        ],
+        [
+          -0.002,
+          -0.012
+        ],
+        [
+          0.005,
+          -0.017
+        ],
+        [
+          0.012,
+          -0.02
+        ],
+        [
+          0.018,
+          -0.021
+        ],
+        [
+          0.024,
+          -0.019
+        ],
+        [
+          0.028,
+          -0.016
+        ],
+        [
+          0.05,
+          -0.016
+        ]
+      ],
+      "repair_band_half_width_m": 0.003,
+      "slit_centerline_landmarks_pad_local_xy_m": [
+        [
+          0.005,
+          -0.034
+        ],
+        [
+          0.01,
+          -0.03
+        ],
+        [
+          0.013,
+          -0.027
+        ]
+      ],
+      "description": "Separate the upper narrow slit between public regions 3 and 4 from the central circular shoulder, within original region 1 only. The shoulder trace defines an approximate simulation selection boundary."
+    }
+  },
   "files": {
     "phantom_regions.usd": {
-      "source_sha256": "a9a2cda618dc1600235345cc225b27382f956f7fb2306756efb37dbcd76b9d54",
-      "bundled_sha256": "a9a2cda618dc1600235345cc225b27382f956f7fb2306756efb37dbcd76b9d54"
+      "source_sha256": "45218965fe8b3eef6d0492f79317a5a42c154b29b2b96bf7e937fc197d415324",
+      "bundled_sha256": "45218965fe8b3eef6d0492f79317a5a42c154b29b2b96bf7e937fc197d415324"
     },
     "phantom_regions_payloads/region_000_base_and_lettering.usdc": {
-      "source_sha256": "aedcae62e5adb7a81b99d1d68a9f415686c21d4e0ca998df9759597e7a2527de",
+      "source_sha256": "03634b57ae7066ccd5aee18b83841a13e84321f1b4e0097af0d3382c8428599d",
       "bundled_sha256": "e1d67af37a3cb6d2c0dff2bb1b39d773f1197f7bc2db9fdd883d78267b5a48c7"
     },
     "phantom_regions_payloads/region_001_feature_01.usdc": {
-      "source_sha256": "20ea834fcca0ad99d655a9cbac1aae0fcc83aa070f968ed81fdc3e5942789ad1",
-      "bundled_sha256": "2a03bd3bab5134c3f9a749207dc5a186eabb8f197c6e551e3015d35d14c89fd3"
+      "source_sha256": "3ab99dc26ad836c9f79cc7b2a217791bb3903fd4a311a44ccd69b9d92f393ec5",
+      "bundled_sha256": "9a8460b85b0af05a05fb0f556231361649261f06e73a508f9daa3580ac03e7cc"
     },
     "phantom_regions_payloads/region_002_feature_02.usdc": {
-      "source_sha256": "07e4b1cf704d795179f6adc5b2b24106de24a27cc43b3e71869129be0c724221",
+      "source_sha256": "cd8bfd0cba786c4fbdabcafeb93bffb6939f236b0bf0391de67c8b2516bde262",
       "bundled_sha256": "ffd338ba156b14d2391d8f48c8c903bd8084dde8ce675fa9b34a79fcecc3b013"
     },
     "phantom_regions_payloads/region_003_feature_03.usdc": {
@@ -39,15 +289,15 @@
       "bundled_sha256": "638a2728bb203b7f7ccc2c10e5d2fc17ca662d3763bc16cf65f2f6de73b5fd7a"
     },
     "phantom_regions_payloads/region_005_feature_05.usdc": {
-      "source_sha256": "cfbd55877f34399695a99915df61cfe441ab2f78e2af9909f507ec0997c827d3",
+      "source_sha256": "82bcd9f3bf461416732c525b1c717d8cd517b00acf98596d966539a90974a701",
       "bundled_sha256": "38824c34a68a6788146982b08192ccaf556eef5ecd6f9791ed3632d7aedc19d3"
     },
     "phantom_regions_payloads/region_006_feature_06.usdc": {
-      "source_sha256": "93d72b467fbe1b4652cf413d998d5478b44a4297aac42012ef1cd9bba1cf7881",
+      "source_sha256": "65e4834eb721e37bd42c023a428f9ad417d2e23daef739dce915508249ba4207",
       "bundled_sha256": "b8ac9e3d67ca515e74a2e7495683716637911b650a7ba2c1c39918bb1de1cae3"
     },
     "phantom_regions_payloads/region_007_feature_07.usdc": {
-      "source_sha256": "6860d321807e2474a60ed65983ddce06446e410ea257a2f71b36b00e6897a738",
+      "source_sha256": "32a2bcd35f0d5858d6c2d1dac2bc2a0dda36909725ac7644031c9d5934cecdc3",
       "bundled_sha256": "28763d6c606ac323169c395bfb7059e5d9d6f1f7c9c0da69dff35409bf888567"
     },
     "phantom_regions_payloads/region_008_feature_08.usdc": {
@@ -57,6 +307,17 @@
     "phantom_regions_payloads/region_009_upper_paired_strips.usdc": {
       "source_sha256": "06d7153cdb4317c04468c6c9658abf7839b22d29acb96a3f86159f47f91e645e",
       "bundled_sha256": "2356925ad8eed756a7a2181bc3891e8175149e8fcae05d99da97ed6013cb0040"
+    },
+    "phantom_regions_payloads/region_010_wound_5_slit_patch.usdc": {
+      "source_sha256": "7b59db2a3948209a88d2f86a4e8ab13fcffa6cd52a9c6edb5e8ba99ac21baabc",
+      "bundled_sha256": "9a25df1b3f2de927f520f4f8e11c72ed348a0cb723f0d395e0149c27f12390ba"
+    },
+    "phantom_regions_payloads/region_011_upper_narrow_slit.usdc": {
+      "source_sha256": "efa4393234377c1ae3c5d49a0b2b8237d1a11ea0ac9c5d21cb9c8a0dc3cd0678",
+      "bundled_sha256": "e0dc91b6bf07edb5e60ce765d6f78015b6727c9533390e68d549642644cac249"
+    },
+    "suturebot_region_map.json": {
+      "bundled_sha256": "b922b82dd66230963601f2fa05b186c94296ea795557157d18883b83663949ac"
     }
   }
 }

@@ -16,6 +16,25 @@ def _rectangle(x0, y0, x1, y1, height):
 
 
 class RegionMapTests(unittest.TestCase):
+    def test_dataset_label_anchors_keep_ownership_and_original_orientation(self):
+        points = np.concatenate((_rectangle(0, 0, 1, 1, 0), _rectangle(0, 0.7, 0.3, 1, 0.2)))
+        triangles = np.array(((0, 1, 2), (0, 2, 3), (4, 5, 6), (4, 6, 7)))
+        regions = tuple(MeshRegion(i, f"region_{i}", f"/Pad/{i}", (1, 1, 1), 10, 8) for i in (0, 10))
+        original = RegionMap(points, triangles, (0, 0, 10, 10), regions, resolution=64)
+        mapped = RegionMap(
+            points,
+            triangles,
+            (0, 0, 10, 10),
+            regions,
+            resolution=64,
+            anchors={10: (0.1, 0.9, 0.2)},
+        )
+        np.testing.assert_array_equal(mapped.region_ids, original.region_ids)
+        np.testing.assert_array_equal(mapped.pixels([10]), original.pixels([10]))
+        self.assertEqual(mapped.region_at(*mapped.centers[10]), 10)
+        self.assertGreater(mapped.centers[10][0], 32)
+        self.assertGreater(mapped.centers[10][1], 32)
+
     def test_display_orientation_rotates_region_targets_with_the_surface(self):
         points = np.concatenate((_rectangle(0, 0, 1, 1, 0), _rectangle(0, 0.7, 0.3, 1, 0.2)))
         triangles = np.array(((0, 1, 2), (0, 2, 3), (4, 5, 6), (4, 6, 7)))
