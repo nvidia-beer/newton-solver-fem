@@ -17,10 +17,10 @@
   "display_color_policy": "All labelled texels use display_color_rgb for visibility; source pixels and material bindings are unchanged",
   "source_nonzero_pixels": 162,
   "visible_source_pixels": 162,
-  "painted_triangles": 22,
+  "painted_triangles": 13,
   "atlas_size": [
-    320,
-    320
+    256,
+    256
   ],
   "tile_size": 64,
   "uv_interpolation": "faceVarying; disjoint triangle tiles with filtering gutters",
@@ -29,7 +29,7 @@
   "material_transport": "With updated triangle vertices X_i(t), the label is sum_i barycentric_i*X_i(t); fixed face-varying UVs travel with that face. This replay does not evolve FEM vertices.",
   "camera_poses_sha256": "5c6bcb83466b70837d8a7d6de621bd4ad9041b1c35a4b0d69f8490da30998adb",
   "motion_sha256": "c2d51121053594d7e589d98147ac8e12432203934373c229fb4737df7a960314",
-  "geometry_arrays_sha256": "ff9d8c3437204cbefd099259eb81f9cac0e71cbb8b8987ffe98c2625ff2f66bf",
+  "geometry_arrays_sha256": "04b254b3b53093dd5fa1ddc4ff65f2bb44e208864b8adf0215800fc6c47dea26",
   "points": [
     {
       "label": "insertion",
@@ -37,29 +37,29 @@
         439.24,
         280.85
       ],
-      "region_id": 3,
-      "prim_path": "/PhantomSurface/Region03",
-      "triangle_index": 1552,
+      "region_id": 1,
+      "prim_path": "/PhantomSurface/Region01",
+      "triangle_index": 928,
       "reference_vertex_indices": [
-        1508,
-        1602,
-        449
+        272,
+        274,
+        1475
       ],
       "barycentric": [
-        0.5917941927909851,
-        0.3009277582168579,
-        0.10727804899215698
+        0.023330148309469223,
+        0.70359867811203,
+        0.27307116985321045
       ],
       "position_world_m": [
-        0.04068872356491059,
-        -0.03550551866233598,
-        -0.011452359864712268
+        0.04032264158104097,
+        -0.036910914251731854,
+        -0.007712016471169514
       ],
       "uv": [
-        0.2645402569323778,
-        0.7699535975232721
+        0.4203325171911274,
+        0.42552712052565766
       ],
-      "ray_reconstruction_error_m": 6.160860039609539e-09
+      "ray_reconstruction_error_m": 2.8658490021569596e-09
     },
     {
       "label": "exit",
@@ -67,29 +67,29 @@
         444.4,
         359.31
       ],
-      "region_id": 3,
-      "prim_path": "/PhantomSurface/Region03",
-      "triangle_index": 1966,
+      "region_id": 1,
+      "prim_path": "/PhantomSurface/Region01",
+      "triangle_index": 923,
       "reference_vertex_indices": [
-        559,
-        2928,
-        2882
+        287,
+        270,
+        304
       ],
       "barycentric": [
-        0.14810478687286377,
-        0.2697235643863678,
-        0.5821716785430908
+        0.4539949595928192,
+        0.10939641296863556,
+        0.43660861253738403
       ],
       "position_world_m": [
-        0.040430808470801674,
-        -0.0406291995632522,
-        -0.011349420433873304
+        0.04049906849984845,
+        -0.040412917179649815,
+        -0.012074913771009374
       ],
       "uv": [
-        0.6589820281136781,
-        0.285363181354478
+        0.78802965869545,
+        0.639114477642579
       ],
-      "ray_reconstruction_error_m": 2.0173693261149342e-09
+      "ray_reconstruction_error_m": 3.5041128031009676e-09
     }
   ],
   "limitations": [

@@ -9,10 +9,17 @@ from newton_solver_fem.examples._suturebot_recording import DEFAULT_RECORDING, R
 
 
 def _catalog(parser):
-    paths = bundled_recordings()
+    paths = bundled_recordings(include_aliases=False)
     if not paths:
         parser.error("No bundled SutureBot recordings found. Supply --sample /path/to/recording.json.")
-    names = sorted(paths, key=lambda name: (paths[name].resolve() != DEFAULT_RECORDING.resolve(), name))
+    names = sorted(
+        paths,
+        key=lambda name: (
+            paths[name].resolve() != DEFAULT_RECORDING.resolve(),
+            paths[name].name != "recording.json",
+            name,
+        ),
+    )
     return [(name, Recording(paths[name])) for name in names]
 
 
@@ -20,17 +27,24 @@ def _show(recordings, *, file):
     print("SutureBot recordings:", file=file)
     for index, (name, recording) in enumerate(recordings, 1):
         manifest = recording.manifest
-        features = ["needle" if "needle" in manifest else "no needle"]
+        features = []
         if "point_labels" in manifest:
-            features.append("green point labels")
-        details = ", ".join(features)
+            features.append(
+                "green point labels (bindings need refitting)"
+                if manifest["point_labels"].get("binding_valid") is False
+                else "green point labels"
+            )
+        details = f" | {', '.join(features)}" if features else ""
         default = " [default]" if index == 1 else ""
         print(
             f"{index:2}) {name}{default} | region {manifest['region_id']} | "
-            f"frames {recording.first_frame}-{recording.last_frame} | {recording.duration:.3f} s | {details}",
+            f"frames {recording.first_frame}-{recording.last_frame} | {recording.duration:.3f} s{details}",
             file=file,
         )
-        if not manifest.get("alignment", {}).get("accepted", False):
+        alignment = manifest.get("alignment", {})
+        if alignment.get("failure_reason"):
+            print(f"    Alignment check failed: {alignment['failure_reason']}", file=file)
+        elif not alignment.get("accepted", False):
             print("    Alignment estimate: full tool/pad geometry is not validated.", file=file)
         phase = manifest.get("playback", {}).get("description")
         if phase:

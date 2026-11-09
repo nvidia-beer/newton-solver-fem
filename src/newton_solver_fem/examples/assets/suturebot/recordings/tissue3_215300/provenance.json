@@ -348,34 +348,6 @@
   "numerical_payloads_byte_identical_to_prepared_source": true,
   "additional_metadata_policy": "Additional JSON retains numerical values and acceptance decisions; only host provenance paths are replaced by portable source identities.",
   "additional_payloads": {
-    "audit/regrasp_policy/metadata_preservation.json": {
-      "sha256": "5136b2dfe4e199ee6a637c5aaae99ffe724d6d1d7915c4336b6afbd0be9c1153",
-      "bytes": 3079
-    },
-    "audit/regrasp_policy/needle_runtime_validation.json": {
-      "sha256": "0e123a9c2362a6c737d4f2b4b9c78353ec3a4cd5a6228290c075a7777ac3bdbf",
-      "bytes": 2060
-    },
-    "needle.usdc": {
-      "sha256": "fd109c648c830000f2501df243bada6c0b3bca70ec57c95d093afc17985703fa",
-      "bytes": 25477
-    },
-    "needle_backing_collision.json": {
-      "sha256": "47f67ab98cf880dd736e82a7a3cea5d36b063e7bff65e56ceae0c064259188be",
-      "bytes": 3300
-    },
-    "needle_initialization.jpg": {
-      "sha256": "f8500bdcf40aa98ad8b510a0725fc150b9ee23c604b207607a7230c4d4f38118",
-      "bytes": 175897
-    },
-    "needle_initialization.json": {
-      "sha256": "66a6a68a179e45fa9be6bddd4530f1ea6ad1d7ca789ed0d5cb52521b9c091920",
-      "bytes": 52933
-    },
-    "needle_inputs.npz": {
-      "sha256": "06e32186ae3378ff8194ae310d3fe436cf744331961d27abb77c9bbeae0ca1f2",
-      "bytes": 11930
-    },
     "pad_placement.json": {
       "sha256": "2ec027d5b70ebe0aa4bb399fe42fe298648e595420223d23e9c2b262bab6881f",
       "bytes": 9688
@@ -398,5 +370,18 @@
       "sha256": "358d0c01cfe97f91ad847e5be2e6334ae118ce891340aaa694071e7947e2ce0e",
       "bytes": 1747
     }
+  },
+  "example_feature_removal": {
+    "features": [
+      "needle",
+      "thread"
+    ],
+    "reason": "User requested removal of nonworking experimental features from prepared examples.",
+    "archive_id": "example_feature_removal_20261109/tissue3_215300",
+    "archive_required_for_replay": false,
+    "removed_files": 45,
+    "retained_numerical_payloads_byte_identical": true,
+    "source_data_modified": false,
+    "alignment_acceptance_changed": false
   }
 }

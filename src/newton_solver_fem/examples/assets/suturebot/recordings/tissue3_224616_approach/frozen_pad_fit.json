@@ -4383,5 +4383,10 @@
     "Only original fitting rows optimize pad pose; unchanged reserved rows evaluate it.",
     "Native lip mean is a geometric incision descriptor, not an exact material correspondence.",
     "Complete original camera estimates and cap fits are fixed conditional inputs; absolute metric calibration remains unaccepted."
-  ]
+  ],
+  "historical_only": true,
+  "historical_metrics_scope": "Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
+  "identity_correction_report": "audit/region_identity/user_region_correction.json",
+  "current_source_region_id": 1,
+  "current_alignment_accepted": false
 }

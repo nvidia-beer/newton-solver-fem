@@ -269,12 +269,12 @@
       "bytes": 286
     },
     "rig.usdc": {
-      "sha256": "662279749d74f02f209ef9e4ff13c17be7082f8394687ffa80c5f40dba0a8b92",
-      "bytes": 854027
+      "sha256": "00630b74baf365bef58fd2e684a66045cc0a59e557fa32cb04693f2305d9951c",
+      "bytes": 854480
     },
     "phantom.usdc": {
-      "sha256": "ceacac33fe2b857cc8293a0a8c5068f8837ba0980ea41797431db1fb278b1c68",
-      "bytes": 9716783
+      "sha256": "bb880b7541b65eacb5738babf042a930fa8835cac2126eba9e34dfe6c7f25b97",
+      "bytes": 12380687
     },
     "motion.npz": {
       "sha256": "c2d51121053594d7e589d98147ac8e12432203934373c229fb4737df7a960314",
@@ -299,20 +299,20 @@
       "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
     }
   },
-  "numerical_payloads_byte_identical_to_prepared_source": true,
-  "additional_metadata_policy": "Additional JSON retains numerical values and acceptance decisions; only host provenance paths are replaced by portable source identities.",
+  "numerical_payloads_byte_identical_to_prepared_source": false,
+  "additional_metadata_policy": "Original source identity paths remain portable. Current review metadata explicitly records the failed pad-boundary audit and supersedes original publication readiness decisions. This correction changes review JSON values, not replay geometry, motion, camera rays or source images. Exact original committed review reports are retained under audit/pad_boundary/history. Subsequent standard USD-camera authoring correction is documented separately in audit/usd_camera/correction.json; only the eight camera aperture-offset attributes change, with the exact prior rig and metadata retained in audit/usd_camera/history. Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
   "additional_payloads": {
     "alignment_screening.json": {
-      "sha256": "6725940bdcebadbd52ca37049f1332ec8e8b0f42d0f93a5fbe62c594de5ff897",
-      "bytes": 14630
+      "sha256": "d9418287b8ed7b783ea8bb44267ad0b288e5bc55d59f54a92f6561e3d1283700",
+      "bytes": 15002
     },
     "approach_readiness.json": {
-      "sha256": "d30bef32c7b3d142f5c78bb9327304e46fa9be8570e2c2b2f6bebe8d90245d51",
-      "bytes": 1517
+      "sha256": "c40329f53fcccda580a39fb6dcbf064f228ee7782a7b2ee59552ceb5476c18d2",
+      "bytes": 2208
     },
     "approach_visual_review.json": {
-      "sha256": "3e46ee5b9c8e6cbead811b7afde09e2525263e3511d5e102e35da99093f0e467",
-      "bytes": 6983
+      "sha256": "52b34ec1d077508949dc261433e47b550e45463268cf8991834273aa8137ac06",
+      "bytes": 8136
     },
     "audit/coordinate_validation.json": {
       "sha256": "71b3cdcdc95297885610e5797a997f6071830da2aa58c0d25f7e30afa640f2d0",
@@ -345,8 +345,8 @@
       "bytes": 162559
     },
     "calibration_before_wrist.json": {
-      "sha256": "a0c919749ae4e3899a0507ed30d8a7fa314325249690ffb7372b5a4635cb34f2",
-      "bytes": 134247
+      "sha256": "305c89d2bbf75bb4a7c0edcdc1766df859324617a8fac1bd0075735b1dda9600",
+      "bytes": 134497
     },
     "cap_review_validation.json": {
       "sha256": "86d3eeac6e92a4392019e51d752b427b7b8356a0d451213a917f901dbd0cf2ff",
@@ -357,8 +357,8 @@
       "bytes": 76484
     },
     "frozen_pad_fit.json": {
-      "sha256": "fe55a4310d3d6a19b66d3e69fe17e31bb1c690091f99933d3c1b59f3d68d4227",
-      "bytes": 112951
+      "sha256": "091001b581e33bd6f814b28ba96ee7020cc6445c9c8a586b97a6da1dcd4688c5",
+      "bytes": 113323
     },
     "frozen_wrist_fit.json": {
       "sha256": "03bb751b034c0163ecab6b199e72167b83e14aca31742b2ddeae0ff0db19e602",
@@ -369,16 +369,16 @@
       "bytes": 11942
     },
     "pad_placement.json": {
-      "sha256": "9d44964690f4a932d40f41beca33b5cb4d23cb4cd1206fd9068c2f04e82c45e9",
-      "bytes": 28098
+      "sha256": "9cdd69fb67e22c53ec7fb7a6a43da7e3b6b9017745f668423ec228014e75a79b",
+      "bytes": 28470
     },
     "pad_placement_correction.json": {
       "sha256": "0d8e053c16af0ac5a1082bb5abde51fe0c4ef3fb61fe7ff99c394aeb1e31f230",
       "bytes": 585
     },
     "point_labels.json": {
-      "sha256": "c1fc3950a2c3ab3e8a335d28a8f6c7d483f47504a4998b876eff813ea239cef1",
-      "bytes": 3395
+      "sha256": "45ccec6ccdc53f0133176f39403e7a9f53834e3ab9a52d2d7068d5096b0015cf",
+      "bytes": 3393
     },
     "point_labels_source": {
       "file_count": 2,
@@ -399,20 +399,20 @@
       "bytes": 31988
     },
     "region3_fit.json": {
-      "sha256": "bb636515603fdbc0db16eb75093adef2b6b46baca660b55de046fb8b01d84e73",
-      "bytes": 57270
+      "sha256": "038296ed9704855d981b9667c3632148ccdaf2d6bca65ef23781e3f15e18d6a9",
+      "bytes": 57642
     },
     "region_identification.json": {
-      "sha256": "2d29a641d71aecf62c5690983569e4ff03b15f3a75d31f204e2d740d7aaa858a",
-      "bytes": 467
+      "sha256": "06ee97b1d7ec4c3e89995deea5828fc0965a4af41e9b5ecbe3b1e0d10e2cc0a9",
+      "bytes": 832
     },
     "region_review.json": {
-      "sha256": "cd48c233e81281a2f939803efa13bed1da145f62780e367f20cb1ed515493749",
-      "bytes": 917
+      "sha256": "d23a64d154af43a34a4b5c45dbeb9631fdc5c8226010cd72aefca2542881c23d",
+      "bytes": 866
     },
     "region_user_review.json": {
-      "sha256": "cd48c233e81281a2f939803efa13bed1da145f62780e367f20cb1ed515493749",
-      "bytes": 917
+      "sha256": "d23a64d154af43a34a4b5c45dbeb9631fdc5c8226010cd72aefca2542881c23d",
+      "bytes": 866
     },
     "reviewed_cap_identity.json": {
       "sha256": "fb3f03534c3d113319d16080cf6370cfc911583a165640bc720f73a187dc61e8",
@@ -439,12 +439,107 @@
       "bytes": 38811
     },
     "textures/point_labels.png": {
-      "sha256": "a44ce6e5baf98bdbb6f1393b50f58953f805d76bae40bcd781218f86de7077ce",
-      "bytes": 3279
+      "sha256": "aba45d8c1181887ab0010caa45cb3f7be0fae54465d40ea393ebe3067ddf8f61",
+      "bytes": 2109
     },
     "wrist_export_validation.json": {
       "sha256": "692312d8f4b64b292c49b109f3b6e99e6f6d80d387aff65d2c940861e7057b23",
       "bytes": 386
+    },
+    "audit/pad_boundary": {
+      "file_count": 47,
+      "bytes": 6575361,
+      "sha256": "c191f876ee82968c618468bd578640615935d66734100a995183340b2288ab32",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    },
+    "audit/usd_camera": {
+      "file_count": 7,
+      "bytes": 935297,
+      "sha256": "b168a3921ab03b43e65b56cef3e0dea76d23e2d6932236ce650eb276c6a6ee68",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    },
+    "audit/region_identity": {
+      "file_count": 19,
+      "bytes": 735919,
+      "sha256": "69c655ff538efd10d63f7751bc5c713a458a0fea0ea79061835d664641171adb",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    },
+    "pad_edge_alignment.json": {
+      "sha256": "29666b1ea96f0da82dcc12f4503ff5d212a249535a4a4bf7db81353ee2710bb7",
+      "bytes": 232741
+    },
+    "calibration.json": {
+      "sha256": "4321860a24f000c3bef54ea071e72dfb02b0e7e787b8991152cd33f05fd6ef08",
+      "bytes": 3607
+    },
+    "audit/region1_pad_fit": {
+      "file_count": 13,
+      "bytes": 4108208,
+      "sha256": "7a1e304d0f687ff0c742f1dad228272e413c1faadbfee1399aade2bcb09d3690",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
     }
+  },
+  "alignment_review_correction": {
+    "status": "recorded_failed_pad_boundary_check",
+    "scene_camera_and_motion_payloads_changed": false,
+    "report": "audit/pad_boundary/pad_boundary.json",
+    "preparation_script_sha256": "6ddc9bd25ce54963c9efa039fd0f93af4fba1fb8645d6d9a1e5f938815410389",
+    "date": "2026-11-04",
+    "reason": "Independent actual USD silhouette checks failed against the measured outer pad/background boundary.",
+    "current_review_decisions_differ_from_original_publication": true,
+    "source_geometry_motion_camera_rays_and_images_unchanged": true,
+    "changed_existing_review_files": [
+      "recording.json",
+      "approach_readiness.json",
+      "approach_visual_review.json",
+      "validation.json",
+      "provenance.json",
+      "README.md"
+    ],
+    "historical_export_commit": "4a576a186965b4eaf4649ece73a2c928f82ca880",
+    "historical_files": [
+      "audit/pad_boundary/history/validation.json",
+      "audit/pad_boundary/history/approach_readiness.json",
+      "audit/pad_boundary/history/approach_visual_review.json"
+    ],
+    "historical_evidence_scope": "Original incision/cap-only publication decisions; superseded by the current failed outer-pad-boundary audit.",
+    "screening_report": "audit/pad_boundary/screening.json",
+    "metadata_review_script_sha256": "1add7ba0fd3e4020b0da6975cddf8ee165c35ac0d39f11f7263a827da5393a2e"
+  },
+  "usd_camera_authoring_correction": {
+    "report": "audit/usd_camera/correction.json",
+    "native_pad_check": "audit/pad_boundary/pad_boundary.json",
+    "native_coverage_check": "audit/pad_boundary/pad_coverage.json",
+    "alignment_acceptance_granted": false
+  },
+  "region_identity_correction": {
+    "report": "audit/region_identity/user_region_correction.json",
+    "confirmed_region_id": 1,
+    "point_label_bindings_valid": true,
+    "alignment_accepted": false,
+    "geometry_motion_rays_images_changed": false,
+    "current_placement_report": "pad_edge_alignment.json"
+  },
+  "region1_pad_correction": {
+    "report": "pad_edge_alignment.json",
+    "review": "audit/region1_pad_fit/review.json",
+    "original_inputs_modified": false,
+    "tool_camera_and_motion_changed": false,
+    "labels_rebound": true,
+    "geometry_changed": "One constant rigid pad transform only; vertex/triangle arrays unchanged.",
+    "accepted": false
+  },
+  "example_feature_removal": {
+    "features": [
+      "needle",
+      "thread"
+    ],
+    "reason": "User requested removal of nonworking experimental features from prepared examples.",
+    "archive_id": "example_feature_removal_20261109/tissue3_224616_approach",
+    "archive_required_for_replay": false,
+    "removed_files": 37,
+    "retained_numerical_payloads_byte_identical": true,
+    "source_data_modified": false,
+    "alignment_acceptance_changed": false
   }
 }

@@ -1,0 +1,1944 @@
+{
+  "schema_version": 1,
+  "sample_id": "tissue3_224616_approach",
+  "scope": "supplemental_broad_pad_background_coverage",
+  "geometry_source": "rendered_complete_phantom_usd",
+  "units": "native_image_pixels",
+  "evidence_sha256": {
+    "scene.usda": "e30ce457207a0ea76579d2e357be8d9f6ee79cfac5fdfd834c604d5581d98f71",
+    "rig.usdc": "00630b74baf365bef58fd2e684a66045cc0a59e557fa32cb04693f2305d9951c",
+    "phantom.usdc": "ceacac33fe2b857cc8293a0a8c5068f8837ba0980ea41797431db1fb278b1c68",
+    "motion.npz": "c2d51121053594d7e589d98147ac8e12432203934373c229fb4737df7a960314",
+    "camera_poses.npz": "5c6bcb83466b70837d8a7d6de621bd4ad9041b1c35a4b0d69f8490da30998adb",
+    "calibration.json": "4526a3874a45980d0451e1d937015338920b989a2d98c1b4a74200e251acb236"
+  },
+  "annotation_sha256": "6c0c0300d3fe331f6d5cf41523c646d9b75e911b6a2b1c5749f9df1b882ae99b",
+  "scoring_module_sha256": "616dff0fd3c4e159df2b40148029b965cfe9f3daef5c41304c5a0a09f41e710e",
+  "native_evidence_sha256": {
+    "psm1_000004.png": "7ebbedd5873352d61fe64be551f0a323adf888b2a22ac7c9d943d202fb9336c1",
+    "psm1_000027.png": "c6fd2b3649823fc168efd62fc33525316f9058f402d5e74cb41460842de1c50f",
+    "psm1_000061.png": "8369dcd0a7b40a8db65e4044b615f76735cf1a8b5cd68af6c60fc4c465cbd9f5",
+    "psm1_000106.png": "fa9db65f3eba7d7a5ca36f15f9ede6a6b54197ab97d348a8be028a9c9a7dffb5"
+  },
+  "criteria": "Every reviewed pad anchor must hit the complete original phantom; every background anchor must miss it. Every anchor requires a supported native lens ray. Review-disk counts are diagnostic; center classification determines this screen.",
+  "rows": [
+    {
+      "camera": "psm1",
+      "frame": 4,
+      "split": "fit",
+      "feature": "broad_pad_background_anchors",
+      "image_size": [
+        640,
+        480
+      ],
+      "source_frame_rgb_sha256": "bd3371505563b0cb77a8439764ef4311a5b71701738e7a8ef04f61ee335bf6fc",
+      "review_radius_px": 3.0,
+      "labels": {
+        "pad": {
+          "count": 14,
+          "correct": 14,
+          "wrong": 0,
+          "unsupported": 0
+        },
+        "background": {
+          "count": 5,
+          "correct": 0,
+          "wrong": 5,
+          "unsupported": 0
+        }
+      },
+      "anchors": [
+        {
+          "index": 0,
+          "expected": "pad",
+          "uv": [
+            230.0,
+            100.0
+          ],
+          "pixel": [
+            230,
+            100
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 1,
+          "expected": "pad",
+          "uv": [
+            195.0,
+            170.0
+          ],
+          "pixel": [
+            195,
+            170
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 2,
+          "expected": "pad",
+          "uv": [
+            165.0,
+            250.0
+          ],
+          "pixel": [
+            165,
+            250
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 3,
+          "expected": "pad",
+          "uv": [
+            145.0,
+            325.0
+          ],
+          "pixel": [
+            145,
+            325
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 4,
+          "expected": "pad",
+          "uv": [
+            175.0,
+            380.0
+          ],
+          "pixel": [
+            175,
+            380
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 5,
+          "expected": "pad",
+          "uv": [
+            195.0,
+            390.0
+          ],
+          "pixel": [
+            195,
+            390
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 6,
+          "expected": "pad",
+          "uv": [
+            245.0,
+            240.0
+          ],
+          "pixel": [
+            245,
+            240
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 7,
+          "expected": "pad",
+          "uv": [
+            225.0,
+            335.0
+          ],
+          "pixel": [
+            225,
+            335
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 8,
+          "expected": "pad",
+          "uv": [
+            360.0,
+            185.0
+          ],
+          "pixel": [
+            360,
+            185
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 9,
+          "expected": "pad",
+          "uv": [
+            410.0,
+            205.0
+          ],
+          "pixel": [
+            410,
+            205
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 10,
+          "expected": "pad",
+          "uv": [
+            450.0,
+            245.0
+          ],
+          "pixel": [
+            450,
+            245
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 11,
+          "expected": "pad",
+          "uv": [
+            520.0,
+            225.0
+          ],
+          "pixel": [
+            520,
+            225
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 12,
+          "expected": "pad",
+          "uv": [
+            540.0,
+            300.0
+          ],
+          "pixel": [
+            540,
+            300
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 13,
+          "expected": "pad",
+          "uv": [
+            475.0,
+            365.0
+          ],
+          "pixel": [
+            475,
+            365
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 0,
+          "expected": "background",
+          "uv": [
+            100.0,
+            130.0
+          ],
+          "pixel": [
+            100,
+            130
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 1,
+          "expected": "background",
+          "uv": [
+            70.0,
+            195.0
+          ],
+          "pixel": [
+            70,
+            195
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 2,
+          "expected": "background",
+          "uv": [
+            40.0,
+            270.0
+          ],
+          "pixel": [
+            40,
+            270
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 3,
+          "expected": "background",
+          "uv": [
+            130.0,
+            90.0
+          ],
+          "pixel": [
+            130,
+            90
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 4,
+          "expected": "background",
+          "uv": [
+            85.0,
+            240.0
+          ],
+          "pixel": [
+            85,
+            240
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        }
+      ],
+      "wrong_pixels": [
+        {
+          "index": 0,
+          "expected": "background",
+          "uv": [
+            100.0,
+            130.0
+          ],
+          "pixel": [
+            100,
+            130
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 1,
+          "expected": "background",
+          "uv": [
+            70.0,
+            195.0
+          ],
+          "pixel": [
+            70,
+            195
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 2,
+          "expected": "background",
+          "uv": [
+            40.0,
+            270.0
+          ],
+          "pixel": [
+            40,
+            270
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 3,
+          "expected": "background",
+          "uv": [
+            130.0,
+            90.0
+          ],
+          "pixel": [
+            130,
+            90
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 4,
+          "expected": "background",
+          "uv": [
+            85.0,
+            240.0
+          ],
+          "pixel": [
+            85,
+            240
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        }
+      ],
+      "coverage_screen_passed": false,
+      "source_timestamp_ns": 1745894776664618163
+    },
+    {
+      "camera": "psm1",
+      "frame": 27,
+      "split": "reserved",
+      "feature": "broad_pad_background_anchors",
+      "image_size": [
+        640,
+        480
+      ],
+      "source_frame_rgb_sha256": "57ba0a080f54977b9175ea61a73b2abc264cc84480e0db69ffd7d26d187e5b34",
+      "review_radius_px": 3.0,
+      "labels": {
+        "pad": {
+          "count": 14,
+          "correct": 14,
+          "wrong": 0,
+          "unsupported": 0
+        },
+        "background": {
+          "count": 5,
+          "correct": 0,
+          "wrong": 5,
+          "unsupported": 0
+        }
+      },
+      "anchors": [
+        {
+          "index": 0,
+          "expected": "pad",
+          "uv": [
+            245.0,
+            120.0
+          ],
+          "pixel": [
+            245,
+            120
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 1,
+          "expected": "pad",
+          "uv": [
+            220.0,
+            180.0
+          ],
+          "pixel": [
+            220,
+            180
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 2,
+          "expected": "pad",
+          "uv": [
+            175.0,
+            255.0
+          ],
+          "pixel": [
+            175,
+            255
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 3,
+          "expected": "pad",
+          "uv": [
+            140.0,
+            320.0
+          ],
+          "pixel": [
+            140,
+            320
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 4,
+          "expected": "pad",
+          "uv": [
+            155.0,
+            375.0
+          ],
+          "pixel": [
+            155,
+            375
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 5,
+          "expected": "pad",
+          "uv": [
+            190.0,
+            390.0
+          ],
+          "pixel": [
+            190,
+            390
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 6,
+          "expected": "pad",
+          "uv": [
+            245.0,
+            260.0
+          ],
+          "pixel": [
+            245,
+            260
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 7,
+          "expected": "pad",
+          "uv": [
+            215.0,
+            340.0
+          ],
+          "pixel": [
+            215,
+            340
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 8,
+          "expected": "pad",
+          "uv": [
+            365.0,
+            185.0
+          ],
+          "pixel": [
+            365,
+            185
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 9,
+          "expected": "pad",
+          "uv": [
+            415.0,
+            205.0
+          ],
+          "pixel": [
+            415,
+            205
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 10,
+          "expected": "pad",
+          "uv": [
+            455.0,
+            260.0
+          ],
+          "pixel": [
+            455,
+            260
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 11,
+          "expected": "pad",
+          "uv": [
+            505.0,
+            280.0
+          ],
+          "pixel": [
+            505,
+            280
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 12,
+          "expected": "pad",
+          "uv": [
+            490.0,
+            335.0
+          ],
+          "pixel": [
+            490,
+            335
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 13,
+          "expected": "pad",
+          "uv": [
+            460.0,
+            380.0
+          ],
+          "pixel": [
+            460,
+            380
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 0,
+          "expected": "background",
+          "uv": [
+            130.0,
+            130.0
+          ],
+          "pixel": [
+            130,
+            130
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 1,
+          "expected": "background",
+          "uv": [
+            70.0,
+            195.0
+          ],
+          "pixel": [
+            70,
+            195
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 2,
+          "expected": "background",
+          "uv": [
+            40.0,
+            260.0
+          ],
+          "pixel": [
+            40,
+            260
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 3,
+          "expected": "background",
+          "uv": [
+            205.0,
+            70.0
+          ],
+          "pixel": [
+            205,
+            70
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 4,
+          "expected": "background",
+          "uv": [
+            155.0,
+            160.0
+          ],
+          "pixel": [
+            155,
+            160
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        }
+      ],
+      "wrong_pixels": [
+        {
+          "index": 0,
+          "expected": "background",
+          "uv": [
+            130.0,
+            130.0
+          ],
+          "pixel": [
+            130,
+            130
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 1,
+          "expected": "background",
+          "uv": [
+            70.0,
+            195.0
+          ],
+          "pixel": [
+            70,
+            195
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 2,
+          "expected": "background",
+          "uv": [
+            40.0,
+            260.0
+          ],
+          "pixel": [
+            40,
+            260
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 3,
+          "expected": "background",
+          "uv": [
+            205.0,
+            70.0
+          ],
+          "pixel": [
+            205,
+            70
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 4,
+          "expected": "background",
+          "uv": [
+            155.0,
+            160.0
+          ],
+          "pixel": [
+            155,
+            160
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        }
+      ],
+      "coverage_screen_passed": false,
+      "source_timestamp_ns": 1745894777429863074
+    },
+    {
+      "camera": "psm1",
+      "frame": 61,
+      "split": "reserved",
+      "feature": "broad_pad_background_anchors",
+      "image_size": [
+        640,
+        480
+      ],
+      "source_frame_rgb_sha256": "edd41a593ef7da5dc247fff9ebb1ebc24d071c172815cbd937dea0a9a91d32b2",
+      "review_radius_px": 3.0,
+      "labels": {
+        "pad": {
+          "count": 14,
+          "correct": 14,
+          "wrong": 0,
+          "unsupported": 0
+        },
+        "background": {
+          "count": 5,
+          "correct": 0,
+          "wrong": 5,
+          "unsupported": 0
+        }
+      },
+      "anchors": [
+        {
+          "index": 0,
+          "expected": "pad",
+          "uv": [
+            265.0,
+            125.0
+          ],
+          "pixel": [
+            265,
+            125
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 1,
+          "expected": "pad",
+          "uv": [
+            235.0,
+            180.0
+          ],
+          "pixel": [
+            235,
+            180
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 2,
+          "expected": "pad",
+          "uv": [
+            170.0,
+            245.0
+          ],
+          "pixel": [
+            170,
+            245
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 3,
+          "expected": "pad",
+          "uv": [
+            125.0,
+            300.0
+          ],
+          "pixel": [
+            125,
+            300
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 4,
+          "expected": "pad",
+          "uv": [
+            130.0,
+            355.0
+          ],
+          "pixel": [
+            130,
+            355
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 5,
+          "expected": "pad",
+          "uv": [
+            160.0,
+            405.0
+          ],
+          "pixel": [
+            160,
+            405
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 6,
+          "expected": "pad",
+          "uv": [
+            235.0,
+            280.0
+          ],
+          "pixel": [
+            235,
+            280
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 7,
+          "expected": "pad",
+          "uv": [
+            205.0,
+            350.0
+          ],
+          "pixel": [
+            205,
+            350
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 8,
+          "expected": "pad",
+          "uv": [
+            375.0,
+            190.0
+          ],
+          "pixel": [
+            375,
+            190
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 9,
+          "expected": "pad",
+          "uv": [
+            415.0,
+            225.0
+          ],
+          "pixel": [
+            415,
+            225
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 10,
+          "expected": "pad",
+          "uv": [
+            460.0,
+            275.0
+          ],
+          "pixel": [
+            460,
+            275
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 11,
+          "expected": "pad",
+          "uv": [
+            505.0,
+            300.0
+          ],
+          "pixel": [
+            505,
+            300
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 12,
+          "expected": "pad",
+          "uv": [
+            480.0,
+            350.0
+          ],
+          "pixel": [
+            480,
+            350
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 13,
+          "expected": "pad",
+          "uv": [
+            455.0,
+            370.0
+          ],
+          "pixel": [
+            455,
+            370
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 0,
+          "expected": "background",
+          "uv": [
+            150.0,
+            120.0
+          ],
+          "pixel": [
+            150,
+            120
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 1,
+          "expected": "background",
+          "uv": [
+            80.0,
+            200.0
+          ],
+          "pixel": [
+            80,
+            200
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 2,
+          "expected": "background",
+          "uv": [
+            35.0,
+            260.0
+          ],
+          "pixel": [
+            35,
+            260
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 3,
+          "expected": "background",
+          "uv": [
+            230.0,
+            70.0
+          ],
+          "pixel": [
+            230,
+            70
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 4,
+          "expected": "background",
+          "uv": [
+            140.0,
+            175.0
+          ],
+          "pixel": [
+            140,
+            175
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        }
+      ],
+      "wrong_pixels": [
+        {
+          "index": 0,
+          "expected": "background",
+          "uv": [
+            150.0,
+            120.0
+          ],
+          "pixel": [
+            150,
+            120
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 1,
+          "expected": "background",
+          "uv": [
+            80.0,
+            200.0
+          ],
+          "pixel": [
+            80,
+            200
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 2,
+          "expected": "background",
+          "uv": [
+            35.0,
+            260.0
+          ],
+          "pixel": [
+            35,
+            260
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 3,
+          "expected": "background",
+          "uv": [
+            230.0,
+            70.0
+          ],
+          "pixel": [
+            230,
+            70
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 4,
+          "expected": "background",
+          "uv": [
+            140.0,
+            175.0
+          ],
+          "pixel": [
+            140,
+            175
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        }
+      ],
+      "coverage_screen_passed": false,
+      "source_timestamp_ns": 1745894778566117856
+    },
+    {
+      "camera": "psm1",
+      "frame": 106,
+      "split": "fit",
+      "feature": "broad_pad_background_anchors",
+      "image_size": [
+        640,
+        480
+      ],
+      "source_frame_rgb_sha256": "69920cea5a53a15cede306de868bc0ca78ea916ce49adc418bc00d1474ad1242",
+      "review_radius_px": 3.0,
+      "labels": {
+        "pad": {
+          "count": 16,
+          "correct": 15,
+          "wrong": 1,
+          "unsupported": 0
+        },
+        "background": {
+          "count": 5,
+          "correct": 0,
+          "wrong": 5,
+          "unsupported": 0
+        }
+      },
+      "anchors": [
+        {
+          "index": 0,
+          "expected": "pad",
+          "uv": [
+            175.0,
+            220.0
+          ],
+          "pixel": [
+            175,
+            220
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 1,
+          "expected": "pad",
+          "uv": [
+            120.0,
+            300.0
+          ],
+          "pixel": [
+            120,
+            300
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 2,
+          "expected": "pad",
+          "uv": [
+            100.0,
+            365.0
+          ],
+          "pixel": [
+            100,
+            365
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 3,
+          "expected": "pad",
+          "uv": [
+            65.0,
+            410.0
+          ],
+          "pixel": [
+            65,
+            410
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 4,
+          "expected": "pad",
+          "uv": [
+            225.0,
+            145.0
+          ],
+          "pixel": [
+            225,
+            145
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 5,
+          "expected": "pad",
+          "uv": [
+            275.0,
+            125.0
+          ],
+          "pixel": [
+            275,
+            125
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 6,
+          "expected": "pad",
+          "uv": [
+            420.0,
+            180.0
+          ],
+          "pixel": [
+            420,
+            180
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 7,
+          "expected": "pad",
+          "uv": [
+            455.0,
+            220.0
+          ],
+          "pixel": [
+            455,
+            220
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 8,
+          "expected": "pad",
+          "uv": [
+            480.0,
+            270.0
+          ],
+          "pixel": [
+            480,
+            270
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 9,
+          "expected": "pad",
+          "uv": [
+            470.0,
+            330.0
+          ],
+          "pixel": [
+            470,
+            330
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 10,
+          "expected": "pad",
+          "uv": [
+            455.0,
+            380.0
+          ],
+          "pixel": [
+            455,
+            380
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 11,
+          "expected": "pad",
+          "uv": [
+            500.0,
+            360.0
+          ],
+          "pixel": [
+            500,
+            360
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 12,
+          "expected": "pad",
+          "uv": [
+            460.0,
+            180.0
+          ],
+          "pixel": [
+            460,
+            180
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 13,
+          "expected": "pad",
+          "uv": [
+            490.0,
+            215.0
+          ],
+          "pixel": [
+            490,
+            215
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 14,
+          "expected": "pad",
+          "uv": [
+            510.0,
+            270.0
+          ],
+          "pixel": [
+            510,
+            270
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": true,
+          "review_disk_count": 29,
+          "review_disk_correct": 29,
+          "source_surface_hint": "raised_or_sculpted_tissue"
+        },
+        {
+          "index": 15,
+          "expected": "pad",
+          "uv": [
+            15.0,
+            385.0
+          ],
+          "pixel": [
+            15,
+            385
+          ],
+          "ray_valid": true,
+          "actual": "background",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 0,
+          "expected": "background",
+          "uv": [
+            100.0,
+            80.0
+          ],
+          "pixel": [
+            100,
+            80
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 1,
+          "expected": "background",
+          "uv": [
+            180.0,
+            70.0
+          ],
+          "pixel": [
+            180,
+            70
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 2,
+          "expected": "background",
+          "uv": [
+            100.0,
+            160.0
+          ],
+          "pixel": [
+            100,
+            160
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 3,
+          "expected": "background",
+          "uv": [
+            45.0,
+            230.0
+          ],
+          "pixel": [
+            45,
+            230
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 4,
+          "expected": "background",
+          "uv": [
+            25.0,
+            280.0
+          ],
+          "pixel": [
+            25,
+            280
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        }
+      ],
+      "wrong_pixels": [
+        {
+          "index": 15,
+          "expected": "pad",
+          "uv": [
+            15.0,
+            385.0
+          ],
+          "pixel": [
+            15,
+            385
+          ],
+          "ray_valid": true,
+          "actual": "background",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": "apparently_flat_pad_margin"
+        },
+        {
+          "index": 0,
+          "expected": "background",
+          "uv": [
+            100.0,
+            80.0
+          ],
+          "pixel": [
+            100,
+            80
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 1,
+          "expected": "background",
+          "uv": [
+            180.0,
+            70.0
+          ],
+          "pixel": [
+            180,
+            70
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 2,
+          "expected": "background",
+          "uv": [
+            100.0,
+            160.0
+          ],
+          "pixel": [
+            100,
+            160
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 3,
+          "expected": "background",
+          "uv": [
+            45.0,
+            230.0
+          ],
+          "pixel": [
+            45,
+            230
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        },
+        {
+          "index": 4,
+          "expected": "background",
+          "uv": [
+            25.0,
+            280.0
+          ],
+          "pixel": [
+            25,
+            280
+          ],
+          "ray_valid": true,
+          "actual": "pad",
+          "correct": false,
+          "review_disk_count": 29,
+          "review_disk_correct": 0,
+          "source_surface_hint": null
+        }
+      ],
+      "coverage_screen_passed": false,
+      "source_timestamp_ns": 1745894780065704595
+    }
+  ],
+  "coverage_screen_passed": false,
+  "alignment_acceptance_granted": false,
+  "limitations": [
+    "Sparse source anchors are not a complete foreground segmentation.",
+    "Perimeter, cameras, tools and reserved motion checks remain separate requirements.",
+    "A correct full-phantom hit can lie outside the backing's projected rectangle because raised tissue is included."
+  ],
+  "render_module_sha256": "890f0d0de871b3b7a5fb8b9c699277d82e60ca6dcd8ae6a0512d9e83d15f440a"
+}

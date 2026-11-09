@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-04",
+  "sample_id": "tissue3_224616_approach",
+  "source_episode": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery",
+  "status": "user_confirmed_anatomical_identity",
+  "method": "explicit_user_clarification",
+  "public_region_id": 3,
+  "confirmed_features": [
+    "upper visible wound fragment",
+    "lower visible wound fragment"
+  ],
+  "clarification": "The user confirms that both upper and lower visible wound fragments belong to region 3.",
+  "source_points_changed": false,
+  "native_geometry_changed": false,
+  "canonical_source_and_native_region_ids_already_match": true,
+  "calibration_accepted": false,
+  "scope": "Anatomical identity confirmation only; it does not establish the camera calibration, native mesh surface correspondence or pad placement.",
+  "historical_reports": [
+    "../review_224616_pad_boundary/region1_partial_hypothesis.json",
+    "../review_224616_pad_boundary/full_joint_fixture_psm1_fragments.json"
+  ],
+  "historical_policy": "Earlier ambiguity and alternate-region hypotheses remain unchanged as diagnostic history. They do not override this explicit confirmation."
+}

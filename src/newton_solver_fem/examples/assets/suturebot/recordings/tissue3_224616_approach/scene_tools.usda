@@ -1,0 +1,108 @@
+#usda 1.0
+(
+    defaultPrim = "SutureBotReplay"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "SutureBotReplay" (
+    prepend references = @scene.usda@</SutureBotReplay>
+)
+{
+    over "PSM1"
+    {
+        over "roll"
+        {
+            over "CAD" (
+                prepend references = @tools/large_needle_driver.usdc@</Tool/roll/CAD>
+            )
+            {
+            }
+        }
+
+        over "pitch"
+        {
+            over "CAD" (
+                prepend references = @tools/large_needle_driver.usdc@</Tool/pitch/CAD>
+            )
+            {
+            }
+        }
+
+        over "yaw"
+        {
+            over "CAD" (
+                prepend references = @tools/large_needle_driver.usdc@</Tool/yaw/CAD>
+            )
+            {
+            }
+        }
+
+        over "jaw1"
+        {
+            over "CAD" (
+                prepend references = @tools/large_needle_driver.usdc@</Tool/jaw1/CAD>
+            )
+            {
+            }
+        }
+
+        over "jaw2"
+        {
+            over "CAD" (
+                prepend references = @tools/large_needle_driver.usdc@</Tool/jaw2/CAD>
+            )
+            {
+            }
+        }
+    }
+
+    over "PSM2"
+    {
+        over "roll"
+        {
+            over "CAD" (
+                prepend references = @tools/debakey_forceps.usdc@</Tool/roll/CAD>
+            )
+            {
+            }
+        }
+
+        over "pitch"
+        {
+            over "CAD" (
+                prepend references = @tools/debakey_forceps.usdc@</Tool/pitch/CAD>
+            )
+            {
+            }
+        }
+
+        over "yaw"
+        {
+            over "CAD" (
+                prepend references = @tools/debakey_forceps.usdc@</Tool/yaw/CAD>
+            )
+            {
+            }
+        }
+
+        over "jaw1"
+        {
+            over "CAD" (
+                prepend references = @tools/debakey_forceps.usdc@</Tool/jaw1/CAD>
+            )
+            {
+            }
+        }
+
+        over "jaw2"
+        {
+            over "CAD" (
+                prepend references = @tools/debakey_forceps.usdc@</Tool/jaw2/CAD>
+            )
+            {
+            }
+        }
+    }
+}
+

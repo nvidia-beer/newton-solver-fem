@@ -117,17 +117,19 @@ python3 tools/build_readme.py --require-videos
 
 # SutureBot recording replay
 
-`fem_suturebot` (menu item 3) opens a second terminal menu with the four bundled
-recordings. Choose by number or sample name; Enter selects the default needle
-throw, `tissue_3/2_needle_throw/20250428-215300-489212`, working on region 1.
-Each choice shows its region, source-frame range, playback duration and available
-needle and point labels. Enter `q` to quit before the viewer opens.
+`fem_suturebot` (menu item 3) opens a second terminal menu with four distinct bundled
+recordings. Compatibility aliases are omitted from both recording menus; the
+former choice 5 uses the same assets as default choice 1. Choose by number or
+sample name; Enter selects `tissue_3/2_needle_throw/20250428-215300-489212`, working on region 1.
+Each choice shows its region, source-frame range, playback duration, point-label
+availability and remaining alignment issues. Enter `q` to quit before the viewer opens.
 It replays the measured tool poses and wrist joints over the original phantom,
 with the RCM fixture, supporting table and transparent endoscope housing in the
 same fitted scene. Four small model/video overlays show the left/right endoscope
 and PSM1/PSM2 wrist cameras. Dataset point labels are UV-textured onto the phantom
-surface. A separate rigid MuJoCo needle follows the gripper while held and falls
-under gravity when released. This mode does not simulate tissue puncture.
+surface. Needle and thread estimates have been removed from the prepared examples
+and their runtime controls. The source videos are unchanged. This is a kinematic
+scene replay with a static phantom.
 
 ```bash
 # Choose fem_suturebot, then choose a recording:
@@ -146,32 +148,53 @@ uv run --locked --extra examples python -m newton_solver_fem.examples fem_suture
 The panel provides recording selection, play/pause, an exact source-frame slider
 and restart. `--sample` accepts a bundled sample name or a `recording.json` path.
 The same recording menu appears with `./docker/run.sh fem_suturebot`.
+Every bundled recording uses separate USD assets for the PSM1 Large Needle
+Driver and the revised PSM2 DeBakey jaw estimate. The DeBakey has straight outer
+edges, rounded tips and an inward serrated gripping face with a compact curved
+neck recess. Both shafts use the revised approximately 8.36 mm diameter.
+The `tissue3_215300_mesh_preview` compatibility name remains available through
+`--sample` and uses the same tool assets as the default recording:
+
+```bash
+./docker/run.sh fem_suturebot --sample tissue3_215300_mesh_preview
+```
+
+Each recording contains its own portable copy of the two tool assets. The mesh
+update preserves its recorded motion, opening angles, cameras and phantom. The DeBakey shape is an estimate refined against the reference
+photo; four-view calibration remains unfinished. The four recording choices and
+default selection remain available.
+
 Redirected-input, headless, test, demo and benchmark runs keep the default sample
 without prompting; `--sample` always selects directly. Use `--choose-sample` to
 request the picker explicitly, including before a headless run.
-The catalog contains four bundled recordings; earlier failed transfer candidates
-remain separately in the workbench:
+The catalog contains four bundled recordings; eight additional source recordings
+remain under preparation and review in the workbench:
 
 | Sample | Source episode | Wound | Frames | Availability |
 | --- | --- | --- | --- | --- |
 | `tissue3_215300` | `tissue_3/2_needle_throw/20250428-215300-489212` | 1 | 601 | Bundled alignment estimate |
-| `tissue3_222119_approach` | `tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery` | 1 | 575 retained; replay 5–141 | Estimated alignment and needle; green labels |
-| `tissue3_224616_approach` | `tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery` | 3 | 461 retained; replay 4–106 | Bundled scoped pose estimate; green labels, no needle |
-| `tissue3_215248_pickup` | `tissue_3/1_needle_pickup/20250428-215248-974340` | 1 | 282 retained; replay 4–281 | Bundled full supported pickup pose estimate; no labels or needle |
+| `tissue3_222119_approach` | `tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery` | 1 | 575 retained; replay 5–141 | Estimated alignment; green labels |
+| `tissue3_224616_approach` | `tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery` | 1 | 461 retained; replay 4–106 | Region 1 placement and green labels corrected; alignment remains estimated |
+| `tissue3_215248_pickup` | `tissue_3/1_needle_pickup/20250428-215248-974340` | 1 | 282 retained; replay 4–281 | Recorded pickup tool motion; pad alignment unvalidated; no labels |
 | `tissue3_212958` | `tissue_3/2_needle_throw/20250428-212958-618853` | 1 | 668 | MSc preparation; alignment review failed |
 | `tissue4_211216` | `tissue_4/2_needle_throw/20250429-211216-730508` | 1 | 640 | MSc preparation; alignment review failed |
-| `tissue5_102359` | `tissue_5/2_needle_throw/20250430-102359-757268` | 1 | 598 | MSc preparation; alignment review failed |
-| `tissue7_200743` | `tissue_7/2_needle_throw/20250502-200743-038955` | 1 | 603 | MSc preparation; alignment review failed |
+| `tissue2_111109` | `tissue_2/1_needle_pickup/20250424-111109-544182` | 1 | 306 | MSc candidate; native tool/pad alignment failed |
+| `tissue5_102359` | `tissue_5/2_needle_throw/20250430-102359-757268` | 1 | 598 | Earlier alignment failed; reviewed tracking retry has insufficient PSM1 coverage |
+| `tissue6_221332` | `tissue_6/2_needle_throw/20250501-221332-135591` | 1 | 547 | Source reviewed; insufficient PSM1 tracking coverage |
+| `tissue7_200743` | `tissue_7/2_needle_throw/20250502-200743-038955` | 1 | 603 | Earlier alignment failed; reviewed tracking retry has insufficient PSM1 coverage |
+| `tissue8_220859` | `tissue_8/2_needle_throw_recovery/20250505-220859-555095_recovery` | 1 | 623 | MSc candidate; native tool/pad alignment failed |
+| `tissue9_100142` | `tissue_9/2_needle_throw_recovery/20250506-100142-221421_recovery` | 1 | 655 | Source reviewed; PSM2 tracks, but independent PSM1 image support fails |
 
-The tissue session number is not a wound number. The four additional source clips
+The tissue session number is not a wound number. The eight additional source clips
 show the same long region-1 incision; their preparation configs retain that
 source-image review before fitting. This set does not establish recognition or
 calibration accuracy on wounds 2–6. Additional placements are conditional
 transfers of the reference calibration, with per-episode constant arm-base
 corrections and image-fit reports. Inherited lens, fixture-scale, timing and
 depth assumptions remain explicit in each preparation's `automatic_fit.json`.
-They have source-motion, UV and rendering checks, but their camera overlays show
-unresolved placement errors. They are not installed as validated examples.
+Prepared candidates have source-motion, UV and rendering checks, but their camera
+overlays show unresolved placement errors. Other clips stop at insufficient or
+inconsistent image evidence. None is installed as a validated example.
 
 The movable four-view window blends actual USD model surfaces onto the matching
 recorded frames, with cyan visible edges, adjustable fill opacity and a
@@ -241,17 +264,19 @@ python -m suturebot.simulation.prepare_recording_batch \
 ```
 
 The pipeline extracts source evidence, fits constant transforms, verifies motion
-and input preservation, prepares UV labels and renders review views. Optional
-`--needle` prepares a fixed-grip estimate; a successful dynamics run cannot
-authorize an inaccurate initialization. Publication uses `--publish-root` and
+and input preservation, prepares UV labels and renders review views. It prepares
+tools, cameras, rig and pad only; caches with needle or thread extensions are
+rebuilt. Publication rejects bundles containing those extensions. Reprepared
+packages need a fresh four-view review. Publication uses `--publish-root` and
 requires the applicable quality checks. Every new recording needs a
 source-defined playback scope and passing image checks in all four cameras,
 including reserved observations, reviewed source/model overlays and unchanged
 geometry/motion/camera hashes. Runtime success alone cannot publish a sample.
 `--publish-review-required` permits an explicitly labeled absolute-calibration
-estimate after those checks; it cannot waive a failed or missing camera review
-or a failed needle initialization. Only the original `tissue3_215300` reference without automatic-fit metadata
-retains its documented legacy estimate status. The input/script fingerprint permits reuse of unchanged preparation;
+estimate after those checks; it cannot waive a failed or missing camera review.
+Only the original `tissue3_215300` reference without automatic-fit metadata retains
+its documented legacy estimate status. The input/script fingerprint permits reuse
+of unchanged preparation;
 `--force` recomputes the fit. All preparation remains under MSc. The example
 only loads the published data.
 
@@ -263,30 +288,6 @@ coordinates, and bakes the mask coverage into a bright green RGB `(0, 255, 0)`
 USD UV texture. Source click coordinates and the original mask are preserved. The dots
 remain attached to that material surface during playback. The replay surface
 is static; this does not add FEM stepping.
-
-The needle's initial pose is an estimate from the first stereo frames. Recorded
-jaw opening controls grasp/release with hysteresis. Each fresh open-to-closed
-transition can recapture a free needle: its nearest centerline point is translated
-to that gripper's grasp center while its world orientation is preserved. This
-replay assistance repeats after later releases, even if the needle has fallen
-away from the tool. It does not replay a recorded needle trajectory or establish
-that the physical gripper reached the needle. A nearby closed gripper can still
-receive a handoff; a closure while the other tool holds the needle cannot cause
-a delayed capture afterward.
-
-Once held, the needle keeps a constant transform relative to its tool. Opening
-the holding jaw releases it, and MuJoCo advances it with inherited velocity and
-gravity. The collision support
-is one flat rectangular backing block beneath the raised tissue. Raised tissue,
-the table, tools and fixture have no needle collision shapes; there are no tissue
-puncture forces. The synthetic released motion can therefore diverge from the source
-video. Backward seeks reset and reproduce the dynamics on the source clock.
-Use `--no-needle` to inspect the original placement alone. The small needle
-solver defaults to CPU while rendering can independently use CUDA.
-The tapered CAD endpoint is corrected independently of the image fit. Its
-placement remains under review: source wrist views reveal a proximal branch
-that the initial stereo-only fit did not constrain. Neither rigid-body stability
-nor a small gap in one frame establishes correct four-camera placement.
 
 - `recording.json`: sample identity, relative asset paths, camera conventions,
   timing, alignment status and provenance.
@@ -302,22 +303,18 @@ nor a small gap in one frame establishes correct four-camera placement.
   overlay resolution, with no runtime dependency on the source-data checkout.
 - `point_labels.json`, `point_labels_source/`, `textures/`: original point labels,
   their mesh bindings and the baked UV atlas.
-- Optional `needle.usdc`, `needle_inputs.npz`, `needle_initialization.json`: prepared
-  rigid geometry, source jaw angles and initial-pose evidence; no recorded needle
-  trajectory. These are present in the default sample and the `222119`
-  approach; the other two recordings contain no needle.
-
 ## Bounded approach samples
 
 Two additional recordings are bundled as short approaches before visible
 tissue deformation: `tissue3_222119_approach` uses region 1 and
-`tissue3_224616_approach` uses region 3, as identified by the user. Publication and portable runtime checks are recorded in
+`tissue3_224616_approach` is also region 1, confirmed by the user for the entire
+recording. Its earlier region-3 interpretation is superseded. Publication and portable runtime checks are recorded in
 [the approach validation report](docs/validation/suturebot-approaches.json).
 
 | Sample | Region | Source recording under `tissue_3/2_needle_throw_recovery/` | Source frames, inclusive | Playback duration |
 | --- | ---: | --- | --- | ---: |
 | `tissue3_222119_approach` | 1 | `20250428-222119-449047_recovery` | 5–141 | 4.527 s |
-| `tissue3_224616_approach` | 3 | `20250428-224616-539134_recovery` | 4–106 | 3.401 s |
+| `tissue3_224616_approach` | 1 | `20250428-224616-539134_recovery` | 4–106 | 3.401 s |
 
 The source videos define these bounds independently of the fit residuals.
 Recorded frame numbers, timestamps and complete motion arrays are retained;
@@ -325,25 +322,27 @@ the frame slider and playback use only the declared approach. The later motion
 is available for diagnostics but is not validated as a static-pad replay.
 
 These samples contain tools, the fixture, estimated cameras and pad placement,
-and the existing dataset point labels rendered in green on the mesh. Recording
-`222119` also contains an estimated needle with a fixed tool-relative grasp;
-its initial shape and pose pass the stated image and runtime checks. Recording
-`224616` contains no needle because its initialization failed the image checks.
+and the existing dataset point labels rendered in green on the mesh.
 Four-camera image thresholds and source-motion preservation are checked
 within each approach. Calibration remains an estimate with `accepted: false`;
 passing those scoped checks does not establish absolute dimensions, exact
 camera calibration or pixel-exact tool and wound geometry. PSM2 uses surrogate
 instrument geometry, and local jaw and groove-bank differences remain visible.
 The table, pad depth and fixture scale inherit the stated calibration assumptions.
-Recording 3's joint camera, pad and needle fit modestly improves the first-frame
-PSM1 shaft and head alignment. Other camera residuals worsen within the declared
-thresholds; the needle remains thicker than the video and has an approximately
-10-pixel endpoint offset in a reviewed later frame. This is a partial replay
-estimate, not a fully aligned reconstruction.
-Recording 4 uses a rigid pad placement fitted to the original region-3 wound;
-its two green labels also bind to region 3. The twelve original region meshes
-are preserved. The CLI reports missing needles and incomplete geometry
-alignment explicitly.
+Recording 3 retains its fitted first-frame PSM1 shaft and head alignment, with
+residual errors in other views. This is a partial replay estimate, not a fully
+aligned reconstruction.
+Recording 4's source identity is now confirmed as region 1, including both
+visible incision fragments; nearby feature A is tentatively region 2. The
+obsolete region-3 placement has been replaced by one rigid pad pose using the
+region-1 incision and the identified outer edge. Both green labels were rebound
+to Region01. Ten synchronized frames were rendered in all four native views;
+reviewed cloth-background points are no longer covered by the phantom. Reserved
+wrist border errors fell from 226/366 to 13/16 pixels, so visible residuals
+remain and full alignment is still unvalidated. The twelve original meshes,
+their geometry and canonical IDs are preserved. Current evidence is in
+`pad_edge_alignment.json` and `audit/region1_pad_fit/`; the previous region-3
+reports remain historical evidence.
 
 Select them in the recording panel or run:
 
@@ -355,12 +354,13 @@ uv run --locked --extra examples python -m newton_solver_fem.examples fem_suture
 Preparation lives in `MSc/SutureBot-workbench`. Frozen source-image annotations
 and phase definitions are explicit inputs; this is not an automatic six-region
 classifier. The region-1 batch fitter estimates session mounts and a constant
-pad translation from all four views. It now rejects other regions before
-fitting or reusing a cache, including the corrected region-3 entry in
-`config/recording_batch/newton_approach_examples.json`.
-The region-3 correction has its own native-mesh fit and prepared assets under
-`outputs/simulation/review_224616_region3_fix/`; the configuration points to that
-result. Labels bind to the placed surface. The Newton example only loads the data.
+pad translation from all four views and rejects other regions before fitting
+or reusing a cache. The four corrected `224616` batch entries declare region 1
+and fresh output directories under `outputs/simulation/review_224616_region1_correction/`.
+Their earlier region-3 results are retained as history. New recordings must pass
+the pad-boundary, incision, tool and camera checks before publication. The
+existing example-4 correction retains its explicit estimate status. The Newton
+example only loads prepared data.
 
 ## Full supported pickup replay
 
@@ -368,10 +368,10 @@ result. Labels bind to the placed surface. The Newton example only loads the dat
 `tissue_3/1_needle_pickup/20250428-215248-974340`. It preserves the complete
 supported pickup motion before tissue interaction, with the same conditional
 camera/tool/pad calibration policy as the approaches. Its source recording has
-no clicked-point labels, so it contains no UV markers. It also has no simulated
-needle: the replay shows the recorded tool motion, not a validated grasp of
-the source needle. Publication and validation results are recorded in the
-[structured validation report](docs/validation/suturebot-approaches.json).
+no clicked-point labels, so it contains no UV markers. All 278 supported source
+frames retain their recorded tool motion. Pad alignment still differs from the
+videos; the camera calibration remains an estimate. Earlier pose-replay results
+are recorded in the [structured validation report](docs/validation/suturebot-approaches.json).
 
 The sample is bundled. Select `tissue3_215248_pickup` in the recording panel or run:
 
@@ -383,7 +383,7 @@ The reproducible workbench configuration is
 `config/recording_batch/pickup_215248_reviewed.json`. It uses source-reviewed
 stereo incision seeds because dataset click labels are absent, and the frozen
 wrist observations supply independent tool and pad checks. No point labels are
-fabricated and no needle interaction is inferred from successful tool replay.
+fabricated.
 
 The earlier approximate MuJoCo/FEM press experiment is retained separately in
 `_suturebot_contact_demo.py` and `tools/validate_suturebot_press.py` for contact
@@ -514,8 +514,8 @@ Prepared link poses are derived
 from the recorded Cartesian tool poses and wrist/jaw chain, with the declared
 frame-alignment transforms. The example assigns these poses directly to the
 Newton state. Tool replay remains kinematic and does not infer measured forces.
-An optional separate rigid needle uses MuJoCo after release; the phantom remains
-static and there is no tissue puncture or FEM stepping in this replay.
+The phantom remains static. The replay contains no needle or thread assets and
+does not step dynamics or FEM.
 
 Integer source timestamps $\tau_k$ remain intact in the package. Relative
 times and the displayed source index are
@@ -544,17 +544,6 @@ ownership or triangle indices. Visibility testing prevents labels from painting
 through a nearer surface. The existing USD texture path supplies both the
 viewer and camera renderer. These bindings can follow updated triangle vertices,
 but the default replay does not deform them.
-
-The rigid needle has an image-estimated initial pose $T_{N,0}$. At a grasp by
-tool $G$, the runtime stores $T_{GN}=T_G^{-1}T_N$ and subsequently sets
-$T_N(k)=T_G(k)T_{GN}$. A close-jaw threshold plus distance to the needle centerline
-permits attachment; a separate open-jaw threshold releases it. Original jaw
-angles use the same timestamps as the tools. MuJoCo integrates the free needle
-between source timestamps with bounded substeps, gravity, inherited release
-velocity and an approximate static support collider. The recorded tools receive
-no needle reaction forces. There is no recorded needle trajectory, tissue
-puncture, thread constraint or force-based grasp model. Seeking backward resets
-and repeats these decisions so viewer rate does not change the trajectory.
 
 [_suturebot_cameras.py](src/newton_solver_fem/examples/_suturebot_cameras.py)
 uses the public Newton `SensorCamera` renderer. Lens inversion and frame
@@ -742,7 +731,7 @@ drive the `fem_suturebot` recording or its camera overlays.
 | Smith, de Goes and Kim, [Stable Neo-Hookean Flesh Simulation (2018)](https://www.tkim.graphics/NEO/StableNeoHookean2018.pdf) | The regularized isotropic energy and rest correction are used by the Tet4 force kernels in [kernels.py](src/newton_solver_fem/_src/solvers/fem/kernels.py) and its Q1 `eval_hexahedra` kernel. Stretch/determinant clamps and the approximate PSD tangent are implementation choices; this is not the paper's full nonlinear solve. |
 | Sifakis, Der and Fedkiw, [Arbitrary Cutting of Deformable Tetrahedralized Objects (2007)](https://pages.cs.wisc.edu/~sifakis/papers/cutting.pdf), §3 | [LinearTetCut](src/newton_solver_fem/_src/cutting/tetrahedral_cut.py) clips embedded material regions; [CutModel](src/newton_solver_fem/_src/cutting/model.py) retains parent affine basis functions with duplicated nodes, fragment volume weights and barycentric mass integrals. |
 | Acharya and Hyde, [STA-FEM (2026)](https://arxiv.org/abs/2605.11673), §3.4 and Algorithm 1 | [StreamingTetAssembly](src/newton_solver_fem/_src/solvers/fem/streaming.py) maintains additive element blocks under local topology changes. It adapts the element-assembly idea to reserved copies of basis nodes; it does not implement the paper's graph-Laplacian proxy or benchmark. |
-| Haworth et al., [SutureBot (2025)](https://suturebot.github.io/static/SutureBot_NeurIPS_2025.pdf), Fig. 2 and §2.1 | [fem_suturebot](src/newton_solver_fem/examples/example_fem_suturebot.py) replays the recorded tool motion for `tissue_3/2_needle_throw/20250428-215300-489212` over the original static phantom, with four model/source-video overlays. Prepared USD geometry, link poses, optical poses and lens rays come from the separate MSc preparation pipeline. Region 1 identifies the training wound; the regional FEM example presents wounds 1–6 and other areas 7–12. Camera/phantom registration remains a fitted estimate. Tool motion is an alignment replay. A separate rigid needle uses an estimated initial pose, jaw-controlled attachment and MuJoCo after release; this addition does not reproduce the paper's policy, tissue puncture or suturing results. |
+| Haworth et al., [SutureBot (2025)](https://suturebot.github.io/static/SutureBot_NeurIPS_2025.pdf), Fig. 2 and §2.1 | [fem_suturebot](src/newton_solver_fem/examples/example_fem_suturebot.py) replays the recorded tool motion for `tissue_3/2_needle_throw/20250428-215300-489212` over the original static phantom, with four model/source-video overlays. Prepared USD geometry, link poses, optical poses and lens rays come from the separate MSc preparation pipeline. Region 1 identifies the training wound; the regional FEM example presents wounds 1–6 and other areas 7–12. Camera/phantom registration remains a fitted estimate. Tool motion is an alignment replay. Needle and thread reconstruction are excluded from the prepared replay; it does not reproduce the paper's policy or suturing results. |
 
 ## SutureBot data and implementation scope
 
@@ -753,7 +742,7 @@ drive the `fem_suturebot` recording or its camera overlays.
 | Checking model placement against recorded pixels | [FourCameraOverlay](src/newton_solver_fem/examples/_suturebot_cameras.py) renders actual Newton model geometry through prepared inverse-lens rays and camera-to-world poses, then blends visible surfaces and outlines onto indexed source frames. This rendering/registration workflow is an implementation addition, not a claimed algorithm or calibration result from the paper. Numerical projection tests do not establish accuracy of the fitted recording alignment. |
 | Visible tool-shaft alignment | Offline preparation compares independently observed wrist-image cylinder edges with finite perspective tangents of the retained shaft CAD, and checks the result against actual triangle renders. The [shaft objective](docs/method.md#suturebot-recorded-motion-and-camera-overlays) estimates mount/lens alignment; an own-shaft view cannot independently determine global tool/table height. This is an implementation addition, not a calibration procedure or measured optical specification supplied by the paper. |
 | Fig. 2: pad, RCM fixture and endoscope arrangement | Offline preparation ties each constant arm-base calibration to a fixture port, constrains wrist optical axes parallel to shafts and the pad normal parallel to fixture support, and fits the pad's independent displacement. The source fixture feet define the table plane. A transparent endoscope housing follows the stereo optics; its optical-to-shaft angle is unmeasured. These scene-registration constraints are implementation choices, not measured hand-eye calibration supplied by the paper. |
-| Dataset point targets and rigid needle | Existing final-frame clicked points bind to the unchanged tet exterior through barycentric coordinates and a USD UV atlas. A fixed tool-to-needle transform controls held motion; jaw opening releases it, and each fresh closure can translate the free needle to the gripper without rotating it. Nearby closed-jaw handoff remains available, with MuJoCo dynamics while free. These are simulator additions, not recorded needle trajectories or a reproduced SutureBot controller. |
+| Dataset point targets | Existing final-frame clicked points bind to the unchanged tet exterior through barycentric coordinates and a USD UV atlas. The bindings and static replay surface preserve the supplied material targets. |
 | Earlier approximate physical rig demonstration | [_suturebot_contact_demo.py](src/newton_solver_fem/examples/_suturebot_contact_demo.py) retains the MuJoCo tools/free needle and sampled two-way FEM contact experiment. Available instrument CAD includes a documented DeBakey surrogate. The [legacy contact method](docs/method.md#legacy-suturebot-rigid-and-deformable-contact-experiment) and press validation are separate from the default recording replay. |
 
 All fitting, source-image decoding and USD preparation remain under the MSc
@@ -792,7 +781,7 @@ One demonstration clip per example. Click a preview to open its MP4. Videos show
 | Example | Example |
 | --- | --- |
 | **[diffsim_bear](src/newton_solver_fem/examples/diffsim/example_diffsim_bear.py)**<br>Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller.<br><a href="docs/media/diffsim_bear.mp4"><img src="docs/media/diffsim_bear.gif" width="420" alt="Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller."></a><br>Fresh live inference after one Adam update, using all 1,986 vertices, 5,354 tetrahedra and 80 substeps per frame.<br>`./docker/run.sh diffsim_bear` | **[fem_phantom_regions](src/newton_solver_fem/examples/example_fem_phantom_regions.py)**<br>Select one SutureBot wound on a clickable map and right-drag the suture pad.<br><a href="docs/media/fem_phantom_regions.mp4"><img src="docs/media/fem_phantom_regions.gif" width="420" alt="Select one SutureBot wound on a clickable map and right-drag the suture pad."></a><br>Click the 2D pad map to select a SutureBot wound: right-drag wound 4, switch to wound 6, disable FEM, then return to wound 4. Wound numbers follow the dataset; inactive material stays fixed.<br>`./docker/run.sh fem_phantom_regions` |
-| **[fem_suturebot](src/newton_solver_fem/examples/example_fem_suturebot.py)**<br>Replay measured SutureBot motion with four source-video camera overlays.<br><a href="docs/media/fem_suturebot.mp4"><img src="docs/media/fem_suturebot.gif" width="420" alt="Replay measured SutureBot motion with four source-video camera overlays."></a><br>Replay the tissue3 needle-throw recording with prepared USD tools, cameras and the original phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Each fresh jaw closure can translate the free rigid needle to the gripper again, preserving its orientation, then hold it until release into MuJoCo dynamics. This is replay assistance; camera and needle placement remain estimates, and tissue puncture is not simulated.<br>`./docker/run.sh fem_suturebot` | **[linear_fem](src/newton_solver_fem/examples/example_linear_fem.py)**<br>Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid.<br><a href="docs/media/linear_fem.mp4"><img src="docs/media/linear_fem.gif" width="420" alt="Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid."></a><br>All six Tet4/Hex8 objects falling and deforming against the floor; default physics and resolution.<br>`./docker/run.sh linear_fem` |
+| **[fem_suturebot](src/newton_solver_fem/examples/example_fem_suturebot.py)**<br>Replay measured SutureBot motion with four source-video camera overlays.<br><a href="docs/media/fem_suturebot.mp4"><img src="docs/media/fem_suturebot.gif" width="420" alt="Replay measured SutureBot motion with four source-video camera overlays."></a><br>Replay measured tissue3 tool motion with prepared USD tools, cameras, fixture and the original static phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Camera and pad placement remain fitted estimates.<br>`./docker/run.sh fem_suturebot` | **[linear_fem](src/newton_solver_fem/examples/example_linear_fem.py)**<br>Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid.<br><a href="docs/media/linear_fem.mp4"><img src="docs/media/linear_fem.gif" width="420" alt="Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid."></a><br>All six Tet4/Hex8 objects falling and deforming against the floor; default physics and resolution.<br>`./docker/run.sh linear_fem` |
 | **[linear_fem_baymax_cut](src/newton_solver_fem/examples/example_linear_fem_baymax_cut.py)**<br>Drill holes, slice or carve a soft Baymax; use the mouse to lift, hold and release material.<br><a href="docs/media/linear_fem_baymax_cut.mp4"><img src="docs/media/linear_fem_baymax_cut.gif" width="420" alt="Drill holes, slice or carve a soft Baymax; use the mouse to lift, hold and release material."></a><br>Six finite slices produce ten disconnected material pieces; the clip then hides the skin and switches to an elevated, colored connectivity debug view.<br>`./docker/run.sh linear_fem_baymax_cut` |  |
 
 ## Regenerate documentation

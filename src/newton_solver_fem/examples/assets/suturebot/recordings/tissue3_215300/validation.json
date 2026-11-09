@@ -9,10 +9,14 @@
   "image_count": 2404,
   "camera_ray_file_count": 8,
   "usd_layers": [
-    "needle.usdc",
     "phantom.usdc",
     "rig.usdc",
-    "scene.usda"
+    "scene.usda",
+    "scene_tool_mesh_preview.usda",
+    "scene_tools.usda",
+    "tool_mesh_preview_geometry.usdc",
+    "tools/debakey_forceps.usdc",
+    "tools/large_needle_driver.usdc"
   ],
   "frame_count": 601,
   "supported_frames": [
@@ -20,13 +24,6 @@
     600
   ],
   "additional_assets": [
-    "audit/regrasp_policy/metadata_preservation.json",
-    "audit/regrasp_policy/needle_runtime_validation.json",
-    "needle.usdc",
-    "needle_backing_collision.json",
-    "needle_initialization.jpg",
-    "needle_initialization.json",
-    "needle_inputs.npz",
     "pad_placement.json",
     "pad_placement_correction.json",
     "point_labels.json",
@@ -38,5 +35,13 @@
     "shapes": 27,
     "device": "cpu"
   },
-  "alignment_precision_validated": false
+  "alignment_precision_validated": false,
+  "example_feature_removal": {
+    "features": [
+      "needle",
+      "thread"
+    ],
+    "retained_payload_hashes_preserved": true,
+    "image_alignment_acceptance_granted": false
+  }
 }

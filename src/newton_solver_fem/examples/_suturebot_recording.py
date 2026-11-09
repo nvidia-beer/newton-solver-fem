@@ -13,9 +13,21 @@ RECORDINGS = Path(__file__).parent / "assets/suturebot/recordings"
 DEFAULT_RECORDING = RECORDINGS / "tissue3_215300/recording.json"
 
 
-def bundled_recordings():
-    """Discover complete prepared samples without maintaining a second catalog."""
-    return {path.parent.name: path for path in sorted(RECORDINGS.glob("*/recording.json"))}
+def bundled_recordings(*, include_aliases=True):
+    """Discover prepared variants; menus may omit explicit compatibility aliases."""
+    samples = {path.parent.name: path for path in sorted(RECORDINGS.glob("*/recording.json"))}
+    for path in sorted(RECORDINGS.glob("*/recording_*.json")):
+        name = f"{path.parent.name}_{path.stem.removeprefix('recording_')}"
+        if name in samples:
+            raise ValueError(f"Duplicate bundled recording name: {name}")
+        samples[name] = path
+    if not include_aliases:
+        samples = {
+            name: path
+            for name, path in samples.items()
+            if json.loads(path.read_text()).get("tool_mesh_preview", {}).get("status") != "compatibility_alias"
+        }
+    return samples
 
 
 class Recording:

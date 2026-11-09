@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "original_mesh_arrays_identical": true,
+  "cameras_tools_rig_motion_and_source_images_byte_identical": true,
+  "source_clicked_mask_and_csv_byte_identical": true,
+  "labels_rebound_to_region1": true,
+  "usd_dependencies_portable": true,
+  "needle_present": false,
+  "pad_transform_only_geometry_change": true,
+  "uv_texture_rebaked": true
+}

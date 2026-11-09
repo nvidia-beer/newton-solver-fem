@@ -7,6 +7,7 @@ import argparse
 import io
 import unittest
 from contextlib import redirect_stderr, redirect_stdout
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from newton_solver_fem.examples import _suturebot_cli as cli
@@ -42,7 +43,9 @@ class TestSutureBotCLI(unittest.TestCase):
         return args.sample, output.getvalue(), errors.getvalue()
 
     def test_terminal_selects_number_name_and_default(self):
-        names = sorted(bundled_recordings(), key=lambda name: (name != DEFAULT_RECORDING.parent.name, name))
+        names = sorted(
+            bundled_recordings(include_aliases=False), key=lambda name: (name != DEFAULT_RECORDING.parent.name, name)
+        )
         for text, expected in (("\n", names[0]), ("2\n", names[1]), (f"{names[-1]}\n", names[-1])):
             with self.subTest(text=text):
                 sample, output, errors = self.configure(text=text, terminal=True)
@@ -60,6 +63,16 @@ class TestSutureBotCLI(unittest.TestCase):
                     sample, output, errors = self.configure(arguments, terminal=True)
                 self.assertEqual(sample, self.parser().parse_args(arguments).sample)
                 self.assertFalse(output or errors)
+
+    def test_compatibility_alias_is_hidden_but_explicit_sample_still_works(self):
+        recordings = cli._catalog(self.parser())
+        name = "tissue3_215300_mesh_preview"
+        self.assertNotIn(name, [key for key, _ in recordings])
+        self.assertIn(name, bundled_recordings())
+        sample, output, errors = self.configure(["--sample", name], terminal=True)
+        self.assertEqual(sample, name)
+        self.assertFalse(output or errors)
+        self.assertEqual(Recording(sample).scene_path, Recording(DEFAULT_RECORDING).scene_path)
 
     def test_scripted_and_headless_launches_keep_default_without_reading_stdin(self):
         cases = (
@@ -106,19 +119,33 @@ class TestSutureBotCLI(unittest.TestCase):
         self.assertFalse(errors.getvalue())
         listing = output.getvalue()
         self.assertTrue(listing.splitlines()[1].startswith(f" 1) {DEFAULT_RECORDING.parent.name} [default]"))
-        for name, path in bundled_recordings().items():
+        for name, path in bundled_recordings(include_aliases=False).items():
             recording = Recording(path)
             line = next(line for line in listing.splitlines() if f") {name}" in line)
             self.assertIn(f"region {recording.manifest['region_id']}", line)
             self.assertIn(f"frames {recording.first_frame}-{recording.last_frame}", line)
             self.assertIn(f"{recording.duration:.3f} s", line)
-            self.assertEqual(" | needle" in line, "needle" in recording.manifest)
-            self.assertEqual("no needle" in line, "needle" not in recording.manifest)
+            self.assertNotIn("needle", line)
+            self.assertNotIn("thread", line)
             self.assertEqual("green point labels" in line, "point_labels" in recording.manifest)
             phase = recording.manifest.get("playback", {}).get("description")
             if phase:
                 self.assertIn(phase, listing)
         self.assertIn("Alignment estimate: full tool/pad geometry is not validated.", listing)
+
+    def test_known_alignment_failure_is_not_presented_as_only_unvalidated(self):
+        reason = "Outer pad boundary differs from the source wrist views."
+        recording = SimpleNamespace(
+            manifest={"region_id": 3, "alignment": {"accepted": False, "failure_reason": reason}},
+            first_frame=4,
+            last_frame=106,
+            duration=3.4,
+        )
+        output = io.StringIO()
+        cli._show([("known_failed_pad", recording)], file=output)
+        self.assertIn(f"Alignment check failed: {reason}", output.getvalue())
+        self.assertNotIn("Alignment estimate:", output.getvalue())
+        self.assertNotIn("thread", output.getvalue())
 
 
 if __name__ == "__main__":

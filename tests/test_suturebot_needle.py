@@ -13,11 +13,9 @@ from types import SimpleNamespace
 import newton
 import numpy as np
 import warp as wp
-from newton.solvers import SolverMuJoCo
 from pxr import Gf, Usd, UsdGeom, UsdPhysics
 
-from newton_solver_fem.examples._suturebot_needle import NeedleReplay, add_needle_to_builder, matrix_pose, pose_matrix
-from newton_solver_fem.examples._suturebot_recording import DEFAULT_RECORDING, Recording
+from newton_solver_fem.examples._suturebot_needle import NeedleReplay, add_needle_to_builder, pose_matrix
 
 
 class TestSutureBotNeedle(unittest.TestCase):
@@ -198,112 +196,6 @@ class TestSutureBotNeedle(unittest.TestCase):
         self.recording.timestamps_ns = self.recording.timestamps_ns + 1
         with self.assertRaisesRegex(ValueError, "unchanged recording clock"):
             self._runtime()
-
-
-class TestBundledNeedleBacking(unittest.TestCase):
-    def test_one_rectangular_backing_allows_tissue_penetration_and_stops_freefall(self):
-        """Exercise the real prepared needle and collider through public MuJoCo APIs."""
-        recording = Recording(os.environ.get("SUTUREBOT_TEST_RECORDING", DEFAULT_RECORDING))
-        specification = recording.manifest["needle"]
-        asset = recording.asset(specification["usd"])
-        stage = Usd.Stage.Open(str(asset))
-        static_colliders = []
-        moving_colliders = []
-        for prim in stage.Traverse():
-            if not prim.HasAPI(UsdPhysics.CollisionAPI):
-                continue
-            ancestor = prim
-            while ancestor and not ancestor.HasAPI(UsdPhysics.RigidBodyAPI):
-                ancestor = ancestor.GetParent()
-            (moving_colliders if ancestor else static_colliders).append(prim)
-        self.assertEqual(len(static_colliders), 1, "Only the rectangular pad may collide with the needle")
-        backing = static_colliders[0]
-        self.assertTrue(backing.IsA(UsdGeom.Cube), "A mesh hull must not bridge the raised tissue")
-        self.assertNotIn("TableSupport", str(backing.GetPath()))
-        self.assertTrue(moving_colliders)
-        self.assertTrue(all(prim.IsA(UsdGeom.Capsule) for prim in moving_colliders))
-
-        matrix = np.asarray(UsdGeom.XformCache().GetLocalToWorldTransform(backing)).T
-        size = float(UsdGeom.Cube(backing).GetSizeAttr().Get())
-        lengths = np.linalg.norm(matrix[:3, :3], axis=0)
-        rotation = matrix[:3, :3] / lengths
-        np.testing.assert_allclose(rotation.T @ rotation, np.eye(3), atol=2e-7)
-        normal = rotation[:, 2]
-        top = float(matrix[:3, 3] @ normal + size * lengths[2] / 2)
-        labels = json.loads(recording.asset(recording.manifest["point_labels"]["report"]).read_text())
-        insertion = next(point for point in labels["points"] if point["label"] == "insertion")
-        self.assertEqual(insertion["region_id"], 1)
-        insertion_world = np.asarray(insertion["position_world_m"])
-        self.assertGreater(float(insertion_world @ normal - top), 0.005)
-        with np.load(recording.asset(specification["inputs_npz"]), allow_pickle=False) as archive:
-            centreline = archive["centreline_local_m"].copy()
-
-        # Start the entire flat needle below the raised region-1 surface, but
-        # above the backing. This detects a retained tissue hull as well as a
-        # missing or disabled backing, without relying on collision labels.
-        start = np.eye(4)
-        start[:3, :3] = rotation
-        target = insertion_world + normal * (top + 0.004 - insertion_world @ normal)
-        start[:3, 3] = target - rotation @ centreline.mean(axis=0)
-        with wp.ScopedDevice("cpu"):
-            builder = newton.ModelBuilder()
-            builder.default_shape_cfg.ke = specification["simulation"].get("contact_stiffness", 1e6)
-            builder.default_shape_cfg.kd = specification["simulation"].get("contact_damping", 2000)
-            add_needle_to_builder(builder, recording)
-            model = builder.finalize(device="cpu")
-            model.set_gravity(tuple(-9.81 * normal))
-            self.assertEqual(model.body_count, 1)
-            state, following = model.state(), model.state()
-            control = model.control()
-            solver = SolverMuJoCo(
-                model,
-                use_mujoco_cpu=True,
-                iterations=30,
-                ls_iterations=10,
-                integrator="implicitfast",
-                nconmax=4 * model.shape_count,
-                njmax=24 * model.shape_count,
-            )
-            solver.reset(state)
-            state.body_q.assign(np.asarray([matrix_pose(start)], np.float32))
-            state.body_qd.zero_()
-            newton.eval_ik(model, state, state.joint_q, state.joint_qd)
-            initial_height = float(state.body_q.numpy()[0, :3] @ normal)
-            for step in range(400):
-                state.clear_forces()
-                solver.step(state, following, control, None, 0.001)
-                state, following = following, state
-                if step == 9:
-                    drop = initial_height - float(state.body_q.numpy()[0, :3] @ normal)
-                    self.assertGreater(drop, 0.0004, "Raised tissue unexpectedly blocks the released needle")
-                    self.assertLess(drop, 0.0007)
-            final = pose_matrix(state.body_q.numpy()[0])
-        heights = (centreline @ final[:3, :3].T + final[:3, 3]) @ normal - top
-        self.assertGreater(float(heights.min()), -0.0005, "Needle fell through the rectangular backing")
-        self.assertLess(float(heights.min()), 0.0008, "Needle remained suspended above the backing")
-
-
-class TestBundledNeedleRegrasp(unittest.TestCase):
-    def test_source_frame_446_recovers_the_released_needle(self):
-        recording = Recording(DEFAULT_RECORDING)
-        builder = newton.ModelBuilder()
-        add_needle_to_builder(builder, recording)
-        model = builder.finalize(device=os.environ.get("NEWTON_TEST_DEVICE", "cpu"))
-        needle = NeedleReplay(recording, model, model.state())
-        needle.seek(445)
-        self.assertIsNone(needle.held_arm)
-        snapped = pose_matrix(needle.seek(446))
-        event = needle.events[-1]
-        self.assertEqual((event["frame"], event["arm"], event["trigger"]), (446, "psm1", "jaw_close"))
-        self.assertGreater(event["distance_m"], needle.capture_distance)
-        tool = needle.tool_transform(446, "psm1")
-        center = tool[:3, :3] @ needle.grasp_points[0] + tool[:3, 3]
-        points = needle.centreline @ snapped[:3, :3].T + snapped[:3, 3]
-        self.assertLess(np.linalg.norm(points - center, axis=1).min(), 2e-7)
-        grip = needle.grip_transform.copy()
-        later = needle.seek(480)
-        np.testing.assert_allclose(pose_matrix(later), needle.tool_transform(480, "psm1") @ grip, atol=2e-7)
-        self.assertEqual([e["frame"] for e in needle.events if e["event"] == "grasp"], [446])
 
 
 if __name__ == "__main__":

@@ -123,8 +123,8 @@ Prepared link poses are derived
 from the recorded Cartesian tool poses and wrist/jaw chain, with the declared
 frame-alignment transforms. The example assigns these poses directly to the
 Newton state. Tool replay remains kinematic and does not infer measured forces.
-An optional separate rigid needle uses MuJoCo after release; the phantom remains
-static and there is no tissue puncture or FEM stepping in this replay.
+The phantom remains static. The replay contains no needle or thread assets and
+does not step dynamics or FEM.
 
 Integer source timestamps $\tau_k$ remain intact in the package. Relative
 times and the displayed source index are
@@ -153,17 +153,6 @@ ownership or triangle indices. Visibility testing prevents labels from painting
 through a nearer surface. The existing USD texture path supplies both the
 viewer and camera renderer. These bindings can follow updated triangle vertices,
 but the default replay does not deform them.
-
-The rigid needle has an image-estimated initial pose $T_{N,0}$. At a grasp by
-tool $G$, the runtime stores $T_{GN}=T_G^{-1}T_N$ and subsequently sets
-$T_N(k)=T_G(k)T_{GN}$. A close-jaw threshold plus distance to the needle centerline
-permits attachment; a separate open-jaw threshold releases it. Original jaw
-angles use the same timestamps as the tools. MuJoCo integrates the free needle
-between source timestamps with bounded substeps, gravity, inherited release
-velocity and an approximate static support collider. The recorded tools receive
-no needle reaction forces. There is no recorded needle trajectory, tissue
-puncture, thread constraint or force-based grasp model. Seeking backward resets
-and repeats these decisions so viewer rate does not change the trajectory.
 
 [_suturebot_cameras.py](../src/newton_solver_fem/examples/_suturebot_cameras.py)
 uses the public Newton `SensorCamera` renderer. Lens inversion and frame

@@ -294,14 +294,6 @@ def recording_metadata(name, example):
             "motion": "measured Cartesian/joint kinematic replay",
             "region_id": example.recording.manifest["region_id"],
             "point_labels": example.recording.manifest.get("point_labels"),
-            "needle": {
-                "present": example.needle is not None,
-                "motion": "fresh recorded jaw closure translates the nearest needle centerline point to the grasp point without rotating it; fixed gripper-relative pose while held; MuJoCo dynamics after release",
-                "regrasp_policy": example.recording.manifest.get("needle", {}).get("grasp", {}).get("regrasp_policy"),
-                "recorded_needle_trajectory": False,
-                "events": example.needle.events if example.needle is not None else [],
-            },
-            "needle_tissue_interaction": False,
             "view_changes": example.recording_view_changes,
         }
     if name == "fem_phantom_regions":

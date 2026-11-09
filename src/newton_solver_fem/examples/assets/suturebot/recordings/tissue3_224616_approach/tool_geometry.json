@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "revision": "source_diameter_debakey_concave_neck_v9",
+  "instruments": {
+    "psm1": "Large Needle Driver",
+    "psm2": "DeBakey forceps"
+  },
+  "geometry_status": {
+    "psm1": "retained CAD with source-derived shaft diameter",
+    "psm2": "photo-estimated jaw shape; not manufacturer CAD"
+  },
+  "files": {
+    "psm1": {
+      "file": "tools/large_needle_driver.usdc",
+      "sha256": "c035ce7cd3ce8772a8cfce5f4cced10ae0a3d1b7af4dbc5cb4057aaddbef7123"
+    },
+    "psm2": {
+      "file": "tools/debakey_forceps.usdc",
+      "sha256": "891f0d4a1db63432f7a4ce47c994f09f3344f2286875913b4bccfb2948ea39fd"
+    }
+  },
+  "shaft_dimensions": {
+    "psm1": {
+      "outer_diameter_m": 0.008356918580830097,
+      "axial_min_m": -0.5565921068191528,
+      "diameter_source": "420006 source CAD"
+    },
+    "psm2": {
+      "outer_diameter_m": 0.008356918580830097,
+      "axial_min_m": -0.5565921068191528,
+      "diameter_source": "Shared 4670-stage assumption; not a separate 420036 CAD measurement"
+    }
+  },
+  "frames": "Each /Tool/{roll,pitch,yaw,jaw1,jaw2}/CAD mesh uses its original link-local metre coordinates. Recording supplies articulation.",
+  "source_sha256": "1c5df2103dfee3c998bdd16c3ed2a2e84531ebad487457376c5ac5d2d08f4478",
+  "camera_alignment_validated": false,
+  "preserved": [
+    "recorded motion",
+    "camera calibration",
+    "joint opening",
+    "needle",
+    "pad",
+    "UV texture",
+    "regions",
+    "collision",
+    "materials",
+    "world transforms"
+  ]
+}

@@ -1,9 +1,8 @@
 {
   "example": "fem_suturebot",
   "module": "newton_solver_fem.examples.example_fem_suturebot",
-  "caption": "Replay the tissue3 needle-throw recording with prepared USD tools, cameras and the original phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Each fresh jaw closure can translate the free rigid needle to the gripper again, preserving its orientation, then hold it until release into MuJoCo dynamics. This is replay assistance; camera and needle placement remain estimates, and tissue puncture is not simulated.",
+  "caption": "Replay measured tissue3 tool motion with prepared USD tools, cameras, fixture and the original static phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Camera and pad placement remain fitted estimates.",
   "arguments": [
-    "--test",
     "--test"
   ],
   "device": "cuda:0",
@@ -12,7 +11,7 @@
   "width": 1280,
   "height": 720,
   "show_ui": true,
-  "recording_wall_seconds": 50.879709665998234,
+  "recording_wall_seconds": 37.43792159700024,
   "playback_is_performance_benchmark": false,
   "simulation_time": [
     {
@@ -61,37 +60,6 @@
         0
       ]
     },
-    "needle": {
-      "present": true,
-      "motion": "fresh recorded jaw closure translates the nearest needle centerline point to the grasp point without rotating it; fixed gripper-relative pose while held; MuJoCo dynamics after release",
-      "regrasp_policy": "fresh_closure_translation",
-      "recorded_needle_trajectory": false,
-      "events": [
-        {
-          "frame": 4,
-          "event": "initial_grasp",
-          "arm": "psm1"
-        },
-        {
-          "frame": 304,
-          "event": "release",
-          "arm": "psm1"
-        },
-        {
-          "frame": 446,
-          "event": "grasp",
-          "arm": "psm1",
-          "distance_m": 0.008436046036480608,
-          "trigger": "jaw_close",
-          "translation_world_m": [
-            0.0030881838864019323,
-            -0.0015317810541887258,
-            0.007699586989924595
-          ]
-        }
-      ]
-    },
-    "needle_tissue_interaction": false,
     "view_changes": [
       {
         "capture_frame": 120,

@@ -7511,7 +7511,7 @@
       "Depth and metric accuracy remain unvalidated; inspect all four actual mesh overlays."
     ],
     "current_region_identity_report": "region_review.json",
-    "historical_metrics_scope": "Original region1-assumed transfer fit; current native region3 pad metrics are in frozen_pad_fit.json and alignment_screening.json",
+    "historical_metrics_scope": "Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
     "superseded_region_identification": {
       "method": "source_only_visual_review_before_fitting",
       "region_id": 1,
@@ -7568,5 +7568,10 @@
   "accepted": false,
   "screening_report": "alignment_screening.json",
   "visual_review_report": "approach_visual_review.json",
-  "validation_status": "incision_and_cap_scope_checked_full_alignment_unaccepted"
+  "validation_status": "incision_and_cap_scope_checked_full_alignment_unaccepted",
+  "historical_only": true,
+  "historical_metrics_scope": "Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
+  "identity_correction_report": "audit/region_identity/user_region_correction.json",
+  "current_source_region_id": 1,
+  "current_alignment_accepted": false
 }

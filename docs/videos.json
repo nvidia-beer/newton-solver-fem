@@ -46,6 +46,6 @@
     "args": [
       "--test"
     ],
-    "caption": "Replay the tissue3 needle-throw recording with prepared USD tools, cameras and the original phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Each fresh jaw closure can translate the free rigid needle to the gripper again, preserving its orientation, then hold it until release into MuJoCo dynamics. This is replay assistance; camera and needle placement remain estimates, and tissue puncture is not simulated."
+    "caption": "Replay measured tissue3 tool motion with prepared USD tools, cameras, fixture and the original static phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Camera and pad placement remain fitted estimates."
   }
 }

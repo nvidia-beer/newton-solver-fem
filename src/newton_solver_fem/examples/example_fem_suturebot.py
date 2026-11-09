@@ -6,10 +6,8 @@
 Loads a prepared recording.json, USD geometry and timestamped poses. All camera
 fitting, frame extraction and asset preparation live in the MSc workbench.
 Prepared point labels remain fixed to the phantom's UV surface. Source-defined
-approach clips retain their original frame numbers. When included, a rigid
-MuJoCo needle follows a fixed grip transform while held; recorded jaw opening
-controls release and fresh closure translates it into the grip again. Tissue
-puncture and suture forces are not simulated.
+approach clips retain their original frame numbers. The prepared scene contains
+the tools, cameras, fixture and phantom; motion is replayed without dynamics.
 
 Run: python -m newton_solver_fem.examples fem_suturebot
 """
@@ -30,10 +28,10 @@ class Example:
         self.viewer, self.device = viewer, wp.get_device()
         if not np.isfinite(self.args.playback_speed) or self.args.playback_speed <= 0:
             raise ValueError("Playback speed must be positive and finite")
-        self.samples = bundled_recordings()
+        self.samples = bundled_recordings(include_aliases=False)
         self.pending_sample = None
+        self.pending_frame = None
         self.overlay = None
-        self.needle = None
         self.show_overlays = not self.args.no_camera_overlays
         self.sim_time = 0.0
         self.frame_dt = 1.0 / 60.0
@@ -43,19 +41,20 @@ class Example:
             self.viewer.register_ui_callback(self.camera_gui, position="free")
 
     def load_recording(self, path):
-        recording = Recording(path)
+        self.pending_frame = None
+        self.recording = Recording(path)
+        self._build_scene()
+        self.elapsed = 0.0
+        self.playing = True
+        self.seek(0)
+
+    def _build_scene(self):
+        """Import the prepared geometry when switching recordings."""
         if self.overlay is not None:
             self.overlay.close()
             self.overlay = None
-        self.needle = None
-        self.recording = recording
         builder = newton.ModelBuilder()
         builder.add_usd(str(self.recording.scene_path), collapse_fixed_joints=False, hide_collision_shapes=True)
-        with_needle = "needle" in self.recording.manifest and not self.args.no_needle
-        if with_needle:
-            from newton_solver_fem.examples._suturebot_needle import add_needle_to_builder
-
-            add_needle_to_builder(builder, self.recording)
         self.model = builder.finalize(device=self.device)
         self.model.set_gravity((0, 0, 0))
         self.state_0 = self.model.state()
@@ -66,14 +65,7 @@ class Example:
         self.body_indices = np.asarray([labels[path] for path in self.recording.body_paths])
         self.body_poses = self.state_0.body_q.numpy().copy()
         self.viewer.set_model(self.model)
-        if with_needle:
-            from newton_solver_fem.examples._suturebot_needle import NeedleReplay
-
-            self.needle = NeedleReplay(self.recording, self.model, self.state_0, backend=self.args.needle_backend)
-        self.elapsed = 0.0
         self.frame_index = -1
-        self.playing = True
-        self.seek(0)
 
     def seek(self, frame):
         frame = int(np.clip(frame, self.recording.first_frame, self.recording.last_frame))
@@ -87,13 +79,14 @@ class Example:
         self.body_poses[self.body_indices] = self.recording.body_poses[frame]
         self.state_0.body_q.assign(self.body_poses)
         self.state_0.body_qd.zero_()
-        if self.needle is not None:
-            self.needle.seek(frame, self.state_0)
 
     def step(self):
         if self.pending_sample is not None:
             self.load_recording(self.pending_sample)
             self.pending_sample = None
+        if self.pending_frame is not None:
+            self.seek(self.pending_frame)
+            self.pending_frame = None
         if self.playing:
             self.elapsed += self.frame_dt * self.args.playback_speed
             self._show_frame(self.recording.frame_at(self.elapsed, loop=self.args.loop))
@@ -146,10 +139,10 @@ class Example:
         changed, frame = ui.slider_int("Frame", self.frame_index, self.recording.first_frame, self.recording.last_frame)
         if changed:
             self.playing = False
-            self.seek(frame)
+            self.pending_frame = frame
         ui.text(f"Source time: {self.recording.time_s[self.frame_index]:.3f} s")
         if ui.button("Restart recording"):
-            self.seek(0)
+            self.pending_frame = self.recording.first_frame
             self.playing = True
         changed, self.show_overlays = ui.checkbox("Four camera overlays", self.show_overlays)
         if ui.button("Frame scene"):
@@ -157,19 +150,16 @@ class Example:
         if ui.button("Frame phantom"):
             self.frame_phantom()
         ui.text_wrapped("Measured motion replay. Camera and phantom alignment are fitted estimates.")
-        if not self.recording.manifest.get("alignment", {}).get("accepted", False):
+        alignment = self.recording.manifest.get("alignment", {})
+        if alignment.get("failure_reason"):
+            ui.text_wrapped(f"Alignment check failed: {alignment['failure_reason']}")
+        elif not alignment.get("accepted", False):
             ui.text_wrapped("Full tool/pad geometry alignment is not validated.")
         if "point_labels" in self.recording.manifest:
-            ui.text("Dataset point labels on phantom surface")
-        if self.needle is not None:
-            holder = self.needle.held_arm
-            ui.text(f"Needle: held by {holder.upper()}" if holder else "Needle: free rigid body")
-            if not self.recording.manifest["needle"].get("accepted", False):
-                ui.text_wrapped("Needle placement is an estimate awaiting alignment validation.")
-        elif "needle" not in self.recording.manifest:
-            ui.text("Needle: not included in this recording")
-        else:
-            ui.text("Needle: disabled with --no-needle")
+            if self.recording.manifest["point_labels"].get("binding_valid") is False:
+                ui.text_wrapped("Green marker bindings are superseded and need refitting.")
+            else:
+                ui.text("Dataset point labels on phantom surface")
 
     def camera_gui(self, ui):
         if self.show_overlays and self.overlay is not None:
@@ -199,10 +189,6 @@ class Example:
         parser.add_argument("--playback-speed", type=float, default=1.0)
         parser.add_argument("--loop", action="store_true")
         parser.add_argument("--no-camera-overlays", action="store_true")
-        parser.add_argument(
-            "--no-needle", action="store_true", help="Replay tools and cameras without the rigid needle"
-        )
-        parser.add_argument("--needle-backend", choices=("cpu", "warp", "auto"), default="cpu")
         parser.add_argument("--demo", action="store_true", help=argparse.SUPPRESS)
         return parser
 

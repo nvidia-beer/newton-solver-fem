@@ -25,13 +25,9 @@ Recorded tools use position replay with estimated visual alignment. Fixture port
 
 `constrained_fit_metrics.json` records the joint camera/fixture fit and its residuals. The recorded tool motion is preserved with one constant base registration per arm, anchored to its RCM fixture port. Each wrist optical axis is parallel to its tool shaft. The unchanged phantom is parallel to the fixture support plane; its displacement is fitted. Partial tool-mask labels use known foreground/background and leave ambiguous pixels ignored. These are estimated parameters under explicit assumptions, not a measured optical calibration.
 
-`pad_placement.json` records a separate constant phantom translation with tools, cameras, fixture, table and any existing needle grasp held fixed. `phantom.T_world_from_native` applies to the unchanged regional geometry. Any pad collision support follows its placement. Earlier calibration fit reports describe the predecessor pad placement. The current translation remains an unvalidated visual estimate.
+`pad_placement.json` records a separate constant phantom translation with tools, cameras, fixture and table held fixed. `phantom.T_world_from_native` applies to the unchanged regional geometry. Earlier calibration fit reports describe the predecessor pad placement. The current translation remains an unvalidated visual estimate.
 Material-label bindings were transported with the pad; their source-pixel displacement is retained in `point_labels.json`.
 
 Dataset point labels are projected to the preserved tetrahedral exterior and rendered through its USD UV texture. `point_labels.json` records the pixel-to-surface bindings and display color. The original source mask is retained unchanged; marker display colors improve visibility without changing label coverage or bindings.
 
-The needle is a separate rigid MuJoCo body. A fresh jaw open-to-close edge translates the nearest needle centerline point to the tool grasp point while preserving world orientation. A nearby closed-jaw handoff remains allowed. While held, the needle follows one fixed tool-relative pose. No recorded needle trajectory drives it, and no tissue puncture physics is simulated.
-
-The needle's only static environment collider is the flat rectangular backing beneath the raised tissue (`needle_backing_collision.json`). Raised tissue, table, fixture and tools do not collide with the needle. A held needle follows its prescribed grip; after release, MuJoCo lets it pass through the raised tissue and land on the backing.
-
-Initial needle placement is unvalidated (`needle.accepted` is false in `recording.json`). Passing grasp/release and dynamics checks does not establish alignment with the source videos.
+Needle and thread models are excluded from this example. Their appearances in the original source images are retained. Tools, pad, cameras, fixture, recorded motion and available point labels are unchanged; existing calibration limitations still apply. Historical feature assets and reports were archived separately under the provenance archive ID.

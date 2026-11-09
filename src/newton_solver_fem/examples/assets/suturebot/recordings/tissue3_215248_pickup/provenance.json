@@ -382,5 +382,18 @@
       "sha256": "f4db64ae940c60999019004a6347dd0504eda5a8bd3e66551ff242b7f34acd00",
       "bytes": 438
     }
+  },
+  "example_feature_removal": {
+    "features": [
+      "needle",
+      "thread"
+    ],
+    "reason": "User requested removal of nonworking experimental features from prepared examples.",
+    "archive_id": "example_feature_removal_20261109/tissue3_215248_pickup",
+    "archive_required_for_replay": false,
+    "removed_files": 55,
+    "retained_numerical_payloads_byte_identical": true,
+    "source_data_modified": false,
+    "alignment_acceptance_changed": false
   }
 }

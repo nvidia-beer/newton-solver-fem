@@ -9,10 +9,12 @@
   "image_count": 2300,
   "camera_ray_file_count": 8,
   "usd_layers": [
-    "needle.usdc",
     "phantom.usdc",
     "rig.usdc",
-    "scene.usda"
+    "scene.usda",
+    "scene_tools.usda",
+    "tools/debakey_forceps.usdc",
+    "tools/large_needle_driver.usdc"
   ],
   "frame_count": 575,
   "supported_frames": [
@@ -24,13 +26,10 @@
     "approach_readiness.json",
     "approach_visual_review.json",
     "audit/independent_render",
-    "audit/native_independent/left_needle_000139.png",
     "audit/native_independent/psm1_full_000005.png",
     "audit/native_independent/psm1_own_tool_000005.png",
     "audit/native_independent/psm1_own_tool_000033.png",
     "audit/native_independent/psm1_own_tool_000076.png",
-    "audit/native_independent/right_needle_000139.png",
-    "audit/needle_joint",
     "automatic_observations.json",
     "automatic_slit_traces.json",
     "automatic_wrist_caps.json",
@@ -42,11 +41,6 @@
     "joint_pad_alignment.json",
     "joint_refinement.json",
     "joint_wrist_alignment.json",
-    "needle.usdc",
-    "needle_backing_collision.json",
-    "needle_initialization.jpg",
-    "needle_initialization.json",
-    "needle_inputs.npz",
     "own_head_validation.json",
     "pad_placement.json",
     "pad_placement_before_joint.json",
@@ -105,5 +99,13 @@
     "screening_report": "alignment_screening.json",
     "visual_review_report": "approach_visual_review.json",
     "readiness_report": "approach_readiness.json"
+  },
+  "example_feature_removal": {
+    "features": [
+      "needle",
+      "thread"
+    ],
+    "retained_payload_hashes_preserved": true,
+    "image_alignment_acceptance_granted": false
   }
 }

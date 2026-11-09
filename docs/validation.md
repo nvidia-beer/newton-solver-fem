@@ -172,6 +172,32 @@ NEWTON_TEST_DEVICE=cuda:0 uv run --locked --extra examples python -m unittest di
 uv run --locked --extra examples python tools/validate_suturebot_press.py --device cuda:0 --output /tmp/suturebot-press.json
 ```
 
+## SutureBot example scope update (2026-11-09)
+
+Needle and thread reconstruction have been removed from the four prepared
+recording bundles, their compatibility alias and the example's runtime controls.
+The recordings retain their tools, cameras, fixture, table, phantom and available
+UV point labels. Source recordings and reconstruction research remain in the
+MSc workbench. Preparation now rebuilds caches containing these extensions and
+publication rejects them, retaining the four-camera image-validation requirement.
+This removal does not change the existing camera-alignment estimates or promote
+any failed candidate. The selector lists four distinct recordings; the former
+fifth choice remains a direct-name compatibility alias of the default.
+
+Validation of the scoped check-in: the complete staged FEM suite passes
+**175 tests on CUDA** (172.354 s). The built wheel passes 21 replay and
+selector tests on CPU. Ruff checks and formatting pass. The separate
+preparation/publication checks pass 46 tests and 16 subtests. Bundle checks resolve all 27 USD layers locally
+and verify that all 8,024 retained nonmetadata payloads are byte-identical to
+the pre-removal copies. The refreshed 1,202-frame, 1280 × 720 demo renders all
+597 supported source frames with coverage in each of the four camera overlays.
+These are replay and packaging checks; camera alignment remains unvalidated.
+
+The dated reports below describe earlier snapshots. Their needle/thread assets,
+shape counts and runtime behavior are historical evidence, not the current
+example's contents. Original payloads removed from the FEM bundles are archived
+under `MSc/SutureBot-workbench/outputs/simulation/example_feature_removal_20261109/`.
+
 ## SutureBot recorded placement replay (2026-11-03)
 
 The [prepared replay report](validation/suturebot-recording.json) covers
@@ -430,16 +456,21 @@ Two additional portable samples are included in the example selector:
 current bundle hashes, scoped image residuals and portable checks separately
 from the default needle example above.
 
-| Sample | Source frames, inclusive | Duration | Reserved image frames | Incision RMS in left / right / PSM1 / PSM2, px |
+| Sample | Source frames, inclusive | Duration | Reserved image frames | Historical incision RMS in left / right / PSM1 / PSM2, px |
 | --- | --- | ---: | --- | --- |
 | `tissue3_222119_approach` | 5–141 | 4.527 s | 33, 76 | 2.05 / 1.72 / 1.75 / 12.64 |
 | `tissue3_224616_approach` | 4–106 | 3.401 s | 27, 61 | 4.03 / 4.59 / 9.45 / 5.66 |
 
-Recording `224616` was corrected to public region 3 after the user's source
-review. A fixed yaw and translation place the original region-3 mesh under the
-observed incision; both green labels now bind to that region. All twelve native
-meshes and the original tool motion, camera poses and rig remain unchanged.
-The previous region-1 placement is retained only as a superseded diagnostic.
+The user now confirms the entire `224616` recording is public region 1,
+including both visible incision fragments. Nearby feature A is tentatively
+region 2. This supersedes the earlier region-3 interpretation. The bundled
+placement and green label bindings at that identity-review stage still came
+from the historical region-3 fit and were marked invalid for the corrected
+identity. The current bundle subsequently received a region-1 pose and rebound
+labels; its alignment remains unaccepted. The table's
+`224616` residuals describe that old fit; they do not validate a region-1
+placement. All twelve native meshes and their canonical IDs remain unchanged.
+The correction and exact prior metadata are retained in `audit/region_identity/`.
 
 Source-only inspection defined these initial approaches before visible tissue
 deformation, independently of the fit residuals. The full 575/461 frame arrays,
@@ -447,21 +478,32 @@ original timestamps and reserved-frame roles remain intact. Normal playback and
 the frame slider stop at the declared bounds. Later frames remain available for
 diagnostics; the complete recovery is not validated against a static phantom.
 
-Both pass the declared phase screen: at least two reserved incision frames per
+Both historical fits passed the original incision/cap phase screen: at least two reserved incision frames per
 camera, incision RMS at most 25 px and median at most 12 px, plus separate cap
 and source-motion checks. These are engineering thresholds, not pixel-exact
-agreement. After the region correction, 224616 retains a 20.38 px maximum PSM1
+agreement. The superseded region-3 fit for 224616 has a 20.38 px maximum PSM1
 incision residual and 12.27 px maximum right-image residual. Full-clip reserved stereo incision RMS
 remains above the declared approach errors; those full-clip values remain in
 the bundled reports. Own PSM1 cap centers are not observable and are not invented.
 
-The actual four-camera reviews confirm corresponding tool neighborhoods and
+The original four-camera reviews identify corresponding tool neighborhoods and
 incision direction while retaining visible jaw, head and groove-bank differences.
 PSM2 uses surrogate CAD. Both `alignment.accepted` and
 `absolute_metric_accuracy_validated` remain false. The pad bottom is approximately
 20.2 mm above the estimated fixture-foot table plane for 222119 and 17.8 mm for
 224616; these dimensions are not independently measured or a physical mounting
 validation. No exact needle contact, complete suturing or tissue dynamics is claimed.
+
+**Recording 4 boundary correction (2026-11-04):** independent native-resolution
+USD silhouette checks found reserved outer-edge RMS of **193.94 px in PSM1 and
+159.86 px in PSM2** at source frames 27 and 61. These fail the 12 px RMS / 30 px
+maximum thresholds and the 80% pad/background-side recall checks. The earlier
+incision-only publication result is superseded: the bundle now records a failed
+alignment check and is retained for inspection. Geometry, recorded motion,
+cameras and region numbering were not changed by this status correction.
+The bundle's `audit/pad_boundary/` contains the native observations, rendered
+review and numerical report. New publication requires this separate boundary
+check; a passing incision trace cannot qualify the pad rectangle as aligned.
 
 The two dataset labels are bound to the mesh and rendered green in all four
 views. Recording `224616` reproduces all 162 source-mask pixels after rebinding
@@ -599,7 +641,8 @@ checkout. The final-wheel CUDA attempt was incomplete because its context
 allocation ran out of memory; that failure is retained separately. The successful
 167-test repository CUDA suite is separate evidence, not a claim that the final
 extracted wheel completed CUDA checks. No other GPU process was changed.
-Those wheel checks do not validate the subsequently corrected region-3 bundle.
+Those wheel checks do not validate the current region-1 identity correction,
+the superseded region-3 placement, or a replacement calibration.
 
 ### Current portable examples (2026-11-04)
 

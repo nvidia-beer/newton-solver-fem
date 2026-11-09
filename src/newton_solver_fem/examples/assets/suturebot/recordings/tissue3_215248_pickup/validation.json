@@ -11,7 +11,10 @@
   "usd_layers": [
     "phantom.usdc",
     "rig.usdc",
-    "scene.usda"
+    "scene.usda",
+    "scene_tools.usda",
+    "tools/debakey_forceps.usdc",
+    "tools/large_needle_driver.usdc"
   ],
   "frame_count": 282,
   "supported_frames": [
@@ -66,5 +69,13 @@
     "source_alignment_accepted": false,
     "full_source_arrays_retained": true,
     "excluded_later_source_frames": null
+  },
+  "example_feature_removal": {
+    "features": [
+      "needle",
+      "thread"
+    ],
+    "retained_payload_hashes_preserved": true,
+    "image_alignment_acceptance_granted": false
   }
 }

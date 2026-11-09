@@ -28,7 +28,7 @@ scale, not measured robot registration.
 
 `manifest.json` records source hashes, transforms, joint limits and assumptions;
 `validation.json` records USD import, joint closure and displaced-shaft RCM
-checks. See [THIRD_PARTY.md](THIRD_PARTY.md) and [the dVRK license](DVRK_MODEL_LICENSE.txt)
+checks. See [THIRD_PARTY.md](THIRD_PARTY.md) and [the dVRK license](recordings/tissue3_215300/DVRK_MODEL_LICENSE.txt)
 for source attribution and retained notices.
 
 ## Preparation in MSc

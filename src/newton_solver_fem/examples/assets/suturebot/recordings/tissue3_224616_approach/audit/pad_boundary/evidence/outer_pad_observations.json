@@ -1,0 +1,754 @@
+{
+  "schema_version": 1,
+  "sample_id": "tissue3_224616_approach",
+  "source_episode": "20250428-224616-539134_recovery",
+  "coordinate_convention": "native pixel centers, x right/y down; source frame directly from video index; no resize",
+  "method": "Independently reviewed visible outer silicone/background interface; positive/negative red chroma gradient localized inside manually reviewed edge corridor, every 20 native pixels. Conservatively 2px uncertainty.",
+  "source_images": {
+    "psm1_000004.png": {
+      "path": "psm1_000004_native.png",
+      "sha256": "7ebbedd5873352d61fe64be551f0a323adf888b2a22ac7c9d943d202fb9336c1",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000027.png": {
+      "path": "psm1_000027_native.png",
+      "sha256": "c6fd2b3649823fc168efd62fc33525316f9058f402d5e74cb41460842de1c50f",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000061.png": {
+      "path": "psm1_000061_native.png",
+      "sha256": "8369dcd0a7b40a8db65e4044b615f76735cf1a8b5cd68af6c60fc4c465cbd9f5",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm1_000106.png": {
+      "path": "psm1_000106_native.png",
+      "sha256": "fa9db65f3eba7d7a5ca36f15f9ede6a6b54197ab97d348a8be028a9c9a7dffb5",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000004.png": {
+      "path": "psm2_000004_native.png",
+      "sha256": "7cf452d00e94f8e039ba3d4863b1ba36859d1ff0be9098d87383dd75c13e7f5a",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000027.png": {
+      "path": "psm2_000027_native.png",
+      "sha256": "15c02bee2a2747547e3061e3ec0e0b2b3a160517acecc0a594cc65fbb215f20d",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000061.png": {
+      "path": "psm2_000061_native.png",
+      "sha256": "8f9eb3b2b73a6058ca9b38c4cf21e34054ef3fe2d37032e4af7e07e035eed072",
+      "image_size": [
+        640,
+        480
+      ]
+    },
+    "psm2_000106.png": {
+      "path": "psm2_000106_native.png",
+      "sha256": "b7dab38b4ecbac9ace4297319cf8e8bc40b13a868107c6c23f7dc41cda9a53c9",
+      "image_size": [
+        640,
+        480
+      ]
+    }
+  },
+  "records": [
+    {
+      "camera": "psm1",
+      "frame": 4,
+      "points_px": [
+        [
+          230.0,
+          40.0
+        ],
+        [
+          218.0,
+          60.0
+        ],
+        [
+          208.0,
+          80.0
+        ],
+        [
+          197.0,
+          100.0
+        ],
+        [
+          187.0,
+          120.0
+        ],
+        [
+          175.0,
+          140.0
+        ],
+        [
+          164.0,
+          160.0
+        ],
+        [
+          153.0,
+          180.0
+        ],
+        [
+          142.0,
+          200.0
+        ],
+        [
+          131.0,
+          220.0
+        ],
+        [
+          122.0,
+          240.0
+        ],
+        [
+          111.0,
+          260.0
+        ],
+        [
+          100.0,
+          280.0
+        ],
+        [
+          89.0,
+          300.0
+        ],
+        [
+          79.0,
+          320.0
+        ],
+        [
+          68.0,
+          340.0
+        ],
+        [
+          57.0,
+          360.0
+        ],
+        [
+          47.0,
+          380.0
+        ],
+        [
+          36.0,
+          400.0
+        ],
+        [
+          26.0,
+          420.0
+        ]
+      ],
+      "split": "fit",
+      "visible": true,
+      "feature": "physical_pad_outer_edge",
+      "image": "psm1_000004.png",
+      "uncertainty_px": 2.0,
+      "edge_correspondence": "one visible long outer side, no identified corner; use point-to-curve distance",
+      "silicone_side": "right_of_trace",
+      "occlusion": "trace excludes dark vignette and bottom tool occlusion; sampled native edge visibly unobstructed",
+      "side_labels_path": "psm1_000004_edge_side_labels.png",
+      "side_labels_sha256": "d1544377e50d0dceae8ca75d9890e5d151dd02f45e907864ddcee1153b36e85c",
+      "side_labels_values": {
+        "0": "background",
+        "1": "silicone pad",
+        "255": "unreviewed or edge uncertainty band"
+      },
+      "side_labels_scope": "only 24px corridor around visible edge and between observed endpoints; excludes 3px boundary band"
+    },
+    {
+      "camera": "psm1",
+      "frame": 27,
+      "points_px": [
+        [
+          285.0,
+          40.0
+        ],
+        [
+          264.0,
+          60.0
+        ],
+        [
+          249.0,
+          80.0
+        ],
+        [
+          230.0,
+          100.0
+        ],
+        [
+          212.0,
+          120.0
+        ],
+        [
+          194.0,
+          140.0
+        ],
+        [
+          176.0,
+          160.0
+        ],
+        [
+          158.0,
+          180.0
+        ],
+        [
+          141.0,
+          200.0
+        ],
+        [
+          124.0,
+          220.0
+        ],
+        [
+          105.0,
+          240.0
+        ],
+        [
+          89.0,
+          260.0
+        ],
+        [
+          71.0,
+          280.0
+        ],
+        [
+          53.0,
+          300.0
+        ],
+        [
+          35.0,
+          320.0
+        ],
+        [
+          19.0,
+          340.0
+        ]
+      ],
+      "split": "reserved",
+      "visible": true,
+      "feature": "physical_pad_outer_edge",
+      "image": "psm1_000027.png",
+      "uncertainty_px": 2.0,
+      "edge_correspondence": "one visible long outer side, no identified corner; use point-to-curve distance",
+      "silicone_side": "right_of_trace",
+      "occlusion": "trace excludes dark vignette and bottom tool occlusion; sampled native edge visibly unobstructed",
+      "side_labels_path": "psm1_000027_edge_side_labels.png",
+      "side_labels_sha256": "a3e7354ecc4e7b5d62a41842203c52500b37d8aa447e07dc4522e3c4c01a6310",
+      "side_labels_values": {
+        "0": "background",
+        "1": "silicone pad",
+        "255": "unreviewed or edge uncertainty band"
+      },
+      "side_labels_scope": "only 24px corridor around visible edge and between observed endpoints; excludes 3px boundary band"
+    },
+    {
+      "camera": "psm1",
+      "frame": 61,
+      "points_px": [
+        [
+          307.0,
+          40.0
+        ],
+        [
+          289.0,
+          60.0
+        ],
+        [
+          262.0,
+          80.0
+        ],
+        [
+          239.0,
+          100.0
+        ],
+        [
+          215.0,
+          120.0
+        ],
+        [
+          194.0,
+          140.0
+        ],
+        [
+          171.0,
+          160.0
+        ],
+        [
+          149.0,
+          180.0
+        ],
+        [
+          128.0,
+          200.0
+        ],
+        [
+          105.0,
+          220.0
+        ],
+        [
+          83.0,
+          240.0
+        ],
+        [
+          63.0,
+          260.0
+        ],
+        [
+          39.0,
+          280.0
+        ]
+      ],
+      "split": "reserved",
+      "visible": true,
+      "feature": "physical_pad_outer_edge",
+      "image": "psm1_000061.png",
+      "uncertainty_px": 2.0,
+      "edge_correspondence": "one visible long outer side, no identified corner; use point-to-curve distance",
+      "silicone_side": "right_of_trace",
+      "occlusion": "trace excludes dark vignette and bottom tool occlusion; sampled native edge visibly unobstructed",
+      "side_labels_path": "psm1_000061_edge_side_labels.png",
+      "side_labels_sha256": "4295ba9917a6cd8c0240a2df3f243eaba270cd1d9ba498a0f389d49379f64b67",
+      "side_labels_values": {
+        "0": "background",
+        "1": "silicone pad",
+        "255": "unreviewed or edge uncertainty band"
+      },
+      "side_labels_scope": "only 24px corridor around visible edge and between observed endpoints; excludes 3px boundary band"
+    },
+    {
+      "camera": "psm1",
+      "frame": 106,
+      "points_px": [
+        [
+          306.0,
+          40.0
+        ],
+        [
+          283.0,
+          60.0
+        ],
+        [
+          266.0,
+          80.0
+        ],
+        [
+          245.0,
+          100.0
+        ],
+        [
+          225.0,
+          120.0
+        ],
+        [
+          207.0,
+          140.0
+        ],
+        [
+          187.0,
+          160.0
+        ],
+        [
+          168.0,
+          180.0
+        ],
+        [
+          150.0,
+          200.0
+        ],
+        [
+          131.0,
+          220.0
+        ],
+        [
+          112.0,
+          240.0
+        ],
+        [
+          95.0,
+          260.0
+        ],
+        [
+          75.0,
+          280.0
+        ],
+        [
+          57.0,
+          300.0
+        ],
+        [
+          39.0,
+          320.0
+        ]
+      ],
+      "split": "fit",
+      "visible": true,
+      "feature": "physical_pad_outer_edge",
+      "image": "psm1_000106.png",
+      "uncertainty_px": 2.0,
+      "edge_correspondence": "one visible long outer side, no identified corner; use point-to-curve distance",
+      "silicone_side": "right_of_trace",
+      "occlusion": "trace excludes dark vignette and bottom tool occlusion; sampled native edge visibly unobstructed",
+      "side_labels_path": "psm1_000106_edge_side_labels.png",
+      "side_labels_sha256": "87fba116f896bc95893e87316580ae2fa17131b3f05060160a60f05b71a9c6e4",
+      "side_labels_values": {
+        "0": "background",
+        "1": "silicone pad",
+        "255": "unreviewed or edge uncertainty band"
+      },
+      "side_labels_scope": "only 24px corridor around visible edge and between observed endpoints; excludes 3px boundary band"
+    },
+    {
+      "camera": "psm2",
+      "frame": 4,
+      "points_px": [
+        [
+          394.0,
+          40.0
+        ],
+        [
+          396.0,
+          60.0
+        ],
+        [
+          398.0,
+          80.0
+        ],
+        [
+          399.0,
+          100.0
+        ],
+        [
+          400.0,
+          120.0
+        ],
+        [
+          401.0,
+          140.0
+        ],
+        [
+          403.0,
+          160.0
+        ],
+        [
+          404.0,
+          180.0
+        ],
+        [
+          404.0,
+          200.0
+        ],
+        [
+          405.0,
+          220.0
+        ],
+        [
+          406.0,
+          240.0
+        ],
+        [
+          408.0,
+          260.0
+        ],
+        [
+          409.0,
+          280.0
+        ],
+        [
+          409.0,
+          300.0
+        ],
+        [
+          410.0,
+          320.0
+        ]
+      ],
+      "split": "fit",
+      "visible": true,
+      "feature": "physical_pad_outer_edge",
+      "image": "psm2_000004.png",
+      "uncertainty_px": 2.0,
+      "edge_correspondence": "one visible long outer side, no identified corner; use point-to-curve distance",
+      "silicone_side": "left_of_trace",
+      "occlusion": "trace excludes dark vignette and bottom tool occlusion; sampled native edge visibly unobstructed",
+      "side_labels_path": "psm2_000004_edge_side_labels.png",
+      "side_labels_sha256": "e055ccac194cb1a26dac7745bb81073c7d191a0f918adc3850479abf0b8811c1",
+      "side_labels_values": {
+        "0": "background",
+        "1": "silicone pad",
+        "255": "unreviewed or edge uncertainty band"
+      },
+      "side_labels_scope": "only 24px corridor around visible edge and between observed endpoints; excludes 3px boundary band"
+    },
+    {
+      "camera": "psm2",
+      "frame": 27,
+      "points_px": [
+        [
+          394.0,
+          40.0
+        ],
+        [
+          395.0,
+          60.0
+        ],
+        [
+          398.0,
+          80.0
+        ],
+        [
+          399.0,
+          100.0
+        ],
+        [
+          400.0,
+          120.0
+        ],
+        [
+          401.0,
+          140.0
+        ],
+        [
+          402.0,
+          160.0
+        ],
+        [
+          404.0,
+          180.0
+        ],
+        [
+          404.0,
+          200.0
+        ],
+        [
+          406.0,
+          220.0
+        ],
+        [
+          407.0,
+          240.0
+        ],
+        [
+          408.0,
+          260.0
+        ],
+        [
+          408.0,
+          280.0
+        ],
+        [
+          409.0,
+          300.0
+        ],
+        [
+          410.0,
+          320.0
+        ]
+      ],
+      "split": "reserved",
+      "visible": true,
+      "feature": "physical_pad_outer_edge",
+      "image": "psm2_000027.png",
+      "uncertainty_px": 2.0,
+      "edge_correspondence": "one visible long outer side, no identified corner; use point-to-curve distance",
+      "silicone_side": "left_of_trace",
+      "occlusion": "trace excludes dark vignette and bottom tool occlusion; sampled native edge visibly unobstructed",
+      "side_labels_path": "psm2_000027_edge_side_labels.png",
+      "side_labels_sha256": "78bf7d052f380f3928fb1fdacd119ab378060ddb66c05617ed5c4b70950b3a61",
+      "side_labels_values": {
+        "0": "background",
+        "1": "silicone pad",
+        "255": "unreviewed or edge uncertainty band"
+      },
+      "side_labels_scope": "only 24px corridor around visible edge and between observed endpoints; excludes 3px boundary band"
+    },
+    {
+      "camera": "psm2",
+      "frame": 61,
+      "points_px": [
+        [
+          394.0,
+          40.0
+        ],
+        [
+          395.0,
+          60.0
+        ],
+        [
+          396.0,
+          80.0
+        ],
+        [
+          397.0,
+          100.0
+        ],
+        [
+          399.0,
+          120.0
+        ],
+        [
+          400.0,
+          140.0
+        ],
+        [
+          402.0,
+          160.0
+        ],
+        [
+          403.0,
+          180.0
+        ],
+        [
+          404.0,
+          200.0
+        ],
+        [
+          405.0,
+          220.0
+        ],
+        [
+          406.0,
+          240.0
+        ],
+        [
+          407.0,
+          260.0
+        ],
+        [
+          408.0,
+          280.0
+        ],
+        [
+          408.0,
+          300.0
+        ],
+        [
+          409.0,
+          320.0
+        ]
+      ],
+      "split": "reserved",
+      "visible": true,
+      "feature": "physical_pad_outer_edge",
+      "image": "psm2_000061.png",
+      "uncertainty_px": 2.0,
+      "edge_correspondence": "one visible long outer side, no identified corner; use point-to-curve distance",
+      "silicone_side": "left_of_trace",
+      "occlusion": "trace excludes dark vignette and bottom tool occlusion; sampled native edge visibly unobstructed",
+      "side_labels_path": "psm2_000061_edge_side_labels.png",
+      "side_labels_sha256": "82f22452ee254f3c9c2ac3166dde4140246525506fe29ca902eb87c45d831304",
+      "side_labels_values": {
+        "0": "background",
+        "1": "silicone pad",
+        "255": "unreviewed or edge uncertainty band"
+      },
+      "side_labels_scope": "only 24px corridor around visible edge and between observed endpoints; excludes 3px boundary band"
+    },
+    {
+      "camera": "psm2",
+      "frame": 106,
+      "points_px": [
+        [
+          392.0,
+          40.0
+        ],
+        [
+          393.0,
+          60.0
+        ],
+        [
+          395.0,
+          80.0
+        ],
+        [
+          396.0,
+          100.0
+        ],
+        [
+          398.0,
+          120.0
+        ],
+        [
+          399.0,
+          140.0
+        ],
+        [
+          399.0,
+          160.0
+        ],
+        [
+          400.0,
+          180.0
+        ],
+        [
+          401.0,
+          200.0
+        ],
+        [
+          402.0,
+          220.0
+        ],
+        [
+          403.0,
+          240.0
+        ],
+        [
+          404.0,
+          260.0
+        ],
+        [
+          405.0,
+          280.0
+        ],
+        [
+          405.0,
+          300.0
+        ],
+        [
+          406.0,
+          320.0
+        ]
+      ],
+      "split": "fit",
+      "visible": true,
+      "feature": "physical_pad_outer_edge",
+      "image": "psm2_000106.png",
+      "uncertainty_px": 2.0,
+      "edge_correspondence": "one visible long outer side, no identified corner; use point-to-curve distance",
+      "silicone_side": "left_of_trace",
+      "occlusion": "trace excludes dark vignette and bottom tool occlusion; sampled native edge visibly unobstructed",
+      "side_labels_path": "psm2_000106_edge_side_labels.png",
+      "side_labels_sha256": "8be753c9e2de7cb59a7662a0fe667f50939e5411194023a6f9847138b886e015",
+      "side_labels_values": {
+        "0": "background",
+        "1": "silicone pad",
+        "255": "unreviewed or edge uncertainty band"
+      },
+      "side_labels_scope": "only 24px corridor around visible edge and between observed endpoints; excludes 3px boundary band"
+    }
+  ],
+  "not_observed": [
+    "No true pad corner visible in these four views; do not infer corners.",
+    "Stereo left/right image frames contain only tissue, instruments and threads; no pad/background outer boundary.",
+    "Background fabric folds/shading do not establish rigid table landmarks."
+  ],
+  "status": "all_eight_native_edge_overlays_independently_visually_reviewed",
+  "review_scope": "Only outer silhouette and adjacent material side are observed. Fabric texture/color/shadows/table plane are not calibrated; no constraints on hidden full rectangle or exact native material correspondences."
+}

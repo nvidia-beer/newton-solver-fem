@@ -3,7 +3,7 @@
   "sample_id": "tissue3_215248_pickup",
   "region_id": 1,
   "source_episode": "tissue_3/1_needle_pickup/20250428-215248-974340",
-  "scene_usd": "scene.usda",
+  "scene_usd": "scene_tools.usda",
   "motion_npz": "motion.npz",
   "camera_poses_npz": "camera_poses.npz",
   "body_paths": [
@@ -383,7 +383,7 @@
     "clock_convention": "robot query time = image CSV time + offset",
     "out_of_source_policy": "finite endpoint placeholders with body_valid=false; runtime only renders common valid interval",
     "jaw_visual_policy": "clamp negative squeezing to closed; no inferred grasp gap",
-    "instrument_model": "retained Large Needle Driver CAD for both arms; exact second-tool CAD unavailable",
+    "instrument_model": "PSM1 retained Large Needle Driver CAD; PSM2 CAD-derived body with photo-estimated DeBakey forceps jaws; see tool_geometry.json",
     "wrist_chain": "retained dVRK 4670/0091/006 URDF visual and joint transforms"
   },
   "phantom": {
@@ -687,7 +687,8 @@
     }
   },
   "omitted": {
-    "needle": "positions-only replay; no accepted observed needle trajectory"
+    "needle": "Removed from prepared examples by request; not simulated.",
+    "thread": "Removed from prepared examples by request; not rendered or simulated."
   },
   "visual_geometry": {
     "wrist_camera": "5.5 mm diameter cylinder behind fitted optical center, 35 mm illustrative housing length, opacity 0.25"
@@ -743,5 +744,15 @@
     "source_arrays_and_frame_numbers_unchanged": true,
     "scope": "Image alignment is evaluated for this source-defined static phase; all full-clip errors remain reported."
   },
-  "provenance_file": "provenance.json"
+  "provenance_file": "provenance.json",
+  "tool_geometry": {
+    "revision": "source_diameter_debakey_concave_neck_v9",
+    "files": {
+      "psm1": "tools/large_needle_driver.usdc",
+      "psm2": "tools/debakey_forceps.usdc"
+    },
+    "report": "tool_geometry.json",
+    "status": "PSM1 retained Large Needle Driver CAD; PSM2 photo-estimated DeBakey forceps",
+    "camera_alignment_validated": false
+  }
 }

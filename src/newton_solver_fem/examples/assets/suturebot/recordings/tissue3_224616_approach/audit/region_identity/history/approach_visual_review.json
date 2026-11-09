@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "status": "failed_visible_pad_boundary_alignment",
+  "sample_id": "tissue3_224616_approach",
+  "accepted": false,
+  "ready_for_scoped_pose_replay": false,
+  "source_phase_inclusive": [
+    4,
+    106
+  ],
+  "rendered_playback_interval": [
+    4,
+    106
+  ],
+  "reviewed_reserved_frames": [
+    27,
+    61
+  ],
+  "reviewed_frames": [
+    4,
+    27,
+    61,
+    106
+  ],
+  "cameras": [
+    "left",
+    "right",
+    "psm1",
+    "psm2"
+  ],
+  "actual_render_passed": true,
+  "actual_gpu_device": "cuda:0",
+  "actual_green_uv_render_passed": true,
+  "display_color_rgb": [
+    0,
+    255,
+    0
+  ],
+  "source_mask_reproduction_iou": 1.0,
+  "source_static_phase_incision_residuals_native_px": {
+    "left": {
+      "fit": {
+        "count": 577,
+        "rms_px": 4.277658512632106,
+        "median_px": 3.4724260750237703,
+        "max_px": 10.483850878153836
+      },
+      "reserved": {
+        "count": 177,
+        "rms_px": 4.027141364666736,
+        "median_px": 3.4268941577076006,
+        "max_px": 7.807466960290025
+      }
+    },
+    "right": {
+      "fit": {
+        "count": 602,
+        "rms_px": 4.75279630251218,
+        "median_px": 3.1622259027524824,
+        "max_px": 14.267168042780614
+      },
+      "reserved": {
+        "count": 177,
+        "rms_px": 4.586394309069789,
+        "median_px": 3.339688626000676,
+        "max_px": 12.269924522484953
+      }
+    },
+    "psm1": {
+      "fit": {
+        "count": 18,
+        "rms_px": 8.558071707735015,
+        "median_px": 6.352116381222885,
+        "max_px": 16.533998289013844
+      },
+      "reserved": {
+        "count": 14,
+        "rms_px": 9.452655758758329,
+        "median_px": 6.356800518188134,
+        "max_px": 20.38451822077915
+      }
+    },
+    "psm2": {
+      "fit": {
+        "count": 12,
+        "rms_px": 5.194954424974895,
+        "median_px": 5.122472340363062,
+        "max_px": 8.04006636954298
+      },
+      "reserved": {
+        "count": 8,
+        "rms_px": 5.661398889742428,
+        "median_px": 5.32583535111505,
+        "max_px": 8.75143380487441
+      }
+    }
+  },
+  "full_clip_incision_residuals_native_px": {
+    "left": {
+      "fit": {
+        "count": 2063,
+        "rms_px": 20.739342445518414,
+        "median_px": 6.878195156938585,
+        "max_px": 73.5697814522325
+      },
+      "reserved": {
+        "count": 604,
+        "rms_px": 18.350839254544347,
+        "median_px": 5.419007040379901,
+        "max_px": 58.86843748382314
+      }
+    },
+    "right": {
+      "fit": {
+        "count": 2044,
+        "rms_px": 16.63958292064219,
+        "median_px": 5.505202084139332,
+        "max_px": 71.87313574743818
+      },
+      "reserved": {
+        "count": 502,
+        "rms_px": 19.737987129529454,
+        "median_px": 4.889762422064477,
+        "max_px": 54.324171582188384
+      }
+    },
+    "psm1": {
+      "fit": {
+        "count": 18,
+        "rms_px": 8.558071707735015,
+        "median_px": 6.352116381222885,
+        "max_px": 16.533998289013844
+      },
+      "reserved": {
+        "count": 14,
+        "rms_px": 9.452655758758329,
+        "median_px": 6.356800518188134,
+        "max_px": 20.38451822077915
+      }
+    },
+    "psm2": {
+      "fit": {
+        "count": 12,
+        "rms_px": 5.194954424974895,
+        "median_px": 5.122472340363062,
+        "max_px": 8.04006636954298
+      },
+      "reserved": {
+        "count": 8,
+        "rms_px": 5.661398889742428,
+        "median_px": 5.32583535111505,
+        "max_px": 8.75143380487441
+      }
+    }
+  },
+  "visual_findings": {
+    "region_identity": "User corrected this recording to public region3; adjacent narrow slit12 in PSM1 supports the changed anatomy. Both source clicked labels now bind region3.",
+    "left_and_right": "Principal incision alignment improves under unchanged cameras/tools. Native region3 wavy banks now occupy the source wound; fine bank silhouettes and tool jaw shapes remain imperfect.",
+    "psm1": "Principal incision and neighboring slit12 are in the expected source neighborhood. The neighboring circle/pad boundary and tool silhouettes still differ visibly and are not validated.",
+    "psm2": "Main incision and both tool neighborhoods are retained under fixed camera/robot motion. Fine surrogate gripper and pad contours remain imperfect."
+  },
+  "review_basis": "Fresh actual USD/source overlays inspected after region3 yaw/translation correction; parent independently inspected frames4 and61. Original numerical thresholds and fit/reserved roles remain unchanged.",
+  "absolute_metric_accuracy_validated": false,
+  "full_camera_alignment_validated": false,
+  "full_tool_and_pad_contours_validated": false,
+  "needle_validation_included": false,
+  "geometry_preservation_report": "audit/region3_preservation.json",
+  "reserved_overlay_sha256": {
+    "27": "b069f3fc0b4062495635248447cea95a277666cbb359935453f63578ef16e4ea",
+    "61": "853bbb1ef111885bdd46e4ded75724e284516e51cdaa670f1d69dc2c6f64defd"
+  },
+  "evidence_sha256": {
+    "scene.usda": "e30ce457207a0ea76579d2e357be8d9f6ee79cfac5fdfd834c604d5581d98f71",
+    "rig.usdc": "662279749d74f02f209ef9e4ff13c17be7082f8394687ffa80c5f40dba0a8b92",
+    "phantom.usdc": "ceacac33fe2b857cc8293a0a8c5068f8837ba0980ea41797431db1fb278b1c68",
+    "motion.npz": "c2d51121053594d7e589d98147ac8e12432203934373c229fb4737df7a960314",
+    "camera_poses.npz": "5c6bcb83466b70837d8a7d6de621bd4ad9041b1c35a4b0d69f8490da30998adb",
+    "textures/point_labels.png": "a44ce6e5baf98bdbb6f1393b50f58953f805d76bae40bcd781218f86de7077ce",
+    "frozen_pad_fit.json": "fe55a4310d3d6a19b66d3e69fe17e31bb1c690091f99933d3c1b59f3d68d4227",
+    "alignment_screening.json": "6725940bdcebadbd52ca37049f1332ec8e8b0f42d0f93a5fbe62c594de5ff897",
+    "audit/coordinate_validation.json": "71b3cdcdc95297885610e5797a997f6071830da2aa58c0d25f7e30afa640f2d0",
+    "source_phases.json": "8336faa311506d15a370d223f2552631e70ff331c5c6390fe284361c646a21a5",
+    "audit/region3_preservation.json": "2ba45f10dc75060912406bc78825a5dd99c76d89e2cecd715e97f7562b6a2d37"
+  },
+  "limitations": [
+    "This corrects the existing partial approach replay; it does not certify complete camera alignment or create a fully aligned new example.",
+    "Tool CAD silhouettes and PSM1 neighboring circle/pad boundary visibly differ from source; these contours are not validated.",
+    "The user identifies the wound as public region3. Original native local meshes and their canonical region mapping remain unchanged.",
+    "Only the original source-defined approach frames4\u2013106 are replayed. Original later deformation frames, source arrays and residuals remain retained.",
+    "Camera parameters, tool registration and absolute metric placement remain conditional estimates; no extra camera calibration exists.",
+    "No needle model is included because its prior source-image initialization failed.",
+    "Label mask reconstruction checks rendering and ray binding by construction; it is not an independent metric-calibration test."
+  ],
+  "failure_reason": "The pad rectangle and background boundary do not align with the wrist videos; this recording needs recalibration.",
+  "pad_boundary_report": "audit/pad_boundary/pad_boundary.json",
+  "pad_boundary_screening_passed": false
+}

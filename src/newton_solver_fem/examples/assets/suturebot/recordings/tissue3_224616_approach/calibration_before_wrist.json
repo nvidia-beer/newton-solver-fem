@@ -5086,6 +5086,8 @@
   ],
   "superseded_region_assumption": 1,
   "historical_only": true,
-  "region_identity_status": "Superseded region1 assumption; current public region3 identity and geometry are in region_review.json and frozen_pad_fit.json",
-  "current_public_region_id": 3
+  "region_identity_status": "Source identity confirmed as Region01; these historical metrics do not validate the current placement.",
+  "current_public_region_id": 1,
+  "historical_metrics_scope": "Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
+  "identity_correction_report": "audit/region_identity/user_region_correction.json"
 }

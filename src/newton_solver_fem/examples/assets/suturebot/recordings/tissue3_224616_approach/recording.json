@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
   "sample_id": "tissue3_224616_approach",
-  "region_id": 3,
+  "region_id": 1,
   "source_episode": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery",
-  "scene_usd": "scene.usda",
+  "scene_usd": "scene_tools.usda",
   "motion_npz": "motion.npz",
   "camera_poses_npz": "camera_poses.npz",
   "body_paths": [
@@ -355,21 +355,29 @@
     "timestamps": "int64 source nanoseconds; interpolate using nonuniform time_s, not index/fps"
   },
   "alignment": {
-    "status": "corrected_existing_partial_replay_region3",
+    "status": "region1_rigid_pad_refit_estimate",
     "reportpath": "calibration.json",
     "tool_registration_report": "alignment.json",
     "absolute_metric_accuracy_validated": false,
     "automatic_fit_report": "automatic_fit_metrics.json",
     "wrist_fit_report": "frozen_wrist_fit.json",
-    "validation_status": "incision_and_cap_scope_checked_full_alignment_unaccepted",
-    "pad_placement_report": "region3_fit.json",
-    "prior_metrics_scope": "Previous region1 placement and anatomical identity invalidated by explicit user correction",
+    "validation_status": "region1_pad_and_label_correction_reviewed_alignment_unvalidated",
+    "pad_placement_report": "pad_edge_alignment.json",
+    "prior_metrics_scope": "Earlier region3/pad-boundary and incision-only reports are historical, superseded for pad placement by pad_edge_alignment.json.",
     "accepted": false,
-    "numeric_screen_passed": true,
-    "screening_report": "alignment_screening.json",
-    "visual_review_report": "approach_visual_review.json",
-    "readiness_report": "approach_readiness.json",
-    "full_tool_and_pad_contours_validated": false
+    "numeric_screen_passed": false,
+    "visual_review_report": "audit/region1_pad_fit/review.json",
+    "full_tool_and_pad_contours_validated": false,
+    "failure_reason": "Region1 placement and labels corrected. Residual wrist border and tool errors remain; full four-view alignment is not validated.",
+    "pad_boundary_report": "audit/region1_pad_fit/native_boundary.json",
+    "incision_and_caps_numeric_screen_passed": false,
+    "pad_coverage_report": "audit/region1_pad_fit/full_mesh_review.json",
+    "pad_coverage_screen_passed": false,
+    "historical_incision_and_caps_numeric_screen_passed": true,
+    "identity_correction_report": "audit/region_identity/user_region_correction.json",
+    "historical_screening_report": "alignment_screening.json",
+    "historical_pad_boundary_screening_report": "audit/pad_boundary/screening.json",
+    "historical_readiness_report": "approach_readiness.json"
   },
   "conventions": {
     "world": "fixed calibrated scene world, metres, Z up; phantom has a separate constant rigid placement",
@@ -384,7 +392,7 @@
     "clock_convention": "robot query time = image CSV time + offset",
     "out_of_source_policy": "finite endpoint placeholders with body_valid=false; runtime only renders common valid interval",
     "jaw_visual_policy": "clamp negative squeezing to closed; no inferred grasp gap",
-    "instrument_model": "retained Large Needle Driver CAD for both arms; exact second-tool CAD unavailable",
+    "instrument_model": "PSM1 retained Large Needle Driver CAD; PSM2 CAD-derived body with photo-estimated DeBakey forceps jaws; see tool_geometry.json",
     "wrist_chain": "retained dVRK 4670/0091/006 URDF visual and joint transforms"
   },
   "phantom": {
@@ -462,26 +470,26 @@
         "float32_max_error_m": 1.8616386626701953e-09
       }
     ],
-    "transform": "One fixed rigid pad transform about fixture normal; unmodified native regional geometry",
+    "transform": "One constant rigid region1 pose; original geometry, dimensions and canonical region IDs retained; point-label UV atlas rebound.",
     "asset": "phantom.usdc",
     "T_world_from_native": [
       [
-        0.7111776216976131,
-        0.7029309393985549,
-        0.010699758538960906,
-        0.023743688774075906
+        0.9884924722057996,
+        0.15125699980840165,
+        0.0019880647443104023,
+        0.03542873066006754
       ],
       [
-        -0.7029763623064008,
-        0.7112128645545119,
-        0.0007037972901999252,
-        -0.0012136292812201452
+        -0.1512588095894807,
+        0.9884938763849102,
+        0.0007930139388356616,
+        0.01046405400596411
       ],
       [
-        -0.007115085030189592,
-        -0.008022202218277192,
-        0.9999425082656415,
-        -0.010608644997681896
+        -0.0018452409164130391,
+        -0.0010846006155045287,
+        0.9999977093611091,
+        -0.009638069373598847
       ],
       [
         0.0,
@@ -490,8 +498,9 @@
         1.0
       ]
     ],
-    "placement_report": "region3_fit.json",
-    "region_count": 12
+    "placement_report": "pad_edge_alignment.json",
+    "region_count": 12,
+    "placement_status": "region1_rigid_refit_estimate"
   },
   "rig_geometry": {
     "status": "calibration_coupled_geometry_estimate",
@@ -508,7 +517,7 @@
         0.025
       ],
       "height_source": "transformed source CAD feet plane",
-      "pad_bottom_above_fixture_feet_m": 0.017816564250669378,
+      "pad_bottom_above_fixture_feet_m": 0.01871160308763243,
       "pad_fixture_normal_angle_deg": 0.0,
       "extent_and_thickness": "visual context; not measured table dimensions"
     },
@@ -688,7 +697,8 @@
     }
   },
   "omitted": {
-    "needle": "positions-only replay; no accepted observed needle trajectory"
+    "needle": "Removed from prepared examples by request; not simulated.",
+    "thread": "Removed from prepared examples by request; not rendered or simulated."
   },
   "visual_geometry": {
     "wrist_camera": "5.5 mm diameter cylinder behind fitted optical center, 35 mm illustrative housing length, opacity 0.25"
@@ -699,8 +709,12 @@
     "approach_visual_review.json",
     "audit/coordinate_validation.json",
     "audit/green_uv_render.json",
+    "audit/pad_boundary",
+    "audit/region1_pad_fit",
     "audit/region3_preservation.json",
     "audit/region3_review",
+    "audit/region_identity",
+    "audit/usd_camera",
     "automatic_observations.json",
     "automatic_slit_traces.json",
     "automatic_wrist_caps.json",
@@ -710,6 +724,7 @@
     "frozen_pad_fit.json",
     "frozen_wrist_fit.json",
     "native_region3_fit_curves.npz",
+    "pad_edge_alignment.json",
     "pad_placement.json",
     "pad_placement_correction.json",
     "point_labels.json",
@@ -736,7 +751,7 @@
     "last_frame": 106,
     "description": "Approach before tissue deformation",
     "source_phase_report": "source_phases.json",
-    "alignment_report": "frozen_pad_fit.json",
+    "alignment_report": "pad_edge_alignment.json",
     "source_arrays_and_frame_numbers_unchanged": true,
     "scope": "Image alignment is evaluated for this source-defined static phase; later full-clip errors remain reported."
   },
@@ -748,7 +763,26 @@
       0,
       255,
       0
-    ]
+    ],
+    "binding_valid": true,
+    "binding_scope": "Original source pixels reprojected onto the corrected Region01 estimate; not independent metric calibration."
   },
-  "provenance_file": "provenance.json"
+  "provenance_file": "provenance.json",
+  "usd_camera_authoring_correction": {
+    "report": "audit/usd_camera/correction.json",
+    "native_pad_check": "audit/pad_boundary/pad_boundary.json",
+    "native_coverage_check": "audit/pad_boundary/pad_coverage.json",
+    "alignment_acceptance_granted": false
+  },
+  "region_identity_correction": "audit/region_identity/user_region_correction.json",
+  "tool_geometry": {
+    "revision": "source_diameter_debakey_concave_neck_v9",
+    "files": {
+      "psm1": "tools/large_needle_driver.usdc",
+      "psm2": "tools/debakey_forceps.usdc"
+    },
+    "report": "tool_geometry.json",
+    "status": "PSM1 retained Large Needle Driver CAD; PSM2 photo-estimated DeBakey forceps",
+    "camera_alignment_validated": false
+  }
 }

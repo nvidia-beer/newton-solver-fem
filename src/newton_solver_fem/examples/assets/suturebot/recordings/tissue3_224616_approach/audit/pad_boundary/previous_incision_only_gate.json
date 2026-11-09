@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "scope": "source_defined_four_camera_image_alignment",
+  "frames_inclusive": [
+    4,
+    106
+  ],
+  "numerical_checks": 28,
+  "reviewed_reserved_frames": [
+    27,
+    61
+  ],
+  "absolute_calibration_acceptance_granted": false,
+  "screening_report": "alignment_screening.json",
+  "visual_review_report": "approach_visual_review.json",
+  "readiness_report": "approach_readiness.json"
+}

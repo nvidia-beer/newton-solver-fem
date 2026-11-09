@@ -3,7 +3,7 @@
   "sample_id": "tissue3_222119_approach",
   "region_id": 1,
   "source_episode": "tissue_3/2_needle_throw_recovery/20250428-222119-449047_recovery",
-  "scene_usd": "scene.usda",
+  "scene_usd": "scene_tools.usda",
   "motion_npz": "motion.npz",
   "camera_poses_npz": "camera_poses.npz",
   "body_paths": [
@@ -384,7 +384,7 @@
     "clock_convention": "robot query time = image CSV time + offset",
     "out_of_source_policy": "finite endpoint placeholders with body_valid=false; runtime only renders common valid interval",
     "jaw_visual_policy": "clamp negative squeezing to closed; no inferred grasp gap",
-    "instrument_model": "retained Large Needle Driver CAD for both arms; exact second-tool CAD unavailable",
+    "instrument_model": "PSM1 retained Large Needle Driver CAD; PSM2 CAD-derived body with photo-estimated DeBakey forceps jaws; see tool_geometry.json",
     "wrist_chain": "retained dVRK 4670/0091/006 URDF visual and joint transforms"
   },
   "phantom": {
@@ -687,7 +687,10 @@
       "ecm_convention_reference": "https://dvrk.readthedocs.io/2.3.0/_static/schemas/dvrk-ecm.html"
     }
   },
-  "omitted": {},
+  "omitted": {
+    "needle": "Removed from prepared examples by request; not simulated.",
+    "thread": "Removed from prepared examples by request; not rendered or simulated."
+  },
   "visual_geometry": {
     "wrist_camera": "5.5 mm diameter cylinder behind fitted optical center, 35 mm illustrative housing length, opacity 0.25"
   },
@@ -696,13 +699,10 @@
     "approach_readiness.json",
     "approach_visual_review.json",
     "audit/independent_render",
-    "audit/native_independent/left_needle_000139.png",
     "audit/native_independent/psm1_full_000005.png",
     "audit/native_independent/psm1_own_tool_000005.png",
     "audit/native_independent/psm1_own_tool_000033.png",
     "audit/native_independent/psm1_own_tool_000076.png",
-    "audit/native_independent/right_needle_000139.png",
-    "audit/needle_joint",
     "automatic_observations.json",
     "automatic_slit_traces.json",
     "automatic_wrist_caps.json",
@@ -714,11 +714,6 @@
     "joint_pad_alignment.json",
     "joint_refinement.json",
     "joint_wrist_alignment.json",
-    "needle.usdc",
-    "needle_backing_collision.json",
-    "needle_initialization.jpg",
-    "needle_initialization.json",
-    "needle_inputs.npz",
     "own_head_validation.json",
     "pad_placement.json",
     "pad_placement_before_joint.json",
@@ -760,121 +755,15 @@
       0
     ]
   },
-  "needle": {
-    "usd": "needle.usdc",
-    "inputs_npz": "needle_inputs.npz",
-    "initialization_report": "needle_initialization.json",
-    "accepted": true,
-    "validation_status": "needle_pixel_gates_and_runtime_passed_full_scene_alignment_unaccepted",
-    "body_path": "/SutureBotNeedle/Needle",
-    "initial_pose_world_xyz_xyzw": [
-      0.039088757246287076,
-      -0.03814584322600571,
-      0.0047600484852829625,
-      -0.4572521861035511,
-      0.7623787248331191,
-      0.25873043533902335,
-      0.3778328731789101
-    ],
-    "initial_held_arm": "psm1",
-    "geometry": {
-      "radius_mesh_units": 0.009370268958301524,
-      "arc_radians": 3.1054113227079587,
-      "arc_length_mesh_units": 0.029098539319928462,
-      "samples": 65,
-      "source_sha256": "2db5c6060c806498e3a18bde5fe4d7d7d53900dd1e167bcb61bc1c7873a8d7ca",
-      "mass_kg": 0.0003,
-      "collision_capsules": 32,
-      "capsule_radius_m": 0.00023,
-      "environment_collision_policy": "single_rectangular_backing_only",
-      "environment_collision_count": 1,
-      "environment_collision_path": "/SutureBotNeedle/PadSupportProxy/RectangularBacking",
-      "support": "One rectangular native flat backing; raised tissue, tools, fixture, endoscope and table have no environment collision shapes",
-      "backing_dimensions_m": [
-        0.13318735765534756,
-        0.1324805516189042,
-        0.004450611774539077
-      ],
-      "backing_world_transform": [
-        [
-          0.9998829781026586,
-          -0.013982670239650243,
-          0.006206048140917015,
-          -6.96605489358031e-06
-        ],
-        [
-          0.014060442527423143,
-          0.9998208694389858,
-          -0.01267016141189137,
-          0.0031945772790877335
-        ],
-        [
-          -0.0060277737591262325,
-          0.012755938508771113,
-          0.9999004710351272,
-          -0.013693717778756768
-        ],
-        [
-          0.0,
-          0.0,
-          0.0,
-          1.0
-        ]
-      ],
-      "backing_top_plane_dot_normal_m": -0.011507568011372274,
-      "mesh_scale": 0.6548425042744467,
-      "sharp_tip_arc_endpoint": -1,
-      "blunt_arc_endpoint": 0,
-      "endpoint_evidence": "original CAD end cross sections: endpoint0 broad blunt end; endpoint-1 tapered tip",
-      "estimated_radius_m": 0.006136050390379281,
-      "estimated_arc_length_m": 0.01905496035899041,
-      "geometry_method": "Original tapered CAD cross-sections bent along one fitted circular centreline; topology and blunt-to-sharp ordering retained; not a verified needle SKU"
+  "provenance_file": "provenance.json",
+  "tool_geometry": {
+    "revision": "source_diameter_debakey_concave_neck_v9",
+    "files": {
+      "psm1": "tools/large_needle_driver.usdc",
+      "psm2": "tools/debakey_forceps.usdc"
     },
-    "grasp": {
-      "close_angle_rad": 0.05,
-      "open_angle_rad": 0.18,
-      "capture_distance_m": 0.0025,
-      "tool_body_paths": {
-        "psm1": "/SutureBotReplay/PSM1/yaw",
-        "psm2": "/SutureBotReplay/PSM2/yaw"
-      },
-      "tool_point_local_m": {
-        "psm1": [
-          0,
-          0.008187972317621707,
-          0
-        ],
-        "psm2": [
-          0,
-          0.006,
-          0
-        ]
-      },
-      "policy": "Recorded jaw hysteresis; a fresh jaw closure may translate a free needle to the grasp point, then preserve its constant tool-to-needle transform until release. No recorded needle trajectory is consumed."
-    },
-    "simulation": {
-      "environment_collision_policy": "single_rectangular_backing_only",
-      "maximum_step_s": 0.004166666666666667,
-      "gravity_m_s2": [
-        0,
-        0,
-        -9.81
-      ],
-      "contact_stiffness": 1000000.0,
-      "contact_damping": 2000.0,
-      "contact_parameter_status": "simulation choices for a small rigid needle; not measured tissue properties",
-      "backend": "Newton public SolverMuJoCo; CPU default",
-      "seek": "reset and deterministic source-clock replay"
-    },
-    "source": {
-      "needle_cad_sha256": "2db5c6060c806498e3a18bde5fe4d7d7d53900dd1e167bcb61bc1c7873a8d7ca",
-      "initial_frame": 5,
-      "motion_policy": "No recorded needle motion is stored or consumed.",
-      "jaw_clock": "same interpolation and constant robot/image offset as the recorded tool replay",
-      "estimated_geometry_fit_sha256": "fa31e76d9261380bea7c8a5b4e049ce39f9e9d7a05f79869f70e757fc0962f38"
-    },
-    "acceptance_scope": "Needle source-pixel numerical gates, supported initial jaw anchor, replay dynamics and rectangular-backing clearance for source frames 5\u2013141 only.",
-    "review_report": "audit/needle_joint/visual_review.json"
-  },
-  "provenance_file": "provenance.json"
+    "report": "tool_geometry.json",
+    "status": "PSM1 retained Large Needle Driver CAD; PSM2 photo-estimated DeBakey forceps",
+    "camera_alignment_validated": false
+  }
 }

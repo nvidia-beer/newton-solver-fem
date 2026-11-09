@@ -3,6 +3,7 @@
 
 """Exact recording clocks, camera/body correspondence and prepared USD replay."""
 
+import hashlib
 import importlib.util
 import json
 import os
@@ -140,7 +141,93 @@ class RecordingClockTests(unittest.TestCase):
 
 @unittest.skipUnless(importlib.util.find_spec("pxr"), "The examples extra provides the USD importer")
 class PreparedReplayTests(unittest.TestCase):
-    def test_switch_recordings_preserves_each_source_clock_and_resets_needle(self):
+    def test_tool_mesh_alias_uses_the_default_geometry_and_recorded_motion(self):
+        original = Recording(DEFAULT_RECORDING)
+        preview = Recording("tissue3_215300_mesh_preview")
+        self.assertEqual(original.scene_path, preview.scene_path)
+        self.assertFalse(preview.manifest["alignment"]["accepted"])
+        allowed = {"sample_id", "provenance_file", "playback", "tool_mesh_preview"}
+        for key in original.manifest.keys() | preview.manifest.keys():
+            if key not in allowed:
+                self.assertEqual(original.manifest.get(key), preview.manifest.get(key), key)
+        np.testing.assert_array_equal(original.body_poses, preview.body_poses)
+        np.testing.assert_array_equal(original.camera_poses, preview.camera_poses)
+        self.assertEqual((original.first_frame, original.last_frame), (preview.first_frame, preview.last_frame))
+
+    def test_every_recording_uses_distinct_instrument_assets_with_unchanged_scene_poses(self):
+        from pxr import Usd, UsdGeom
+
+        shared_hashes = None
+        for name, source in bundled_recordings().items():
+            with self.subTest(recording=name):
+                recording = Recording(source)
+                geometry = recording.manifest["tool_geometry"]
+                self.assertFalse(geometry["camera_alignment_validated"])
+                files = {arm: recording.asset(path) for arm, path in geometry["files"].items()}
+                self.assertNotEqual(files["psm1"], files["psm2"])
+                hashes = {arm: hashlib.sha256(path.read_bytes()).hexdigest() for arm, path in files.items()}
+                if shared_hashes is None:
+                    shared_hashes = hashes
+                self.assertEqual(hashes, shared_hashes)
+                before = Usd.Stage.Open(str(recording.root / "scene.usda"))
+                after = Usd.Stage.Open(str(recording.scene_path))
+                self.assertEqual(
+                    [str(p.GetPath()) for p in before.Traverse()], [str(p.GetPath()) for p in after.Traverse()]
+                )
+                old_transforms, new_transforms = UsdGeom.XformCache(), UsdGeom.XformCache()
+                changed = set()
+                for prim in before.Traverse():
+                    path = prim.GetPath()
+                    other = after.GetPrimAtPath(path)
+                    if prim.IsA(UsdGeom.Xformable):
+                        np.testing.assert_array_equal(
+                            old_transforms.GetLocalToWorldTransform(prim),
+                            new_transforms.GetLocalToWorldTransform(other),
+                        )
+                    if prim.IsA(UsdGeom.Mesh):
+                        a = np.asarray(UsdGeom.Mesh(prim).GetPointsAttr().Get())
+                        b = np.asarray(UsdGeom.Mesh(other).GetPointsAttr().Get())
+                        if not np.array_equal(a, b):
+                            changed.add(str(path))
+                self.assertEqual(
+                    changed,
+                    {
+                        f"/SutureBotReplay/{arm}/{part}/CAD"
+                        for arm, part in (("PSM1", "roll"), ("PSM2", "roll"), ("PSM2", "jaw1"), ("PSM2", "jaw2"))
+                    },
+                )
+                for arm, file in files.items():
+                    asset = Usd.Stage.Open(str(file))
+                    self.assertEqual(len([p for p in asset.Traverse() if p.IsA(UsdGeom.Mesh)]), 5)
+                    self.assertEqual(len([layer for layer in asset.GetUsedLayers() if layer.realPath]), 1)
+                    for link in ("roll", "pitch", "yaw", "jaw1", "jaw2"):
+                        mesh = UsdGeom.Mesh(after.GetPrimAtPath(f"/SutureBotReplay/{arm.upper()}/{link}/CAD"))
+                        reference = UsdGeom.Mesh(asset.GetPrimAtPath(f"/Tool/{link}/CAD"))
+                        for attr in ("points", "faceVertexCounts", "faceVertexIndices"):
+                            actual = mesh.GetPrim().GetAttribute(attr)
+                            np.testing.assert_array_equal(actual.Get(), reference.GetPrim().GetAttribute(attr).Get())
+                            self.assertEqual(Path(actual.GetPropertyStack()[0].layer.realPath).resolve(), file)
+                        if link == "roll":
+                            points = np.asarray(mesh.GetPointsAttr().Get())
+                            original = np.asarray(before.GetPrimAtPath(mesh.GetPath()).GetAttribute("points").Get())
+                            np.testing.assert_array_equal(points[:, 2], original[:, 2])
+                            ring = points[points[:, 2] == points[:, 2].min()]
+                            self.assertAlmostEqual(float(np.ptp(ring[:, 0])), 0.008356937895, places=7)
+                for jaw in ("jaw1", "jaw2"):
+                    mesh = UsdGeom.Mesh(after.GetPrimAtPath(f"/SutureBotReplay/PSM2/{jaw}/CAD"))
+                    points = np.asarray(mesh.GetPointsAttr().Get())
+                    self.assertAlmostEqual(float(points[:, 1].max()), 0.012, places=7)
+                    side = -1 if jaw == "jaw1" else 1
+                    # Distal faces oppose each other without crossing the closed gap.
+                    self.assertGreaterEqual(float((side * points[points[:, 1] >= 0.005, 0]).min()), 0.00002499)
+                    faces = np.asarray(mesh.GetFaceVertexIndicesAttr().Get()).reshape(-1, 3)
+                    triangles = points[faces]
+                    centers = triangles.mean(axis=1)
+                    inner = (centers[:, 1] > 0.005) & (centers[:, 1] < 0.0115) & (side * centers[:, 0] < 0.00009)
+                    normals = np.cross(triangles[:, 1] - triangles[:, 0], triangles[:, 2] - triangles[:, 0])
+                    self.assertGreater(float((-side * normals[inner, 0]).sum()), 0.0)
+
+    def test_switch_recordings_preserves_each_source_clock_and_replays_only_prepared_scene(self):
         samples = bundled_recordings()
         self.assertIn("tissue3_215300", samples)
         # A second clock fixture exercises switching even when calibration
@@ -149,7 +236,7 @@ class PreparedReplayTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory, wp.ScopedDevice(os.environ.get("NEWTON_TEST_DEVICE", "cpu")):
             copy = Path(directory) / "different_clock"
             shutil.copytree(DEFAULT_RECORDING.parent, copy)
-            for filename in ("motion.npz", "camera_poses.npz", "needle_inputs.npz"):
+            for filename in ("motion.npz", "camera_poses.npz"):
                 with np.load(copy / filename, allow_pickle=False) as archive:
                     values = dict(archive)
                 times = values["timestamps_ns"]
@@ -174,18 +261,18 @@ class PreparedReplayTests(unittest.TestCase):
                     recording = example.recording
                     self.assertEqual(recording.path, source.resolve())
                     self.assertIn(recording.manifest["region_id"], range(1, 7))
-                    self.assertEqual(example.needle is not None, "needle" in recording.manifest)
+                    self.assertNotIn("needle", recording.manifest)
+                    self.assertNotIn("thread", recording.manifest)
+                    self.assertFalse(any("needle" in label.lower() for label in example.model.body_label))
+                    self.assertFalse(any("thread" in label.lower() for label in example.model.shape_label))
                     for frame in range(recording.first_frame, recording.last_frame + 1):
                         example.seek(frame)
                         example.test_final()
                         self.assertEqual(recording.frame_at(example.elapsed), frame)
                     end = example.state_0.body_q.numpy().copy()
-                    events = example.needle.events.copy() if example.needle is not None else None
                     example.seek(recording.first_frame)
                     example.seek(recording.last_frame)
                     np.testing.assert_allclose(example.state_0.body_q.numpy(), end, atol=1.0e-7, rtol=0)
-                    if example.needle is not None:
-                        self.assertEqual(example.needle.events, events)
             finally:
                 example.close()
                 viewer.close()
@@ -198,7 +285,7 @@ class PreparedReplayTests(unittest.TestCase):
                 with self.subTest(recording=name):
                     root = Path(directory) / name
                     shutil.copytree(source.parent, root)
-                    recording = Recording(root / "recording.json")
+                    recording = Recording(root / source.name)
                     for path in root.rglob("*.json"):
                         text = path.read_text()
                         self.assertNotIn("/home/", text, str(path.relative_to(root)))

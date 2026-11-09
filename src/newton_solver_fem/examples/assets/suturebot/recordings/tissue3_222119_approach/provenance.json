@@ -296,10 +296,6 @@
       "sha256": "ccc215d4168a010655cec1ddeb5a75c5915373aa4bd06b2634c841f7ea818aaf",
       "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
     },
-    "audit/native_independent/left_needle_000139.png": {
-      "sha256": "b40515a3f9b51069599fbd586c99277cd163592ef70a59537e17050c78712a6c",
-      "bytes": 207875
-    },
     "audit/native_independent/psm1_full_000005.png": {
       "sha256": "f37a1f0634f2af247ef8af07c692ed71de796c724bb6543b898b5e6e915f681d",
       "bytes": 755614
@@ -315,16 +311,6 @@
     "audit/native_independent/psm1_own_tool_000076.png": {
       "sha256": "cc680d8bce213fe5760eac65b3c62869f095bff05617f335f329452302982238",
       "bytes": 262679
-    },
-    "audit/native_independent/right_needle_000139.png": {
-      "sha256": "0d6d9dcae813af3ba07fd88a8752fc1ee441a1a67b6ef5d0d536c8822082eb69",
-      "bytes": 193177
-    },
-    "audit/needle_joint": {
-      "file_count": 6,
-      "bytes": 154348,
-      "sha256": "f15e0547310fb04b79d187bff85f535754d6a828700981ad6c009628702ebd8c",
-      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
     },
     "automatic_observations.json": {
       "sha256": "7107d39544e43cb913b652fff7a47514d03a4f6956dfd827fa4ed748699403b6",
@@ -369,26 +355,6 @@
     "joint_wrist_alignment.json": {
       "sha256": "055ff9a8be4dded71d6c7ee9581b1a99f96449a7000586aa47826c9c6046dd5f",
       "bytes": 58559
-    },
-    "needle.usdc": {
-      "sha256": "41b218a80a88770d5aec89c401bab0a18a9593d9d093a207e149284335d8b80f",
-      "bytes": 19612
-    },
-    "needle_backing_collision.json": {
-      "sha256": "def8aa0bd9df016caad63493651d9c742db4aa8406480766b285384e331af3b6",
-      "bytes": 1161
-    },
-    "needle_initialization.jpg": {
-      "sha256": "dfc57002c22b022f108066b91cdd216ecc0e1cb08d8a1e27dc4519968765c6ce",
-      "bytes": 962469
-    },
-    "needle_initialization.json": {
-      "sha256": "98b73ed7c5bb6477b67a259e2ab2b4fd0a38436c41550e6c6f73366bec167645",
-      "bytes": 89597
-    },
-    "needle_inputs.npz": {
-      "sha256": "499dce404a3985f3ccfa506167e0759b477cb04b1c5a13c2a6204e387a984d71",
-      "bytes": 10009
     },
     "own_head_validation.json": {
       "sha256": "3ff8bbc7ca29ec7b4a2ba0413e3fa8be7f7dc3654c09f26032cc3fa21d8bcdee",
@@ -472,5 +438,18 @@
       "sha256": "692312d8f4b64b292c49b109f3b6e99e6f6d80d387aff65d2c940861e7057b23",
       "bytes": 386
     }
+  },
+  "example_feature_removal": {
+    "features": [
+      "needle",
+      "thread"
+    ],
+    "reason": "User requested removal of nonworking experimental features from prepared examples.",
+    "archive_id": "example_feature_removal_20261109/tissue3_222119_approach",
+    "archive_required_for_replay": false,
+    "removed_files": 47,
+    "retained_numerical_payloads_byte_identical": true,
+    "source_data_modified": false,
+    "alignment_acceptance_changed": false
   }
 }

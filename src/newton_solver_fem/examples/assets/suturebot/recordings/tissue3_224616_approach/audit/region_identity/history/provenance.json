@@ -1,0 +1,495 @@
+{
+  "schema_version": 1,
+  "dataset": {
+    "id": "SutureBot",
+    "episode": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery",
+    "url": "https://huggingface.co/datasets/jchen396/SutureBot",
+    "project_url": "https://suturebot.github.io/",
+    "license": "CC-BY-4.0 according to the retained dataset inventory"
+  },
+  "source_records_are_runtime_dependencies": false,
+  "original_inputs_modified": false,
+  "source_files": {
+    "recording": [
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions.usd",
+        "sha256": "45218965fe8b3eef6d0492f79317a5a42c154b29b2b96bf7e937fc197d415324",
+        "included": false
+      },
+      {
+        "source_id": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery/clicked_point.csv",
+        "sha256": "99de7c7753347d76ca28433ed05a9d36a31d1630e06bc00b6e4ae5adba653d1e",
+        "included": false
+      },
+      {
+        "source_id": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery/clicked_point_mask.png",
+        "sha256": "630fe0b8aa6d50b2ea4af9ed4cf58fdb2c3794f9f528ed939320d3abe7ccf6c1",
+        "included": false
+      },
+      {
+        "source_id": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery/ee_csv.csv",
+        "sha256": "bd4b1202a085bc1f53bc59eb86cd184e45b6fb0f2f98fc4351006f36658a015d",
+        "included": false
+      },
+      {
+        "source_id": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery/left.mp4",
+        "sha256": "33c5515631d9a8b2c28cc09971ff796dace12c5ab0982d495b251181121aef8d",
+        "included": false
+      },
+      {
+        "source_id": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery/psm1.mp4",
+        "sha256": "ad939d76ac3bdbf24acd2b04bc5e30a41a644a7349c5566ed55689845626ef27",
+        "included": false
+      },
+      {
+        "source_id": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery/psm2.mp4",
+        "sha256": "3b5925b5c4eefd90c2d63765c4f4ef00c00f2884721574586b715a949ef8a574",
+        "included": false
+      },
+      {
+        "source_id": "tissue_3/2_needle_throw_recovery/20250428-224616-539134_recovery/right.mp4",
+        "sha256": "aeab2a61bc34e62277999c2a13109077f856aff9f47d7878670021405a2c0e71",
+        "included": false
+      }
+    ],
+    "instrument_cad": [
+      {
+        "source_id": "asset-source/psm_lnd/dvrk_model/meshes/instruments/roll/4670/roll_4670.obj",
+        "sha256": "e7f3ea661d2e4f2de73cdea59d56c14e62b60dcc5e75664c0d89723013e6e8eb",
+        "included": false
+      },
+      {
+        "source_id": "asset-source/psm_lnd/dvrk_model/meshes/instruments/tip/006/tip_006_1.obj",
+        "sha256": "96e08f64608fadb0da4864bd38cd06a56345095ca8316f9e27d514c3031fb44a",
+        "included": false
+      },
+      {
+        "source_id": "asset-source/psm_lnd/dvrk_model/meshes/instruments/tip/006/tip_006_2.obj",
+        "sha256": "d59c9fdd11131597e42b8fec22f0b297b9f7d4ac2872e374c28984deb3097a2b",
+        "included": false
+      },
+      {
+        "source_id": "asset-source/psm_lnd/dvrk_model/meshes/instruments/wrist_pitch/0091/wrist_pitch_0091.obj",
+        "sha256": "a0fbe4dffaa3561b42f1b50019b9fcecab9308298a5592df917bea38b5ac8390",
+        "included": false
+      },
+      {
+        "source_id": "asset-source/psm_lnd/dvrk_model/meshes/instruments/wrist_yaw/0091/wrist_yaw_0091.obj",
+        "sha256": "9a6b64b0ce58833b0bbfa8be57e577dcece4425781bb0962ce242f8f3105bf8f",
+        "included": false
+      },
+      {
+        "source_id": "asset-source/trocar_cage/trocart_cage.stl",
+        "sha256": "b58a7341a1ff2d7f45b268be23e49e64c3f2c0a964bd218c2c99a9ace7572d23",
+        "included": false
+      }
+    ],
+    "phantom_regions": [
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions.usd",
+        "sha256": "45218965fe8b3eef6d0492f79317a5a42c154b29b2b96bf7e937fc197d415324",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_000_base_and_lettering.usdc",
+        "sha256": "e1d67af37a3cb6d2c0dff2bb1b39d773f1197f7bc2db9fdd883d78267b5a48c7",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_001_feature_01.usdc",
+        "sha256": "9a8460b85b0af05a05fb0f556231361649261f06e73a508f9daa3580ac03e7cc",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_002_feature_02.usdc",
+        "sha256": "ffd338ba156b14d2391d8f48c8c903bd8084dde8ce675fa9b34a79fcecc3b013",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_003_feature_03.usdc",
+        "sha256": "76c7cb1fbfeb72e61bb4402a27b5d1f10eaecb15b115efa100d1d7f0d3026ed4",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_004_feature_04.usdc",
+        "sha256": "638a2728bb203b7f7ccc2c10e5d2fc17ca662d3763bc16cf65f2f6de73b5fd7a",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_005_feature_05.usdc",
+        "sha256": "38824c34a68a6788146982b08192ccaf556eef5ecd6f9791ed3632d7aedc19d3",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_006_feature_06.usdc",
+        "sha256": "b8ac9e3d67ca515e74a2e7495683716637911b650a7ba2c1c39918bb1de1cae3",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_007_feature_07.usdc",
+        "sha256": "28763d6c606ac323169c395bfb7059e5d9d6f1f7c9c0da69dff35409bf888567",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_008_feature_08.usdc",
+        "sha256": "3f11004229357330d068099eefd0e457f3bd60c0b7cd543b555348a0fc1d5fe1",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_009_upper_paired_strips.usdc",
+        "sha256": "2356925ad8eed756a7a2181bc3891e8175149e8fcae05d99da97ed6013cb0040",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_010_wound_5_slit_patch.usdc",
+        "sha256": "9a25df1b3f2de927f520f4f8e11c72ed348a0cb723f0d395e0149c27f12390ba",
+        "included": false
+      },
+      {
+        "source_id": "preparation-source/simulation/suturebot_regions_upper_rim/runtime_assets/phantom_regions_payloads/region_011_upper_narrow_slit.usdc",
+        "sha256": "e0dc91b6bf07edb5e60ce765d6f78015b6727c9533390e68d549642644cac249",
+        "included": false
+      }
+    ],
+    "annotations": [],
+    "stereo_optical_prior": {
+      "source_id": "unspecified",
+      "sha256": null,
+      "included": false
+    }
+  },
+  "preparation": {
+    "scripts": [
+      {
+        "name": "finalize_approach_release.py",
+        "sha256": "811fed649c91942888454a6c79ffab9a37668c377c7d4e3e84103f88dc465239"
+      },
+      {
+        "name": "build_candidate.py",
+        "sha256": "dc4fae8fe8924f58e0c12dc3ca5f5f9c3e78574ed7f862d3afc64e7f416a413d"
+      },
+      {
+        "name": "clarify_identity.py",
+        "sha256": "17c2644279220e82124a6290668da7b4767366e460e2556c94e4e815bc25c98c"
+      },
+      {
+        "name": "finalize_review.py",
+        "sha256": "82814b5cd6a3130de812644855084e0f3ec57dd2db9e97474314021a367cb4c3"
+      },
+      {
+        "name": "fit_region3.py",
+        "sha256": "b17746125a1d401b7fe94dd0d37f2c5a37f7b3b7f775c8143abdab1064916931"
+      },
+      {
+        "name": "refresh_candidate.py",
+        "sha256": "b83ca85be83642087b7ef90f9f25370dc240fa4ea1850505db5761f16fe0a55c"
+      },
+      {
+        "name": "check_recording_pad_boundary.py",
+        "sha256": "89c1a3a7ee4ef9f3b9fe8014f375e9a70f4c5b432c18d6970b12216bb47d6c5a"
+      },
+      {
+        "name": "fit_recording_cameras.py",
+        "sha256": "48fa9f1b07da71b58f9ad86f9ae0ff5f12b4d649f2bac2b0599f0b0063fbc8ad"
+      },
+      {
+        "name": "fit_recording_tools.py",
+        "sha256": "77c32874a594768a8ba4c20661667489c1f3ec9eb720ed8f09f48463b74459d3"
+      },
+      {
+        "name": "prepare_recording.py",
+        "sha256": "1df0463d1b5c79985fba40be75b6ec346836cac79f62551f029fe8d5334dc8a9"
+      },
+      {
+        "name": "prepare_recording_batch.py",
+        "sha256": "f21ca3808a4e98ecde4b3d780d39afabbb5e9f895be759ae468dee468f69717a"
+      },
+      {
+        "name": "prepare_recording_cameras.py",
+        "sha256": "501ad7e1f749a6661dd17023b9a109a76ae7dfed0c209f61e1aa35345324c64e"
+      },
+      {
+        "name": "prepare_recording_pad_placement.py",
+        "sha256": "9fef31c46fb11b1c40f19a29372c3a02fe34600689b20015bf2b06f68b6b1277"
+      },
+      {
+        "name": "prepare_recording_phase.py",
+        "sha256": "5039ac25a15056af1a4018598bb46527ad2238b71d57512daa60e67626774033"
+      },
+      {
+        "name": "prepare_recording_point_labels.py",
+        "sha256": "2698f23117f455f015c432e3ff60f6b665604a5e1d23a1e9d8bcac313bfa9c6a"
+      },
+      {
+        "name": "prepare_rig.py",
+        "sha256": "b384fd26a54daaf7664c158d0157ea36ec56337d7f547a99fbc19aff2f640734"
+      },
+      {
+        "name": "publish_recording.py",
+        "sha256": "3e8a33aa6e990d0dc06a6f24c486bf9e16f2da4777cdd2385760824c97bd4828"
+      },
+      {
+        "name": "recording_cap_detection.py",
+        "sha256": "6e4275a445820563c3dd37a5edbd0f856bd0bdd0cef2934927c08ea7ef3bd611"
+      },
+      {
+        "name": "recording_frames.py",
+        "sha256": "9850347be275161872a8c5b41531c3ee555bde19ce2ac84411b8336dfb6f8189"
+      },
+      {
+        "name": "recording_pad_detection.py",
+        "sha256": "21adc3bca62b77f3f682f305574071b83c09254fb8f8d27e5552137a5d958200"
+      },
+      {
+        "name": "recording_rig_geometry.py",
+        "sha256": "970d7f781c9446198cea8bcfe2c04f645c21b5bd35f5b8682979cdab8a97b844"
+      },
+      {
+        "name": "recording_wrist_detection.py",
+        "sha256": "90e04ba10f65f141c69647026febf1cce5561fb3b6e0a23351b282055c56c278"
+      },
+      {
+        "name": "refine_recording_camera_joint.py",
+        "sha256": "e274531cf632ef79326b9ba2e0045e0732f45864c1473e3c7628e77af692a01a"
+      },
+      {
+        "name": "refine_recording_scene.py",
+        "sha256": "9386ea88421183d289984af1896840b9688678bfbcda5401aba839010feefdd8"
+      }
+    ],
+    "publisher": {
+      "name": "publish_recording.py",
+      "sha256": "3e8a33aa6e990d0dc06a6f24c486bf9e16f2da4777cdd2385760824c97bd4828"
+    },
+    "scripts_required_for_replay": false
+  },
+  "payload_files": {
+    "scene.usda": {
+      "sha256": "e30ce457207a0ea76579d2e357be8d9f6ee79cfac5fdfd834c604d5581d98f71",
+      "bytes": 286
+    },
+    "rig.usdc": {
+      "sha256": "00630b74baf365bef58fd2e684a66045cc0a59e557fa32cb04693f2305d9951c",
+      "bytes": 854480
+    },
+    "phantom.usdc": {
+      "sha256": "ceacac33fe2b857cc8293a0a8c5068f8837ba0980ea41797431db1fb278b1c68",
+      "bytes": 9716783
+    },
+    "motion.npz": {
+      "sha256": "c2d51121053594d7e589d98147ac8e12432203934373c229fb4737df7a960314",
+      "bytes": 1468921
+    },
+    "camera_poses.npz": {
+      "sha256": "5c6bcb83466b70837d8a7d6de621bd4ad9041b1c35a4b0d69f8490da30998adb",
+      "bytes": 85318
+    }
+  },
+  "payload_directories": {
+    "cameras": {
+      "file_count": 8,
+      "bytes": 1966624,
+      "sha256": "b0d8dfd2c2300a338953024a36210445ace984b3a0a84f64e4d9186bc1d3e0ba",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    },
+    "images": {
+      "file_count": 1844,
+      "bytes": 16230371,
+      "sha256": "7b168f99d3adc843e560b225e04db302321e958d2e58b822fdf96aedabdcf69f",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    }
+  },
+  "numerical_payloads_byte_identical_to_prepared_source": false,
+  "additional_metadata_policy": "Original source identity paths remain portable. Current review metadata explicitly records the failed pad-boundary audit and supersedes original publication readiness decisions. This correction changes review JSON values, not replay geometry, motion, camera rays or source images. Exact original committed review reports are retained under audit/pad_boundary/history. Subsequent standard USD-camera authoring correction is documented separately in audit/usd_camera/correction.json; only the eight camera aperture-offset attributes change, with the exact prior rig and metadata retained in audit/usd_camera/history.",
+  "additional_payloads": {
+    "alignment_screening.json": {
+      "sha256": "6725940bdcebadbd52ca37049f1332ec8e8b0f42d0f93a5fbe62c594de5ff897",
+      "bytes": 14630
+    },
+    "approach_readiness.json": {
+      "sha256": "9a811e36231b53837a57092c941a61d6dc29d802868093385254e6bdf27a3879",
+      "bytes": 1797
+    },
+    "approach_visual_review.json": {
+      "sha256": "9078e287afe340696f007dd0829185c44b48280b9aee40bf59c713384a4bf1a1",
+      "bytes": 7224
+    },
+    "audit/coordinate_validation.json": {
+      "sha256": "71b3cdcdc95297885610e5797a997f6071830da2aa58c0d25f7e30afa640f2d0",
+      "bytes": 2152
+    },
+    "audit/green_uv_render.json": {
+      "sha256": "7dcddbef523ccf84f8c186c6f2b38469a03d2498bae6a7d45926add58955a022",
+      "bytes": 1188
+    },
+    "audit/region3_preservation.json": {
+      "sha256": "2ba45f10dc75060912406bc78825a5dd99c76d89e2cecd715e97f7562b6a2d37",
+      "bytes": 257
+    },
+    "audit/region3_review": {
+      "file_count": 5,
+      "bytes": 1550085,
+      "sha256": "41ae11186216c993896b0ba2a76ed0afd6cac4cb6bc711f4a58e0339d024e02d",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    },
+    "automatic_observations.json": {
+      "sha256": "b987aae606c5db5595a22bbe6ebbc14aa521a750e8144cce9d131f9dd63a4132",
+      "bytes": 78393
+    },
+    "automatic_slit_traces.json": {
+      "sha256": "109b1955cb87d85ebb68eace9f8e9345dd061da940efc9c822b78d6d6ff39124",
+      "bytes": 289223
+    },
+    "automatic_wrist_caps.json": {
+      "sha256": "e352fcb091946cbc391fa4689041d115a7ef14f594b6683afc50338418bad151",
+      "bytes": 162559
+    },
+    "calibration_before_wrist.json": {
+      "sha256": "a0c919749ae4e3899a0507ed30d8a7fa314325249690ffb7372b5a4635cb34f2",
+      "bytes": 134247
+    },
+    "cap_review_validation.json": {
+      "sha256": "86d3eeac6e92a4392019e51d752b427b7b8356a0d451213a917f901dbd0cf2ff",
+      "bytes": 1877
+    },
+    "fit_cap_observations.json": {
+      "sha256": "12f8263ce6254d11ee16ed56eb51d6b35cee81b5e22ae461d64adcf09c5e338e",
+      "bytes": 76484
+    },
+    "frozen_pad_fit.json": {
+      "sha256": "fe55a4310d3d6a19b66d3e69fe17e31bb1c690091f99933d3c1b59f3d68d4227",
+      "bytes": 112951
+    },
+    "frozen_wrist_fit.json": {
+      "sha256": "03bb751b034c0163ecab6b199e72167b83e14aca31742b2ddeae0ff0db19e602",
+      "bytes": 69487
+    },
+    "native_region3_fit_curves.npz": {
+      "sha256": "c4ccea77a30dc9daa6af31a03fece3008c970214f560e23a76d7d5a14a2ae858",
+      "bytes": 11942
+    },
+    "pad_placement.json": {
+      "sha256": "9d44964690f4a932d40f41beca33b5cb4d23cb4cd1206fd9068c2f04e82c45e9",
+      "bytes": 28098
+    },
+    "pad_placement_correction.json": {
+      "sha256": "0d8e053c16af0ac5a1082bb5abde51fe0c4ef3fb61fe7ff99c394aeb1e31f230",
+      "bytes": 585
+    },
+    "point_labels.json": {
+      "sha256": "c1fc3950a2c3ab3e8a335d28a8f6c7d483f47504a4998b876eff813ea239cef1",
+      "bytes": 3395
+    },
+    "point_labels_source": {
+      "file_count": 2,
+      "bytes": 1611,
+      "sha256": "c877e64ef0f578c4d9884e5f5845da5f88a4f6dcf2c655d8acc8fe8e2146308f",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    },
+    "preparation_validation.json": {
+      "sha256": "d8ff3f1a7ebde0ccbfbbc52c9cb50000afc5a9d1e67a02701af6a2b7a67e6162",
+      "bytes": 50504
+    },
+    "psm1_mount.json": {
+      "sha256": "93db3e5edf7d516892af2f48569363f11354149bd55a7e16e9b734685f52b3ce",
+      "bytes": 25873
+    },
+    "psm2_mount.json": {
+      "sha256": "24fe37330de4f5314e9ab782f1ef2235830b99b0da25cdc50aafe028def6cdaa",
+      "bytes": 31988
+    },
+    "region3_fit.json": {
+      "sha256": "bb636515603fdbc0db16eb75093adef2b6b46baca660b55de046fb8b01d84e73",
+      "bytes": 57270
+    },
+    "region_identification.json": {
+      "sha256": "2d29a641d71aecf62c5690983569e4ff03b15f3a75d31f204e2d740d7aaa858a",
+      "bytes": 467
+    },
+    "region_review.json": {
+      "sha256": "cd48c233e81281a2f939803efa13bed1da145f62780e367f20cb1ed515493749",
+      "bytes": 917
+    },
+    "region_user_review.json": {
+      "sha256": "cd48c233e81281a2f939803efa13bed1da145f62780e367f20cb1ed515493749",
+      "bytes": 917
+    },
+    "reviewed_cap_identity.json": {
+      "sha256": "fb3f03534c3d113319d16080cf6370cfc911583a165640bc720f73a187dc61e8",
+      "bytes": 2550
+    },
+    "reviewed_slit_traces.json": {
+      "sha256": "3c68787d85d21bcbb26dc88c50b5d66595d258c9d5d965bdbd0165266e502acc",
+      "bytes": 350556
+    },
+    "reviewed_wrist_observations.json": {
+      "sha256": "d6fc95cc5c1d7f267c02c7db65b510087213151fe82655139cd6dd078eb6fdf9",
+      "bytes": 56515
+    },
+    "reviewed_wrist_wound.json": {
+      "sha256": "27f1f91ff58eab63133e079ca9dc818e2ca6fff550d438e6f7ede643437deacc",
+      "bytes": 11755
+    },
+    "slit_review_validation.json": {
+      "sha256": "123a82a78673d32d587bdd66b337d6de60a7bb3105de22af4ee37d08c15705aa",
+      "bytes": 705
+    },
+    "source_phases.json": {
+      "sha256": "8336faa311506d15a370d223f2552631e70ff331c5c6390fe284361c646a21a5",
+      "bytes": 38811
+    },
+    "textures/point_labels.png": {
+      "sha256": "a44ce6e5baf98bdbb6f1393b50f58953f805d76bae40bcd781218f86de7077ce",
+      "bytes": 3279
+    },
+    "wrist_export_validation.json": {
+      "sha256": "692312d8f4b64b292c49b109f3b6e99e6f6d80d387aff65d2c940861e7057b23",
+      "bytes": 386
+    },
+    "audit/pad_boundary": {
+      "file_count": 47,
+      "bytes": 6575361,
+      "sha256": "c191f876ee82968c618468bd578640615935d66734100a995183340b2288ab32",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    },
+    "audit/usd_camera": {
+      "file_count": 7,
+      "bytes": 935297,
+      "sha256": "b168a3921ab03b43e65b56cef3e0dea76d23e2d6932236ce650eb276c6a6ee68",
+      "hash_definition": "SHA256 of sorted relative-path + NUL + file-SHA256 + newline records"
+    }
+  },
+  "alignment_review_correction": {
+    "status": "recorded_failed_pad_boundary_check",
+    "scene_camera_and_motion_payloads_changed": false,
+    "report": "audit/pad_boundary/pad_boundary.json",
+    "preparation_script_sha256": "6ddc9bd25ce54963c9efa039fd0f93af4fba1fb8645d6d9a1e5f938815410389",
+    "date": "2026-11-04",
+    "reason": "Independent actual USD silhouette checks failed against the measured outer pad/background boundary.",
+    "current_review_decisions_differ_from_original_publication": true,
+    "source_geometry_motion_camera_rays_and_images_unchanged": true,
+    "changed_existing_review_files": [
+      "recording.json",
+      "approach_readiness.json",
+      "approach_visual_review.json",
+      "validation.json",
+      "provenance.json",
+      "README.md"
+    ],
+    "historical_export_commit": "4a576a186965b4eaf4649ece73a2c928f82ca880",
+    "historical_files": [
+      "audit/pad_boundary/history/validation.json",
+      "audit/pad_boundary/history/approach_readiness.json",
+      "audit/pad_boundary/history/approach_visual_review.json"
+    ],
+    "historical_evidence_scope": "Original incision/cap-only publication decisions; superseded by the current failed outer-pad-boundary audit.",
+    "screening_report": "audit/pad_boundary/screening.json",
+    "metadata_review_script_sha256": "1add7ba0fd3e4020b0da6975cddf8ee165c35ac0d39f11f7263a827da5393a2e"
+  },
+  "usd_camera_authoring_correction": {
+    "report": "audit/usd_camera/correction.json",
+    "native_pad_check": "audit/pad_boundary/pad_boundary.json",
+    "native_coverage_check": "audit/pad_boundary/pad_coverage.json",
+    "alignment_acceptance_granted": false
+  }
+}

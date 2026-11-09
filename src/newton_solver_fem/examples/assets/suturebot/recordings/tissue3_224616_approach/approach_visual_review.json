@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "status": "corrected_existing_partial_replay_region3",
+  "status": "region_identity_corrected_refit_required",
   "sample_id": "tissue3_224616_approach",
   "accepted": false,
-  "ready_for_scoped_pose_replay": true,
+  "ready_for_scoped_pose_replay": false,
   "source_phase_inclusive": [
     4,
     106
@@ -153,13 +153,6 @@
       }
     }
   },
-  "visual_findings": {
-    "region_identity": "User corrected this recording to public region3; adjacent narrow slit12 in PSM1 supports the changed anatomy. Both source clicked labels now bind region3.",
-    "left_and_right": "Principal incision alignment improves under unchanged cameras/tools. Native region3 wavy banks now occupy the source wound; fine bank silhouettes and tool jaw shapes remain imperfect.",
-    "psm1": "Principal incision and neighboring slit12 are in the expected source neighborhood. The neighboring circle/pad boundary and tool silhouettes still differ visibly and are not validated.",
-    "psm2": "Main incision and both tool neighborhoods are retained under fixed camera/robot motion. Fine surrogate gripper and pad contours remain imperfect."
-  },
-  "review_basis": "Fresh actual USD/source overlays inspected after region3 yaw/translation correction; parent independently inspected frames4 and61. Original numerical thresholds and fit/reserved roles remain unchanged.",
   "absolute_metric_accuracy_validated": false,
   "full_camera_alignment_validated": false,
   "full_tool_and_pad_contours_validated": false,
@@ -183,12 +176,32 @@
     "audit/region3_preservation.json": "2ba45f10dc75060912406bc78825a5dd99c76d89e2cecd715e97f7562b6a2d37"
   },
   "limitations": [
+    "The whole recording is confirmed as region 1. The bundled region-3 pad placement and green marker bindings are superseded and need refitting; alignment is not validated.",
     "This corrects the existing partial approach replay; it does not certify complete camera alignment or create a fully aligned new example.",
     "Tool CAD silhouettes and PSM1 neighboring circle/pad boundary visibly differ from source; these contours are not validated.",
-    "The user identifies the wound as public region3. Original native local meshes and their canonical region mapping remain unchanged.",
     "Only the original source-defined approach frames4\u2013106 are replayed. Original later deformation frames, source arrays and residuals remain retained.",
     "Camera parameters, tool registration and absolute metric placement remain conditional estimates; no extra camera calibration exists.",
     "No needle model is included because its prior source-image initialization failed.",
     "Label mask reconstruction checks rendering and ray binding by construction; it is not an independent metric-calibration test."
-  ]
+  ],
+  "failure_reason": "The whole recording is confirmed as region 1. The bundled region-3 pad placement and green marker bindings are superseded and need refitting; alignment is not validated.",
+  "pad_boundary_report": "audit/pad_boundary/pad_boundary.json",
+  "pad_boundary_screening_passed": false,
+  "region_id": 1,
+  "point_label_bindings_valid": false,
+  "numeric_screen_passed": false,
+  "identity_correction_report": "audit/region_identity/user_region_correction.json",
+  "historical_metrics_scope": "Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
+  "historical_region3_visual_findings": {
+    "region_identity": "User corrected this recording to public region3; adjacent narrow slit12 in PSM1 supports the changed anatomy. Both source clicked labels now bind region3.",
+    "left_and_right": "Principal incision alignment improves under unchanged cameras/tools. Native region3 wavy banks now occupy the source wound; fine bank silhouettes and tool jaw shapes remain imperfect.",
+    "psm1": "Principal incision and neighboring slit12 are in the expected source neighborhood. The neighboring circle/pad boundary and tool silhouettes still differ visibly and are not validated.",
+    "psm2": "Main incision and both tool neighborhoods are retained under fixed camera/robot motion. Fine surrogate gripper and pad contours remain imperfect."
+  },
+  "visual_findings": {
+    "region_identity": "Entire recording is confirmed as Region01; A is tentatively Region02.",
+    "current_alignment": "The whole recording is confirmed as region 1. The bundled region-3 pad placement and green marker bindings are superseded and need refitting; alignment is not validated."
+  },
+  "historical_review_basis": "Fresh actual USD/source overlays inspected after region3 yaw/translation correction; parent independently inspected frames4 and61. Original numerical thresholds and fit/reserved roles remain unchanged.",
+  "review_basis": "User source-identity correction; no replacement geometric alignment accepted."
 }

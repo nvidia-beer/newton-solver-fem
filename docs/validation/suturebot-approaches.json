@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "validation_date": "2026-11-03",
-  "status": "published_scoped_pose_replays_with_estimated_calibration",
+  "status": "existing_pose_replays_with_known_fourth_pad_boundary_failure",
   "scope": "Two source-defined short approaches and one complete supported pickup interval; full source motion retained. The tissue3_222119 approach includes an estimated held rigid needle with backing-only collision; the other two omit the needle. Tissue interaction is not reconstructed. Scoped engineering checks are separate from calibration acceptance.",
   "calibration_accepted": false,
   "absolute_metric_accuracy_validated": false,
-  "region_identification": "Per-recording identity review; tissue session number does not identify the wound. The user corrected tissue3_224616_approach to public region3, superseding its earlier region1 assumption.",
+  "region_identification": "Per-recording source identity review. The user confirms the entire tissue3_224616_approach recording is region 1, superseding the region-3 interpretation. Feature A is tentatively region 2; it is not an exact measured landmark.",
   "samples": [
     {
       "sample_id": "tissue3_222119_approach",
@@ -999,23 +999,31 @@
         61
       ],
       "alignment": {
-        "status": "corrected_existing_partial_replay_region3",
+        "status": "region_identity_corrected_refit_required",
         "reportpath": "calibration.json",
         "tool_registration_report": "alignment.json",
         "absolute_metric_accuracy_validated": false,
         "automatic_fit_report": "automatic_fit_metrics.json",
         "wrist_fit_report": "frozen_wrist_fit.json",
-        "validation_status": "incision_and_cap_scope_checked_full_alignment_unaccepted",
+        "validation_status": "region_identity_corrected_refit_required",
         "pad_placement_report": "region3_fit.json",
-        "prior_metrics_scope": "Previous region1 placement and anatomical identity invalidated by explicit user correction",
+        "prior_metrics_scope": "Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
         "accepted": false,
-        "numeric_screen_passed": true,
+        "numeric_screen_passed": false,
         "screening_report": "alignment_screening.json",
         "visual_review_report": "approach_visual_review.json",
         "readiness_report": "approach_readiness.json",
-        "full_tool_and_pad_contours_validated": false
+        "full_tool_and_pad_contours_validated": false,
+        "failure_reason": "The whole recording is confirmed as region 1. The bundled region-3 pad placement and green marker bindings are superseded and need refitting; alignment is not validated.",
+        "pad_boundary_report": "audit/pad_boundary/pad_boundary.json",
+        "pad_boundary_screening_report": "audit/pad_boundary/screening.json",
+        "incision_and_caps_numeric_screen_passed": false,
+        "pad_coverage_report": "audit/pad_boundary/pad_coverage.json",
+        "pad_coverage_screen_passed": false,
+        "historical_incision_and_caps_numeric_screen_passed": true,
+        "identity_correction_report": "audit/region_identity/user_region_correction.json"
       },
-      "numeric_screen_passed": true,
+      "numeric_screen_passed": false,
       "checks": [
         {
           "name": "psm1_fit_stereo_frames",
@@ -1272,12 +1280,6 @@
           "max_px": 8.75143380487441
         }
       },
-      "visual_findings": {
-        "region_identity": "User corrected this recording to public region3; adjacent narrow slit12 in PSM1 supports the changed anatomy. Both source clicked labels now bind region3.",
-        "left_and_right": "Principal incision alignment improves under unchanged cameras/tools. Native region3 wavy banks now occupy the source wound; fine bank silhouettes and tool jaw shapes remain imperfect.",
-        "psm1": "Principal incision and neighboring slit12 are in the expected source neighborhood. The neighboring circle/pad boundary and tool silhouettes still differ visibly and are not validated.",
-        "psm2": "Main incision and both tool neighborhoods are retained under fixed camera/robot motion. Fine surrogate gripper and pad contours remain imperfect."
-      },
       "estimated_pad_bottom_above_fixture_table_mm": 17.816564250669376,
       "needle_present": false,
       "uv": {
@@ -1299,33 +1301,39 @@
         "scope": "Actual imported USD texture render at the annotation frame; by-construction source-ray binding and native-mask reproduction, not optical ground truth.",
         "report": "MSc/SutureBot-workbench/outputs/simulation/review_224616_region3_fix/candidate/audit/green_uv_render.json",
         "report_sha256": "7dcddbef523ccf84f8c186c6f2b38469a03d2498bae6a7d45926add58955a022",
-        "image_sha256": "074f605ac1818e7920431bf0e478f5c2896871af4c863c5388144b7983104970"
+        "image_sha256": "074f605ac1818e7920431bf0e478f5c2896871af4c863c5388144b7983104970",
+        "binding_valid": false,
+        "historical_only": true
       },
       "bundle_artifact_sha256": {
-        "alignment_screening.json": "6725940bdcebadbd52ca37049f1332ec8e8b0f42d0f93a5fbe62c594de5ff897",
-        "approach_readiness.json": "d30bef32c7b3d142f5c78bb9327304e46fa9be8570e2c2b2f6bebe8d90245d51",
-        "approach_visual_review.json": "3e46ee5b9c8e6cbead811b7afde09e2525263e3511d5e102e35da99093f0e467",
+        "alignment_screening.json": "d9418287b8ed7b783ea8bb44267ad0b288e5bc55d59f54a92f6561e3d1283700",
+        "approach_readiness.json": "c40329f53fcccda580a39fb6dcbf064f228ee7782a7b2ee59552ceb5476c18d2",
+        "approach_visual_review.json": "52b34ec1d077508949dc261433e47b550e45463268cf8991834273aa8137ac06",
         "audit/region3_preservation.json": "2ba45f10dc75060912406bc78825a5dd99c76d89e2cecd715e97f7562b6a2d37",
         "audit/region3_review/render_validation.json": "f4b6898de720c2353ebca7d0189d2f73df0fe9c5b368f2216a2c27d6dfa1e10a",
         "calibration.json": "4526a3874a45980d0451e1d937015338920b989a2d98c1b4a74200e251acb236",
         "camera_poses.npz": "5c6bcb83466b70837d8a7d6de621bd4ad9041b1c35a4b0d69f8490da30998adb",
-        "frozen_pad_fit.json": "fe55a4310d3d6a19b66d3e69fe17e31bb1c690091f99933d3c1b59f3d68d4227",
+        "frozen_pad_fit.json": "091001b581e33bd6f814b28ba96ee7020cc6445c9c8a586b97a6da1dcd4688c5",
         "motion.npz": "c2d51121053594d7e589d98147ac8e12432203934373c229fb4737df7a960314",
         "native_region3_fit_curves.npz": "c4ccea77a30dc9daa6af31a03fece3008c970214f560e23a76d7d5a14a2ae858",
-        "pad_placement.json": "9d44964690f4a932d40f41beca33b5cb4d23cb4cd1206fd9068c2f04e82c45e9",
+        "pad_placement.json": "9cdd69fb67e22c53ec7fb7a6a43da7e3b6b9017745f668423ec228014e75a79b",
         "phantom.usdc": "ceacac33fe2b857cc8293a0a8c5068f8837ba0980ea41797431db1fb278b1c68",
-        "point_labels.json": "c1fc3950a2c3ab3e8a335d28a8f6c7d483f47504a4998b876eff813ea239cef1",
-        "recording.json": "2b64b956acf8eddaef4f4c4370d7ee6b2b2255a6b96382016a07fc5ea48ec7f1",
-        "region_identification.json": "2d29a641d71aecf62c5690983569e4ff03b15f3a75d31f204e2d740d7aaa858a",
-        "region_review.json": "cd48c233e81281a2f939803efa13bed1da145f62780e367f20cb1ed515493749",
-        "region_user_review.json": "cd48c233e81281a2f939803efa13bed1da145f62780e367f20cb1ed515493749",
-        "rig.usdc": "662279749d74f02f209ef9e4ff13c17be7082f8394687ffa80c5f40dba0a8b92",
+        "point_labels.json": "c26e8b9a52ab7a86697c5bf647000969ee026988384b146e3b5b330854a6a494",
+        "recording.json": "4551ee4da906354b9dd5a1ccb05f2e156474a4a9e5377ec6c56d0bf3c5c970e6",
+        "region_identification.json": "b1e20d47c94289ebe9652dff439e9ace5c797a5242344cfc5692b3c1ffad6b49",
+        "region_review.json": "d23a64d154af43a34a4b5c45dbeb9631fdc5c8226010cd72aefca2542881c23d",
+        "region_user_review.json": "d23a64d154af43a34a4b5c45dbeb9631fdc5c8226010cd72aefca2542881c23d",
+        "rig.usdc": "00630b74baf365bef58fd2e684a66045cc0a59e557fa32cb04693f2305d9951c",
         "scene.usda": "e30ce457207a0ea76579d2e357be8d9f6ee79cfac5fdfd834c604d5581d98f71",
         "source_phases.json": "8336faa311506d15a370d223f2552631e70ff331c5c6390fe284361c646a21a5",
         "textures/point_labels.png": "a44ce6e5baf98bdbb6f1393b50f58953f805d76bae40bcd781218f86de7077ce",
-        "validation.json": "26089686ee339c3a649c553a2e61c3cc105a267b0d99f321e0109927e9881d93"
+        "validation.json": "5b2d2fd4a5823b6653145ab602e94b3a8afd5299b2ad5d26f53f3bdba7ce1162",
+        "provenance.json": "55bfa5f661e9cd35f2d0d6ac50049f7737781c9f2beb27f2b9d3fddd8e2cd7a1",
+        "audit/usd_camera/correction.json": "7553a9c1ad147504314eb409426758fadb14cc17b828929ed90689be1e50a44d",
+        "audit/pad_boundary/pad_boundary.json": "8dd1c3bab39536271ed7d3a1b75597c5deb1edcfd874ea9edaa67cc9f297ce43",
+        "audit/pad_boundary/pad_coverage.json": "9dc61951fbf907e0a8cae5aa030c0317e72557cca6439cf5e1b949ba245b1c20"
       },
-      "geometry_preservation": "All12 original native local regional vertex/reference-point/face arrays preserved. One constant pad yaw/translation about fixture normal changes placement; camera/tool motion and rig USD remain byte-identical. Original clicked pixels rebound onto corrected region3, without per-frame relabeling.",
+      "geometry_preservation": "All12 original native local regional vertex/reference-point/face arrays preserved. Existing constant pad placement retained. Camera/tool motion, JSON K/D, inverse rays and source images remain unchanged. Only8 standard USD camera aperture-offset attributes are corrected; see usd_camera_authoring_correction. Original clicked pixels and region3 bindings are unchanged. Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
       "portable_actual_render": {
         "result": "passed",
         "device": "cuda:0",
@@ -1454,9 +1462,9 @@
         "current_region3_bundle_covered": false,
         "scope": "Previous region1-assumed geometry and wheel evidence; not validation of the corrected region3 bundle."
       },
-      "region_id": 3,
-      "identity_source": "Explicit user correction",
-      "scope": "Correction of the existing partial approach replay. Scoped incision/cap checks pass; complete camera/tool/pad-contour alignment remains unaccepted.",
+      "region_id": 1,
+      "identity_source": "Explicit user correction confirmed for the entire recording",
+      "scope": "Region-1 source identity confirmed; historical region-3 replay retained for inspection pending placement and label refitting.",
       "full_camera_alignment_validated": false,
       "full_tool_and_pad_contours_validated": false,
       "pad_T_world_from_native": [
@@ -1489,27 +1497,165 @@
         3,
         3
       ],
-      "native_usd_source_region_id": 5,
       "publication_image_gate": {
-        "passed": true,
-        "scope": "source_defined_four_camera_image_alignment",
+        "passed": false,
+        "scope": "visible_outer_pad_boundary",
         "frames_inclusive": [
           4,
           106
         ],
-        "numerical_checks": 28,
-        "reviewed_reserved_frames": [
-          27,
-          61
-        ],
-        "absolute_calibration_acceptance_granted": false,
-        "screening_report": "alignment_screening.json",
-        "visual_review_report": "approach_visual_review.json",
-        "readiness_report": "approach_readiness.json",
-        "region_id": 3,
+        "pad_boundary_report": "audit/pad_boundary/pad_boundary.json",
+        "pad_boundary_screen": {
+          "passed": false,
+          "scope": "visible_outer_pad_boundary",
+          "checks": [
+            {
+              "name": "visible_pad_boundary_cameras",
+              "value": 2,
+              "limit": 1,
+              "comparison": "minimum",
+              "passed": true
+            },
+            {
+              "name": "psm1_reserved_pad_boundary_frames",
+              "value": 2,
+              "limit": 2,
+              "comparison": "minimum",
+              "passed": true
+            },
+            {
+              "name": "psm1_reserved_pad_boundary_rms_px",
+              "value": 193.9379587046173,
+              "limit": 12.0,
+              "comparison": "maximum",
+              "passed": false
+            },
+            {
+              "name": "psm1_reserved_pad_boundary_max_px",
+              "value": 349.4481506347656,
+              "limit": 30.0,
+              "comparison": "maximum",
+              "passed": false
+            },
+            {
+              "name": "psm1_27_reserved_pad_side_recall",
+              "value": 1.0,
+              "limit": 0.8,
+              "comparison": "minimum",
+              "passed": true
+            },
+            {
+              "name": "psm1_27_reserved_background_side_recall",
+              "value": 0.03882460414129111,
+              "limit": 0.8,
+              "comparison": "minimum",
+              "passed": false
+            },
+            {
+              "name": "psm1_61_reserved_pad_side_recall",
+              "value": 1.0,
+              "limit": 0.8,
+              "comparison": "minimum",
+              "passed": true
+            },
+            {
+              "name": "psm1_61_reserved_background_side_recall",
+              "value": 0.0,
+              "limit": 0.8,
+              "comparison": "minimum",
+              "passed": false
+            },
+            {
+              "name": "psm2_reserved_pad_boundary_frames",
+              "value": 2,
+              "limit": 2,
+              "comparison": "minimum",
+              "passed": true
+            },
+            {
+              "name": "psm2_reserved_pad_boundary_rms_px",
+              "value": 159.86181516888453,
+              "limit": 12.0,
+              "comparison": "maximum",
+              "passed": false
+            },
+            {
+              "name": "psm2_reserved_pad_boundary_max_px",
+              "value": 259.3067626953125,
+              "limit": 30.0,
+              "comparison": "maximum",
+              "passed": false
+            },
+            {
+              "name": "psm2_27_reserved_pad_side_recall",
+              "value": 1.0,
+              "limit": 0.8,
+              "comparison": "minimum",
+              "passed": true
+            },
+            {
+              "name": "psm2_27_reserved_background_side_recall",
+              "value": 0.0,
+              "limit": 0.8,
+              "comparison": "minimum",
+              "passed": false
+            },
+            {
+              "name": "psm2_61_reserved_pad_side_recall",
+              "value": 1.0,
+              "limit": 0.8,
+              "comparison": "minimum",
+              "passed": true
+            },
+            {
+              "name": "psm2_61_reserved_background_side_recall",
+              "value": 0.0,
+              "limit": 0.8,
+              "comparison": "minimum",
+              "passed": false
+            }
+          ],
+          "failed_checks": [
+            "psm1_reserved_pad_boundary_rms_px",
+            "psm1_reserved_pad_boundary_max_px",
+            "psm1_27_reserved_background_side_recall",
+            "psm1_61_reserved_background_side_recall",
+            "psm2_reserved_pad_boundary_rms_px",
+            "psm2_reserved_pad_boundary_max_px",
+            "psm2_27_reserved_background_side_recall",
+            "psm2_61_reserved_background_side_recall"
+          ],
+          "reserved_metrics": {
+            "psm1": {
+              "frames": [
+                27,
+                61
+              ],
+              "count": 29,
+              "rms_px": 193.9379587046173,
+              "max_px": 349.4481506347656
+            },
+            "psm2": {
+              "frames": [
+                27,
+                61
+              ],
+              "count": 30,
+              "rms_px": 159.86181516888453,
+              "max_px": 259.3067626953125
+            }
+          },
+          "unobserved_cameras": [
+            "left",
+            "right"
+          ],
+          "background_alignment_validated": false,
+          "full_pad_contour_validated": false
+        },
+        "reason": "The pad rectangle and background boundary do not align with the wrist videos; this recording needs recalibration.",
+        "previous_gate_was_incision_and_cap_only": true,
         "report": "src/newton_solver_fem/examples/assets/suturebot/recordings/tissue3_224616_approach/validation.json",
-        "report_sha256": "26089686ee339c3a649c553a2e61c3cc105a267b0d99f321e0109927e9881d93",
-        "scope_limit": "Existing partial-replay correction; required incision/cap evidence and actual four-view review do not validate full contours or absolute calibration."
+        "report_sha256": "5b2d2fd4a5823b6653145ab602e94b3a8afd5299b2ad5d26f53f3bdba7ce1162"
       },
       "correction_audits": {
         "audit/coordinate_validation.json": {
@@ -1526,14 +1672,71 @@
         }
       },
       "limitations": [
+        "The whole recording is confirmed as region 1. The bundled region-3 pad placement and green marker bindings are superseded and need refitting; alignment is not validated.",
         "This corrects the existing partial approach replay; it does not certify complete camera alignment or create a fully aligned new example.",
         "Tool CAD silhouettes and PSM1 neighboring circle/pad boundary visibly differ from source; these contours are not validated.",
-        "The user identifies the wound as public region3. Original native local meshes and their canonical region mapping remain unchanged.",
         "Only the original source-defined approach frames4\u2013106 are replayed. Original later deformation frames, source arrays and residuals remain retained.",
         "Camera parameters, tool registration and absolute metric placement remain conditional estimates; no extra camera calibration exists.",
         "No needle model is included because its prior source-image initialization failed.",
         "Label mask reconstruction checks rendering and ray binding by construction; it is not an independent metric-calibration test."
-      ]
+      ],
+      "incision_and_caps_numeric_screen_passed": false,
+      "pad_boundary_review": "src/newton_solver_fem/examples/assets/suturebot/recordings/tissue3_224616_approach/audit/pad_boundary/pad_boundary_review.jpg",
+      "alignment_review_date": "2026-11-04",
+      "metadata_review_correction": {
+        "date": "2026-11-04",
+        "reason": "Independent actual USD silhouette checks failed against the measured outer pad/background boundary.",
+        "current_review_decisions_differ_from_original_publication": true,
+        "source_geometry_motion_camera_rays_and_images_unchanged": true,
+        "changed_existing_review_files": [
+          "recording.json",
+          "approach_readiness.json",
+          "approach_visual_review.json",
+          "validation.json",
+          "provenance.json",
+          "README.md"
+        ],
+        "historical_export_commit": "4a576a186965b4eaf4649ece73a2c928f82ca880",
+        "historical_files": [
+          "audit/pad_boundary/history/validation.json",
+          "audit/pad_boundary/history/approach_readiness.json",
+          "audit/pad_boundary/history/approach_visual_review.json"
+        ],
+        "historical_evidence_scope": "Original incision/cap-only publication decisions; superseded by the current failed outer-pad-boundary audit.",
+        "report": "audit/pad_boundary/pad_boundary.json",
+        "screening_report": "audit/pad_boundary/screening.json",
+        "metadata_review_script_sha256": "1add7ba0fd3e4020b0da6975cddf8ee165c35ac0d39f11f7263a827da5393a2e"
+      },
+      "usd_camera_authoring_correction": {
+        "report": "src/newton_solver_fem/examples/assets/suturebot/recordings/tissue3_224616_approach/audit/usd_camera/correction.json",
+        "native_pad_check": "audit/pad_boundary/pad_boundary.json",
+        "native_coverage_check": "audit/pad_boundary/pad_coverage.json",
+        "alignment_acceptance_granted": false,
+        "report_sha256": "7553a9c1ad147504314eb409426758fadb14cc17b828929ed90689be1e50a44d",
+        "native_json_ray_masks_identical": true,
+        "pad_alignment_remains_failed": true
+      },
+      "region_identity_correction": {
+        "report": "audit/region_identity/user_region_correction.json",
+        "confirmed_region_id": 1,
+        "point_label_bindings_valid": false,
+        "alignment_accepted": false,
+        "geometry_motion_rays_images_changed": false
+      },
+      "historical_metrics_scope": "Historical region-3 placement and ray bindings. Source anatomy is now confirmed as Region01. These numerical results do not validate a region-1 placement.",
+      "historical_region3_visual_findings": {
+        "region_identity": "User corrected this recording to public region3; adjacent narrow slit12 in PSM1 supports the changed anatomy. Both source clicked labels now bind region3.",
+        "left_and_right": "Principal incision alignment improves under unchanged cameras/tools. Native region3 wavy banks now occupy the source wound; fine bank silhouettes and tool jaw shapes remain imperfect.",
+        "psm1": "Principal incision and neighboring slit12 are in the expected source neighborhood. The neighboring circle/pad boundary and tool silhouettes still differ visibly and are not validated.",
+        "psm2": "Main incision and both tool neighborhoods are retained under fixed camera/robot motion. Fine surrogate gripper and pad contours remain imperfect."
+      },
+      "visual_findings": {
+        "region_identity": "Entire recording is confirmed as Region01; A is tentatively Region02.",
+        "current_alignment": "The whole recording is confirmed as region 1. The bundled region-3 pad placement and green marker bindings are superseded and need refitting; alignment is not validated."
+      },
+      "point_label_bindings_valid": false,
+      "historical_native_usd_source_region_id": 5,
+      "expected_canonical_mesh_prim": "Region01"
     },
     {
       "sample_id": "tissue3_215248_pickup",
@@ -1936,7 +2139,7 @@
     "unchanged_artifacts_per_sample": 9,
     "historical_only": true,
     "current_region3_bundle_covered": false,
-    "scope": "Earlier region1-assumed batch cache audit; region3 now requires the explicit correction fit and cannot reuse the wound1-only production pipeline."
+    "scope": "Earlier region-1 batch cache audit; historical only. Corrected source identity is region 1, but fresh geometric fitting and validation are required before publishing a replacement."
   },
   "tests": {
     "preparation_recording_suite": {
@@ -2064,7 +2267,7 @@
     "Normal playback is restricted to source-defined pre-deformation approach frames; full recovery dynamics are not validated.",
     "PSM2 surrogate CAD and jaw/head/groove-bank differences remain visible; image thresholds do not imply pixel-exact agreement.",
     "Point-mask reconstruction is a by-construction UV/ray binding test, not independent calibration accuracy.",
-    "The tissue3_222119 approach includes an estimated rigid needle checked against source pixels and runtime/backing constraints over frames 5-141; full scene alignment remains unaccepted. The corrected region 3 approach and pickup omit the needle."
+    "The tissue3_222119 approach includes an estimated rigid needle checked against source pixels and runtime/backing constraints over frames 5-141; full scene alignment remains unaccepted. The 224616 region-1 approach and pickup omit the needle; 224616 retains a superseded region-3 placement pending refitting."
   ],
   "preparation_configurations": [
     "MSc/SutureBot-workbench/config/recording_batch/newton_approach_examples.json",
@@ -2134,11 +2337,11 @@
     },
     "historical_only": true,
     "current_region3_bundle_covered": false,
-    "scope": "Previous aggregate publication report predates region3 correction. See the fourth sample publication_image_gate for its fresh current evidence."
+    "scope": "Historical incision/cap-only aggregate; superseded for recording4 by independent failed pad-boundary check."
   },
   "source_region_by_sample": {
     "tissue3_222119_approach": 1,
-    "tissue3_224616_approach": 3,
+    "tissue3_224616_approach": 1,
     "tissue3_215248_pickup": 1
   }
 }
