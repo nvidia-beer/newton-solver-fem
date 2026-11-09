@@ -37,7 +37,9 @@ class Recording:
             path = bundled_recordings().get(str(path), path)
         self.path = path.resolve()
         if not self.path.is_file():
-            raise FileNotFoundError(f"Missing prepared recording: {self.path}. See docs/usage.md for preparation.")
+            raise FileNotFoundError(
+                f"Missing prepared recording: {self.path}. See docs/suturebot-recording.md for preparation."
+            )
         self.root = self.path.parent
         self.manifest = json.loads(self.path.read_text())
         if self.manifest.get("schema_version") != 1:
