@@ -58,7 +58,7 @@ def make_readme(root=ROOT, *, require_videos=False):
         f"Installed runtime packages: {dependencies}. "
         "No sibling solver package or external source checkout is required. "
         "The `examples` extra supplies the viewer and any USD/robot dependencies; "
-        "`uv.lock` fixes their versions. Example-specific data requirements are listed below.\n",
+        "`uv.lock` fixes their versions.\n",
     ]
     if (root / "nsys" / "profile_examples.py").is_file():
         text.extend(
@@ -75,9 +75,6 @@ def make_readme(root=ROOT, *, require_videos=False):
                 "Ordinary runs have no profiling instrumentation; captured timings include profiler overhead.\n",
             ]
         )
-    usage = root / "docs" / "usage.md"
-    if usage.exists():
-        text.append(document_text(usage, root) + "\n")
     method = root / "docs" / "method.md"
     if not method.exists():
         raise ValueError("docs/method.md must explain the implemented method and cite its papers")
@@ -89,9 +86,12 @@ def make_readme(root=ROOT, *, require_videos=False):
         [
             "## Examples\n",
             "One demonstration clip per example. Click a preview to open its MP4. "
-            "Videos show simulated motion rendered offline; playback rate is not a performance measurement.\n",
+            "Videos show simulations and recorded-motion replays rendered offline; "
+            "playback rate is not a performance measurement.\n",
         ]
     )
+    if (root / "docs" / "usage.md").is_file():
+        text.append("See the [example guide](docs/usage.md) for controls, prerequisites and detailed setup.\n")
     cells = []
     for example, (description, _, module) in examples.items():
         media = root / "docs" / "media"

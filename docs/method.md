@@ -94,20 +94,3 @@ $\sum_n(|\bar v_y|+|\bar v_z|-\bar v_x)$ with arithmetic mean vertex velocity.
 Frame checkpoints recompute substeps during backward; display runs fresh
 inference. Material parameters stay fixed. See [validation](validation.md)
 for gradient checks, measured performance and reproducible commands.
-
-## Phantom region geometry
-
-The phantom retains its original USD payload identities and native coordinates.
-Only the original connected volume containing wound 5 is partitioned into
-three domains: region 5 contains the slit/oval and its thin upper rim, region 8
-retains the remainder including the lower-left tail, and region 12 contains
-the upper slit between wounds 3 and 4.
-The other nine original region payloads are unchanged. This preparation assigns
-existing tetrahedra to three groups; it adds no nodes, changes no reference
-positions and makes no physical cut. The example presents one numbering scheme
-throughout: dataset wounds 1–6 and remaining pad regions 7–12.
-In `fem_phantom_regions`, selecting the smaller domain reduces the active FEM
-system. Its interface
-against inactive tissue is clamped, so it is a local deformation approximation
-rather than a simulation of the entire freely deforming pad. The 2D map retains
-its original orientation; only the 3D viewing camera faces the lettering edge.
