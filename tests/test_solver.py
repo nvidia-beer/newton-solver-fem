@@ -136,6 +136,52 @@ class TestFEM(unittest.TestCase):
     def test_public_solver_names_are_one_backend(self):
         self.assertIs(SolverFEM, SolverLinearFEM)
 
+    def test_fast_linear_tolerance_validation_and_original_default(self):
+        model = cube()
+        for tolerance in (0.0, -1e-5, np.nan, np.inf):
+            with self.subTest(tolerance=tolerance):
+                with self.assertRaisesRegex(ValueError, "finite and positive"):
+                    make_solver(model, differentiable=False, linear_solver_tolerance=tolerance)
+        implicit_default = make_solver(model, differentiable=False)
+        explicit_default = make_solver(model, differentiable=False, linear_solver_tolerance=1e-2)
+        self.assertEqual(implicit_default.linear_solver_tolerance, 1e-2)
+        external = wp.array(
+            np.random.default_rng(13).normal(0, 0.03, (model.particle_count, 3)).astype(np.float32),
+            dtype=wp.vec3,
+            device=DEVICE,
+        )
+        results = []
+        for solver in (implicit_default, explicit_default):
+            initial, output = model.state(), model.state()
+            solver.step(initial, output, None, None, DT, external_forces=external)
+            results.append(output.particle_qd.numpy())
+        np.testing.assert_allclose(results[0], results[1], rtol=1e-6, atol=1e-9)
+
+    def test_fast_linear_tolerance_change_refreshes_cached_solve(self):
+        model = cube()
+        solver = make_solver(model, differentiable=False)
+        solver.linear_solver_check_every = 1
+        external = wp.array(
+            np.random.default_rng(13).normal(0, 0.03, (model.particle_count, 3)).astype(np.float32),
+            dtype=wp.vec3,
+            device=DEVICE,
+        )
+        residuals, iterations = [], []
+        for tolerance in (1e-2, 1e-5, 1e-2):
+            solver.linear_solver_tolerance = tolerance
+            solver.velocity_increment.zero_()
+            initial, output = model.state(), model.state()
+            solver.step(initial, output, None, None, DT, external_forces=external)
+            rhs = initial.particle_f.numpy().ravel()
+            residual = dense(solver.A_bsr) @ solver.velocity_increment.numpy().ravel() - rhs
+            residuals.append(np.linalg.norm(residual) / np.linalg.norm(rhs))
+            iterations.append(solver.last_cg_iters)
+        self.assertLess(residuals[1], 2e-5)
+        self.assertLess(residuals[1], 0.01 * residuals[0])
+        self.assertGreater(iterations[1], iterations[0])
+        self.assertEqual(iterations[0], iterations[2])
+        np.testing.assert_allclose(residuals[0], residuals[2], rtol=1e-5)
+
     def test_forward_is_independent_of_interleaved_large_adjoint_solves(self):
         model = cube()
         solver = make_solver(model)

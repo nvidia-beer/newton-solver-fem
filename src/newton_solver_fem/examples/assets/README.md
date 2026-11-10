@@ -8,3 +8,5 @@ These assets retain the Newton Developers' Apache-2.0 attribution.
 `tet_grid`, `hex_grid`, and `tet_cantilever` are static numerical-test fixtures.
 Materials are assigned by simulation code. Only interactive cutting changes
 mesh topology during simulation; no asset generator runs at startup.
+
+This package bundles only the generic FEM showcase and numerical-test meshes.

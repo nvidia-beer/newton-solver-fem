@@ -4,7 +4,8 @@
 
 import numpy as np
 import warp as wp
-from warp.optim.linear import LinearOperator
+from warp.optim.linear import LinearOperator, aslinearoperator
+from warp.sparse import bsr_copy
 
 
 @wp.kernel(enable_backward=False)
@@ -52,6 +53,26 @@ def _projected_matvec(
     z[row] = result
 
 
+@wp.kernel(enable_backward=False)
+def _project_values(
+    fixed: wp.array[int],
+    offsets: wp.array[int],
+    columns: wp.array[int],
+    values: wp.array[wp.mat33],
+    projected: wp.array[wp.mat33],
+):
+    row = wp.tid()
+    for block in range(offsets[row], offsets[row + 1]):
+        column = columns[block]
+        value = wp.mat33(0.0)
+        if fixed[row] != 0:
+            if row == column:
+                value = wp.identity(n=3, dtype=float)
+        elif fixed[column] == 0:
+            value = values[block]
+        projected[block] = value
+
+
 class FixedParticles:
     """Solve (P A P + I-P) dv = P b, retaining A for the elastic predictor.
 
@@ -77,6 +98,55 @@ class FixedParticles:
             )
 
         self.operator = LinearOperator((model.particle_count, model.particle_count), wp.vec3, self.device, matvec)
+        self._masked_operator = self.operator
+        self._projected = None
+        self._projected_key = None
+
+    def prepare(self, matrix):
+        """Refresh the derived operator once per solve; retain the predictor's A."""
+        if not self.device.is_cuda:
+            return False
+        key = (
+            matrix.nrow,
+            matrix.ncol,
+            matrix.nnz,
+            matrix.offsets.ptr,
+            matrix.columns.ptr,
+            matrix.values.ptr,
+            matrix.values.shape,
+            None if matrix.row_counts is None else matrix.row_counts.ptr,
+        )
+        changed = key != self._projected_key
+        if changed:
+            if self.device.is_capturing:
+                raise RuntimeError("Prepare the fixed-particle operator before CUDA graph capture")
+            # A diagonal is needed to represent the constrained identity using
+            # the same sparse structure. Unusual empty rows retain the old path.
+            offsets, columns = matrix.offsets.numpy(), matrix.columns.numpy()
+            indices = self.indices.numpy()
+            supported = matrix.row_counts is None and all(
+                np.any(columns[offsets[row] : offsets[row + 1]] == row) for row in indices
+            )
+            self._projected = bsr_copy(matrix, structure_only=True) if supported else None
+            if self._projected is not None:
+                # Retain source capacity for in-place topology updates.
+                self._projected.values = wp.empty_like(matrix.values)
+                # Share topology so in-place connectivity changes remain visible.
+                self._projected.offsets = matrix.offsets
+                self._projected.columns = matrix.columns
+                self._projected.nnz_sync()
+                self.operator = aslinearoperator(self._projected)
+            else:
+                self.operator = self._masked_operator
+            self._projected_key = key
+        if self._projected is not None:
+            wp.launch(
+                _project_values,
+                matrix.nrow,
+                [self.mask, matrix.offsets, matrix.columns, matrix.values, self._projected.values],
+                device=self.device,
+            )
+        return changed
 
     def restore(self, state):
         wp.launch(

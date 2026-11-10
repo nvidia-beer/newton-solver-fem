@@ -183,10 +183,10 @@ def run_frames(
     with nvtx.annotate("final_device_sync", domain=DOMAIN):
         synchronize()
     elapsed = time.perf_counter() - start
+    result["loop_wall_seconds"] = elapsed
     with nvtx.annotate("test_final", domain=DOMAIN):
         if final_test and args.test and hasattr(example, "test_final"):
             example.test_final()
-    result["loop_wall_seconds"] = elapsed
     return result
 
 

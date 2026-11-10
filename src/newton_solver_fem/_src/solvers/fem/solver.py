@@ -66,7 +66,7 @@ import numpy as np
 import warp as wp
 from newton import Contacts, Control, Model, ParticleFlags, State
 from newton.solvers import SolverBase
-from warp.optim.linear import LinearOperator, bicgstab, cg, cr, gmres, preconditioner
+from warp.optim.linear import LinearOperator, aslinearoperator, bicgstab, cg, cr, gmres, preconditioner
 from warp.sparse import bsr_set_from_triplets, bsr_zeros
 
 from . import differentiation
@@ -152,6 +152,13 @@ class SolverFEM(SolverBase):
         solver_type: Iterative solver — ``"cg"``, ``"bicgstab"``,
             ``"gmres"``, or ``"cr"``.
         linear_solver_maxiter: Maximum solver iterations per substep.
+        linear_solver_tolerance: Relative residual tolerance for the fast-path
+            linear solve. The differentiable path retains its checked solve.
+        linear_solver_use_cuda_graph: Allow device-side early exit at the same
+            residual tolerance on CUDA devices supporting conditional graphs.
+            Disabling this keeps the fixed-budget, graph-capturable solve.
+            CPU, unsupported devices and host residual checks retain their
+            existing paths. Does not affect the differentiable solve.
         min_stretch: Lower element principal-stretch clamp (dimensionless).
             Pass a negative value to disable.
         max_stretch: Upper element principal-stretch clamp (dimensionless).
@@ -228,7 +235,12 @@ class SolverFEM(SolverBase):
         defer_differentiation_checks: bool = False,
         tet_volume_weights: wp.array | None = None,
         fixed_particle_indices=None,
+        linear_solver_tolerance: float = 1.0e-2,
+        linear_solver_use_cuda_graph: bool = True,
     ):
+        if not math.isfinite(linear_solver_tolerance) or linear_solver_tolerance <= 0:
+            raise ValueError("linear_solver_tolerance must be finite and positive")
+        self.linear_solver_tolerance = float(linear_solver_tolerance)
         fixed_indices = np.asarray([] if fixed_particle_indices is None else fixed_particle_indices)
         if fixed_indices.ndim != 1 or (fixed_indices.size and fixed_indices.dtype.kind not in "iu"):
             raise ValueError("fixed_particle_indices must be a one-dimensional integer sequence")
@@ -259,10 +271,10 @@ class SolverFEM(SolverBase):
         self.preconditioner_type = preconditioner_type
         self.solver_type = solver_type
         self.linear_solver_maxiter = linear_solver_maxiter
-        # 0 = device-side fixed iteration count (CUDA-graph capturable, always
-        # runs `linear_solver_maxiter` iterations).  >0 = host-side residual
-        # checks with early exit, but NOT graph-capturable.  Use >0 only to
-        # diagnose how many iterations the solve actually needs.
+        self.linear_solver_use_cuda_graph = bool(linear_solver_use_cuda_graph)
+        # 0 = graph-capturable, with device-side early exit when conditional
+        # graphs are enabled and supported; otherwise runs the full budget.
+        # >0 = host-side residual checks, which are not graph-capturable.
         self.linear_solver_check_every = 0
         self.last_cg_iters: int | None = None
         self.min_stretch = float(min_stretch)
@@ -467,6 +479,25 @@ class SolverFEM(SolverBase):
     def velocity_increment(self):
         """Persistent solved velocity increment, also used for capture snapshots."""
         return self.dv
+
+    def prepare_step(self, state_in, control, contacts, dt, *, external_forces=None):
+        """Prepare reusable affine mechanics without integrating physical state.
+
+        Returns a persistent :class:`PreparedFEMStep` with the constrained
+        momentum operator, preconditioner, base impulse and graph-safe trial
+        reconstruction. The caller owns tangent refresh and must reprepare for
+        every new accepted state, control, contact set or matrix revision.
+        Only the ordinary non-differentiable assembled path is supported;
+        :meth:`step` and its differentiation contract are unchanged.
+        """
+        from .prepared_step import PreparedFEMStep
+
+        PreparedFEMStep.check_supported(self)
+        if self.model.device.is_capturing:
+            raise RuntimeError("Prepare FEM mechanics before CUDA graph capture")
+        if not hasattr(self, "_prepared_step"):
+            self._prepared_step = PreparedFEMStep(self)
+        return self._prepared_step.prepare(state_in, control, contacts, dt, external_forces)
 
     def refresh_preconditioner(self):
         """Refresh the existing inverse blocks without invalidating CUDA graphs."""
@@ -745,31 +776,50 @@ class SolverFEM(SolverBase):
         capacities. Construct a new solver if capacities or array storage change;
         captured graphs remain tied to the original model arrays.
 
-        Only tetrahedral and hexahedral stiffness is refreshed. Spring and
-        triangle blocks retain their construction values. Surface-contact BVHs
-        must still be refitted outside capture by the caller.
+        At unchanged timestep, only tetrahedral and hexahedral stiffness is
+        refreshed. A changed timestep also rebuilds the mass, spring and
+        triangle blocks. This is supported only for non-differentiable,
+        non-streaming solvers outside tapes and capture. Recapture any caller-
+        owned step graphs, whose kernel arguments retain the previous timestep.
+        The velocity-increment warm start is cleared when the timestep changes.
+        Surface-contact BVHs must still be refitted outside capture by the caller.
 
         Args:
             particle_q: Current particle positions [m], shape (particle_count,).
-            dt: Substep duration [s]. Must equal the construction timestep;
-                defaults to that timestep.
+            dt: Positive substep duration [s], defaulting to the currently
+                assembled timestep. Use the same timestep for subsequent steps.
         """
-        self._invalidate_differentiation()
         dt = self.dt if dt is None else float(dt)
-        if dt != self.dt:
-            raise ValueError("refresh_tangent requires the solver's construction timestep")
+        if not math.isfinite(dt) or dt <= 0:
+            raise ValueError("refresh_tangent dt must be finite and positive")
         model = self.model
+        changed_dt = dt != self.dt
+        capturing = model.device.is_capturing
+        if changed_dt:
+            if self.differentiable:
+                raise ValueError("Differentiable tangent refresh requires the construction timestep")
+            if differentiation.active_tape() is not None or capturing:
+                raise RuntimeError("Change the tangent timestep outside tapes and CUDA graph capture")
+            if self._streaming is not None:
+                raise ValueError("Streaming tangent refresh requires the construction timestep")
         if particle_q.shape != model.particle_q.shape or particle_q.device != model.device:
             raise ValueError("particle_q must match the model's particle shape and device")
-        if self._fixed_particles is not None:
-            self._fixed_particles.restore_positions(particle_q)
-        capturing = model.device.is_capturing
         if capturing and self.preconditioner_type != "block_diag":
             raise RuntimeError("Captured tangent refresh requires the block_diag preconditioner")
+        self._invalidate_differentiation()
+        if self._fixed_particles is not None:
+            self._fixed_particles.restore_positions(particle_q)
         if self._streaming is not None:
             self._streaming.refresh(particle_q, dt)
             self._refresh_preconditioner()
             return
+        if changed_dt:
+            # Spring damping and all stiffness blocks depend on dt; updating
+            # only the deformation-dependent tet/hex blocks would mix timesteps.
+            # A guess for another h can dwarf the new RHS and lose its initial
+            # residual to cancellation. This is Krylov workspace, not velocity.
+            self.dv.zero_()
+            self._build_constant_matrix(model, dt, particle_q=particle_q)
         if self._tangent_triplet_slots is None:
             if capturing:
                 raise RuntimeError("Call refresh_tangent once before CUDA graph capture")
@@ -792,8 +842,10 @@ class SolverFEM(SolverBase):
             # iterative-solver functor. Warm it again before capturing a step.
             self._lin_solver = None
             self._lin_solver_key = None
+            self.dt = dt
             return
-        self._write_element_blocks(particle_q, dt)
+        if not changed_dt:
+            self._write_element_blocks(particle_q, dt)
         self.A_bsr.values.zero_()
         wp.launch(
             accumulate_triplet_blocks,
@@ -802,6 +854,7 @@ class SolverFEM(SolverBase):
             device=model.device,
         )
         self._refresh_preconditioner()
+        self.dt = dt
 
     def _topology_signature(self):
         model = self.model
@@ -841,7 +894,7 @@ class SolverFEM(SolverBase):
 
         Args:
             particle_q: Current particle positions [m], shape (particle_count,).
-            dt: Substep duration [s], equal to the construction timestep.
+            dt: Substep duration [s], equal to the currently assembled timestep.
             element_sources: Optional resident int32 array of previous element
                 IDs for current slots, or -1 for new elements. This preserves
                 cache reuse under fragment compaction. The default matches
@@ -855,7 +908,7 @@ class SolverFEM(SolverBase):
         if self.preconditioner_type != "block_diag":
             raise ValueError("Persistent topology updates require the block_diag preconditioner")
         if dt != self.dt:
-            raise ValueError("refresh_topology requires the solver's construction timestep")
+            raise ValueError("refresh_topology requires the solver's currently assembled timestep")
         if self._topology_signature() != self._topology_storage:
             raise ValueError("Topology updates must preserve model capacities and array storage")
         if particle_q.shape != model.particle_q.shape or particle_q.device != model.device:
@@ -1147,6 +1200,57 @@ class SolverFEM(SolverBase):
             device=self.model.device,
         )
 
+    def _linear_solver_settings(self, tolerance=None):
+        """Numerical settings shared by normal and captured solve workspaces."""
+        use_cuda_graph = (
+            self.linear_solver_use_cuda_graph
+            and self.linear_solver_check_every == 0
+            and self.model.device.is_cuda
+            and wp.is_conditional_graph_supported()
+        )
+        return (
+            self.solver_type,
+            self.linear_solver_maxiter,
+            self.linear_solver_check_every,
+            self.linear_solver_tolerance if tolerance is None else tolerance,
+            use_cuda_graph,
+        )
+
+    def _make_linear_solver(self, operator, inverse, settings, *, rhs=None, increment=None):
+        """Allocate persistent Krylov scratch without running a discarded solve."""
+        kind, maxiter, check_every, tolerance, use_cuda_graph = settings
+        solve = {"cg": cg, "bicgstab": bicgstab, "gmres": gmres, "cr": cr}.get(kind)
+        if solve is None:
+            raise ValueError(f"Invalid solver type: {kind}")
+        if self.model.device.is_cpu and kind == "cg":
+            operator = aslinearoperator(operator)
+            if operator.batch_offsets is None:
+                # Warp's unbatched CPU tiled dot repeats each tile per lane.
+                # One scalar-DOF batch selects its direct CPU reduction.
+                scalar_count = 3 * self.model.particle_count
+                operator = LinearOperator(
+                    operator.shape,
+                    operator.dtype,
+                    operator.device,
+                    operator.matvec,
+                    batch_offsets=wp.array([0, scalar_count], dtype=int, device=self.model.device),
+                    max_batch_length=scalar_count,
+                )
+        return solve(
+            operator,
+            self._normalized_rhs if rhs is None else rhs,
+            self.dv if increment is None else increment,
+            tol=tolerance,
+            # Warp otherwise defaults atol to tol. A 0.01 N*s absolute
+            # threshold suppresses gravity for small physical masses.
+            atol=0.0,
+            maxiter=maxiter,
+            M=inverse,
+            check_every=check_every,
+            use_cuda_graph=use_cuda_graph,
+            run=False,
+        )
+
     def implicit_integration(
         self,
         model: Model,
@@ -1183,23 +1287,15 @@ class SolverFEM(SolverBase):
                     inputs=[model.spring_indices, model.spring_damping, dt, state_in.particle_qd, state_in.particle_f],
                     device=model.device,
                 )
-        maxiter = self.linear_solver_maxiter
-        # check_every=0 keeps the solve graph-capturable but always runs the
-        # full `maxiter` iterations (warp/optim/linear.py: the conditional
-        # early-exit path allocates its condition buffer per call, which cannot
-        # be baked into a persistent graph).  Set linear_solver_check_every > 0
-        # to trade capture for a real early exit.
         check_every = self.linear_solver_check_every
-        solvers = {"cg": cg, "bicgstab": bicgstab, "gmres": gmres, "cr": cr}
-        solve = solvers.get(self.solver_type)
-        if solve is None:
-            raise ValueError(f"Invalid solver type: {self.solver_type}")
-
         rhs = state_in.particle_f
         operator = self.A_bsr if self._streaming is None else self._streaming.operator
         inverse = self.M_bsr
         if self._fixed_particles is not None:
             self._fixed_particles.project_rhs(rhs)
+            if self._fixed_particles.prepare(self.A_bsr):
+                self._lin_solver = None
+                self._lin_solver_key = None
             operator = self._fixed_particles.operator
         if self._component_scaling is not None:
             matrix = self.A_bsr if self._streaming is None else self._streaming.compact_matrix
@@ -1222,22 +1318,9 @@ class SolverFEM(SolverBase):
         )
         # Persistent functor: the one-shot solver functions allocate their scratch
         # buffers on every call, which is not safe inside a captured CUDA graph.
-        key = (self.solver_type, maxiter, check_every)
+        key = self._linear_solver_settings()
         if self._lin_solver is None or self._lin_solver_key != key:
-            self._lin_solver = solve(
-                operator,
-                self._normalized_rhs,
-                self.dv,
-                tol=1e-2,
-                # Warp otherwise defaults atol to tol. A 0.01 N*s absolute
-                # threshold suppresses gravity for small physical masses.
-                atol=0.0,
-                maxiter=maxiter,
-                M=inverse,
-                check_every=check_every,
-                use_cuda_graph=False,
-                run=False,
-            )
+            self._lin_solver = self._make_linear_solver(operator, inverse, key)
             self._lin_solver_key = key
         result = self._lin_solver(b=self._normalized_rhs, M=inverse)
         wp.launch(

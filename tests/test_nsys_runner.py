@@ -89,6 +89,22 @@ class TestNsightRunner(unittest.TestCase):
         self.assertEqual([row["frame"] for row in result["frame_host_timings"]], [0, 1, 2])
         self.assertGreaterEqual(result["loop_wall_seconds"], 0.0)
 
+    def test_metadata_is_not_required_during_warmup_or_measured_frames(self):
+        example = types.SimpleNamespace(running=False, sim_time=0.0, step=lambda: None, render=lambda: None)
+        for name, final_test in (("linear_fem", False), ("linear_fem_baymax_cut", True)):
+            with self.subTest(name=name):
+                result = RUNNER.run_frames(
+                    example,
+                    types.SimpleNamespace(test=False),
+                    name,
+                    1,
+                    {"recording_metadata": lambda *_: self.fail("Recorder-only metadata hook must not run")},
+                    Trace(),
+                    lambda: None,
+                    final_test=final_test,
+                )
+                self.assertNotIn("scenario", result)
+
     def test_partial_progress_survives_failure(self):
         count = 0
 

@@ -63,9 +63,9 @@ def _open(path):
 
 def _catalog(stage):
     root = stage.GetDefaultPrim()
-    raw = root.GetAttribute("suturebot:regionManifest").Get() if root else None
+    raw = root.GetAttribute("fem:regionManifest").Get() if root else None
     if raw is None:
-        raise ValueError("USD default prim must contain suturebot:regionManifest")
+        raise ValueError("USD default prim must contain fem:regionManifest")
     regions = tuple(
         MeshRegion(
             int(item["id"]),
@@ -218,10 +218,10 @@ def load_mesh_regions(path: str | Path, region_ids=None) -> RegionMesh:
             raise ValueError(f"Region {region.id}: degenerate reference tetrahedron")
         inverted = determinants < 0
         tets[inverted] = tets[inverted][:, [0, 2, 1, 3]]
-        gids = _ids(prim, "suturebot:globalVertexIndices", len(vertices))
-        tids = _ids(prim, "suturebot:globalTetrahedronIndices", len(tets))
+        gids = _ids(prim, "fem:globalVertexIndices", len(vertices))
+        tids = _ids(prim, "fem:globalTetrahedronIndices", len(tets))
         boundary = _indices(prim.GetAttribute("surfaceFaceVertexIndices").Get(), 3, len(vertices))
-        cuts = np.asarray(prim.GetAttribute("suturebot:boundaryIsCutInterface").Get())
+        cuts = np.asarray(prim.GetAttribute("fem:boundaryIsCutInterface").Get())
         if cuts.shape != (len(boundary),) or cuts.dtype != np.bool_:
             raise ValueError(f"Region {region.id}: invalid boundary cut flags")
         expected, _ = _boundary(tets)

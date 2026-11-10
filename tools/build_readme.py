@@ -57,7 +57,7 @@ def make_readme(root=ROOT, *, require_videos=False):
         "## Dependencies\n",
         f"Installed runtime packages: {dependencies}. "
         "No sibling solver package or external source checkout is required. "
-        "The `examples` extra supplies the viewer and any USD/robot dependencies; "
+        "The `examples` extra supplies the viewer and USD dependencies; "
         "`uv.lock` fixes their versions.\n",
     ]
     if (root / "nsys" / "profile_examples.py").is_file():
@@ -86,7 +86,7 @@ def make_readme(root=ROOT, *, require_videos=False):
         [
             "## Examples\n",
             "One demonstration clip per example. Click a preview to open its MP4. "
-            "Videos show simulations and recorded-motion replays rendered offline; "
+            "Videos show physical simulations rendered offline; "
             "playback rate is not a performance measurement.\n",
         ]
     )

@@ -26,26 +26,5 @@
       "--test"
     ],
     "caption": "Fresh live inference after one Adam update, using all 1,986 vertices, 5,354 tetrahedra and 80 substeps per frame."
-  },
-  "fem_phantom_regions": {
-    "frames": 540,
-    "fps": 60,
-    "show_ui": true,
-    "args": [
-      "--regions",
-      "4",
-      "--test"
-    ],
-    "caption": "Click the 2D pad map to select a SutureBot wound: right-drag wound 4, switch to wound 6, disable FEM, then return to wound 4. Wound numbers follow the dataset; inactive material stays fixed."
-  },
-  "fem_suturebot": {
-    "frames": 1202,
-    "fps": 60,
-    "poster_frame": 600,
-    "show_ui": true,
-    "args": [
-      "--test"
-    ],
-    "caption": "Replay measured tissue3 tool motion with prepared USD tools, cameras, fixture and the original static phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Camera and pad placement remain fitted estimates."
   }
 }

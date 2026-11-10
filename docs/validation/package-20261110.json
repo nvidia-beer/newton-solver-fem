@@ -1,0 +1,88 @@
+{
+  "date": "2026-11-10",
+  "purpose": "Validate the retained general FEM package after removing application-specific components.",
+  "solver_core_files_unchanged": 12,
+  "region_usd_metadata_namespace": "fem:",
+  "unit_tests": {
+    "cpu": {
+      "command": "CUDA_VISIBLE_DEVICES='' OPENBLAS_NUM_THREADS=1 uv run --locked python -m unittest discover -s tests -v",
+      "discovered": 149,
+      "passed": 136,
+      "skipped_cuda_only": 13,
+      "seconds": 185.959,
+      "result": "passed"
+    },
+    "cuda": {
+      "command": "OPENBLAS_NUM_THREADS=1 NEWTON_TEST_DEVICE=cuda:0 uv run --locked python -m unittest discover -s tests -v",
+      "discovered": 149,
+      "passed": 149,
+      "skipped": 0,
+      "seconds": 8.399,
+      "result": "passed"
+    }
+  },
+  "example_workflows": {
+    "linear_fem": {
+      "frames": 240,
+      "arguments": [
+        "--test"
+      ],
+      "result": "passed",
+      "device": "cuda:0",
+      "viewer": "null"
+    },
+    "linear_fem_baymax_cut": {
+      "frames": 540,
+      "arguments": [
+        "--test"
+      ],
+      "result": "passed",
+      "device": "cuda:0",
+      "viewer": "null",
+      "cuts": 6,
+      "components": 10
+    },
+    "diffsim_bear": {
+      "frames": 240,
+      "arguments": [
+        "--train-iters",
+        "1",
+        "--sim-steps",
+        "300",
+        "--test"
+      ],
+      "result": "passed",
+      "device": "cuda:0",
+      "viewer": "null",
+      "loss_history": [
+        227.44427490234375,
+        197.63064575195312
+      ]
+    }
+  },
+  "example_workflow_method": "Run each complete docs/videos.json recipe with the shared video scenario callbacks, ViewerNull on CUDA, and example post-step/final checks.",
+  "distributions": {
+    "newton_solver_fem-0.1.0-py3-none-any.whl": {
+      "bytes": 852200,
+      "sha256": "88b0cdc3df01e420c4871de052564a2642bc08d4f4cc05c04fb4b2aff4db6c8b",
+      "forbidden_paths": [],
+      "files": 82
+    },
+    "newton_solver_fem-0.1.0.tar.gz": {
+      "bytes": 817637,
+      "sha256": "42fa989b522158c1eb28bc00228b290312df61c926586d35bd7fb2b7ecd025f0",
+      "forbidden_paths": []
+    }
+  },
+  "docker": {
+    "build": "./docker/build.sh",
+    "image": "newton-solver-fem:local",
+    "image_id": "sha256:ceb7f03ea781703374a5d28f0818960f8d4d9c2db06a1515ce111b9ccba699d7",
+    "smoke": "python -m newton_solver_fem.examples linear_fem --device cuda:0 --viewer null --num-frames 2 --test",
+    "network": "none",
+    "source_mounts": false,
+    "cache_mount_only": true,
+    "result": "passed"
+  },
+  "timing_scope": "Validation wall times include setup and are not simulation performance benchmarks."
+}

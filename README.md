@@ -25,7 +25,7 @@ Linux x86-64 or ARM64, Python 3.12. CUDA runs need an NVIDIA driver compatible w
 
 ## Dependencies
 
-Installed runtime packages: `newton==1.7.0`, `warp-lang==1.17.0`, `numpy>=2,<3`. No sibling solver package or external source checkout is required. The `examples` extra supplies the viewer and any USD/robot dependencies; `uv.lock` fixes their versions.
+Installed runtime packages: `newton==1.7.0`, `warp-lang==1.17.0`, `numpy>=2,<3`. No sibling solver package or external source checkout is required. The `examples` extra supplies the viewer and USD dependencies; `uv.lock` fixes their versions.
 
 ## Profiling
 
@@ -87,6 +87,24 @@ meshes also carry unique-edge springs. Hex showcase masses use a node-0/node-6
 volume estimate and per-node floor $15h\,\mathrm{kg/s}$; cutting instead
 integrates occupied volume. These example mass prescriptions differ.
 
+The fast-path Krylov relative residual tolerance is the public
+`linear_solver_tolerance` setting, defaulting to $10^{-2}$, with zero absolute
+tolerance. Each solve retains its caller-selected iteration cap. On supported
+CUDA devices, `linear_solver_use_cuda_graph=True` and `check_every=0` use Warp's
+conditional graph loop to stop at the same residual target without a host
+synchronization per iteration. Unsupported devices or an explicit opt-out use
+the ordinary path. Persistent Krylov workspaces are allocated without running
+a discarded solve. The differentiable branch retains its separate checked
+fixed-matrix solve contract.
+
+The non-differentiable CPU CG path exposes the same operator as one public
+Warp reduction batch spanning all scalar degrees of freedom. This avoids
+redundant lane work in the installed Warp CPU tiled reduction; the matrix,
+preconditioner, right-hand side, iteration cap and tolerance stay unchanged.
+Existing batched operators, other Krylov methods and CUDA retain their original
+paths. Reduction order can differ, so parity is checked against the physical
+solution and true residual rather than bitwise equality.
+
 Ground contact is an analytic penalty with inward normal damping and velocity
 friction capped by both Coulomb force and particle weight. Surface contact
 uses evolving boundary geometry. External forces enter through
@@ -101,6 +119,76 @@ velocity predictor. Boundary state entries are restored before force evaluation
 and after integration; tangent/topology reassembly also restores fixed positions.
 This option currently excludes differentiable stepping,
 streaming topology and component scaling; no gradient support is claimed for it.
+
+On CUDA, a separate sparse value buffer stores $PAP+I-P$ for Warp's native
+sparse multiply. Its values refresh once per solve, including captured solves;
+changed sparse storage rebuilds the cached operator. The original $A$ remains
+available to the predictor. The projected value buffer shares the original
+index buffers. CPU and unsupported sparse layouts retain the masked multiply.
+
+`refresh_tangent(positions, dt)` updates stiffness in place after its first
+sparse-pattern preparation. For a non-differentiable, non-streaming solver,
+changing `dt` outside tapes/capture also rebuilds mass, spring and triangle
+terms and clears the numerical velocity-increment guess. Subsequent steps must
+use that timestep; caller-owned CUDA graphs must be recaptured. Differentiable
+and streaming solvers retain their construction-timestep contract. A changed
+model allocation requires a new solver, while same-storage sparse updates
+must preserve captured buffer lifetime.
+
+### Prepared FEM mechanics
+
+`SolverFEM.prepare_step(state, control, contacts, h)` exposes one attempt's
+affine mechanics through
+[PreparedFEMStep](src/newton_solver_fem/_src/solvers/fem/prepared_step.py).
+Preparation copies the accepted state, evaluates the ordinary forces once,
+and retains the elastic velocity predictor. The prepared equation is
+$A_D\Delta v=b(f_{\rm ext})$, with the same constrained sparse operator,
+load-before-predictor arithmetic, fixed boundaries and integration as `step`.
+`base_rhs` is the zero-additional-load impulse in N s; `rhs(forces)` accepts
+additional nodal forces in N. `apply_operator`, `apply_preconditioner`, and
+`reconstruct` are GPU operations that do not advance physical history.
+
+The caller refreshes the material tangent separately, as for ordinary stepping,
+and prepares again after any accepted state, timestep, material or support
+change. One owned workspace is reused per FEM solver. Optional `prepare_solve`
+and `solve` supply a reference Krylov solution; a simultaneous integrator may
+instead solve the prepared equation directly. These operations currently
+exclude differentiation, streaming topology and component scaling. They do
+not change the existing `SolverFEM.step` or fixed-matrix adjoint contract.
+
+## Regional Tet4 geometry
+
+`list_mesh_regions(path)` reads a USD catalog without loading volume payloads.
+`load_mesh_regions(path, region_ids)` loads only the selected regions and returns
+a `RegionMesh` in world-space metres with Z up. `None` uses authored active
+regions; an empty iterable returns an empty mesh. Visibility does not select
+physics, and explicit selection uses an in-memory session layer without
+modifying the source asset.
+
+The default prim carries a JSON string `fem:regionManifest`. Each entry has
+`id`, `name`, `prim_path`, `color_srgb` (three values in [0,255]),
+`tetrahedron_count` and `vertex_count`. Each region's `Volume` child is a
+`TetMesh` containing:
+
+| Attribute | Meaning |
+| --- | --- |
+| `newton:referencePoints` or `points` | Reference vertices; the exact embedding is preferred when present |
+| `tetVertexIndices` | Local four-vertex connectivity |
+| `surfaceFaceVertexIndices` | Authored regional boundary triangles |
+| `fem:globalVertexIndices` | Unique nonnegative original vertex IDs within the payload, shared across adjoining regions |
+| `fem:globalTetrahedronIndices` | Unique nonnegative original cell IDs; selected regions may not overlap |
+| `fem:boundaryIsCutInterface` | Boolean per boundary triangle identifying an interface to another region |
+
+The reader applies USD transforms, stage units and Y/Z-up conversion, welds
+matching global vertices and checks coordinate consistency, cell orientation,
+authored boundaries and manifold surface topology. Matching selected interface
+faces disappear from the union. Exposed interface vertices are returned as
+`fixed_vertex_indices`; these are labels, not automatic constraints. Callers
+choose whether to pass them to `SolverFEM`. Materials, masses and physical
+state are outside this geometry API. See
+[regions.py](src/newton_solver_fem/_src/geometry/regions.py) for the schema
+validation and [region tests](tests/test_mesh_regions.py) for synthetic
+selection and welding checks.
 
 ## Cuts and differentiation
 
@@ -163,14 +251,13 @@ See [method](docs/method.md) for time integration and differentiation scope.
 
 ## Examples
 
-One demonstration clip per example. Click a preview to open its MP4. Videos show simulations and recorded-motion replays rendered offline; playback rate is not a performance measurement.
+One demonstration clip per example. Click a preview to open its MP4. Videos show physical simulations rendered offline; playback rate is not a performance measurement.
 
 See the [example guide](docs/usage.md) for controls, prerequisites and detailed setup.
 
 | Example | Example |
 | --- | --- |
-| **[diffsim_bear](src/newton_solver_fem/examples/diffsim/example_diffsim_bear.py)**<br>Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller.<br><a href="docs/media/diffsim_bear.mp4"><img src="docs/media/diffsim_bear.gif" width="420" alt="Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller."></a><br>Fresh live inference after one Adam update, using all 1,986 vertices, 5,354 tetrahedra and 80 substeps per frame.<br>`./docker/run.sh diffsim_bear` | **[fem_phantom_regions](src/newton_solver_fem/examples/example_fem_phantom_regions.py)**<br>Select one SutureBot wound on a clickable map and right-drag the suture pad.<br><a href="docs/media/fem_phantom_regions.mp4"><img src="docs/media/fem_phantom_regions.gif" width="420" alt="Select one SutureBot wound on a clickable map and right-drag the suture pad."></a><br>Click the 2D pad map to select a SutureBot wound: right-drag wound 4, switch to wound 6, disable FEM, then return to wound 4. Wound numbers follow the dataset; inactive material stays fixed.<br>`./docker/run.sh fem_phantom_regions` |
-| **[fem_suturebot](src/newton_solver_fem/examples/example_fem_suturebot.py)**<br>Replay measured SutureBot motion with four source-video camera overlays.<br><a href="docs/media/fem_suturebot.mp4"><img src="docs/media/fem_suturebot.gif" width="420" alt="Replay measured SutureBot motion with four source-video camera overlays."></a><br>Replay measured tissue3 tool motion with prepared USD tools, cameras, fixture and the original static phantom. Four synchronized views compare the model with source video; green point labels stay on the mesh. Camera and pad placement remain fitted estimates.<br>`./docker/run.sh fem_suturebot` | **[linear_fem](src/newton_solver_fem/examples/example_linear_fem.py)**<br>Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid.<br><a href="docs/media/linear_fem.mp4"><img src="docs/media/linear_fem.gif" width="420" alt="Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid."></a><br>All six Tet4/Hex8 objects falling and deforming against the floor; default physics and resolution.<br>`./docker/run.sh linear_fem` |
+| **[diffsim_bear](src/newton_solver_fem/examples/diffsim/example_diffsim_bear.py)**<br>Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller.<br><a href="docs/media/diffsim_bear.mp4"><img src="docs/media/diffsim_bear.gif" width="420" alt="Optimize a full-resolution bear gait through sparse FEM, then simulate the learned controller."></a><br>Fresh live inference after one Adam update, using all 1,986 vertices, 5,354 tetrahedra and 80 substeps per frame.<br>`./docker/run.sh diffsim_bear` | **[linear_fem](src/newton_solver_fem/examples/example_linear_fem.py)**<br>Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid.<br><a href="docs/media/linear_fem.mp4"><img src="docs/media/linear_fem.gif" width="420" alt="Six deformable solids drop onto a floor: Tet4 box, sphere and Baymax; Hex8 cube, tire and pyramid."></a><br>All six Tet4/Hex8 objects falling and deforming against the floor; default physics and resolution.<br>`./docker/run.sh linear_fem` |
 | **[linear_fem_baymax_cut](src/newton_solver_fem/examples/example_linear_fem_baymax_cut.py)**<br>Drill holes, slice or carve a soft Baymax; use the mouse to lift, hold and release material.<br><a href="docs/media/linear_fem_baymax_cut.mp4"><img src="docs/media/linear_fem_baymax_cut.gif" width="420" alt="Drill holes, slice or carve a soft Baymax; use the mouse to lift, hold and release material."></a><br>Six finite slices produce ten disconnected material pieces; the clip then hides the skin and switches to an elevated, colored connectivity debug view.<br>`./docker/run.sh linear_fem_baymax_cut` |  |
 
 ## Regenerate documentation

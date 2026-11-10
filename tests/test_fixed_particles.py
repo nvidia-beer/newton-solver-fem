@@ -3,12 +3,15 @@
 
 import os
 import unittest
+from types import SimpleNamespace
 
 import newton
 import numpy as np
 import warp as wp
+from warp.sparse import bsr_from_triplets
 
 from newton_solver_fem import SolverFEM
+from newton_solver_fem._src.solvers.fem.fixed_particles import FixedParticles
 
 
 def dense(matrix):
@@ -148,6 +151,83 @@ class TestFixedParticles(unittest.TestCase):
             solver.prepare_tetrahedral_updates(4)
         with self.assertRaisesRegex(ValueError, "Component scaling"):
             solver.prepare_component_scaling(wp.zeros(4, dtype=int, device=self.device), 1)
+
+    def sparse_operator_fixture(self, missing_diagonal=False):
+        rows = np.repeat(np.arange(4), 3).astype(np.int32)
+        columns = np.array([0, 1, 2, 0, 1, 2, 1, 2, 3, 1, 2, 3], np.int32)
+        values = np.random.default_rng(7).normal(size=(len(rows), 3, 3)).astype(np.float32)
+        if missing_diagonal:
+            rows, columns, values = rows[3:], columns[3:], values[3:]
+        matrix = bsr_from_triplets(
+            4,
+            4,
+            wp.array(rows, dtype=int, device=self.device),
+            wp.array(columns, dtype=int, device=self.device),
+            wp.array(values, dtype=wp.mat33, device=self.device),
+        )
+        model = SimpleNamespace(
+            device=wp.get_device(self.device),
+            particle_count=4,
+            particle_q=wp.zeros(4, dtype=wp.vec3, device=self.device),
+        )
+        return matrix, FixedParticles(model, matrix, [0])
+
+    def check_projected_operator(self, matrix, fixed):
+        physical = dense(matrix)
+        projected = physical.copy()
+        projected[:3, :] = 0
+        projected[:, :3] = 0
+        projected[:3, :3] = np.eye(3)
+        x_host = np.random.default_rng(8).normal(size=(4, 3)).astype(np.float32)
+        y_host = 0.2 * x_host
+        x = wp.array(x_host, dtype=wp.vec3, device=self.device)
+        y = wp.empty_like(x)
+        z = wp.empty_like(x)
+        fixed.prepare(matrix)
+        for alpha, beta, alias in ((1.0, 0.0, False), (-0.7, 0.3, False), (0.2, -0.4, True)):
+            with self.subTest(alpha=alpha, beta=beta, alias=alias):
+                y.assign(y_host if beta else np.full_like(y_host, np.nan))
+                output = y if alias else z
+                fixed.operator.matvec(x, y, output, alpha, beta)
+                expected = alpha * projected @ x_host.ravel() + beta * y_host.ravel()
+                np.testing.assert_allclose(output.numpy().ravel(), expected, rtol=2e-6, atol=2e-6)
+        np.testing.assert_array_equal(dense(matrix), physical)
+        return x, y, z, projected
+
+    def test_projected_operator_preserves_affine_alias_and_cpu_fallback(self):
+        for missing_diagonal in (False, True):
+            with self.subTest(missing_diagonal=missing_diagonal):
+                matrix, fixed = self.sparse_operator_fixture(missing_diagonal)
+                original = fixed.operator
+                self.check_projected_operator(matrix, fixed)
+                if missing_diagonal or not wp.get_device(self.device).is_cuda:
+                    self.assertIs(fixed.operator, original)
+
+    def test_projected_operator_refreshes_values_topology_and_storage(self):
+        matrix, fixed = self.sparse_operator_fixture()
+        self.check_projected_operator(matrix, fixed)
+        original = fixed.operator
+        columns = matrix.columns.numpy()
+        columns[3:6] = (1, 2, 3)
+        matrix.columns.assign(columns)
+        matrix.values.assign(0.8 * matrix.values.numpy())
+        x, y, z, _ = self.check_projected_operator(matrix, fixed)
+        self.assertIs(fixed.operator, original)
+        if wp.get_device(self.device).is_cuda:
+            with wp.ScopedCapture(device=self.device) as capture:
+                fixed.prepare(matrix)
+                fixed.operator.matvec(x, y, z, 1.0, 0.0)
+            matrix.values.assign(0.5 * matrix.values.numpy())
+            wp.capture_launch(capture.graph)
+            captured = z.numpy()
+            _, _, _, projected = self.check_projected_operator(matrix, fixed)
+            np.testing.assert_allclose(captured.ravel(), projected @ x.numpy().ravel(), rtol=2e-6, atol=2e-6)
+        matrix.offsets = wp.clone(matrix.offsets)
+        matrix.columns = wp.clone(matrix.columns)
+        matrix.values = wp.clone(matrix.values)
+        self.check_projected_operator(matrix, fixed)
+        if wp.get_device(self.device).is_cuda:
+            self.assertIsNot(fixed.operator, original)
 
 
 if __name__ == "__main__":
